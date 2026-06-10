@@ -174,7 +174,7 @@
 }
 
 .colText {
-  max-width: 560px;
+  max-width: 700px;
   padding-right: 24px;
 }
 
@@ -197,13 +197,13 @@
 
 .title {
   margin: 1.4rem 0 0;
-  font-size: clamp(2.4rem, 3.2vw + 1rem, 3.9rem);
+  font-size: clamp(2.4rem, 3.2vw + 1rem, 4.6rem);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.03em;
 }
 
-.title span {
+.title > span {
   display: block;
 }
 
@@ -236,7 +236,7 @@
 }
 
 .subtitle {
-  max-width: 30em;
+  max-width: 34em;
   min-height: 5em;
   margin: 1.5rem 0 0;
   color: var(--fg-muted);
