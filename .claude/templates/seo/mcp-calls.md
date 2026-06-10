@@ -401,6 +401,44 @@ Réponse attendue : `{"success": true, "data": {"markdown": "...", "metadata": {
 
 ---
 
+## 9. IndexNow (push d'index Bing / ChatGPT Search)
+
+> **Pourquoi** : ChatGPT Search s'appuie sur l'index **Bing**, pas Google. IndexNow (protocole Microsoft/Yandex) pousse une URL fraîche ou modifiée dans l'index en quelques heures — décisif pour les contenus *first-mover*. Levier consigné dans [`checklist.md`](checklist.md) §G.8.
+
+### 9.1 Prérequis (actions manuelles utilisateur, une seule fois)
+
+1. **Bing Webmaster Tools** : vérifier `augmenter.pro` via l'import de la propriété Google Search Console (`bing.com/webmasters` → Importer depuis GSC).
+2. **Clé IndexNow** : générer une clé (32+ caractères hexadécimaux, ex. depuis `bing.com/indexnow`) et la déposer en `public/<clé>.txt` — le fichier doit contenir **uniquement la clé en clair**, accessible en HTTP 200 à `https://augmenter.pro/<clé>.txt`.
+
+> Tant que le fichier clé n'est pas en ligne, l'API IndexNow renvoie **403** (clé non vérifiable). Ne pas committer de fausse clé.
+
+### 9.2 Ping d'une ou plusieurs URLs (après publication / modification)
+
+Remplacer `<CLE_INDEXNOW>` par la clé déposée en `public/`.
+
+```bash
+# Une seule URL (variante GET, la plus simple)
+curl "https://api.indexnow.org/indexnow?url=https://augmenter.pro/blog/<slug>&key=<CLE_INDEXNOW>"
+
+# Un lot d'URLs (variante POST JSON — préférée pour publication + maillage impacté)
+curl -X POST "https://api.indexnow.org/indexnow" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d '{
+    "host": "augmenter.pro",
+    "key": "<CLE_INDEXNOW>",
+    "keyLocation": "https://augmenter.pro/<CLE_INDEXNOW>.txt",
+    "urlList": [
+      "https://augmenter.pro/blog/<slug>"
+    ]
+  }'
+```
+
+Réponse attendue : **200** (URLs acceptées) ou **202** (acceptées, en attente de validation de clé). Codes d'erreur utiles : **403** (clé invalide / fichier absent), **422** (URL hors du `host` déclaré), **429** (trop de requêtes).
+
+> **Quand pinger** : à chaque **publication** d'une nouvelle URL et à chaque **modification / redirection 301** d'une URL existante. Utilisé par [`/create-article`](../../commands/create-article.md) et [`/create-resource`](../../commands/create-resource.md) (étape d'intégration finale) et [`/modify-resource`](../../commands/modify-resource.md) (toute URL modifiée/redirigée).
+
+---
+
 ## Conventions de fenêtre temporelle
 
 - `<J-3>` au lieu de today : GSC publie les données à J-2/J-3 (éviter les rows à 0 du dernier jour)
@@ -412,6 +450,6 @@ Réponse attendue : `{"success": true, "data": {"markdown": "...", "metadata": {
 
 **Utilisé par** :
 - [`/seo-audit`](../../commands/seo-audit.md) — Phase 0 (pings de validation) + Phases 1-7 (tous les appels)
-- [`/create-article`](../../commands/create-article.md) — §1 GSC baseline / §2 DFS keyword research / §3 SERP top 10
-- [`/create-resource`](../../commands/create-resource.md) — §1, §2, §3 (mêmes usages que create-article + opportunités content gap §2.5 si analyse concurrentielle approfondie)
-- [`/modify-resource`](../../commands/modify-resource.md) — §1.4 (page × query pour identifier l'impact réel) + §1.7 (`index_inspect` post-modification)
+- [`/create-article`](../../commands/create-article.md) — §1 GSC baseline / §2 DFS keyword research / §3 SERP top 10 + §9 (ping IndexNow après publication)
+- [`/create-resource`](../../commands/create-resource.md) — §1, §2, §3 (mêmes usages que create-article + opportunités content gap §2.5 si analyse concurrentielle approfondie) + §9 (ping IndexNow après publication)
+- [`/modify-resource`](../../commands/modify-resource.md) — §1.4 (page × query pour identifier l'impact réel) + §1.7 (`index_inspect` post-modification) + §9 (ping IndexNow sur toute URL modifiée/redirigée)

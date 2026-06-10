@@ -686,13 +686,25 @@ export default function Article() {
         IA &amp; transformation digitale.
       </p>
 
+      <p>
+        Et quand le sujet n&apos;est pas de construire mais d&apos;évaluer
+        l&apos;existant, le pendant de cet article est notre{" "}
+        <Link href="/blog/prompt-audit-projet-claude-fable">
+          prompt d&apos;audit complet de projet pour Claude Fable
+        </Link>
+        &nbsp;: 4 phases, constats cités fichier:ligne, plan de remise à
+        niveau en jalons.
+      </p>
+
       {/* ===== CTA douce ===== */}
       <p>
         Vous testez Claude Code dans votre PME et vous voulez un regard
         extérieur avant de partir en production ? Notre{" "}
         <Link href="/contact">Audit 180° (60 min, offert)</Link> sert
         exactement à ça : on regarde votre cadrage, vos risques et les quick
-        wins à activer en premier.
+        wins à activer en premier. Pour une vue d&apos;ensemble de votre
+        maturité IA, voyez notre{" "}
+        <Link href="/audit-ia-pme">audit IA pour PME</Link>.
       </p>
 
       {/* ===== FAQ ===== */}

@@ -149,6 +149,18 @@ export default function AutomatiserEmailsReseauxSociauxIA() {
         Postiz permettent de planifier et publier en multi-canal depuis une
         interface unique.
       </p>
+      <p>
+        Mais ces outils <em>planifient</em> sans <em>produire</em>. Pour aller
+        plus loin et confier toute la rédaction à une IA configurée à votre voix,
+        voyez mon retour d&apos;expérience détaillé :{" "}
+        <Link
+          href="/blog/claude-cowork-community-manager"
+          className="text-primary underline-offset-4 hover:underline"
+        >
+          j&apos;ai transformé Claude Cowork en community manager
+        </Link>{" "}
+        — le setup réel, les prompts, et ce qui a foiré.
+      </p>
 
       <h3>Curation de contenu automatisée</h3>
       <p>

@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://augmenter.pro/audit-informatique-yvelines</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,9 +50,15 @@
   </url>
   <url>
     <loc>https://augmenter.pro/blog</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://augmenter.pro/prompts</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://augmenter.pro/auteur/pierre-legrand</loc>
@@ -71,6 +77,18 @@
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://augmenter.pro/blog/prompt-audit-projet-claude-fable</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://augmenter.pro/blog/claude-cowork-community-manager</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://augmenter.pro/blog/agent-ia-dirigeant-pme</loc>

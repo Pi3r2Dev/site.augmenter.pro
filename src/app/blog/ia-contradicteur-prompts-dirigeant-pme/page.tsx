@@ -350,7 +350,11 @@ Sois ferme. Si tu valides sans réserve, c'est que je t'ai mal briefé.`}</code>
         <Link href="/blog/claude-code-prompt-architecture">
           architecture de prompts pour Claude Code
         </Link>{" "}
-        et qui vaut aussi pour ChatGPT, Gemini et les autres LLMs (voir notre{" "}
+        comme côté{" "}
+        <Link href="/blog/prompt-audit-projet-claude-fable">
+          audit complet de projet avec Claude Fable
+        </Link>
+        , et qui vaut aussi pour ChatGPT, Gemini et les autres LLMs (voir notre{" "}
         <Link href="/blog/comparatif-llm-vente-commerciale">
           comparatif LLM
         </Link>

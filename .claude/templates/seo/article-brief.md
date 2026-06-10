@@ -17,14 +17,16 @@ Format standard pour les briefs d'articles livrés par `/seo-audit` (Phase 8.2) 
 - **Douleur adressée** : <phrase-choc qui résume le problème du lecteur>
 - **Angle différenciant** : <ce qu'aucun top 10 SERP ne dit — donnée propre, méthodologie maison, exemple 78/95, cas anonymisé>
 - **Promesse** : <ce que le lecteur saura faire après lecture>
+- **Donnée originale à produire** : <≥ 1 donnée chiffrée PROPRE — mesure terrain, benchmark maison, observation 78/95 — distincte des stats tierces citées. Tactique GEO la plus validée (+30-40 % de visibilité IA). Si rien d'original ne peut être produit, requalifier l'angle.>
 - **Preuves à mobiliser** : <chiffres, sources, cas terrain, screenshots outils>
-- **Plan H2/H3** :
-  - H2 : Introduction accrocheuse (chiffre ou statement)
-  - H2 : <...>
+- **Plan H2/H3** (suivre l'arc **« douleur d'abord → solution complète »**) :
+  - H2 : Ouverture sur la douleur — nommer le problème frontalement (chiffre ou constat provocant), pas une intro catalogue
+  - H2 : <approfondir la douleur / l'enjeu / le coût de l'inaction>
     - H3 : <...>
-  - H2 : <...>
+  - H2 : <la solution **complète** — méthode/étapes actionnables, ce qu'il faut faire ET ne pas faire>
+    - H3 : <...>
   - H2 : FAQ (3-5 questions piochées dans PAA DataForSEO / GSC)
-  - H2 : Conclusion + CTA
+  - H2 : Conclusion + CTA (le CTA vient *en plus* de la valeur déjà donnée, pas à la place)
 - **CTA cible** : Audit 180° offert / Audit 360° IA Booster / page service X
 - **Longueur cible** : X mots (calibrée sur la longueur moyenne du top 3 SERP)
 - **Article(s) interne(s) à linker** : [URLs]
@@ -49,9 +51,12 @@ Format optimisé pour la visibilité dans les LLMs (ChatGPT Search, Perplexity, 
 ## Contraintes éditoriales
 
 - **Mot « gratuit » interdit** — préférer « offert », « sans engagement », « inclus »
+- **Arc « douleur d'abord, solution complète ensuite »** — principe structurel : ouvrir frontalement sur la douleur du dirigeant, puis livrer la solution *entière* et actionnable (pas un teaser qui renvoie au contact). Voir [`project-context.md`](project-context.md) §Contraintes éditoriales #2.
 - **Ton provocateur**, douleurs PME frontales — pas de SEO corporate lisse
   - ✅ « ChatGPT dans votre PME : 3 chantiers utiles, 5 pièges qui coûtent cher »
   - ❌ « Les avantages de l'intelligence artificielle pour les PME »
+- **Chunk auto-suffisant** : chaque H2 doit former un fragment complet et autonome — la réponse à l'intention de la section tient dès sa **1re phrase**, sans dépendre du contexte amont. Les moteurs RAG découpent la page et ne récupèrent que des fragments (ChatGPT ne cite que ~15 % des pages récupérées — AirOps, 548k pages) : un H2 qui n'a de sens qu'avec ce qui précède n'est pas citable.
+- **Donnée originale** : produire ≥ 1 donnée chiffrée propre (mesure terrain, benchmark maison) — cf. champ « Donnée originale à produire » du brief — en plus des sources tierces.
 - **E-E-A-T obligatoire** : ≥ 1 exemple terrain chiffré, sources citées, ton prudent avec limites mentionnées
 - **People-first** : après lecture, le dirigeant PME doit pouvoir **agir concrètement**
 - **Périmètre** : rester dans IA/digital/audit/transformation pour PME 78/95

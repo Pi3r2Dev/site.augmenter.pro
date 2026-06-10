@@ -49,3 +49,9 @@ next-env.d.ts
 nul
 .playwright-mcp/
 Home.html
+
+# Docs personnels — gardés en local, jamais sur le repo (repo privé séparé prévu)
+/LE-FOUR_scenario-prudent.md
+/docs/CV_PL/
+/docs/IdeaBox/
+/docs/ClaudeDesign_handoff/design_handoff_hero_augmente/

@@ -100,6 +100,8 @@ Règle : ces points sont **prioritaires sur le SEO on-page**. En cas de conflit,
 
 Objectif : être cité par ChatGPT Search, Perplexity Pro, Google Gemini AI Mode / AI Overviews, Claude, Brave Summarizer, Bing Copilot — quand un dirigeant PME formule une requête correspondant aux prestations augmenter.pro.
 
+> **Deux voies de citation — ne pas confondre** : (a) **retrieval live** — le moteur va chercher la page au moment de la requête → leviers *on-page* §G.1-G.6 (accessibilité bots, citation triggers, llms.txt, NAP) ; (b) **training data** — le moteur a « appris » l'entité/le contenu pendant son entraînement → leviers *off-site* §G.7 (mentions dans publications, annuaires, podcasts, forums que les LLMs ingèrent). **L'on-page parfait (score §G.5 = 10/10) reste invisible si la voie (b) est vide** — c'est le verrou diagnostiqué (entité externe faible). Optimiser les DEUX, pas seulement le on-page.
+
 ### G.1 Accessibilité des bots IA (prérequis bloquant)
 
 - [ ] `robots.txt` autorise explicitement : `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Google-Extended`, `PerplexityBot`, `Perplexity-User`, `CCBot`
@@ -126,6 +128,8 @@ Objectif : être cité par ChatGPT Search, Perplexity Pro, Google Gemini AI Mode
 
 ### G.4 `llms.txt` et `llms-full.txt`
 
+> ⚠️ **Recalibrage 2026-06-10** : les études de juin 2026 (SE Ranking sur ~300k domaines, rapport ALLMO) ne mesurent **aucun effet** de `llms.txt` sur les citations LLM, et un trafic bots IA marginal (~0,1 %). On **maintient** les fichiers (coût nul, utiles aux agents IDE et à la lisibilité), mais on **ne les présente plus comme un levier de citation** : la citation se joue ailleurs (citation triggers §G.5, indexation Bing/IndexNow §G.8, surface GitHub §G.9, entité externe §G.7).
+
 - [ ] `public/llms.txt` à jour (cf. Phase 6.6.1 du seo-audit pour le détail)
 - [ ] `public/llms-full.txt` existe (contenu markdown complet de toutes les pages indexables)
 - [ ] `llms-full.txt` < 5 MB (sinon split en `llms-full-blog.txt`, `llms-full-services.txt`)
@@ -135,6 +139,8 @@ Objectif : être cité par ChatGPT Search, Perplexity Pro, Google Gemini AI Mode
 ### G.5 Citation triggers (par page stratégique — score ≥ 7/10)
 
 - [ ] **Définition courte en intro** (≤ 25 mots) dans le 1er paragraphe
+- [ ] **Chaque H2 = chunk auto-suffisant** : la réponse complète tient dès la 1re phrase de la section, sans dépendre du contexte amont (les moteurs RAG découpent la page ; ChatGPT ne cite que ~15 % des pages récupérées — AirOps, 548k pages)
+- [ ] **≥ 1 donnée originale propre** (mesure terrain, benchmark maison, observation 78/95) — **pas seulement** une stat tierce sourcée. Tactique GEO la plus validée empiriquement (+30-40 % de visibilité IA)
 - [ ] **≥ 1 tableau comparatif** markdown
 - [ ] **Données chiffrées sourcées** (`X %`, `X €` + source en lien)
 - [ ] **Listes numérotées** (étapes, top N)
@@ -153,15 +159,41 @@ Objectif : être cité par ChatGPT Search, Perplexity Pro, Google Gemini AI Mode
 - [ ] `VideoObject` si vidéo embarquée
 - [ ] `Course` si formation packagée en module
 
-### G.7 Entity mentions externes
+### G.7 Entity mentions externes (voie training data)
+
+> C'est la voie (b) de l'intro §G : être **appris** par les LLMs, pas seulement retrieved. Levier #1 diagnostiqué pour débloquer la citation.
 
 - [ ] Profil LinkedIn Pierre Legrand mentionne « augmenter.pro » exactement
 - [ ] Bio GitHub Pierre Legrand mentionne augmenter.pro
 - [ ] Demandes/inscriptions actives : France Num Activateur, Bpifrance IA Booster directory
+- [ ] **Placements dans des sources ingérées à l'entraînement** : ≥ 1 publication / média sectoriel, podcast invité, ou contribution longue (Reddit / LinkedIn long-form FR) — **distinct** des annuaires de validation d'entité ci-dessus (eux servent la cohérence NAP, pas le corpus d'entraînement)
 - [ ] (Long terme) Wikidata Q-item Pierre Legrand si ≥ 3 mentions presse vérifiables
 - [ ] (Long terme) ≥ 1 article presse indexable mentionnant augmenter.pro
 
-### G.8 Tests directs multi-moteurs (résultats consignés dans le rapport)
+### G.8 Indexation Bing / IndexNow (angle mort ChatGPT Search)
+
+> **Pourquoi** : ChatGPT Search s'appuie sur l'index **Bing**, pas Google. Un contenu absent de Bing est invisible pour ChatGPT, quel que soit son rang Google. **IndexNow** (protocole Microsoft/Yandex) pousse une URL dans l'index en quelques heures — décisif pour les contenus *first-mover*. (Source : oltre.ai/blog/indexnow-for-geo-bing-chatgpt-visibility.)
+>
+> ⚠️ **Prérequis utilisateur (actions manuelles, à faire une fois)** : (1) vérifier le site dans **Bing Webmaster Tools** via l'import de la propriété GSC ; (2) générer une **clé IndexNow** et la déposer en `public/<clé>.txt` (le fichier contient la clé en clair). Tant que la clé n'existe pas dans `public/`, le ping §ci-dessous échoue (403). Voir [`mcp-calls.md`](mcp-calls.md) §9 pour l'appel curl.
+
+- [ ] Site vérifié dans **Bing Webmaster Tools** (import de la propriété Google Search Console)
+- [ ] **Clé IndexNow** présente dans `public/<clé>.txt` (fichier à la racine publique, contenu = la clé)
+- [ ] **Ping IndexNow** déclenché à chaque publication / modification d'URL (POST `https://api.indexnow.org/indexnow` — cf. [`mcp-calls.md`](mcp-calls.md) §9)
+- [ ] URLs modifiées ou redirigées (301) également pingées (cf. [`/modify-resource`](../../commands/modify-resource.md))
+
+### G.9 Surface GitHub (prompts & outils — voie training data)
+
+> **Pourquoi** : les SERP et les réponses LLM sur des requêtes type « claude audit prompt » citent massivement des **repos / gists GitHub**. Publier nos prompts majeurs en repo public alimente la voie (b) « training data » de l'intro §G — le verrou diagnostiqué (entité externe faible). **Décision actée 2026-06-10 : on le fait pour les prompts majeurs.**
+>
+> ⚠️ **Action manuelle utilisateur si `gh` n'est pas authentifié** : la création/mise à jour du repo est une étape manuelle (Claude prépare le contenu, l'utilisateur pousse).
+
+- [ ] Pour toute ressource de type **prompt majeur** → **repo public miroir** sur GitHub
+- [ ] README **bilingue FR/EN** décrivant le prompt et son usage
+- [ ] **Lien canonique** vers l'article / la ressource correspondante sur augmenter.pro
+- [ ] Licence **MIT** présente
+- [ ] Mention **augmenter.pro + Pierre Legrand** (auteur, lien) dans le README
+
+### G.10 Tests directs multi-moteurs (résultats consignés dans le rapport)
 
 - [ ] Bibliothèque de 15-20 prompts cibles maintenue dans `docs/seo-audits/<date>-data/geo-prompts.md`
 - [ ] Tests passés sur : ChatGPT (Search), Perplexity Pro, Gemini AI Mode, Google AI Overviews, Brave Summarizer, Bing Copilot (et Claude si accès)

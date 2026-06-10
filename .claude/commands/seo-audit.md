@@ -118,6 +118,8 @@ Pour chaque URL, extraire :
 
 **Seuil d'alerte** : si > 20 % des URLs prioritaires ne sont pas « Submitted and indexed » → investigation urgente.
 
+> ⚠️ **Distinguer deux familles de problèmes** (J. Mueller, 2026) : (1) **« Couldn't fetch » / « Sitemap could not be read »** = problème **réseau/serveur** (timeout, 5xx, DNS, gzip, taille) → débugger l'infra, ce n'est PAS un signal qualité ; (2) **« Discovered / Crawled – currently not indexed »** = signal **qualité / demande** → Google n'explore pas en profondeur un site dont il ne juge pas le contenu « nouveau ou important ». Remède (1) = fix technique ; remède (2) = information gain + maillage interne + autorité, PAS « produire 60 articles » par réflexe. Avant de conclure « contenu insuffisant », vérifier que ce n'est pas un simple trou de **découverte** (lien interne manquant, URL absente du sitemap soumis, canonical divergent).
+
 ### 1.5 Architecture & maillage interne
 
 - **Cartographie des liens** : parcourir chaque page et lister ses liens sortants internes
@@ -374,6 +376,8 @@ C'est **le chantier de différenciation** pour 2026. L'objectif explicite : êtr
 > **Appels MCP** : voir [`mcp-calls.md`](.claude/templates/seo/mcp-calls.md) §6 (DFS AI Optimization) + §8 (Firecrawl pour scraper concurrents) + Playwright MCP pour les tests directs multi-moteurs.
 >
 > **Logique de cette phase** : (1) on s'assure d'abord que les bots IA peuvent **crawler** le site → (2) on mesure ensuite la visibilité actuelle → (3) on identifie les **citation triggers manquants** → (4) on plante les jalons d'entité (Person, NAP, mentions externes).
+>
+> **Deux voies de citation à optimiser en parallèle** (cf. [`checklist.md`](.claude/templates/seo/checklist.md) §G intro) : (a) **retrieval live** = leviers on-page (§6.1 accessibilité bots, §6.7 citation triggers, §6.6 llms.txt) ; (b) **training data** = être *appris* par les modèles via des mentions dans des sources qu'ils ingèrent (publications, annuaires, podcasts, forums — §6.8 entity mentions externes). ⚠️ Le verrou diagnostiqué est la voie (b) : un contenu on-page scoré 10/10 (§6.7) reste silencieux à T+90 si l'entité externe est absente. Ne pas sur-investir le on-page au détriment de l'off-site.
 
 ### 6.1 Accessibilité des crawlers IA (prérequis bloquant)
 
@@ -422,6 +426,8 @@ Mesurer :
 - Requêtes qui déclenchent une mention
 - Pages citées
 - **Domaines co-cités** (concurrents dans le « Graph de citations ») → identifier qui prend notre place
+
+> 💳 **Mesure baseline de mentions LLM** : si des crédits DataForSEO sont disponibles, établir une baseline via les endpoints `ai_optimization_llm_mentions_*` (filters / agg metrics / top domains / top pages — cf. `mcp-calls.md` §6.1) et l'archiver dans `docs/seo-audits/<date>-data/`. ⚠️ **Crédits DataForSEO épuisés au 2026-06-10** : si toujours le cas, écrire « baseline mentions LLM non mesurée — crédits DFS épuisés » et se rabattre sur les tests directs §6.3 (Playwright) pour une mesure qualitative.
 
 ### 6.3 Tests directs multi-moteurs
 
@@ -577,7 +583,24 @@ Les LLMs valident l'entité « augmenter.pro » via des **mentions externes vér
 
 Outil de mesure : `mcp__dfs-mcp__backlinks_referring_domains` (Phase 5, si souscription active) → identifier les domaines d'autorité qui linkent augmenter.pro. **Sans souscription Backlinks**, fallback : recherche Google `"augmenter.pro" -site:augmenter.pro` via SERP scraper.
 
-### 6.9 Synthèse Phase 6 dans le rapport
+### 6.9 Indexation Bing / IndexNow & surface GitHub (cf. checklist §G.8 / §G.9)
+
+Deux leviers GEO ajoutés au 2026-06-10, longtemps angles morts du projet. Auditer :
+
+**Indexation Bing / IndexNow** (cf. [`checklist.md`](.claude/templates/seo/checklist.md) §G.8) — ChatGPT Search s'appuie sur l'index **Bing**, pas Google :
+- [ ] Site vérifié dans **Bing Webmaster Tools** (import propriété GSC) ?
+- [ ] **Clé IndexNow** présente et servie en HTTP 200 à `https://augmenter.pro/<clé>.txt` ? (tester via `mcp__firecrawl__firecrawl_scrape`)
+- [ ] Procédure de **ping IndexNow** intégrée au workflow de publication / modification (cf. [`mcp-calls.md`](.claude/templates/seo/mcp-calls.md) §9, [`/create-article`](.claude/commands/create-article.md), [`/modify-resource`](.claude/commands/modify-resource.md)) ?
+- [ ] Échantillon d'URLs récentes : sont-elles indexées dans Bing ? (recherche `site:augmenter.pro` sur bing.com)
+
+**Surface GitHub** (cf. [`checklist.md`](.claude/templates/seo/checklist.md) §G.9) — voie *training data*, citations LLM sur les prompts :
+- [ ] Les **prompts majeurs** publiés sur le site ont-ils un **repo public miroir** GitHub ?
+- [ ] Repos conformes : README **FR/EN**, **lien canonique** vers augmenter.pro, licence **MIT**, mention **augmenter.pro + Pierre Legrand** ?
+- [ ] Bio GitHub de Pierre Legrand mentionne augmenter.pro (recoupe §6.8 entity mentions) ?
+
+> ⚠️ Si la clé IndexNow ou le compte Bing WMT n'existent pas encore → **actions manuelles utilisateur** à lister dans le plan d'action (§11) avec la procédure pas-à-pas de [`mcp-calls.md`](.claude/templates/seo/mcp-calls.md) §9.1.
+
+### 6.10 Synthèse Phase 6 dans le rapport
 
 Restituer en §7 du rapport (cf. [`report.md`](.claude/templates/seo/report.md)) :
 - Tableau accessibilité bots (§6.1) — verdict bot par bot
@@ -585,6 +608,7 @@ Restituer en §7 du rapport (cf. [`report.md`](.claude/templates/seo/report.md))
 - Tableau AI Overviews observés (§6.4) — taux de capture vs concurrents
 - Verdict entity author (§6.5) — Person schema présent oui/non, NAP consistency oui/non
 - Score citation triggers moyen sur top 10 pages (§6.7) — ex. 5.3/10
+- Verdict indexation Bing/IndexNow + surface GitHub (§6.9) — clé présente oui/non, repos prompts oui/non
 - Liste des actions Critique / Haute pour rejoindre le top des sources citées (§11 du rapport)
 
 ---

@@ -19,12 +19,29 @@ export default function MentionsLegalesPage() {
               <p>
                 augmenter.PRO
                 <br />
-                Pierre Legrand — Entrepreneur individuel
+                Pierre Legrand — Entrepreneur individuel (EI)
                 <br />
-                Zone d&apos;intervention : Yvelines (78) &amp; Val d&apos;Oise (95)
+                Siège / établissement : [À COMPLÉTER : adresse complète — ex. Jouy-le-Moutier 95280]
+                <br />
+                SIRET : [À COMPLÉTER : 14 chiffres]
+                <br />
+                Immatriculation : [À COMPLÉTER : RCS Pontoise n° … OU Répertoire des Métiers OU « dispensé d&apos;immatriculation »]
+                <br />
+                N° TVA intracommunautaire : [À COMPLÉTER : FR… — OU mention « TVA non applicable, art. 293 B du CGI » si franchise en base]
+                <br />
+                Code APE/NAF : [À COMPLÉTER : ex. 6202A — Conseil en systèmes et logiciels informatiques]
+                <br />
+                Zone d&apos;intervention : Yvelines (78) &amp; Val d&apos;Oise (95) — conseil &amp; audit en visio partout en France
                 <br />
                 Email : vite@augmenter.pro
+                <br />
+                Téléphone : [À COMPLÉTER : numéro au format +33…]
               </p>
+            </div>
+
+            <div>
+              <h2>Directeur de la publication</h2>
+              <p>Pierre Legrand, en qualité d&apos;éditeur du site.</p>
             </div>
 
             <div>

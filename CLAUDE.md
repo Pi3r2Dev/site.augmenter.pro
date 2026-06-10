@@ -10,6 +10,8 @@ Marketing website for **augmenter.pro** — an AI consulting and digital transfo
 
 **Contexte partagé par toutes les commandes SEO** : [`.claude/templates/seo/project-context.md`](.claude/templates/seo/project-context.md) — à consulter avant toute création/modification de contenu.
 
+**Charte éditoriale (voix, ton, arc, lexique, E-E-A-T)** : [`.claude/templates/seo/charte-editoriale.md`](.claude/templates/seo/charte-editoriale.md) — source de vérité de la **voix** du site. Relire un brouillon contre la charte : `/relecture-editoriale`.
+
 ## Web Crawling
 
 **Priorité : Firecrawl self-hosted sur VPS IONOS** (remplace crawl4ai Coolify depuis 2026-05-27)
@@ -45,6 +47,7 @@ npm run lint      # ESLint
 
 ```
 /create-article <sujet>   # Créer un article SEO (recherche, rédaction, intégration)
+/relecture-editoriale     # Relire un contenu contre la charte éditoriale (ton, arc, E-E-A-T, lexique)
 /seo-audit                 # Audit SEO complet (crawl site + concurrents, plan d'action)
 /security-audit            # Audit sécurité (OWASP, headers, RGPD)
 /doc-audit                 # Audit documentation (CLAUDE.md, code, metadata)

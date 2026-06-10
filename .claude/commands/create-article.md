@@ -294,6 +294,15 @@ Après création de l'article, effectue **toutes** ces mises à jour :
 
 4. **Vérifier le build** : Lance `npm run build` pour s'assurer que tout compile. Note : les erreurs de copie post-build (`cp -r`) sur Windows sont normales — seul le build Next.js compte.
 
+5. **Ping IndexNow** (indexation Bing → ChatGPT Search) : une fois l'article en ligne, pousser l'URL dans l'index Bing via IndexNow (cf. [`.claude/templates/seo/mcp-calls.md`](.claude/templates/seo/mcp-calls.md) §9 et [`checklist.md`](.claude/templates/seo/checklist.md) §G.8) :
+   ```bash
+   curl "https://api.indexnow.org/indexnow?url=https://augmenter.pro/blog/<slug>&key=<CLE_INDEXNOW>"
+   ```
+   > ⚠️ Prérequis utilisateur **une seule fois** : site vérifié dans Bing Webmaster Tools + clé déposée en `public/<clé>.txt`. Si la clé n'est pas encore en place, marquer le ping en TODO et le signaler dans le rapport final (action manuelle).
+
+6. **Repo GitHub miroir (si l'article publie / s'appuie sur un prompt majeur)** : GitHub est une surface de citation LLM majeure pour les prompts (cf. [`checklist.md`](.claude/templates/seo/checklist.md) §G.9). Créer ou mettre à jour un repo public miroir : README **bilingue FR/EN**, **lien canonique** vers l'article augmenter.pro, **licence MIT**, mention **augmenter.pro + Pierre Legrand**.
+   > ⚠️ **Action manuelle utilisateur** si `gh` n'est pas authentifié : Claude prépare le contenu du repo (README + LICENSE + fichier prompt), l'utilisateur crée/pousse le repo. Documenter le chemin local préparé dans le rapport final.
+
 ## Étape 6 — Checklist finale
 
 Vérifie et affiche un rapport :
@@ -312,6 +321,8 @@ Vérifie et affiche un rapport :
 - [ ] Article ajouté dans `src/app/blog/blog-view.tsx` (première position du tableau `ARTICLES`)
 - [ ] URL ajoutée dans `sitemap.xml`
 - [ ] Article ajouté dans `llms.txt`
+- [ ] **Ping IndexNow** déclenché sur l'URL publiée (ou TODO si clé pas encore en place — cf. §G.8)
+- [ ] Si l'article publie/s'appuie sur un **prompt majeur** : repo GitHub miroir créé/mis à jour (README FR/EN, lien canonique, licence MIT, mention augmenter.pro + Pierre Legrand — ou action manuelle utilisateur documentée si `gh` non authentifié — cf. §G.9)
 - [ ] Pas d'erreurs TypeScript (`npm run build` passe)
 - [ ] Contenu > 1200 mots **(format standard)** OU 800-1500 mots **(format `rapport-sectoriel-local`)**
 - [ ] Aucun contenu dupliqué avec les articles existants

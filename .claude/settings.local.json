@@ -29,7 +29,7 @@
       "Bash(npm run build:*)",
       "Bash(npm ls:*)",
       "Bash(npm view:*)",
-      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:*.*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.npmjs.com)",
       "WebFetch(domain:nango.dev)",
@@ -149,7 +149,12 @@
   "mcpServers": {
     "firecrawl": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "firecrawl-mcp"],
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "firecrawl-mcp"
+      ],
       "env": {
         "FIRECRAWL_API_URL": "https://firecrawl-test.augmenter.pro"
       }
@@ -157,7 +162,9 @@
     "dfs-mcp": {
       "command": "cmd",
       "args": [
-        "/c", "npx", "-y",
+        "/c",
+        "npx",
+        "-y",
         "dataforseo-mcp-server"
       ],
       "env": {
@@ -168,12 +175,17 @@
     "google-search-console": {
       "command": "cmd",
       "args": [
-        "/c", "npx", "-y",
+        "/c",
+        "npx",
+        "-y",
         "mcp-server-gsc"
       ],
       "env": {
         "GOOGLE_APPLICATION_CREDENTIALS": "C:\\Users\\black\\.credentials\\augmenter-pro-201c2230b7bd.json"
       }
     }
-  }
+  },
+  "disabledMcpjsonServers": [
+    "crawl4ai"
+  ]
 }

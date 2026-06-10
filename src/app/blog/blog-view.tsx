@@ -32,6 +32,26 @@ interface Article extends ArticleBentoData {
 
 const ARTICLES: Article[] = [
   {
+    slug: "prompt-audit-projet-claude-fable",
+    title:
+      "Votre code vieillit en silence : le prompt Claude Fable qui audite tout votre projet",
+    excerpt:
+      "Le prompt d'audit en 4 phases pour Claude Fable 5, traduit et amélioré en français. Cartographie, constats fichier:ligne, plan de remise à niveau — testé sur un vrai projet : 11 constats en 3 minutes.",
+    tags: ["IA", "Claude Code"],
+    readTime: "11 min",
+    image: "/images/blog/prompt-audit-projet-claude-fable.webp",
+  },
+  {
+    slug: "claude-cowork-community-manager",
+    title:
+      "J'ai transformé Claude Cowork en community manager : le setup, les prompts, ce qui a foiré",
+    excerpt:
+      "J'ai confié mes réseaux sociaux à Claude Cowork pendant six semaines. Le setup exact, les prompts que j'utilise vraiment, les chiffres avant/après — et les trois fois où ça a foiré.",
+    tags: ["IA", "Commercial"],
+    readTime: "11 min",
+    image: "/images/blog/claude-cowork-community-manager.webp",
+  },
+  {
     slug: "agent-ia-dirigeant-pme",
     title: "Agent IA pour dirigeant de PME : c'est quoi, et comment en créer un",
     excerpt:

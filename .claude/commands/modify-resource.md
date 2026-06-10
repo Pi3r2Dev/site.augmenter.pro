@@ -279,6 +279,24 @@ Après avoir ajouté des redirections, vérifier qu'il n'y a pas de **double red
 # - Aucune `destination` n'est une URL supprimée
 ```
 
+### 4.4 Ping IndexNow (toute URL modifiée, déplacée ou redirigée)
+
+Une fois les modifications en ligne, pousser dans l'index Bing (→ ChatGPT Search) **chaque URL touchée** : la nouvelle URL d'une page déplacée, l'URL conservée d'une page enrichie, et l'**ancienne URL** désormais redirigée (pour que Bing réindexe le 301). Cf. [`.claude/templates/seo/mcp-calls.md`](.claude/templates/seo/mcp-calls.md) §9 et [`checklist.md`](.claude/templates/seo/checklist.md) §G.8.
+
+```bash
+# Lot d'URLs touchées (nouvelle + ancienne redirigée)
+curl -X POST "https://api.indexnow.org/indexnow" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d '{
+    "host": "augmenter.pro",
+    "key": "<CLE_INDEXNOW>",
+    "keyLocation": "https://augmenter.pro/<CLE_INDEXNOW>.txt",
+    "urlList": ["https://augmenter.pro/<nouvelle-url>", "https://augmenter.pro/<ancienne-url>"]
+  }'
+```
+
+> ⚠️ Prérequis utilisateur **une seule fois** : site vérifié dans Bing Webmaster Tools + clé déposée en `public/<clé>.txt`. Si la clé n'est pas en place, marquer le ping en TODO (action manuelle) dans le rapport final.
+
 ---
 
 ## Étape 5 — Qualité du contenu modifié
@@ -336,6 +354,7 @@ Le build Next.js doit passer sans erreur. Vérifier que toutes les pages apparai
 - [ ] `blog-preview.tsx` : entrées modifiées/supprimées/ajoutées selon les articles impactés
 - [ ] `footer.tsx` : liens mis à jour si pages sectorielles/locales/légales impactées
 - [ ] Aucun `<Link href="...">` dans `src/` ne pointe vers une URL supprimée (grep vérifié)
+- [ ] **Ping IndexNow** déclenché sur chaque URL touchée (nouvelle + ancienne redirigée) — ou TODO si clé pas encore en place (cf. §4.4 et §G.8)
 
 #### Contenu
 - [ ] Metadata (title, description) à jour sur toutes les pages modifiées

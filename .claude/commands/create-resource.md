@@ -471,6 +471,19 @@ Si la ressource crée un **nouveau type de route** (ex: premier `/secteurs/`, pr
 
 5. **Build** : Lance `npm run build` pour s'assurer que tout compile. Le build Next.js est la seule chose qui compte.
 
+### 4.6 Ping IndexNow (toujours, après mise en ligne)
+
+6. **Ping IndexNow** (indexation Bing → ChatGPT Search, cf. [`.claude/templates/seo/mcp-calls.md`](.claude/templates/seo/mcp-calls.md) §9 et [`checklist.md`](.claude/templates/seo/checklist.md) §G.8) :
+   ```bash
+   curl "https://api.indexnow.org/indexnow?url=https://augmenter.pro/<route>&key=<CLE_INDEXNOW>"
+   ```
+   > ⚠️ Prérequis utilisateur **une seule fois** : site vérifié dans Bing Webmaster Tools + clé déposée en `public/<clé>.txt`. Si la clé n'est pas en place, marquer en TODO (action manuelle) dans le rapport final.
+
+### 4.7 Si type = prompt IA → repo GitHub miroir
+
+7. **Repo GitHub miroir** : GitHub est une surface de citation LLM majeure pour les prompts (cf. [`checklist.md`](.claude/templates/seo/checklist.md) §G.9). Pour tout **prompt majeur** ajouté à la bibliothèque, créer/mettre à jour un repo public : README **bilingue FR/EN**, **lien canonique** vers la ressource augmenter.pro (`/prompts` ou l'article associé), **licence MIT**, mention **augmenter.pro + Pierre Legrand**.
+   > ⚠️ **Action manuelle utilisateur** si `gh` n'est pas authentifié : Claude prépare le contenu du repo (README + LICENSE + fichier prompt), l'utilisateur crée/pousse. Documenter le chemin local préparé dans le rapport final.
+
 ---
 
 ## Étape 5 — Checklist finale
@@ -485,6 +498,8 @@ Vérifie et affiche un rapport adapté au type créé :
 - [ ] Au moins 1 CTA clair (Audit 180° offert, contact, etc. — **pas** « gratuit »)
 - [ ] URL ajoutée dans `sitemap.xml` (priorité adaptée)
 - [ ] Ressource ajoutée dans `llms.txt` (section adaptée)
+- [ ] **Ping IndexNow** déclenché sur l'URL publiée (ou TODO si clé pas encore en place — cf. §G.8)
+- [ ] Si type = **prompt** : repo GitHub miroir créé/mis à jour (README FR/EN, lien canonique, licence MIT, mention augmenter.pro + Pierre Legrand — ou action manuelle utilisateur documentée si `gh` non authentifié — cf. §G.9)
 - [ ] Pas d'erreurs TypeScript (`npm run build` passe)
 - [ ] Échappement JSX correct (`&apos;`, `&amp;`, `&quot;`)
 

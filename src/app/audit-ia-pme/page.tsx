@@ -427,6 +427,14 @@ export default function AuditIaPmePage() {
             >
               Comprendre ce qu&apos;un agent IA peut faire pour toi
             </Link>
+            . Et si c&apos;est ton logiciel métier qui t&apos;inquiète,
+            commence par le passer au{" "}
+            <Link
+              href="/blog/prompt-audit-projet-claude-fable"
+              className="text-primary underline-offset-4 hover:underline"
+            >
+              prompt d&apos;audit complet Claude Fable
+            </Link>
             .
           </p>
         </div>

@@ -576,6 +576,8 @@ export default function ConfigurerOdooIAClaude() {
         <Link href="/contact">Audit 180&deg; offert</Link> vous
         permet d&apos;&eacute;valuer en 60 minutes ce que l&apos;IA peut apporter &agrave; votre utilisation
         d&apos;Odoo &mdash; et combien vous pouvez &eacute;conomiser par rapport &agrave; votre prestataire actuel.
+        Pour cadrer l&apos;ensemble de votre maturit&eacute; IA, d&eacute;couvrez aussi notre{" "}
+        <Link href="/audit-ia-pme">audit IA pour PME</Link>.
       </p>
       <p>
         Pour en savoir plus sur la connexion entre IA et outils m&eacute;tier, consultez
@@ -586,6 +588,14 @@ export default function ConfigurerOdooIAClaude() {
         et l&apos;
         <Link href="/blog/serveur-mcp-integration-crm-erp">
           int&eacute;gration d&apos;agents IA &agrave; votre CRM/ERP
+        </Link>.
+      </p>
+      <p>
+        Claude Cowork ne se limite pas au param&eacute;trage d&apos;Odoo. Pour un autre
+        cas d&apos;usage concret &mdash; m&ecirc;me logique d&apos;op&eacute;rateur sous
+        supervision humaine &mdash; voyez comment nous l&apos;avons transform&eacute; en{" "}
+        <Link href="/blog/claude-cowork-community-manager">
+          community manager pour g&eacute;rer des r&eacute;seaux sociaux
         </Link>.
       </p>
     </ArticleLayout>

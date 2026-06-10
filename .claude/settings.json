@@ -1,13 +1,40 @@
 {
   "permissions": {
     "allow": [
-      "mcp__dfs-mcp__dataforseo_labs_google_keyword_suggestions"
+      "mcp__dfs-mcp__dataforseo_labs_google_keyword_suggestions",
+      "mcp__dfs-mcp__serp_locations",
+      "mcp__dfs-mcp__dataforseo_labs_google_domain_rank_overview",
+      "mcp__dfs-mcp__dataforseo_labs_google_ranked_keywords",
+      "mcp__dfs-mcp__dataforseo_labs_google_competitors_domain",
+      "mcp__dfs-mcp__dataforseo_labs_google_serp_competitors",
+      "mcp__dfs-mcp__backlinks_summary",
+      "mcp__dfs-mcp__ai_optimization_chat_gpt_scraper",
+      "mcp__dfs-mcp__serp_organic_live_advanced",
+      "mcp__dfs-mcp__on_page_lighthouse",
+      "WebFetch(domain:www.fastwatt.fr)",
+      "WebFetch(domain:www.savoiria.fr)",
+      "WebFetch(domain:www.acd-inc.fr)",
+      "WebFetch(domain:www.stema-partners.com)",
+      "WebFetch(domain:www.optimia.io)",
+      "mcp__dfs-mcp__kw_data_google_ads_search_volume",
+      "WebFetch(domain:www.gsqi.com)",
+      "WebFetch(domain:www.advicelocal.com)",
+      "WebFetch(domain:www.digitalapplied.com)",
+      "WebFetch(domain:searchengineland.com)",
+      "WebFetch(domain:www.brightlocal.com)",
+      "PowerShell(Get-Item \"C:\\\\Users\\\\black\\\\Documents\\\\BP Adrien.pdf\" | Select-Object Name, Length, LastWriteTime; Write-Output \"---\"; \\(Get-Command pdftoppm -ErrorAction SilentlyContinue\\).Source; \\(Get-Command pdftotext -ErrorAction SilentlyContinue\\).Source; \\(Get-Command magick -ErrorAction SilentlyContinue\\).Source)",
+      "mcp__plugin_playwright_playwright__browser_press_key",
+      "PowerShell(python \"C:\\\\Users\\\\black\\\\Documents\\\\_build_lefour_pdf.py\")",
+      "PowerShell(python -c \"import fitz; d=fitz.open\\(r'C:\\\\Users\\\\black\\\\Documents\\\\LE-FOUR_guide-previsionnel.pdf'\\); print\\('pages:', d.page_count\\)\")",
+      "mcp__legifrance__search_legifrance",
+      "mcp__legifrance__get_article_by_id"
     ],
     "additionalDirectories": [
       "d:\\SourceFast\\coolify_linux\\claude-md-templates-pme\\templates\\site-vitrine-nextjs",
       "d:\\SourceFast\\coolify_linux\\claude-md-templates-pme\\templates\\automatisation-python",
       "d:\\SourceFast\\coolify_linux\\claude-md-templates-pme",
-      "d:\\SourceFast\\coolify_linux\\prompts-dirigeant-pme"
+      "d:\\SourceFast\\coolify_linux\\prompts-dirigeant-pme",
+      "C:\\Users\\black\\Documents"
     ]
   }
 }

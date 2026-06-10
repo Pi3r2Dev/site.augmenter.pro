@@ -13,6 +13,8 @@ augmenter.pro est un site de conseil avec décisions financières impliquées = 
 | **Autorité** | Auteur absent | Auteur nommé | Auteur + bio courte | Credentials mentionnés | Credentials + missions + preuves |
 | **Fiabilité** | Affirmations sans source | 1-2 sources | Sources pour chiffres clés | Sources + nuances | Tout sourcé + limites + ton prudent |
 
+> **Information gain (critère clé 2026)** : Expertise 4-5/5 = **apport d'information nouveau** (donnée originale, retour terrain, POV tranché, méthodo propre). L'IA ayant commoditisé le contenu moyen, c'est devenu le seuil **à la fois du classement et de la citation LLM** : la reformulation du top SERP plafonne à 2/5 (« régurgitation »), n'est ni rankée ni citée.
+
 ## Signaux auteur à vérifier
 
 - [ ] Page auteur dédiée pour Pierre Legrand (bio, photo, credentials, missions, liens sociaux)

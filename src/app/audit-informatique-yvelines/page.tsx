@@ -44,9 +44,9 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Audit IT Yvelines 78 : reprends le contrôle de ton infogérance",
+  title: "Audit informatique & cybersécurité PME Yvelines (78)",
   description:
-    "Ton prestataire te facture plus qu'il ne résout ? Audit IT & cybersécurité PME en Yvelines — 60 min offerts, sans CB, sans engagement.",
+    "Ton prestataire te facture plus qu'il ne résout ? Audit informatique & cybersécurité PME en Yvelines (78) — 60 min offerts, sans CB, sans engagement.",
 };
 
 const stats = [
@@ -283,9 +283,9 @@ const faqItems = [
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Audit informatique Yvelines",
+  name: "Audit informatique & cybersécurité Yvelines",
   description:
-    "Audit informatique complet pour PME en Yvelines (78) : diagnostic réseau, sécurité, cloud, RGPD. Intervention sur site à Versailles, Saint-Germain-en-Laye, Rambouillet.",
+    "Audit informatique et cybersécurité complet pour PME en Yvelines (78) : diagnostic réseau, sécurité, cloud, RGPD. Intervention sur site à Versailles, Saint-Germain-en-Laye, Rambouillet.",
   provider: {
     "@type": "Organization",
     "@id": "https://augmenter.pro/#organization",
@@ -299,7 +299,7 @@ const serviceJsonLd = {
     "@type": "BusinessAudience",
     audienceType: "PME et TPE des Yvelines",
   },
-  serviceType: "Audit informatique",
+  serviceType: "Audit informatique et cybersécurité",
   offers: [
     {
       "@type": "Offer",
@@ -353,22 +353,35 @@ export default function AuditInformatiqueYvelinesPage() {
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <Badge variant="secondary" className="mb-4">
-              Audit Informatique 78
+              Audit IT &amp; Cybersécurité · Yvelines 78
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Audit informatique pour PME en{" "}
+              Audit informatique &amp; cybersécurité pour PME en{" "}
               <span className="gradient-text">Yvelines (78)</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
               Votre informatique ralentit votre activité au lieu de
-              l&apos;accélérer ? Notre audit révèle les failles, les
-              surcoûts et les risques de votre SI — avec un{" "}
-              <strong>plan d&apos;action concret</strong> pour y remédier.
-              Intervention sur site à{" "}
+              l&apos;accélérer, ou vous doutez de votre niveau de sécurité ?
+              Notre audit révèle les failles, les surcoûts et les risques de
+              votre SI — avec un <strong>plan d&apos;action concret</strong>{" "}
+              pour y remédier. Intervention sur site à{" "}
               <strong>
                 Versailles, Saint-Germain-en-Laye, Rambouillet, Poissy
               </strong>{" "}
               et dans tout le 78.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              <Zap className="mb-0.5 inline h-3.5 w-3.5 text-primary" /> Notre
+              différence : un audit mené avec les outils d&apos;IA que nous
+              maîtrisons (Claude Code, Claude Cowork) pour aller plus vite et
+              plus loin que l&apos;inventaire classique —{" "}
+              <Link
+                href="/audit-ia-pme"
+                className="text-primary underline-offset-4 hover:underline"
+              >
+                voir notre audit IA pour PME
+              </Link>
+              .
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="gap-2">
@@ -439,7 +452,7 @@ export default function AuditInformatiqueYvelinesPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Ce que couvre notre{" "}
-              <span className="gradient-text">audit informatique</span>
+              <span className="gradient-text">audit informatique &amp; cybersécurité</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Un diagnostic complet de votre système d&apos;information, de

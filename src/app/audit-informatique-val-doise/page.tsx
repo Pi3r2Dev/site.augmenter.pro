@@ -44,9 +44,9 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Audit Informatique Val-d'Oise (95) : Diagnostic Offert",
+  title: "Audit informatique Val-d'Oise (95) : 60 min pour y voir clair",
   description:
-    "Audit informatique PME en Val-d'Oise (95) : diagnostic 60 min offert, audit complet dès 225 €. NIS2, RGPD — on te dit ce que ton infogérance cache.",
+    "Pannes, sécurité fragile, infogérance opaque ? Audit informatique PME en Val-d'Oise (95) : 60 min offerts, audit complet dès 225 €. NIS2 & RGPD inclus.",
 };
 
 const stats = [

@@ -336,6 +336,10 @@ export default function Article() {
           Pour aller plus loin, lisez aussi notre méthode pour{" "}
           <Link href="/blog/claude-code-prompt-architecture">
             cadrer un projet Claude Code
+          </Link>
+          , notre{" "}
+          <Link href="/blog/prompt-audit-projet-claude-fable">
+            prompt d&apos;audit complet d&apos;un projet existant
           </Link>{" "}
           et notre guide sur le{" "}
           <Link href="/blog/serveur-mcp-guide-pratique-pme">

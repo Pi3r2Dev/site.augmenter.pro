@@ -452,6 +452,13 @@ export default function AtelierClaudeCodePage() {
             </li>
             <li>
               →{" "}
+              <Link href="/blog/prompt-audit-projet-claude-fable" className="text-primary hover:underline">
+                Le prompt d&apos;audit complet de projet (Claude Fable)
+              </Link>{" "}
+              (pour évaluer votre existant avant l&apos;atelier)
+            </li>
+            <li>
+              →{" "}
               <Link href="/blog/configurer-odoo-ia-claude-cowork" className="text-primary hover:underline">
                 Configurer Odoo avec Claude Cowork en 4 jours
               </Link>{" "}

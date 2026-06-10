@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://augmenter.pro/blog/prompt-audit-projet-claude-fable</loc>
+    <news:news>
+      <news:publication>
+        <news:name>augmenter.PRO</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-10</news:publication_date>
+      <news:title>Votre code vieillit en silence : le prompt Claude Fable qui audite tout votre projet</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://augmenter.pro/blog/claude-cowork-community-manager</loc>
+    <news:news>
+      <news:publication>
+        <news:name>augmenter.PRO</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-28</news:publication_date>
+      <news:title>J'ai transformé Claude Cowork en community manager : le setup, les prompts, ce qui a foiré</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://augmenter.pro/blog/agent-ia-dirigeant-pme</loc>
     <news:news>
       <news:publication>

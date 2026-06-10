@@ -5,6 +5,30 @@
 
 ---
 
+## prompt-audit-projet-claude-fable.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini)
+- **Dimensions** : Paysage 16:9 — 1200×670
+- **Poids** : ~38 Ko
+- **Description** : Robot IA jaune/ambre tenant une grande loupe dorée orientée vers un écran violet affichant du code source stylisé (lignes de code abstraites multicolores). À droite, une imprimante violette sort un rapport d'audit avec checklist cochée et trois pastilles de sévérité (rouge, orange, vert). Flux pointillés violets reliant robot, écran et rapport. Icônes flottantes : engrenages dorés, bouclier (sécurité), chronomètre (rapidité). Fond dégradé diagonal violet (#7c3aed) vers ambre (#f59e0b), style cohérent avec `agent-ia-dirigeant-pme.webp`.
+- **Contexte éditorial** : Image hero de l'article « Votre code vieillit en silence : le prompt Claude Fable qui audite tout votre projet » — illustre une IA qui analyse un dépôt de code et produit un rapport d'audit sévérisé.
+- **Usage suggéré** : Hero de l'article `/blog/prompt-audit-projet-claude-fable`.
+- **Alt text suggéré** : "Illustration flat design d'un robot IA examinant du code source à la loupe et produisant un rapport d'audit avec niveaux de sévérité, symbolisant l'audit complet d'un projet par Claude Fable"
+
+---
+
+## claude-cowork-community-manager.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini) — ⚠️ FICHIER EN ATTENTE (à déposer par l'utilisateur, article non publiable sans)
+- **Dimensions** : Paysage 16:9 (cible 1200×670)
+- **Poids** : viser < 150 Ko
+- **Description** : Assistant robot/IA stylisé (jaune/ambre, engrenages dorés) gérant plusieurs bulles de réseaux sociaux (LinkedIn, Instagram, X) depuis un tableau de bord violet, avec icônes de calendrier éditorial et de publication programmée. Flux violets reliant le robot aux plateformes. Fond dégradé violet (#7c3aed) vers ambre (#f59e0b), cohérent avec `configurer-odoo-ia-claude-cowork.webp` et `agent-ia-dirigeant-pme.webp`.
+- **Contexte éditorial** : Image hero de l'article « J'ai transformé Claude Cowork en community manager » — illustre une IA qui produit et planifie des publications multi-plateformes sous supervision humaine.
+- **Usage suggéré** : Hero de l'article `/blog/claude-cowork-community-manager`.
+- **Alt text suggéré** : "Illustration flat design d'un assistant IA gérant des publications LinkedIn, Instagram et X depuis un tableau de bord avec calendrier éditorial, symbolisant un community manager automatisé"
+
+---
+
 ## agent-ia-dirigeant-pme.webp
 
 - **Type** : Illustration flat design (IA générée via Gemini)
