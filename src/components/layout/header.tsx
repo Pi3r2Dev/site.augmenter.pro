@@ -9,6 +9,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetDescription,
   SheetClose,
 } from "@/components/ui/sheet";
 
@@ -65,6 +66,9 @@ export function Header() {
                   </span>
                 </Link>
               </SheetTitle>
+              <SheetDescription className="sr-only">
+                Navigation principale du site augmenter.PRO
+              </SheetDescription>
             </SheetHeader>
             <nav className="flex flex-col gap-1 px-4">
               {navLinks.map((link) => (

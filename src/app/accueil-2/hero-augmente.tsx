@@ -17,6 +17,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetDescription,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import styles from "./hero-augmente.module.css";
@@ -639,6 +640,9 @@ export function HeroAugmente() {
                     </span>
                   </Link>
                 </SheetTitle>
+                <SheetDescription className="sr-only">
+                  Navigation principale du site augmenter.PRO
+                </SheetDescription>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-4">
                 {NAV_LINKS.map((link) => (
