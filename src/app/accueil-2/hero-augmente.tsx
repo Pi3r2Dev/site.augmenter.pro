@@ -3,13 +3,22 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { sendGTMEvent } from "@next/third-parties/google";
-import { ArrowRight, Check, Network, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Menu, Network, Sparkles } from "lucide-react";
 import {
   useCallback,
   useEffect,
   useRef,
   useState,
 } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import styles from "./hero-augmente.module.css";
 import {
   buildScene,
@@ -17,6 +26,14 @@ import {
   prepareScene,
   revealStage,
 } from "./scene";
+
+/** Navigation alignée sur le Header global du site (parité A/B). */
+const NAV_LINKS = [
+  { href: "/approche", label: "Approche" },
+  { href: "/blog", label: "Blog" },
+  { href: "/prompts", label: "Prompts" },
+  { href: "/contact", label: "Contact" },
+];
 
 type Chapter = {
   accent: string;
@@ -571,15 +588,60 @@ export function HeroAugmente() {
           augmenter<em>.PRO</em>
         </Link>
 
-        <nav className={styles.nav} aria-label="Navigation de démonstration">
-          <Link href="/approche">Prestations</Link>
-          <Link href="/approche">Approche</Link>
-          <Link href="/audit-ia-pme">Tarifs</Link>
-          <Link href="/idees">Idées</Link>
-          <Link href="/contact">Contact</Link>
+        <nav className={styles.nav} aria-label="Navigation principale">
+          {NAV_LINKS.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
-        <AuditButton location="header" onClick={triggerAudit} pulse={buttonPulse} />
+        <div className={styles.headerActions}>
+          <AuditButton location="header" onClick={triggerAudit} pulse={buttonPulse} />
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <button
+                aria-label="Ouvrir le menu"
+                className={styles.menuButton}
+                type="button"
+              >
+                <Menu aria-hidden="true" size={20} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-72">
+              <SheetHeader>
+                <SheetTitle>
+                  <Link href="/" className="flex items-center gap-2">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                      <Network aria-hidden="true" className="h-4 w-4" />
+                    </span>
+                    <span className="text-lg font-bold tracking-tight">
+                      augmenter<span className="text-primary">.PRO</span>
+                    </span>
+                  </Link>
+                </SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-1 px-4">
+                {NAV_LINKS.map((link) => (
+                  <SheetClose asChild key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+                <SheetClose asChild>
+                  <Button asChild className="mt-2">
+                    <Link href="/contact">Premier diagnostic</Link>
+                  </Button>
+                </SheetClose>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </header>
 
       <section className={styles.hero} aria-label="Accueil augmenté">

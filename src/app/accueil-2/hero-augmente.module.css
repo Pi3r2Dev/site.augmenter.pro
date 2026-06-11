@@ -119,6 +119,32 @@
   color: var(--fg);
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Bouton hamburger : masqué sur desktop, affiché là où le nav disparaît. */
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.menuButton:hover {
+  background: color-mix(in oklch, var(--fg) 6%, transparent);
+}
+
 .kbtn {
   display: inline-flex;
   align-items: center;
@@ -862,6 +888,10 @@
 
   .nav {
     display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
   }
 
   .floatCta {
