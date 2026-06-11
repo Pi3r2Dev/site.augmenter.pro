@@ -32,6 +32,16 @@ interface Article extends ArticleBentoData {
 
 const ARTICLES: Article[] = [
   {
+    slug: "cybersecurite-pme-guide-pratique",
+    title:
+      "Cybersécurité PME : 93 % des attaques sont évitables avec du bon sens",
+    excerpt:
+      "Pas besoin d'une DSI ni d'un gros budget. Mots de passe, double authentification, phishing, fraude au président : le guide pratique pour couvrir l'essentiel du risque, avec un plan d'action en une semaine.",
+    tags: ["Cybersécurité", "PME"],
+    readTime: "13 min",
+    image: "/images/blog/cybersecurite-pme-guide-pratique.webp",
+  },
+  {
     slug: "prompt-audit-projet-claude-fable",
     title:
       "Votre code vieillit en silence : le prompt Claude Fable qui audite tout votre projet",

@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://augmenter.pro/blog/cybersecurite-pme-guide-pratique</loc>
+    <news:news>
+      <news:publication>
+        <news:name>augmenter.PRO</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-11</news:publication_date>
+      <news:title>Cybersécurité PME : 93 % des attaques sont évitables avec du bon sens</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://augmenter.pro/blog/prompt-audit-projet-claude-fable</loc>
     <news:news>
       <news:publication>
