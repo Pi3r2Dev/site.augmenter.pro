@@ -245,11 +245,22 @@ export function HeroAugmente() {
         variant: "accueil_2_hero_augmente",
         cta_location: ctaLocation,
       });
+      // CTA en <button> : signale le départ au tracker A/B (home_next_click).
+      window.dispatchEvent(
+        new CustomEvent("home:nextclick", { detail: "/contact" }),
+      );
 
       router.push("/contact");
     },
     [router],
   );
+
+  // Relaie le chapitre actif au tracker A/B (home_chapter_reached).
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent("home:chapter", { detail: chapterIndex }),
+    );
+  }, [chapterIndex]);
 
   useEffect(() => {
     if (!isAuto || isReducedMotion) return;
