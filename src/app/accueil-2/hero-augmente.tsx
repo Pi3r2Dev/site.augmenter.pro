@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { ArrowRight, Check, Network, Sparkles } from "lucide-react";
 import {
@@ -112,14 +113,13 @@ export function HeroAugmente() {
     chapterIndex: 0,
     text: "",
   });
+  const router = useRouter();
   const [isAuto, setIsAuto] = useState(true);
-  const [toastVisible, setToastVisible] = useState(false);
   const [buttonPulse, setButtonPulse] = useState(0);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   // false par défaut : sur tactile on ne monte ni curseur custom ni boucle halo.
   const [isFinePointer, setIsFinePointer] = useState(false);
 
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const typeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const idleResumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const wheelLocked = useRef(false);
@@ -237,9 +237,7 @@ export function HeroAugmente() {
 
   const triggerAudit = useCallback(
     (ctaLocation: "header" | "hero" | "float" | "keyboard") => {
-      setToastVisible(true);
       setButtonPulse((value) => value + 1);
-      setManualChapter();
       window.dispatchEvent(new CustomEvent("hero:bpulse"));
 
       sendGTMEvent({
@@ -248,10 +246,9 @@ export function HeroAugmente() {
         cta_location: ctaLocation,
       });
 
-      if (toastTimer.current) clearTimeout(toastTimer.current);
-      toastTimer.current = setTimeout(() => setToastVisible(false), 2_600);
+      router.push("/contact");
     },
-    [setManualChapter],
+    [router],
   );
 
   useEffect(() => {
@@ -337,7 +334,6 @@ export function HeroAugmente() {
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
-      if (toastTimer.current) clearTimeout(toastTimer.current);
     };
   }, [chapterIndex, setManualChapter, triggerAudit]);
 
@@ -651,14 +647,8 @@ export function HeroAugmente() {
         onClick={() => triggerAudit("float")}
         type="button"
       >
-        Calculez votre potentiel <ArrowRight aria-hidden="true" size={16} />
+        Augmenter vos potentiels <ArrowRight aria-hidden="true" size={16} />
       </button>
-
-      <div
-        className={toastVisible ? `${styles.toast} ${styles.toastShow}` : styles.toast}
-      >
-        Audit lancé — on vous rappelle sous <b>48 h</b>.
-      </div>
 
       {isFinePointer && !isReducedMotion && (
         <>
