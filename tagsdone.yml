@@ -1,0 +1,157 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Revenir à la page d'accueil" [ref=e11] [cursor=pointer]:
+            - img: arrow_back
+          - button "Revenir à la page d'accueil" [ref=e12] [cursor=pointer]:
+            - img "Tag Manager"
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - generic: Tag Manager
+          - button "Ouvrir le sélecteur universel" [ref=e18] [cursor=pointer]:
+            - generic:
+              - generic:
+                - generic: Tous les comptes
+                - img: chevron_right
+                - generic: augmenter.pro
+              - generic:
+                - generic:
+                  - generic: augmenter.pro
+                - img: arrow_drop_down
+          - search [ref=e20]:
+            - img [ref=e21]: search
+            - textbox "Rechercher" [ref=e23]:
+              - /placeholder: Rechercher dans l'espace de travail
+          - button "Passer à un autre produit" [ref=e25] [cursor=pointer]:
+            - img
+          - generic [ref=e28]:
+            - button "Aide" [ref=e29] [cursor=pointer]:
+              - img: help
+            - button "Ouvrir le menu à développer" [ref=e31] [cursor=pointer]:
+              - img: more_vert
+          - button "Ouvrir le panneau de changement de compte utilisateur" [ref=e33] [cursor=pointer]:
+            - 'img "Compte Google : piAIR L. (legrand.work@gmail.com)"'
+      - navigation [ref=e37]:
+        - tablist "Navigation de premier niveau" [ref=e38]:
+          - tab "Espace de travail" [selected] [ref=e39] [cursor=pointer]
+          - tab "Versions" [ref=e40] [cursor=pointer]:
+            - generic [ref=e41]: Versions
+          - tab "Admin" [ref=e42] [cursor=pointer]
+    - generic [ref=e3381]:
+      - banner:
+        - generic [ref=e3382]:
+          - link "GTM-P8JGPLRK" [ref=e3384] [cursor=pointer]:
+            - /url: ""
+          - generic [ref=e3385]: "Modif. espace de travail : 8"
+          - generic [ref=e3388]:
+            - button "Prévisualiser" [ref=e3390] [cursor=pointer]
+            - button "Envoyer" [ref=e3391] [cursor=pointer]
+      - generic [ref=e3392]:
+        - generic [ref=e3395]:
+          - generic [ref=e3396]:
+            - generic [ref=e3397]: Espace de travail actuel
+            - generic [ref=e3398] [cursor=pointer]: Default Workspace
+          - generic [ref=e3399]:
+            - link "Présentation" [ref=e3400] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6"
+              - text: Présentation
+            - link "Balises" [ref=e3402] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags"
+              - text: Balises
+            - link "Déclencheurs" [ref=e3404] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/triggers"
+              - text: Déclencheurs
+            - link "Variables" [ref=e3406] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/variables"
+              - text: Variables
+            - link "Dossiers" [ref=e3408] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/folders"
+              - text: Dossiers
+            - link "Modèles" [ref=e3410] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/templates"
+              - text: Modèles
+        - generic [ref=e3416]:
+          - generic [ref=e3417]:
+            - generic [ref=e3419]: Balises
+            - generic [ref=e3420]:
+              - button "Ajouter le texte du filtre" [ref=e3424] [cursor=pointer]
+              - button "Nouvelle" [ref=e3425] [cursor=pointer]
+          - table [ref=e3426]:
+            - rowgroup [ref=e3433]:
+              - row "Activer/Désactiver la sélection de toutes les lignes du tableau. Trier la colonne Nom Triée dans l'ordre ascending Trier la colonne Type Déclencheurs d'activation Trier la colonne Dernière mise à jour" [ref=e3434] [cursor=pointer]:
+                - columnheader "Activer/Désactiver la sélection de toutes les lignes du tableau." [ref=e3435]:
+                  - button "Activer/Désactiver la sélection de toutes les lignes du tableau." [ref=e3438]
+                - columnheader "Trier la colonne Nom Triée dans l'ordre ascending" [ref=e3439]:
+                  - button "Trier la colonne Nom Triée dans l'ordre ascending" [ref=e3440]: Nom
+                - columnheader "Trier la colonne Type" [ref=e3441]:
+                  - button "Trier la colonne Type" [ref=e3442]: Type
+                - columnheader "Déclencheurs d'activation" [ref=e3443]
+                - columnheader "Trier la colonne Dernière mise à jour" [ref=e3444]:
+                  - button "Trier la colonne Dernière mise à jour" [ref=e3445]: Dernière mise à jour
+              - row "Activer/Désactiver la sélection de la ligne du tableau. GA4 - Balise Google Balise Google All Pages il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4870] [cursor=pointer]:
+                - cell "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4871]:
+                  - checkbox "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4873]
+                - cell "GA4 - Balise Google" [ref=e4874]:
+                  - link "GA4 - Balise Google" [ref=e4875]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags/10"
+                - cell "Balise Google" [ref=e4876]
+                - cell "All Pages" [ref=e4877]:
+                  - generic [ref=e4881]: All Pages
+                - cell "il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4883]:
+                  - generic "9 févr. 2026, 12:30:39" [ref=e4884]: il y a 4 mois
+                  - generic "Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise."
+                  - generic "Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée."
+              - 'row "Activer/Désactiver la sélection de la ligne du tableau. GA4 - Home AB test Google Analytics : Événement GA4 CE - Home AB events il y a quelques secondes Le système de détection de Google a détecté la présence d''un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu''elle ne sera pas réactivée." [ref=e4885] [cursor=pointer]':
+                - cell "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4886]:
+                  - checkbox "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4888]
+                - cell "GA4 - Home AB test" [ref=e4889]:
+                  - link "GA4 - Home AB test" [ref=e4890]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags/23"
+                - 'cell "Google Analytics : Événement GA4" [ref=e4891]'
+                - cell "CE - Home AB events" [ref=e4892]:
+                  - link "CE - Home AB events" [ref=e4896]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/triggers/22"
+                    - text: CE - Home AB events
+                - cell "il y a quelques secondes Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4898]:
+                  - generic "11 juin 2026, 10:10:14" [ref=e4899]: il y a quelques secondes
+                  - generic "Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise."
+                  - generic "Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée."
+              - 'row "Activer/Désactiver la sélection de la ligne du tableau. GA4 - Lecture article Google Analytics : Événement GA4 CE - Lecture article il y a 4 mois Le système de détection de Google a détecté la présence d''un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu''elle ne sera pas réactivée." [ref=e4900] [cursor=pointer]':
+                - cell "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4901]:
+                  - checkbox "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4903]
+                - cell "GA4 - Lecture article" [ref=e4904]:
+                  - link "GA4 - Lecture article" [ref=e4905]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags/12"
+                - 'cell "Google Analytics : Événement GA4" [ref=e4906]'
+                - cell "CE - Lecture article" [ref=e4907]:
+                  - link "CE - Lecture article" [ref=e4911]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/triggers/11"
+                    - text: CE - Lecture article
+                - cell "il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4913]:
+                  - generic "9 févr. 2026, 12:37:38" [ref=e4914]: il y a 4 mois
+                  - generic "Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise."
+                  - generic "Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée."
+              - 'row "Activer/Désactiver la sélection de la ligne du tableau. Google Analytics Événement formulaire Google Analytics : Événement GA4 CE - Contact form submit il y a 4 mois Le système de détection de Google a détecté la présence d''un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu''elle ne sera pas réactivée." [ref=e4915] [cursor=pointer]':
+                - cell "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4916]:
+                  - checkbox "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4918]
+                - cell "Google Analytics Événement formulaire" [ref=e4919]:
+                  - link "Google Analytics Événement formulaire" [ref=e4920]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags/7"
+                - 'cell "Google Analytics : Événement GA4" [ref=e4921]'
+                - cell "CE - Contact form submit" [ref=e4922]:
+                  - link "CE - Contact form submit" [ref=e4926]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/triggers/6"
+                    - text: CE - Contact form submit
+                - cell "il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4928]:
+                  - generic "9 févr. 2026, 12:09:51" [ref=e4929]: il y a 4 mois
+                  - generic "Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise."
+                  - generic "Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée."
+    - generic [ref=e167]:
+      - link "Conditions d'utilisation" [ref=e168] [cursor=pointer]:
+        - /url: https://support.google.com/tagmanager/answer/7157428?hl=fr
+      - text: •
+      - link "Règles de confidentialité" [ref=e169] [cursor=pointer]:
+        - /url: https://www.google.com/intl/fr/policies/privacy/
+  - tooltip "Menu Aide" [ref=e3102]

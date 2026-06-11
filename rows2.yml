@@ -1,0 +1,269 @@
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Revenir à la page d'accueil" [ref=e11] [cursor=pointer]:
+            - img: arrow_back
+          - button "Revenir à la page d'accueil" [ref=e12] [cursor=pointer]:
+            - img "Tag Manager"
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - generic: Tag Manager
+          - button "Ouvrir le sélecteur universel" [ref=e18] [cursor=pointer]:
+            - generic:
+              - generic:
+                - generic: Tous les comptes
+                - img: chevron_right
+                - generic: augmenter.pro
+              - generic:
+                - generic:
+                  - generic: augmenter.pro
+                - img: arrow_drop_down
+          - search [ref=e20]:
+            - img [ref=e21]: search
+            - textbox "Rechercher" [ref=e23]:
+              - /placeholder: Rechercher dans l'espace de travail
+          - button "Passer à un autre produit" [ref=e25] [cursor=pointer]:
+            - img
+          - generic [ref=e28]:
+            - button "Aide" [ref=e29] [cursor=pointer]:
+              - img: help
+            - button "Ouvrir le menu à développer" [ref=e31] [cursor=pointer]:
+              - img: more_vert
+          - button "Ouvrir le panneau de changement de compte utilisateur" [ref=e33] [cursor=pointer]:
+            - 'img "Compte Google : piAIR L. (legrand.work@gmail.com)"'
+      - navigation [ref=e37]:
+        - tablist "Navigation de premier niveau" [ref=e38]:
+          - tab "Espace de travail" [selected] [ref=e39] [cursor=pointer]
+          - tab "Versions" [ref=e40] [cursor=pointer]:
+            - generic [ref=e41]: Versions
+          - tab "Admin" [ref=e42] [cursor=pointer]
+    - generic [ref=e3381]:
+      - banner:
+        - generic [ref=e3382]:
+          - link "GTM-P8JGPLRK" [ref=e3384] [cursor=pointer]:
+            - /url: ""
+          - generic [ref=e3385]: "Modif. espace de travail : 7"
+          - generic [ref=e3388]:
+            - button "Prévisualiser" [ref=e3390] [cursor=pointer]
+            - button "Envoyer" [ref=e3391] [cursor=pointer]
+      - generic [ref=e3392]:
+        - generic [ref=e3395]:
+          - generic [ref=e3396]:
+            - generic [ref=e3397]: Espace de travail actuel
+            - generic [ref=e3398] [cursor=pointer]: Default Workspace
+          - generic [ref=e3399]:
+            - link "Présentation" [ref=e3400] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6"
+              - text: Présentation
+            - link "Balises" [ref=e3402] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags"
+              - text: Balises
+            - link "Déclencheurs" [ref=e3404] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/triggers"
+              - text: Déclencheurs
+            - link "Variables" [ref=e3406] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/variables"
+              - text: Variables
+            - link "Dossiers" [ref=e3408] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/folders"
+              - text: Dossiers
+            - link "Modèles" [ref=e3410] [cursor=pointer]:
+              - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/templates"
+              - text: Modèles
+        - generic [ref=e3416]:
+          - generic [ref=e3417]:
+            - generic [ref=e3419]: Balises
+            - generic [ref=e3420]:
+              - button "Ajouter le texte du filtre" [ref=e3424] [cursor=pointer]
+              - button "Nouvelle" [ref=e3425] [cursor=pointer]
+          - table [ref=e3426]:
+            - rowgroup [ref=e3433]:
+              - row "Activer/Désactiver la sélection de toutes les lignes du tableau. Trier la colonne Nom Triée dans l'ordre ascending Trier la colonne Type Déclencheurs d'activation Trier la colonne Dernière mise à jour" [ref=e3434] [cursor=pointer]:
+                - columnheader "Activer/Désactiver la sélection de toutes les lignes du tableau." [ref=e3435]:
+                  - button "Activer/Désactiver la sélection de toutes les lignes du tableau." [ref=e3438]
+                - columnheader "Trier la colonne Nom Triée dans l'ordre ascending" [ref=e3439]:
+                  - button "Trier la colonne Nom Triée dans l'ordre ascending" [ref=e3440]: Nom
+                - columnheader "Trier la colonne Type" [ref=e3441]:
+                  - button "Trier la colonne Type" [ref=e3442]: Type
+                - columnheader "Déclencheurs d'activation" [ref=e3443]
+                - columnheader "Trier la colonne Dernière mise à jour" [ref=e3444]:
+                  - button "Trier la colonne Dernière mise à jour" [ref=e3445]: Dernière mise à jour
+              - row "Activer/Désactiver la sélection de la ligne du tableau. GA4 - Balise Google Balise Google All Pages il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4608] [cursor=pointer]:
+                - cell "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4609]:
+                  - checkbox "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4611]
+                - cell "GA4 - Balise Google" [ref=e4612]:
+                  - link "GA4 - Balise Google" [ref=e4613]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags/10"
+                - cell "Balise Google" [ref=e4614]
+                - cell "All Pages" [ref=e4615]:
+                  - generic [ref=e4619]: All Pages
+                - cell "il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4621]:
+                  - generic "9 févr. 2026, 12:30:39" [ref=e4622]: il y a 4 mois
+                  - generic "Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise."
+                  - generic "Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée."
+              - 'row "Activer/Désactiver la sélection de la ligne du tableau. GA4 - Lecture article Google Analytics : Événement GA4 CE - Lecture article il y a 4 mois Le système de détection de Google a détecté la présence d''un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu''elle ne sera pas réactivée." [ref=e4623] [cursor=pointer]':
+                - cell "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4624]:
+                  - checkbox "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4626]
+                - cell "GA4 - Lecture article" [ref=e4627]:
+                  - link "GA4 - Lecture article" [ref=e4628]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags/12"
+                - 'cell "Google Analytics : Événement GA4" [ref=e4629]'
+                - cell "CE - Lecture article" [ref=e4630]:
+                  - link "CE - Lecture article" [ref=e4634]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/triggers/11"
+                    - text: CE - Lecture article
+                - cell "il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4636]:
+                  - generic "9 févr. 2026, 12:37:38" [ref=e4637]: il y a 4 mois
+                  - generic "Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise."
+                  - generic "Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée."
+              - 'row "Activer/Désactiver la sélection de la ligne du tableau. Google Analytics Événement formulaire Google Analytics : Événement GA4 CE - Contact form submit il y a 4 mois Le système de détection de Google a détecté la présence d''un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu''elle ne sera pas réactivée." [ref=e4638] [cursor=pointer]':
+                - cell "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4639]:
+                  - checkbox "Activer/Désactiver la sélection de la ligne du tableau." [ref=e4641]
+                - cell "Google Analytics Événement formulaire" [ref=e4642]:
+                  - link "Google Analytics Événement formulaire" [ref=e4643]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/tags/7"
+                - 'cell "Google Analytics : Événement GA4" [ref=e4644]'
+                - cell "CE - Contact form submit" [ref=e4645]:
+                  - link "CE - Contact form submit" [ref=e4649]:
+                    - /url: "#/container/accounts/6338485623/containers/243113596/workspaces/6/triggers/6"
+                    - text: CE - Contact form submit
+                - cell "il y a 4 mois Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise. Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée." [ref=e4651]:
+                  - generic "9 févr. 2026, 12:09:51" [ref=e4652]: il y a 4 mois
+                  - generic "Le système de détection de Google a détecté la présence d'un logiciel malveillant dans cette balise."
+                  - generic "Cette balise a été mise en veille et ne se déclenchera pas tant qu'elle ne sera pas réactivée."
+    - generic [ref=e167]:
+      - link "Conditions d'utilisation" [ref=e168] [cursor=pointer]:
+        - /url: https://support.google.com/tagmanager/answer/7157428?hl=fr
+      - text: •
+      - link "Règles de confidentialité" [ref=e169] [cursor=pointer]:
+        - /url: https://www.google.com/intl/fr/policies/privacy/
+  - generic [ref=e3491]:
+    - generic [ref=e3492]:
+      - button "Fermer l'écran" [ref=e3493] [cursor=pointer]
+      - generic [ref=e3494]:
+        - generic [ref=e3496]: Balise sans titre
+        - button "Éléments non classés" [ref=e3499]:
+          - generic "Éléments non classés" [ref=e3501] [cursor=pointer]
+      - generic [ref=e3502]:
+        - button "Enregistrer" [ref=e3503] [cursor=pointer]
+        - button [ref=e3505] [cursor=pointer]
+    - generic [ref=e3507]:
+      - region "Section" [ref=e3509]:
+        - generic [ref=e3510]:
+          - button "Exit edit mode button, click to go back to readonly mode" [ref=e3538] [cursor=pointer]: Configuration de la balise
+          - generic [ref=e3513]:
+            - generic [ref=e4361]:
+              - generic [ref=e4363]: Type de balise
+              - 'button "Google Analytics : Événement GA4 Google Analytics" [ref=e4366] [cursor=pointer]':
+                - generic [ref=e4368]:
+                  - generic [ref=e4369]: "Google Analytics : Événement GA4"
+                  - generic [ref=e4370]: Google Analytics
+            - generic [ref=e4374]:
+              - text: help_outline
+              - generic [ref=e4376]:
+                - generic [ref=e4377]:
+                  - generic [ref=e4378]: ID de mesure
+                  - generic [ref=e4381]:
+                    - textbox [ref=e4382]: G-YEREHFPC7J
+                    - button [ref=e4383] [cursor=pointer]
+                - generic [ref=e4387]:
+                  - generic [ref=e4389]:
+                    - generic [ref=e4429]: Balise Google détectée dans ce conteneur
+                    - generic [ref=e4430]: Cette balise utilisera la configuration de la balise Google Site Web SEO.
+                  - button "Afficher les paramètres" [ref=e4432] [cursor=pointer]
+              - generic [ref=e4394]:
+                - generic [ref=e4395]:
+                  - text: Nom de l'événement
+                  - button "Afficher plus d'informations" [ref=e4397]: help_outline
+                - generic [ref=e4400]:
+                  - textbox [ref=e4401]: "{{Event}}"
+                  - button [ref=e4402] [cursor=pointer]
+              - generic [ref=e4408]:
+                - button "Paramètres de l'événement, Cliquer pour réduire" [ref=e4433] [cursor=pointer]: Paramètres de l'événement
+                - generic [ref=e4435]:
+                  - generic [ref=e4437]:
+                    - generic [ref=e4438]: Event Settings Variable
+                    - combobox "Event Settings Variable" [ref=e4439]:
+                      - option "Aucun" [selected]
+                      - option "---------" [disabled]
+                      - option "Nouvelle variable…"
+                  - generic [ref=e4445]:
+                    - generic [ref=e4446]:
+                      - generic [ref=e4447]:
+                        - generic [ref=e4449]: Paramètre d'événement
+                        - generic [ref=e4451]: Valeur
+                      - generic [ref=e4500]:
+                        - generic [ref=e4504]:
+                          - textbox [ref=e4505]: ab_variant
+                          - button [ref=e4506] [cursor=pointer]
+                        - generic [ref=e4511]:
+                          - textbox [ref=e4512]: "{{ab_variant}}"
+                          - button [ref=e4513] [cursor=pointer]
+                        - button "Supprimer" [ref=e4516]:
+                          - button "Supprimer" [ref=e4517] [cursor=pointer]
+                      - generic [ref=e4518]:
+                        - generic [ref=e4522]:
+                          - textbox [ref=e4523]: seconds_total
+                          - button [ref=e4524] [cursor=pointer]
+                        - generic [ref=e4529]:
+                          - textbox [ref=e4530]: "{{seconds_total}}"
+                          - button [ref=e4531] [cursor=pointer]
+                        - button "Supprimer" [ref=e4534]:
+                          - button "Supprimer" [ref=e4535] [cursor=pointer]
+                      - generic [ref=e4536]:
+                        - generic [ref=e4540]:
+                          - textbox [active] [ref=e4541]: chapter
+                          - button [ref=e4542] [cursor=pointer]
+                        - generic [ref=e4547]:
+                          - textbox [ref=e4548]
+                          - button [ref=e4549] [cursor=pointer]
+                        - button "Supprimer" [ref=e4552]:
+                          - button "Supprimer" [ref=e4553] [cursor=pointer]
+                      - generic [ref=e4554]:
+                        - generic [ref=e4558]:
+                          - textbox [ref=e4559]
+                          - button [ref=e4560] [cursor=pointer]
+                        - generic [ref=e4565]:
+                          - textbox [ref=e4566]
+                          - button [ref=e4567] [cursor=pointer]
+                        - button "Supprimer" [ref=e4570]:
+                          - button "Supprimer" [ref=e4571] [cursor=pointer]
+                      - generic [ref=e4572]:
+                        - generic [ref=e4576]:
+                          - textbox [ref=e4577]
+                          - button [ref=e4578] [cursor=pointer]
+                        - generic [ref=e4583]:
+                          - textbox [ref=e4584]
+                          - button [ref=e4585] [cursor=pointer]
+                        - button "Supprimer" [ref=e4588]:
+                          - button "Supprimer" [ref=e4589] [cursor=pointer]
+                      - generic [ref=e4590]:
+                        - generic [ref=e4594]:
+                          - textbox [ref=e4595]
+                          - button [ref=e4596] [cursor=pointer]
+                        - generic [ref=e4601]:
+                          - textbox [ref=e4602]
+                          - button [ref=e4603] [cursor=pointer]
+                        - button "Supprimer" [ref=e4606]:
+                          - button "Supprimer" [ref=e4607] [cursor=pointer]
+                    - button "Ajouter un paramètre" [ref=e4454] [cursor=pointer]
+              - button "Propriétés utilisateur, Cliquer pour développer" [ref=e4416] [cursor=pointer]: Propriétés utilisateur
+              - button "Plus de paramètres, Cliquer pour développer" [ref=e4423] [cursor=pointer]: Plus de paramètres
+            - generic [ref=e4426]:
+              - button "Paramètres avancés, Cliquer pour développer" [ref=e4427] [cursor=pointer]: Paramètres avancés
+              - text: help_outline help_outline help_outline help_outline help_outline help_outline help_outline help_outline
+        - generic "Section edit button, click to enable edit mode for this section" [ref=e3539]
+      - region "Section" [ref=e3524]:
+        - generic [ref=e3525]:
+          - heading "Déclenchement" [ref=e3526]:
+            - generic [ref=e3527]: Déclenchement
+          - button " Sélectionnez le déclencheur qui permettra d'activer cette balise... En savoir plus" [ref=e3530]:
+            - generic [ref=e3531]:
+              - generic [ref=e3532]: 
+              - generic [ref=e3533]:
+                - generic [ref=e3534]: Sélectionnez le déclencheur qui permettra d'activer cette balise...
+                - link "En savoir plus" [ref=e3536] [cursor=pointer]:
+                  - /url: https://support.google.com/tagmanager/answer/6106961
+        - button "Section edit button, click to enable edit mode for this section" [ref=e3537]
