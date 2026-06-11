@@ -23,6 +23,18 @@ export function middleware(request: NextRequest) {
   ) {
     const cookie = request.cookies.get("ab_home")?.value;
     const assigned = cookie === "a" || cookie === "b";
+
+    // N'assigner que sur une vraie navigation (Sec-Fetch-Dest: document) :
+    // les prefetch RSC de `/` (logo, liens) tireraient sinon des variantes
+    // indépendantes → soft-nav et reload incohérents. Effet de bord assumé :
+    // les agents sans ce header (bots, curl) reçoivent toujours la variante A
+    // → contenu de `/` stable pour Googlebot pendant le test.
+    const isDocument =
+      request.headers.get("sec-fetch-dest") === "document";
+    if (!assigned && !isDocument) {
+      return NextResponse.next();
+    }
+
     const variant = assigned ? cookie : Math.random() < 0.5 ? "a" : "b";
 
     const response =

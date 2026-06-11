@@ -139,6 +139,9 @@ export function HeroAugmente() {
 
   const typeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const idleResumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // true quand le prochain changement de chapitre vient d'une action
+  // utilisateur (vs autoplay) — consommé par le relais home:chapter.
+  const manualNav = useRef(false);
   const wheelLocked = useRef(false);
   const touchStartY = useRef<number | null>(null);
   const exposureSent = useRef(false);
@@ -244,6 +247,7 @@ export function HeroAugmente() {
   const setManualChapter = useCallback((nextIndex?: number) => {
     setIsAuto(false);
     if (typeof nextIndex === "number") {
+      manualNav.current = true;
       setChapterIndex((nextIndex + CHAPTERS.length) % CHAPTERS.length);
     }
 
@@ -272,8 +276,13 @@ export function HeroAugmente() {
     [router],
   );
 
-  // Relaie le chapitre actif au tracker A/B (home_chapter_reached).
+  // Relaie le chapitre actif au tracker A/B (home_chapter_reached) —
+  // navigation MANUELLE uniquement : l'autoplay atteindrait 4/4 tout seul en
+  // 20 s et biaiserait la comparaison avec le scroll volontaire de la
+  // variante A.
   useEffect(() => {
+    if (!manualNav.current) return;
+    manualNav.current = false;
     window.dispatchEvent(
       new CustomEvent("home:chapter", { detail: chapterIndex }),
     );
@@ -283,6 +292,9 @@ export function HeroAugmente() {
     if (!isAuto || isReducedMotion) return;
 
     const interval = window.setInterval(() => {
+      // Onglet caché : on fige le carrousel (cohérent avec la pause rAF de la
+      // scène) au lieu de défiler dans le vide.
+      if (document.hidden) return;
       setChapterIndex((current) => (current + 1) % CHAPTERS.length);
     }, AUTO_DELAY_MS);
 
@@ -291,6 +303,12 @@ export function HeroAugmente() {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      // Ne pas capturer les raccourcis navigateur (Ctrl+B favoris, Alt+← back…)
+      // ni l'auto-repeat d'une touche maintenue.
+      if (event.metaKey || event.ctrlKey || event.altKey || event.repeat) {
+        return;
+      }
+
       if (
         event.key === "ArrowDown" ||
         event.key === "ArrowRight" ||

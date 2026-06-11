@@ -19,10 +19,10 @@
 
 ## claude-cowork-community-manager.webp
 
-- **Type** : Illustration flat design (IA générée via Gemini) — ⚠️ FICHIER EN ATTENTE (à déposer par l'utilisateur, article non publiable sans)
-- **Dimensions** : Paysage 16:9 (cible 1200×670)
-- **Poids** : viser < 150 Ko
-- **Description** : Assistant robot/IA stylisé (jaune/ambre, engrenages dorés) gérant plusieurs bulles de réseaux sociaux (LinkedIn, Instagram, X) depuis un tableau de bord violet, avec icônes de calendrier éditorial et de publication programmée. Flux violets reliant le robot aux plateformes. Fond dégradé violet (#7c3aed) vers ambre (#f59e0b), cohérent avec `configurer-odoo-ia-claude-cowork.webp` et `agent-ia-dirigeant-pme.webp`.
+- **Type** : Illustration flat design (IA générée — Kling)
+- **Dimensions** : Paysage 16:9 — 1200×670
+- **Poids** : ~40 Ko
+- **Description** : Robot assistant IA jaune/ambre installé à un tableau de bord violet (calendrier éditorial à pastilles colorées), entouré d'engrenages dorés et de bulles de réseaux sociaux flottantes (réseau social, contact, photo, X) reliées par des flux pointillés. À droite, une silhouette humaine violette tient une publication — supervision humaine (l'IA produit, l'humain valide). Décor de bureau moderne en arrière-plan, fond dégradé violet (#7c3aed) vers ambre, cohérent avec `configurer-odoo-ia-claude-cowork.webp` et `agent-ia-dirigeant-pme.webp`.
 - **Contexte éditorial** : Image hero de l'article « J'ai transformé Claude Cowork en community manager » — illustre une IA qui produit et planifie des publications multi-plateformes sous supervision humaine.
 - **Usage suggéré** : Hero de l'article `/blog/claude-cowork-community-manager`.
 - **Alt text suggéré** : "Illustration flat design d'un assistant IA gérant des publications LinkedIn, Instagram et X depuis un tableau de bord avec calendrier éditorial, symbolisant un community manager automatisé"

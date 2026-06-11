@@ -6,10 +6,10 @@ import { HomeAbTracker } from "@/components/analytics/home-ab-tracker";
 // (cookie ab_home=b). Le canonical pointe vers `/` — pattern Google officiel
 // pour les variantes d'A/B test : aucune URL dupliquée dans l'index, et un
 // accès direct à /accueil-2 canonicalise vers la home.
+// PAS de title/description ici : la variante hérite des metadata du root
+// layout pour que le title indexable de `/` reste stable quelle que soit la
+// variante crawlée (seul le body varie).
 export const metadata: Metadata = {
-  title: "Votre PME, Augmentée par vos Équipes | augmenter.PRO",
-  description:
-    "Moins d'administratif, plus de clients. Conseil IA, intégration Claude et Odoo pour PME — audit 60 min offert, sans engagement, partout en France.",
   alternates: {
     canonical: "https://augmenter.pro/",
   },

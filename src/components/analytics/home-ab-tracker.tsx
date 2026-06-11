@@ -35,14 +35,21 @@ export function HomeAbTracker({
     let maxChapter = -1;
     let nextClicks = 0;
 
+    // Battements comptés toutes les 15 s visibles (précision), mais envoi GTM
+    // sur jalons espacés seulement — ~10 événements max au lieu de 40, pour ne
+    // pas gonfler le volume GA4 (échantillonnage des Explorations).
+    const SEND_BEATS = new Set([1, 2, 4, 6, 8, 12, 16, 24, 32, MAX_BEATS]);
     const interval = window.setInterval(() => {
-      if (document.hidden || beats >= MAX_BEATS) return;
+      if (document.hidden) return;
       beats += 1;
-      sendGTMEvent({
-        event: "home_attention",
-        ab_variant: variant,
-        seconds_total: beats * HEARTBEAT_SECONDS,
-      });
+      if (SEND_BEATS.has(beats)) {
+        sendGTMEvent({
+          event: "home_attention",
+          ab_variant: variant,
+          seconds_total: beats * HEARTBEAT_SECONDS,
+        });
+      }
+      if (beats >= MAX_BEATS) window.clearInterval(interval);
     }, HEARTBEAT_SECONDS * 1000);
 
     const handleChapter = (event: Event) => {
@@ -71,7 +78,10 @@ export function HomeAbTracker({
       const anchor = (event.target as Element | null)?.closest?.("a[href]");
       if (!anchor) return;
       const href = anchor.getAttribute("href") ?? "";
-      if (href.startsWith("/") || href.startsWith("https://augmenter.pro")) {
+      // Exclusions : le logo href="/" (re-clic sur la home ≠ départ) et les
+      // URLs protocol-relative "//..." (externes malgré le slash initial).
+      if (href === "/" || href.startsWith("//")) return;
+      if (href.startsWith("/") || href.startsWith("https://augmenter.pro/")) {
         sendNextClick(href);
       }
     };
