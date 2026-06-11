@@ -16,7 +16,11 @@ export function middleware(request: NextRequest) {
   // (dont les bots) est assigné aléatoirement — pas de cloaking. /accueil-2
   // porte un canonical vers `/`, donc aucune des deux variantes ne crée de
   // duplicate dans l'index.
-  if (request.nextUrl.pathname === "/") {
+  // Kill switch hPanel : AB_HOME_ENABLED=false désactive le split sans redeploy code.
+  if (
+    process.env.AB_HOME_ENABLED !== "false" &&
+    request.nextUrl.pathname === "/"
+  ) {
     const cookie = request.cookies.get("ab_home")?.value;
     const assigned = cookie === "a" || cookie === "b";
     const variant = assigned ? cookie : Math.random() < 0.5 ? "a" : "b";
@@ -40,5 +44,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: "/(.*)",
+  // Exclure assets statiques (_next, favicon, images…) — évite de router
+  // favicon.ico et co. via le middleware Edge inutilement.
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|icon|apple-icon|robots.txt|sitemap.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml|webp)$).*)",
+  ],
 };
