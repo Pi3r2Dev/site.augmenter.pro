@@ -55,13 +55,22 @@ export const metadata: Metadata = {
         url: "/images/general/og-augmenter-pro.webp",
         width: 1200,
         height: 630,
-        alt: "augmenter.PRO — Consultant IA & Transformation Digitale pour PME",
+        alt: "augmenter.PRO — Diorama isométrique ordinateur & robots PME, consultant IA Claude Code, Odoo, audit IT 78/95",
+        type: "image/webp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     creator: "@Pi3r2Dev",
+    images: [
+      {
+        url: "/images/general/og-augmenter-pro.webp",
+        width: 1200,
+        height: 630,
+        alt: "augmenter.PRO — Diorama isométrique ordinateur & robots PME, consultant IA Claude Code, Odoo, audit IT 78/95",
+      },
+    ],
   },
   robots: {
     index: true,
