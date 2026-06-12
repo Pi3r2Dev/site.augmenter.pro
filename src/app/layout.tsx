@@ -19,6 +19,11 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+/** Image Open Graph partagée (Facebook, WhatsApp, X, LinkedIn). JPEG = compat max plugins + crawlers. */
+const OG_IMAGE_PATH = "/images/general/og-augmenter-pro.jpg";
+const OG_IMAGE_ALT =
+  "augmenter.PRO — Diorama isométrique ordinateur & robots PME, consultant IA Claude Code, Odoo, audit IT 78/95";
+
 export const metadata: Metadata = {
   title: {
     default:
@@ -52,11 +57,12 @@ export const metadata: Metadata = {
       "Consultant IA pour dirigeants PME : Claude Code, Odoo, automatisation, audit IT. Visio France entière, présentiel 78/95 et sur demande partout en France.",
     images: [
       {
-        url: "/images/general/og-augmenter-pro.webp",
+        url: OG_IMAGE_PATH,
+        secureUrl: OG_IMAGE_PATH,
         width: 1200,
         height: 630,
-        alt: "augmenter.PRO — Diorama isométrique ordinateur & robots PME, consultant IA Claude Code, Odoo, audit IT 78/95",
-        type: "image/webp",
+        alt: OG_IMAGE_ALT,
+        type: "image/jpeg",
       },
     ],
   },
@@ -65,10 +71,11 @@ export const metadata: Metadata = {
     creator: "@Pi3r2Dev",
     images: [
       {
-        url: "/images/general/og-augmenter-pro.webp",
+        url: OG_IMAGE_PATH,
         width: 1200,
         height: 630,
-        alt: "augmenter.PRO — Diorama isométrique ordinateur & robots PME, consultant IA Claude Code, Odoo, audit IT 78/95",
+        alt: OG_IMAGE_ALT,
+        type: "image/jpeg",
       },
     ],
   },
@@ -226,6 +233,8 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Legacy Facebook / certains plugins SEO (IMAGE_SRC) */}
+        <link rel="image_src" href={`https://augmenter.pro${OG_IMAGE_PATH}`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

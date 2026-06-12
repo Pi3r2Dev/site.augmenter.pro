@@ -119,6 +119,46 @@ Si une carte seule ne suffit pas, remplacer les loaders par les variantes **DisT
 
 Doc : [github.com/pollockjj/ComfyUI-MultiGPU](https://github.com/pollockjj/ComfyUI-MultiGPU) section DisTorch 2.0.
 
+## Dépannage erreurs courantes
+
+### `CFGGuider — Required input is missing: negative`
+
+**Cause** : le négatif vide via `CLIPTextEncode` ne valide pas toujours sur Flux Klein.
+
+**Fix** (déjà dans les JSON v2) : node **`ConditioningZeroOut`** branché sur le positif → entrée `negative` du `CFGGuider`.
+
+```
+CLIPTextEncode (positif) ─┬─→ CFGGuider positive
+                          └─→ ConditioningZeroOut ─→ CFGGuider negative
+```
+
+### `CUDA error: illegal memory access` sur `system_stats`
+
+**Cause** : GPU CUDA dans un état corrompu — souvent après un accès à `cuda:1` inexistante ou un OOM multi-GPU.
+
+**Procédure** :
+
+1. **Arrêter complètement** ComfyUI / le container Docker (pas juste Queue Stop)
+2. Dans le container : `nvidia-smi -L` → compter les GPU réellement visibles
+3. Si **1 seule GPU** :
+   - Utiliser `flux2-klein9b-og-pass1-singlegpu.json` (loaders standards)
+   - OU dans MultiGPU : mettre Qwen `device = cpu` (Flux reste sur `cuda:0`)
+   - **Ne pas** laisser `cuda:1` si la GPU n'existe pas
+4. Redémarrer ComfyUI
+5. Si persiste : `CUDA_LAUNCH_BLOCKING=1` dans l'env pour localiser le kernel fautif
+
+**Docker** : vérifier `deploy.resources.reservations.devices` ou `NVIDIA_VISIBLE_DEVICES=0,1` selon le nombre de cartes passées au container.
+
+### Fichiers workflow
+
+| Fichier | Quand l'utiliser |
+|---------|------------------|
+| `flux2-klein9b-og-pass1-scene.json` | 2 GPU + ComfyUI-MultiGPU OK |
+| `flux2-klein9b-og-pass1-singlegpu.json` | 1 GPU / erreurs CUDA / pas MultiGPU |
+| `flux2-klein9b-og-pass2-texte.json` | Passe 2 inpaint (après passe 1) |
+
+---
+
 ## Procédure
 
 ### Passe 1 — Scène

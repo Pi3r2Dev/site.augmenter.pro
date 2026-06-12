@@ -83,6 +83,10 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# Twitterbot : aperçus X / Twitter Cards (summary_large_image)
+User-agent: Twitterbot
+Allow: /
+
 # --- Common Crawl ----------------------------------------------------------
 # CCBot : source data utilisée par de nombreux LLMs (Anthropic, Mistral, etc.).
 # Asymétrie assumée : on autorise CCBot (corpus open, présence LLM maximale) tout
