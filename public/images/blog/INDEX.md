@@ -7,10 +7,10 @@
 
 ## cybersecurite-pme-guide-pratique.webp
 
-- **Type** : Illustration flat design (IA générée via Gemini) — ⚠ **à générer**
-- **Dimensions cible** : Paysage 16:9 — 1200×670
-- **Poids cible** : < 60 Ko (WebP)
-- **Direction artistique suggérée** : Robot IA jaune/ambre debout devant un bouclier violet central frappé d'un cadenas doré. Autour, les gestes d'hygiène cyber en pictos flottants reliés par flux pointillés violets : un téléphone affichant un code de double authentification (MFA), un trousseau de clés / gestionnaire de mots de passe, une enveloppe d'email barrée d'un hameçon (phishing), une disquette de sauvegarde. En bas, une petite silhouette humaine violette lève la main (le facteur humain, premier pare-feu). Fond dégradé diagonal violet (#7c3aed) vers ambre (#f59e0b), cohérent avec `prompt-audit-projet-claude-fable.webp` et `agent-ia-dirigeant-pme.webp`.
+- **Type** : Illustration flat design / 3D render (IA générée via Gemini)
+- **Dimensions** : Paysage 16:9 — 1200×670
+- **Poids** : ~53 Ko (WebP, qualité 80)
+- **Description** : Robot IA doré/ambre debout, mains sur les hanches, devant un grand bouclier violet central frappé d'un cadenas doré. Autour, quatre gestes d'hygiène cyber en pictos reliés par flux pointillés violets : en haut à gauche un smartphone affichant un code « 6666 » avec écusson bleu (« Double authentification (MFA) »), en bas à gauche une disquette violette (« Disquette de sauvegarde »), en haut à droite un trousseau de clés + base de données (« Trousseau »), en bas à droite une enveloppe barrée d'un hameçon (« Phishing prévention »). En bas à droite, une silhouette humaine violette lève la main avec la mention « Le Facteur Humain, Premier Pare-feu ». Fond dégradé diagonal violet (#7c3aed) vers ambre (#f59e0b), cohérent avec `prompt-audit-projet-claude-fable.webp` et `agent-ia-dirigeant-pme.webp`.
 - **Contexte éditorial** : Image hero de l'article « Cybersécurité PME : 93 % des attaques sont évitables avec du bon sens » — illustre l'hygiène cyber de base d'une PME (MFA, mots de passe, anti-phishing, sauvegardes, facteur humain).
 - **Usage suggéré** : Hero de l'article `/blog/cybersecurite-pme-guide-pratique`.
 - **Alt text suggéré** : "Illustration flat design d'un robot IA protégeant une PME avec un bouclier et un cadenas, entouré des gestes de cybersécurité de base (double authentification, mots de passe, anti-phishing, sauvegarde)"
