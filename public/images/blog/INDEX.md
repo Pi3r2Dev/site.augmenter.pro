@@ -5,6 +5,18 @@
 
 ---
 
+## serveur-mcp-heberge-pme.webp
+
+- **Type** : Illustration isométrique flat design (IA générée via Gemini)
+- **Dimensions** : Paysage 16:9 — 1200×670
+- **Poids** : ~29 Ko (WebP, qualité 80)
+- **Description** : Scène isométrique sur fond clair (near-white). En bas à gauche, une source de données (cube ambre lumineux + pile de serveurs violette) d'où partent trois chemins violets lumineux qui divergent vers trois destinations symbolisant les trois façons de brancher une IA sur ses données : en haut à gauche une fenêtre de terminal violette affichant du code (coder son serveur), au centre un nuage violet générique (louer une plateforme cloud), à droite un coffre-fort / bâtiment-forteresse violet frappé d'un cadenas doré (auto-héberger en souveraineté). Accents ambre sur les flux et halos. Pas de texte. Style cohérent violet (#7c3aed) + ambre.
+- **Contexte éditorial** : Image hero de l'article « Serveur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ? » — illustre les trois voies (coder / louer / auto-héberger) pour exposer ses données à une IA via un serveur MCP.
+- **Usage suggéré** : Hero de l'article `/blog/serveur-mcp-heberge-pme`.
+- **Alt text suggéré** : "Illustration isométrique de trois façons de brancher une IA sur ses données : coder un serveur, louer une plateforme cloud, ou auto-héberger un serveur MCP souverain protégé par un cadenas"
+
+---
+
 ## cybersecurite-pme-guide-pratique.webp
 
 - **Type** : Illustration flat design / 3D render (IA générée via Gemini)

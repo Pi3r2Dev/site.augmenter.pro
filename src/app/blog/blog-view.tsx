@@ -32,6 +32,16 @@ interface Article extends ArticleBentoData {
 
 const ARTICLES: Article[] = [
   {
+    slug: "serveur-mcp-heberge-pme",
+    title:
+      "Serveur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?",
+    excerpt:
+      "Vous voulez que votre IA lise vos vraies données sans monter une usine à gaz. Trois chemins, et un seul détail les départage : où vivent vos données. Panorama des plateformes, coûts réels et grille de décision PME.",
+    tags: ["IA", "PME"],
+    readTime: "10 min",
+    image: "/images/blog/serveur-mcp-heberge-pme.webp",
+  },
+  {
     slug: "cybersecurite-pme-guide-pratique",
     title:
       "Cybersécurité PME : 93 % des attaques sont évitables avec du bon sens",
