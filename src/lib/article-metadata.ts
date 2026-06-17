@@ -21,6 +21,9 @@ export function articleMetadata(opts: {
   const { title, description, slug } = opts;
   const url = `https://augmenter.pro/blog/${slug}`;
   const ogImage = `/images/blog/og/${slug}.jpg`;
+  // secureUrl ne reçoit PAS le metadataBase de Next (contrairement à `url`) :
+  // on le force en absolu pour les crawlers stricts.
+  const ogImageAbs = `https://augmenter.pro${ogImage}`;
 
   return {
     title,
@@ -37,7 +40,7 @@ export function articleMetadata(opts: {
       images: [
         {
           url: ogImage,
-          secureUrl: ogImage,
+          secureUrl: ogImageAbs,
           width: 1200,
           height: 630,
           alt: title,

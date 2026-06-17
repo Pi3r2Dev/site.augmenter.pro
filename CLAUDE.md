@@ -327,18 +327,19 @@ augmenter.pro est un site de conseil pour PME (domaine YMYL) — Google applique
 Use `/create-article <sujet>` or follow this manual process:
 
 1. Create [src/app/blog/<slug>/page.tsx](src/app/blog/) using `ArticleLayout` wrapper
-2. Export `metadata: Metadata` with SEO-optimized title & description
+2. Export `const metadata = articleMetadata({ title, description, slug })` — helper [src/lib/article-metadata.ts](src/lib/article-metadata.ts) qui génère **openGraph + twitter + canonical** à partir d'une seule source (title/description SEO + slug). **Ne JAMAIS revenir à `metadata: Metadata` brut** sans `openGraph` : un article sans bloc `openGraph` hérite de la carte de partage générique du site (titre + image `og-augmenter-pro.jpg`) au lieu de la sienne. og:image pointe vers `/images/blog/og/<slug>.jpg`.
 3. Pass `slug="<slug>"` à `ArticleLayout` pour canonical URL JSON-LD
 4. Pass `dateISO` (ISO 8601) et `dateModified` props à `ArticleLayout`
 5. Add image [public/images/blog/<slug>.webp](public/images/blog/) (WebP, 16:9, < 300 Ko) et passer `image="/images/blog/<slug>.webp"` prop
-6. Update [public/images/blog/INDEX.md](public/images/blog/INDEX.md) avec description image (type, dimensions, poids, contexte, alt text)
-7. Add article entry dans le tableau `ARTICLES` du catalog [src/data/resources.ts](src/data/resources.ts) (en première position pour les plus récents) — **plus** dans `blog-view.tsx`, qui l'importe désormais. Renseigner les champs catalog : `tldr` (le verdict actionnable, lu en 10 s), `sectors` (un ou plusieurs `Sector` ; `"Tous"` = transversal) et `pains` (les `PainId` adressés) → c'est ce qui fait remonter l'article dans le hub `/augmenter-mon-entreprise`
-8. Add URL dans [public/sitemap.xml](public/sitemap.xml) avec `<lastmod>` ISO 8601
-9. Add article dans [public/news-sitemap.xml](public/news-sitemap.xml)
-10. Add article dans [public/llms.txt](public/llms.txt) section blog
-11. Si l'article est suffisamment fort, hand-pick dans [src/app/home-narrative/chapters/ch05-recit.tsx](src/app/home-narrative/chapters/ch05-recit.tsx) — la home featuring 3 articles, à curater
-12. Tag(s) doivent matcher les filter pills cliquables de `/blog` : `IA` / `PME` / `Commercial` / `Cybersécurité` / `Audit 360°`. Si tu utilises un tag différent (`Productivité`, `Intégration`, `Claude Code`, etc.), l'article n'apparaîtra que sous le filtre « Tout ». **Ne pas utiliser « Intelligence Artificielle » comme tag** — utiliser `IA` (normalisé site-wide).
-13. Run `npm run build` to verify
+6. **Générer le JPEG Open Graph** `public/images/blog/og/<slug>.jpg` (1200×630, JPEG qualité 82) recadré `cover` depuis le hero WebP — sinon `og:image` 404. Voir convention dans [public/images/blog/INDEX.md](public/images/blog/INDEX.md) (sous-dossier `og/`). Recadrage via sharp : `sharp(hero).resize(1200,630,{fit:"cover"}).jpeg({quality:82,mozjpeg:true})`.
+7. Update [public/images/blog/INDEX.md](public/images/blog/INDEX.md) avec description image (type, dimensions, poids, contexte, alt text)
+8. Add article entry dans le tableau `ARTICLES` du catalog [src/data/resources.ts](src/data/resources.ts) (en première position pour les plus récents) — **plus** dans `blog-view.tsx`, qui l'importe désormais. Renseigner les champs catalog : `tldr` (le verdict actionnable, lu en 10 s), `sectors` (un ou plusieurs `Sector` ; `"Tous"` = transversal) et `pains` (les `PainId` adressés) → c'est ce qui fait remonter l'article dans le hub `/augmenter-mon-entreprise`
+9. Add URL dans [public/sitemap.xml](public/sitemap.xml) avec `<lastmod>` ISO 8601
+10. Add article dans [public/news-sitemap.xml](public/news-sitemap.xml)
+11. Add article dans [public/llms.txt](public/llms.txt) section blog
+12. Si l'article est suffisamment fort, hand-pick dans [src/app/home-narrative/chapters/ch05-recit.tsx](src/app/home-narrative/chapters/ch05-recit.tsx) — la home featuring 3 articles, à curater
+13. Tag(s) doivent matcher les filter pills cliquables de `/blog` : `IA` / `PME` / `Commercial` / `Cybersécurité` / `Audit 360°`. Si tu utilises un tag différent (`Productivité`, `Intégration`, `Claude Code`, etc.), l'article n'apparaîtra que sous le filtre « Tout ». **Ne pas utiliser « Intelligence Artificielle » comme tag** — utiliser `IA` (normalisé site-wide).
+14. Run `npm run build` to verify
 
 ## Key Constraints
 
