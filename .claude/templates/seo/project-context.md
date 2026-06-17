@@ -146,7 +146,7 @@ Détails + paliers potentiels supplémentaires : voir [`service-card.md`](servic
 - **Pages à `"use client"`** : split server/client (page.tsx + `<name>-client.tsx`) pour permettre `export const metadata`
 - **Articles de blog** : route statique `src/app/blog/<slug>/page.tsx`, wrapper `<ArticleLayout slug="<slug>">`
 - **Images** : WebP uniquement, `public/images/<catégorie>/<slug>.webp`, alt en français, composant `<Image>` de `next/image`
-- **À jour à chaque ajout** : `sitemap.xml`, `news-sitemap.xml` (articles), `llms.txt`, `src/app/blog/blog-view.tsx` (⚠️ vraie source de vérité ; `src/components/sections/blog-preview.tsx` est **legacy** post-refonte bento)
+- **À jour à chaque ajout** : `sitemap.xml`, `news-sitemap.xml` (articles), `llms.txt`, et **`src/data/resources.ts`** — catalog partagé, ⚠️ **vraie source de vérité** des tableaux `ARTICLES` et `IDEAS` (un nouvel article/idée s'ajoute ici, avec `tldr`/`sectors`/`pains` ; `blog-view.tsx` et `idees-view.tsx` l'importent). Le hub `/augmenter-mon-entreprise` consomme le même catalog. (`src/components/sections/blog-preview.tsx` reste **legacy** post-refonte bento.)
 
 ---
 

@@ -1,167 +1,171 @@
 # Playbook influence éthique — augmenter.pro
 
-**Le craft, pas la stratégie.** Compagnon de la [charte éditoriale](charte-editoriale.md) : comment écrire des **articles** et des **accroches de mail** qui touchent juste *sans manipuler*. Outillage tiré de l'**hypnose humaniste** (Olivier Lockert) et du **Milton Model** (PNL), entièrement re-réglé pour le persona **dirigeant PME** d'augmenter.pro.
+**Le craft, pas la stratégie.** Compagnon de la [charte éditoriale](charte-editoriale.md) : comment écrire des **articles** et des **accroches de mail** qui touchent juste et **persuadent sans manipuler**. Doctrine tirée de la **source primaire** : *L'Hypnose Humaniste Pour les Nuls*, Olivier & Patricia Lockert (PDF, 457 p. — réf. §7), re-réglée pour le persona **dirigeant PME** d'augmenter.pro.
 
 > **Division des rôles :**
-> - [charte-editoriale.md](charte-editoriale.md) = la **VOIX** (ton, lexique, arc, barre qualité). La règle §3.4 « influence éthique » y pointe vers ici.
-> - **Ce doc** = la **mécanique** (patterns d'accroche, boîte à outils PNL, structure « en ouverture », lignes rouges d'influence).
+> - [charte-editoriale.md](charte-editoriale.md) = la **VOIX**. La règle §3.4 y pointe vers ici.
+> - **Ce doc** = la **mécanique** (doctrine, patterns d'accroche, persuasion transparente, garde-fous, accroches de mail).
 > - [project-context.md](project-context.md) = la **STRATÉGIE** (persona, positionnement, offres).
 >
-> **Origine** : adapté du `storytelling-playbook.md` produit pour le projet WeBuild (2026-05-27), bâti sur la lecture de *L'Hypnose humaniste pour les Nuls* (Lockert) + Milton Model. Les exemples WeBuild (threads X, rétro-gaming) ont été **remplacés** par des exemples PME (Odoo, ChatGPT/Claude, dépendance intégrateur, audit, formation).
-> **Créé ici** : 2026-06-17 · **Statut** : 🔁 document vivant, enrichi à chaque bon contenu repéré.
+> **Historique** : v1 (2026-06-17) adaptée du `storytelling-playbook.md` du projet WeBuild, lui-même bâti sur un **résumé web**. **v2 (2026-06-17) corrigée à la source primaire** (le PDF) — voir §3 et §0bis pour les corrections doctrinales. **Statut** : 🔁 vivant.
 
 ---
 
 ## 0. La promesse de ce doc
 
-Écrire pour un dirigeant PME, ce n'est pas « convertir » : c'est **fabriquer assez d'attention pour qu'une idée juste atteigne quelqu'un de débordé et méfiant, et qu'il en fasse *librement* quelque chose**. Quatre réflexes :
+Écrire pour un dirigeant PME débordé et méfiant, ce n'est pas « convertir » : c'est **lever assez de bruit pour qu'une idée juste l'atteigne, et qu'il en fasse *librement* quelque chose**. Quatre réflexes :
 
-1. **L'idée d'abord, jamais le nombril.** Le dirigeant apprend ou ressent quelque chose dès la 1ʳᵉ ligne (objet de mail ou titre d'article).
-2. **La spécificité bat le superlatif.** Un chiffre, un cas terrain 78/95, un montant de devis > « solutions innovantes ».
+1. **L'idée d'abord, jamais le nombril.** Il apprend ou ressent quelque chose dès la 1ʳᵉ ligne.
+2. **La spécificité bat le superlatif.** Un chiffre, un cas 78/95, un montant de devis > « solutions innovantes ».
 3. **Une intention par contenu.** Un mail = une idée = une action. Un article = une douleur = une méthode complète.
-4. **On ouvre, on n'enferme pas.** On invite, on relie, on laisse libre (§1). C'est ce qui transforme un lecteur méfiant en client qui décide de lui-même.
+4. **On ouvre, on n'enferme pas.** On invite, on relie, on laisse libre (§1).
+
+## 0bis. Le contresens corrigé (à lire une fois)
+
+Le livre de Lockert **n'est pas un manuel de persuasion** — c'est une **éthique de la communication transparente**. Il théorise une méthode *explicitement non-manipulatoire* et passe son temps à dire ce qu'il **refuse** de faire. Deux corrections par rapport à la v1 :
+
+- ❌ **Le Milton Model / les patterns PNL ne sont PAS la méthode humaniste.** Ce sont, chez Lockert, les outils de l'influence *cachée* (ericksonienne) qu'il **rejette** : il forme ses élèves aux suggestions *« afin de ne pas s'en servir involontairement »* (p.163). La v1 avait inversé son propos.
+- ✅ **Ce qu'il autorise, c'est l'inverse** : expliquer, argumenter, **persuader à visage découvert**. C'est notre permission de fond (§1.2).
 
 ---
 
-## 1. La posture éthique : l'influence « en ouverture »
+## 1. La doctrine (source primaire)
 
-> **Cadre** — l'**hypnose humaniste** d'Olivier Lockert. Là où les hypnoses classiques *dissocient* (la personne devient *moins* consciente), l'hypnose humaniste travaille **en ouverture de conscience** : la personne s'élargit, devient **plus** lucide et **plus** libre, et se **ré-associe** à un ensemble plus vaste. Le praticien ne cherche **pas à convaincre** ; chacun garde ses idées ; la personne reste **actrice** de son changement.
->
-> **Le point décisif pour notre craft** : Lockert n'emploie **aucun langage caché** — seulement le **« langage du cœur »**, direct et transparent. Expliquer, argumenter, même *persuader à visage découvert*, **n'altère pas le libre-arbitre** (*Carducci & Deuser, 1984*) ; seules les techniques *indirectes et clandestines* manipulent réellement. **Dire les choses franchement, c'est déjà refuser de manipuler.**
+### 1.1 Le langage du cœur — aucun procédé caché
+*« Il n'y a aucun langage technique […] aucune forme de suggestion indirecte, cachée »* (p.163). Le plus important : *« ne pas chercher à influencer la personne ; […] ouvrir un espace de liberté, finalement assez rare au quotidien »* (p.163-164). Consigne : *« Pas besoin d'agir de manière clandestine, vous direz toujours ce que vous faites. »* (p.62)
 
-Pour augmenter.pro, cette posture est une **règle de craft** :
+→ **Pour nous** : justifie l'arc « douleur frontale → **solution complète**, jamais de teaser ». Donner tout l'actionnable = *ouvrir un espace de liberté*, pas garder le lecteur en otage du formulaire de contact.
 
-- **On éclaire, on ne court-circuite pas.** Le but n'est jamais de contourner l'esprit critique du dirigeant pour « faire signer ». C'est de **lever le bruit** pour qu'une décision juste devienne évidente — et qu'il la prenne lui-même.
-- **Le lecteur reste souverain.** Permissif, jamais injonctif : « tu peux », « à ton rythme », « si ça résonne », « rien ne t'oblige ». La liberté de dire non est ce qui rend le oui sincère — et c'est exactement ce qui désarme un dirigeant échaudé par des prestataires.
-- **Ré-association, pas dissociation.** On reconnecte : son outil à son autonomie, son problème à une méthode, sa PME à une trajectoire qu'il maîtrise. On crée de l'**unité et du contrôle**, jamais un manque artificiel.
-- **Même éthique que le service.** augmenter.pro vend l'**autonomie** du dirigeant (ne plus dépendre d'un intégrateur opaque). Une écriture manipulatoire trahirait la promesse. **La cohérence est le message.**
+### 1.2 La permission centrale — persuader ouvertement ≠ manipuler *(Carducci & Deuser, 1984)*
+Lockert s'appuie sur une étude de psychologie sociale (réf. exacte : *Carducci & Deuser, Basic and Applied Social Psychology, 1984*) : argumenter / informer / persuader **n'a « aucune espèce d'influence »** sur le libre-arbitre — *« tant que vous dites les choses directement, votre technique reste consciente pour la personne et elle garde donc son libre-arbitre »* (p.164). Il faut des techniques *« indirectes, inconscientes »* pour vraiment « infléchir le libre-arbitre » (p.164).
 
-> **Test décisif** (à appliquer à CHAQUE accroche, mail, paragraphe) : *« Si le dirigeant voyait la technique à l'œuvre, se sentirait-il respecté — ou floué ? »* Si « floué » → on réécrit.
+→ **Pour nous** : on a le droit d'être **tranché, vendeur, émotionnel** — tant que c'est **explicite**. La ligne rouge n'est pas « être persuasif », c'est « être caché ». (Cf. §5.)
 
-### 1.1 Réconcilier « en ouverture » avec l'arc douleur → solution (charte §3.1)
+### 1.3 L'ouverture = le lecteur garde le contrôle (= notre promesse)
+En conscience augmentée la personne devient **non-suggestible** : *« plus aucune suggestion extérieure ne l'atteint […] la personne pilote librement son esprit »* (p.37). Et : *« L'Hypnose Humaniste plaît aux gens qui aiment garder le contrôle »* (p.62) ; *« le bénéfice sera toujours plus important si c'est la personne elle-même qui en a été l'actrice […] qui a gardé son pouvoir »* (p.61).
 
-Aucune contradiction — les deux se complètent exactement :
+→ **Pour nous** : c'est **mot pour mot** la promesse augmenter.pro — rendre au dirigeant son **autonomie**, ne pas le rendre dépendant d'un prestataire. Le client de Lockert (« ceux qui aiment garder le contrôle ») **est** notre persona méfiant des boîtes noires.
 
-| Étape de l'arc charte | Lecture « hypnose humaniste » |
+### 1.4 Réconcilier avec l'arc douleur → solution (charte §3.1)
+
+| Étape de l'arc charte | Lecture Lockert |
 |---|---|
-| **Ouvrir sur la douleur, frontalement** | C'est la **synchronisation** (*pacing*) : on rejoint la réalité vécue du dirigeant avant de proposer quoi que ce soit. Nommer sa douleur, c'est lui dire « je te vois ». |
-| **Livrer la solution complète** | C'est l'**ouverture / ré-association** : on élargit le cadre, on relie son problème à une méthode entière et actionnable, on ne l'enferme pas dans un teaser-tunnel vers « contactez-nous ». |
-| **Le CTA en plus, jamais à la place** | C'est l'**invitation permissive** : la porte est ouverte, il entre s'il le veut. |
+| **Ouvrir sur la douleur, frontalement** | Rejoindre la réalité vécue du dirigeant — *avec ses mots à lui*, pas nos projections (p.165). Nommer sa douleur = « je te vois ». |
+| **Livrer la solution complète** | *Ouvrir un espace de liberté* (p.163) : tout l'actionnable, jamais un teaser-tunnel. |
+| **Le CTA en plus, jamais à la place** | Laisser le lecteur **acteur** et **libre de dire non** (p.61, p.164). |
 
-La douleur frontale **n'est pas** de la dissociation par la peur : on nomme un problème **réel** pour reconnecter, pas pour effrayer (cf. lignes rouges §5).
+La douleur frontale **n'est pas** de la peur manipulatoire : on nomme un problème **réel** pour reconnecter, pas pour effrayer (cf. §5).
 
 ---
 
 ## 2. La grammaire de l'accroche (titre d'article ET objet/1ʳᵉ ligne de mail)
 
-> La 1ʳᵉ ligne fait 90 % du travail. Patterns calibrés persona dirigeant PME. Registre : **tutoiement** sur mails/landings, **vouvoiement** sur ledes d'articles de fond (charte §3.3).
+> Registre : **tutoiement** sur mails/landings, **vouvoiement** sur ledes d'articles de fond (charte §3.3).
+
+### 2.1 Les trois patterns « sourcés Lockert » (les plus puissants)
+
+- **Valider la méfiance au lieu de la combattre** *(p.60-61 : « il n'y a pas de résistant »)*. Lockert donne raison à qui bloque : *« vous avez raison de vouloir garder […] l'esprit logique que vous avez durement acquis »*. → Accroche : *« Tu te méfies des consultants IA ? Tu as raison. La plupart te vendent une boîte noire que tu ne pourras jamais reprendre en main. »* On retourne l'objection en preuve de bon sens.
+- **Le cold-reading transparent multi-douleur** *(l'intro du livre, p.20, qui annonce « Laissez-nous deviner… » puis énumère des profils-douleurs)*. → Patron d'accroche mail : *« Si tu lis ça, c'est sans doute que : tu croules sous des devis Odoo que personne ne t'explique ; ou tu sens que l'IA va compter mais tu ne sais pas par où commencer ; ou tu t'es déjà fait avoir par un prestataire qui parlait plus qu'il ne livrait. »* Éthique **parce que** le procédé est annoncé.
+- **Partir des mots du lecteur, jamais des nôtres** *(p.165 : « réutiliser les mots exprimés par la personne », « n'exprimez aucune idée personnelle »)*. → Ne pas écrire *« Vous voulez digitaliser votre PME »* (projection) mais *« Tu te demandes peut-être si l'IA c'est pour toi, ou juste du buzz. »*
+
+### 2.2 Patterns classiques (copywriting, à visage découvert)
 
 | Pattern | Mécanique | Exemple augmenter.pro |
 |---|---|---|
-| **Croyance brisée** | inverser une évidence du milieu | « Tout le monde veut un site plus beau. Presque personne ne se demande si l'IA peut le *citer*. » |
+| **Croyance brisée** | inverser une évidence | « Tout le monde veut un site plus beau. Presque personne ne se demande si l'IA peut le *citer*. » |
 | **Chiffre choc** | un chiffre + sa conséquence | « 70 % du temps de ton commercial part en tâches qu'un agent IA ferait la nuit. » |
-| **Avant / après** | opposer deux époques | « Hier : on attendait le devis de l'intégrateur 3 semaines. Aujourd'hui : on prototype le module Odoo en une après-midi. » |
+| **Avant / après** | opposer deux époques | « Hier : 3 semaines pour le devis de l'intégrateur. Aujourd'hui : le module Odoo prototypé en une après-midi. » |
 | **Question piège** | la réponse est dans la question | « Tu paies un prestataire pour qu'il comprenne ton métier — ou pour qu'il te le facture ? » |
-| **Constat provocant** | accusation bienveillante (charte §3.2) | « Tes prestataires passent plus de temps à te faire des devis qu'à t'aider. » |
-| **Liste-promesse** | N choses + bénéfice | « ChatGPT dans ta PME : 3 chantiers utiles, 5 pièges qui coûtent cher 👇 » |
-| **Mini-récit** | une scène, pas un argumentaire | « Un artisan du 95 a remplacé 4 h de relances hebdo par un mail automatique. Voilà comment. » |
+| **Mini-récit** | une scène | « Un artisan du 95 a remplacé 4 h de relances hebdo par un mail automatique. Voilà comment. » |
 | **Aveu / coulisse** | vulnérabilité = proximité | « La première automatisation qu'on a posée chez ce client était une erreur. Ce qu'elle a appris. » |
 
-**Anti-accroches** : « Les avantages de l'IA pour les PME » (catalogue) · superlatifs vides (« révolutionnaire ») · objet de mail qui ment sur le contenu · « Petite info » / « Newsletter n°4 ».
+**Anti-accroches** : « Les avantages de l'IA pour les PME » (catalogue) · superlatifs vides · objet de mail qui ment sur le contenu · « Newsletter n°4 ».
 
 ---
 
-## 3. La boîte à outils d'influence (Milton Model / PNL) au service de l'invitation
+## 3. Persuasion transparente : ce qu'on s'autorise, ce qu'on s'interdit
 
-> Le **Milton Model** : des structures de langage « artistiquement vagues » qui ouvrent l'imaginaire et abaissent les défenses. **Notre usage est humaniste (§1)** : ces structures *ouvrent et invitent*, jamais ne trompent.
+> Lockert **rejette** la boîte à outils de l'influence cachée (Milton Model, suggestions indirectes, commandes enchâssées masquées). Sa permission (§1.2) couvre la persuasion **explicite**. Règle de tri ci-dessous.
 
-### 3.1 Synchroniser → ouvrir → inviter
+### 3.1 La règle de tri (le test décisif appliqué)
+> *Si une phrase ne fonctionne que tant qu'elle reste invisible, elle ne sort pas.* — Une figure de style **visible et assumée** (le lecteur peut la repérer sans se sentir floué) est permise ; un procédé qui **n'opère que caché** est interdit.
 
-| Outil | Effet | Exemple augmenter.pro |
-|---|---|---|
-| **Synchronisation puis guidage** *(pacing & leading)* | rejoindre sa réalité avant le pas de côté | « Tu as testé ChatGPT, bricolé deux prompts, et tu ne sais pas si ça vaut le coup d'aller plus loin. *Et si la question n'était pas l'outil — mais les 2-3 tâches où il te ferait gagner une journée ?* » |
-| **Présupposition (vraie)** | poser comme acquis ce qui l'est déjà | « Quand tu auras repris la main sur tes outils… » (présuppose que c'est le cap, sans le forcer) |
-| **Invitation enchâssée (transparente)** | glisser une action douce dans la phrase | « Tu peux, quand tu le sens, **lancer un audit de 30 min** et voir ce que ça donne. » |
-| **Liaison vraie** *(cause→effet honnête)* | relier deux faits réels | « Plus tu comprends la techno, moins tu dépends de qui te la facture. » |
-| **Opérateurs de possibilité** | permissif, respecte la liberté | « Rien ne t'oblige. Mais si le sujet te parle, la méthode est là, entière. » |
-| **Multi-sensoriel** *(VAKOG)* | rendre concret | « **Imagine** ton tableau de bord Odoo qui se remplit seul pendant que tu es sur chantier. » |
-| **Future pacing** | faire vivre l'état futur, daté | « Dans six mois : tu ouvres ton CRM le lundi, les relances sont parties, les devis suivis. Pas par magie — parce que tu l'as outillé. » |
-| **Recadrage** *(reframing)* | changer le cadre de sens | « Te former à l'IA, ce n'est pas une dépense de plus. C'est arrêter de payer l'ignorance. » |
-| **Citation** *(quote)* | mettre l'idée dans une autre bouche | « Un dirigeant du BTP l'a résumé mieux que moi : *“je ne veux pas un logiciel, je veux récupérer mes soirées.”* » |
+- ✅ **Autorisé (transparent)** : recadrage assumé, future pacing (« imagine, dans six mois… »), analogie/métaphore, citation d'autorité, contraste avant/après, question rhétorique, présupposition **quand elle est vraie et dicible**, appel multi-sensoriel honnête.
+- ❌ **Interdit (caché)** : commandes enchâssées « masquées », suggestions subliminales, fausse urgence/rareté, fausse preuve sociale, ambiguïté destinée à tromper, ancrage manipulatoire.
 
 ### 3.2 Le Meta Model — pour la précision (et donc l'E-E-A-T)
+Interroger le flou de **nos propres** affirmations pour les durcir (= *information gain*, charte §5) :
+- *Généralisation* → « *Tout le monde* fait de l'IA. » → **Qui, dans quel secteur ?**
+- *Suppression* → « Ça améliore la productivité. » → **Quelle tâche ? Combien d'heures ? Mesurée comment ?**
+- *Distorsion* → « Cet outil va transformer ta boîte. » → **Qu'est-ce qui le prouve ?** (→ on cite un cas chiffré, ou on n'écrit pas la phrase.)
 
-Le Meta Model **récupère ce que le langage efface**. On l'utilise pour **durcir nos propres affirmations** et débusquer le creux — c'est le carburant de l'*information gain* (charte §5).
-- *Généralisation* → « *Tout le monde* fait de l'IA. » → **Qui, précisément ? Dans quel secteur ?**
-- *Suppression* → « Ça améliore la productivité. » → **Quelle tâche ? Mesurée comment ? Combien d'heures ?**
-- *Distorsion* → « Cet outil va transformer ta boîte. » → **Qu'est-ce qui le prouve ?** (→ on cite un cas chiffré, ou on ne l'écrit pas.)
-
-### 3.3 Les niveaux logiques (Dilts) — viser haut pour relier
-
-Environnement → Comportement → Capacité → **Croyances/Valeurs** → **Identité** → **Mission**. Plus on monte, plus on crée de l'adhésion.
-- *Comportement* : « Automatise tes relances de devis. »
-- *Identité* (recadrage puissant) : « **Tu n'es pas un dirigeant dépassé par la tech. Tu es celui qui décide ce qu'elle fait pour toi.** »
-- *Mission* : « On ne vend pas des outils. On rend aux dirigeants la maîtrise de leur boîte. »
-
-### 3.4 Ce qu'on garde, ce qu'on écarte (la ligne humaniste)
-
-Lockert sépare le **direct** (transparent, respecte le libre-arbitre) de l'**indirect/clandestin** (agir à l'insu de la personne). On **garde** le transparent *et* vrai ; on **écarte** ce qui ne tiendrait pas si le lecteur le voyait.
-- ✅ **Garder** : synchronisation, recadrage, future pacing, VAKOG, opérateurs de possibilité, citation, niveaux logiques, présupposition **quand elle est vraie**. → ouvrir, relier, éclairer.
-- ❌ **Écarter** : commandes « masquées », suggestions cachées, ambiguïtés destinées à tromper, ancrages manipulatoires, fausse preuve sociale, fausse urgence. → tout ce qui vise à court-circuiter la conscience.
-
-> **Règle simple** : *si une phrase ne fonctionne que tant qu'elle reste invisible, elle ne sort pas.*
+### 3.3 L'autorité vient d'un savoir vécu, pas d'un discours sophistiqué
+*« On ne peut pas emmener une personne plus loin qu'on ne peut aller soi-même »* ; le guide doit offrir *« un savoir à forte charge informationnelle […] qui repose le plus souvent sur des choses simples et porteuses d'émotions »* (p.169-170).
+→ **Pour nous** : E-E-A-T = retour terrain simple et incarné (cas 78/95, montant réel, erreur vécue) > jargon. Une donnée vraie et émotionnellement juste > dix adjectifs.
 
 ---
 
 ## 4. Accroches de mail — application directe
 
-> Le mail B2B dirigeant : il survole l'objet en 1 s, ouvre s'il se sent vu, ferme à la première odeur de « commercial ». La structure « en ouverture » (§1) y est reine.
-
 ### 4.1 Objets de mail (tutoiement)
-- Croyance brisée : « Ton CRM n'est pas le problème. »
+- Valider la méfiance : « Tu te méfies des consultants IA ? Bien. »
 - Constat provocant : « 3 semaines pour un devis intégrateur, ça te paraît normal ? »
 - Liste-promesse : « 2 automatisations Odoo que tu peux poser cette semaine »
 - Mini-récit : « Ce que cet artisan du 95 a arrêté de faire à la main »
-- Aveu : « On s'est planté sur cette automatisation (et voilà la leçon) »
 
-### 4.2 Structure d'un mail « en ouverture » (5 temps, calquée sur l'induction humaniste)
+### 4.2 Structure d'un mail « en ouverture » (les 5 phases de l'induction, p.171)
 
-Lockert décrit l'induction en : **élargissement → rayonnement → prise de conscience → ratification → unification**. Transposé à un mail dirigeant :
+Lockert décrit l'ouverture en : **1. élargissement → 2. rayonnement (connexion) → 3. prise de conscience → 4. ratification → 5. unification** (p.171). Transposé, à manier comme inspiration (pas gabarit rigide) :
 
-`Synchroniser (sa réalité) → recadrer (sortir du tunnel) → faire prendre conscience (le constat qui éclaire) → ratifier (valider ce qu'il vit déjà) → inviter (porte ouverte, sortie libre)`
+`Synchroniser (sa réalité, ses mots) → élargir le cadre (sortir du symptôme) → faire prendre conscience (le constat qui éclaire) → ratifier (valider ce qu'il vit déjà) → inviter (porte ouverte, sortie libre)`
 
-> *Exemple :*
-> « Tu as sûrement déjà testé ChatGPT pour rédiger deux-trois trucs. *(synchro)* Le vrai sujet n'est pas l'outil — c'est de savoir **où** il te fait gagner une journée par semaine, et où il te fait perdre ton temps. *(recadrage)* La plupart des dirigeants que je croise sous-utilisent l'IA sur l'admin et la sur-utilisent sur des trucs gadgets. *(prise de conscience)* Si tu te reconnais, c'est normal — personne ne t'a montré la carte. *(ratification)* J'ai mis la méthode complète à plat dans ce guide, c'est offert et sans CB. Si ça te parle, c'est là. Sinon, garde-le sous le coude. *(invitation + sortie libre)* »
+> *Exemple :* « Tu as sûrement déjà testé ChatGPT pour rédiger deux-trois trucs. *(synchro)* Le vrai sujet n'est pas l'outil — c'est de savoir **où** il te fait gagner une journée, et où il te fait perdre ton temps. *(élargir)* La plupart des dirigeants sur-utilisent l'IA sur des gadgets et la sous-utilisent sur l'admin. *(prise de conscience)* Si tu te reconnais, c'est normal — personne ne t'a montré la carte. *(ratification)* J'ai mis la méthode complète à plat dans ce guide, offert et sans CB. Si ça te parle, c'est là. Sinon, garde-le sous le coude. *(invitation + sortie libre)* »
 
-C'est l'**anti-tunnel** : au lieu de rétrécir vers un bouton « réserve maintenant », on ouvre vers une idée utile et une porte. Le CTA vient **en plus**, jamais **à la place** (charte §3.1).
+C'est l'**anti-tunnel** : on ouvre vers une idée utile et une porte, on ne rétrécit pas vers un bouton « réserve ». Le CTA vient **en plus**, jamais **à la place** (charte §3.1).
 
 ---
 
-## 5. Lignes rouges d'influence (la part humaniste)
+## 5. Garde-fous éthiques — notre ligne rouge (citations sourcées)
 
-Reprend et **augmente** les anti-patterns de la charte §7. Un contenu brillant qui viole une ligne rouge **ne sort pas**.
+La frontière manipulation / transparence, formulée par l'auteur :
 
-- ❌ Fausse rareté / fausse urgence / minuteurs bidons (« plus que 2 places !! »).
-- ❌ Culpabilisation, peur, honte comme moteurs (≠ nommer une douleur réelle, qui, elle, est légitime).
-- ❌ Preuve sociale inventée, faux témoignages, chiffres non sourcés (croise la barre E-E-A-T charte §5).
-- ❌ Suggestions visant à **court-circuiter** la décision plutôt qu'à l'**éclairer**.
-- ✅ Toujours laisser une **sortie libre** (« rien ne t'oblige », « garde-le sous le coude »).
-- ✅ Le **test décisif §1** : respecté, pas floué.
+- **Définition de la manipulation** : *« Il faut des techniques indirectes, inconscientes […] pour influencer vraiment une personne, infléchir son libre-arbitre et obtenir […] de la "soumission librement consentie". »* (p.164) → **interdit** : tout procédé caché/indirect destiné à faire agir sans que le lecteur en ait conscience.
+- **Permission de l'explicite** : *« nous ne faisons qu'expliquer les choses, avec des phrases simples et sans artifice […] cela n'a "aucune espèce d'influence" »* (p.164) → **permis** : expliquer, argumenter, persuader ouvertement.
+- **Test de transparence** : si la technique cessait de fonctionner dès que le lecteur la repère, c'est qu'elle est manipulatoire → on la bannit (dérivé de p.59, p.62).
+- **On guide, on ne fait pas à la place** : *« Il ne fait jamais rien à la personne. »* (p.410) ; *« le bénéfice sera toujours plus important si c'est la personne elle-même qui en a été l'actrice »* (p.61).
 
-> La persuasion éthique n'est pas plus faible — elle est **durable**. La confiance d'un dirigeant ne se manipule qu'une fois ; elle se cultive indéfiniment. Et c'est *exactement* le différenciateur d'augmenter.pro face aux prestataires opaques.
+**Lignes rouges concrètes** (augmente charte §7) : ❌ fausse urgence/rareté · ❌ culpabilisation/peur/honte comme moteurs (≠ nommer une douleur réelle) · ❌ preuve sociale ou témoignage inventés · ❌ suggestion qui court-circuite la décision au lieu de l'éclairer · ✅ toujours une **sortie libre** · ✅ **test décisif** (charte §3.4) respecté.
+
+> La persuasion éthique n'est pas plus faible — elle est **durable**, et c'est *exactement* le différenciateur d'augmenter.pro face aux prestataires opaques.
 
 ---
 
 ## 6. Boucle d'amélioration
-
-- **Après chaque contenu fort** : noter le hook + le format + ce qui a marché → enrichir §2 (accroches) et §3 (outils).
-- **Chaque bon contenu croisé** (mail, article, landing qui t'arrête) : 1 ligne dans un swipe file (lien + pourquoi + pattern).
-- **Contrôle** : `/relecture-editoriale` vérifie la charte ; ce playbook est la couche « mécanique » qu'elle peut convoquer.
+- Après chaque contenu fort : remonter ici le hook + le format qui a marché → enrichir §2.
+- Chaque bon contenu croisé : 1 ligne en swipe file (lien + pourquoi + pattern).
+- Contrôle : `/relecture-editoriale` applique la charte ; ce playbook est la couche « mécanique » qu'elle convoque.
 
 ---
 
-## 7. Références
+## 7. Source primaire & références (pour y revenir)
 
-- *L'Hypnose humaniste pour les Nuls* / [L'hypnose humaniste — Olivier Lockert (Trédaniel)](https://www.editions-tredaniel.com/lhypnose-humaniste-p-5412.html) · [résumé](https://www.hypno.artremy.com/resume-livre/Hypnose%20Humaniste.pdf) · [IFHE — sommaire](https://www.ifhe-editions.com/sommaireHH.htm)
-- [Milton Model — 25 patterns (NLP Sure)](https://nlpsure.com/nlp-milton-model-language-patterns/) · [Meta vs Milton (Landsiedel)](https://www.landsiedel-seminare.de/en/nlp-library/milton-model.php)
-- Source interne : `storytelling-playbook.md` (projet WeBuild, 2026-05-27) — version originale, calibrée X/Twitter.
+**📕 Source primaire (PDF, 457 p.)** : `Z:\Pi3r\Drive\A Lire\Lhypnose humaniste Pour les Nuls - Olivier Lockert.pdf`
+*(Lecteur réseau Z: — monter le Drive avant lecture. Pagination ci-dessous = page **PDF**, offset ≈ +12 vs page imprimée.)*
+
+**Carte des chapitres utiles (à rouvrir au besoin)** :
+
+| Chapitre | Page PDF | Pourquoi y revenir |
+|---|---|---|
+| Intro — « Laissez-nous deviner… » | **p.20** | patron d'accroche cold-reading multi-douleur (§2.1) |
+| Ch.1 — Aux commandes de soi / conscience augmentée | p.37-38 | non-suggestibilité = contrôle (§1.3) |
+| **Ch.2 — Points clés de l'Hypnose Humaniste** | **p.54-62** | cœur éthique : contrôle, « pas de résistant », jamais clandestin (§1.3, §2.1, §5) |
+| Ch.4 — 7 principes | p.128-135 | cadrage win-win/humanisme (usage marque, partiel) |
+| **Ch.5 — Inductions EN OUVERTURE** | **p.162-172** | langage du cœur (p.163), laisser libre + Carducci&Deuser (p.164), garder connecté (p.165), **5 phases (p.171)** |
+| Ch.5 — savoir à forte charge informationnelle | p.169-170 | E-E-A-T / autorité incarnée (§3.3) |
+| Ch.6 — associé vs dissocié | p.292-296 | recadrage non-dissociant |
+| **Ch.12 — Dix idées reçues** | **p.408-412** | garde-fous explicites : « ni pouvoir ni magnétisme », pas de télécommande (§5) |
+| Ch.14 — Dix manières d'être humaniste | p.428 | attitudes existentielles (≠ « gestes de communication » ; cf. correction ci-dessous) |
+
+**Corrections actées vs le résumé web v1** : (1) le **Milton Model est rejeté**, pas adopté (§0bis) ; (2) il y a **7 principes** (Ch.4) ET **10 « manières d'être »** (Ch.14), distincts — pas de « 7 gestes de communion » ; (3) terme exact = **« associé / dissocié »** (Lockert « réoriente ici et maintenant » plutôt que « ré-associe ») ; (4) Lockert parle d'**induction** en ouverture, jamais d'« influence » en ouverture (en ouverture, on n'influence pas).
+
+**Autres réf.** : *Carducci & Deuser, Basic and Applied Social Psychology* (1984) — cité p.164 · [IFHE / Éditions Trédaniel — Olivier Lockert](https://www.editions-tredaniel.com/lhypnose-humaniste-p-5412.html) · Source interne historique : `storytelling-playbook.md` (projet WeBuild, calibré X/Twitter — exemples non transposés).

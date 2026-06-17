@@ -10,6 +10,27 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, { status: 301 });
   }
 
+  // Override manuel de variante via ?ab=a|b — outil de prévisualisation interne.
+  // `/?ab=b` force la variante B (accueil-2) sur l'URL `/`, `/?ab=a` force la A.
+  // Pose le cookie ab_home (sticky preview 30 j) et fonctionne indépendamment du
+  // kill switch AB_HOME_ENABLED. Seul un accès manuel ajoute ?ab= : les bots ne
+  // le forgent pas, et /accueil-2 canonicalise déjà vers `/` → aucun risque SEO.
+  if (request.nextUrl.pathname === "/") {
+    const forced = request.nextUrl.searchParams.get("ab");
+    if (forced === "a" || forced === "b") {
+      const response =
+        forced === "b"
+          ? NextResponse.rewrite(new URL("/accueil-2", request.url))
+          : NextResponse.next();
+      response.cookies.set("ab_home", forced, {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 30,
+        sameSite: "lax",
+      });
+      return response;
+    }
+  }
+
   // A/B test home : `/` reste l'unique URL publique. La variante B est servie
   // par rewrite interne vers /accueil-2 (jamais de redirection visible).
   // Assignation 50/50 persistée 30 jours par cookie ; un visiteur sans cookie

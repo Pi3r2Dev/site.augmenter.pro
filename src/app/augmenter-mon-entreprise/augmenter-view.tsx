@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { sendGTMEvent } from "@next/third-parties/google";
@@ -30,6 +30,76 @@ import { prompts } from "@/data/prompts";
 
 // Construit une seule fois la liste unifiée articles + idées + prompts.
 const RESOURCES = buildHubResources(prompts);
+
+type RelaxNote = null | "format" | "secteur" | "douleur";
+
+/**
+ * Filtre les ressources selon (secteur × douleur × objectif) avec relâchement
+ * progressif → jamais d'écran vide. Fonction pure (hors composant) pour que le
+ * React Compiler puisse optimiser le composant (pas de useMemo manuel).
+ */
+function selectResources(
+  sector: Sector,
+  pain: PainId | null,
+  objective: ObjectiveId | null,
+): { results: HubResource[]; relaxed: RelaxNote } {
+  const selectedType: ResourceType | "cta" | null = objective
+    ? OBJECTIVES.find((o) => o.id === objective)!.type
+    : null;
+
+  const test = (
+    r: HubResource,
+    useSector: boolean,
+    usePain: boolean,
+    useType: boolean,
+  ) => {
+    if (useSector && sector !== "Tous") {
+      if (!r.sectors.includes(sector) && !r.sectors.includes("Tous"))
+        return false;
+    }
+    if (usePain && pain) {
+      if (!r.pains.includes(pain)) return false;
+    }
+    if (useType && selectedType && selectedType !== "cta") {
+      if (r.type !== selectedType) return false;
+    }
+    return true;
+  };
+
+  const score = (r: HubResource) => {
+    let s = 0;
+    if (pain && r.pains.includes(pain)) s += 4;
+    if (sector !== "Tous" && r.sectors.includes(sector)) s += 3;
+    else if (sector !== "Tous" && r.sectors.includes("Tous")) s += 1;
+    if (selectedType && selectedType !== "cta" && r.type === selectedType) s += 2;
+    return s;
+  };
+
+  // Tentatives, de la plus stricte à la plus large. `note` = axe relâché.
+  const attempts: Array<{
+    useSector: boolean;
+    usePain: boolean;
+    useType: boolean;
+    note: RelaxNote;
+  }> = [
+    { useSector: true, usePain: true, useType: true, note: null },
+    { useSector: true, usePain: true, useType: false, note: "format" },
+    { useSector: false, usePain: true, useType: false, note: "secteur" },
+    { useSector: true, usePain: false, useType: false, note: "douleur" },
+    { useSector: false, usePain: false, useType: false, note: "douleur" },
+  ];
+
+  for (const a of attempts) {
+    const matched = RESOURCES.filter((r) =>
+      test(r, a.useSector, a.usePain, a.useType),
+    );
+    if (matched.length > 0) {
+      const sorted = [...matched].sort((x, y) => score(y) - score(x));
+      return { results: sorted, relaxed: a.note };
+    }
+  }
+  return { results: RESOURCES, relaxed: null };
+}
 
 // ─── Habillage par type de ressource (badge + icône) ──────────────────────
 const TYPE_STYLE: Record<
@@ -92,60 +162,8 @@ export function AugmenterView() {
   const hasSelection = sector !== "Tous" || pain !== null || objective !== null;
 
   // Filtrage avec relâchement progressif → jamais d'écran vide.
-  const { results, relaxed } = useMemo(() => {
-    const test = (
-      r: HubResource,
-      useSector: boolean,
-      usePain: boolean,
-      useType: boolean,
-    ) => {
-      if (useSector && sector !== "Tous") {
-        if (!r.sectors.includes(sector) && !r.sectors.includes("Tous"))
-          return false;
-      }
-      if (usePain && pain) {
-        if (!r.pains.includes(pain)) return false;
-      }
-      if (useType && objType && objType !== "cta") {
-        if (r.type !== objType) return false;
-      }
-      return true;
-    };
-
-    const score = (r: HubResource) => {
-      let s = 0;
-      if (pain && r.pains.includes(pain)) s += 4;
-      if (sector !== "Tous" && r.sectors.includes(sector)) s += 3;
-      else if (sector !== "Tous" && r.sectors.includes("Tous")) s += 1;
-      if (objType && objType !== "cta" && r.type === objType) s += 2;
-      return s;
-    };
-
-    // Tentatives, de la plus stricte à la plus large. `note` = axe relâché.
-    const attempts: Array<{
-      useSector: boolean;
-      usePain: boolean;
-      useType: boolean;
-      note: null | "format" | "secteur" | "douleur";
-    }> = [
-      { useSector: true, usePain: true, useType: true, note: null },
-      { useSector: true, usePain: true, useType: false, note: "format" },
-      { useSector: false, usePain: true, useType: false, note: "secteur" },
-      { useSector: true, usePain: false, useType: false, note: "douleur" },
-      { useSector: false, usePain: false, useType: false, note: "douleur" },
-    ];
-
-    for (const a of attempts) {
-      const matched = RESOURCES.filter((r) =>
-        test(r, a.useSector, a.usePain, a.useType),
-      );
-      if (matched.length > 0) {
-        const sorted = [...matched].sort((x, y) => score(y) - score(x));
-        return { results: sorted, relaxed: a.note };
-      }
-    }
-    return { results: RESOURCES, relaxed: null as null | "format" | "secteur" | "douleur" };
-  }, [sector, pain, objType]);
+  // (fonction pure module-level — le React Compiler mémoïse l'appel)
+  const { results, relaxed } = selectResources(sector, pain, objective);
 
   const reset = () => {
     setSector("Tous");
@@ -181,7 +199,7 @@ export function AugmenterView() {
             className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary"
           >
             <Compass className="h-3.5 w-3.5" />
-            {RESOURCES.length} ressources · filtrées pour vous
+            {RESOURCES.length} ressources · tu n&apos;en liras que 3
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
@@ -197,12 +215,14 @@ export function AugmenterView() {
             transition={{ duration: 0.5, delay: 0.16 }}
             className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            On a écrit des dizaines d&apos;articles, d&apos;idées chiffrées et de
-            prompts. Trop pour un dirigeant pressé.{" "}
+            Tu n&apos;as pas le temps d&apos;éplucher des dizaines d&apos;articles,
+            et tu te méfies des promesses creuses. Normal.{" "}
             <strong className="font-semibold text-foreground">
-              Dites-nous où vous en êtes
+              Dis-nous juste où tu en es
             </strong>{" "}
-            — on vous sort les bonnes ressources, en version « lu en 10 secondes ».
+            — ton secteur, ce qui te coûte le plus, ce que tu veux. On te sort les
+            bonnes ressources, le verdict en une phrase. Tu lis ce qui te sert, tu
+            ignores le reste.
           </motion.p>
         </div>
       </section>
@@ -289,7 +309,7 @@ export function AugmenterView() {
               {hasSelection ? (
                 <>
                   {results.length} ressource{results.length > 1 ? "s" : ""} pour
-                  votre situation
+                  ta situation
                 </>
               ) : (
                 <>Tout ce qu&apos;on a, en un coup d&apos;œil</>
@@ -299,7 +319,7 @@ export function AugmenterView() {
               <p className="text-sm text-muted-foreground">{relaxNote}</p>
             ) : (
               <p className="text-sm text-muted-foreground">
-                Chaque carte = le verdict en une phrase. Cliquez pour aller au fond.
+                Chaque carte = le verdict en une phrase. Clique pour aller au fond.
               </p>
             )}
           </div>
@@ -420,11 +440,11 @@ function AuditCtaCard({ featured = false }: { featured?: boolean }) {
           Sur mesure
         </span>
         <h3 className="mt-3 text-[1.05rem] font-semibold leading-snug">
-          Et si on regardait votre cas, directement&nbsp;?
+          Et si on regardait ton cas, directement&nbsp;?
         </h3>
         <p className="mt-2 text-sm leading-normal text-muted-foreground">
           <span className="font-semibold text-foreground">TL;DR — </span>
-          60 min en visio, sans engagement ni CB : on identifie vos 2-3 chantiers
+          60 min en visio, sans engagement ni CB : on identifie tes 2-3 chantiers
           prioritaires et on repart avec un plan chiffré.
         </p>
       </div>

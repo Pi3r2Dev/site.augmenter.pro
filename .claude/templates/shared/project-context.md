@@ -73,7 +73,7 @@ Fichier de référence partagé par les commandes non-SEO (`/debt-report`, `/sec
 - `public/news-sitemap.xml` — articles récents (< 30 jours)
 - `public/llms.txt` — résumé site pour LLM crawlers (sections services, articles, FAQ)
 - `public/robots.txt` — directives bot + référence sitemaps
-- `src/app/blog/blog-view.tsx` — entrée article en première position du tableau `ARTICLES` (⚠️ `src/components/sections/blog-preview.tsx` est **legacy** post-refonte bento, ne pas y toucher)
+- `src/data/resources.ts` — **catalog partagé, vraie source de vérité** : article en première position du tableau `ARTICLES` (avec `tldr`/`sectors`/`pains`) ; idées dans `IDEAS`. `blog-view.tsx`, `idees-view.tsx` et le hub `/augmenter-mon-entreprise` l'importent. (⚠️ `src/components/sections/blog-preview.tsx` est **legacy** post-refonte bento, ne pas y toucher)
 - `src/components/layout/footer.tsx` — lien si page sectorielle/locale/légale
 
 ## Contraintes cross-projet (rappel)

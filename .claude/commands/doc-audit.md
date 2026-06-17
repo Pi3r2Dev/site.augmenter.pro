@@ -80,13 +80,14 @@ Vérifie que `public/sitemap.xml` est synchronisé :
 - [ ] Priorités cohérentes (accueil 1.0, pages principales 0.8-0.9, articles 0.7, légales 0.3)
 - [ ] `<lastmod>` renseigné si possible
 
-### 2.4 blog-view.tsx vs articles réels
+### 2.4 catalog `resources.ts` vs articles/idées réels
 
-La **vraie source de vérité** de la page `/blog` est `src/app/blog/blog-view.tsx` (tableau `ARTICLES`). _(L'ancien `blog-preview.tsx` a été supprimé le 2026-05-26.)_
+La **vraie source de vérité** des listes `/blog` et `/idees` est le catalog `src/data/resources.ts` (tableaux `ARTICLES` et `IDEAS`) — `blog-view.tsx`, `idees-view.tsx` et le hub `/augmenter-mon-entreprise` l'importent. _(L'ancien `blog-preview.tsx` a été supprimé le 2026-05-26.)_
 
-- [ ] Chaque article dans le tableau `ARTICLES` correspond à un dossier `src/app/blog/<slug>/`
-- [ ] Tous les dossiers `src/app/blog/<slug>/` apparaissent dans le tableau (sinon l'article n'est pas visible sur `/blog`)
+- [ ] Chaque article du tableau `ARTICLES` correspond à un dossier `src/app/blog/<slug>/`
+- [ ] Tous les dossiers `src/app/blog/<slug>/` apparaissent dans `ARTICLES` (sinon l'article n'est pas visible sur `/blog`)
 - [ ] Les slugs, titres, excerpts, tags, readTime, image correspondent entre la liste et la page article
+- [ ] Chaque article a `tldr` + `sectors` + `pains` renseignés (sinon absent ou mal classé dans le hub `/augmenter-mon-entreprise`) ; chaque idée a `sector` + `pains`
 - [ ] L'article le plus récent est en première position
 
 ### 2.5 JSON-LD schemas vs composants

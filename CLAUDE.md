@@ -259,6 +259,7 @@ Voir [public/images/](public/images/) — convention WebP, kebab-case, INDEX.md 
 | Service + OfferCatalog | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | 5 services with pricing (0€ et 225€) — `/prestations` redirige 308 vers `/approche#prestations` (ancre dans le Ch07 audits) |
 | Article | [src/components/layout/article-layout.tsx](src/components/layout/article-layout.tsx) | Each blog post (author, publisher, tags, URL) |
 | Person | [src/app/auteur/pierre-legrand/page.tsx](src/app/auteur/pierre-legrand/page.tsx) | Person JSON-LD pour E-E-A-T |
+| CollectionPage + ItemList | [src/app/augmenter-mon-entreprise/page.tsx](src/app/augmenter-mon-entreprise/page.tsx) | Hub ressources — carte structurée des destinations (maillage interne + citabilité LLM) |
 
 ### LLM/GEO Files
 

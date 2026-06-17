@@ -58,7 +58,8 @@ Règle : ces points sont **prioritaires sur le SEO on-page**. En cas de conflit,
 - [ ] `public/sitemap.xml` : entrée `<url>` avec `<lastmod>` ISO 8601 réel + priorité adaptée (1.0 home, 0.9 approche/contact, 0.8 services, 0.7 articles/comparatifs, 0.5 glossaire, 0.3 légales)
 - [ ] `public/news-sitemap.xml` : entrée pour les articles récents (< 30 jours)
 - [ ] `public/llms.txt` : entrée dans la section appropriée (`## Articles de blog`, `## Pages sectorielles`, `## Glossaire`, `## Pages`…)
-- [ ] Si article : `src/app/blog/blog-view.tsx` → ajouter en **première position** du tableau `ARTICLES` (⚠️ `src/components/sections/blog-preview.tsx` est **legacy** depuis la refonte bento — ne pas y toucher)
+- [ ] Si article : `src/data/resources.ts` (catalog, **vraie source de vérité**) → ajouter en **première position** du tableau `ARTICLES`, avec `tldr` + `sectors` + `pains` (alimente aussi le hub `/augmenter-mon-entreprise`). `blog-view.tsx` l'importe — ne pas l'éditer. (⚠️ `src/components/sections/blog-preview.tsx` est **legacy** — ne pas y toucher)
+- [ ] Si idée : `src/data/resources.ts` → ajouter dans le tableau `IDEAS` (`EnrichedIdea` : `sector` + `pains` + pros/cons honnêtes). `idees-view.tsx` l'importe.
 - [ ] Si page sectorielle / locale / légale : `src/components/layout/footer.tsx` → lien dans la section correcte (services / secteurs / zones / legal)
 - [ ] Si image hero requise : `public/images/blog/<slug>.webp` (WebP, 16:9, < 300 Ko) + entrée dans `public/images/blog/INDEX.md` + prop `image` passé à `ArticleLayout`
 - [ ] Si l'image n'est pas encore générée : marquer TODO, ne **pas** publier sans image
@@ -76,7 +77,7 @@ Règle : ces points sont **prioritaires sur le SEO on-page**. En cas de conflit,
 - [ ] `grep -r "ancien-slug" src/ public/` → 0 résultat avant de finaliser (sauf dans next.config.ts)
 - [ ] `sitemap.xml` : ancienne URL retirée + nouvelle ajoutée
 - [ ] `llms.txt` : ancienne entrée retirée + nouvelle ajoutée
-- [ ] `src/app/blog/blog-view.tsx` (articles) / `footer.tsx` (pages) : entrées mises à jour si applicable
+- [ ] `src/data/resources.ts` (articles → `ARTICLES`, idées → `IDEAS`) / `footer.tsx` (pages) : entrées mises à jour si applicable
 - [ ] E-E-A-T ne **régresse** pas après modification (re-scorer avec [`eeat-grid.md`](eeat-grid.md))
 - [ ] Aucune occurrence de « gratuit » introduite par la modification
 

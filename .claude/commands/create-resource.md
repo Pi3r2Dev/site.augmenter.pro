@@ -439,19 +439,25 @@ Après création de la ressource, effectue **toutes** les mises à jour applicab
 
 ### 4.2 Si type = article de blog
 
-3. **`src/app/blog/blog-view.tsx`** (⚠️ **vraie source de vérité** de la page `/blog` depuis la refonte bento) — Ajouter en **PREMIÈRE position** du tableau `ARTICLES` :
+3. **`src/data/resources.ts`** (⚠️ **catalog partagé = vraie source de vérité** ; `blog-view.tsx` et le hub `/augmenter-mon-entreprise` l'importent) — Ajouter en **PREMIÈRE position** du tableau `ARTICLES` (type `CatalogArticle`) :
    ```tsx
    {
      slug: "<slug>",
      title: "<titre>",
-     excerpt: "<excerpt>",
+     excerpt: "<excerpt>", // optionnel (card vedette /blog)
+     tldr: "<le verdict actionnable, lu en 10 s — affiché sur le hub>",
      tags: ["Tag1", "Tag2"],
      readTime: "<X> min",
      image: "/images/blog/<slug>.webp",
+     sectors: ["Tous"], // Sector[] ; "Tous" = transversal
+     pains: ["demarrage"], // PainId[] → fait remonter l'article dans le hub
    },
    ```
 
-   > Note : `src/components/sections/blog-preview.tsx` est **legacy** (plus utilisé depuis la refonte bento) — ne pas y toucher sauf demande explicite.
+   > `tldr` / `sectors` / `pains` alimentent le hub `/augmenter-mon-entreprise`. Valeurs : exports `SECTORS` / `PAINS` de `src/data/resources.ts`.
+   > Note : `blog-view.tsx` importe `ARTICLES` (ne pas y dupliquer) ; `src/components/sections/blog-preview.tsx` est **legacy** (ne pas y toucher).
+
+   **Si type = idée chiffrée** (`/idees`) : ajouter dans le tableau `IDEAS` du même fichier (type `EnrichedIdea` : `number`, `title`, `description`, `pros`/`cons` honnêtes, `seed`, `palette`, `sector` parmi `IDEE_SECTORS`, `pains`, et `articleSlug`/`hrefLabel` si un article connexe existe).
 
 ### 4.3 Si type = page sectorielle, locale, ou légale
 
@@ -518,7 +524,7 @@ Vérifie et affiche un rapport adapté au type créé :
 - [ ] Tags cohérents avec les tags existants
 - [ ] Contenu > 1200 mots (articles) ou > 600 mots (glossaire)
 - [ ] Aucun contenu dupliqué avec les articles existants
-- [ ] Article ajouté dans `src/app/blog/blog-view.tsx` (si type = article blog, première position du tableau `ARTICLES`)
+- [ ] Article ajouté dans `src/data/resources.ts` (si type = article blog, tableau `ARTICLES`, première position, avec `tldr`/`sectors`/`pains`) — ou idée dans le tableau `IDEAS`
 
 ### Checklist spécifique pages custom (sectorielle, locale, landing)
 - [ ] JSON-LD inline valide (Service, LocalBusiness, ou autre)

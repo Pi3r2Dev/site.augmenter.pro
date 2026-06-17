@@ -27,16 +27,17 @@ Lis l'arborescence complète du projet et vérifie :
 
 ### 1.2 Duplication de données (dette majeure connue)
 
-Depuis la refonte bento, la liste articles est **dans `src/app/blog/blog-view.tsx`** (tableau `ARTICLES`). _(Les composants legacy `approach.tsx`, `blog-preview.tsx`, `ideas.tsx`, `pricing.tsx` ont été supprimés le 2026-05-26 — confirmés non importés.)_
+Depuis l'introduction du catalog (`src/data/resources.ts`), les listes articles ET idées sont centralisées dans **un seul fichier** : tableaux `ARTICLES` et `IDEAS`, importés par `blog-view.tsx`, `idees-view.tsx` et le hub `/augmenter-mon-entreprise`. La triple duplication blog/idées/hub est **résolue**. _(Les composants legacy `approach.tsx`, `blog-preview.tsx`, `ideas.tsx`, `pricing.tsx` ont été supprimés le 2026-05-26 — confirmés non importés.)_
 
-Duplication restante : les données des articles existent en **deux endroits** :
+Duplication restante : les données d'un article existent encore en **deux endroits** :
 
-1. **`src/app/blog/blog-view.tsx`** — tableau `ARTICLES` avec slug, title, excerpt, tags, readTime, image
-2. **`src/app/blog/<slug>/page.tsx`** — chaque article contient les mêmes infos dans `<ArticleLayout>` props + `metadata`
+1. **`src/data/resources.ts`** — tableau `ARTICLES` (slug, title, excerpt, `tldr`, tags, readTime, image, `sectors`, `pains`)
+2. **`src/app/blog/<slug>/page.tsx`** — chaque article reprend les mêmes infos dans `<ArticleLayout>` props + `metadata`
 
 **Risques** :
-- Désynchronisation titre/excerpt/tags entre la liste et la page réelle
-- Oubli de mettre à jour `blog-view.tsx` lors de l'ajout d'un article (l'article existe mais n'apparaît pas sur `/blog`)
+- Désynchronisation titre/excerpt/tags entre la liste (`resources.ts`) et la page réelle
+- Oubli de mettre à jour `resources.ts` lors de l'ajout d'un article (l'article existe mais n'apparaît ni sur `/blog` ni dans le hub)
+- Article sans `tldr`/`sectors`/`pains` → invisible/mal classé dans le hub
 - La commande `/create-article` documente la mise à jour des deux
 
 **Évaluer** :
@@ -199,7 +200,7 @@ Génère un rapport structuré avec scoring :
 ## Dette moyenne (impact sur la maintenabilité)
 | # | Problème | Fichier(s) | Impact | Effort fix |
 |---|----------|------------|--------|------------|
-| 1 | Duplication articles blog-view ↔ pages (data inline) | blog-view.tsx + blog/*/page.tsx | MOYEN | 2h |
+| 1 | Duplication articles catalog ↔ pages (liste vs `<ArticleLayout>` props) | resources.ts (`ARTICLES`) + blog/*/page.tsx | MOYEN | 2h |
 | 2 | SVG résiduels Create Next App | public/*.svg (5 fichiers) | FAIBLE | 5min |
 | 3 | ... | ... | ... | ... |
 

@@ -78,7 +78,7 @@ Lis tous les composants avec `"use client"` et vérifie :
 - `src/components/sections/pricing.tsx`
 - `src/components/sections/ideas.tsx`
 - `src/components/sections/testimonials.tsx`
-- `src/app/blog/blog-view.tsx` (vraie source liste `/blog`)
+- `src/data/resources.ts` (catalog : listes `/blog` + `/idees` + hub)
 - `src/components/sections/cta.tsx`
 - `src/components/sections/trust.tsx`
 - `src/components/layout/header.tsx`

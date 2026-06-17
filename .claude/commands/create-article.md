@@ -85,7 +85,7 @@ Avant de poursuivre, réponds à ces 3 questions. Si la réponse à l'une d'elle
    - Articles de blog existants dans `src/app/blog/*/page.tsx`
    - Pages clés : `/prestations`, `/approche`, `/idees`, `/contact`, `/prompts`
    - **Bibliothèque de Prompts** : Si l'article couvre un sujet pour lequel un prompt existe dans `src/data/prompts.ts`, ajouter un composant `<PromptCard slug="..." />` (import depuis `@/components/sections/prompt-card`) ou un lien vers `/prompts`
-   - Liste dans `src/app/blog/blog-view.tsx` (vraie source de vérité de la page `/blog`)
+   - Liste des articles dans `src/data/resources.ts` (tableau `ARTICLES` — catalog, vraie source de vérité ; `blog-view.tsx` l'importe)
 
 ## Étape 2 — Stratégie de contenu (brief éditorial)
 
@@ -264,19 +264,23 @@ Une fois l'image reçue :
 
 Après création de l'article, effectue **toutes** ces mises à jour :
 
-1. **`src/app/blog/blog-view.tsx`** (⚠️ **vraie source de vérité** de la page `/blog` depuis la refonte bento) : Ajoute le nouvel article en **PREMIÈRE position** du tableau `ARTICLES` :
+1. **`src/data/resources.ts`** (⚠️ **catalog partagé = vraie source de vérité** des articles ET des idées ; `blog-view.tsx` et le hub `/augmenter-mon-entreprise` l'importent) : Ajoute le nouvel article en **PREMIÈRE position** du tableau `ARTICLES` (type `CatalogArticle`) :
    ```tsx
    {
      slug: "<slug>",
      title: "<titre>",
-     excerpt: "<excerpt>",
+     excerpt: "<excerpt>", // optionnel — utilisé par la card vedette /blog
+     tldr: "<le verdict actionnable, lu en 10 s — affiché sur le hub>",
      tags: ["Tag1", "Tag2"],
      readTime: "<X> min",
      image: "/images/blog/<slug>.webp",
+     sectors: ["Tous"], // un ou plusieurs Sector ; "Tous" = transversal
+     pains: ["demarrage"], // PainId adressés → fait remonter l'article dans le hub
    },
    ```
 
-   > Note : `src/components/sections/blog-preview.tsx` est **legacy** (plus utilisé depuis la refonte bento) — ne pas y toucher sauf demande explicite. Cf. CLAUDE.md « Composant Organization → Legacy (à supprimer) ».
+   > Les champs **`tldr` / `sectors` / `pains`** sont ce qui fait apparaître l'article dans le hub `/augmenter-mon-entreprise` (sélecteur secteur × douleur × objectif). Valeurs possibles : voir les exports `SECTORS` / `PAINS` de `src/data/resources.ts`.
+   > Note : `blog-view.tsx` importe `ARTICLES` — **ne pas y dupliquer l'article**. `src/components/sections/blog-preview.tsx` est **legacy** (ne pas y toucher).
 
 2. **`public/sitemap.xml`** : Ajoute une entrée `<url>` pour le nouvel article :
    ```xml
@@ -318,7 +322,7 @@ Vérifie et affiche un rapport :
 - [ ] Image hero générée (Gemini), convertie en WebP, placée dans `public/images/blog/<slug>.webp`
 - [ ] Prop `image` passé à `ArticleLayout`
 - [ ] `public/images/blog/INDEX.md` mis à jour avec description de l'image
-- [ ] Article ajouté dans `src/app/blog/blog-view.tsx` (première position du tableau `ARTICLES`)
+- [ ] Article ajouté dans `src/data/resources.ts` (tableau `ARTICLES`, première position) avec `tldr` + `sectors` + `pains` renseignés
 - [ ] URL ajoutée dans `sitemap.xml`
 - [ ] Article ajouté dans `llms.txt`
 - [ ] **Ping IndexNow** déclenché sur l'URL publiée (ou TODO si clé pas encore en place — cf. §G.8)

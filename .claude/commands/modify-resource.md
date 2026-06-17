@@ -12,7 +12,7 @@ Spécifique à la modification/restructuration :
 - **Redirections** : `next.config.ts` → `async redirects()` avec `permanent: true` pour les 301
 - **Données inline** : pas de CMS — tout est hardcodé dans les composants, donc la modification passe toujours par de l'édition de fichiers TSX
 - **Règle SEO critique** : toute URL supprimée ou déplacée DOIT avoir une redirection 301
-- ⚠️ **Liste articles** : la **vraie source de vérité** de la page `/blog` est `src/app/blog/blog-view.tsx` (tableau `ARTICLES`). Le composant `src/components/sections/blog-preview.tsx` est **legacy** depuis la refonte bento — partout dans ce document où `blog-preview.tsx` est mentionné comme cible de modif/ajout/suppression pour la liste d'articles, **utiliser `blog-view.tsx` à la place**. Les autres références (footer, sitemap, llms.txt) restent inchangées.
+- ⚠️ **Liste articles & idées** : la **vraie source de vérité** est désormais le catalog `src/data/resources.ts` (tableau `ARTICLES` pour `/blog`, tableau `IDEAS` pour `/idees`) — `blog-view.tsx` et `idees-view.tsx` l'importent, et le hub `/augmenter-mon-entreprise` le consomme. Modifier/supprimer un article ou une idée se fait **dans `resources.ts`** (penser à `tldr`/`sectors`/`pains` pour les articles). Partout dans ce document où `blog-view.tsx` ou `blog-preview.tsx` est mentionné comme cible pour la liste d'articles, **utiliser `src/data/resources.ts` à la place** (`blog-preview.tsx` reste **legacy**). Les autres références (footer, sitemap, llms.txt, `next.config.ts`) restent inchangées.
 
 **Check-lists & appels MCP communs** :
 - Check-lists A à E : [`.claude/templates/seo/checklist.md`](.claude/templates/seo/checklist.md) (SEO on-page, E-E-A-T, JSON-LD, intégration site, **§E spécifique modify/restructure**)

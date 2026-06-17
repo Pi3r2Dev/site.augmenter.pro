@@ -43,8 +43,8 @@ export const PAINS = [
   { id: "goulot", label: "tout passe par moi — je suis le goulot" },
   { id: "leads", label: "je laisse filer des leads, mon commercial plafonne" },
   { id: "prestataire", label: "je dépends d'un prestataire opaque (ou trop cher)" },
-  { id: "cyber", label: "j'ai un doute sur ma cybersécurité" },
-  { id: "demarrage", label: "je veux me lancer dans l'IA, mais par où ?" },
+  { id: "cyber", label: "je ne sais pas si mes données sont vraiment protégées" },
+  { id: "demarrage", label: "je tourne autour de l'IA sans savoir par où commencer" },
 ] as const;
 export type PainId = (typeof PAINS)[number]["id"];
 
