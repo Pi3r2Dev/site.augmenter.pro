@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Rénovation Énergétique : Arrêtez d'acheter des leads (Guide)",
   description:
     "Finies les plateformes de leads ! Internalisez votre acquisition client en rénovation énergétique : SEO, IA et pré-qualification. Méthode complète.",
-};
+  slug: "machine-de-guerre-commerciale",
+});
 
 export default function Article() {
   return (

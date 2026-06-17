@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/layout/article-layout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Agent IA pour PME : c'est quoi et comment en créer un (2026)",
   description:
-    "Agent IA expliqué à un dirigeant de PME : définition sans jargon, 3 exemples concrets (BTP, immobilier, services) et la méthode pour créer votre premier agent.",
-  alternates: {
-    canonical: "https://augmenter.pro/blog/agent-ia-dirigeant-pme",
-  },
-};
+    "Agent IA expliqué à un dirigeant de PME : définition sans jargon, 3 exemples concrets (BTP, immobilier, services) et la méthode pour créer votre premier agent.",
+  slug: "agent-ia-dirigeant-pme",
+});
 
 const faqItems = [
   {

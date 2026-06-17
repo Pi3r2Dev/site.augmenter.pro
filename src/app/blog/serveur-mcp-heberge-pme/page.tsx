@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Serveur MCP hébergé : coder, louer ou héberger ?",
   description:
     "Brancher votre IA sur vos données sans coder un serveur ? Le panorama des plateformes de serveur MCP hébergé, leurs coûts, et où vivent vraiment vos données.",
-};
+  slug: "serveur-mcp-heberge-pme",
+});
 
 const itemListJsonLd = {
   "@context": "https://schema.org",

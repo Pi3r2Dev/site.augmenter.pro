@@ -1,17 +1,15 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { AtelierCallout } from "@/components/sections/atelier-callout";
 import { PromptCard } from "@/components/sections/prompt-card";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Claude Fable : le Prompt d'Audit Complet de Votre Projet",
   description:
-    "Le prompt d'audit en 4 phases pour Claude Fable 5, traduit et amélioré en français. Cartographie, failles, stratégie, plan d'action — copier-coller inclus.",
-  alternates: {
-    canonical: "https://augmenter.pro/blog/prompt-audit-projet-claude-fable",
-  },
-};
+    "Le prompt d'audit en 4 phases pour Claude Fable 5, traduit et amélioré en français. Cartographie, failles, stratégie, plan d'action — copier-coller inclus.",
+  slug: "prompt-audit-projet-claude-fable",
+});
 
 const faqItems = [
   {

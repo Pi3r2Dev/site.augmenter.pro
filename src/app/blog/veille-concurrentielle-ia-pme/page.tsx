@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/layout/article-layout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Veille Concurrentielle IA pour PME : Guide Pratique 2026",
   description:
-    "Comment automatiser votre veille concurrentielle avec l'IA. Méthode en 5 étapes, outils recommandés et retour d'expérience terrain pour PME.",
-  alternates: {
-    canonical: "https://augmenter.pro/blog/veille-concurrentielle-ia-pme",
-  },
-};
+    "Comment automatiser votre veille concurrentielle avec l'IA. Méthode en 5 étapes, outils recommandés et retour d'expérience terrain pour PME.",
+  slug: "veille-concurrentielle-ia-pme",
+});
 
 export default function VeilleConcurrentielleIAPME() {
   return (

@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Intégrer un Agent IA à Votre CRM/ERP : MCP Change la Donne",
   description:
     "95 % des projets IA échouent — pas à cause de l'IA, mais parce que personne ne sait la brancher à vos outils. MCP résout ça. Cas concrets HubSpot, ERP.",
-};
+  slug: "serveur-mcp-integration-crm-erp",
+});
 
 export default function Article() {
   return (

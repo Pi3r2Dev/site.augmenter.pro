@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { AlertTriangle } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "5 signes que votre PME doit moderniser son informatique",
   description:
     "PME du BTP, immobilier ou industrie en Yvelines/Val d'Oise ? Lenteurs, pannes, coûts cachés : 5 signaux d'alerte + solutions concrètes. Premier diagnostic offert.",
-};
+  slug: "5-signes-moderniser-informatique-pme",
+});
 
 const signs = [
   {

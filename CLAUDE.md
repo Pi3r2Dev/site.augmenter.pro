@@ -12,6 +12,8 @@ Marketing website for **augmenter.pro** — an AI consulting and digital transfo
 
 **Charte éditoriale (voix, ton, arc, lexique, E-E-A-T)** : [`.claude/templates/seo/charte-editoriale.md`](.claude/templates/seo/charte-editoriale.md) — source de vérité de la **voix** du site. Relire un brouillon contre la charte : `/relecture-editoriale`.
 
+**Playbook influence éthique (la *mécanique* : accroches, persuasion transparente, accroches de mail)** : [`.claude/templates/seo/playbook-influence-ethique.md`](.claude/templates/seo/playbook-influence-ethique.md) — couche « comment écrire » dérivée de l'hypnose humaniste (Lockert, source primaire PDF) ; détaille la règle §3.4 de la charte. **Découplage registre** (charte §3.3) : pages commerciales/hub/landings = **tutoiement** (`/augmenter-mon-entreprise`, `/contact` déjà migrées) ; récits narratifs (`/`, `/approche`) = **vouvoiement**.
+
 ## Web Crawling
 
 **Priorité : Firecrawl self-hosted sur VPS IONOS** (remplace crawl4ai Coolify depuis 2026-05-27)

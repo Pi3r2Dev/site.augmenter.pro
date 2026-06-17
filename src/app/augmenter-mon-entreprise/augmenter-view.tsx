@@ -12,9 +12,12 @@ import {
   RotateCcw,
   Compass,
   Phone,
+  SlidersHorizontal,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
+import { cn } from "@/lib/utils";
 import {
   SECTORS,
   PAINS,
@@ -139,7 +142,7 @@ function Pill({
       role="tab"
       aria-selected={active}
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+      className={`inline-flex items-center gap-1.5 rounded-2xl px-3.5 py-2 text-left text-sm font-medium transition-colors ${
         active
           ? "border border-foreground bg-foreground text-background"
           : "border border-border bg-background text-muted-foreground hover:border-foreground/40 hover:text-foreground"
@@ -154,12 +157,15 @@ export function AugmenterView() {
   const [sector, setSector] = useState<Sector>("Tous");
   const [pain, setPain] = useState<PainId | null>(null);
   const [objective, setObjective] = useState<ObjectiveId | null>(null);
+  const [filtersOpen, setFiltersOpen] = useState(true);
 
   const objType: ResourceType | "cta" | null = objective
     ? OBJECTIVES.find((o) => o.id === objective)!.type
     : null;
   const wantsHelp = objType === "cta";
   const hasSelection = sector !== "Tous" || pain !== null || objective !== null;
+  const activeCount =
+    (sector !== "Tous" ? 1 : 0) + (pain ? 1 : 0) + (objective ? 1 : 0);
 
   // Filtrage avec relâchement progressif → jamais d'écran vide.
   // (fonction pure module-level — le React Compiler mémoïse l'appel)
@@ -227,113 +233,150 @@ export function AugmenterView() {
         </div>
       </section>
 
-      {/* ═══════════════════ SÉLECTEUR — la phrase à compléter ═══════════════════ */}
-      <section className="border-y border-border bg-muted/30 py-12 md:py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <div className="rounded-3xl border border-border bg-background p-6 shadow-sm sm:p-9">
-            {/* Axe 1 — Secteur */}
-            <fieldset>
-              <legend className="text-lg font-semibold leading-snug sm:text-xl">
-                Je dirige une PME dans…
-              </legend>
-              <div className="mt-4 flex flex-wrap gap-2.5">
-                {SECTORS.map((s) => (
-                  <Pill
-                    key={s}
-                    active={sector === s}
-                    onClick={() => setSector(s)}
-                  >
-                    {s === "Tous" ? "Tous secteurs" : s}
-                  </Pill>
-                ))}
-              </div>
-            </fieldset>
-
-            {/* Axe 2 — Douleur */}
-            <fieldset className="mt-9">
-              <legend className="text-lg font-semibold leading-snug sm:text-xl">
-                Là, maintenant, ce qui me coûte le plus, c&apos;est…
-              </legend>
-              <div className="mt-4 flex flex-wrap gap-2.5">
-                {PAINS.map((p) => (
-                  <Pill
-                    key={p.id}
-                    active={pain === p.id}
-                    onClick={() => onPickPain(p.id)}
-                  >
-                    {p.label}
-                  </Pill>
-                ))}
-              </div>
-            </fieldset>
-
-            {/* Axe 3 — Objectif */}
-            <fieldset className="mt-9">
-              <legend className="text-lg font-semibold leading-snug sm:text-xl">
-                Et là, ce que je veux, c&apos;est…
-              </legend>
-              <div className="mt-4 flex flex-wrap gap-2.5">
-                {OBJECTIVES.map((o) => (
-                  <Pill
-                    key={o.id}
-                    active={objective === o.id}
-                    onClick={() =>
-                      setObjective(objective === o.id ? null : o.id)
-                    }
-                  >
-                    {o.label}
-                  </Pill>
-                ))}
-              </div>
-            </fieldset>
-
-            {hasSelection && (
+      {/* ═══════════ SÉLECTEUR + RÉSULTATS — côte à côte ≥ lg ═══════════ */}
+      <section className="border-t border-border bg-muted/30 py-10 md:py-14">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="lg:grid lg:grid-cols-[360px_1fr] lg:items-start lg:gap-10">
+            {/* ── Colonne sélecteur : sticky desktop · rétractable mobile ── */}
+            <aside className="lg:sticky lg:top-24">
+              {/* Barre rétractable (mobile uniquement) */}
               <button
                 type="button"
-                onClick={reset}
-                className="mt-7 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setFiltersOpen((o) => !o)}
+                aria-expanded={filtersOpen}
+                aria-controls="hub-selecteur"
+                className="flex w-full items-center justify-between gap-3 rounded-2xl border border-border bg-background px-5 py-4 text-left shadow-sm transition-colors hover:border-foreground/30 lg:hidden"
               >
-                <RotateCcw className="h-3.5 w-3.5" />
-                Repartir de zéro
+                <span className="flex items-center gap-2.5 text-[0.95rem] font-semibold">
+                  <SlidersHorizontal className="h-4 w-4 text-primary" />
+                  {filtersOpen ? "Masquer les filtres" : "Affiner ma situation"}
+                  {activeCount > 0 && (
+                    <span className="grid h-5 min-w-5 place-items-center rounded-full bg-primary px-1.5 text-[11px] font-bold text-primary-foreground">
+                      {activeCount}
+                    </span>
+                  )}
+                </span>
+                <ChevronDown
+                  className={cn(
+                    "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300",
+                    filtersOpen && "rotate-180",
+                  )}
+                />
               </button>
-            )}
-          </div>
-        </div>
-      </section>
 
-      {/* ═══════════════════ RÉSULTATS ═══════════════════ */}
-      <section className="py-14 md:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <div className="mb-6 flex flex-col gap-1.5">
-            <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
-              {hasSelection ? (
-                <>
-                  {results.length} ressource{results.length > 1 ? "s" : ""} pour
-                  ta situation
-                </>
-              ) : (
-                <>Tout ce qu&apos;on a, en un coup d&apos;œil</>
-              )}
-            </h2>
-            {relaxNote ? (
-              <p className="text-sm text-muted-foreground">{relaxNote}</p>
-            ) : (
-              <p className="text-sm text-muted-foreground">
-                Chaque carte = le verdict en une phrase. Clique pour aller au fond.
-              </p>
-            )}
-          </div>
+              {/* Contenu rétractable : grid-rows 0fr↔1fr (mobile) · forcé ouvert ≥ lg */}
+              <div
+                id="hub-selecteur"
+                className="grid transition-[grid-template-rows] duration-300 ease-out lg:grid-rows-[1fr]!"
+                style={{ gridTemplateRows: filtersOpen ? "1fr" : "0fr" }}
+              >
+                <div className="overflow-hidden">
+                  <div className="mt-3 rounded-3xl border border-border bg-background p-6 shadow-sm lg:mt-0 lg:max-h-[calc(100dvh-7rem)] lg:overflow-y-auto lg:p-7">
+                    {/* Axe 1 — Secteur */}
+                    <fieldset>
+                      <legend className="text-base font-semibold leading-snug sm:text-lg">
+                        Je dirige une PME dans…
+                      </legend>
+                      <div className="mt-3.5 flex flex-wrap gap-2">
+                        {SECTORS.map((s) => (
+                          <Pill
+                            key={s}
+                            active={sector === s}
+                            onClick={() => setSector(s)}
+                          >
+                            {s === "Tous" ? "Tous secteurs" : s}
+                          </Pill>
+                        ))}
+                      </div>
+                    </fieldset>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {/* CTA Audit mis en avant si l'objectif est « me faire accompagner » */}
-            {wantsHelp && <AuditCtaCard featured />}
+                    {/* Axe 2 — Douleur */}
+                    <fieldset className="mt-7">
+                      <legend className="text-base font-semibold leading-snug sm:text-lg">
+                        Là, maintenant, ce qui me coûte le plus, c&apos;est…
+                      </legend>
+                      <div className="mt-3.5 flex flex-wrap gap-2">
+                        {PAINS.map((p) => (
+                          <Pill
+                            key={p.id}
+                            active={pain === p.id}
+                            onClick={() => onPickPain(p.id)}
+                          >
+                            {p.label}
+                          </Pill>
+                        ))}
+                      </div>
+                    </fieldset>
 
-            {results.map((r) => (
-              <ResourceCard key={r.id} resource={r} />
-            ))}
+                    {/* Axe 3 — Objectif */}
+                    <fieldset className="mt-7">
+                      <legend className="text-base font-semibold leading-snug sm:text-lg">
+                        Et là, ce que je veux, c&apos;est…
+                      </legend>
+                      <div className="mt-3.5 flex flex-wrap gap-2">
+                        {OBJECTIVES.map((o) => (
+                          <Pill
+                            key={o.id}
+                            active={objective === o.id}
+                            onClick={() =>
+                              setObjective(objective === o.id ? null : o.id)
+                            }
+                          >
+                            {o.label}
+                          </Pill>
+                        ))}
+                      </div>
+                    </fieldset>
 
-            {/* CTA Audit en clôture (sauf s'il est déjà épinglé en tête) */}
-            {!wantsHelp && <AuditCtaCard />}
+                    {hasSelection && (
+                      <button
+                        type="button"
+                        onClick={reset}
+                        className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        <RotateCcw className="h-3.5 w-3.5" />
+                        Repartir de zéro
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            {/* ── Colonne résultats ── */}
+            <div className="mt-8 lg:mt-0">
+              <div className="mb-5 flex flex-col gap-1.5">
+                <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
+                  {hasSelection ? (
+                    <>
+                      {results.length} ressource{results.length > 1 ? "s" : ""} pour
+                      ta situation
+                    </>
+                  ) : (
+                    <>Tout ce qu&apos;on a, en un coup d&apos;œil</>
+                  )}
+                </h2>
+                {relaxNote ? (
+                  <p className="text-sm text-muted-foreground">{relaxNote}</p>
+                ) : (
+                  <p className="text-sm text-muted-foreground">
+                    Chaque carte = le verdict en une phrase. Clique pour aller au fond.
+                  </p>
+                )}
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                {/* CTA Audit en tête si l'objectif est « me faire accompagner » */}
+                {wantsHelp && <AuditCtaCard featured />}
+
+                {results.map((r) => (
+                  <ResourceCard key={r.id} resource={r} />
+                ))}
+
+                {/* CTA Audit en clôture (sauf s'il est déjà épinglé en tête) */}
+                {!wantsHelp && <AuditCtaCard />}
+              </div>
+            </div>
           </div>
         </div>
       </section>

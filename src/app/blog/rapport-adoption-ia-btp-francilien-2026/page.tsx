@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Rapport 2026 : Adoption de l'IA dans le BTP francilien",
   description:
     "Où en est l'IA dans les PME du BTP en Île-de-France ? Tableau de maturité par sous-secteur, sources Bpifrance/FFB + observations terrain 78/95. État des lieux 2026.",
-};
+  slug: "rapport-adoption-ia-btp-francilien-2026",
+});
 
 const reportJsonLd = {
   "@context": "https://schema.org",

@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/layout/article-layout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Automatiser Emails et Réseaux Sociaux avec l'IA en PME",
   description:
-    "Gagnez 10h par semaine en automatisant vos emails et publications sociales avec l'IA. Guide pratique et outils testés pour dirigeants de PME.",
-  alternates: {
-    canonical:
-      "https://augmenter.pro/blog/automatiser-emails-reseaux-sociaux-ia",
-  },
-};
+    "Gagnez 10h par semaine en automatisant vos emails et publications sociales avec l'IA. Guide pratique et outils testés pour dirigeants de PME.",
+  slug: "automatiser-emails-reseaux-sociaux-ia",
+});
 
 export default function AutomatiserEmailsReseauxSociauxIA() {
   return (

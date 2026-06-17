@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Combien Coûte un Audit Informatique en Yvelines ? Tarifs 2026",
   description:
     "Prix audit informatique PME en Yvelines (78) : de 0 € à 20 000 €. Grille tarifaire, cas concrets et diagnostic offert 60 min. Guide transparent.",
-};
+  slug: "cout-audit-informatique-yvelines",
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",

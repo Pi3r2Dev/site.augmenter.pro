@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "NIS2 : Vos Clients Vont Bientôt Vous L'Imposer (Guide PME 2026)",
   description:
     "Vos donneurs d'ordres vont exiger des clauses cyber dans vos contrats. NIS2 arrive — si vous n'êtes pas prêt, vous perdez des marchés. Plan d'action concret.",
-};
+  slug: "nis2-pme-yvelines-val-doise",
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",

@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { AtelierCallout } from "@/components/sections/atelier-callout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Claude Code : le prompt, CLAUDE.md et les Skills (guide PME 2026)",
   description:
-    "Envoyez ce prompt AVANT tout projet Claude Code. CLAUDE.md, ARCHITECTURE.md, Skills et bonnes pratiques. La différence entre un POC et un vrai produit.",
-  alternates: {
-    canonical:
-      "https://augmenter.pro/blog/claude-code-prompt-architecture",
-  },
-};
+    "Envoyez ce prompt AVANT tout projet Claude Code. CLAUDE.md, ARCHITECTURE.md, Skills et bonnes pratiques. La différence entre un POC et un vrai produit.",
+  slug: "claude-code-prompt-architecture",
+});
 
 const faqItems = [
   {

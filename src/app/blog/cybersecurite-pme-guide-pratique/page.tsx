@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Cybersécurité PME : le guide pratique de bon sens 2026",
   description:
     "93 % des cyberattaques contre les PME sont évitables sans budget ni DSI. Mots de passe, MFA, phishing, fraude au président : le guide concret et actionnable.",
-};
+  slug: "cybersecurite-pme-guide-pratique",
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",

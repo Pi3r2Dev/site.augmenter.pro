@@ -5,6 +5,16 @@
 
 ---
 
+## Sous-dossier `og/` — images Open Graph des articles
+
+- **Quoi** : un JPEG `og/<slug>.jpg` par article de blog, soit la version partage social (WhatsApp, Facebook, LinkedIn, X) de l'image hero `<slug>.webp` correspondante.
+- **Format** : JPEG 1200×630 (ratio 1.91:1, recadrage centré `cover`), qualité 82 mozjpeg, ~40–150 Ko. JPEG choisi pour la compat max des crawlers (cohérent avec `general/og-augmenter-pro.jpg`).
+- **Pourquoi** : `og:image` ne supporte pas le WebP de façon fiable sur tous les crawlers, et sans bloc `openGraph` dédié chaque article héritait de l'image générique du site. Câblé via le helper [`src/lib/article-metadata.ts`](../../../src/lib/article-metadata.ts) (`articleMetadata({ ... })`) qui pointe sur `/images/blog/og/<slug>.jpg`.
+- **Régénération** : recadrage automatique depuis le hero WebP (prop `image=` de chaque `ArticleLayout`) — un nouvel article génère son OG en recadrant son hero. Exception : `machine-de-guerre-commerciale` dérive de `augmenter-pro-village-renovation-hero.webp`, renommé en `og/machine-de-guerre-commerciale.jpg`.
+- **Contenu visuel** : identique au hero `<slug>.webp` documenté plus bas, recadré en 1.91:1. Se référer à l'entrée du hero pour la description et l'alt text.
+
+---
+
 ## serveur-mcp-heberge-pme.webp
 
 - **Type** : Illustration isométrique flat design (IA générée via Gemini)

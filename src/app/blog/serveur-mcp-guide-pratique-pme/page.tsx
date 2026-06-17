@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Serveur MCP : Guide Pratique pour Connecter l'IA à Vos Outils",
   description:
     "Vous passez vos journées à copier-coller entre CRM, mails et Excel ? Le protocole MCP connecte l'IA directement à vos outils. Fini les allers-retours.",
-};
+  slug: "serveur-mcp-guide-pratique-pme",
+});
 
 export default function Article() {
   return (

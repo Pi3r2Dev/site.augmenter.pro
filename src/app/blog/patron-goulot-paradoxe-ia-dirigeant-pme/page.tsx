@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Le Patron-Goulot : Quand l'IA Rend le Dirigeant Encore Plus Indispensable",
   description:
     "Vous avez déployé l'IA partout et vous êtes toujours débordé ? Pire — c'est vous qui formez tout le monde ? 5 signaux du patron-goulot IA et le protocole en 4 étapes pour sortir du piège.",
-};
+  slug: "patron-goulot-paradoxe-ia-dirigeant-pme",
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",

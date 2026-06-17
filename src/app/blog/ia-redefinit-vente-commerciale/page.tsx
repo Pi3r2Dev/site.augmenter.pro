@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "IA & Vente Commerciale : De la Prospection au Closing (2026)",
   description:
     "Vos concurrents prospectent, qualifient et relancent pendant que vous dormez. L'IA ne remplace pas vos commerciaux — elle rend ceux qui l'ignorent obsolètes.",
-};
+  slug: "ia-redefinit-vente-commerciale",
+});
 
 export default function Article() {
   return (

@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Comparatif LLM pour la Vente : GPT, Claude, Gemini (2026)",
   description:
     "GPT-4, Claude, Gemini — votre concurrent utilise déjà l'un d'eux pour vendre plus que vous. Lequel choisir ? Comparatif honnête, pièges RGPD inclus.",
-};
+  slug: "comparatif-llm-vente-commerciale",
+});
 
 const rows = [
   {

@@ -1,17 +1,15 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { AtelierCallout } from "@/components/sections/atelier-callout";
 import { PromptCard } from "@/components/sections/prompt-card";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "J'ai transformé Claude Cowork en community manager",
   description:
-    "Le setup réel, les prompts que j'utilise, et ce qui a foiré quand j'ai confié mes réseaux sociaux à Claude Cowork. Retour d'expérience sans filtre.",
-  alternates: {
-    canonical: "https://augmenter.pro/blog/claude-cowork-community-manager",
-  },
-};
+    "Le setup réel, les prompts que j'utilise, et ce qui a foiré quand j'ai confié mes réseaux sociaux à Claude Cowork. Retour d'expérience sans filtre.",
+  slug: "claude-cowork-community-manager",
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",

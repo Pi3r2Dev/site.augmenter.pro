@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "IA Contradicteur : 5 Prompts pour Challenger vos Décisions PME",
   description:
     "ChatGPT vous donne toujours raison ? 5 prompts copiables pour transformer l'IA en contradicteur honnête et identifier vos angles morts avant de décider.",
-};
+  slug: "ia-contradicteur-prompts-dirigeant-pme",
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",

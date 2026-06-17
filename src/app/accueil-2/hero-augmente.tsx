@@ -81,8 +81,9 @@ const CHAPTERS: Chapter[] = [
     eyebrow: "+ Robotique & terrain connecté",
     keyword: "la robotique.",
     subLead: "Drones, robots, capteurs, caméras.",
-    subRest: " Le stock se range, le terrain remonte la donnée en temps réel.",
-    trust: "Du matériel installé et expliqué sur place.",
+    subRest:
+      " Demain, le stock se range seul et le terrain remonte la donnée en temps réel.",
+    trust: "Pas encore en catalogue — notre axe d'exploration assumé.",
   },
   {
     accent: "oklch(0.74 0.17 66)",

@@ -1,18 +1,15 @@
-import type { Metadata } from "next";
+import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import Image from "next/image";
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { AtelierCallout } from "@/components/sections/atelier-callout";
 
-export const metadata: Metadata = {
+export const metadata = articleMetadata({
   title: "Configurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €",
   description:
-    "Comment nous avons reconfiguré tout Odoo d'un client en 4 jours avec Claude Cowork. Studio, SaaS/SH/Open Source, packages et formation incluse.",
-  alternates: {
-    canonical:
-      "https://augmenter.pro/blog/configurer-odoo-ia-claude-cowork",
-  },
-};
+    "Comment nous avons reconfiguré tout Odoo d'un client en 4 jours avec Claude Cowork. Studio, SaaS/SH/Open Source, packages et formation incluse.",
+  slug: "configurer-odoo-ia-claude-cowork",
+});
 
 export default function ConfigurerOdooIAClaude() {
   return (
