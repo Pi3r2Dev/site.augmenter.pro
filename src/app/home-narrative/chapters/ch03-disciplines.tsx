@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { Brain, Monitor, Bot, ArrowRight } from "lucide-react";
+import { Brain, Monitor, GraduationCap, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { CardShell, LiquidBlob } from "@/components/widgets/blobs";
 import type { Palette } from "@/components/widgets/palettes";
@@ -50,13 +50,14 @@ const disciplines: Discipline[] = [
   },
   {
     num: "03",
-    icon: Bot,
-    title: "Robotique & IoT",
-    quote: "« Drones, robots, capteurs — les yeux et les bras du numérique. »",
+    icon: GraduationCap,
+    title: "Formation & autonomie",
+    quote:
+      "« Le but, ce n'est pas que vous m'appeliez à vie — c'est que vous n'ayez plus besoin de moi. »",
     features: [
-      "Capture terrain (drones, caméras)",
-      "Capteurs & télémétrie",
-      "Pilotage d'équipements",
+      "Ateliers Claude Code & IA",
+      "Montée en compétence des équipes",
+      "Méthodes pour rester autonome",
     ],
     palette: "cold",
     seed: 93,
@@ -140,11 +141,21 @@ export function H03Disciplines() {
           <DisciplineCard key={d.num} d={d} />
         ))}
       </div>
-      <div data-anim="up" className="flex items-center gap-2">
+      <div data-anim="up" className="flex flex-col gap-4">
+        <p className="max-w-[60ch] font-mono text-[11px] uppercase tracking-widest text-white/45">
+          Axe d&apos;exploration · Robotique &amp; IoT en R&amp;D — un projet&nbsp;?{" "}
+          <Link
+            href="/contact"
+            data-hover
+            className="text-white/70 underline-offset-2 transition-colors hover:text-white hover:underline"
+          >
+            parlons-en
+          </Link>
+        </p>
         <Link
           href="/approche"
           data-hover
-          className="inline-flex items-center gap-2 rounded-md border border-white/30 px-4 py-2.5 font-mono text-[11px] uppercase tracking-widest text-white transition-colors hover:bg-white/10"
+          className="inline-flex w-fit items-center gap-2 rounded-md border border-white/30 px-4 py-2.5 font-mono text-[11px] uppercase tracking-widest text-white transition-colors hover:bg-white/10"
         >
           Voir la méthode complète
           <ArrowRight className="h-3.5 w-3.5" />
