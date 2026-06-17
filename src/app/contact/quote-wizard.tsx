@@ -52,7 +52,7 @@ const SERVICES = [
   {
     id: "formation",
     name: "Formation",
-    desc: "Ateliers IA pour vos équipes",
+    desc: "Ateliers IA pour tes équipes",
     icon: GraduationCap,
     tag: null,
     tagVariant: "secondary" as const,
@@ -99,12 +99,12 @@ const ADAPTIVE_QUESTIONS: Partial<
   },
   dev: {
     key: "dev_si",
-    label: "Vous avez déjà un système d'information en place ?",
+    label: "Tu as déjà un système d'information en place ?",
     options: ["Oui — à intégrer", "Partiellement", "Non — on repart de zéro"],
   },
   conseil: {
     key: "conseil_goal",
-    label: "Quel est votre objectif principal ?",
+    label: "Quel est ton objectif principal ?",
     options: ["Réduire les coûts", "Gagner du temps", "Se différencier", "Accompagner la croissance"],
   },
 };
@@ -292,9 +292,9 @@ function ExitIntentPopup({
         <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
           <Sparkles className="h-5 w-5 text-primary" />
         </div>
-        <h3 className="text-lg font-semibold">Votre brief est presque prêt</h3>
+        <h3 className="text-lg font-semibold">Ton brief est presque prêt</h3>
         <p className="mt-1 text-sm text-muted-foreground">
-          Laissez votre email et nous reprendrons là où vous en étiez.
+          Laisse ton email et on reprend là où tu en étais.
         </p>
         <form onSubmit={handleSubmit} className="mt-4 space-y-3">
           <input
@@ -302,7 +302,7 @@ function ExitIntentPopup({
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="votre@email.pro"
+            placeholder="ton@email.pro"
             className="w-full rounded-lg border border-input bg-background px-4 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20"
           />
           <label className="flex cursor-pointer items-start gap-2 text-xs text-muted-foreground">
@@ -573,7 +573,7 @@ export function QuoteWizard() {
         </div>
         <h3 className="text-2xl font-bold">Message envoyé !</h3>
         <p className="mt-2 max-w-sm text-muted-foreground">
-          Pierre vous répond sous 24h. Gardez un œil sur votre messagerie.
+          Pierre te répond sous 24h. Garde un œil sur ta messagerie.
         </p>
       </motion.div>
     );
@@ -595,9 +595,9 @@ export function QuoteWizard() {
             exit="exit"
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
-            <h2 className="text-xl font-semibold">Qu&apos;est-ce qui vous intéresse ?</h2>
+            <h2 className="text-xl font-semibold">Qu&apos;est-ce qui t&apos;intéresse ?</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Sélectionnez un ou plusieurs services pour commencer.
+              Sélectionne un ou plusieurs services pour commencer.
             </p>
 
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -674,9 +674,9 @@ export function QuoteWizard() {
             exit="exit"
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
-            <h2 className="text-xl font-semibold">Parlez-nous de votre situation</h2>
+            <h2 className="text-xl font-semibold">Parle-nous de ta situation</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Ces informations permettent de personnaliser votre brief.
+              Ces informations permettent de personnaliser ton brief.
             </p>
 
             <div className="mt-6 space-y-6">
@@ -696,7 +696,7 @@ export function QuoteWizard() {
                 {context.sector === "Autre" && (
                   <input
                     type="text"
-                    placeholder="Précisez votre secteur…"
+                    placeholder="Précise ton secteur…"
                     className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-2 text-sm focus:border-primary focus:outline-none"
                     onChange={(e) =>
                       setContext((c) => ({ ...c, additional: { ...c.additional, sector_detail: e.target.value } }))
@@ -707,7 +707,7 @@ export function QuoteWizard() {
 
               {/* Taille équipe */}
               <div>
-                <p className="mb-2 text-sm font-medium">Taille de votre équipe</p>
+                <p className="mb-2 text-sm font-medium">Taille de ton équipe</p>
                 <div className="flex flex-wrap gap-2">
                   {TEAM_SIZES.map((s) => (
                     <Chip
@@ -722,7 +722,7 @@ export function QuoteWizard() {
 
               {/* Urgence */}
               <div>
-                <p className="mb-2 text-sm font-medium">Votre horizon</p>
+                <p className="mb-2 text-sm font-medium">Ton horizon</p>
                 <div className="flex flex-wrap gap-2">
                   {URGENCIES.map((u) => (
                     <Chip
@@ -793,7 +793,7 @@ export function QuoteWizard() {
               <div className="mb-3 flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-xs font-medium uppercase tracking-wide text-primary">
-                  Analyse de votre besoin
+                  Analyse de ton besoin
                 </span>
               </div>
 
@@ -827,7 +827,7 @@ export function QuoteWizard() {
 
             {/* Contact form */}
             <div className="space-y-4">
-              <h3 className="text-base font-semibold">Vos coordonnées</h3>
+              <h3 className="text-base font-semibold">Tes coordonnées</h3>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label className="mb-1 block text-sm font-medium">
@@ -902,12 +902,12 @@ export function QuoteWizard() {
                 <Shield className="mt-0.5 h-5 w-5 shrink-0 text-green-600 dark:text-green-400" />
                 <div>
                   <p className="text-sm font-semibold text-green-800 dark:text-green-300">
-                    Vos données ne quittent jamais votre navigateur
+                    Tes données ne quittent jamais ton navigateur
                   </p>
                   <p className="mt-1 text-xs text-green-700 dark:text-green-400">
-                    Nous n&apos;utilisons aucune base de données. Votre brief est construit et
-                    stocké localement sur votre appareil. En cliquant &quot;Envoyer&quot;, votre
-                    message s&apos;ouvre directement dans votre client email ou WhatsApp —
+                    On n&apos;utilise aucune base de données. Ton brief est construit et
+                    stocké localement sur ton appareil. En cliquant &quot;Envoyer&quot;, ton
+                    message s&apos;ouvre directement dans ton client email ou WhatsApp —
                     sans aucun intermédiaire ni serveur de collecte.
                   </p>
                 </div>

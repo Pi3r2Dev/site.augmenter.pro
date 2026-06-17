@@ -194,7 +194,7 @@ export function BackgroundCanvas() {
       window.addEventListener("pointermove", onPointerMove);
 
       let configTarget: UniformTargets = configFor("dawn");
-      let configCurrent: UniformTargets = { ...configTarget };
+      const configCurrent: UniformTargets = { ...configTarget };
 
       unsubscribe = narrativeStore.subscribe(() => {
         const s = narrativeStore.get();

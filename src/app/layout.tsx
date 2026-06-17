@@ -174,6 +174,13 @@ const jsonLd = {
         addressRegion: "Val d'Oise",
         addressCountry: "FR",
       },
+      // Coordonnées au niveau commune (Jouy-le-Moutier 95280) — l'adresse exacte
+      // reste masquée côté GBP (profil Service-Area Business).
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 49.0181,
+        longitude: 2.0394,
+      },
       areaServed: [
         {
           "@type": "AdministrativeArea",
@@ -188,6 +195,12 @@ const jsonLd = {
           name: "Île-de-France",
         },
       ],
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "19:00",
+      },
       priceRange: "€-€€",
       knowsAbout: [
         "Intelligence Artificielle",

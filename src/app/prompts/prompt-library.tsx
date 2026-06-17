@@ -50,14 +50,14 @@ export function PromptLibrary() {
   >("all");
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  // Handle deep links like /prompts#claude-code-architecte — reset filters and scroll to the card
+  // Handle deep links like /prompts#claude-code-architecte — scroll to the card.
+  // Les filtres démarrent déjà à "all"/"" → la carte ciblée est visible sans reset
+  // (on évite ainsi un setState synchrone dans l'effet, signalé par le React Compiler).
   useEffect(() => {
     if (typeof window === "undefined") return;
     const hash = window.location.hash.replace("#", "");
     if (!hash) return;
     if (!prompts.some((p) => p.id === hash)) return;
-    setActiveCategory("all");
-    setSearchQuery("");
     // Defer to next frame so the targeted card is in the DOM
     requestAnimationFrame(() => {
       const el = document.getElementById(hash);

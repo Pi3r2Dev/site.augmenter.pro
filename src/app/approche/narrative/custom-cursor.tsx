@@ -1,23 +1,43 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { narrativeStore } from "./store";
+
+// L'environnement autorise-t-il le curseur custom ? (pointeur fin + écran large
+// + mouvement autorisé). Lu via useSyncExternalStore → pas de setState dans un
+// effet (et réagit aux changements de pointeur / largeur / reduced-motion).
+function subscribeCursorEnv(callback: () => void) {
+  if (typeof window === "undefined") return () => {};
+  const mq = window.matchMedia("(pointer: fine)");
+  mq.addEventListener("change", callback);
+  window.addEventListener("resize", callback);
+  const unsub = narrativeStore.subscribe(callback);
+  return () => {
+    mq.removeEventListener("change", callback);
+    window.removeEventListener("resize", callback);
+    unsub();
+  };
+}
+
+function getCursorEnvSnapshot() {
+  return (
+    window.matchMedia("(pointer: fine)").matches &&
+    window.innerWidth >= 620 &&
+    !narrativeStore.get().prefersReducedMotion
+  );
+}
 
 export function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
-  const [enabled, setEnabled] = useState(false);
+  const enabled = useSyncExternalStore(
+    subscribeCursorEnv,
+    getCursorEnvSnapshot,
+    () => false,
+  );
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const fine = window.matchMedia("(pointer: fine)").matches;
-    const wide = window.innerWidth >= 620;
-    const reduce = narrativeStore.get().prefersReducedMotion;
-    if (!fine || !wide || reduce) {
-      setEnabled(false);
-      return;
-    }
-    setEnabled(true);
+    if (!enabled) return;
 
     document.documentElement.style.cursor = "none";
     let rafId = 0;
@@ -58,7 +78,7 @@ export function CustomCursor() {
       document.documentElement.style.cursor = "";
       document.body.classList.remove("cursor-hover");
     };
-  }, []);
+  }, [enabled]);
 
   if (!enabled) return null;
   return (

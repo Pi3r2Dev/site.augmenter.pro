@@ -11,7 +11,6 @@ import {
   Plug,
   Zap,
   BarChart3,
-  Building2,
   HardHat,
   Home,
   Factory,

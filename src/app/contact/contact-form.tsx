@@ -46,11 +46,12 @@ export function ContactForm() {
               Diagnostic initial — 60 min
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Construisez votre <span className="gradient-text">brief</span>
+              Construis ton <span className="gradient-text">brief</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              Configurez votre besoin en 3 étapes. On génère un brief personnalisé,
-              vous l&apos;envoyez en un clic — par email ou WhatsApp.
+              Pas de formulaire piège ni de rappel commercial surprise. Tu construis
+              ton besoin en 3 étapes, on génère un brief clair, et tu l&apos;envoies
+              en un clic — par email ou WhatsApp.
             </p>
           </div>
 
@@ -97,7 +98,7 @@ export function ContactForm() {
               ))}
 
               <div className="mt-8 border-t border-border pt-6">
-                <p className="mb-3 text-sm font-medium">Retrouvez-nous</p>
+                <p className="mb-3 text-sm font-medium">Retrouve-nous</p>
                 <div className="flex gap-3">
                   <a
                     href="https://www.linkedin.com/in/legrand-pierre/"
@@ -126,8 +127,8 @@ export function ContactForm() {
                   Premier échange sans engagement
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  On écoute, on diagnostique, on vous dit la vérité.
-                  Si ça matche, on avance ensemble. Sinon, vous repartez
+                  On écoute, on diagnostique, on te dit la vérité.
+                  Si ça matche, on avance ensemble. Sinon, tu repars
                   avec des recommandations concrètes.
                 </p>
                 <Link

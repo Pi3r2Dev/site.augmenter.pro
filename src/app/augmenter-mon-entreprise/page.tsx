@@ -8,12 +8,12 @@ const PATH = "/augmenter-mon-entreprise";
 export const metadata: Metadata = {
   title: "Augmenter mon entreprise : par où commencer",
   description:
-    "Sélectionnez votre secteur et votre douleur du moment : on filtre nos articles, idées chiffrées et prompts en TL;DR. Pour décider et agir, pas pour scroller.",
+    "Dis-nous ton secteur et ce qui te coûte le plus : on te sort nos articles, idées chiffrées et prompts en TL;DR. Pour décider et agir, pas pour scroller.",
   alternates: { canonical: PATH },
   openGraph: {
     title: "Augmenter mon entreprise : par où commencer | augmenter.PRO",
     description:
-      "Dites-nous où vous en êtes — on vous sort les bonnes ressources IA, en version « lu en 10 secondes ». Pour dirigeant de PME pressé.",
+      "Tu te méfies des promesses creuses et tu manques de temps ? Dis-nous où tu en es — on te sort les bonnes ressources IA, le verdict en une phrase.",
     url: `${SITE}${PATH}`,
     type: "website",
   },
