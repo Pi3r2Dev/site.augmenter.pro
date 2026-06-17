@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { IdeesView } from "./idees-view";
 
 export const metadata: Metadata = {
-  title: "Idées IA pour PME : 9 cas d'usage qui facturent en 2026",
+  title: "Idées IA pour PME : 15 cas d'usage qui facturent en 2026",
   description:
-    "9 idées IA chiffrées par secteur — immobilier, courtage, BTP, notariat, commerce, outils PME. Avantages ET points d'attention, sources, ROI mesurable.",
+    "15 idées IA chiffrées par secteur — immobilier, courtage, BTP, notariat, commerce, outils PME. Avantages ET points d'attention, sources, ROI mesurable.",
   alternates: {
     canonical: "https://augmenter.pro/idees",
   },
@@ -15,9 +15,9 @@ const collectionJsonLd = {
   "@type": "CollectionPage",
   "@id": "https://augmenter.pro/idees#collection",
   url: "https://augmenter.pro/idees",
-  name: "Idées IA pour PME : 9 cas d'usage qui facturent en 2026",
+  name: "Idées IA pour PME : 15 cas d'usage qui facturent en 2026",
   description:
-    "Catalogue de 9 cas d'usage IA générateurs de revenus ou d'économies mesurables, classés par secteur (immobilier, courtage, BTP, notariat, commerce, outils PME).",
+    "Catalogue de 15 cas d'usage IA générateurs de revenus ou d'économies mesurables, classés par secteur (immobilier, courtage, BTP, notariat, commerce, outils PME).",
   inLanguage: "fr-FR",
   isPartOf: {
     "@type": "WebSite",
@@ -34,7 +34,7 @@ const collectionJsonLd = {
   },
   mainEntity: {
     "@type": "ItemList",
-    numberOfItems: 9,
+    numberOfItems: 15,
     itemListOrder: "https://schema.org/ItemListUnordered",
     itemListElement: [
       {
@@ -102,6 +102,51 @@ const collectionJsonLd = {
         description:
           "Surveillance auto de 5-10 concurrents locaux : prix, recrutements, posts sociaux. Alertes ciblées et synthèse hebdo.",
         url: "https://augmenter.pro/blog/veille-concurrentielle-ia-pme",
+      },
+      {
+        "@type": "ListItem",
+        position: 10,
+        name: "Bot Telegram de gestion (IA + RAG + email)",
+        description:
+          "Assistant Telegram branché sur vos données (RAG docs/CRM/compta) et votre mail : relances, résumés et requêtes depuis le téléphone.",
+        url: "https://augmenter.pro/blog/agent-ia-dirigeant-pme",
+      },
+      {
+        "@type": "ListItem",
+        position: 11,
+        name: "Standard vocal IA avec votre voix de marque",
+        description:
+          "Standard téléphonique IA 24/7 avec voix clonée sur la vôtre : renseigne, qualifie, prend les RDV et transfère les appels chauds.",
+      },
+      {
+        "@type": "ListItem",
+        position: 12,
+        name: "Vision intelligente de chantier (OmniVision)",
+        description:
+          "Modèle de vision sur caméras : détection EPI manquants et zones à risque, suivi d'avancement, comptage matériel, alerte temps réel.",
+      },
+      {
+        "@type": "ListItem",
+        position: 13,
+        name: "Base de connaissance IA interne (anti patron-goulot)",
+        description:
+          "Assistant entraîné sur vos procédures et historique : l'équipe se sert seule, le savoir sort de la tête du dirigeant.",
+        url: "https://augmenter.pro/blog/patron-goulot-paradoxe-ia-dirigeant-pme",
+      },
+      {
+        "@type": "ListItem",
+        position: 14,
+        name: "Copilote cybersécurité PME",
+        description:
+          "Surveillance des signaux faibles, explication du risque en français et réponse guidée — sans SOC à cinq chiffres. Aide NIS2.",
+        url: "https://augmenter.pro/blog/cybersecurite-pme-guide-pratique",
+      },
+      {
+        "@type": "ListItem",
+        position: 15,
+        name: "Pré-compta : lecture des factures fournisseurs (OCR + IA)",
+        description:
+          "Lecture des factures fournisseurs, extraction montants/TVA/échéances, poussée en compta et détection des anomalies.",
       },
     ],
   },

@@ -78,6 +78,7 @@ const cockpit: CockpitColumn[] = [
       { label: "Mentions légales", href: "/mentions-legales" },
       { label: "Politique de confidentialité", href: "/politique-confidentialite" },
       { label: "CGV", href: "/cgv" },
+      { label: "Plan du site", href: "/plan-du-site" },
     ],
   },
 ];

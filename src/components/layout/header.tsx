@@ -14,8 +14,9 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
+  { href: "/augmenter-mon-entreprise", label: "Par où commencer" },
   { href: "/approche", label: "Approche" },
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: "Articles" },
   { href: "/prompts", label: "Prompts" },
   { href: "/contact", label: "Contact" },
 ];

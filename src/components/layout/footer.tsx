@@ -33,6 +33,7 @@ const COLUMNS: FooterColumn[] = [
     title: "Ressources",
     accent: "oklch(0.828 0.189 84.429)",
     items: [
+      { label: "Augmenter mon entreprise", href: "/augmenter-mon-entreprise" },
       { label: "Stratégie IA PME", href: "/strategie-ia-pme" },
       { label: "Articles & tutos", href: "/blog" },
       { label: "Prompts IA", href: "/prompts" },
@@ -48,6 +49,7 @@ const COLUMNS: FooterColumn[] = [
       { label: "Mentions légales", href: "/mentions-legales" },
       { label: "Politique de confidentialité", href: "/politique-confidentialite" },
       { label: "CGV", href: "/cgv" },
+      { label: "Plan du site", href: "/plan-du-site" },
     ],
   },
 ];

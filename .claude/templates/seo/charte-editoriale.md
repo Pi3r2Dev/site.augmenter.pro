@@ -4,13 +4,14 @@
 
 > **Division des rôles — ne pas dupliquer, croiser :**
 > - **Cette charte = la VOIX** (comment on parle : ton, lexique, arc, barre qualité).
+> - [`playbook-influence-ethique.md`](playbook-influence-ethique.md) = la **MÉCANIQUE** d'influence éthique (patterns d'accroche, boîte à outils PNL/Milton, structure « en ouverture », accroches de mail) — détaille la règle §3.4 ci-dessous.
 > - [`project-context.md`](project-context.md) = la **STRATÉGIE** (positionnement 3-tiers, persona détaillé, audience/géo, pyramide d'offres, méthode SEO/GEO).
 > - [`eeat-grid.md`](eeat-grid.md) = le **scoring** E-E-A-T détaillé (barème /20).
 > - [`checklist.md`](checklist.md) = les **check-lists** opérationnelles (on-page, JSON-LD, intégration site).
 >
 > En cas de doute sur le **fond stratégique** → project-context. Sur la **forme / la voix** → ici.
 
-> **Dernière mise à jour** : 2026-06-01.
+> **Dernière mise à jour** : 2026-06-17 (ajout §3.4 influence éthique + playbook).
 > **Contrôle automatique** : passer tout contenu au crible de `/relecture-editoriale` avant publication (skill projet qui note ton / arc / lexique / E-E-A-T contre cette charte).
 
 ---
@@ -58,6 +59,14 @@ Les accroches (titles, descriptions, CTA, intros) touchent les **frustrations r�
 
 Raison : le tutoiement matche le « coach direct » en SERP/landing ; le vouvoiement préserve la posture éditoriale du récit.
 
+### 3.4 Influence éthique « en ouverture » (Lockert + Milton) — la mécanique
+
+La voix s'outille d'une **mécanique d'influence éthique** tirée de l'hypnose humaniste (Lockert) et du Milton Model. Principe : **on éclaire, on n'enferme pas**. On rejoint la réalité du dirigeant (synchronisation = la douleur de §3.1), on ouvre vers une méthode complète (ré-association), on invite sans forcer (sortie libre). Jamais de langage caché : *dire les choses franchement, c'est déjà refuser de manipuler*.
+
+> **Test décisif** (chaque accroche, mail, paragraphe) : *« Si le dirigeant voyait la technique à l'œuvre, se sentirait-il respecté — ou floué ? »* → si « floué », on réécrit.
+
+Détail opérationnel (patterns d'accroche, boîte à outils PNL, structure « en ouverture » d'un mail, lignes rouges) : **[playbook-influence-ethique.md](playbook-influence-ethique.md)**.
+
 ---
 
 ## 4. Lexique & interdits
@@ -97,6 +106,7 @@ Minimum non négociable par contenu :
 - ❌ Présence du mot « gratuit »
 - ❌ Jargon corporate / « nous proposons » / listes de mots-clés dans les meta descriptions
 - ❌ Statistique non sourcée ou inventée
+- ❌ **Influence manipulatoire** : fausse urgence/rareté, culpabilisation, peur ou honte comme moteurs, suggestion qui court-circuite la décision au lieu de l'éclairer (cf. [playbook-influence-ethique.md](playbook-influence-ethique.md) §5)
 - ❌ Article sans exemple terrain, uniquement théorique
 - ❌ Longueur artificielle, fausses « mises à jour », variantes mineures d'un contenu existant
 - ❌ Géo-ciblage 78/95 imposé sur un contenu à intent national (cf. project-context §Audience)

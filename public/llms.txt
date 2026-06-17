@@ -33,6 +33,10 @@ Secteurs servis : BTP, immobilier, industrie, artisanat, commerce, services. PME
 3. Expertise Humaine (Formation & Accompagnement) — Formation personnalisée, conduite du changement
 4. Vision Globale et Stratégique — Plan chiffré, stratégie alignée sur les objectifs business
 
+## Augmenter mon entreprise (hub de ressources)
+
+- [Augmenter mon entreprise : par où commencer](https://augmenter.pro/augmenter-mon-entreprise) — Point d'entrée unique pour dirigeant de PME pressé. Le visiteur se projette dans sa réalité via trois axes (secteur d'activité ; douleur du moment : tâches répétitives, patron-goulot, leads qui filent, dépendance prestataire, doute cybersécurité, ne sait pas par où commencer ; objectif : comprendre, voir des chiffres, un prompt, se faire accompagner), et le hub filtre en direct l'ensemble des ressources augmenter.PRO (articles, idées chiffrées, prompts) qui répondent à sa situation, chacune résumée en TL;DR actionnable avec lien vers le contenu complet. CTA : Audit 180° offert (60 min visio, sans engagement). Conçu pour la navigation par intention plutôt que par catégorie.
+
 ## Articles de blog
 
 - [Serveur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ? (guide PME 2026)](https://augmenter.pro/blog/serveur-mcp-heberge-pme) — Panorama du marché du « serveur MCP hébergé » (MCP-as-a-Service / AI Data Connectors) pour dirigeant de PME. Les 3 façons de brancher une IA sur ses données en 2026 : coder soi-même (FastMCP), louer une plateforme clé-en-main, ou auto-héberger un serveur souverain — avec tableau comparatif (effort, coût, contrôle, localisation des données). Plateformes vérifiées : Cloudflare (MCP distant D1/R2/Vectorize), Supabase (MCP officiel + OAuth2), Zapier MCP (8 000+ apps, palier sans frais plafonné ~300 appels/mois), Glama (registre 37 000+ serveurs + passerelle hébergée). Angle souveraineté/RGPD que les comparatifs anglophones évitent : OVHcloud/Scaleway pour héberger FastMCP en France. Retour terrain augmenter.pro : self-host de Firecrawl sur VPS souverain plutôt que le SaaS cloud (~19 $/mois) — le self-host n'est pas « moins cher », il est « différemment cher » (abonnement contre temps technique + souveraineté). Grille de décision build/louer/self-host, limite assumée (ne pas sur-investir pour des données non sensibles), et 4 pièges (fuite vers les US, lock-in, coût récurrent, endpoint exposé = surface d'attaque). MCP confié à l'Agentic AI Foundation/Linux Foundation le 2025-12-09, 97 M téléchargements SDK/mois. Publié le 2026-06-17.
@@ -168,11 +172,12 @@ Tous les articles du blog sont rédigés par Pierre Legrand, avec assistance d'o
 ## Pages
 
 - https://augmenter.pro — Accueil
+- https://augmenter.pro/augmenter-mon-entreprise — Augmenter mon entreprise : hub de ressources filtrées par secteur, douleur et objectif du dirigeant (articles, idées, prompts en TL;DR)
 - https://augmenter.pro/auteur/pierre-legrand — Pierre Legrand, consultant IA & transformation digitale (bio, expertise, missions)
 - https://augmenter.pro/audit-ia-pme — Audit IA pour PME (diagnostic 180° offert, cas d'usage prioritaires, feuille de route chiffrée) — national
 - https://augmenter.pro/strategie-ia-pme — Stratégie IA pour PME (diagnostic, accompagnement, financement)
 - https://augmenter.pro/approche — Approche, Prestations & Tarifs (méthode 360°, audits 180°/360°)
-- https://augmenter.pro/idees — Idées IA pour PME : 9 cas d'usage qui facturent (immobilier, courtage, BTP, notariat, commerce, outils PME) — avantages, points d'attention, ROI mesurable
+- https://augmenter.pro/idees — Idées IA pour PME : 15 cas d'usage qui facturent (immobilier, courtage, BTP, notariat, commerce, outils PME) — voicebot, scoring crédit, devis par photo, bot Telegram RAG, standard vocal à voix de marque, vision de chantier, base de connaissance interne, copilote cyber, pré-compta OCR — avantages, points d'attention, ROI mesurable
 - https://augmenter.pro/blog — Blog Articles & Tutos
 - https://augmenter.pro/contact — Contact & Audit offert
 - https://augmenter.pro/projets — Nos Projets & Réalisations IA

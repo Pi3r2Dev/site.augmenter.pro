@@ -80,9 +80,10 @@ Deux pages principales sont des **expériences scroll narrative** (Three.js shad
 |-------|------|-----------|
 | `/` | **Narrative** (6 chapitres) | Route group `src/app/(home)/` qui strip Header/Footer via son propre `layout.tsx`. Server `page.tsx` injecte `CreativeWork` JSON-LD + render `<HomeNarrative />` depuis [src/app/home-narrative/](src/app/home-narrative/) |
 | `/approche` | **Narrative** (9 chapitres) | [src/app/approche/layout.tsx](src/app/approche/layout.tsx) strip Header/Footer. `page.tsx` injecte `FAQPage` + `Service`/`OfferCatalog` JSON-LDs + render `<ApprocheNarrative />` depuis [src/app/approche/narrative/](src/app/approche/narrative/). Absorbe `/prestations` via redirect 308 (ancre `#prestations` à l'intérieur du Ch07 audits). |
-| `/blog` | Bento + Header/Footer globaux | `page.tsx` (metadata) + `blog-view.tsx` (`"use client"` avec data inline) |
+| `/blog` | Bento + Header/Footer globaux | `page.tsx` (metadata) + `blog-view.tsx` (`"use client"`, importe `ARTICLES` depuis le catalog `src/data/resources.ts`) |
 | `/blog/<slug>` | Article via `ArticleLayout` | Each slug has its own directory under [src/app/blog/](src/app/blog/) |
-| `/idees` | Bento + Header/Footer globaux | `page.tsx` + `idees-view.tsx` |
+| `/idees` | Bento + Header/Footer globaux | `page.tsx` + `idees-view.tsx` (importe `IDEAS` depuis le catalog) |
+| `/augmenter-mon-entreprise` | **Hub interactif** + Header/Footer globaux | Server `page.tsx` (metadata + `CollectionPage`/`ItemList` JSON-LD) + client `augmenter-view.tsx`. Sélecteur **3 axes** (secteur × douleur × objectif) qui filtre **toutes les ressources du catalog** (articles + idées + prompts) avec relâchement progressif, chaque ressource servie en **TL;DR**. Cf. [src/data/resources.ts](src/data/resources.ts). |
 | `/contact` | Form + Header/Footer | Server `page.tsx` + client `contact-form.tsx` |
 | `/prompts`, `/projets`, `/strategie-ia-pme`, `/integration-mcp`, `/audit-informatique-{yvelines,val-doise}`, `/auteur/pierre-legrand` | Pages classiques | Header/Footer globaux + le CTA widget en bas |
 | `/mentions-legales`, `/cgv`, `/politique-confidentialite` | Legal | Header/Footer globaux |
@@ -190,7 +191,9 @@ src/app/home-narrative/
   - `prompt-card.tsx` (/prompts)
   - `atelier-callout.tsx` — encart CTA mid-article vers la landing Atelier Claude Code (cf. ADR 0003)
   - _(Les composants legacy `approach.tsx`, `blog-preview.tsx`, `ideas.tsx`, `pricing.tsx` ont été supprimés le 2026-05-26 — code mort post-refonte bento/narrative.)_
-- [src/app/blog/blog-view.tsx](src/app/blog/blog-view.tsx) + [src/app/idees/idees-view.tsx](src/app/idees/idees-view.tsx) — pages bento client (data inline)
+- **[src/data/resources.ts](src/data/resources.ts) — catalog partagé = SOURCE DE VÉRITÉ** des tableaux `ARTICLES` (articles) et `IDEAS` (idées), chacun enrichi de `tldr` (verdict actionnable), `sectors` (taxonomie hub) et `pains` (douleurs adressées). Exporte aussi `SECTORS` / `PAINS` / `OBJECTIVES` (axes du hub), `IDEE_SECTORS` (filtre `/idees`), `promptToResource()` et `buildHubResources(prompts)`. ⚠️ **Un nouvel article ou une nouvelle idée s'ajoute ICI**, plus dans les vues. (Note d'archi : on importe uniquement les _types_ de `src/data/prompts.ts` dans ce module — pas la valeur `prompts`, dont le contenu volumineux ne doit pas être embarqué dans les bundles `/blog` et `/idees`.)
+- [src/app/blog/blog-view.tsx](src/app/blog/blog-view.tsx) + [src/app/idees/idees-view.tsx](src/app/idees/idees-view.tsx) — pages bento client qui **importent** `ARTICLES`/`IDEAS` depuis le catalog (plus de data inline)
+- [src/app/augmenter-mon-entreprise/augmenter-view.tsx](src/app/augmenter-mon-entreprise/augmenter-view.tsx) — hub client : sélecteur 3 axes (secteur × douleur × objectif) → `buildHubResources(prompts)` (articles + idées + prompts), filtrage à relâchement progressif (jamais d'écran vide), carte Audit 180° toujours présente, chaque ressource en TL;DR
 - [src/components/bento/](src/components/bento/) — Primitives bento (`BentoGrid`, `BentoCard`, `SectionHead`, `Pill`, `ArticleBentoCard`, `PullQuoteCard`, `MiniQuoteCard`) — **utilisées uniquement sur /blog et /idees** (les pages bento restantes)
 - [src/components/widgets/](src/components/widgets/) — Widgets animés :
   - `blobs.tsx` : `LiquidBlob`, `MeshAurora`, `CardShell`, `CornerArrow`, `PillTag` (SVG morphing)
@@ -326,7 +329,7 @@ Use `/create-article <sujet>` or follow this manual process:
 4. Pass `dateISO` (ISO 8601) et `dateModified` props à `ArticleLayout`
 5. Add image [public/images/blog/<slug>.webp](public/images/blog/) (WebP, 16:9, < 300 Ko) et passer `image="/images/blog/<slug>.webp"` prop
 6. Update [public/images/blog/INDEX.md](public/images/blog/INDEX.md) avec description image (type, dimensions, poids, contexte, alt text)
-7. Add article entry dans [src/app/blog/blog-view.tsx](src/app/blog/blog-view.tsx) tableau `ARTICLES` (en première position pour les plus récents)
+7. Add article entry dans le tableau `ARTICLES` du catalog [src/data/resources.ts](src/data/resources.ts) (en première position pour les plus récents) — **plus** dans `blog-view.tsx`, qui l'importe désormais. Renseigner les champs catalog : `tldr` (le verdict actionnable, lu en 10 s), `sectors` (un ou plusieurs `Sector` ; `"Tous"` = transversal) et `pains` (les `PainId` adressés) → c'est ce qui fait remonter l'article dans le hub `/augmenter-mon-entreprise`
 8. Add URL dans [public/sitemap.xml](public/sitemap.xml) avec `<lastmod>` ISO 8601
 9. Add article dans [public/news-sitemap.xml](public/news-sitemap.xml)
 10. Add article dans [public/llms.txt](public/llms.txt) section blog
@@ -336,11 +339,11 @@ Use `/create-article <sujet>` or follow this manual process:
 
 ## Key Constraints
 
-- **All page data is inline** — articles, testimonials, pricing, idées hardcodés
+- **Données hardcodées (pas de CMS)** — articles et idées centralisés dans le catalog [src/data/resources.ts](src/data/resources.ts) (`ARTICLES` / `IDEAS`) ; testimonials, pricing et prompts (`src/data/prompts.ts`) restent inline
 - **Client components** must use `"use client"` (required for framer-motion, gsap, lenis, three.js, interactive forms, mobile menu)
 - **Client components cannot export metadata** — si une page a besoin de `"use client"`, split : server `page.tsx` (metadata + JSON-LDs) + client component (UI). Voir `/contact`, `/(home)/page.tsx`, `/approche/page.tsx` comme exemples.
 - **Blog articles** : routes statiques directory-based (pas dynamiques `[slug]`), chaque article est `src/app/blog/<slug>/page.tsx`
-- **llms.txt, sitemap.xml et news-sitemap.xml doivent être mis à jour** quand on ajoute pages ou articles
+- **llms.txt, sitemap.xml et news-sitemap.xml doivent être mis à jour** quand on ajoute pages ou articles ; un article/idée s'ajoute au catalog [src/data/resources.ts](src/data/resources.ts) (avec `tldr`/`sectors`/`pains`), pas dans les vues
 - **JSON-LD structured data** ajouter sur toute page indexable. Sur les narrative pages, le JSON-LD vit dans le server `page.tsx`, le narrative component est rendu client-side en dessous.
 - **Dev server force webpack** (`next dev --webpack`) — voir Commands ci-dessus pour la raison
 - **Ne jamais utiliser des ancres** (`/route#section`) dans le footer ou le NavFixed — seuls les liens pages réels. Si une section n'a pas sa page, soit on consolide sous un parent, soit on la skip.
