@@ -18,6 +18,7 @@ import {
   type IdeaData,
 } from "@/components/widgets/idea-card";
 import type { Palette } from "@/components/widgets/palettes";
+import { ARTICLES, IDEAS as CATALOG_IDEAS } from "@/data/resources";
 
 const IDEAS: Array<IdeaData & { palette: Palette }> = [
   {
@@ -56,60 +57,11 @@ const IDEAS: Array<IdeaData & { palette: Palette }> = [
   },
 ];
 
-const FEATURED = {
-  slug: "veille-concurrentielle-ia-pme",
-  title: "Veille concurrentielle IA : guide pratique 2026",
-  excerpt:
-    "Automatisez votre veille avec l'IA : méthode en 5 étapes, outils testés et retour terrain pour PME.",
-  tags: ["Intelligence Artificielle", "PME"],
-  readTime: "8 min",
-  image: "/images/blog/veille-concurrentielle-ia-pme.webp",
-};
-
-const COMPACT_ARTICLES = [
-  {
-    slug: "nis2-pme-yvelines-val-doise",
-    title: "NIS2 & PME : guide pratique Yvelines / Val d'Oise",
-    tags: ["Cybersécurité", "PME"],
-    readTime: "10 min",
-    image: "/images/blog/nis2-pme-yvelines-val-doise.webp",
-  },
-  {
-    slug: "serveur-mcp-guide-pratique-pme",
-    title: "Serveur MCP : connecter l'IA à vos outils métier",
-    tags: ["Intelligence Artificielle", "Intégration"],
-    readTime: "8 min",
-    image: "/images/blog/serveur-mcp-guide-pratique-pme.webp",
-  },
-  {
-    slug: "cout-audit-informatique-yvelines",
-    title: "Combien coûte un audit informatique en Yvelines ?",
-    tags: ["Audit 360°", "PME"],
-    readTime: "8 min",
-    image: "/images/blog/cout-audit-informatique-yvelines.webp",
-  },
-  {
-    slug: "automatiser-emails-reseaux-sociaux-ia",
-    title: "Automatiser emails & réseaux sociaux : 10 h/sem gagnées",
-    tags: ["Intelligence Artificielle", "Productivité"],
-    readTime: "7 min",
-    image: "/images/blog/automatiser-emails-reseaux-sociaux-ia.webp",
-  },
-  {
-    slug: "ia-redefinit-vente-commerciale",
-    title: "Comment l'IA redéfinit la vente commerciale",
-    tags: ["Intelligence Artificielle", "Commercial"],
-    readTime: "3 min",
-    image: "/images/blog/ia-redefinit-vente-commerciale.webp",
-  },
-  {
-    slug: "5-signes-moderniser-informatique-pme",
-    title: "5 signes qu'il est temps de moderniser l'informatique",
-    tags: ["Audit 360°", "PME"],
-    readTime: "3 min",
-    image: "/images/blog/5-signes-moderniser-informatique-pme.webp",
-  },
-];
+// Articles mis en avant = dérivés du catalog (source de vérité, trié du plus
+// récent au plus ancien). Plus de liste hardcodée à maintenir : ajouter un
+// article dans src/data/resources.ts le fait remonter ici automatiquement.
+const FEATURED = ARTICLES[0];
+const COMPACT_ARTICLES = ARTICLES.slice(1, 7);
 
 export function Resources() {
   return (
@@ -247,7 +199,7 @@ export function Resources() {
           >
             <div>
               <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
-                12 articles · 15 idées
+                {ARTICLES.length} articles · {CATALOG_IDEAS.length} idées
               </span>
               <h3 className="mt-3 text-[1.1rem] font-semibold leading-[1.25] tracking-[-0.015em]">
                 Explorer toutes les ressources &amp; études de cas

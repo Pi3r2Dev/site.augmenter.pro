@@ -175,7 +175,7 @@ export function Convert() {
                   Contact direct
                 </span>
                 <div className="mt-2 text-[1rem] font-semibold tracking-tight text-white">
-                  legrand.work@gmail.com
+                  vite@augmenter.pro
                 </div>
                 <div className="mt-1 text-[0.75rem] text-white/55">
                   +33 6 79 11 97 74 · Jouy-le-Moutier (95)
@@ -188,7 +188,7 @@ export function Convert() {
                   variant="outline"
                   className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
                 >
-                  <a href="mailto:legrand.work@gmail.com">Écrire</a>
+                  <a href="mailto:vite@augmenter.pro">Écrire</a>
                 </Button>
                 <Button
                   asChild
