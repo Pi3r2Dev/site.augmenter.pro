@@ -37,9 +37,11 @@ export function middleware(request: NextRequest) {
   // (dont les bots) est assigné aléatoirement — pas de cloaking. /accueil-2
   // porte un canonical vers `/`, donc aucune des deux variantes ne crée de
   // duplicate dans l'index.
-  // Kill switch hPanel : AB_HOME_ENABLED=false désactive le split sans redeploy code.
+  // Split OPT-IN : désactivé par défaut depuis le retour de la home bento sur `/`
+  // (2026-06). Tout le monde voit `/` ; /accueil-2 reste testable via `?ab=b`.
+  // Réactiver un vrai split 50/50 : poser AB_HOME_ENABLED=true (hPanel, sans redeploy).
   if (
-    process.env.AB_HOME_ENABLED !== "false" &&
+    process.env.AB_HOME_ENABLED === "true" &&
     request.nextUrl.pathname === "/"
   ) {
     const cookie = request.cookies.get("ab_home")?.value;
