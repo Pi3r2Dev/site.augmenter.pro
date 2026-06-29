@@ -33,6 +33,7 @@ Si `$ARGUMENTS` est vide :
    | **Lexique** | Aucune occurrence de « gratuit » ? Pas de jargon corporate ? NAP `augmenter.PRO` uniforme ? §4 |
    | **E-E-A-T** | Exemple terrain ? Avis tranché ? Auteur identifié ? Données sourcées + nuance ? Estimer un score /20 via [eeat-grid.md](../templates/seo/eeat-grid.md). §5 |
    | **People-first** | Le lecteur peut-il **agir** après lecture ? Sujet dans le périmètre PME IA/digital/audit ? §6 |
+   | **Repères de lecture** | (articles `/blog` only) Les éléments-clés sont-ils balisés `<Memo>` (4-8, mix idea/num/link) pour le fil de mémoire ? Pas de TL;DR inline en doublon du `tldr` catalog ? Voir [article-primitives.md](../templates/seo/article-primitives.md). |
 
 3. **Pour chaque écart** : citer l'**extrait exact** (avec n° de ligne si fichier) + **pourquoi** ça viole la charte + **correction proposée** (1 phrase).
 
@@ -55,6 +56,7 @@ Si `$ARGUMENTS` est vide :
 | Lexique (gratuit/jargon/NAP) | … |
 | E-E-A-T | ⚠️ ~12/20 |
 | People-first | … |
+| Repères de lecture (Memo) | … |
 
 ### Écarts à corriger
 1. **[Lexique]** L. 42 : « …diagnostic gratuit… » → mot interdit (charte §4). Remplacer par « diagnostic offert ».

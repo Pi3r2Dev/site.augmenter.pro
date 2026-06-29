@@ -326,7 +326,7 @@ augmenter.pro est un site de conseil pour PME (domaine YMYL) — Google applique
 
 Use `/create-article <sujet>` or follow this manual process:
 
-1. Create [src/app/blog/<slug>/page.tsx](src/app/blog/) using `ArticleLayout` wrapper
+1. Create [src/app/blog/<slug>/page.tsx](src/app/blog/) using `ArticleLayout` wrapper — baliser le corps avec les **primitives de lecture** (`<Memo>` 4-8 pour le fil de mémoire, + `<Callout>`/`<PullQuote>`/`<KeyTakeaways>` depuis `@/components/article/*`) ; **pas de TL;DR inline** (le `tldr` du catalog s'affiche auto en tête ; TOC + barre de progression sont auto depuis les `<h2>`). Réf. [.claude/templates/seo/article-primitives.md](.claude/templates/seo/article-primitives.md)
 2. Export `const metadata = articleMetadata({ title, description, slug })` — helper [src/lib/article-metadata.ts](src/lib/article-metadata.ts) qui génère **openGraph + twitter + canonical** à partir d'une seule source (title/description SEO + slug). **Ne JAMAIS revenir à `metadata: Metadata` brut** sans `openGraph` : un article sans bloc `openGraph` hérite de la carte de partage générique du site (titre + image `og-augmenter-pro.jpg`) au lieu de la sienne. og:image pointe vers `/images/blog/og/<slug>.jpg`.
 3. Pass `slug="<slug>"` à `ArticleLayout` pour canonical URL JSON-LD
 4. Pass `dateISO` (ISO 8601) et `dateModified` props à `ArticleLayout`

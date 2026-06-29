@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Zap, Linkedin, Twitter, Github, Mail, Phone } from "lucide-react";
+import { Zap, Linkedin, Twitter, Github, Mail, Phone, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { sendGTMEvent } from "@next/third-parties/google";
@@ -72,6 +72,13 @@ const SOCIALS: SocialLink[] = [
   { href: "https://github.com/Pi3r2Dev", label: "GitHub", icon: Github, external: true },
   { href: "mailto:vite@augmenter.pro", label: "Email", icon: Mail, external: false },
   { href: "https://wa.me/33679119774", label: "WhatsApp", icon: Phone, external: true },
+  // Lien court "Demander un avis" du dashboard GBP → ouvre directement la fenêtre d'avis (1 clic).
+  {
+    href: "https://g.page/r/CWg20PXid2i2EBM/review",
+    label: "Avis Google",
+    icon: Star,
+    external: true,
+  },
 ];
 
 function ColumnBlock({ col, index }: { col: FooterColumn; index: number }) {
@@ -191,7 +198,9 @@ export function Footer() {
                   onClick={
                     s.label === "WhatsApp"
                       ? () => sendGTMEvent({ event: "whatsapp_click", location: "footer" })
-                      : undefined
+                      : s.label === "Avis Google"
+                        ? () => sendGTMEvent({ event: "gbp_click", location: "footer" })
+                        : undefined
                   }
                 >
                   <Icon className="h-4 w-4" />

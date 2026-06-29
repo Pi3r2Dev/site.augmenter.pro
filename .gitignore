@@ -55,3 +55,7 @@ Home.html
 /docs/CV_PL/
 /docs/IdeaBox/
 /docs/ClaudeDesign_handoff/design_handoff_hero_augmente/
+
+# Artefacts de dev jetables à la racine (previews GBP, snapshots) — jamais commités
+/gbp-*.png
+/snap-*.yml

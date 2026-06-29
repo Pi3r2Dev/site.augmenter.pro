@@ -1,11 +1,13 @@
 import { articleMetadata } from "@/lib/article-metadata";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/layout/article-layout";
+import { KeyTakeaways } from "@/components/article/key-takeaways";
+import { Memo } from "@/components/article/memo";
 
 export const metadata = articleMetadata({
   title: "Agent IA pour PME : c'est quoi et comment en créer un (2026)",
   description:
-    "Agent IA expliqué à un dirigeant de PME : définition sans jargon, 3 exemples concrets (BTP, immobilier, services) et la méthode pour créer votre premier agent.",
+    "Agent IA expliqué à un dirigeant de PME : définition sans jargon, 3 exemples concrets (BTP, immobilier, services) et la méthode pour créer votre premier agent.",
   slug: "agent-ia-dirigeant-pme",
 });
 
@@ -68,11 +70,8 @@ export default function Article() {
         image="/images/blog/agent-ia-dirigeant-pme.webp"
         slug="agent-ia-dirigeant-pme"
       >
-        {/* ===== TL;DR ===== */}
-        <div className="rounded-lg border border-primary/20 bg-primary/5 p-6 mb-8">
-          <h2 className="mt-0 text-lg font-bold">
-            TL;DR &mdash; Ce qu&apos;il faut retenir en 30 secondes
-          </h2>
+        {/* ===== Points clés ===== */}
+        <KeyTakeaways title="Ce qu'il faut retenir en 30 secondes">
           <ul>
             <li>
               Un <strong>agent IA</strong> est un programme qui utilise un
@@ -96,7 +95,7 @@ export default function Article() {
               technique reste nécessaire.
             </li>
           </ul>
-        </div>
+        </KeyTakeaways>
 
         <p className="text-sm text-muted-foreground">
           <em>Mise à jour : mai 2026.</em>
@@ -134,7 +133,10 @@ export default function Article() {
         </p>
         <p>
           La nuance tient en une phrase :{" "}
-          <strong>un chatbot répond, un agent agit</strong>. Quand vous posez
+          <Memo type="idea" label="Le chatbot répond, l'agent agit">
+            <strong>un chatbot répond, un agent agit</strong>
+          </Memo>
+          . Quand vous posez
           une question à ChatGPT, il vous renvoie un texte que vous devez
           ensuite utiliser vous-même. Un agent, lui, reçoit un objectif
           (&laquo;&nbsp;qualifie ce nouveau lead et crée sa fiche dans le

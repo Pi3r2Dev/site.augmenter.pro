@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { ArticleReadEvent } from "@/components/layout/article-read-event";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
+import { ReadingRail } from "@/components/article/reading-rail";
+import { TldrBox } from "@/components/article/tldr-box";
+import { AuthorSignoff } from "@/components/article/author-signoff";
+import { RelatedArticles } from "@/components/article/related-articles";
+import { getArticleBySlug, getRelatedArticles } from "@/data/resources";
 
 interface ArticleLayoutProps {
   title: string;
@@ -16,6 +19,8 @@ interface ArticleLayoutProps {
   dateModified?: string;
   image?: string;
   slug?: string;
+  /** Désactive le bloc TL;DR auto (pour un article ayant déjà un TL;DR inline). */
+  showTldr?: boolean;
   children: React.ReactNode;
 }
 
@@ -29,6 +34,7 @@ export function ArticleLayout({
   dateModified,
   image,
   slug,
+  showTldr = true,
   children,
 }: ArticleLayoutProps) {
   const articleJsonLd = {
@@ -69,82 +75,106 @@ export function ArticleLayout({
     },
   };
 
+  const tldr = slug ? getArticleBySlug(slug)?.tldr : undefined;
+  const related = slug ? getRelatedArticles(slug, 3) : [];
+  const shareUrl = slug ? `https://augmenter.pro/blog/${slug}` : "https://augmenter.pro/blog";
+
   return (
-    <div className="pt-16">
+    <div className="article-shell pt-16">
       {slug ? (
-        <ArticleReadEvent
-          slug={slug}
-          title={title}
-          readTime={readTime}
-        />
+        <ArticleReadEvent slug={slug} title={title} readTime={readTime} />
       ) : null}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <article className="py-16">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <Button asChild variant="ghost" size="sm" className="mb-8 gap-2">
-            <Link href="/blog">
-              <ArrowLeft className="h-4 w-4" />
-              Retour aux articles
-            </Link>
-          </Button>
 
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+      <ReadingRail bodyId="article-body" ctaHref="/contact" ctaLabel="Diagnostic" />
 
-          <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            {title}
-          </h1>
+      {/* En-tête éditorial — pas de byline (ligne « on parle du client, pas de nous ») */}
+      <header className="mx-auto max-w-3xl px-4 pt-10 sm:px-6">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-1.5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-[var(--ink-faint)] hover:text-[var(--rv-600)]"
+        >
+          <ArrowLeft className="size-4" />
+          Tous les articles
+        </Link>
 
-          <p className="mt-4 text-lg text-muted-foreground">{excerpt}</p>
-
-          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1">
-              <User className="h-4 w-4" />
-              <Link
-                href="/auteur/pierre-legrand"
-                className="font-medium text-foreground hover:underline"
-              >
-                Pierre Legrand
-              </Link>
-            </span>
-            <span className="flex items-center gap-1">
-              <Calendar className="h-4 w-4" />
-              {date}
-            </span>
-            <span className="flex items-center gap-1">
-              <Clock className="h-4 w-4" />
-              {readTime}
-            </span>
-          </div>
-
-          {image && (
-            <div className="relative mt-8 aspect-video overflow-hidden rounded-xl">
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 768px"
-                priority
-              />
-            </div>
-          )}
-
-          <div className="mt-12 space-y-8 text-base leading-relaxed text-foreground/90 [&_h2]:mt-12 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_li]:ml-4 [&_li]:list-disc [&_li]:text-muted-foreground [&_p]:text-muted-foreground [&_strong]:text-foreground [&_ul]:mt-3 [&_ul]:space-y-2">
-            {children}
-          </div>
+        <div className="article-eyebrow mt-8">
+          <span className="dot" />
+          {tags[0]}
+          <span className="sep">/</span>
+          <span className="muted">{readTime} de lecture</span>
         </div>
-      </article>
+
+        <h1 className="mt-4 font-display text-[clamp(2.4rem,5.2vw,3.7rem)] font-[560] leading-[1.04] tracking-[-0.02em] text-[var(--ink)]">
+          {title}
+        </h1>
+
+        <p className="mt-4 max-w-[42rem] text-[1.32rem] leading-[1.55] text-[var(--ink-soft)]">
+          {excerpt}
+        </p>
+
+        <p className="article-dateline mt-5 border-b border-[var(--hair)] pb-6">
+          Publié {date}
+          {dateModified && dateModified !== dateISO
+            ? ` · mis à jour ${formatDateFr(dateModified)}`
+            : ""}
+        </p>
+
+        {image && (
+          <div className="relative mt-9 aspect-video overflow-hidden rounded-2xl">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+          </div>
+        )}
+
+        {showTldr && tldr ? (
+          <div className="mt-9">
+            <TldrBox>{tldr}</TldrBox>
+          </div>
+        ) : null}
+
+        {/* Point de montage de l'accordéon TOC mobile (rempli par ReadingRail) */}
+        <div id="toc-mobile-mount" className="mt-8" />
+      </header>
+
+      {/* Corps + rail TOC desktop */}
+      <div className="article-grid mx-auto mt-14 max-w-[78rem] px-4 sm:px-6">
+        <div id="reading-rail-mount" className="reading-rail-col" />
+        <article id="article-body" className="prose-article [&_h2]:font-display">
+          {children}
+        </article>
+        <div aria-hidden />
+      </div>
+
+      {/* Pied éditorial */}
+      <div className="mx-auto mt-20 max-w-[52rem] px-4 sm:px-6">
+        <AuthorSignoff shareUrl={shareUrl} title={title} />
+        <div className="mt-14">
+          <RelatedArticles articles={related} />
+        </div>
+      </div>
 
       <CTA variant="blog" />
     </div>
   );
+}
+
+/** Reformate une date ISO (YYYY-MM-DD) en français court : « 27 juin 2026 ». */
+function formatDateFr(iso: string): string {
+  const d = new Date(iso.includes("T") ? iso : `${iso}T00:00:00`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return new Intl.DateTimeFormat("fr-FR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(d);
 }

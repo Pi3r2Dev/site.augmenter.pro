@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Fraunces } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
@@ -17,6 +17,13 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   weight: ["400", "500"],
+});
+
+/** Fraunces — serif optique variable, réservé aux titres/pull-quotes des articles (voix éditoriale). */
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 /** Image Open Graph partagée (Facebook, WhatsApp, X, LinkedIn). JPEG = compat max plugins + crawlers. */
@@ -155,6 +162,7 @@ const jsonLd = {
         "https://www.linkedin.com/in/legrand-pierre/",
         "https://x.com/Pi3r2Dev",
         "https://github.com/Pi3r2Dev",
+        "https://www.google.com/maps?cid=13143887329151170152",
       ],
     },
     {
@@ -254,7 +262,7 @@ export default function RootLayout({
         />
       </head>
       {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} font-sans antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

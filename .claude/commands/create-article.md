@@ -145,12 +145,24 @@ export default function Article() {
 - **Ton** : Expert pragmatique, orienté résultats, pas de jargon inutile
 - **Longueur** : 1200-2000 mots (adapté au sujet)
 - **Structure** : H2 pour les sections principales, H3 pour les sous-sections
-- **Balises JSX** : `<h2>`, `<h3>`, `<p>`, `<ul>`, `<li>`, `<strong>`, `<em>`
+- **Balises JSX** : `<h2>`, `<h3>`, `<p>`, `<ul>`, `<li>`, `<strong>`, `<em>` + les **primitives de lecture** `<Memo>` / `<Callout>` / `<PullQuote>` / `<KeyTakeaways>` (cf. sous-section ci-dessous)
 - **Échappement** : `&apos;` pour les apostrophes, `&amp;` pour les &, `&quot;` pour les guillemets dans le JSX
 - **Liens internes** : Minimum 3 liens via `<Link href="/...">texte d&apos;ancrage</Link>` (import `next/link`)
 - **CTA intégré** : Au moins un appel à l'action dans le corps (lien vers `/contact` ou `/prestations`)
 - **Données/exemples** : Inclure des chiffres, exemples concrets, études de cas (localiser si possible : "une PME à Versailles (78)")
 - **Pas de conclusion bateau** : Terminer par une ouverture, un insight actionnable ou un CTA
+
+### Primitives de lecture (fil de mémoire & repères) — OBLIGATOIRE
+
+`ArticleLayout` fournit des primitives à poser dans le corps qui alimentent le **fil de mémoire** (signature interactive : les éléments-clés balisés décollent vers un bandeau sticky au scroll) et rythment la lecture.
+
+**Référence complète** : [`.claude/templates/seo/article-primitives.md`](.claude/templates/seo/article-primitives.md)
+
+À retenir en rédigeant :
+- **Poser 4 à 8 `<Memo type="idea|num|link" label="…">…</Memo>`** sur les éléments vraiment mémorables (chiffre-choc, idée-pivot, lien-outil) — **pas tous les `<strong>`**, sinon le fil devient du bruit. Import : `@/components/article/memo`.
+- Utiliser `<Callout>` (encadré « à retenir »), `<PullQuote>` (citation de rythme Fraunces) et `<KeyTakeaways>` (boîte points-clés) là où ils servent la lecture.
+- **Ne PLUS écrire d'encadré TL;DR inline** : le `tldr` du catalog (Étape 5) s'affiche automatiquement en tête d'article. Un ancien TL;DR à puces → le convertir en `<KeyTakeaways>`.
+- TOC, scroll-spy et barre de progression sont **auto** (générés depuis les `<h2>`) — soigner les `<h2>`, ce sont les entrées du sommaire.
 
 ### Qualité de contenu (E-E-A-T)
 
@@ -322,6 +334,7 @@ Vérifie et affiche un rapport :
 - [ ] Image hero générée (Gemini), convertie en WebP, placée dans `public/images/blog/<slug>.webp`
 - [ ] Prop `image` passé à `ArticleLayout`
 - [ ] `public/images/blog/INDEX.md` mis à jour avec description de l'image
+- [ ] **Primitives de lecture** : 4-8 `<Memo>` posés (mix idea/num/link, `label` courts), **aucun TL;DR inline** (le `tldr` catalog s'affiche auto), `<Callout>`/`<PullQuote>`/`<KeyTakeaways>` si utiles — cf. [`article-primitives.md`](.claude/templates/seo/article-primitives.md)
 - [ ] Article ajouté dans `src/data/resources.ts` (tableau `ARTICLES`, première position) avec `tldr` + `sectors` + `pains` renseignés
 - [ ] URL ajoutée dans `sitemap.xml`
 - [ ] Article ajouté dans `llms.txt`

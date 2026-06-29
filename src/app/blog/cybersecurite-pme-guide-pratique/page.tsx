@@ -1,5 +1,6 @@
 import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
+import { Memo } from "@/components/article/memo";
 import Link from "next/link";
 
 export const metadata = articleMetadata({
@@ -86,9 +87,12 @@ export default function Article() {
       </p>
       <p>
         Bonne nouvelle : il n&apos;y a là <strong>rien de sorcier</strong>.
-        Selon l&apos;ANSSI, <strong>93 % des incidents</strong> qu&apos;elle a
-        analysés auraient pu être évités avec les seules mesures d&apos;hygiène
-        de base. Pas un pare-feu à 50 000 €, pas un consultant à demeure : des
+        Selon l&apos;ANSSI,{" "}
+        <Memo type="num" label="93 % des incidents évitables">
+          <strong>93 % des incidents</strong>
+        </Memo>{" "}
+        qu&apos;elle a analysés auraient pu être évités avec les seules mesures
+        d&apos;hygiène de base. Pas un pare-feu à 50 000 €, pas un consultant à demeure : des
         habitudes. Ce guide vous donne ces habitudes, dans l&apos;ordre, avec ce
         qu&apos;il faut faire <strong>et ne pas faire</strong>. À la fin, vous
         aurez un plan d&apos;action que vous pourrez lancer cette semaine.
@@ -273,8 +277,11 @@ export default function Article() {
         étapes — ajoute un second facteur au mot de passe : un code temporaire,
         une notification sur votre téléphone, une clé physique. Même si un pirate
         a volé votre mot de passe, il est bloqué sans ce second facteur.{" "}
-        Microsoft estime que la MFA <strong>bloque plus de 99 % des piratages
-        de compte</strong>, et que <strong>99,9 % des comptes compromis</strong>{" "}
+        Microsoft estime que la MFA{" "}
+        <Memo type="num" label="MFA : bloque 99 % des piratages">
+          <strong>bloque plus de 99 % des piratages de compte</strong>
+        </Memo>
+        , et que <strong>99,9 % des comptes compromis</strong>{" "}
         n&apos;avaient pas de MFA activée. Peu de mesures affichent un tel
         rapport entre l&apos;effort (une heure) et le résultat.
       </p>

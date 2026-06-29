@@ -1,5 +1,8 @@
 import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
+import { Memo } from "@/components/article/memo";
+import { Callout } from "@/components/article/callout";
+import { PullQuote } from "@/components/article/pull-quote";
 import Link from "next/link";
 
 export const metadata = articleMetadata({
@@ -88,9 +91,16 @@ export default function Article() {
         estimations convergent entre 59 000 € et plusieurs centaines de milliers
         d&apos;euros selon la durée d&apos;interruption. Face à ce constat,
         l&apos;Union européenne a adopté la{" "}
-        <strong>directive NIS2</strong> — qui multiplie par 30 le nombre
-        d&apos;organisations soumises à des obligations de cybersécurité en
-        France : de 300 entités sous NIS1 à <strong>plus de 15 000</strong>.
+        <Memo type="idea" label="Directive NIS2">
+          <strong>directive NIS2</strong>
+        </Memo>{" "}
+        — qui{" "}
+        <Memo type="num" label="×30 entités régulées">
+          multiplie par 30
+        </Memo>{" "}
+        le nombre d&apos;organisations soumises à des obligations de
+        cybersécurité en France : de 300 entités sous NIS1 à{" "}
+        <strong>plus de 15 000</strong>.
       </p>
       <p>
         Si vous dirigez une PME en <strong>Yvelines (78)</strong> ou en{" "}
@@ -111,17 +121,37 @@ export default function Article() {
       <p>
         La directive NIS1 (2016) ne concernait que les grands opérateurs
         d&apos;infrastructures critiques — environ 300 entités en France.{" "}
-        <strong>NIS2 élargit le périmètre à 18 secteurs</strong> et abaisse les
-        seuils : toute entreprise de plus de 50 salariés ou réalisant plus de
-        10 M€ de CA dans un secteur concerné devient une{" "}
+        <strong>
+          NIS2 élargit le périmètre à{" "}
+          <Memo type="num" label="18 secteurs concernés">
+            18 secteurs
+          </Memo>
+        </strong>{" "}
+        et abaisse les seuils : toute entreprise de plus de{" "}
+        <Memo type="num" label="Seuil : 50 sal. / 10 M€">
+          50 salariés ou réalisant plus de 10 M€ de CA
+        </Memo>{" "}
+        dans un secteur concerné devient une{" "}
         <strong>entité régulée</strong>. Et même en dessous de ces seuils,
         l&apos;obligation peut être indirecte — j&apos;y reviens plus bas, car
         c&apos;est l&apos;angle le plus sous-estimé.
       </p>
 
+      <Callout>
+        <p>
+          <strong>À retenir.</strong> L&apos;angle le plus sous-estimé
+          n&apos;est pas la taille de votre entreprise, mais votre place dans la
+          chaîne d&apos;approvisionnement d&apos;un client régulé.
+        </p>
+      </Callout>
+
       <h3>La Loi Résilience : où en est la France ? (point février 2026)</h3>
       <p>
-        Soyons transparents : <strong>la France est en retard</strong>.
+        Soyons transparents :{" "}
+        <Memo type="idea" label="La France est en retard">
+          <strong>la France est en retard</strong>
+        </Memo>
+        .
         L&apos;échéance européenne de transposition était le 17 octobre 2024.
         Le projet de loi (Loi Résilience) a été adopté par le Sénat en mars 2025
         et en commission à l&apos;Assemblée nationale en septembre 2025 — à
@@ -134,9 +164,13 @@ export default function Article() {
         européenne est applicable dans ses principes depuis octobre 2024.
         Le pré-enregistrement ANSSI est ouvert depuis novembre 2025. Et
         surtout : les grands donneurs d&apos;ordres imposent <em>déjà</em> des
-        exigences NIS2 à leurs sous-traitants. Si vous attendez la
-        promulgation de la loi pour agir, vous serez en retard.
+        exigences NIS2 à leurs sous-traitants.
       </p>
+
+      <PullQuote>
+        Si vous attendez la promulgation de la loi pour agir, vous serez en
+        retard sur vos propres clients.
+      </PullQuote>
 
       <h2>Votre PME est-elle concernée ? Auto-diagnostic</h2>
 
@@ -157,13 +191,15 @@ export default function Article() {
       </ul>
       <p>
         <strong>Outil officiel</strong> : le{" "}
-        <a
-          href="https://monespacenis2.cyber.gouv.fr/simulateur"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          simulateur MonEspaceNIS2 de l&apos;ANSSI
-        </a>{" "}
+        <Memo type="link" label="Simulateur ANSSI">
+          <a
+            href="https://monespacenis2.cyber.gouv.fr/simulateur"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            simulateur MonEspaceNIS2 de l&apos;ANSSI
+          </a>
+        </Memo>{" "}
         vous permet de vérifier votre éligibilité en 5 à 10 minutes.
       </p>
 

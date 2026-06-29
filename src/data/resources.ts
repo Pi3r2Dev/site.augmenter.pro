@@ -751,3 +751,37 @@ export function buildHubResources(prompts: Prompt[]): HubResource[] {
     ...prompts.map(promptToResource),
   ];
 }
+
+// ─── Lookup & articles liés (refonte lecture article) ──────────────────────
+
+/** Retrouve une entrée article du catalog par son slug. */
+export function getArticleBySlug(slug: string): CatalogArticle | undefined {
+  return ARTICLES.find((a) => a.slug === slug);
+}
+
+/**
+ * Articles liés à `slug`, classés par proximité éditoriale.
+ * Score : douleur commune +4, secteur exact commun +3, secteur transversal "Tous" +1.
+ * Même barème que le scoring du hub (augmenter-view.tsx).
+ */
+export function getRelatedArticles(slug: string, n = 3): CatalogArticle[] {
+  const source = getArticleBySlug(slug);
+  if (!source) return [];
+
+  const sourceSectors = new Set(source.sectors);
+  const sourcePains = new Set(source.pains);
+
+  return ARTICLES.filter((a) => a.slug !== slug)
+    .map((a) => {
+      let score = 0;
+      for (const p of a.pains) if (sourcePains.has(p)) score += 4;
+      for (const s of a.sectors) {
+        if (s === "Tous") score += 1;
+        else if (sourceSectors.has(s)) score += 3;
+      }
+      return { article: a, score };
+    })
+    .sort((x, y) => y.score - x.score)
+    .slice(0, n)
+    .map((x) => x.article);
+}
