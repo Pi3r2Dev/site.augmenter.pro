@@ -605,12 +605,19 @@ export default function IntegrationMCPPage() {
               <strong className="text-foreground">Sécurité &amp; RGPD :</strong>{" "}
               Toutes nos intégrations respectent le RGPD. Serveurs hébergeables
               en France, permissions granulaires, chiffrement TLS, et
-              traçabilité complète des actions IA.{" "}
+              traçabilité complète des actions IA. Le choix structurant, c&apos;est{" "}
+              <Link
+                href="/blog/serveur-mcp-heberge-pme"
+                className="text-primary underline underline-offset-4 hover:text-primary/80"
+              >
+                où vivent vos données — coder, louer ou héberger soi-même
+              </Link>
+              {" "}; pour le reste,{" "}
               <Link
                 href="/blog/serveur-mcp-guide-pratique-pme"
                 className="text-primary underline underline-offset-4 hover:text-primary/80"
               >
-                En savoir plus sur MCP et la sécurité
+                MCP et la sécurité
               </Link>
               .
             </p>

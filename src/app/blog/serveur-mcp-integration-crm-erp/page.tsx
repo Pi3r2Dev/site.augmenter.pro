@@ -250,7 +250,11 @@ export default function Article() {
           <strong>Données très sensibles sans cadre juridique :</strong> Si vous
           traitez des données de santé, financières, ou très réglementées et que
           vous n&apos;avez pas validé le cadre RGPD, ne connectez pas d&apos;IA
-          à ces données.
+          à ces données. Le premier arbitrage est de savoir{" "}
+          <Link href="/blog/serveur-mcp-heberge-pme">
+            où héberger votre serveur MCP — le coder, le louer ou l&apos;auto-héberger
+          </Link>{" "}
+          selon la sensibilité de vos données.
         </li>
         <li>
           <strong>Équipe réfractaire au changement :</strong> L&apos;outil le

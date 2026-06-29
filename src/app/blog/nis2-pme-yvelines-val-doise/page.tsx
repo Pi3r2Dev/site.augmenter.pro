@@ -34,7 +34,7 @@ const faqJsonLd = {
       name: "Combien coûte la mise en conformité NIS2 pour une PME ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Un audit de cybersécurité initial coûte entre 2 000 et 10 000 € HT pour une PME standard. La mise en conformité complète (technique + gouvernance) peut atteindre 7 000 à 20 000 €. C'est à comparer au coût moyen d'une cyberattaque : 14 720 à 59 000 €, et 60% des PME victimes ferment dans les 18 mois.",
+        text: "Un audit de cybersécurité initial coûte entre 2 000 et 10 000 € HT pour une PME standard. La mise en conformité complète (technique + gouvernance) peut atteindre 7 000 à 20 000 €. C'est à comparer au coût moyen d'une cyberattaque : 14 720 à 59 000 € HT, et bien davantage en cas d'interruption prolongée de l'activité.",
       },
     },
     {
@@ -84,8 +84,10 @@ export default function Article() {
 
       <p>
         <strong>77% des cyberattaques en France ciblent les TPE-PME</strong>{" "}
-        (Cybermalveillance.gouv.fr, 2025). Et 60% des PME victimes ferment dans
-        les 18 mois. Face à ce constat, l&apos;Union européenne a adopté la{" "}
+        (Cybermalveillance.gouv.fr, 2025). Et la facture est lourde : les
+        estimations convergent entre 59 000 € et plusieurs centaines de milliers
+        d&apos;euros selon la durée d&apos;interruption. Face à ce constat,
+        l&apos;Union européenne a adopté la{" "}
         <strong>directive NIS2</strong> — qui multiplie par 30 le nombre
         d&apos;organisations soumises à des obligations de cybersécurité en
         France : de 300 entités sous NIS1 à <strong>plus de 15 000</strong>.
@@ -664,8 +666,8 @@ export default function Article() {
       <p>
         Audit initial : 2 000 à 10 000 € HT. Mise en conformité complète :
         7 000 à 20 000 €. À comparer avec le coût moyen d&apos;une
-        cyberattaque (14 720 à 59 000 €) et le taux de faillite post-attaque
-        (60% dans les 18 mois). L&apos;investissement est une assurance.
+        cyberattaque (14 720 à 59 000 €, et bien davantage en cas
+        d&apos;interruption prolongée). L&apos;investissement est une assurance.
       </p>
 
       <h3>Quelles sont les sanctions NIS2 pour les dirigeants ?</h3>

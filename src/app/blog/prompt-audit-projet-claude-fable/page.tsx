@@ -5,9 +5,9 @@ import { AtelierCallout } from "@/components/sections/atelier-callout";
 import { PromptCard } from "@/components/sections/prompt-card";
 
 export const metadata = articleMetadata({
-  title: "Claude Fable : le Prompt d'Audit Complet de Votre Projet",
+  title: "Auditer son logiciel métier avec l'IA : le guide PME",
   description:
-    "Le prompt d'audit en 4 phases pour Claude Fable 5, traduit et amélioré en français. Cartographie, failles, stratégie, plan d'action — copier-coller inclus.",
+    "Votre logiciel vieillit en silence. Un audit IA vérifiable, fichier par fichier, pour décider en connaissance de cause et challenger un devis de refonte. Prompt français inclus.",
   slug: "prompt-audit-projet-claude-fable",
 });
 
@@ -87,7 +87,7 @@ export default function Article() {
         readTime="11 min"
         date="10 juin 2026"
         dateISO="2026-06-10"
-        dateModified="2026-06-10"
+        dateModified="2026-06-29"
         image="/images/blog/prompt-audit-projet-claude-fable.webp"
         slug="prompt-audit-projet-claude-fable"
       >
@@ -206,352 +206,65 @@ export default function Article() {
         </p>
 
         {/* ===== H2 : le prompt ===== */}
-        <h2>Le prompt d&apos;audit complet en français, à copier-coller</h2>
+        <h2>Le prompt d&apos;audit, prêt à l&apos;emploi</h2>
         <p>
-          Le prompt ci-dessous s&apos;utilise tel quel&nbsp;: ouvrez une
-          session Claude Code à la racine de votre projet et collez-le comme
-          premier message. Il circule dans la communauté anglophone sous
-          plusieurs variantes &mdash; celle-ci est notre traduction
-          française, retravaillée et adaptée à Fable 5 (les améliorations
-          sont détaillées juste après).
+          Le prompt complet &mdash; les 4 phases, les règles, le format du
+          livrable &mdash; est dans la carte ci-dessous&nbsp;: un clic pour le
+          copier, un clic pour télécharger le <code>.md</code>. C&apos;est
+          notre traduction française, retravaillée et adaptée à Fable 5 (les
+          améliorations sont détaillées plus bas). On le garde en{" "}
+          <strong>une seule version de référence</strong> dans la{" "}
+          <Link href="/prompts">bibliothèque de prompts IA</Link> &mdash; vous
+          le réutiliserez sur chaque projet, chaque trimestre.
         </p>
 
         <PromptCard slug="audit-projet-claude-fable" />
 
-        <div className="rounded-xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-amber-500/5 p-6 my-8 shadow-sm">
-          <div className="mb-4 flex items-center justify-between gap-4">
-            <p className="mb-0 text-sm font-semibold text-primary">
-              &#128203; Prompt &mdash; Audit complet de projet avec Claude
-              Fable 5
-            </p>
-            <a
-              href="/downloads/prompt-audit-projet-claude-fable.md"
-              download
-              className="shrink-0 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              Télécharger le .md &rarr;
-            </a>
-          </div>
-
-          <div className="rounded-lg bg-background/80 border border-border/40 p-5 text-[0.95rem]">
-            <p>
-              <strong>
-                Tu es un ingénieur logiciel principal de classe mondiale et
-                un auditeur technique.
-              </strong>{" "}
-              Ta mission&nbsp;: analyser ce dépôt en profondeur, produire un
-              audit honnête et livrer un plan d&apos;amélioration priorisé
-              et actionnable. Travaille dans les quatre phases ci-dessous,
-              dans l&apos;ordre. N&apos;anticipe pas sur une phase suivante.
-            </p>
-            <p>
-              Ancre chaque affirmation dans les fichiers réels&nbsp;: cite
-              les chemins de fichiers et les numéros de ligne. Si tu ne peux
-              pas vérifier quelque chose, dis-le explicitement plutôt que de
-              deviner.
-            </p>
-            <p>
-              Réponds intégralement en français. Le code, les identifiants
-              et les chemins de fichiers restent tels quels.
-            </p>
-            <p>
-              Si ton environnement permet de lancer des sous-agents ou des
-              tâches parallèles, utilise-les pour accélérer la Phase 1
-              (exploration) &mdash; jamais pour rédiger les conclusions à ta
-              place.
-            </p>
-
-            <p>
-              <strong>
-                Phase 1 &mdash; Découverte &amp; cartographie (lire avant de
-                juger)
-              </strong>
-            </p>
-            <p>
-              Explore le dépôt systématiquement avant de te forger la
-              moindre opinion&nbsp;:
-            </p>
-            <ul>
-              <li>
-                Cartographie l&apos;arborescence et identifie le type de
-                projet, le(s) langage(s), les frameworks et les cibles
-                d&apos;exécution.
-              </li>
-              <li>
-                Identifie les points d&apos;entrée, les modules c&oelig;ur
-                et le flux principal de données et de contrôle à travers le
-                système.
-              </li>
-              <li>
-                Lis les manifestes de paquets, les lockfiles, la
-                configuration de build, la configuration CI, les fichiers
-                d&apos;environnement/config et toute documentation (README,
-                CONTRIBUTING, ADRs).
-              </li>
-              <li>
-                Détermine à quoi sert le projet&nbsp;: son objectif, ses
-                utilisateurs visés et sa maturité apparente (prototype,
-                outil interne, service en production, bibliothèque).
-              </li>
-              <li>
-                Note les conventions déjà en place (nommage, frontières de
-                modules, patterns de gestion d&apos;erreurs, style de tests)
-                pour que tes recommandations s&apos;inscrivent dans la
-                culture existante au lieu de la combattre.
-              </li>
-              <li>
-                Délimite le périmètre&nbsp;: exclus les dossiers générés ou
-                vendorés (build, node_modules, dist&hellip;) et dis lesquels
-                tu as exclus.
-              </li>
-            </ul>
-            <p>
-              Livrable de cette phase&nbsp;: une &laquo;&nbsp;Carte du
-              dépôt&nbsp;&raquo; concise &mdash; objectif, stack, croquis
-              d&apos;architecture, répertoires clés avec une description
-              d&apos;une ligne, et tout ce qui t&apos;a surpris.
-            </p>
-
-            <p>
-              <strong>
-                Phase 2 &mdash; Audit (fondé sur les preuves, sévérité notée)
-              </strong>
-            </p>
-            <p>
-              Audite chacune des dimensions ci-dessous. Pour chaque constat,
-              consigne&nbsp;: (a) ce que tu as trouvé, (b) où
-              (fichier:ligne), (c) pourquoi c&apos;est important &mdash;
-              conséquence concrète, pas principe vague, (d) la
-              sévérité&nbsp;: Critique / Élevée / Moyenne / Faible.
-            </p>
-            <ul>
-              <li>
-                <strong>Architecture &amp; conception</strong>&nbsp;:
-                frontières de modules, couplage/cohésion, dépendances
-                circulaires, abstractions qui fuient, fichiers ou objets
-                fourre-tout, violations de couches, goulots de scalabilité.
-              </li>
-              <li>
-                <strong>Qualité du code</strong>&nbsp;: duplication, code
-                mort, points chauds de complexité (fonctions les plus
-                longues ou les plus ramifiées), patterns incohérents,
-                lacunes de gestion d&apos;erreurs (exceptions avalées, cas
-                limites manquants), trous de sûreté de typage.
-              </li>
-              <li>
-                <strong>Sécurité</strong>&nbsp;: secrets ou identifiants en
-                dur, risques d&apos;injection, désérialisation non sûre,
-                validation d&apos;entrées manquante, faiblesses
-                d&apos;authentification/autorisation, dépendances obsolètes
-                avec CVE connues, configurations trop permissives.
-              </li>
-              <li>
-                <strong>Tests</strong>&nbsp;: trous de couverture (surtout
-                autour de la logique métier c&oelig;ur), qualité des tests
-                (testent-ils un comportement ou seulement
-                l&apos;exécution&nbsp;?), types de tests manquants
-                (unitaires/intégration/e2e), patterns instables, code
-                intestable.
-              </li>
-              <li>
-                <strong>Performance</strong>&nbsp;: requêtes N+1,
-                allocations ou copies inutiles, appels bloquants dans des
-                chemins asynchrones, cache ou indexation manquants,
-                croissance non bornée (mémoire, fichiers, files
-                d&apos;attente).
-              </li>
-              <li>
-                <strong>Dépendances</strong>&nbsp;: paquets obsolètes, non
-                maintenus, dupliqués ou inutilement lourds&nbsp;; risques de
-                licence&nbsp;; hygiène du lockfile.
-              </li>
-              <li>
-                <strong>DevEx &amp; opérations</strong>&nbsp;: friction de
-                build et d&apos;installation, lacunes CI/CD, absence de
-                lint/format imposés, qualité des logs et de
-                l&apos;observabilité, remontée d&apos;erreurs, histoire du
-                déploiement.
-              </li>
-              <li>
-                <strong>Documentation</strong>&nbsp;: exactitude du README,
-                parcours d&apos;onboarding, comportements critiques non
-                documentés, docs périmées qui contredisent le code.
-              </li>
-            </ul>
-            <p>Règles de cette phase&nbsp;:</p>
-            <ul>
-              <li>
-                Préfère 15 constats à haute confiance à 50 constats
-                spéculatifs.
-              </li>
-              <li>
-                Distingue les faits (&laquo;&nbsp;cette fonction n&apos;a
-                aucune gestion d&apos;erreur&nbsp;:
-                src/api/client.ts:142&nbsp;&raquo;) des jugements
-                (&laquo;&nbsp;les responsabilités de ce module semblent
-                floues&nbsp;&raquo;) et étiquette chacun.
-              </li>
-              <li>
-                Liste aussi ce que le dépôt fait bien&nbsp;: les forces
-                comptent pour décider quoi préserver.
-              </li>
-              <li>
-                N&apos;édulcore rien&nbsp;: signale les parties les plus
-                laides qui exigent la priorité absolue.
-              </li>
-            </ul>
-            <p>
-              Livrable de cette phase&nbsp;: un &laquo;&nbsp;Rapport
-              d&apos;audit&nbsp;&raquo; &mdash; constats groupés par
-              dimension, triés par sévérité, plus une section Forces.
-            </p>
-
-            <p>
-              <strong>Phase 3 &mdash; Stratégie d&apos;amélioration</strong>
-            </p>
-            <p>Synthétise l&apos;audit en stratégie&nbsp;:</p>
-            <ul>
-              <li>
-                Identifie les 3 à 5 thèmes qui expliquent l&apos;essentiel
-                des constats (ex.&nbsp;: &laquo;&nbsp;aucune frontière
-                imposée entre les couches&nbsp;&raquo;, &laquo;&nbsp;la
-                gestion d&apos;erreurs est artisanale&nbsp;&raquo;).
-              </li>
-              <li>
-                Pour chaque thème, propose un état cible et le principe qui
-                le sous-tend.
-              </li>
-              <li>
-                Énonce des arbitrages explicites&nbsp;: ce que tu
-                recommandes de NE PAS corriger et pourquoi (effort vs gain,
-                risque, maturité du projet).
-              </li>
-              <li>
-                Définis à quoi ressemble &laquo;&nbsp;terminé&nbsp;&raquo;
-                &mdash; des signaux mesurables (ex.&nbsp;: &laquo;&nbsp;la
-                CI échoue sur les erreurs de lint&nbsp;&raquo;,
-                &laquo;&nbsp;couverture de tests du module c&oelig;ur &ge;
-                80&nbsp;%&nbsp;&raquo;, &laquo;&nbsp;zéro constat
-                Critique&nbsp;&raquo;).
-              </li>
-            </ul>
-
-            <p>
-              <strong>Phase 4 &mdash; Plan de tâches détaillé</strong>
-            </p>
-            <p>
-              Convertis la stratégie en plan d&apos;exécution. Découpe le
-              travail en tâches discrètes. Chaque tâche doit inclure&nbsp;:
-            </p>
-            <ul>
-              <li>Titre et description en un paragraphe</li>
-              <li>Fichiers et zones affectés</li>
-              <li>
-                Critères d&apos;acceptation (comment on vérifie que
-                c&apos;est fait)
-              </li>
-              <li>
-                Estimation d&apos;effort (S = moins de 2&nbsp;h, M =
-                demi-journée, L = 1 à 2 jours, XL = à re-découper)
-              </li>
-              <li>
-                Risque du changement lui-même (peut-il casser quelque
-                chose&nbsp;?)
-              </li>
-              <li>Dépendances vers d&apos;autres tâches</li>
-            </ul>
-            <p>Ordonne les tâches en jalons&nbsp;:</p>
-            <ul>
-              <li>
-                Jalon 0 &mdash; Filet de sécurité&nbsp;: tout ce qui est
-                nécessaire avant de refactoriser sereinement (tests autour
-                des chemins critiques, garde-fous CI, sauvegardes).
-              </li>
-              <li>
-                Jalon 1 &mdash; Correctifs critiques&nbsp;: problèmes de
-                sécurité et de justesse.
-              </li>
-              <li>
-                Jalon 2 &mdash; Améliorations à fort levier&nbsp;:
-                changements qui facilitent tout le travail futur.
-              </li>
-              <li>
-                Jalon 3 &mdash; Qualité &amp; finitions&nbsp;: le reste des
-                éléments Moyens/Faibles qui valent l&apos;effort.
-              </li>
-            </ul>
-            <p>
-              Signale séparément les victoires rapides (fort impact, effort
-              S) pour qu&apos;elles soient traitées immédiatement. Pour les
-              3 tâches prioritaires, inclus une esquisse
-              d&apos;implémentation&nbsp;: approche, étapes clés, pièges.
-            </p>
-
-            <p>
-              <strong>Format du livrable final</strong>
-            </p>
-            <p>Produis un document unique avec ces sections&nbsp;:</p>
-            <ul>
-              <li>
-                Résumé exécutif (10 phrases maximum&nbsp;: note de santé
-                globale A à F justifiée, top 3 risques, top 3 opportunités)
-              </li>
-              <li>Carte du dépôt</li>
-              <li>Rapport d&apos;audit</li>
-              <li>Stratégie d&apos;amélioration</li>
-              <li>
-                Plan de tâches (jalons + tableau des tâches + victoires
-                rapides)
-              </li>
-              <li>
-                Questions ouvertes&nbsp;: tout ce qu&apos;il te faut
-                d&apos;un humain pour trancher (intention produit, candidats
-                à la dépréciation, objectifs de performance)
-              </li>
-            </ul>
-            <p>
-              Enregistre ce document dans un fichier AUDIT-&lt;AAAA-MM-JJ&gt;.md
-              à la racine du dépôt &mdash; c&apos;est la seule écriture de
-              fichier autorisée pendant toute la mission.
-            </p>
-
-            <p>
-              <strong>Contraintes</strong>
-            </p>
-            <ul>
-              <li>
-                Ne modifie AUCUN code pendant cet audit. Analyse uniquement
-                (seule exception&nbsp;: le fichier AUDIT ci-dessus).
-              </li>
-              <li>
-                Ne gonfle pas le rapport. Si une dimension est saine, dis-le
-                en une phrase et passe à la suite.
-              </li>
-              <li>
-                Calibre tes recommandations sur la maturité du projet. Ne
-                recommande pas une infrastructure d&apos;entreprise pour un
-                prototype de week-end, sauf si les objectifs du propriétaire
-                l&apos;exigent.
-              </li>
-              <li>
-                Analyse les besoins réels du projet et formule les
-                recommandations de la façon la plus efficace pour eux.
-              </li>
-              <li>
-                Si le dépôt est volumineux, privilégie la profondeur sur les
-                20&nbsp;% du code qui font 80&nbsp;% du travail, et indique
-                quelles zones ont reçu une revue plus légère.
-              </li>
-            </ul>
-          </div>
-
-          <p className="mt-4 mb-0 text-xs text-muted-foreground">
-            &#128161; Astuce&nbsp;: le bouton &laquo;&nbsp;Copier&nbsp;&raquo;
-            ci-dessus récupère le prompt intégral en un clic. Gardez le{" "}
-            <code>.md</code> dans un dossier de prompts&nbsp;: vous le
-            réutiliserez sur chaque projet, chaque trimestre.
-          </p>
-        </div>
+        {/* ===== H3 : les 4 phases en clair ===== */}
+        <h3>Les 4 phases, en clair (et ce qu&apos;elles vous rapportent)</h3>
+        <p>
+          Pas besoin de lire les 270 lignes du prompt pour comprendre ce
+          qu&apos;il produit. Voici ce que chaque phase vous rend &mdash; et
+          pourquoi elle compte quand c&apos;est <em>vous</em>, dirigeant, qui
+          devez trancher&nbsp;:
+        </p>
+        <ul>
+          <li>
+            <strong>Phase 1 &mdash; Cartographie.</strong> Claude lit tout le
+            dépôt avant de juger&nbsp;: type de projet, stack, points
+            d&apos;entrée, conventions en place. <em>Pour vous</em>&nbsp;: la
+            preuve qu&apos;il a compris votre logiciel avant d&apos;émettre le
+            moindre avis.
+          </li>
+          <li>
+            <strong>Phase 2 &mdash; Audit sévérisé.</strong> Chaque constat est
+            cité fichier:ligne, avec sa conséquence concrète et une sévérité
+            (Critique &rarr; Faible), sur 8 dimensions (architecture, sécurité,
+            tests, performance, dépendances&hellip;). <em>Pour vous</em>&nbsp;:
+            des faits vérifiables, pas des impressions.
+          </li>
+          <li>
+            <strong>Phase 3 &mdash; Stratégie.</strong> Les dizaines de
+            constats sont ramenés à 3-5 thèmes, avec un état cible et des
+            arbitrages explicites &mdash; y compris ce qu&apos;il recommande de{" "}
+            <strong>ne pas</strong> corriger. <em>Pour vous</em>&nbsp;: de quoi
+            distinguer l&apos;urgent du cosmétique.
+          </li>
+          <li>
+            <strong>Phase 4 &mdash; Plan de tâches en jalons.</strong> Chaque
+            tâche est chiffrée en effort (S/M/L/XL), avec ses risques et ses
+            critères d&apos;acceptation, rangée en jalons (filet de sécurité
+            &rarr; correctifs critiques &rarr; fort levier &rarr; finitions).{" "}
+            <em>Pour vous</em>&nbsp;: un plan d&apos;action séquencé, pas une
+            liste de doléances.
+          </li>
+        </ul>
+        <p>
+          Le tout atterrit dans un seul fichier{" "}
+          <code>AUDIT-&lt;date&gt;.md</code> à la racine du projet &mdash; la
+          seule écriture autorisée. <strong>Le prompt ne touche jamais à
+          votre code.</strong>
+        </p>
 
         {/* ===== H3 : améliorations ===== */}
         <h3>
@@ -639,6 +352,36 @@ export default function Article() {
             verrez très vite s&apos;il connaît vraiment votre code.
           </li>
         </ol>
+
+        {/* ===== Encart : 4 questions au prestataire ===== */}
+        <div className="rounded-lg border border-primary/20 bg-primary/5 p-6 my-8">
+          <h3 className="mt-0">
+            Le rapport en main&nbsp;: 4 questions à poser à votre prestataire
+          </h3>
+          <p>
+            C&apos;est là que l&apos;audit devient un outil de décision, pas un
+            exercice technique. Avec le fichier <code>AUDIT.md</code> ouvert
+            devant vous, plus aucune réponse vague ne passe&nbsp;:
+          </p>
+          <ol className="mb-0">
+            <li>
+              Cette note de santé globale (A à F), vous la contestez&nbsp;? Sur
+              quels constats précis&nbsp;?
+            </li>
+            <li>
+              Ce risque est cité fichier:ligne dans le rapport &mdash; il est
+              exact&nbsp;? Combien de temps pour le corriger&nbsp;?
+            </li>
+            <li>
+              Votre devis de refonte couvre quels jalons du plan&nbsp;?
+              Pourquoi pas seulement les jalons 0 et 1 pour commencer&nbsp;?
+            </li>
+            <li>
+              Qu&apos;est-ce que le rapport classe en «&nbsp;à ne pas
+              corriger&nbsp;» &mdash; et que vous proposez quand même&nbsp;?
+            </li>
+          </ol>
+        </div>
 
         {/* ===== H2 : cas terrain ===== */}
         <h2>Testé sur un vrai projet : les chiffres de notre propre audit</h2>

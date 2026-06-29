@@ -65,7 +65,7 @@ export default function Article() {
       readTime="13 min"
       date="11 juin 2026"
       dateISO="2026-06-11"
-      dateModified="2026-06-11"
+      dateModified="2026-06-29"
       image="/images/blog/cybersecurite-pme-guide-pratique.webp"
       slug="cybersecurite-pme-guide-pratique"
     >
@@ -520,38 +520,73 @@ export default function Article() {
         </li>
       </ul>
 
-      <h2>Cas terrain : une PME des Yvelines à deux doigts de payer</h2>
+      <h2>Cas terrain : une fuite de mot de passe qui a failli tout ouvrir</h2>
       <p>
         Pour rendre tout cela concret, voici une situation représentative de ce
-        que l&apos;on rencontre sur le terrain (cas anonymisé). Une PME du
-        bâtiment d&apos;une trentaine de salariés, dans les Yvelines (78),
-        reçoit un matin un email de son fournisseur de matériaux habituel :
-        nouvelle facture, et surtout <strong>nouveau RIB</strong>, &quot;suite à
-        un changement de banque&quot;. L&apos;email est impeccable, le logo est
-        bon, le ton habituel. La comptable s&apos;apprête à enregistrer les
-        nouvelles coordonnées pour un règlement de 12 000 €.
+        que l&apos;on rencontre (cas anonymisé). Le responsable commercial
+        d&apos;une PME de services réutilisait, par commodité, le{" "}
+        <strong>même mot de passe</strong> pour sa messagerie professionnelle
+        Microsoft 365 et pour un compte personnel sur un réseau social. Ce réseau
+        subit une fuite de données — des millions de couples email / mot de passe
+        se retrouvent en vente. Quelques jours plus tard, des robots testent
+        automatiquement ces identifiants partout&nbsp;: le fameux{" "}
+        <em>credential stuffing</em>.
       </p>
       <p>
-        Ce qui a sauvé l&apos;entreprise n&apos;est pas un logiciel :{" "}
-        <strong>c&apos;est une règle</strong>. Quelques semaines plus tôt, lors
-        d&apos;un <Link href="/blog/cout-audit-informatique-yvelines">
-        diagnostic informatique</Link>, nous avions posé le principe de la double
-        validation hors-bande des changements de RIB. La comptable décroche son
-        téléphone, appelle le fournisseur sur le numéro de la fiche
-        habituelle — pas celui de l&apos;email. Réponse du fournisseur :{" "}
-        <em>&quot;Nous n&apos;avons jamais changé de banque.&quot;</em> La boîte
-        mail du fournisseur avait été piratée, et les attaquants surveillaient
-        les échanges pour détourner les paiements. Coût de la parade : un appel
-        téléphonique de deux minutes. Coût évité : 12 000 €, et probablement la
-        relation client derrière.
+        Le mot de passe de la messagerie de l&apos;entreprise était dans le lot,
+        et il fonctionnait. Ce qui a sauvé l&apos;entreprise n&apos;est pas un
+        logiciel coûteux&nbsp;: <strong>c&apos;est la double authentification</strong>,
+        activée quelques semaines plus tôt lors d&apos;un{" "}
+        <Link href="/blog/cout-audit-informatique-yvelines">
+          diagnostic informatique
+        </Link>
+        . L&apos;attaquant avait le bon mot de passe&nbsp;; il lui manquait le
+        code de l&apos;application d&apos;authentification, sur le téléphone du
+        responsable. La tentative a déclenché une notification inattendue —
+        refusée, justement parce que la consigne «&nbsp;on ne valide jamais une
+        demande qu&apos;on n&apos;a pas déclenchée soi-même&nbsp;» avait été
+        passée à l&apos;équipe.
       </p>
       <p>
-        Ce genre de situation n&apos;a rien d&apos;exceptionnel, et n&apos;est
-        pas réservé au 78/95 — nous accompagnons des PME partout en France en
-        visio. C&apos;est simplement l&apos;illustration que la mesure la plus
-        efficace de cette liste ne coûte rien : elle s&apos;installe dans les
-        habitudes, pas dans le budget.
+        Sans MFA, l&apos;attaquant entrait dans la messagerie, y créait une règle
+        de transfert discrète, et lisait les échanges pour préparer une fraude au
+        RIB comme celle décrite plus haut. <strong>Deux gestes à 0 €</strong> —
+        un mot de passe unique et la double authentification — ont coupé toute la
+        chaîne. Ce genre de situation n&apos;a rien d&apos;exceptionnel et
+        n&apos;est réservé à aucune région&nbsp;: nous accompagnons des PME
+        partout en France en visio.
       </p>
+
+      {/* ===== Encart : arbre de décision ===== */}
+      <div className="rounded-lg border border-primary/20 bg-primary/5 p-6 my-8">
+        <h2 className="mt-0">En cas de doute : l&apos;arbre de décision à afficher</h2>
+        <p>
+          Imprimez ces trois réflexes et collez-les près des postes. Quand
+          quelque chose cloche, la bonne réaction doit être évidente — pas à
+          inventer dans la panique.
+        </p>
+        <ul className="mb-0">
+          <li>
+            <strong>«&nbsp;J&apos;ai cliqué sur un lien ou ouvert une pièce
+            jointe suspecte&nbsp;»</strong> → débranchez le poste du réseau,
+            changez le mot de passe depuis un autre appareil sain, prévenez sans
+            attendre. Mieux vaut une fausse alerte qu&apos;un silence de 48 h.
+          </li>
+          <li>
+            <strong>«&nbsp;On me demande un virement ou un changement de
+            RIB&nbsp;»</strong> → ne validez rien sur la foi d&apos;un email.
+            Rappelez la personne sur son numéro habituel (jamais celui du
+            message). Urgence + secret + dérogation à la procédure = arnaque
+            jusqu&apos;à preuve du contraire.
+          </li>
+          <li>
+            <strong>«&nbsp;Je reçois une notification de connexion que je
+            n&apos;ai pas déclenchée&nbsp;»</strong> → refusez-la, puis changez
+            le mot de passe concerné. Quelqu&apos;un détient votre mot de
+            passe&nbsp;; seule la MFA vous protège encore.
+          </li>
+        </ul>
+      </div>
 
       <h2>Votre plan d&apos;action cybersécurité en une semaine</h2>
       <p>

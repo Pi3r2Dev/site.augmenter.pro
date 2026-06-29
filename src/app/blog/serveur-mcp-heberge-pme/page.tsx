@@ -70,7 +70,7 @@ export default function Article() {
       readTime="10 min"
       date="17 juin 2026"
       dateISO="2026-06-17"
-      dateModified="2026-06-17"
+      dateModified="2026-06-29"
       image="/images/blog/serveur-mcp-heberge-pme.webp"
       slug="serveur-mcp-heberge-pme"
     >
@@ -118,26 +118,20 @@ export default function Article() {
         Claude, ChatGPT ou Cursor savent lire.
       </p>
       <p>
-        Pour bien situer : le MCP est le standard ouvert créé par Anthropic en
-        novembre 2024 pour brancher n&apos;importe quelle IA sur n&apos;importe
-        quel outil — l&apos;équivalent d&apos;une prise USB-C pour
-        l&apos;intelligence artificielle. Si la mécanique de base vous échappe
-        encore, commencez par notre{" "}
+        Si la mécanique de base du MCP vous échappe encore — ce qu&apos;est le
+        protocole, l&apos;analogie de la prise USB-C pour l&apos;IA — commencez
+        par notre{" "}
         <Link href="/blog/serveur-mcp-guide-pratique-pme">
           guide pratique du serveur MCP
-        </Link>
-        , puis revenez ici.
-      </p>
-      <p>
-        Le sujet n&apos;est plus une curiosité de laboratoire. En un an, le
-        protocole a dépassé <strong>97 millions de téléchargements de SDK par
-        mois</strong>, et le 9 décembre 2025 Anthropic l&apos;a confié à
-        l&apos;<strong>Agentic AI Foundation</strong> (sous l&apos;égide de la
-        Linux Foundation), avec OpenAI, Google, Microsoft, AWS et Cloudflare
-        comme membres fondateurs (source : Linux Foundation, déc. 2025). Autrement
-        dit, ce n&apos;est plus « la techno d&apos;Anthropic » : c&apos;est un
-        standard de l&apos;industrie, et un marché de l&apos;hébergement
-        s&apos;est constitué autour.
+        </Link>{" "}
+        puis revenez ici. L&apos;essentiel pour la suite tient en une phrase : ce
+        n&apos;est plus « la techno d&apos;Anthropic ». Depuis décembre 2025, le
+        protocole est gouverné par l&apos;<strong>Agentic AI Foundation</strong>{" "}
+        (Linux Foundation), avec OpenAI, Google, Microsoft, AWS et Cloudflare
+        comme membres fondateurs — c&apos;est devenu un standard de
+        l&apos;industrie, et un marché de l&apos;hébergement s&apos;est constitué
+        autour. Reste alors la seule question que ce marché évite : <strong>où
+        atterrissent vos données</strong>.
       </p>
 
       <h2>Les trois façons de brancher votre IA sur vos données en 2026</h2>
