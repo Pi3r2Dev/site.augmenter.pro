@@ -189,7 +189,12 @@ export default function Article() {
           <strong>Hébergement :</strong> Un serveur MCP peut tourner{" "}
           <strong>en local sur votre infrastructure</strong> ou chez un
           hébergeur français/européen. Vos données ne transitent pas
-          nécessairement par des serveurs américains.
+          nécessairement par des serveurs américains. C&apos;est le choix
+          structurant : on le détaille dans notre comparatif{" "}
+          <Link href="/blog/serveur-mcp-heberge-pme">
+            coder, louer ou héberger soi-même son serveur MCP
+          </Link>
+          .
         </li>
         <li>
           <strong>Contrôle d&apos;accès :</strong> MCP fonctionne avec un

@@ -3,9 +3,9 @@ import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
 export const metadata = articleMetadata({
-  title: "Combien Coûte un Audit Informatique en Yvelines ? Tarifs 2026",
+  title: "Combien Coûte un Audit Informatique PME ? Tarifs 2026",
   description:
-    "Prix audit informatique PME en Yvelines (78) : de 0 € à 20 000 €. Grille tarifaire, cas concrets et diagnostic offert 60 min. Guide transparent.",
+    "Prix d'un audit informatique ou de cybersécurité PME : de 0 € à 20 000 €. Grille tarifaire 2026 par type et taille, cas concrets, diagnostic offert 60 min.",
   slug: "cout-audit-informatique-yvelines",
 });
 
@@ -59,13 +59,13 @@ const faqJsonLd = {
 export default function Article() {
   return (
     <ArticleLayout
-      title="Combien coûte un audit informatique en Yvelines (78) ? Guide tarifaire 2026"
-      excerpt="De 0 € à 20 000 € : pourquoi un tel écart ? Grille tarifaire par taille d'entreprise, comparaison diagnostic offert vs audit complet, et 3 cas concrets de PME en Yvelines. Le guide le plus transparent du marché."
+      title="Combien coûte un audit informatique PME ? Guide tarifaire 2026"
+      excerpt="De 0 € à 20 000 € : pourquoi un tel écart ? Grille tarifaire par type et par taille d'entreprise, comparaison diagnostic offert vs audit complet, et 3 cas concrets de PME. Le guide prix le plus transparent du marché."
       tags={["Audit 360°", "PME"]}
       readTime="8 min"
       date="13 février 2026"
       dateISO="2026-02-13"
-      dateModified="2026-02-13"
+      dateModified="2026-06-27"
       image="/images/blog/cout-audit-informatique-yvelines.webp"
       slug="cout-audit-informatique-yvelines"
     >
@@ -399,13 +399,14 @@ export default function Article() {
         <Link href="/strategie-ia-pme">stratégie IA adaptée à votre PME</Link>.
       </p>
 
-      <h2>L&apos;audit informatique en Yvelines ne se limite pas à la cybersécurité</h2>
+      <h2>Au-delà du prix : ce qu&apos;un bon audit doit couvrir</h2>
 
       <p>
-        Tous les guides tarifaires en ligne parlent d&apos;audit de <em>cybersécurité</em>.
-        C&apos;est un angle important — <strong>73% des PME françaises ont subi au moins
-        une cyberattaque en 2024</strong> (ANSSI) — mais il ne couvre qu&apos;une partie
-        du sujet.
+        Tous les guides tarifaires en ligne se limitent au prix d&apos;un audit de{" "}
+        <em>cybersécurité</em>. C&apos;est un angle important — <strong>73% des
+        PME françaises ont subi au moins une cyberattaque en 2024</strong> (ANSSI)
+        — mais le prix ne dit rien du <em>périmètre</em>, et c&apos;est lui qui
+        détermine si vous payez le juste prix.
       </p>
       <p>
         Un audit informatique <strong>global</strong> évalue aussi la performance de votre
@@ -416,11 +417,20 @@ export default function Article() {
         des prestataires purement IT.
       </p>
       <p>
-        Nous intervenons aussi en{" "}
-        <Link href="/audit-informatique-val-doise">
-          Val d&apos;Oise (95)
-        </Link>{" "}
-        — Cergy, Pontoise, Argenteuil, Sarcelles — avec la même méthodologie.
+        <strong>Vous cherchez à vous faire auditer plutôt qu&apos;à budgéter ?</strong>{" "}
+        Ce guide répond à la question du <em>prix</em> ; pour la prestation
+        elle-même — périmètre, méthode, intervention sur site —, rendez-vous sur
+        notre page{" "}
+        <Link href="/audit-informatique-yvelines">
+          audit informatique &amp; cybersécurité en Yvelines (78)
+        </Link>
+        , déclinée aussi en{" "}
+        <Link href="/audit-informatique-val-doise">Val d&apos;Oise (95)</Link>. Et
+        si votre besoin est réglementaire, voyez le{" "}
+        <Link href="/blog/nis2-pme-yvelines-val-doise">
+          guide et la checklist NIS2
+        </Link>
+        .
       </p>
 
       <h2>FAQ — Prix d&apos;un audit informatique</h2>

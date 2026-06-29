@@ -94,11 +94,11 @@ const methodology = [
   {
     step: "01",
     icon: Brain,
-    title: "Diagnostic 360\u00b0",
+    title: "On démarre par l’audit IA",
     description:
-      "Nous auditons votre infrastructure, vos processus et la maturité IA de vos équipes. Pas de jargon : un état des lieux clair et actionnable.",
+      "Le point de départ, c’est notre audit IA dédié : maturité, processus et données. Il fixe le cap — la stratégie se construit dessus.",
     details: [
-      "Audit infrastructure & outils existants",
+      "Audit IA réalisé en amont",
       "Cartographie des flux de travail",
       "Évaluation de la maturité numérique",
       "Entretiens avec les équipes terrain",
@@ -180,13 +180,13 @@ const faqItems = [
   {
     question: "Combien coûte une stratégie IA pour une PME ?",
     answer:
-      "Notre diagnostic initial est offert (60 min). L\u2019Audit 360\u00b0 IA Stratégique complet coûte 225 \u20ac et inclut une feuille de route sur 6 mois. Pour le déploiement, le budget dépend des cas d\u2019usage identifiés \u2014 mais le programme Osez l\u2019IA de Bpifrance peut prendre en charge jusqu\u2019à 80 % des coûts d\u2019accompagnement.",
+      "Notre diagnostic initial est offert (60 min). L’audit IA 360° qui pose la feuille de route coûte 225 € — il est détaillé sur notre page dédiée. Pour le déploiement, le budget dépend des cas d’usage retenus, et le programme Osez l’IA de Bpifrance peut prendre en charge jusqu’à 80 % de l’accompagnement.",
   },
   {
     question:
-      "Par où commencer quand on n\u2019a aucune compétence IA en interne ?",
+      "Comment déployer l’IA quand on n’a aucune compétence en interne ?",
     answer:
-      "C\u2019est justement le cas de la majorité de nos clients. Nous commençons par un audit de votre maturité numérique, puis nous identifions des quick wins réalisables sans expertise technique. La formation de vos équipes fait partie intégrante de notre accompagnement.",
+      "C’est le cas de la majorité de nos clients. On part de votre métier, pas de la technologie : des quick wins réalisables sans expertise, puis la formation de vos équipes intégrée à l’accompagnement. Le cadrage initial passe par notre audit IA dédié.",
   },
   {
     question: "Quels résultats concrets peut-on attendre ?",
@@ -254,11 +254,11 @@ const serviceJsonLd = {
     },
     {
       "@type": "Offer",
-      name: "Audit 360\u00b0 IA Stratégique",
+      name: "Stratégie IA — cadrage & feuille de route",
       price: "225",
       priceCurrency: "EUR",
       description:
-        "Diagnostic complet de 3h avec feuille de route IA personnalisée sur 6 mois",
+        "Cadrage stratégique avec feuille de route IA personnalisée sur 6 mois",
       url: "https://augmenter.pro/contact",
     },
   ],

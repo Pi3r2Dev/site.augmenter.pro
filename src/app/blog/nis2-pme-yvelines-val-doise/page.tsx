@@ -3,9 +3,9 @@ import { ArticleLayout } from "@/components/layout/article-layout";
 import Link from "next/link";
 
 export const metadata = articleMetadata({
-  title: "NIS2 : Vos Clients Vont Bientôt Vous L'Imposer (Guide PME 2026)",
+  title: "NIS2 PME : Guide + Checklist de Conformité 2026",
   description:
-    "Vos donneurs d'ordres vont exiger des clauses cyber dans vos contrats. NIS2 arrive — si vous n'êtes pas prêt, vous perdez des marchés. Plan d'action concret.",
+    "NIS2 concerne-t-elle votre PME ? Qui est visé, les 10 mesures obligatoires et la checklist de conformité à cocher. Auto-diagnostic et plan d'action concret.",
   slug: "nis2-pme-yvelines-val-doise",
 });
 
@@ -53,19 +53,27 @@ const faqJsonLd = {
         text: "Utilisez le simulateur officiel MonEspaceNIS2 de l'ANSSI (monespacenis2.cyber.gouv.fr/simulateur). En 5 à 10 minutes, vous saurez si votre entreprise est concernée. Les entités essentielles sont les grandes entreprises (> 250 salariés) dans les 11 secteurs hautement critiques. Les entités importantes sont les moyennes entreprises (50-249 salariés) dans les 18 secteurs concernés.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Quelle est la checklist de conformité NIS2 pour une PME ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La checklist NIS2 reprend les 10 mesures de l'article 21 : (1) analyse des risques et politique de sécurité écrite, (2) procédure de gestion des incidents avec notification ANSSI en 24h/72h/1 mois, (3) sauvegardes testées et plan de continuité, (4) sécurité de la chaîne d'approvisionnement (clauses cyber fournisseurs), (5) sécurité des acquisitions et développements IT, (6) évaluation régulière de l'efficacité (audits, tests), (7) cyber-hygiène et formation des employés et dirigeants, (8) cryptographie et chiffrement des données sensibles, (9) contrôle d'accès au moindre privilège, (10) authentification multi-facteurs (MFA) sur tous les accès critiques. Commencez par cocher les mesures 1, 2, 3, 7 et 10 : elles couvrent l'essentiel du risque immédiat.",
+      },
+    },
   ],
 };
 
 export default function Article() {
   return (
     <ArticleLayout
-      title="NIS2 et PME : Guide Pratique pour les Yvelines et le Val d'Oise (78/95)"
-      excerpt="La directive NIS2 multiplie par 30 le nombre d'entreprises soumises à des obligations de cybersécurité en France. Votre PME en Yvelines ou Val d'Oise est-elle concernée — directement ou via vos donneurs d'ordres ? Auto-diagnostic, 10 mesures obligatoires et plan d'action."
+      title="NIS2 et PME : Guide Pratique et Checklist de Conformité 2026"
+      excerpt="La directive NIS2 multiplie par 30 le nombre de PME soumises à des obligations de cybersécurité en France. Votre entreprise est-elle concernée — directement ou via vos donneurs d'ordres ? Auto-diagnostic, 10 mesures obligatoires et checklist de conformité à cocher."
       tags={["Cybersécurité", "PME", "Audit 360°"]}
-      readTime="10 min"
+      readTime="11 min"
       date="13 février 2026"
       dateISO="2026-02-13"
-      dateModified="2026-02-13"
+      dateModified="2026-06-27"
       image="/images/blog/nis2-pme-yvelines-val-doise.webp"
       slug="nis2-pme-yvelines-val-doise"
     >
@@ -303,6 +311,133 @@ export default function Article() {
         </li>
       </ul>
 
+      <h2>Checklist NIS2 PME : les 10 mesures à cocher</h2>
+      <p>
+        <strong>
+          Voici la checklist de conformité NIS2 condensée en 10 points, prête à
+          imprimer et à cocher.
+        </strong>{" "}
+        Elle reprend les exigences de l&apos;article 21 traduites en actions
+        concrètes pour une PME. Notre conseil de terrain : commencez par les
+        lignes marquées <strong>« Priorité »</strong> — les mesures 1, 2, 3, 7 et
+        10 couvrent l&apos;essentiel du risque immédiat pour un investissement
+        limité. Le reste se déploie ensuite, par paliers.
+      </p>
+
+      <div className="mt-4 overflow-x-auto">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-border text-left">
+              <th className="py-2 pr-4 font-semibold text-foreground">#</th>
+              <th className="py-2 pr-4 font-semibold text-foreground">Mesure</th>
+              <th className="py-2 pr-4 font-semibold text-foreground">
+                Ce que vous devez pouvoir montrer
+              </th>
+              <th className="py-2 font-semibold text-foreground">Priorité</th>
+            </tr>
+          </thead>
+          <tbody className="text-muted-foreground">
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">1</td>
+              <td className="py-2 pr-4">Analyse des risques &amp; politique</td>
+              <td className="py-2 pr-4">
+                Cartographie des actifs critiques + politique de sécurité écrite
+              </td>
+              <td className="py-2">🔴 Priorité</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">2</td>
+              <td className="py-2 pr-4">Gestion des incidents</td>
+              <td className="py-2 pr-4">
+                Procédure de notification ANSSI (24h / 72h / 1 mois) prête avant
+                l&apos;incident
+              </td>
+              <td className="py-2">🔴 Priorité</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">3</td>
+              <td className="py-2 pr-4">Continuité &amp; sauvegardes</td>
+              <td className="py-2 pr-4">
+                Sauvegardes <strong>testées</strong> + plan de reprise (PRA)
+                documenté
+              </td>
+              <td className="py-2">🔴 Priorité</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">4</td>
+              <td className="py-2 pr-4">Chaîne d&apos;approvisionnement</td>
+              <td className="py-2 pr-4">
+                Clauses cyber dans les contrats fournisseurs + évaluation de
+                leur sécurité
+              </td>
+              <td className="py-2">🟠 Ensuite</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">5</td>
+              <td className="py-2 pr-4">Sécurité des acquisitions IT</td>
+              <td className="py-2 pr-4">
+                Gestion des achats logiciels, mises à jour et correctifs
+              </td>
+              <td className="py-2">🟠 Ensuite</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">6</td>
+              <td className="py-2 pr-4">Évaluation de l&apos;efficacité</td>
+              <td className="py-2 pr-4">
+                Audits réguliers, tests d&apos;intrusion, exercices de crise
+              </td>
+              <td className="py-2">🟠 Ensuite</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">7</td>
+              <td className="py-2 pr-4">Cyber-hygiène &amp; formation</td>
+              <td className="py-2 pr-4">
+                Sensibilisation des employés + formation{" "}
+                <strong>obligatoire des dirigeants</strong>
+              </td>
+              <td className="py-2">🔴 Priorité</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">8</td>
+              <td className="py-2 pr-4">Cryptographie</td>
+              <td className="py-2 pr-4">
+                Chiffrement des données sensibles au repos et en transit
+              </td>
+              <td className="py-2">🟠 Ensuite</td>
+            </tr>
+            <tr className="border-b border-border/50">
+              <td className="py-2 pr-4">9</td>
+              <td className="py-2 pr-4">Contrôle d&apos;accès</td>
+              <td className="py-2 pr-4">
+                Principe du moindre privilège + revue régulière des droits
+              </td>
+              <td className="py-2">🟠 Ensuite</td>
+            </tr>
+            <tr>
+              <td className="py-2 pr-4">10</td>
+              <td className="py-2 pr-4">Authentification multi-facteurs</td>
+              <td className="py-2 pr-4">
+                MFA activée sur messagerie, VPN, accès distants et comptes admin
+              </td>
+              <td className="py-2">🔴 Priorité</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Cette checklist couvre le <em>quoi</em>. Pour le <em>comment</em> — les
+        gestes techniques concrets derrière les mesures 3, 7 et 10 — notre{" "}
+        <Link href="/blog/cybersecurite-pme-guide-pratique">
+          guide pratique de la cybersécurité PME
+        </Link>{" "}
+        détaille le plan d&apos;action étape par étape. Et si vous voulez savoir
+        où vous en êtes vraiment, un{" "}
+        <Link href="/audit-informatique-yvelines">
+          audit informatique &amp; cybersécurité
+        </Link>{" "}
+        passe chacun de ces 10 points au crible.
+      </p>
+
       <h2>Sanctions : votre entreprise ET vous personnellement</h2>
 
       <h3>Amendes administratives</h3>
@@ -434,7 +569,12 @@ export default function Article() {
         cybersécurité. Mais la sensibilisation des employés est tout aussi
         critique : le phishing représente <strong>60% des attaques</strong>{" "}
         (CESIN). Un email de formation mensuel ne suffit pas — il faut des
-        exercices pratiques (simulations de phishing, gestion de crise).
+        exercices pratiques (simulations de phishing, gestion de crise). Pour
+        l&apos;essentiel à couvrir sans DSI ni gros budget, voir notre{" "}
+        <Link href="/blog/cybersecurite-pme-guide-pratique">
+          guide pratique de cybersécurité PME
+        </Link>{" "}
+        : 93 % des attaques passent par une erreur humaine évitable.
       </p>
 
       <h3>Étape 5 — Documenter, maintenir, améliorer</h3>

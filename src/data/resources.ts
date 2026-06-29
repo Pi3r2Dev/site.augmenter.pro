@@ -230,8 +230,8 @@ export const ARTICLES: CatalogArticle[] = [
   },
   {
     slug: "cout-audit-informatique-yvelines",
-    title: "Combien coûte un audit informatique en Yvelines (78) ?",
-    tldr: "Les fourchettes de prix réelles d'un audit informatique en Yvelines, ce qui fait varier la facture, et comment éviter de payer pour du vent.",
+    title: "Combien coûte un audit informatique PME ?",
+    tldr: "Les fourchettes de prix réelles d'un audit informatique ou de cybersécurité (0 € à 20 000 €), ce qui fait varier la facture, et comment éviter de payer pour du vent.",
     tags: ["Audit 360°", "PME"],
     readTime: "8 min",
     image: "/images/blog/cout-audit-informatique-yvelines.webp",
@@ -240,8 +240,8 @@ export const ARTICLES: CatalogArticle[] = [
   },
   {
     slug: "nis2-pme-yvelines-val-doise",
-    title: "NIS2 et PME : Guide Pratique pour les Yvelines et le Val d'Oise",
-    tldr: "NIS2 vous concerne-t-il ? Le guide pratique pour les PME franciliennes : qui est concerné, quelles obligations, quels délais — et par quoi commencer concrètement.",
+    title: "NIS2 PME : Guide + Checklist de Conformité 2026",
+    tldr: "NIS2 vous concerne-t-il ? Qui est concerné, quelles obligations, quels délais — et la checklist des 10 mesures à cocher pour commencer concrètement.",
     tags: ["Cybersécurité", "PME"],
     readTime: "10 min",
     image: "/images/blog/nis2-pme-yvelines-val-doise.webp",
@@ -629,6 +629,27 @@ export const IDEAS: EnrichedIdea[] = [
     palette: "duo",
     sector: "Outils PME",
     pains: ["repetitif", "prestataire"],
+  },
+  {
+    number: "16",
+    title: "Assistant de conformité NIS2",
+    description:
+      "Un assistant qui lit votre situation, déroule les 10 mesures NIS2 en langage dirigeant, vous dit lesquelles sont couvertes et lesquelles manquent, et génère le début de votre politique de sécurité et de votre registre d'incidents.",
+    pros: [
+      "Transforme une directive abstraite en checklist actionnable et priorisée",
+      "Prépare les documents que vos donneurs d'ordres vont exiger (politique, PRA, registre)",
+      "Anticipe l'obligation avant que le client ne vous envoie son questionnaire cyber",
+    ],
+    cons: [
+      "Ne remplace pas un audit humain pour les entités essentielles à fort enjeu",
+      "La conformité reste un processus continu : l'assistant amorce, il ne maintient pas tout seul",
+    ],
+    seed: 16.4,
+    palette: "violet",
+    sector: "Outils PME",
+    articleSlug: "nis2-pme-yvelines-val-doise",
+    hrefLabel: "Le guide NIS2",
+    pains: ["cyber", "prestataire"],
   },
 ];
 

@@ -477,6 +477,73 @@ export default function AuditInformatiqueYvelinesPage() {
         </div>
       </section>
 
+      {/* Cybersécurité focus */}
+      <section className="py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <Badge variant="secondary" className="mb-4">
+            Audit de cybersécurité · Yvelines 78
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Un audit de{" "}
+            <span className="gradient-text">cybersécurité</span> pour PME en
+            Yvelines (78)
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground">
+            Un audit de cybersécurité pour une PME en Yvelines part toujours du
+            même constat : <strong>93 % des incidents auraient pu être évités</strong>{" "}
+            avec les mesures d&apos;hygiène de base (ANSSI). Notre diagnostic
+            vérifie là où ça casse vraiment — comptes sans double authentification,
+            sauvegardes jamais testées, accès d&apos;anciens collaborateurs encore
+            actifs, procédure de virement non sécurisée — et vous repart avec un
+            plan d&apos;action priorisé par impact, pas une liste de peurs.
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            Trois ressources pour aller plus loin selon votre besoin :
+          </p>
+          <ul className="mt-4 space-y-3">
+            <li className="flex items-start gap-3">
+              <Shield className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <span className="text-muted-foreground">
+                <Link
+                  href="/blog/cybersecurite-pme-guide-pratique"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Le guide pratique de la cybersécurité PME
+                </Link>{" "}
+                — les gestes concrets (MFA, mots de passe, phishing, fraude au
+                président) à mettre en place cette semaine, sans budget.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <FileCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <span className="text-muted-foreground">
+                <Link
+                  href="/blog/nis2-pme-yvelines-val-doise"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Le guide et la checklist NIS2
+                </Link>{" "}
+                — si vos donneurs d&apos;ordres vous imposent des exigences cyber :
+                les 10 mesures à cocher pour rester dans la course.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Receipt className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <span className="text-muted-foreground">
+                <Link
+                  href="/blog/cout-audit-informatique-yvelines"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Combien coûte un audit informatique
+                </Link>{" "}
+                — la grille tarifaire transparente pour budgéter, du diagnostic
+                offert à l&apos;audit complet.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* Pain Points */}
       <section className="bg-muted/30 py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

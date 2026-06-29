@@ -23,31 +23,31 @@ interface FeatureItem {
 const ARTICLES: FeatureItem[] = [
   {
     kind: "article",
-    tag: "Agent IA",
-    title: "Agent IA pour dirigeant de PME : c'est quoi, comment en créer un",
+    tag: "Serveur MCP",
+    title: "Serveur MCP hébergé : le coder, le louer ou l'héberger soi-même ?",
     excerpt:
-      "Le chatbot répond, l'agent agit. Définition sans jargon, 3 exemples concrets (BTP, immobilier, services) et la méthode en 4 étapes pour créer votre premier agent métier.",
-    href: "/blog/agent-ia-dirigeant-pme",
+      "Brancher l'IA sur vos vraies données sans usine à gaz. Un seul détail départage les trois chemins : où vivent vos données. Coûts réels et grille de décision PME.",
+    href: "/blog/serveur-mcp-heberge-pme",
     palette: "violet",
     seed: 41,
   },
   {
     kind: "article",
-    tag: "Cas client",
-    title: "Configurer Odoo avec l'IA : 4 jours au lieu de 3 500 €",
+    tag: "Cybersécurité",
+    title: "Cybersécurité PME : 93 % des attaques sont évitables avec du bon sens",
     excerpt:
-      "Un cas concret d'agence immobilière (78) où l'IA a remplacé une presta de paramétrage à 3 500 € par 4 jours d'agent assisté.",
-    href: "/blog/configurer-odoo-ia-claude-cowork",
+      "Mots de passe, double authentification, phishing, fraude au président : le plan d'action pour couvrir l'essentiel du risque en une semaine, sans DSI ni gros budget.",
+    href: "/blog/cybersecurite-pme-guide-pratique",
     palette: "duo",
     seed: 46,
   },
   {
     kind: "article",
-    tag: "Diagnostic",
-    title: "5 signes qu'il est temps de moderniser votre informatique",
+    tag: "Claude Fable",
+    title: "Votre code vieillit en silence : le prompt qui audite tout le projet",
     excerpt:
-      "Ralentissements, support en bout de course, équipes qui contournent l'outil — les signaux d'une dette technique qu'on ne peut plus repousser.",
-    href: "/blog/5-signes-moderniser-informatique-pme",
+      "Le prompt d'audit en 4 phases pour Claude Fable 5 : cartographie, constats fichier:ligne, plan de remise à niveau. Testé sur un vrai projet — 11 constats en 3 minutes.",
+    href: "/blog/prompt-audit-projet-claude-fable",
     palette: "amber",
     seed: 53,
   },
