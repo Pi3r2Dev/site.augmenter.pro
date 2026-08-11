@@ -6,7 +6,7 @@ import { AtelierCallout } from "@/components/sections/atelier-callout";
 export const metadata = articleMetadata({
   title: "Claude Code : le prompt, CLAUDE.md et les Skills (guide PME 2026)",
   description:
-    "Envoyez ce prompt AVANT tout projet Claude Code. CLAUDE.md, ARCHITECTURE.md, Skills et bonnes pratiques. La différence entre un POC et un vrai produit.",
+    "Envoyez ce prompt AVANT tout projet Claude Code. CLAUDE.md, ARCHITECTURE.md, Skills et bonnes pratiques. La différence entre un POC et un vrai produit.",
   slug: "claude-code-prompt-architecture",
 });
 
@@ -680,7 +680,12 @@ export default function Article() {
         </Link>{" "}
         (méthode, Skills, packages), ou nos{" "}
         <Link href="/approche#prestations">prestations d&apos;accompagnement</Link>{" "}
-        IA &amp; transformation digitale.
+        IA &amp; transformation digitale. Et pour situer où en est
+        l&apos;écosystème — modèles, agents, prix —, notre{" "}
+        <Link href="/blog/bilan-ia-janvier-juillet-2026">
+          bilan IA janvier-juillet 2026
+        </Link>{" "}
+        fait le point en un article.
       </p>
 
       <p>

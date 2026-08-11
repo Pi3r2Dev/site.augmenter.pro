@@ -7,7 +7,7 @@ import { AtelierCallout } from "@/components/sections/atelier-callout";
 export const metadata = articleMetadata({
   title: "Configurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €",
   description:
-    "Comment nous avons reconfiguré tout Odoo d'un client en 4 jours avec Claude Cowork. Studio, SaaS/SH/Open Source, packages et formation incluse.",
+    "Comment nous avons reconfiguré tout Odoo d'un client en 4 jours avec Claude Cowork. Studio, SaaS/SH/Open Source, packages et formation incluse.",
   slug: "configurer-odoo-ia-claude-cowork",
 });
 
@@ -585,6 +585,10 @@ export default function ConfigurerOdooIAClaude() {
         et l&apos;
         <Link href="/blog/serveur-mcp-integration-crm-erp">
           int&eacute;gration d&apos;agents IA &agrave; votre CRM/ERP
+        </Link>. Pour situer cette m&eacute;thode dans le paysage 2026 &mdash;
+        mod&egrave;les, agents, prix r&eacute;els &mdash; voyez notre{" "}
+        <Link href="/blog/bilan-ia-janvier-juillet-2026">
+          bilan IA janvier-juillet 2026
         </Link>.
       </p>
       <p>

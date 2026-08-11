@@ -665,6 +665,17 @@ export default function Article() {
           un audit technique approfondi par un spécialiste reste nécessaire.
         </li>
         <li>
+          Ce guide ne couvre pas les <strong>risques nouveaux des agents
+          IA</strong> — assistants autonomes connectés à vos mails, fichiers et
+          outils, dont plus de 21 000 instances mal configurées ont été
+          retrouvées exposées sur Internet début 2026. Avant d&apos;en installer
+          un, lisez le chapitre sécurité de notre{" "}
+          <Link href="/blog/bilan-ia-janvier-juillet-2026">
+            bilan IA janvier-juillet 2026
+          </Link>
+          .
+        </li>
+        <li>
           Si vous êtes <strong>déjà victime</strong> d&apos;une attaque, ne
           bricolez pas seul : isolez, ne payez pas dans la précipitation, et
           faites-vous accompagner via Cybermalveillance.gouv.fr.

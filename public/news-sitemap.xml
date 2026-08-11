@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://augmenter.pro/blog/bilan-ia-janvier-juillet-2026</loc>
+    <news:news>
+      <news:publication>
+        <news:name>augmenter.PRO</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-29</news:publication_date>
+      <news:title>IA janvier-juillet 2026 : sept mois de bascule, et ce que votre PME doit en retenir</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://augmenter.pro/blog/serveur-mcp-heberge-pme</loc>
     <news:news>
       <news:publication>

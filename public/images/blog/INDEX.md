@@ -15,6 +15,18 @@
 
 ---
 
+## bilan-ia-janvier-juillet-2026.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini)
+- **Dimensions** : Paysage 16:9 — 1600×900
+- **Poids** : ~48 Ko (WebP, qualité 80)
+- **Description** : Frise chronologique stylisée sur fond dégradé diagonal violet (#7c3aed) vers ambre/doré (#f59e0b), traversée par un chemin violet clair ondulant de bas-gauche vers haut-droite, ponctué de 7 jalons lumineux ambre. Au-dessus de chaque jalon, une icône symbolisant un chapitre du bilan IA du 1er semestre 2026 : cerveau-circuit (course des modèles), deux robots connectés partageant des données (agents IA), graphique à flèche descendante avec pièce dollar (effondrement du prix des tokens), loupe sur données et graphiques (réponses IA dans la recherche Google), bouclier violet à coche dorée (sécurité des agents), réseau de cerveaux et rouages interconnectés (open source), drapeau européen violet aux étoiles dorées avec badge « AI » (souveraineté européenne / Mistral). Motifs de circuits imprimés discrets dans les coins. Pas de texte hormis « EU » et « AI » sur le drapeau.
+- **Contexte éditorial** : Image hero de l'article « IA janvier-juillet 2026 : sept mois de bascule, et ce que votre PME doit en retenir » — bilan sourcé des 7 premiers mois de 2026 (course des modèles, Google AI Overviews, open source, agents, sécurité, Mistral, prix), chaque chapitre conclu par un verdict PME.
+- **Usage suggéré** : Hero de l'article `/blog/bilan-ia-janvier-juillet-2026`.
+- **Alt text suggéré** : "Frise chronologique illustrée des sept moments clés de l'IA au premier semestre 2026 : modèles, agents, prix en baisse, recherche Google, sécurité, open source et souveraineté européenne"
+
+---
+
 ## serveur-mcp-heberge-pme.webp
 
 - **Type** : Illustration isométrique flat design (IA générée via Gemini)

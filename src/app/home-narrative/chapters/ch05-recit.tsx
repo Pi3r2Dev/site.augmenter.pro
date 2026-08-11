@@ -43,11 +43,11 @@ const ARTICLES: FeatureItem[] = [
   },
   {
     kind: "article",
-    tag: "Claude Fable",
-    title: "Votre code vieillit en silence : le prompt qui audite tout le projet",
+    tag: "Bilan 2026",
+    title: "IA janvier-juillet 2026 : sept mois de bascule pour votre PME",
     excerpt:
-      "Le prompt d'audit en 4 phases pour Claude Fable 5 : cartographie, constats fichier:ligne, plan de remise à niveau. Testé sur un vrai projet — 11 constats en 3 minutes.",
-    href: "/blog/prompt-audit-projet-claude-fable",
+      "Quatre modèles frontier en deux mois, agents open source, prix divisés par huit, IA en tête de Google. Le tri — fait, sourcé, et traduit en décisions PME.",
+    href: "/blog/bilan-ia-janvier-juillet-2026",
     palette: "amber",
     seed: 53,
   },

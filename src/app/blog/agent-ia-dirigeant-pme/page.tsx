@@ -308,6 +308,15 @@ export default function Article() {
           quoi industrialiser ensuite &mdash; avec des chiffres, pas une
           promesse de plaquette.
         </p>
+        <p>
+          Le paysage des agents bouge vite : OpenClaw, Hermes et les messageries
+          hybrides humains-agents ont explosé au premier semestre 2026 — avec
+          leurs promesses et leurs failles de sécurité. Notre{" "}
+          <Link href="/blog/bilan-ia-janvier-juillet-2026">
+            bilan IA janvier-juillet 2026
+          </Link>{" "}
+          fait le point sur ce qui est mûr et ce qui ne l&apos;est pas encore.
+        </p>
 
         {/* ===== FAQ ===== */}
         <h2>FAQ &mdash; Agent IA pour PME</h2>

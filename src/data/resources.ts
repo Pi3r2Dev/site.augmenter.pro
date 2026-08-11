@@ -93,6 +93,19 @@ export interface CatalogArticle extends ArticleBentoData {
 
 export const ARTICLES: CatalogArticle[] = [
   {
+    slug: "bilan-ia-janvier-juillet-2026",
+    title:
+      "IA janvier-juillet 2026 : sept mois de bascule, et ce que votre PME doit en retenir",
+    excerpt:
+      "Quatre modèles frontier en deux mois, des agents open source à 250 000 étoiles GitHub, des prix divisés par huit, l'IA en tête de vos recherches Google. Le tri — fait, sourcé, et traduit en décisions PME.",
+    tldr: "Sept mois d'IA en accéléré : les modèles se renouvellent toutes les 8 semaines (n'attendez plus « le bon »), Google affiche ses réponses IA en France depuis le 22 juillet (–58 % de clics : être cité > être classé), les agents sont mûrs mais à cadrer (21 000 instances exposées), et l'IA bien outillée divise les coûts par 3 — mesuré sur 190 h de mission terrain.",
+    tags: ["IA", "PME"],
+    readTime: "14 min",
+    image: "/images/blog/bilan-ia-janvier-juillet-2026.webp",
+    sectors: ["Tous"],
+    pains: ["demarrage", "cyber", "prestataire"],
+  },
+  {
     slug: "serveur-mcp-heberge-pme",
     title:
       "Serveur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?",

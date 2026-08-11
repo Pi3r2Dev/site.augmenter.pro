@@ -1,5 +1,6 @@
 import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
+import Link from "next/link";
 
 export const metadata = articleMetadata({
   title: "Comparatif LLM pour la Vente : GPT, Claude, Gemini (2026)",
@@ -124,6 +125,17 @@ export default function Article() {
       <p>
         Ce tableau détaille les forces et faiblesses des LLM à chaque étape du
         cycle de vente commerciale, ainsi que l&apos;impact RGPD à considérer.
+      </p>
+      <p>
+        <strong>Note de contexte (juillet 2026)</strong> : les modèles évoluent
+        vite — plusieurs générations se sont succédé depuis la rédaction de ce
+        comparatif. Les forces et faiblesses par étape du cycle de vente
+        restent valables ; pour l&apos;état à jour du marché des modèles
+        (Claude 5, GPT-5.6, Gemini 3.6, open source), lisez notre{" "}
+        <Link href="/blog/bilan-ia-janvier-juillet-2026">
+          bilan IA janvier-juillet 2026
+        </Link>
+        .
       </p>
 
       <div className="mt-8 space-y-6">
