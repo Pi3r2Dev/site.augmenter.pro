@@ -566,8 +566,9 @@ h3[id] {
   border-radius: 50%;
   background: var(--ra-400);
 }
-.takeaways-block strong {
-  color: #fff;
+.takeaways-block strong,
+.takeaways-block li strong {
+  color: var(--ra-400);
 }
 
 /* ── Barre de progression ──────────────────────────────────── */
