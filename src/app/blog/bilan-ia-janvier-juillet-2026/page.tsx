@@ -7,9 +7,9 @@ import { KeyTakeaways } from "@/components/article/key-takeaways";
 import Link from "next/link";
 
 export const metadata = articleMetadata({
-  title: "IA 2026 : 7 mois de bascule — le bilan pour votre PME",
+  title: "Bilan IA 2026 : ce que votre concurrent a déjà compris",
   description:
-    "4 modèles frontier en 2 mois, agents open source, prix divisés par 8, IA en tête de Google : ce qui a changé de janvier à juillet 2026 — et quoi en faire.",
+    "–58 % de clics sous AI Overview, tokens –88 %, 190 h de mission terrain pour ≈ 6 000 € : le bilan IA janvier-juillet 2026 en 7 verdicts pour votre PME.",
   slug: "bilan-ia-janvier-juillet-2026",
 });
 

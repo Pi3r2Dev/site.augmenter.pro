@@ -69,3 +69,13 @@ Tag 3-4 dirigeants de boîtes de BTP du 78 (fais une recherche LinkedIn : "Direc
 
 Message : "J'ai écrit ça en pensant aux problématiques de chantiers que je vois dans le coin, ça pourrait vous intéresser."
 
+
+---
+
+## 📌 Ajout 2026-08-11 — Article planifié : « Ce que ChatGPT dit de votre PME »
+
+**Origine** : relecture externe du bilan IA janvier-juillet 2026 (point 4 — « ce que l'IA dit de vous »). Décision : article dédié plutôt qu'encadré, pour ne pas alourdir le bilan (2 600 mots) et créer un 2e contenu GEO.
+
+- **Sujet** : « Ce que ChatGPT dit de votre PME : le test en 10 minutes » — protocole pour tester sa visibilité dans ChatGPT/Perplexity/Gemini (les 3 requêtes à poser, quoi regarder, comment corriger), avec **vraies captures** des réponses (à produire par Pierre — jamais de captures fabriquées, E-E-A-T).
+- **Maillage prévu** : lien depuis le chapitre « Google a mis l'IA en tête de vos résultats » du bilan (`/blog/bilan-ia-janvier-juillet-2026`) + depuis `/blog/veille-concurrentielle-ia-pme`.
+- **Prérequis manuel** : tester « bilan IA premier semestre 2026 PME France » + « meilleure agence IA PME Yvelines » dans ChatGPT/Perplexity/Claude, capturer les réponses (elles servent aussi de T0 pour mesurer la citation du bilan à T+30).
