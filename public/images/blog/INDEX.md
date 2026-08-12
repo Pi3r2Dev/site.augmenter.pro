@@ -372,3 +372,15 @@
 - **Contexte éditorial** : Image hero de l'article sur le paradoxe du patron-goulot IA. Illustre visuellement le concept central : le dirigeant qui pensait que l'IA le libérerait se retrouve en réalité écrasé par toutes les sollicitations et la centralisation, pendant que ses équipes restent en retrait. La composition « tout converge vers le patron » est volontairement chargée et ironique.
 - **Usage suggéré** : Hero d'article "Le patron-goulot : quand l'IA rend le dirigeant PME encore plus indispensable".
 - **Alt text suggéré** : "Dirigeant PME en costume portant une pile d'ordinateurs et de tablettes, écrasé sous des flèches qui convergent de partout — symbolise le paradoxe du patron-goulot quand l'IA centralise au lieu de libérer"
+
+---
+
+## compte-rendu-reunion-ia.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini)
+- **Dimensions** : Paysage 16:9 (1600×900)
+- **Poids** : ~34 Ko
+- **Description** : Sur fond dégradé violet vers ambre, une main violette stylisée tient un smartphone affichant une conversation de messagerie (bulles de chat violettes et blanches). Au centre de la conversation, un petit robot assistant souriant violet/ambre intégré comme un membre de la discussion. Du téléphone s'échappent, en halo ambre, des icônes symbolisant ce que l'agent exécute : document de compte rendu signé, coche de validation, camion de livraison rapide avec colis, contrat avec signature et tampon, engrenage. Style épuré, sans texte.
+- **Contexte éditorial** : Image hero de l'article comparatif sur les comptes rendus de réunion par IA et l'agent qui vit dans les conversations (WhatsApp/Telegram) — dictée, suivi fournisseurs, devis signés. La composition « l'agent dans le chat, les actions qui en sortent » illustre la thèse : l'outil transcrit, l'agent travaille.
+- **Usage suggéré** : Hero d'article "Compte rendu de réunion par IA : les outils font le résumé, l'agent fait le travail".
+- **Alt text suggéré** : "Main tenant un smartphone avec une conversation de messagerie où un robot assistant IA répond, entouré d'icônes de compte rendu, validation, livraison et signature électronique — l'agent IA qui agit depuis le chat"

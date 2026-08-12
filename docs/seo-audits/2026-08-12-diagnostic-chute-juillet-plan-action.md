@@ -103,6 +103,34 @@ audit / automatisation / formation / assistant / agent / agence **ia pour pme** 
 | devis audit sécurité informatique | 27 | 26 | Rattacher au refresh millésime cout-audit |
 | compte rendu / chantier / transcription / rgpd / ocr | **0** | — | **Terrain vierge** : aucune empreinte, l'article chantier est une conquête pure (pas de quick win, mais pas de cannibalisation non plus) |
 
+## 4ter. Volumes Keyword Planner (2026-08-12, France, toutes langues)
+
+Compte Google Ads 602-478-7917 finalisé (facturation validée par PL, **compte en veille diffusion** : validation d'identité non faite → aucune annonce ne peut tourner, 0 € de risque). Plan KP `planId=1432227094`.
+
+| Requête | Volume mensuel | Concurrence | Tendance YoY | CPC haut |
+|---|---|---|---|---|
+| **compte rendu réunion ia** | **100 – 1 k** | Élevée | stable | 3,85 € |
+| **ia compte rendu réunion** | **100 – 1 k** | Élevée | stable | 3,01 € |
+| **ia rgpd** | **100 – 1 k** | Moyenne | stable | 8,02 € |
+| ia souveraine france | 10 – 100 | **Faible** | **+900 %** | 2,93 € |
+| agent ia pme | 10 – 100 | Élevée | +∞ | 6,33 € |
+| automatisation ia pme | 10 – 100 | Moyenne | +∞ | 8,03 € |
+| formation ia pme | 10 – 100 | Moyenne | +∞ | 6,47 € |
+| ia devis btp | 10 – 100 | Élevée | stable | 7,62 € |
+| ia suivi de chantier | 10 – 100 | Élevée | stable | 5,75 € |
+| intégrer l'ia dans son entreprise | 10 – 100 | Élevée | stable | 13,56 € |
+| transcription réunion (ia) | 10 – 100 | Moy./Élevée | stable | ~3 € |
+| ia analyse d'image | 10 – 100 | Moyenne | stable | 1,61 € |
+| ia compte rendu chantier | < 10 | — | — | — |
+| ia devis travaux, ia lecture de documents, ia rgpd compatible, mise en place ia entreprise, audit ia pme, assistant ia pme | < 10 affiché | — | — | — |
+
+**Lecture** :
+- Le filon **compte rendu réunion IA** est confirmé comme le plus gros (2 requêtes à 100-1k qui se captent avec le même article).
+- **« ia rgpd » à 100-1k en concurrence Moyenne** = 2e cible, et l'angle se marie naturellement avec la 1re (conformité des outils de transcription).
+- **« ia souveraine france » +900 % YoY, concurrence Faible** = vague montante à prendre tôt.
+- « ia compte rendu chantier » < 10/mois : la cible choisie initialement est une niche à intention maximale mais volume quasi nul — à traiter comme **volet BTP** d'un article réunion, ou article dédié en 2e vague.
+- « audit ia pme » affiché < 10 mais 132 impressions GSC/4 mois : le volume réel est masqué par l'arrondi Google — le quick win `/audit-ia-pme` reste valide.
+
 ## 5. Plan d'action
 
 ### Phase 0 — Hygiène technique (fait / en cours)
@@ -124,9 +152,9 @@ audit / automatisation / formation / assistant / agent / agence **ia pour pme** 
 
 ### Phase 2 — Contenu « langage de l'outil » (semaines 2-6)
 Articles-tests terrain (E-E-A-T réel : tester les outils, pas les lister), chacun convergeant vers l'Audit 180° :
-- [ ] Cible 1 (quasi vierge, persona parfait) : « ia compte rendu chantier » / « ia suivi de chantier »
-- [ ] Cible 2 (dense mais gagnable, angle PME+RGPD) : « ia compte rendu réunion »
-- [ ] Cible 3 (confiance, YMYL légitime) : « ia rgpd compatible » — quels outils IA sont conformes CNIL pour une PME
+- [ ] **Cible 1 (re-priorisée 2026-08-12 sur données KP, validée PL)** : article fusionné « **compte rendu de réunion IA** » (2 requêtes × 100-1k) avec **volet chantier/BTP** (« ia compte rendu chantier », « ia suivi de chantier ») et **grille de conformité RGPD** (capte « ia rgpd » 100-1k). Banc d'essai à monter : ~6 outils (Teams/Copilot natif, Noota 🇫🇷, Leexi 🇫🇷🇧🇪, Fireflies, tl;dv 🇪🇺, Whisper local = angle souverain/RGPD), critères : qualité FR, RGPD/hébergement, prix PME, cas chantier (dictée terrain).
+- [ ] Cible 2 (vague +900 %, concurrence Faible) : « ia souveraine france » — peut réutiliser les résultats Whisper local du banc d'essai 1
+- [ ] Cible 3 (confiance, YMYL légitime) : « ia rgpd » pilier dédié si le volet RGPD de l'article 1 confirme la traction
 - [ ] Cible 4 (BTP) : « ia devis btp » / « ia devis travaux »
 - [ ] Millésime : rafraîchir `cout-audit-informatique-yvelines` avec « 2026 » dans le title + vraie mise à jour du contenu (tous les gagnants SERP affichent l'année)
 

@@ -93,6 +93,19 @@ export interface CatalogArticle extends ArticleBentoData {
 
 export const ARTICLES: CatalogArticle[] = [
   {
+    slug: "compte-rendu-reunion-ia",
+    title:
+      "Compte rendu de réunion par IA : les outils font le résumé, l'agent fait le travail",
+    excerpt:
+      "Transcrire une réunion, n'importe quel outil sait le faire en 2026. Mais le compte rendu n'est que la partie visible : décisions à exécuter, fournisseur à relancer, devis à envoyer. Comparatif honnête — et ce qui change quand l'assistant vit dans vos conversations.",
+    tldr: "Les outils de compte rendu IA (Copilot, Noota, Leexi, Fireflies, tl;dv) transcrivent bien mais s'arrêtent au résumé. Le vrai gain 2026 : un agent qui vit dans votre WhatsApp/Telegram, branché sur l'ERP et les mails — dictée de compte rendu, suivi fournisseurs, devis signés — avec un garde-fou absolu : il propose, vous validez. Vérifiez toujours l'hébergement des données (4 questions RGPD) ; le 100 % local existe pour le confidentiel.",
+    tags: ["IA", "PME"],
+    readTime: "12 min",
+    image: "/images/blog/compte-rendu-reunion-ia.webp",
+    sectors: ["Tous", "BTP & rénovation", "Commerce & service local"],
+    pains: ["repetitif", "goulot", "demarrage"],
+  },
+  {
     slug: "bilan-ia-janvier-juillet-2026",
     title:
       "IA janvier-juillet 2026 : sept mois de bascule, et ce que votre PME doit en retenir",
