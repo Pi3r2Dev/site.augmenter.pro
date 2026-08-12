@@ -913,11 +913,10 @@ Un diagnostic de 60 min suffit pour savoir par où commencer. Sans engagement, l
 
 ## https://augmenter.pro/prompts
 
-dateModified: 2026-02-13
+dateModified: 2026-08-12
 
-# Bibliothèque de Prompts IA
-Copiez-collez ces prompts dans ChatGPT, Claude ou Gemini. Adaptez-les à votre entreprise en 2 minutes.
-prompts catégories
+# Prompts ChatGPT & Claude pour PME
+Copiez-collez ces prompts dans ChatGPT, Claude ou Gemini. Adaptez-les à votre entreprise en 2 minutes. Chaque prompt embarque un rôle d'expert, votre contexte métier, une tâche précise et un format de sortie exploitable (structure R-C-F-T) — 15 prompts, 6 catégories : Commercial & Vente, Productivité, Marketing, ERP & Outils Métier, Stratégie IA, Cybersécurité.
 Débutant~3 min
 ### Email de prospection B2B personnalisé
 Génère un email de prospection ciblé qui évite le spam et parle directement aux douleurs de votre prospect. Adaptable à tout secteur.

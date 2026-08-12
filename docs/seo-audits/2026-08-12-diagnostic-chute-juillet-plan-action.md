@@ -75,8 +75,10 @@ audit / automatisation / formation / assistant / agent / agence **ia pour pme** 
 | Gratuit à activer | **Google Keyword Planner** | Volumes FR officiels (fourchettes) pour prioriser | 0 € (compte Ads) |
 | Gratuit | **Google Trends** | Comparer formulations, requêtes montantes | 0 € |
 | Gratuit (maison) | **Cron Google Suggest** sur VPS | Balayage 50 seeds × a-z, alerte nouveautés | 0 € |
-| **Priorité n°1 payant** | **DataForSEO** (MCP `dfs-mcp` déjà prévu au CLAUDE.md) | Volumes FR exacts, difficulté, SERP historisées, dans `/create-article` et `/seo-audit` | Dépôt min 50 $, ~0,0006 $/SERP, sans abonnement |
-| Open source self-hosted | **SerpBear** (Docker, sur VPS IONOS — pas Coolify, saturé) | Rank tracking quotidien google.fr ; peut consommer DataForSEO | 0 € + API |
+| ~~Payant~~ **écarté** | ~~DataForSEO~~ (décision PL 2026-08-12 : pas de recharge 50 $) | Volumes remplacés par Keyword Planner + GSC ; SERP par SerpApi free | — |
+| **Gratuit récurrent** | **SerpApi free plan** (250 recherches/mois, sans CB) | Scraper officiel de SerpBear → 20 mots-clés suivis 2×/semaine | 0 € |
+| Gratuit (réserve) | **Serper.dev** (2 500 crédits offerts, sans CB) | Scraper de secours si quota SerpApi dépassé | 0 € |
+| Open source self-hosted | **SerpBear** — déployé 2026-08-12 sur VPS IONOS, `http://10.10.0.1:3040` (WireGuard ou tunnel SSH `ssh -L 3040:10.10.0.1:3040 ionos`) | Rank tracking google.fr ; scraper SerpApi à brancher (Settings → Scraper) | 0 € |
 | Freemium | **AlsoAsked** (3/jour gratuits) | Arbre des People Also Ask → structure H2 des articles | 0-15 €/mois |
 | Freemium FR | **Haloscan** | Base de données FR native, longue traîne française | ~20-40 €/mois, free tier |
 | Confort | **Keywords Everywhere** | Volumes en overlay navigateur | ~2 $/mois |
@@ -112,8 +114,13 @@ audit / automatisation / formation / assistant / agent / agence **ia pour pme** 
 ### Phase 1 — Données (semaine 1)
 - [x] Mining GSC regex (2026-08-12) → résultats en §4bis ; quick win n°1 = `/audit-ia-pme`
 - [x] Cron Google Suggest déployé sur VPS IONOS (2026-08-12) : `/root/seo-suggest-watch/`, quotidien 07:30, baseline 114 requêtes ; nouveautés dans `new-queries.log`
-- [ ] **Recharger les crédits DataForSEO** (compte existant, 402 depuis 2026-08-12) → re-valider volumes des cibles §3
-- [ ] Déployer SerpBear sur VPS IONOS avec les ~20 requêtes cibles (après recharge DataForSEO — il s'en sert comme scraper)
+- [x] ~~DataForSEO~~ écarté (décision PL) → remplacé par SerpApi free (250/mois) + Serper.dev (2 500 crédits) + Keyword Planner pour les volumes
+- [x] SerpBear déployé sur VPS IONOS (2026-08-12) : `http://10.10.0.1:3040`, volume Docker `serpbear_data` (identifiants transmis en session, PAS dans ce repo)
+- [x] SerpApi branché + domaine augmenter.pro + 22 requêtes cibles chargées (tags : btp / transcription / confiance / pme / tache / local / veille), 1er relevé fait (2026-08-12)
+- [x] ⚠ **Limite découverte** : Google ne sert plus `num=100` → SerpApi via SerpBear = top 10 seulement (le multi-pages de SerpBear ne s'applique pas aux scrapers « native pagination »). Résultat J1 : augmenter.pro hors top 10 sur les 22 requêtes (cohérent avec l'analyse SERP).
+- [x] Réglages posés : `scrape_interval: weekly` (lundi 00:00), `scrape_strategy: custom`, `scrape_pagination_limit: 4` (top 40) — budget ~88 crédits/semaine
+- [ ] PL : créer un compte **Serper.dev** (2 500 crédits offerts, sans CB) → transmettre la clé à Claude qui bascule le scraper (Serper supporte le multi-pages → visibilité top 40, la zone quick wins 15-40)
+- [ ] PL : compte Google Ads (sans dépense) pour Keyword Planner → valider les volumes des cibles §3
 
 ### Phase 2 — Contenu « langage de l'outil » (semaines 2-6)
 Articles-tests terrain (E-E-A-T réel : tester les outils, pas les lister), chacun convergeant vers l'Audit 180° :

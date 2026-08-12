@@ -745,7 +745,7 @@ export function promptToResource(p: Prompt): HubResource {
     typeLabel: "Prompt",
     title: p.title,
     tldr: p.description,
-    href: "/prompts",
+    href: `/prompts#${p.id}`,
     meta: `${PROMPT_DIFFICULTY_LABEL[p.difficulty]} · ${p.estimatedTime}`,
     sectors: PROMPT_SECTOR_OVERRIDES[p.id] ?? ["Tous"],
     pains: PROMPT_PAIN_OVERRIDES[p.id] ?? PROMPT_CATEGORY_PAINS[p.category],

@@ -85,6 +85,7 @@ Prompts prêts à l'emploi pour dirigeants de PME, à copier-coller dans ChatGPT
 ### Stratégie IA
 - **Auto-diagnostic IA pour dirigeant PME** — Évaluation maturité IA en 5 axes avec scorecard et quick wins
 - **Estimation ROI projet IA** — Calcul retour sur investissement avec coûts cachés et 3 scénarios
+- **Claude Code : prompt d'architecte logiciel** — Prompt système à envoyer avant tout projet Claude Code (agent architecte senior qui respecte votre ARCHITECTURE.md) — guide : https://augmenter.pro/blog/claude-code-prompt-architecture
 - **Claude Fable : audit complet de projet en 4 phases** — Prompt d'audit de dépôt de code (cartographie, constats fichier:ligne sévérisés, stratégie, plan en jalons), version française pour Claude Fable 5 — guide : https://augmenter.pro/blog/prompt-audit-projet-claude-fable
 
 ### Cybersécurité
@@ -185,7 +186,7 @@ Tous les articles du blog sont rédigés par Pierre Legrand, avec assistance d'o
 - https://augmenter.pro/audit-informatique-yvelines — Audit Informatique Yvelines (78)
 - https://augmenter.pro/audit-informatique-val-doise — Audit Informatique Val-d'Oise (95)
 - https://augmenter.pro/integration-mcp — Intégration MCP pour PME (serveurs MCP, agents IA, CRM/ERP)
-- https://augmenter.pro/prompts — Bibliothèque de Prompts IA (13 prompts prêts à l'emploi pour PME)
+- https://augmenter.pro/prompts — Prompts ChatGPT & Claude pour PME (15 prompts prêts à l'emploi, 6 catégories)
 - https://augmenter.pro/mentions-legales — Mentions Légales
 - https://augmenter.pro/politique-confidentialite — Politique de Confidentialité (RGPD, cookies, droits)
 - https://augmenter.pro/cgv — Conditions Générales de Vente
