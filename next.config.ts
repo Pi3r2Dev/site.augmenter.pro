@@ -25,6 +25,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Plafonne le s-maxage émis sur le HTML prérendu (défaut Next.js : 31536000 = 1 an).
+  // Hostinger ne garde qu'une version de build : un HTML caché par le CDN au-delà d'un
+  // déploiement référence des CSS/JS hashés supprimés (404) → pages sans styles.
+  expireTime: 300,
   async headers() {
     return [
       {
