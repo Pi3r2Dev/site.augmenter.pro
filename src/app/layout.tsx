@@ -4,12 +4,14 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { ASSET_RECOVERY_SCRIPT } from "@/lib/asset-recovery";
 
 /**
  * ISR site-wide : sans `revalidate`, Next émet `Cache-Control: s-maxage=31536000` (1 an) sur
  * le HTML statique — un cache partagé (CDN Hostinger) peut alors servir un HTML périmé qui
  * référence des CSS/JS hashés supprimés au déploiement suivant (une seule version conservée).
- * Avec revalidate=300 + expireTime=3600 (next.config.ts) → `s-maxage=300, stale-while-revalidate`.
+ * Avec revalidate=300 + expireTime=300 (next.config.ts) → `s-maxage=300` sans fenêtre stale.
+ * Troisième ligne de défense côté client : `ASSET_RECOVERY_SCRIPT` (cf. src/lib/asset-recovery.ts).
  */
 export const revalidate = 300;
 
@@ -262,6 +264,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Récupère un HTML servi par le CDN qui référencerait des assets d'un build supprimé.
+            Doit rester en tête du <head> : le listener doit exister avant le chargement des chunks. */}
+        <script dangerouslySetInnerHTML={{ __html: ASSET_RECOVERY_SCRIPT }} />
         {/* Legacy Facebook / certains plugins SEO (IMAGE_SRC) */}
         <link rel="image_src" href={`https://augmenter.pro${OG_IMAGE_PATH}`} />
         <script

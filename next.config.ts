@@ -25,12 +25,13 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  // Fenêtre stale-while-revalidate des pages ISR (combiné au `export const revalidate = 300`
-  // du root layout → `s-maxage=300, stale-while-revalidate=3300` sur le HTML).
-  // Sans ça, Next émet s-maxage=31536000 (1 an) sur le HTML statique ; or Hostinger ne garde
-  // qu'une version de build : un HTML caché par le CDN au-delà d'un déploiement référence
-  // des CSS/JS hashés supprimés (404) → pages sans styles.
-  expireTime: 3600,
+  // Borne haute du cache HTML partagé. Combiné au `export const revalidate = 300` du root layout,
+  // Next émet `s-maxage=300, stale-while-revalidate=0` : le CDN ne peut plus servir de réponse
+  // périmée du tout, il repasse par l'origine dès la 5e minute (upstream mesuré ~25 ms).
+  // Enjeu : Hostinger ne garde qu'une version de build. Un HTML caché au-delà d'un déploiement
+  // référence des CSS/JS hashés supprimés (404) → page sans styles et exception à l'hydratation.
+  // Valeur précédente 3600 → laissait une fenêtre stale de 55 min après chaque mise en ligne.
+  expireTime: 300,
   async headers() {
     return [
       {
