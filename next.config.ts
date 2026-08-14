@@ -25,10 +25,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  // Plafonne le s-maxage émis sur le HTML prérendu (défaut Next.js : 31536000 = 1 an).
-  // Hostinger ne garde qu'une version de build : un HTML caché par le CDN au-delà d'un
-  // déploiement référence des CSS/JS hashés supprimés (404) → pages sans styles.
-  expireTime: 300,
+  // Fenêtre stale-while-revalidate des pages ISR (combiné au `export const revalidate = 300`
+  // du root layout → `s-maxage=300, stale-while-revalidate=3300` sur le HTML).
+  // Sans ça, Next émet s-maxage=31536000 (1 an) sur le HTML statique ; or Hostinger ne garde
+  // qu'une version de build : un HTML caché par le CDN au-delà d'un déploiement référence
+  // des CSS/JS hashés supprimés (404) → pages sans styles.
+  expireTime: 3600,
   async headers() {
     return [
       {

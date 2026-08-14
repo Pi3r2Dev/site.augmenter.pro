@@ -134,7 +134,7 @@ Compte Google Ads 602-478-7917 finalisé (facturation validée par PL, **compte 
 ## 5. Plan d'action
 
 ### Phase 0 — Hygiène technique (fait / en cours)
-- [x] Correctif cache HTML `expireTime: 300` (2026-08-12)
+- [x] Correctif cache HTML (2026-08-12, en 2 temps) : `expireTime` seul **ne suffit pas** — Next code en dur `s-maxage=31536000` sur les pages 100 % statiques (`expireTime` ne joue que sur l'ISR). Vrai correctif : **`export const revalidate = 300` dans le root layout** + `expireTime: 3600` → `s-maxage=300, stale-while-revalidate=3300` (validé en local, en attente de vérif prod)
 - [ ] Purge CDN post-déploiement + vérification header `s-maxage=300`
 - [ ] Screenshot GSC Statistiques d'exploration (user) → clore le volet inaccessibilité
 - [ ] Audit config CDN hPanel : envisager cache CDN sur `/_next/static` + images uniquement, HTML exclu

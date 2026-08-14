@@ -5,6 +5,14 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
+/**
+ * ISR site-wide : sans `revalidate`, Next émet `Cache-Control: s-maxage=31536000` (1 an) sur
+ * le HTML statique — un cache partagé (CDN Hostinger) peut alors servir un HTML périmé qui
+ * référence des CSS/JS hashés supprimés au déploiement suivant (une seule version conservée).
+ * Avec revalidate=300 + expireTime=3600 (next.config.ts) → `s-maxage=300, stale-while-revalidate`.
+ */
+export const revalidate = 300;
+
 /** ID du conteneur Google Tag Manager (ex. GTM-XXXXXXX). GA4 et événements se configurent dans GTM. */
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
