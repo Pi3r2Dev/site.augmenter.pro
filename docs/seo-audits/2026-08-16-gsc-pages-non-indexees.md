@@ -10,7 +10,7 @@
 | Bac | Pages | Nature | Action |
 |---|---|---|---|
 | Page avec redirection | 5 | **Informatif**, pas une erreur | Laisser les 301/308. Google indexe la destination. |
-| Doublon sans canonical utilisateur | 1 | À identifier via capture | Probable www vs apex ou ancienne URL |
+| Doublon sans canonical utilisateur | 1 | `storages.augmenter.pro` (page Hostinger clusterisée avec nowdigital.fr) | noindex déjà posé — ne pas indexer |
 | Explorée, actuellement non indexée | 15 | Refus **qualité/sélection**, pas un `robots.txt` | Hygiène + contenu (captures requises) |
 | Détectée, actuellement non indexée | 1 | Pas encore crawlée (budget) | Sitemap déjà resoumis le 2026-08-16 |
 
@@ -63,12 +63,46 @@ Constantes : [`src/lib/seo-policy.ts`](../../src/lib/seo-policy.ts).
 | `/blog/compte-rendu-reunion-ia` | Google ne reconnaît pas cette URL | Article du 12 août — candidat du bac « Détectée, non indexée » |
 | `/accueil-2`, `/accueil-narrative` | Inconnues de Google | 301 / noindex préventifs |
 
+## Captures GSC du 2026-08-16 — tri des URLs
+
+### Page avec redirection (5) — ne pas « valider la correction »
+
+Ce bac est **informatif**. Les 301/308 font leur travail. Cliquer « Valider la correction » demanderait à Google de vérifier qu'elles sont *devenues indexables* — l'inverse de ce qu'on veut.
+
+| URL | Destination déjà en place |
+|---|---|
+| `/approche-360` | `/approche` |
+| `/projets-pro` | `/idees` |
+| `/rendez-vous-audit-360` | `/contact` |
+| `/prestations-et-tarifs` | `/approche#prestations` |
+| `http://augmenter.pro/` | `https://augmenter.pro/` |
+
+### Doublon sans canonical (1) — hors de ce repo
+
+`https://storages.augmenter.pro/` — Google a choisi comme canonique **`https://www.nowdigital.fr/`** (page d'accueil Hostinger générique, clusterisée avec d'autres sites). Déjà `noindex` + `Disallow` côté storage-server (session [noindex sous-domaines](2026-08-16-noindex-sous-domaines.md)). Après recrawl, le bac doit se vider. **Ne pas indexer.** Demande de suppression GSC sur le préfixe `https://storages.augmenter.pro/` si ça traîne.
+
+### Explorée, actuellement non indexée (15)
+
+| URL | Action |
+|---|---|
+| 2 polices `/_next/static/media/*.woff2` | Ignorer — Google a raison de ne pas indexer des fonts |
+| `/sitemap.xml` | Ignorer |
+| 8 anciennes URLs déjà en 301 (`/actualites-pro`, `/plateforme`, slugs pré-`/blog/`, etc.) | Recrawl → basculeront dans « Page avec redirection » |
+| `www.augmenter.pro/` | Corrigé (fuite `:3000`) |
+| `app.augmenter.pro/` | Session noindex sous-domaines — **ne pas indexer** |
+| `/blog/comparatif-llm-vente-commerciale` | **À indexer** — contenu + maillage (cette session) |
+| `/blog/machine-de-guerre-commerciale` | **À indexer** — tags + maillage (cette session). Article court : pas de padding inventé. |
+
+### Détectée, actuellement non indexée (1)
+
+`/blog/claude-cowork-community-manager` — jamais crawlée (`Sans objet`). Article déjà solide (11 min, FAQ). Maillage depuis la home (ch05) + `lastmod` sitemap 2026-08-16 pour déclencher le crawl.
+
 ## Reste à faire (captures GSC + contenu)
 
-1. Pierre envoie une capture de **chaque bac** (les URLs visibles).
-2. Pour chaque URL « Explorée, non indexée » qu'on **veut** dans l'index : information gain, maillage, E-E-A-T — pas un `Request indexing` magique.
-3. Après déploiement : `curl -sI https://www.augmenter.pro/` → `Location: https://augmenter.pro/` **sans** `:3000`.
-4. GSC : supprimer le news-sitemap ; inspection `/prestations` ; validation des bacs (2–4 semaines, ne pas relancer en boucle).
+1. ~~Pierre envoie une capture de **chaque bac**~~ — reçu 2026-08-16.
+2. Après déploiement : `curl -sI https://www.augmenter.pro/` → `Location: https://augmenter.pro/` **sans** `:3000`.
+3. GSC UI : supprimer le news-sitemap ; **ne pas** valider le bac redirections ; inspection des 3 articles utiles ; suppression préfixe `storages.augmenter.pro` si besoin.
+4. Les 8 anciennes URLs 301 + fonts : attendre le recrawl (2–4 semaines).
 
 ## Fichiers touchés
 
@@ -77,4 +111,7 @@ Constantes : [`src/lib/seo-policy.ts`](../../src/lib/seo-policy.ts).
 - `src/middleware.ts`, `next.config.ts`
 - pages légales, `public/sitemap.xml`, `public/robots.txt`
 - suppression `public/news-sitemap.xml`, `src/app/sitemap.ts`, `src/app/robots.ts`
-- `CLAUDE.md`, templates SEO, `vitest.config.ts`
+- `src/app/home-narrative/chapters/ch05-recit.tsx` — Claude Cowork en featured home
+- `src/app/blog/comparatif-llm-vente-commerciale/page.tsx` — grille Claude/GPT/Gemini
+- `src/app/blog/machine-de-guerre-commerciale/page.tsx` + `ia-redefinit-vente-commerciale`
+- `src/app/strategie-ia-pme/page.tsx` — lien contextuel vers le comparatif

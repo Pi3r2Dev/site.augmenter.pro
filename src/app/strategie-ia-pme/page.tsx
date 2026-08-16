@@ -414,6 +414,15 @@ export default function StrategieIaPmePage() {
               approche 360°
             </Link>{" "}
             adresse ces problèmes à la racine : technique, processus et humain.
+            Pour choisir l&apos;outil commercial (Claude, GPT, Gemini) plutôt
+            que d&apos;empiler les abonnements, le{" "}
+            <Link
+              href="/blog/comparatif-llm-vente-commerciale"
+              className="text-primary underline-offset-4 hover:underline"
+            >
+              comparatif LLM pour la vente
+            </Link>{" "}
+            pose la grille par étape du cycle.
           </p>
         </div>
       </section>

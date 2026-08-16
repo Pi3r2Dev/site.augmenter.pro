@@ -1,5 +1,8 @@
 import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
+import { Memo } from "@/components/article/memo";
+import { Callout } from "@/components/article/callout";
+import { KeyTakeaways } from "@/components/article/key-takeaways";
 import Link from "next/link";
 
 export const metadata = articleMetadata({
@@ -113,28 +116,87 @@ export default function Article() {
     <ArticleLayout
       title="Comparatif : Forces et Faiblesses des LLM dans les Processus de Vente Commerciale"
       excerpt="Explorer comment l'IA transforme les pratiques de vente commerciale, en mettant en lumière des outils spécifiques, leurs applications pratiques, ainsi que leurs forces et faiblesses."
-      tags={["Intelligence Artificielle"]}
-      readTime="5 min"
+      tags={["IA", "Commercial"]}
+      readTime="8 min"
       date="18 novembre 2025"
       dateISO="2025-11-18"
-      dateModified="2025-11-18"
+      dateModified="2026-08-16"
       image="/images/blog/comparatif-llm-vente-commerciale.webp"
       slug="comparatif-llm-vente-commerciale"
     >
-      <h2>Tableau Comparatif</h2>
+      <h2>Quel modèle pour quelle tâche commerciale</h2>
       <p>
-        Ce tableau détaille les forces et faiblesses des LLM à chaque étape du
-        cycle de vente commerciale, ainsi que l&apos;impact RGPD à considérer.
+        Le tableau plus bas décrit ce que <em>n&apos;importe quel</em> LLM sait
+        faire à chaque étape du cycle. Ça n&apos;aide pas un dirigeant à
+        choisir. Voici la grille que j&apos;utilise en 2026, après des mois à
+        brancher ces modèles sur de vrais process commerciaux — pas sur des
+        démos.
       </p>
       <p>
-        <strong>Note de contexte (juillet 2026)</strong> : les modèles évoluent
-        vite — plusieurs générations se sont succédé depuis la rédaction de ce
-        comparatif. Les forces et faiblesses par étape du cycle de vente
-        restent valables ; pour l&apos;état à jour du marché des modèles
-        (Claude 5, GPT-5.6, Gemini 3.6, open source), lisez notre{" "}
-        <Link href="/blog/bilan-ia-janvier-juillet-2026">
-          bilan IA janvier-juillet 2026
+        Les millésimes bougent tous les trimestres (
+        <Memo type="link" label="Bilan IA 2026">
+          <Link href="/blog/bilan-ia-janvier-juillet-2026">
+            Claude, GPT-5.6, Gemini 3.x
+          </Link>
+        </Memo>
+        ). Le choix utile n&apos;est pas « le plus récent », c&apos;est{" "}
+        <Memo type="idea" label="La famille, pas le millésime">
+          la famille de modèle collée à la tâche
+        </Memo>
+        .
+      </p>
+      <ul>
+        <li>
+          <strong>Claude</strong> — argumentaires, e-mails, LinkedIn, recos
+          longues, relecture d&apos;un devis. C&apos;est celui qui tient une
+          voix de marque sans sonner « rédigé par une IA ». Pour une PME qui
+          vend en français, c&apos;est le défaut raisonnable.
+        </li>
+        <li>
+          <strong>GPT (ChatGPT / API OpenAI)</strong> — volume, connecteurs,
+          agents qui enchaînent des outils (CRM, tableur, navigateur). La
+          prospection de masse et le scoring y sont plus à l&apos;aise que la
+          phrase juste.
+        </li>
+        <li>
+          <strong>Gemini</strong> — si l&apos;équipe vit déjà dans Google
+          Workspace (Gmail, Docs, Drive, Meet). Hors de cet écosystème, le
+          surcoût cognitif n&apos;en vaut pas la peine.
+        </li>
+      </ul>
+      <Callout>
+        <p>
+          <strong>À retenir.</strong> Un commercial PME n&apos;a pas besoin de
+          trois abonnements. Un modèle pour écrire (Claude), et éventuellement
+          un second pour les automatisations d&apos;outils (GPT). Gemini
+          seulement si Google est déjà le système d&apos;exploitation de
+          l&apos;entreprise.
+        </p>
+      </Callout>
+      <p>
+        Le cycle complet — prospection, qualification, closing — est détaillé
+        dans{" "}
+        <Memo type="link" label="IA et cycle de vente">
+          <Link href="/blog/ia-redefinit-vente-commerciale">
+            comment l&apos;IA redéfinit la vente commerciale
+          </Link>
+        </Memo>
+        . Pour un secteur précis (rénovation énergétique), le problème n&apos;est
+        plus le modèle, c&apos;est le{" "}
+        <Link href="/blog/machine-de-guerre-commerciale">
+          canal d&apos;acquisition propriétaire
         </Link>
+        .
+      </p>
+
+      <h2>Tableau comparatif par étape du cycle</h2>
+      <p>
+        Forces, faiblesses et impact RGPD <em>quel que soit</em> le modèle. Le
+        RGPD ne se négocie pas à la génération :{" "}
+        <Memo type="idea" label="Relire avant d'envoyer">
+          consentement, minimisation, hébergement, et un humain qui relit avant
+          d&apos;envoyer
+        </Memo>
         .
       </p>
 
@@ -170,6 +232,14 @@ export default function Article() {
           </div>
         ))}
       </div>
+
+      <KeyTakeaways>
+        <ul>
+          <li>Choisissez une famille (Claude / GPT / Gemini), pas un millésime.</li>
+          <li>Un abonnement pour écrire, un second seulement si vous automatisez des outils.</li>
+          <li>Le tableau RGPD ci-dessus s&apos;applique à tous les modèles, y compris « européens ».</li>
+        </ul>
+      </KeyTakeaways>
     </ArticleLayout>
   );
 }

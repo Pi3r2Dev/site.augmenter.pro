@@ -33,6 +33,31 @@ describe("politique noindex légal", () => {
   it("n'embarque plus le fichier news-sitemap.xml", () => {
     expect(existsSync(join(root, "public/news-sitemap.xml"))).toBe(false);
   });
+
+  it("signale les 3 articles à réindexer avec un lastmod 2026-08-16", () => {
+    const sitemap = readFileSync(join(root, "public/sitemap.xml"), "utf8");
+    for (const slug of [
+      "claude-cowork-community-manager",
+      "machine-de-guerre-commerciale",
+      "comparatif-llm-vente-commerciale",
+    ]) {
+      expect(sitemap).toMatch(
+        new RegExp(
+          `/blog/${slug}</loc>\\s*<lastmod>2026-08-16</lastmod>`,
+        ),
+      );
+    }
+  });
+});
+
+describe("maillage des pages GSC « non indexées » utiles", () => {
+  it("expose Claude Cowork depuis le chapitre 5 de la home", () => {
+    const src = readFileSync(
+      join(root, "src/app/home-narrative/chapters/ch05-recit.tsx"),
+      "utf8",
+    );
+    expect(src).toContain("/blog/claude-cowork-community-manager");
+  });
 });
 
 describe("redirections SEO", () => {

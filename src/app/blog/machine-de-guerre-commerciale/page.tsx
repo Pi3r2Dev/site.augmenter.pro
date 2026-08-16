@@ -1,5 +1,8 @@
 import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
+import { Callout } from "@/components/article/callout";
+import { KeyTakeaways } from "@/components/article/key-takeaways";
+import Link from "next/link";
 
 export const metadata = articleMetadata({
   title: "Rénovation Énergétique : Arrêtez d'acheter des leads (Guide)",
@@ -13,11 +16,11 @@ export default function Article() {
     <ArticleLayout
       title="Rénovation Énergétique : Arrêtez d'acheter des leads, construisez votre propre machine de guerre commerciale"
       excerpt="Découvrez comment internaliser votre acquisition client en rénovation énergétique. De l'optimisation LLM SEO à la pré-qualification par commerciaux indépendants : la méthode Augmenter.pro pour transformer vos prospects en chantiers signés."
-      tags={["Intelligence Artificielle", "Commercial"]}
-      readTime="3 min"
+      tags={["IA", "Commercial"]}
+      readTime="4 min"
       date="28 janvier 2026"
       dateISO="2026-01-28"
-      dateModified="2026-01-28"
+      dateModified="2026-08-16"
       image="/images/blog/augmenter-pro-village-renovation-hero.webp"
       slug="machine-de-guerre-commerciale"
     >
@@ -121,6 +124,31 @@ export default function Article() {
         Prêt à reprendre le contrôle de votre acquisition ? Discutons de votre
         architecture commerciale actuelle.
       </p>
+      <Callout>
+        <p>
+          <strong>Ce que cette page n&apos;est pas.</strong> Un générateur de
+          leads magique, ni un comparatif d&apos;outils. C&apos;est l&apos;architecture
+          d&apos;un canal que vous possédez. Pour choisir le modèle IA qui
+          rédige les messages de ce canal, lisez le{" "}
+          <Link href="/blog/comparatif-llm-vente-commerciale">
+            comparatif LLM pour la vente
+          </Link>
+          ; pour le cycle complet prospection → closing,{" "}
+          <Link href="/blog/ia-redefinit-vente-commerciale">
+            comment l&apos;IA redéfinit la vente
+          </Link>
+          .
+        </p>
+      </Callout>
+      <KeyTakeaways>
+        <ul>
+          <li>Arrêter d&apos;acheter des leads revendus à quatre concurrents.</li>
+          <li>Filtrer avant d&apos;occuper un closer (SMS/e-mail, puis scout).</li>
+          <li>
+            Un CRM + des relances IA suffisent ; Excel ne tient pas l&apos;entonnoir.
+          </li>
+        </ul>
+      </KeyTakeaways>
     </ArticleLayout>
   );
 }

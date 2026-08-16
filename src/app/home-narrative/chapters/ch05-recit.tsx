@@ -23,11 +23,12 @@ interface FeatureItem {
 const ARTICLES: FeatureItem[] = [
   {
     kind: "article",
-    tag: "Serveur MCP",
-    title: "Serveur MCP hébergé : le coder, le louer ou l'héberger soi-même ?",
+    tag: "Commercial",
+    title:
+      "J'ai transformé Claude Cowork en community manager : le setup, ce qui a foiré",
     excerpt:
-      "Brancher l'IA sur vos vraies données sans usine à gaz. Un seul détail départage les trois chemins : où vivent vos données. Coûts réels et grille de décision PME.",
-    href: "/blog/serveur-mcp-heberge-pme",
+      "Six semaines à confier les réseaux à Claude Cowork. Le setup en 4 briques, les prompts, les chiffres — et les trois fois où ça a mal tourné.",
+    href: "/blog/claude-cowork-community-manager",
     palette: "violet",
     seed: 41,
   },

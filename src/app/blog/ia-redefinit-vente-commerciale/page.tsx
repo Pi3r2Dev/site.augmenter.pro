@@ -1,5 +1,6 @@
 import { articleMetadata } from "@/lib/article-metadata";
 import { ArticleLayout } from "@/components/layout/article-layout";
+import Link from "next/link";
 
 export const metadata = articleMetadata({
   title: "IA & Vente Commerciale : De la Prospection au Closing (2026)",
@@ -13,7 +14,7 @@ export default function Article() {
     <ArticleLayout
       title="De la Prospection au Closing : Comment l'IA redéfinit la Vente Commerciale"
       excerpt="L'intelligence artificielle n'est plus un simple gadget technologique ; elle est devenue le copilote stratégique de la performance commerciale."
-      tags={["Intelligence Artificielle", "Commercial"]}
+      tags={["IA", "Commercial"]}
       readTime="3 min"
       date="18 novembre 2025"
       dateISO="2025-11-18"
@@ -129,6 +130,17 @@ export default function Article() {
         faible valeur ajoutée et fournit des insights stratégiques, libérant du
         temps pour ce que l&apos;humain fait de mieux : écouter, comprendre et bâtir
         une relation de confiance.
+      </p>
+      <p>
+        Pour coller un modèle à chaque étape (Claude, GPT, Gemini), le{" "}
+        <Link href="/blog/comparatif-llm-vente-commerciale">
+          comparatif LLM pour la vente
+        </Link>{" "}
+        est la grille. Pour un secteur qui achète encore des leads au kilo,{" "}
+        <Link href="/blog/machine-de-guerre-commerciale">
+          la machine de guerre en rénovation énergétique
+        </Link>
+        .
       </p>
     </ArticleLayout>
   );

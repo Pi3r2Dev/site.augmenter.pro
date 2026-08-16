@@ -4,7 +4,7 @@ Session handoff and orchestration tracker. Created and maintained by `/flow`.
 
 | Date | Slug | Status | Mode | Next step |
 |------|------|--------|------|-----------|
-| 2026-08-16 | [gsc-pages-non-indexees](../seo-audits/2026-08-16-gsc-pages-non-indexees.md) | open | solo | Captures GSC des 4 bacs → renforcement éditorial · supprimer news-sitemap dans l'UI GSC · vérifier www sans :3000 post-deploy |
+| 2026-08-16 | [gsc-pages-non-indexees](../seo-audits/2026-08-16-gsc-pages-non-indexees.md) | open | solo | Déployer · ne pas valider le bac redirections · GSC : inspecter les 3 articles + supprimer news-sitemap · recrawl storages |
 | 2026-08-12 | [article-bilan-ia-2026](2026-08-12-article-bilan-ia-2026.md) | open | solo | Ping IndexNow post-deploy · captures LLM T0 · /relecture-editoriale |
 | 2026-06-17 | [ligne-editoriale-lockert-tu](2026-06-17-ligne-editoriale-lockert-tu.md) | open | solo | `npm run build` · valider claims robotique · variantes lede home Ch1 · registre `tu` pages services/audits · suivre A/B |
 | 2026-05-28 | [firecrawl-ionos-migration](../decisions/0004-firecrawl-ionos-migration.md) | closed | solo | Cutover prod ouquequoi + app.augmenter.pro · retrait crawl4ai Coolify |
