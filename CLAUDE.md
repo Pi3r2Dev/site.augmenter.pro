@@ -10,6 +10,8 @@ Marketing website for **augmenter.pro** — an AI consulting and digital transfo
 
 **Contexte partagé par toutes les commandes SEO** : [`.claude/templates/seo/project-context.md`](.claude/templates/seo/project-context.md) — à consulter avant toute création/modification de contenu.
 
+**Gisement de preuves terrain (mission ERP)** : [`.claude/templates/seo/terrain-odoo-reva9.md`](.claude/templates/seo/terrain-odoo-reva9.md) — pont vers le repo de mission [`../odoo-reva9`](../odoo-reva9) (5 mois de mission Odoo/Claude tracée au quart d'heure). Chiffres réels, pièges payés, angles d'articles adossés au terrain, **et règles de confidentialité client/M&A à trancher avant toute publication**. À lire avant d'écrire un contenu du cluster Tier 1 (Claude / Odoo / ERP / MCP).
+
 **Charte éditoriale (voix, ton, arc, lexique, E-E-A-T)** : [`.claude/templates/seo/charte-editoriale.md`](.claude/templates/seo/charte-editoriale.md) — source de vérité de la **voix** du site. Relire un brouillon contre la charte : `/relecture-editoriale`.
 
 **Playbook influence éthique (la *mécanique* : accroches, persuasion transparente, accroches de mail)** : [`.claude/templates/seo/playbook-influence-ethique.md`](.claude/templates/seo/playbook-influence-ethique.md) — couche « comment écrire » dérivée de l'hypnose humaniste (Lockert, source primaire PDF) ; détaille la règle §3.4 de la charte. **Découplage registre** (charte §3.3) : pages commerciales/hub/landings = **tutoiement** (`/augmenter-mon-entreprise`, `/contact` déjà migrées) ; récits narratifs (`/`, `/approche`) = **vouvoiement**.
@@ -41,6 +43,7 @@ npm run dev       # Start dev server with --webpack (NOT Turbopack — see below
 npm run build     # Production build (Node.js standalone server)
 npm run start     # Start production server
 npm run lint      # ESLint
+npm test          # Vitest — hygiène SEO (www→apex, sitemap, 301 /accueil-2)
 ```
 
 ⚠ **Le script `dev` force `--webpack`** (pas Turbopack). Turbopack résout `tailwindcss` depuis le dossier parent `d:\SourceFast\coolify_linux\` au lieu du projet et plante. Le build prod tourne sur webpack aussi (`next build --webpack`). Si tu reviens à `next dev` sans flag, le serveur ne montera plus.
@@ -268,8 +271,8 @@ Voir [public/images/](public/images/) — convention WebP, kebab-case, INDEX.md 
 - [public/llms.txt](public/llms.txt) — résumé site pour crawlers LLM (Perplexity, ChatGPT, Claude)
 - [public/llms-full.txt](public/llms-full.txt) — version étendue (llmstxt.org spec)
 - [public/robots.txt](public/robots.txt) — directives crawlers + sitemap reference + bot AI explicites
-- [public/sitemap.xml](public/sitemap.xml) — toutes les URLs avec priorities et lastmod
-- [public/news-sitemap.xml](public/news-sitemap.xml) — sitemap dédié aux articles blog
+- [public/sitemap.xml](public/sitemap.xml) — URLs **indexables** uniquement (pas de pages légales noindex)
+- **Pas de news-sitemap** : le site n'est pas une publication Google News (retiré 2026-08-16)
 
 ### Google Tag Manager (GTM) — GA4 et événements
 
@@ -334,20 +337,44 @@ Use `/create-article <sujet>` or follow this manual process:
 6. **Générer le JPEG Open Graph** `public/images/blog/og/<slug>.jpg` (1200×630, JPEG qualité 82) recadré `cover` depuis le hero WebP — sinon `og:image` 404. Voir convention dans [public/images/blog/INDEX.md](public/images/blog/INDEX.md) (sous-dossier `og/`). Recadrage via sharp : `sharp(hero).resize(1200,630,{fit:"cover"}).jpeg({quality:82,mozjpeg:true})`.
 7. Update [public/images/blog/INDEX.md](public/images/blog/INDEX.md) avec description image (type, dimensions, poids, contexte, alt text)
 8. Add article entry dans le tableau `ARTICLES` du catalog [src/data/resources.ts](src/data/resources.ts) (en première position pour les plus récents) — **plus** dans `blog-view.tsx`, qui l'importe désormais. Renseigner les champs catalog : `tldr` (le verdict actionnable, lu en 10 s), `sectors` (un ou plusieurs `Sector` ; `"Tous"` = transversal) et `pains` (les `PainId` adressés) → c'est ce qui fait remonter l'article dans le hub `/augmenter-mon-entreprise`
-9. Add URL dans [public/sitemap.xml](public/sitemap.xml) avec `<lastmod>` ISO 8601
-10. Add article dans [public/news-sitemap.xml](public/news-sitemap.xml)
-11. Add article dans [public/llms.txt](public/llms.txt) section blog
-12. Si l'article est suffisamment fort, hand-pick dans [src/app/home-narrative/chapters/ch05-recit.tsx](src/app/home-narrative/chapters/ch05-recit.tsx) — la home featuring 3 articles, à curater
-13. Tag(s) doivent matcher les filter pills cliquables de `/blog` : `IA` / `PME` / `Commercial` / `Cybersécurité` / `Audit 360°`. Si tu utilises un tag différent (`Productivité`, `Intégration`, `Claude Code`, etc.), l'article n'apparaîtra que sous le filtre « Tout ». **Ne pas utiliser « Intelligence Artificielle » comme tag** — utiliser `IA` (normalisé site-wide).
-14. Run `npm run build` to verify
+9. Add URL dans [public/sitemap.xml](public/sitemap.xml) avec `<lastmod>` ISO 8601 — **ne pas recréer de news-sitemap**
+10. Add article dans [public/llms.txt](public/llms.txt) section blog
+11. Si l'article est suffisamment fort, hand-pick dans [src/app/home-narrative/chapters/ch05-recit.tsx](src/app/home-narrative/chapters/ch05-recit.tsx) — la home featuring 3 articles, à curater
+12. Tag(s) doivent matcher les filter pills cliquables de `/blog` : `IA` / `PME` / `Commercial` / `Cybersécurité` / `Audit 360°`. Si tu utilises un tag différent (`Productivité`, `Intégration`, `Claude Code`, etc.), l'article n'apparaîtra que sous le filtre « Tout ». **Ne pas utiliser « Intelligence Artificielle » comme tag** — utiliser `IA` (normalisé site-wide).
+13. Run `npm run build` to verify
+
+## Déploiement & cache CDN (Hostinger)
+
+Hostinger sert le site derrière son CDN (`hcdn`) et **ne conserve qu'une seule version de build** : au déploiement, les `/_next/static/*` du build précédent sont supprimés. Un HTML mis en cache avant le déploiement référence donc des CSS/JS hashés qui renvoient **404 en `text/plain`** → refus MIME du navigateur → page sans styles + `Application error: a client-side exception has occurred`.
+
+Incident du 2026-08-14 : la home cassée ~35 h (`x-hcdn-cache-status: HIT`, `Age: 128490`) parce que Next émettait `s-maxage=31536000` (1 an) sur le HTML statique.
+
+Trois protections en place — **ne pas les retirer** :
+
+| Couche | Fichier | Effet |
+|--------|---------|-------|
+| `export const revalidate = 300` | [src/app/layout.tsx](src/app/layout.tsx) | fait descendre le `s-maxage` du HTML de 1 an à 5 min. ⚠ `expireTime` **seul n'y suffit pas** sur une route statique pure — il ne pilote que le `stale-while-revalidate` compagnon |
+| `expireTime: 300` | [next.config.ts](next.config.ts) | `swr=0` → le CDN ne peut plus servir de réponse périmée (valeur 3600 = fenêtre stale de 55 min) |
+| `ASSET_RECOVERY_SCRIPT` | [src/lib/asset-recovery.ts](src/lib/asset-recovery.ts) | filet client inline dans `<head>` : un asset `_next/static` en échec déclenche un rechargement `?_cb=`, qui force `x-hcdn-cache-status: DYNAMIC`. Garde anti-boucle : 1 tentative/min/session, param retiré de l'URL après coup |
+
+Plus [src/app/global-error.tsx](src/app/global-error.tsx) — error boundary racine, **styles inline obligatoires** (doit rester lisible quand c'est le CSS qui 404).
+
+Diagnostic en cas de récidive :
+
+```bash
+curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^age'
+```
+
+`HIT` + `Age` élevé ⇒ HTML périmé : purger le cache CDN dans hPanel. Comparer les assets du HTML caché et du HTML frais (`?bust=<random>` force l'origine) pour confirmer.
 
 ## Key Constraints
 
+- **Cache CDN** : toute modif de `revalidate` / `expireTime` / du filet `asset-recovery` se vérifie sur les headers réellement émis (`npm run build && npm run start`, puis `curl -sI http://127.0.0.1:3000/`) — cf. section Déploiement & cache CDN
 - **Données hardcodées (pas de CMS)** — articles et idées centralisés dans le catalog [src/data/resources.ts](src/data/resources.ts) (`ARTICLES` / `IDEAS`) ; testimonials, pricing et prompts (`src/data/prompts.ts`) restent inline
 - **Client components** must use `"use client"` (required for framer-motion, gsap, lenis, three.js, interactive forms, mobile menu)
 - **Client components cannot export metadata** — si une page a besoin de `"use client"`, split : server `page.tsx` (metadata + JSON-LDs) + client component (UI). Voir `/contact`, `/(home)/page.tsx`, `/approche/page.tsx` comme exemples.
 - **Blog articles** : routes statiques directory-based (pas dynamiques `[slug]`), chaque article est `src/app/blog/<slug>/page.tsx`
-- **llms.txt, sitemap.xml et news-sitemap.xml doivent être mis à jour** quand on ajoute pages ou articles ; un article/idée s'ajoute au catalog [src/data/resources.ts](src/data/resources.ts) (avec `tldr`/`sectors`/`pains`), pas dans les vues
+- **llms.txt et sitemap.xml doivent être mis à jour** quand on ajoute pages ou articles ; un article/idée s'ajoute au catalog [src/data/resources.ts](src/data/resources.ts) (avec `tldr`/`sectors`/`pains`), pas dans les vues. Pages légales : `robots: LEGAL_ROBOTS` (`src/lib/seo-policy.ts`), hors sitemap.
 - **JSON-LD structured data** ajouter sur toute page indexable. Sur les narrative pages, le JSON-LD vit dans le server `page.tsx`, le narrative component est rendu client-side en dessous.
 - **Dev server force webpack** (`next dev --webpack`) — voir Commands ci-dessus pour la raison
 - **Ne jamais utiliser des ancres** (`/route#section`) dans le footer ou le NavFixed — seuls les liens pages réels. Si une section n'a pas sa page, soit on consolide sous un parent, soit on la skip.

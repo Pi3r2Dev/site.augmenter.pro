@@ -3,6 +3,8 @@
 Fichier de référence partagé par toutes les commandes SEO (`/seo-audit`, `/create-article`, `/create-resource`, `/modify-resource`). Centralise positionnement, audience, contraintes éditoriales et modalités opérationnelles. **À lire en premier** par toute commande qui produit du contenu pour le site.
 
 > **Pour les commandes non-SEO** (`/debt-report`, `/security-audit`, `/doc-audit`, `/codex-execute-task`) → voir [`../shared/project-context.md`](../shared/project-context.md) qui couvre la stack, les patterns, les conventions de code et le build, sans les couches éditoriales/géographiques décrites ci-dessous.
+>
+> **Pour un contenu du Tier 1 (Claude / Odoo / ERP / MCP)** → lire aussi [`terrain-odoo-reva9.md`](terrain-odoo-reva9.md) : le registre de preuves issues de la mission ERP réelle (repo `../odoo-reva9`). C'est la source d'**information gain** du site (principe de méthode n°3) et de donnée originale chiffrée (§G.5) — avec ses **règles de confidentialité** à appliquer avant toute publication.
 
 > **Dernière mise à jour** : 2026-06-10 (recalibrage GEO — Bing/IndexNow, surface GitHub prompts, llms.txt recalibré, donnée originale + chunk auto-suffisant : cf. principe de méthode n°5 et [`checklist.md`](checklist.md) §G.4/G.5/G.8/G.9). Socle stratégique précédent : 2026-05-21 (post-brainstorm `/seo-audit` — persona unique précisé, double positionnement acté, binôme A d'offres Q2-Q3 2026 planifié). **Source de vérité des décisions stratégiques** : [`/docs/seo-audits/2026-05-21-audit-complet.md`](../../../docs/seo-audits/2026-05-21-audit-complet.md) §14 Addendum.
 
@@ -32,7 +34,7 @@ Fichier de référence partagé par toutes les commandes SEO (`/seo-audit`, `/cr
 
 - **JSON-LD** : Organization + LocalBusiness + WebSite (layout.tsx), Article (article-layout.tsx), FAQPage (approche), Service + OfferCatalog (prestations), AggregateRating + Review (testimonials)
 - **llms.txt** : `public/llms.txt` pour crawlers LLM (Perplexity, ChatGPT, Claude)
-- **robots.txt** + **sitemap.xml** + **news-sitemap.xml** dans `public/`
+- **robots.txt** + **sitemap.xml** dans `public/` (pas de news-sitemap — le site n'est pas Google News)
 - **Events GA4** : `contact_form_submit` (formulaire), `lecture_article` (via `ArticleReadEvent` dans `ArticleLayout`)
 - Meta titles optimisés avec power words et géo-ciblage **si** pertinent (voir section Audience)
 
@@ -146,7 +148,7 @@ Détails + paliers potentiels supplémentaires : voir [`service-card.md`](servic
 - **Pages à `"use client"`** : split server/client (page.tsx + `<name>-client.tsx`) pour permettre `export const metadata`
 - **Articles de blog** : route statique `src/app/blog/<slug>/page.tsx`, wrapper `<ArticleLayout slug="<slug>">`
 - **Images** : WebP uniquement, `public/images/<catégorie>/<slug>.webp`, alt en français, composant `<Image>` de `next/image`
-- **À jour à chaque ajout** : `sitemap.xml`, `news-sitemap.xml` (articles), `llms.txt`, et **`src/data/resources.ts`** — catalog partagé, ⚠️ **vraie source de vérité** des tableaux `ARTICLES` et `IDEAS` (un nouvel article/idée s'ajoute ici, avec `tldr`/`sectors`/`pains` ; `blog-view.tsx` et `idees-view.tsx` l'importent). Le hub `/augmenter-mon-entreprise` consomme le même catalog. (`src/components/sections/blog-preview.tsx` reste **legacy** post-refonte bento.)
+- **À jour à chaque ajout** : `sitemap.xml`, `llms.txt`, et **`src/data/resources.ts`** — catalog partagé, ⚠️ **vraie source de vérité** des tableaux `ARTICLES` et `IDEAS` (un nouvel article/idée s'ajoute ici, avec `tldr`/`sectors`/`pains` ; `blog-view.tsx` et `idees-view.tsx` l'importent). Le hub `/augmenter-mon-entreprise` consomme le même catalog. (`src/components/sections/blog-preview.tsx` reste **legacy** post-refonte bento.) Pas de news-sitemap.
 
 ---
 

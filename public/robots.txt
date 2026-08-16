@@ -115,8 +115,9 @@ User-agent: meta-externalagent
 Disallow: /
 
 # --- Sitemaps --------------------------------------------------------------
+# Un seul sitemap web. Pas de news-sitemap : augmenter.pro n'est pas une
+# publication Google News (0 URL News indexée, crawl pollué — 2026-08-16).
 Sitemap: https://augmenter.pro/sitemap.xml
-Sitemap: https://augmenter.pro/news-sitemap.xml
 
 # --- LLM ingestion (standard llmstxt.org) ---------------------------------
 # llms.txt et llms-full.txt sont disponibles à la racine du domaine et découverts

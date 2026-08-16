@@ -61,7 +61,6 @@ Le rapport est **autonome** (un lecteur qui n'a pas assisté à l'audit doit pou
 ### 2.6 Fichiers SEO
 - robots.txt : ✅/⚠️
 - sitemap.xml : X URLs, Y indexées
-- news-sitemap.xml : ...
 - llms.txt : ...
 
 ## 3. Performance GSC (90 jours)

@@ -69,8 +69,7 @@ Fichier de référence partagé par les commandes non-SEO (`/debt-report`, `/sec
 ## Fichiers SEO/LLM (à maintenir cohérents)
 
 À chaque ajout/modification de page indexable :
-- `public/sitemap.xml` — entrée `<url>` avec `<lastmod>` ISO 8601 et `priority` adaptée
-- `public/news-sitemap.xml` — articles récents (< 30 jours)
+- `public/sitemap.xml` — entrée `<url>` avec `<lastmod>` ISO 8601 et `priority` adaptée (pages indexables uniquement)
 - `public/llms.txt` — résumé site pour LLM crawlers (sections services, articles, FAQ)
 - `public/robots.txt` — directives bot + référence sitemaps
 - `src/data/resources.ts` — **catalog partagé, vraie source de vérité** : article en première position du tableau `ARTICLES` (avec `tldr`/`sectors`/`pains`) ; idées dans `IDEAS`. `blog-view.tsx`, `idees-view.tsx` et le hub `/augmenter-mon-entreprise` l'importent. (⚠️ `src/components/sections/blog-preview.tsx` est **legacy** post-refonte bento, ne pas y toucher)

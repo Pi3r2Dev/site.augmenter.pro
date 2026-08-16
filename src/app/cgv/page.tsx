@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { LEGAL_ROBOTS } from "@/lib/seo-policy";
 
 export const metadata: Metadata = {
   title: "Conditions Générales de Vente",
   description:
     "CGV d'augmenter.PRO : conditions applicables aux prestations de conseil IA, audit informatique et développement sur mesure pour PME.",
+  robots: LEGAL_ROBOTS,
 };
 
 export default function CGVPage() {

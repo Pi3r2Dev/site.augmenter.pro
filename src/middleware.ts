@@ -1,20 +1,27 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import {
+  buildApexCanonicalUrl,
+  isWwwHost,
+} from "@/lib/canonical-host";
 
 export function middleware(request: NextRequest) {
   const host = request.headers.get("host") || "";
 
-  if (host.startsWith("www.")) {
-    const url = request.nextUrl.clone();
-    url.host = host.slice(4);
-    return NextResponse.redirect(url, { status: 301 });
+  // www → apex en 301, sans le port interne Node (:3000 sur Hostinger).
+  if (isWwwHost(host)) {
+    return NextResponse.redirect(
+      buildApexCanonicalUrl(request.url, host),
+      { status: 301 },
+    );
   }
 
   // Override manuel de variante via ?ab=a|b — outil de prévisualisation interne.
   // `/?ab=b` force la variante B (accueil-2) sur l'URL `/`, `/?ab=a` force la A.
   // Pose le cookie ab_home (sticky preview 30 j) et fonctionne indépendamment du
   // kill switch AB_HOME_ENABLED. Seul un accès manuel ajoute ?ab= : les bots ne
-  // le forgent pas, et /accueil-2 canonicalise déjà vers `/` → aucun risque SEO.
+  // le forgent pas. L'accès direct à /accueil-2 est un 301 vers `/`
+  // (next.config) ; le rewrite interne ne passe pas par cette redirection.
   if (request.nextUrl.pathname === "/") {
     const forced = request.nextUrl.searchParams.get("ab");
     if (forced === "a" || forced === "b") {
@@ -34,9 +41,8 @@ export function middleware(request: NextRequest) {
   // A/B test home : `/` reste l'unique URL publique. La variante B est servie
   // par rewrite interne vers /accueil-2 (jamais de redirection visible).
   // Assignation 50/50 persistée 30 jours par cookie ; un visiteur sans cookie
-  // (dont les bots) est assigné aléatoirement — pas de cloaking. /accueil-2
-  // porte un canonical vers `/`, donc aucune des deux variantes ne crée de
-  // duplicate dans l'index.
+  // (dont les bots) est assigné aléatoirement — pas de cloaking.
+  // L'URL publique /accueil-2 redirige en 301 vers `/`.
   // Split OPT-IN : désactivé par défaut depuis le retour de la home bento sur `/`
   // (2026-06). Tout le monde voit `/` ; /accueil-2 reste testable via `?ab=b`.
   // Réactiver un vrai split 50/50 : poser AB_HOME_ENABLED=true (hPanel, sans redeploy).

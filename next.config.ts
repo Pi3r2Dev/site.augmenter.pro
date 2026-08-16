@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { NOINDEX_FOLLOW_PATHS } from "./src/lib/seo-policy";
 
 const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
@@ -38,6 +39,10 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      ...NOINDEX_FOLLOW_PATHS.map((source) => ({
+        source,
+        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+      })),
     ];
   },
   async redirects() {
@@ -68,6 +73,7 @@ const nextConfig: NextConfig = {
       { source: "/plateforme/analyse-documents", destination: "/projets", permanent: true },
       { source: "/plateforme/veille-concurrentielle", destination: "/projets", permanent: true },
       { source: "/quest-ce-que-lintelligence-artificielle-ia", destination: "/strategie-ia-pme", permanent: true },
+      { source: "/accueil-2", destination: "/", permanent: true },
     ];
   },
 };

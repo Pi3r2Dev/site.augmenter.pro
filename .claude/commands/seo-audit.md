@@ -134,8 +134,8 @@ Pour chaque URL, extraire :
 ### 1.6 Fichiers SEO & crawlabilité
 
 - [ ] `public/robots.txt` — autorise tous les bots, référence `sitemap.xml`, pas de `Disallow` accidentel
-- [ ] `public/sitemap.xml` — toutes les pages indexables listées, `<lastmod>` ISO 8601 à jour, priorités cohérentes, pas de 404/redirect
-- [ ] `public/news-sitemap.xml` — articles récents (< 48h idéalement, max 30 jours)
+- [ ] `public/sitemap.xml` — toutes les pages indexables listées, `<lastmod>` ISO 8601 à jour, priorités cohérentes, pas de 404/redirect, pas de pages noindex
+- [ ] Pas de `news-sitemap.xml` (retiré 2026-08-16 : le site n'est pas une publication Google News)
 - [ ] `public/llms.txt` — synchronisé avec contenu réel (voir Phase 6)
 - [ ] Pas d'URL avec paramètres query indexée accidentellement
 - [ ] Pas de pagination mal gérée (rel=prev/next ou canonical vers page 1)
@@ -788,7 +788,7 @@ Copier ce template comme point de départ puis remplir chaque section avec les d
 Implémenter directement :
 - Correction meta titles/descriptions (power words, géo, longueur, pas de « gratuit »)
 - Ajout/correction de liens internes manquants
-- Mise à jour `sitemap.xml`, `news-sitemap.xml`, `llms.txt`
+- Mise à jour `sitemap.xml`, `llms.txt`
 - Ajout/correction de structured data JSON-LD
 - Ajout de FAQ schema sur pages pertinentes
 - Optimisation slugs URL trop longs

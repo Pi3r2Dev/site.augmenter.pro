@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LEGAL_ROBOTS } from "@/lib/seo-policy";
 
 export const metadata: Metadata = {
   title: "Politique de Confidentialité",
   description:
     "Politique de confidentialité d'augmenter.PRO : données collectées, cookies, droits RGPD. Aucune donnée stockée via le formulaire de contact.",
+  robots: LEGAL_ROBOTS,
 };
 
 export default function PolitiqueConfidentialitePage() {

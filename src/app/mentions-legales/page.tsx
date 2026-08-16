@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { LEGAL_ROBOTS } from "@/lib/seo-policy";
 
 export const metadata: Metadata = {
   title: "Mentions Légales",
+  robots: LEGAL_ROBOTS,
 };
 
 export default function MentionsLegalesPage() {

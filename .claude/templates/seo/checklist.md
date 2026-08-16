@@ -55,8 +55,7 @@ Règle : ces points sont **prioritaires sur le SEO on-page**. En cas de conflit,
 
 ## ✅ D. Intégration site (chaque nouvelle ressource)
 
-- [ ] `public/sitemap.xml` : entrée `<url>` avec `<lastmod>` ISO 8601 réel + priorité adaptée (1.0 home, 0.9 approche/contact, 0.8 services, 0.7 articles/comparatifs, 0.5 glossaire, 0.3 légales)
-- [ ] `public/news-sitemap.xml` : entrée pour les articles récents (< 30 jours)
+- [ ] `public/sitemap.xml` : entrée `<url>` avec `<lastmod>` ISO 8601 réel + priorité adaptée (1.0 home, 0.9 approche/contact, 0.8 services, 0.7 articles/comparatifs, 0.5 glossaire). **Pas de pages légales** (noindex). **Pas de news-sitemap.**
 - [ ] `public/llms.txt` : entrée dans la section appropriée (`## Articles de blog`, `## Pages sectorielles`, `## Glossaire`, `## Pages`…)
 - [ ] Si article : `src/data/resources.ts` (catalog, **vraie source de vérité**) → ajouter en **première position** du tableau `ARTICLES`, avec `tldr` + `sectors` + `pains` (alimente aussi le hub `/augmenter-mon-entreprise`). `blog-view.tsx` l'importe — ne pas l'éditer. (⚠️ `src/components/sections/blog-preview.tsx` est **legacy** — ne pas y toucher)
 - [ ] Si idée : `src/data/resources.ts` → ajouter dans le tableau `IDEAS` (`EnrichedIdea` : `sector` + `pains` + pros/cons honnêtes). `idees-view.tsx` l'importe.
