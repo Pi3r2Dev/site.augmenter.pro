@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode, useEffect, useRef } from "react";
+import { shouldAnimateChapterEntrance } from "@/lib/perf/chapter-entrance";
 import { narrativeStore } from "./store";
 
 declare global {
@@ -55,53 +56,56 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
 
       // Sections fade-up baseline
       const chapters = document.querySelectorAll<HTMLElement>("section[data-mood]");
-      chapters.forEach((section) => {
+      chapters.forEach((section, index) => {
         const head = section.querySelector("[id$='-title']")?.parentElement;
         const lede = section.querySelector("[data-anim='words']");
         const ups = section.querySelectorAll<HTMLElement>("[data-anim='up']");
         const staggers = section.querySelectorAll<HTMLElement>("[data-anim='stagger'] > *");
+        const animateEntrance = shouldAnimateChapterEntrance(index);
 
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top 85%",
-          once: true,
-          onEnter: () => {
-            if (head) gsap.from(head, { opacity: 0, y: 14, duration: 0.6, ease: "power3.out" });
-            if (lede) {
-              const spans = lede.querySelectorAll(".word > span");
-              gsap.from(spans, {
-                yPercent: 110,
-                opacity: 0,
-                duration: 0.9,
-                stagger: 0.035,
-                ease: "power3.out",
-                delay: 0.05,
-              });
-            }
-            if (ups.length > 0) {
-              gsap.from(ups, {
-                opacity: 0,
-                y: 28,
-                duration: 0.7,
-                stagger: 0.06,
-                delay: 0.25,
-                ease: "power3.out",
-              });
-            }
-            if (staggers.length > 0) {
-              gsap.from(staggers, {
-                opacity: 0,
-                y: 36,
-                duration: 0.75,
-                stagger: 0.09,
-                delay: 0.35,
-                ease: "power3.out",
-              });
-            }
-          },
-        });
+        if (animateEntrance) {
+          ScrollTrigger.create({
+            trigger: section,
+            start: "top 85%",
+            once: true,
+            onEnter: () => {
+              if (head) gsap.from(head, { opacity: 0, y: 14, duration: 0.6, ease: "power3.out" });
+              if (lede) {
+                const spans = lede.querySelectorAll(".word > span");
+                gsap.from(spans, {
+                  yPercent: 110,
+                  opacity: 0,
+                  duration: 0.9,
+                  stagger: 0.035,
+                  ease: "power3.out",
+                  delay: 0.05,
+                });
+              }
+              if (ups.length > 0) {
+                gsap.from(ups, {
+                  opacity: 0,
+                  y: 28,
+                  duration: 0.7,
+                  stagger: 0.06,
+                  delay: 0.25,
+                  ease: "power3.out",
+                });
+              }
+              if (staggers.length > 0) {
+                gsap.from(staggers, {
+                  opacity: 0,
+                  y: 36,
+                  duration: 0.75,
+                  stagger: 0.09,
+                  delay: 0.35,
+                  ease: "power3.out",
+                });
+              }
+            },
+          });
+        }
 
-        // Parallax scrub on lede
+        // Parallax scrub on lede — ne cache pas l'élément, OK sur le cover.
         if (lede) {
           gsap.to(lede, {
             yPercent: -12,

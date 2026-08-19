@@ -1,10 +1,8 @@
 // src/components/sections/hero.tsx
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Sparkles, Target, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BentoGrid, BentoCard, Pill } from "@/components/bento/bento-grid";
@@ -12,8 +10,11 @@ import { MiniQuoteCard } from "@/components/bento/pull-quote-card";
 import { TrustStatCard } from "@/components/widgets/trust-stat";
 
 /**
- * Hero bento : fusion du bloc héro + indicateurs de confiance + preuve sociale.
+ * Hero bento de `/` : fusion du bloc héro + indicateurs de confiance + preuve sociale.
  * Layout Home.html ligne 255-352 : 6-3-3 / 3-3-3-3.
+ *
+ * LCP : h1 + lede en HTML opaque (pas de motion opacity nulle — Lighthouse
+ * 2026-08-19 mesurait 6,9 s de LCP dont 2,3 s de délai d'élément).
  */
 export function Hero() {
   return (
@@ -28,40 +29,27 @@ export function Hero() {
             mobileMinH="320px"
             className="justify-end"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div>
               <Pill tone="primary" size="md">
                 <Sparkles className="h-3 w-3" />
                 Conseil IA &amp; Transformation numérique
               </Pill>
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.08 }}
+            </div>
+            <h1
               className="mt-4 text-[clamp(2.25rem,4vw,3.5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
             >
               Votre PME,{" "}
               <span className="gradient-text">augmentée par l&apos;IA.</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.16 }}
+            </h1>
+            <p
               className="mt-4 max-w-136 text-[0.95rem] leading-[1.55] text-muted-foreground"
             >
               Nous accompagnons les PME et indépendants à trouver l&apos;équilibre
               parfait entre <strong className="font-semibold text-foreground">performance humaine</strong> et{" "}
               <strong className="font-semibold text-foreground">numérique</strong>. IA,
               digitalisation, robotique — des solutions sur mesure qui tiennent la route.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.24 }}
+            </p>
+            <div
               className="mt-5 flex flex-wrap items-center gap-2.5"
             >
               <Button asChild size="lg" className="gap-2">
@@ -77,7 +65,7 @@ export function Hero() {
                 <span className="h-1 w-1 rounded-full bg-primary" />
                 78 &amp; 95 · présentiel ou distance
               </span>
-            </motion.div>
+            </div>
           </BentoCard>
 
           {/* Stat widget violet */}

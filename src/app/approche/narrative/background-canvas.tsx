@@ -3,6 +3,11 @@
 import { useEffect, useRef } from "react";
 import { narrativeStore } from "./store";
 import { MOOD_PALETTES, MOOD_CONFIGS, type Mood } from "./moods";
+import {
+  readDecorativeMotionHints,
+  scheduleWhenIdle,
+  shouldRunDecorativeMotion,
+} from "@/lib/perf/idle-webgl";
 
 const VERT = /* glsl */ `
   void main() { gl_Position = vec4(position, 1.0); }
@@ -112,6 +117,11 @@ function configFor(mood: Mood): UniformTargets {
   return { contrast: cfg.uContrast, grain: cfg.uGrain, mouseStrength: cfg.uMouseStrength };
 }
 
+/**
+ * Canvas WebGL plein écran des pages narrative (`/approche`, `/accueil-narrative`).
+ * Mobile / reduced-motion / Save-Data : gradient CSS uniquement.
+ * Desktop : Three.js après idle pour laisser le LCP se peindre.
+ */
 export function BackgroundCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -125,8 +135,15 @@ export function BackgroundCanvas() {
 
     if (mq.matches) return () => mq.removeEventListener("change", onMqChange);
 
+    // Mobile / Save-Data : le gradient CSS du wrapper suffit. Lighthouse
+    // ne doit pas télécharger Three.js sur le chemin LCP.
+    if (!shouldRunDecorativeMotion(readDecorativeMotionHints())) {
+      return () => mq.removeEventListener("change", onMqChange);
+    }
+
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) return () => mq.removeEventListener("change", onMqChange);
+    const host = container;
 
     let disposed = false;
     let renderer: import("three").WebGLRenderer | null = null;
@@ -136,15 +153,24 @@ export function BackgroundCanvas() {
     let material: import("three").ShaderMaterial | null = null;
     let rafId = 0;
     let unsubscribe = () => {};
+    let removeWindowListeners: (() => void) | null = null;
 
-    (async () => {
+    const cancelIdle = scheduleWhenIdle(() => {
+      startWebGL().catch((err) => {
+        console.warn("[narrative] background canvas init failed", err);
+      });
+    });
+
+    // import() dynamique : Three.js hors du bundle critique (LCP).
+    async function startWebGL() {
+      if (disposed) return;
       const THREE = await import("three");
       if (disposed) return;
 
       renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
       renderer.setSize(window.innerWidth, window.innerHeight, false);
-      container.appendChild(renderer.domElement);
+      host.appendChild(renderer.domElement);
 
       scene = new THREE.Scene();
       camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -257,16 +283,18 @@ export function BackgroundCanvas() {
       };
       rafId = requestAnimationFrame(tick);
 
-      return () => {
+      removeWindowListeners = () => {
         window.removeEventListener("resize", onResize);
         window.removeEventListener("pointermove", onPointerMove);
       };
-    })();
+    }
 
     return () => {
       disposed = true;
+      cancelIdle();
       cancelAnimationFrame(rafId);
       unsubscribe();
+      removeWindowListeners?.();
       mq.removeEventListener("change", onMqChange);
       if (renderer) {
         renderer.dispose();

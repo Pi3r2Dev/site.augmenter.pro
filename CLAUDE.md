@@ -79,11 +79,12 @@ npm test          # Vitest — hygiène SEO (www→apex, sitemap, 301 /accueil-2
 
 ### Routing (App Router)
 
-Deux pages principales sont des **expériences scroll narrative** (Three.js shader background + Lenis + GSAP + lava lamps). Les autres pages sont en layout classique avec le Header/Footer globaux.
+Deux pages sont des **expériences scroll narrative** (Three.js + Lenis + GSAP) : `/approche` (prod) et `/accueil-narrative` (préview). **`/` est actuellement le layout bento classique** (`Hero` + sections), pas le récit 6 chapitres. Le A/B `/accueil-2` (hero augmenté) n'est servi que via `?ab=b` (kill switch `AB_HOME_ENABLED`).
 
 | Route | Type | Structure |
 |-------|------|-----------|
-| `/` | **Narrative** (6 chapitres) | Route group `src/app/(home)/` qui strip Header/Footer via son propre `layout.tsx`. Server `page.tsx` injecte `CreativeWork` JSON-LD + render `<HomeNarrative />` depuis [src/app/home-narrative/](src/app/home-narrative/) |
+| `/` | **Bento** (Header/Footer globaux) | [src/app/page.tsx](src/app/page.tsx) : `<Hero />` + ApproachServices + Resources + Convert. LCP = lede du Hero — **interdit** `motion` opacity 0 (ADR 0006). |
+| `/accueil-narrative` | **Narrative** (6 chapitres) | [src/app/home-narrative/](src/app/home-narrative/) — preview du récit, pas l'URL publique. |
 | `/approche` | **Narrative** (9 chapitres) | [src/app/approche/layout.tsx](src/app/approche/layout.tsx) strip Header/Footer. `page.tsx` injecte `FAQPage` + `Service`/`OfferCatalog` JSON-LDs + render `<ApprocheNarrative />` depuis [src/app/approche/narrative/](src/app/approche/narrative/). Absorbe `/prestations` via redirect 308 (ancre `#prestations` à l'intérieur du Ch07 audits). |
 | `/blog` | Bento + Header/Footer globaux | `page.tsx` (metadata) + `blog-view.tsx` (`"use client"`, importe `ARTICLES` depuis le catalog `src/data/resources.ts`) |
 | `/blog/<slug>` | Article via `ArticleLayout` | Each slug has its own directory under [src/app/blog/](src/app/blog/) |
