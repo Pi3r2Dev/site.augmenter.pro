@@ -118,36 +118,22 @@ export function PromptLibrary() {
 
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
                 <Sparkles className="h-3.5 w-3.5" />
                 Ressources pour PME
               </div>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              className="text-4xl font-bold tracking-tight sm:text-5xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
               Prompts <span className="gradient-text">ChatGPT &amp; Claude</span>{" "}
               pour PME
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
               Copiez-collez ces prompts dans ChatGPT, Claude ou Gemini.
               Adaptez-les à votre entreprise en 2 minutes.
-            </motion.p>
+            </p>
 
             <motion.div
               className="mt-8 flex flex-wrap items-center justify-center gap-3"
@@ -186,9 +172,15 @@ export function PromptLibrary() {
         <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
           {/* Search */}
           <div className="relative mb-4">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Search
+              className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+              aria-hidden="true"
+            />
             <input
-              type="text"
+              type="search"
+              // Un placeholder n'est PAS un nom accessible : sans aria-label, ni lecteur
+              // d'écran ni agent IA ne sait à quoi sert ce champ.
+              aria-label="Rechercher un prompt"
               placeholder="Rechercher un prompt..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -306,9 +298,12 @@ export function PromptLibrary() {
 
                         {/* Title & description */}
                         <div>
-                          <h3 className="font-semibold leading-tight">
+                          {/* h2 : les cartes sont les éléments de premier niveau sous le h1
+                              de la page. Un h3 ici créait un saut h1→h3 qui casse
+                              l'arborescence d'accessibilité (lecteurs d'écran, agents IA). */}
+                          <h2 className="font-semibold leading-tight">
                             {prompt.title}
-                          </h3>
+                          </h2>
                           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                             {prompt.description}
                           </p>

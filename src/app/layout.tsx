@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Fraunces } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { DelayedGoogleTagManager } from "@/components/analytics/delayed-gtm";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -274,7 +274,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
+      {gtmId ? <DelayedGoogleTagManager gtmId={gtmId} /> : null}
       <body className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} font-sans antialiased`}>
         <Header />
         <main>{children}</main>

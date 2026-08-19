@@ -2,34 +2,43 @@
 "use client";
 
 import * as React from "react";
+import {
+  readDecorativeMotionHints,
+  shouldRunDecorativeMotion,
+} from "@/lib/perf/idle-webgl";
 import { PALETTES, type Palette } from "./palettes";
 
-// ─── hook morph ──────────────────────────────────────────────
-// Respecte prefers-reduced-motion : fige le seed.
-function useMorph(speed = 1, hoverBoost = 1): number {
-  const [seed, setSeed] = React.useState(0);
+/**
+ * RAF qui mute le DOM (pas de setState). Un setState à 60 fps recréait
+ * tout le SVG et saturait le thread principal (~3,5 s « Other » Lighthouse).
+ */
+function useMorphTick(
+  speed: number,
+  hoverBoost: number,
+  onTick: (t: number) => void,
+) {
+  const onTickRef = React.useRef(onTick);
+  onTickRef.current = onTick;
+
   React.useEffect(() => {
     if (typeof window === "undefined") return;
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReduced) {
-      setSeed(0);
-      return;
-    }
+    if (!shouldRunDecorativeMotion(readDecorativeMotionHints())) return;
+
     let raf = 0;
     const start = performance.now();
-    const tick = (t: number) => {
-      setSeed(((t - start) / 1000) * speed * hoverBoost);
+    const tick = (now: number) => {
+      onTickRef.current(((now - start) / 1000) * speed * hoverBoost);
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [speed, hoverBoost]);
-  return seed;
 }
 
 // ─── helper path blob ─────────────────────────────────────────
+/**
+ * Génère un path SVG organique (spline cubique fermée) pour un blob.
+ */
 function blobPath(
   cx: number,
   cy: number,
@@ -76,14 +85,27 @@ export function LiquidBlob({
   seed = 1,
 }: BlobProps) {
   const p = PALETTES[palette];
-  const t = useMorph(0.4, hovered ? 2.2 : 1);
   const filterId = `liq-${palette}-${seed}`;
   const gradA = `ga-${palette}-${seed}`;
   const gradB = `gb-${palette}-${seed}`;
+  const path1Ref = React.useRef<SVGPathElement>(null);
+  const path2Ref = React.useRef<SVGPathElement>(null);
+  const path3Ref = React.useRef<SVGPathElement>(null);
+  const strokeRef = React.useRef<SVGPathElement>(null);
 
-  const path1 = blobPath(200, 200, 140, 10, t + seed, 0.22);
-  const path2 = blobPath(200, 200, 110, 9, -t * 0.7 + seed * 2, 0.28);
-  const path3 = blobPath(200, 200, 80, 8, t * 1.3 + seed * 3, 0.32);
+  const path1 = blobPath(200, 200, 140, 10, seed, 0.22);
+  const path2 = blobPath(200, 200, 110, 9, seed * 2, 0.28);
+  const path3 = blobPath(200, 200, 80, 8, seed * 3, 0.32);
+
+  useMorphTick(0.4, hovered ? 2.2 : 1, (t) => {
+    const d1 = blobPath(200, 200, 140, 10, t + seed, 0.22);
+    const d2 = blobPath(200, 200, 110, 9, -t * 0.7 + seed * 2, 0.28);
+    const d3 = blobPath(200, 200, 80, 8, t * 1.3 + seed * 3, 0.32);
+    path1Ref.current?.setAttribute("d", d1);
+    path2Ref.current?.setAttribute("d", d2);
+    path3Ref.current?.setAttribute("d", d3);
+    strokeRef.current?.setAttribute("d", d3);
+  });
 
   return (
     <svg
@@ -111,12 +133,19 @@ export function LiquidBlob({
       </defs>
 
       <g filter={`url(#${filterId})`}>
-        <path d={path1} fill={`url(#${gradA})`} />
-        <path d={path2} fill={`url(#${gradB})`} opacity="0.85" />
-        <path d={path3} fill={p.accent} opacity="0.5" />
+        <path ref={path1Ref} d={path1} fill={`url(#${gradA})`} />
+        <path ref={path2Ref} d={path2} fill={`url(#${gradB})`} opacity="0.85" />
+        <path ref={path3Ref} d={path3} fill={p.accent} opacity="0.5" />
       </g>
 
-      <path d={path3} fill="none" stroke={p.accent} strokeWidth="1.2" opacity="0.35" />
+      <path
+        ref={strokeRef}
+        d={path3}
+        fill="none"
+        stroke={p.accent}
+        strokeWidth="1.2"
+        opacity="0.35"
+      />
     </svg>
   );
 }
@@ -128,15 +157,26 @@ export function MeshAurora({
   seed = 1,
 }: BlobProps) {
   const p = PALETTES[palette];
-  const t = useMorph(0.15, hovered ? 2 : 1);
   const fid = `mesh-${palette}-${seed}`;
+  const c1Ref = React.useRef<SVGCircleElement>(null);
+  const c2Ref = React.useRef<SVGCircleElement>(null);
+  const c3Ref = React.useRef<SVGCircleElement>(null);
 
-  const x1 = 120 + Math.sin(t + seed) * 60;
-  const y1 = 140 + Math.cos(t * 0.8 + seed) * 40;
-  const x2 = 280 + Math.cos(t * 1.1 + seed) * 50;
-  const y2 = 260 + Math.sin(t + seed * 1.3) * 50;
-  const x3 = 200 + Math.sin(t * 0.7 + seed * 2) * 70;
-  const y3 = 200 + Math.cos(t * 0.9 + seed * 2) * 60;
+  const x1 = 120 + Math.sin(seed) * 60;
+  const y1 = 140 + Math.cos(seed) * 40;
+  const x2 = 280 + Math.cos(seed) * 50;
+  const y2 = 260 + Math.sin(seed * 1.3) * 50;
+  const x3 = 200 + Math.sin(seed * 2) * 70;
+  const y3 = 200 + Math.cos(seed * 2) * 60;
+
+  useMorphTick(0.15, hovered ? 2 : 1, (t) => {
+    c1Ref.current?.setAttribute("cx", String(120 + Math.sin(t + seed) * 60));
+    c1Ref.current?.setAttribute("cy", String(140 + Math.cos(t * 0.8 + seed) * 40));
+    c2Ref.current?.setAttribute("cx", String(280 + Math.cos(t * 1.1 + seed) * 50));
+    c2Ref.current?.setAttribute("cy", String(260 + Math.sin(t + seed * 1.3) * 50));
+    c3Ref.current?.setAttribute("cx", String(200 + Math.sin(t * 0.7 + seed * 2) * 70));
+    c3Ref.current?.setAttribute("cy", String(200 + Math.cos(t * 0.9 + seed * 2) * 60));
+  });
 
   return (
     <svg
@@ -163,9 +203,9 @@ export function MeshAurora({
         </filter>
       </defs>
       <g filter={`url(#${fid}-blur)`}>
-        <circle cx={x1} cy={y1} r={140} fill={`url(#${fid}-1)`} />
-        <circle cx={x2} cy={y2} r={130} fill={`url(#${fid}-2)`} />
-        <circle cx={x3} cy={y3} r={160} fill={`url(#${fid}-3)`} />
+        <circle ref={c1Ref} cx={x1} cy={y1} r={140} fill={`url(#${fid}-1)`} />
+        <circle ref={c2Ref} cx={x2} cy={y2} r={130} fill={`url(#${fid}-2)`} />
+        <circle ref={c3Ref} cx={x3} cy={y3} r={160} fill={`url(#${fid}-3)`} />
       </g>
     </svg>
   );

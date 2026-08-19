@@ -2,6 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import { MOOD_PALETTES, MOOD_CONFIGS, type Mood } from "@/app/approche/narrative/moods";
+import {
+  readDecorativeMotionHints,
+  scheduleWhenIdle,
+  shouldRunDecorativeMotion,
+} from "@/lib/perf/idle-webgl";
 
 // Same fragment shader as the narrative BackgroundCanvas
 // (src/app/approche/narrative/background-canvas.tsx) but stripped of the
@@ -101,6 +106,11 @@ interface ShaderBackdropProps {
   className?: string;
 }
 
+/**
+ * Peinture shader localisée derrière un hero / une card.
+ * Mobile et reduced-motion : gradient CSS uniquement (pas de chunk Three.js).
+ * Desktop : `import("three")` après idle pour laisser le LCP se peindre.
+ */
 export function ShaderBackdrop({
   mood = "dawn",
   opacity = 1,
@@ -110,11 +120,13 @@ export function ShaderBackdrop({
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches) return; // Static fallback handled by the CSS gradient below
+    // Mobile / save-data / reduced-motion : le gradient CSS du wrapper suffit.
+    // Lighthouse mobile ne doit jamais télécharger le chunk Three.js.
+    if (!shouldRunDecorativeMotion(readDecorativeMotionHints())) return;
 
     const container = containerRef.current;
     if (!container) return;
+    const host = container;
 
     let disposed = false;
     let renderer: import("three").WebGLRenderer | null = null;
@@ -124,19 +136,28 @@ export function ShaderBackdrop({
     let material: import("three").ShaderMaterial | null = null;
     let rafId = 0;
     let resizeObserver: ResizeObserver | null = null;
+    let removePointer: (() => void) | null = null;
 
-    (async () => {
+    const cancelIdle = scheduleWhenIdle(() => {
+      startWebGL().catch((err) => {
+        console.warn("[shader-backdrop] init failed", err);
+      });
+    });
+
+    // import() dynamique : code-splitting LCP — Three.js hors du bundle critique.
+    async function startWebGL() {
+      if (disposed) return;
       const THREE = await import("three");
       if (disposed) return;
 
-      const rect = container.getBoundingClientRect();
+      const rect = host.getBoundingClientRect();
       renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
       renderer.setSize(rect.width, rect.height, false);
       renderer.domElement.style.width = "100%";
       renderer.domElement.style.height = "100%";
       renderer.domElement.style.display = "block";
-      container.appendChild(renderer.domElement);
+      host.appendChild(renderer.domElement);
 
       scene = new THREE.Scene();
       camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -171,8 +192,7 @@ export function ShaderBackdrop({
       let lastInputAt = performance.now();
 
       const onPointerMove = (e: PointerEvent) => {
-        if (!container) return;
-        const r = container.getBoundingClientRect();
+        const r = host.getBoundingClientRect();
         target.x = (e.clientX - r.left) / r.width;
         target.y = 1 - (e.clientY - r.top) / r.height;
         lastInputAt = performance.now();
@@ -180,13 +200,13 @@ export function ShaderBackdrop({
       window.addEventListener("pointermove", onPointerMove);
 
       const updateSize = () => {
-        if (!renderer || !material || !container) return;
-        const r = container.getBoundingClientRect();
+        if (!renderer || !material) return;
+        const r = host.getBoundingClientRect();
         renderer.setSize(r.width, r.height, false);
         (material.uniforms.uRes.value as import("three").Vector2).set(r.width, r.height);
       };
       resizeObserver = new ResizeObserver(updateSize);
-      resizeObserver.observe(container);
+      resizeObserver.observe(host);
 
       let lastFrame = performance.now();
       const tick = () => {
@@ -220,16 +240,16 @@ export function ShaderBackdrop({
       };
       rafId = requestAnimationFrame(tick);
 
-      return () => {
+      removePointer = () => {
         window.removeEventListener("pointermove", onPointerMove);
       };
-    })().catch((err) => {
-      console.warn("[shader-backdrop] init failed", err);
-    });
+    }
 
     return () => {
       disposed = true;
+      cancelIdle();
       cancelAnimationFrame(rafId);
+      removePointer?.();
       resizeObserver?.disconnect();
       if (renderer) {
         renderer.dispose();

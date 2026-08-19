@@ -106,7 +106,7 @@ le contenu du hero.
 - Coords mouse relatives au canvas (pas au viewport) → le smear suit le curseur quand on hover la section
 - `ResizeObserver` qui suit les redimensionnements du parent
 - `alpha: true` + prop `opacity` → la peinture peut blend avec le fond du parent
-- `prefers-reduced-motion` → fallback gradient CSS statique
+- **Perf LCP** (ADR 0006) : pas de WebGL sous 768 px / `prefers-reduced-motion` / Save-Data (gradient CSS) ; `import("three")` après idle sur desktop. Politique : [`src/lib/perf/idle-webgl.ts`](src/lib/perf/idle-webgl.ts)
 - SSR-safe (dynamic import de Three.js)
 
 Pattern d'usage standard sur un hero :
@@ -130,9 +130,11 @@ Pour un hero qui est une BentoCard (cas `/blog` + `/idees`) :
 </BentoCard>
 ```
 
-Pages où c'est en place : `/blog` (hero card + featured article image overlay avec mix-blend-soft-light), `/prompts`, `/projets`, `/idees`, `/strategie-ia-pme`, `/integration-mcp`, `/audit-informatique-yvelines`, `/audit-informatique-val-doise`, `/contact`, `/auteur/pierre-legrand`. Mood **dawn** (paper near-white + violet wash) + opacity **0.6** sur la plupart, **0.55** sur l'auteur (un peu plus subtil pour ne pas voler la vedette au gros avatar PL violet), **0.45** sur l'image du featured article (avec `mix-blend-soft-light` pour blender avec l'image).
+Pages où c'est en place : `/blog` (hero card uniquement), `/prompts`, `/projets`, `/idees`, `/strategie-ia-pme`, `/integration-mcp`, `/audit-informatique-yvelines`, `/audit-informatique-val-doise`, `/contact`, `/auteur/pierre-legrand`. Mood **dawn** (paper near-white + violet wash) + opacity **0.6** sur la plupart, **0.55** sur l'auteur (un peu plus subtil pour ne pas voler la vedette au gros avatar PL violet).
 
-⚠ Pour le featured article uniquement : 1 seul canvas WebGL par page sur /blog. Si on veut étendre aux 14 autres cards, il faudrait un `IntersectionObserver` qui mount/unmount le canvas selon la visibilité, sinon 15 contextes WebGL concurrents = GPU saturé.
+⚠ **Un seul canvas WebGL par page classique**, et seulement après idle / desktop. La carte featured `/blog` n'a plus d'overlay Three.js (gradient CSS). Si on veut étendre aux 14 autres cards, il faudrait un `IntersectionObserver` qui mount/unmount le canvas selon la visibilité, sinon N contextes WebGL concurrents = GPU saturé.
+
+⚠ **Ne jamais animer le LCP depuis `opacity: 0`** (Framer Motion `initial` est peint en SSR). Le `h1` / lede du hero doit être opaque dans le HTML, sinon Lighthouse compte 3 s+ de « délai d'affichage de l'élément ».
 
 ### Narrative Scroll System
 
@@ -390,5 +392,6 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 - [docs/decisions/0001-approche-narrative-scroll.md](docs/decisions/0001-approche-narrative-scroll.md) — décision narrative /approche
 - [docs/decisions/0002-home-narrative-scroll.md](docs/decisions/0002-home-narrative-scroll.md) — décision narrative /
 - [docs/decisions/0003-funnel-geo-conversion.md](docs/decisions/0003-funnel-geo-conversion.md) — stratégie funnel GEO : mesurer d'abord, monétiser le cluster tech sur le persona dirigeant confirmé
+- [docs/decisions/0006-lcp-pages-classiques.md](docs/decisions/0006-lcp-pages-classiques.md) — LCP pages classiques : hero opaque, WebGL différé, GTM idle
 - [docs/plans/](docs/plans/) — plans d'implémentation détaillés
 - [docs/ClaudeDesign_handoff/](docs/ClaudeDesign_handoff/) — source du design narrative (HTML/CSS/JS prototype)

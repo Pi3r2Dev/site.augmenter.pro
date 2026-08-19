@@ -83,6 +83,9 @@ export function PromptCard({ slug }: PromptCardProps) {
             <a
               href={prompt.downloadFile}
               download
+              // Lien à icône seule : sans nom accessible, ni lecteur d'écran ni agent IA
+              // ne peut savoir ce qu'il télécharge (audit « Links must have discernible text »).
+              aria-label={`Télécharger le prompt « ${prompt.title} » au format Markdown`}
               onClick={() =>
                 sendGTMEvent({
                   event: "prompt_download",
@@ -91,13 +94,18 @@ export function PromptCard({ slug }: PromptCardProps) {
                 })
               }
             >
-              <Download className="h-3.5 w-3.5" />
+              <Download className="h-3.5 w-3.5" aria-hidden="true" />
             </a>
           </Button>
           <Button variant="ghost" size="sm" className="gap-1" asChild>
-            <Link href={`/prompts#${prompt.id}`}>
+            <Link
+              href={`/prompts#${prompt.id}`}
+              // « Voir » seul ne dit pas où l'on va : hors contexte (liste de liens d'un
+              // lecteur d'écran, plan de navigation d'un agent), le libellé doit se suffire.
+              aria-label={`Voir le prompt « ${prompt.title} » dans la bibliothèque`}
+            >
               Voir
-              <ArrowRight className="h-3 w-3" />
+              <ArrowRight className="h-3 w-3" aria-hidden="true" />
             </Link>
           </Button>
         </div>

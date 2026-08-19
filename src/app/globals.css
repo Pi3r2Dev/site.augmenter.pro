@@ -224,8 +224,11 @@ html {
    + Tailwind 4 + webpack) — falling back to a hand-rolled CSS rule
    that exactly mirrors the handoff prototype.
    ============================================================ */
-h2[data-anim="words"] em,
-h2[data-anim="words"] em .word > span {
+/* :is(h1, h2) — le premier Lede d'une page narrative est rendu en <h1> (sinon la page
+   n'a aucun titre de niveau 1 : arborescence d'accessibilité mal formée). Le style
+   ne dépend pas du niveau, seul le data-anim compte. */
+:is(h1, h2)[data-anim="words"] em,
+:is(h1, h2)[data-anim="words"] em .word > span {
   background: var(--gradient-brand);
   -webkit-background-clip: text;
   background-clip: text;
@@ -236,8 +239,8 @@ h2[data-anim="words"] em .word > span {
 
 /* Ch08 La suite uses the violet→amber ember gradient (lighter palette
    over the dark ember background) instead of the brand gradient. */
-h2[data-anim="words"][data-gradient="ember"] em,
-h2[data-anim="words"][data-gradient="ember"] em .word > span {
+:is(h1, h2)[data-anim="words"][data-gradient="ember"] em,
+:is(h1, h2)[data-anim="words"][data-gradient="ember"] em .word > span {
   background: var(--gradient-ember);
   -webkit-background-clip: text;
   background-clip: text;
@@ -248,8 +251,8 @@ h2[data-anim="words"][data-gradient="ember"] em .word > span {
 /* The same word-split causes the <u> underline highlighter to lose its
    text reference. The background-image trick still works on the outer
    element, but the inner spans clip it. Re-apply on the word spans. */
-h2[data-anim="words"] u,
-h2[data-anim="words"] u .word > span {
+:is(h1, h2)[data-anim="words"] u,
+:is(h1, h2)[data-anim="words"] u .word > span {
   text-decoration: none;
   background-image: linear-gradient(
     transparent 60%,

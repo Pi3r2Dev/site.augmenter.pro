@@ -2,7 +2,6 @@
 
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { sendGTMEvent } from "@next/third-parties/google";
 import {
   ArrowRight,
@@ -198,27 +197,19 @@ export function AugmenterView() {
       <section className="relative isolate overflow-hidden py-20 md:py-24">
         <ShaderBackdrop mood="dawn" opacity={0.6} className="-z-10" />
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          {/* Hero LCP : HTML opaque dès le SSR (pas de motion opacity: 0). */}
+          <div
             className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary"
           >
             <Compass className="h-3.5 w-3.5" />
             {RESOURCES.length} ressources · tu n&apos;en liras que 3
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.08 }}
+          </div>
+          <h1
             className="mt-5 text-[clamp(2rem,4.5vw,3.5rem)] font-bold leading-[1.03] tracking-[-0.035em]"
           >
             Augmenter <span className="gradient-text">mon entreprise</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.16 }}
+          </h1>
+          <p
             className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
             Tu n&apos;as pas le temps d&apos;éplucher des dizaines d&apos;articles,
@@ -229,7 +220,7 @@ export function AugmenterView() {
             — ton secteur, ce qui te coûte le plus, ce que tu veux. On te sort les
             bonnes ressources, le verdict en une phrase. Tu lis ce qui te sert, tu
             ignores le reste.
-          </motion.p>
+          </p>
         </div>
       </section>
 

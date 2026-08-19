@@ -50,29 +50,19 @@ export function IdeesView() {
               className="relative isolate justify-end overflow-hidden"
             >
               <ShaderBackdrop mood="dawn" opacity={0.6} />
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="relative z-10"
-              >
+              {/* Hero LCP : HTML opaque dès le SSR (pas de motion opacity: 0). */}
+              <div className="relative z-10">
                 <Pill tone="primary" size="md">
                   <Lightbulb className="h-3 w-3" />
                   Inspiration · {IDEAS.length} idées chiffrées
                 </Pill>
-              </motion.div>
-              <motion.h1
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.08 }}
+              </div>
+              <h1
                 className="relative z-10 mt-4 text-[clamp(2rem,4vw,3.25rem)] font-bold leading-[1.02] tracking-[-0.035em]"
               >
                 Idées <span className="gradient-text">PRO</span>
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.16 }}
+              </h1>
+              <p
                 className="relative z-10 mt-4 max-w-xl text-[0.95rem] leading-normal text-muted-foreground"
               >
                 Des idées concrètes, chiffrées et honnêtes pour augmenter votre
@@ -81,7 +71,7 @@ export function IdeesView() {
                   Avantages ET points d&apos;attention
                 </strong>{" "}
                 — pour décider en connaissance de cause.
-              </motion.p>
+              </p>
               <div className="relative z-10 mt-5 flex flex-wrap gap-2">
                 {SECTORS.map((sector) => {
                   const isActive = activeSector === sector;

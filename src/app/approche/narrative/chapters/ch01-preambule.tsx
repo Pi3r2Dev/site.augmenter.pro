@@ -17,7 +17,10 @@ export function Ch01Preambule() {
         <Pill>Un récit en huit chapitres</Pill>
       </div>
       <div ref={ledeRef}>
-        <Lede>
+        {/* as="h1" : titre d'ouverture de /approche — la page n'avait aucun h1,
+            ce qui casse l'arborescence d'accessibilité (agents IA, lecteurs d'écran)
+            et prive la page de son signal de titre principal. Rendu identique. */}
+        <Lede as="h1">
           Votre PME, <em>augmentée</em> par l&apos;IA.
           <br />
           Sans gourou, sans <u>jargon</u>.

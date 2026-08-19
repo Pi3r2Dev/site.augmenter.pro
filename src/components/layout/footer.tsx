@@ -99,9 +99,12 @@ function ColumnBlock({ col, index }: { col: FooterColumn; index: number }) {
             boxShadow: `0 0 12px ${col.accent}`,
           }}
         />
-        <h4 className="font-mono text-[11px] uppercase tracking-widest text-white/85">
+        {/* h3 et non h4 : le titre précédent dans la page est un h2 (CTA), un h4 créait
+            un saut de niveau qui casse l'arborescence d'accessibilité — donc la navigation
+            des lecteurs d'écran et des agents IA. Le style ne dépend pas du niveau. */}
+        <h3 className="font-mono text-[11px] uppercase tracking-widest text-white/85">
           {col.title}
-        </h4>
+        </h3>
       </div>
       <ul className="flex flex-col gap-2">
         {col.items.map((item) => (

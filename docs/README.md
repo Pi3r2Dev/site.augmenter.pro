@@ -9,9 +9,7 @@
 > ont tous été supprimés. `sections/` ne contient plus que `cta.tsx`,
 > `prompt-card.tsx`, `atelier-callout.tsx`.
 >
-> **Source de vérité à jour** : section « Architecture » de [CLAUDE.md](../CLAUDE.md)
-> (routing, narrative scroll, bento /blog+/idees, composants). Ce fichier est
-> conservé pour l'historique de la refonte bento — candidat à suppression.
+> **Perf LCP (2026-08-19)** : ne plus animer le hero depuis `opacity: 0`. Shader et blobs : voir [ADR 0006](decisions/0006-lcp-pages-classiques.md). `useMorph` a été remplacé par un RAF qui mute le DOM (`blobs.tsx`).
 
 Guide de la homepage en **layout bento** et des widgets animés réutilisables.
 

@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   BookOpen,
@@ -52,35 +51,26 @@ export function BlogView() {
                   dawn for readability. 60% opacity so the dark text remains
                   comfortably above WCAG AA. */}
               <ShaderBackdrop mood="dawn" opacity={0.6} />
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="relative z-10"
-              >
+              {/* Hero LCP : HTML opaque dès le SSR. Une entrée motion
+                  depuis opacity nulle retardait le LCP de ~3 s. */}
+              <div className="relative z-10">
                 <Pill tone="primary" size="md">
                   <BookOpen className="h-3 w-3" />
                   {ARTICLES.length} articles · mis à jour 2026
                 </Pill>
-              </motion.div>
-              <motion.h1
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.08 }}
+              </div>
+              <h1
                 className="relative z-10 mt-4 text-[clamp(2rem,4vw,3.25rem)] font-bold leading-[1.02] tracking-[-0.035em]"
               >
                 Articles &amp; <span className="gradient-text">Tutos</span>
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.16 }}
+              </h1>
+              <p
                 className="relative z-10 mt-4 max-w-xl text-[0.95rem] leading-normal text-muted-foreground"
               >
                 Conseils pratiques pour les professionnels qui veulent passer au
                 niveau supérieur. <strong className="font-semibold text-foreground">IA, commercial, audit, cybersécurité</strong> —
                 sans jargon, terrain.
-              </motion.p>
+              </p>
             </BentoCard>
 
             {/* Stat articles */}
