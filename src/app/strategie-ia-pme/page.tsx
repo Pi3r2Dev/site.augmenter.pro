@@ -180,7 +180,7 @@ const faqItems = [
   {
     question: "Combien coûte une stratégie IA pour une PME ?",
     answer:
-      "Notre diagnostic initial est offert (60 min). L’audit IA 360° qui pose la feuille de route coûte 225 € — il est détaillé sur notre page dédiée. Pour le déploiement, le budget dépend des cas d’usage retenus, et le programme Osez l’IA de Bpifrance peut prendre en charge jusqu’à 80 % de l’accompagnement.",
+      "Notre diagnostic initial est offert (60 min). L’audit IA 360° qui pose la feuille de route coûte 550 € — il est détaillé sur notre page dédiée. Pour le déploiement, le budget dépend des cas d’usage retenus, et le programme Osez l’IA de Bpifrance peut prendre en charge jusqu’à 80 % de l’accompagnement.",
   },
   {
     question:
@@ -255,7 +255,7 @@ const serviceJsonLd = {
     {
       "@type": "Offer",
       name: "Stratégie IA — cadrage & feuille de route",
-      price: "225",
+      price: "550",
       priceCurrency: "EUR",
       description:
         "Cadrage stratégique avec feuille de route IA personnalisée sur 6 mois",

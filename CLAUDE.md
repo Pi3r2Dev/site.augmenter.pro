@@ -354,6 +354,8 @@ Playbook opérationnel (message de demande d'avis, checklist GBP, ordre de rende
 
 ### Chaîne de réception (à ne pas casser)
 
+> **État : opérationnelle en production depuis le 2026-08-24.** Validée de bout en bout (`delivered: ["log","email"]`), variables déclarées côté Hostinger, alerte reçue. Toute régression sur cette chaîne se traduit par des demandes de devis perdues **en silence** — c'est le mode de panne à redouter, pas une erreur visible.
+
 Le wizard [`src/app/contact/quote-wizard.tsx`](src/app/contact/quote-wizard.tsx) (rendu sur `/contact` via `contact-form.tsx`) se termine historiquement par un `mailto:` ou un lien WhatsApp — deux canaux qui **sortent du site et ne laissent aucune trace serveur**. Depuis 2026-08-24, `handleSend()` POSTe d'abord la demande sur [`/api/quote`](src/app/api/quote/route.ts).
 
 Deux détails d'implémentation qui ne doivent pas être « nettoyés » :

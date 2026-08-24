@@ -483,7 +483,7 @@ export default function Article() {
         sprint chez augmenter.PRO — typiquement 90 jours, avec un point
         de contact hebdomadaire et un audit terrain en début et en fin.
         Si vous reconnaissez votre PME dans 3 signaux ou plus, l&apos;{" "}
-        <Link href="/approche">Audit 360° IA Booster (225 €)</Link>{" "}
+        <Link href="/approche">Audit 360° IA Booster (550 €)</Link>{" "}
         permet de cadrer un plan d&apos;action sur 90 jours adapté à
         votre contexte : taille d&apos;équipe, secteur, usages IA déjà
         déployés.

@@ -3,9 +3,9 @@ import { ApprocheNarrative } from "./narrative";
 import { FAQ_ITEMS } from "./narrative/data";
 
 export const metadata: Metadata = {
-  title: "Approche, Prestations & Tarifs — Audit IA dès 225 € | PME 78/95",
+  title: "Approche, Prestations & Tarifs — Audit IA dès 550 € | PME 78/95",
   description:
-    "Méthode 360° en 4 piliers (technique, process, humain, vision) + audits 180° offert et 360° à 225 €. Pas de jargon, plan d'action concret. PME Yvelines & Val d'Oise.",
+    "Méthode 360° en 4 piliers (technique, process, humain, vision) + audits 180° offert et 360° à 550 €. Pas de jargon, plan d'action concret. PME Yvelines & Val d'Oise.",
 };
 
 const servicesJsonLd = {
@@ -39,7 +39,7 @@ const servicesJsonLd = {
         name: "Audit 360° IA Stratégique",
         description:
           "Diagnostic complet de 3h couvrant infrastructure, workflows et équipes. Livrable : plan d'action chiffré et priorisé.",
-        price: "225",
+        price: "550",
         priceCurrency: "EUR",
         url: "https://augmenter.pro/contact",
       },

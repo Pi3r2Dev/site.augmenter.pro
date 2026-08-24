@@ -38,7 +38,7 @@ const SERVICES = [
     name: "Audit 360° IA",
     desc: "Feuille de route IA sur mesure",
     icon: Target,
-    tag: "225 €",
+    tag: "550 €",
     tagVariant: "default" as const,
   },
   {

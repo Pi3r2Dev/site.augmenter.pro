@@ -128,7 +128,7 @@ Offert
 Recommandé
 Audit 360°
 IA Stratégique — feuille de route personnalisée.
-225 €
+550 €
 [Démarrer](https://augmenter.pro/contact)
 Contact direct
 vite@augmenter.pro
@@ -408,7 +408,7 @@ Offert
 Recommandé
 Audit 360°
 IA Stratégique — votre feuille de route personnalisée.
-225 €
+550 €
 [Démarrer l'Audit IA](https://augmenter.pro/contact)
 Dev sur mesure
 ### Développement sur mesure
@@ -1959,7 +1959,7 @@ Plusieurs prestataires proposent un "diagnostic offert" ou un "audit sans frais"
   * Livrable : compte rendu oral + synthèse des recommandations
   * Engagement : **aucun** — vous repartez avec un diagnostic clair, sans obligation
 
-### Audit 360° IA Stratégique — 225 € HT
+### Audit 360° IA Stratégique — 550 € HT
   * Durée : **~3 heures** sur site (Yvelines / Val d'Oise)
   * Analyse complète : réseau, sécurité, postes, cloud, licences, coûts, organisation
   * Entretiens avec les équipes clés
@@ -1967,7 +1967,7 @@ Plusieurs prestataires proposent un "diagnostic offert" ou un "audit sans frais"
   * Identification des opportunités d'automatisation et d'IA
   * Livrable : **rapport écrit détaillé** avec plan d'action chiffré et priorisé
 
-**Pourquoi 225 € et pas 5 000 € ?** Notre Audit 360° n'est pas un audit de cybersécurité avec pentest — c'est un **diagnostic stratégique** qui évalue votre SI dans sa globalité (performance, coûts, organisation, sécurité, IA readiness). Il couvre un périmètre plus large qu'un audit purement technique, mais avec une méthodologie calibrée pour les PME : efficace sans mobiliser vos équipes pendant 2 semaines. Si l'audit révèle un besoin de pentest ou d'audit de conformité approfondi, nous vous orienterons vers le bon prestataire — nous ne vendons pas de matériel ni d'infogérance.
+**Pourquoi 550 € et pas 5 000 € ?** Notre Audit 360° n'est pas un audit de cybersécurité avec pentest — c'est un **diagnostic stratégique** qui évalue votre SI dans sa globalité (performance, coûts, organisation, sécurité, IA readiness). Il couvre un périmètre plus large qu'un audit purement technique, mais avec une méthodologie calibrée pour les PME : efficace sans mobiliser vos équipes pendant 2 semaines. Si l'audit révèle un besoin de pentest ou d'audit de conformité approfondi, nous vous orienterons vers le bon prestataire — nous ne vendons pas de matériel ni d'infogérance.
 C'est cette indépendance qui fait la différence. Un prestataire qui vend de l'infogérance aura tendance à recommander… de l'infogérance. Notre modèle : vous donner les clés pour décider, pas vous enfermer dans un contrat. Pour réserver votre créneau : [demandez votre diagnostic offert](https://augmenter.pro/contact).
 ## 3 cas concrets de PME en Yvelines
 Voici trois situations réelles (anonymisées) issues de nos missions récentes dans le 78. Chaque cas illustre un profil de PME différent, un budget différent et des résultats différents.
@@ -1977,13 +1977,13 @@ Voici trois situations réelles (anonymisées) issues de nos missions récentes 
 **Suite** : le dirigeant a corrigé les 3 points en interne en 2 semaines, sans audit complet supplémentaire. Économie immédiate : 1 200 €/an sur les licences. Coût total pour l'entreprise : **0 €**.
 ### Cas 2 : cabinet de services à Saint-Germain-en-Laye — 45 postes
 **Situation** : cabinet de conseil en RH, 45 salariés sur 2 sites. Migration cloud en cours (Exchange → Microsoft 365), inquiétudes sur la conformité RGPD après le départ d'un collaborateur qui avait accès à toutes les bases clients.
-**Diagnostic** : Audit 360° (225 € HT, 3h sur site) → rapport de 18 pages. Résultats : 12 comptes actifs d'anciens collaborateurs non désactivés, aucune politique de mots de passe formalisée, données clients sur des drives personnels.
+**Diagnostic** : Audit 360° (550 € HT, 3h sur site) → rapport de 18 pages. Résultats : 12 comptes actifs d'anciens collaborateurs non désactivés, aucune politique de mots de passe formalisée, données clients sur des drives personnels.
 **Suite** : mise en conformité avec un prestataire IT local sur 3 mois. Budget total (audit + remédiation) : environ 4 500 € HT. Le cabinet a évité un risque RGPD estimé à 20 000 € minimum en cas de contrôle CNIL.
 ### Cas 3 : sous-traitant industriel à Poissy — 80 postes
 **Situation** : équipementier automobile, 80 salariés, sous-traitant de rang 2 pour un constructeur. Le donneur d'ordres a exigé un audit de cybersécurité dans le cadre des [obligations NIS2 descendantes](https://augmenter.pro/blog/nis2-pme-yvelines-val-doise). Délai imposé : 3 mois.
-**Diagnostic** : Audit 360° (225 €) puis orientation vers un cabinet de cybersécurité pour un audit technique approfondi + pentest. Budget total : environ 12 000 € HT (audit technique + pentest + plan de remédiation).
+**Diagnostic** : Audit 360° (550 €) puis orientation vers un cabinet de cybersécurité pour un audit technique approfondi + pentest. Budget total : environ 12 000 € HT (audit technique + pentest + plan de remédiation).
 **Résultat** : conformité obtenue, contrat renouvelé. Sans l'audit, le sous-traitant risquait de perdre un client représentant 40% de son CA.
-**Ce que montrent ces 3 cas** : le budget nécessaire varie de 0 € à 12 000 € selon la situation. La constante : un diagnostic initial (offert ou à 225 €) suffit souvent à identifier les urgences et à décider si un audit complet est justifié.
+**Ce que montrent ces 3 cas** : le budget nécessaire varie de 0 € à 12 000 € selon la situation. La constante : un diagnostic initial (offert ou à 550 €) suffit souvent à identifier les urgences et à décider si un audit complet est justifié.
 ## Quand déclencher un audit ? Les 4 moments clés
 Beaucoup de PME attendent un incident pour auditer leur SI. C'est l'équivalent de consulter un médecin uniquement aux urgences. Voici les 4 situations où un audit est le plus rentable :
   * **Avant un investissement IT majeur** : migration cloud, changement d'ERP, nouveau site. L'audit évite de construire sur des fondations fragiles.
@@ -2005,7 +2005,7 @@ Un audit informatique **global** évalue aussi la performance de votre SI (lente
 Nous intervenons aussi en [Val d'Oise (95)](https://augmenter.pro/audit-informatique-val-doise) — Cergy, Pontoise, Argenteuil, Sarcelles — avec la même méthodologie.
 ## FAQ — Prix d'un audit informatique
 ### Combien coûte un audit informatique pour une PME ?
-Entre **1 500 et 20 000 € HT** selon le type (flash, standard, complet) et la taille de l'entreprise. Pour une PME de 20 à 50 postes en Yvelines, comptez 4 000 à 10 000 € pour un audit standard. Notre Audit 360° à 225 € couvre un diagnostic stratégique complet — suffisant dans 70% des cas pour identifier les priorités.
+Entre **1 500 et 20 000 € HT** selon le type (flash, standard, complet) et la taille de l'entreprise. Pour une PME de 20 à 50 postes en Yvelines, comptez 4 000 à 10 000 € pour un audit standard. Notre Audit 360° à 550 € couvre un diagnostic stratégique complet — suffisant dans 70% des cas pour identifier les priorités.
 ### Quelle est la durée d'un audit informatique ?
 De 1 jour (diagnostic flash) à 4 semaines (audit complet avec pentest et conformité). Pour une PME de 50 postes, prévoyez 5 à 10 jours ouvrés pour un audit standard.
 ### L'audit informatique est-il obligatoire pour les PME ?

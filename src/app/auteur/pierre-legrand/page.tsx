@@ -142,7 +142,7 @@ const apportPME = [
     icon: GraduationCap,
     title: "Résultats chiffrés",
     body:
-      "Chaque mission part d'un audit (180° offert ou 360° à 225 €) et se termine par un livrable opérationnel : plan d'action priorisé, automatisations en production, équipes formées et autonomes.",
+      "Chaque mission part d'un audit (180° offert ou 360° à 550 €) et se termine par un livrable opérationnel : plan d'action priorisé, automatisations en production, équipes formées et autonomes.",
   },
 ];
 
@@ -403,7 +403,7 @@ export default function PierreLegrandPage() {
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
               60 minutes pour cadrer vos enjeux, identifier les quick wins et
-              décider si l&apos;Audit 180° offert ou l&apos;Audit 360° à 225 €
+              décider si l&apos;Audit 180° offert ou l&apos;Audit 360° à 550 €
               est le bon point de départ.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">

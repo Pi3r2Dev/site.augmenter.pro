@@ -48,7 +48,7 @@ const audits: AuditOffer[] = [
   {
     icon: Brain,
     badge: "Audit 360°",
-    priceBig: "225 €",
+    priceBig: "550 €",
     priceSub: "~3 h + livrable PDF",
     title: "Feuille de route IA",
     subtitle:

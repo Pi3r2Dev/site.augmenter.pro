@@ -104,7 +104,7 @@ export default function Article() {
           périmètre, de la taille du parc et du prestataire (freelance
           ~600-800 €/jour, cabinet ~800-1 200 €/jour). En alternative,
           augmenter.PRO propose un Audit 180° offert (60 min) puis un Audit
-          360° à 225 € HT, sans engagement.
+          360° à 550 € HT, sans engagement.
         </p>
       </div>
 
@@ -224,7 +224,7 @@ export default function Article() {
         <li>Engagement : <strong>aucun</strong> — vous repartez avec un diagnostic clair, sans obligation</li>
       </ul>
 
-      <h3>Audit 360° IA Stratégique — 225 € HT</h3>
+      <h3>Audit 360° IA Stratégique — 550 € HT</h3>
       <ul>
         <li>Durée : <strong>~3 heures</strong> sur site (Yvelines / Val d&apos;Oise)</li>
         <li>Analyse complète : réseau, sécurité, postes, cloud, licences, coûts, organisation</li>
@@ -237,7 +237,7 @@ export default function Article() {
         </li>
       </ul>
       <p>
-        <strong>Pourquoi 225 € et pas 5 000 € ?</strong> Notre Audit 360° n&apos;est
+        <strong>Pourquoi 550 € et pas 5 000 € ?</strong> Notre Audit 360° n&apos;est
         pas un audit de cybersécurité avec pentest — c&apos;est un{" "}
         <strong>diagnostic stratégique</strong> qui évalue votre SI dans sa globalité
         (performance, coûts, organisation, sécurité, IA readiness). Il couvre un
@@ -288,7 +288,7 @@ export default function Article() {
         RGPD après le départ d&apos;un collaborateur qui avait accès à toutes les bases clients.
       </p>
       <p>
-        <strong>Diagnostic</strong> : Audit 360° (225 € HT, 3h sur site) → rapport de
+        <strong>Diagnostic</strong> : Audit 360° (550 € HT, 3h sur site) → rapport de
         18 pages. Résultats : 12 comptes actifs d&apos;anciens collaborateurs non désactivés,
         aucune politique de mots de passe formalisée, données clients sur des drives personnels.
       </p>
@@ -309,7 +309,7 @@ export default function Article() {
         . Délai imposé : 3 mois.
       </p>
       <p>
-        <strong>Diagnostic</strong> : Audit 360° (225 €) puis orientation vers un cabinet
+        <strong>Diagnostic</strong> : Audit 360° (550 €) puis orientation vers un cabinet
         de cybersécurité pour un audit technique approfondi + pentest. Budget total :
         environ 12 000 € HT (audit technique + pentest + plan de remédiation).
       </p>
@@ -320,7 +320,7 @@ export default function Article() {
       <p>
         <strong>Ce que montrent ces 3 cas</strong> : le budget nécessaire varie de
         0 € à 12 000 € selon la situation. La constante : un diagnostic initial (offert
-        ou à 225 €) suffit souvent à identifier les urgences et à décider si un audit
+        ou à 550 €) suffit souvent à identifier les urgences et à décider si un audit
         complet est justifié.
       </p>
 
@@ -439,7 +439,7 @@ export default function Article() {
       <p>
         Entre <strong>1 500 et 20 000 € HT</strong> selon le type (flash, standard, complet)
         et la taille de l&apos;entreprise. Pour une PME de 20 à 50 postes en Yvelines,
-        comptez 4 000 à 10 000 € pour un audit standard. Notre Audit 360° à 225 € couvre
+        comptez 4 000 à 10 000 € pour un audit standard. Notre Audit 360° à 550 € couvre
         un diagnostic stratégique complet — suffisant dans 70% des cas pour identifier
         les priorités.
       </p>

@@ -7,7 +7,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Quelle différence entre l'Audit 180° et l'Audit 360° ?",
     answer:
-      "L'Audit 180° est un échange de 60 minutes, offert, pour identifier les quick wins et poser un premier diagnostic. L'Audit 360° (225 €) est un diagnostic approfondi de ~3 heures qui inclut tout l'Audit 180° + une cartographie des cas d'usage IA, une analyse ROI et une feuille de route 6 mois.",
+      "L'Audit 180° est un échange de 60 minutes, offert, pour identifier les quick wins et poser un premier diagnostic. L'Audit 360° (550 €) est un diagnostic approfondi de ~3 heures qui inclut tout l'Audit 180° + une cartographie des cas d'usage IA, une analyse ROI et une feuille de route 6 mois.",
   },
   {
     question: "Le diagnostic de 60 minutes est-il vraiment offert ?",

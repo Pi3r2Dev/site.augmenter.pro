@@ -46,7 +46,7 @@ import {
 export const metadata: Metadata = {
   title: "Audit informatique Val-d'Oise (95) : 60 min pour y voir clair",
   description:
-    "Pannes, sécurité fragile, infogérance opaque ? Audit informatique PME en Val-d'Oise (95) : 60 min offerts, audit complet dès 225 €. NIS2 & RGPD inclus.",
+    "Pannes, sécurité fragile, infogérance opaque ? Audit informatique PME en Val-d'Oise (95) : 60 min offerts, audit complet dès 550 €. NIS2 & RGPD inclus.",
 };
 
 const stats = [
@@ -248,7 +248,7 @@ const faqItems = [
   {
     question: "Quel est le prix d'un audit informatique dans le Val-d'Oise ?",
     answer:
-      "Le diagnostic initial de 60 min est offert, sans engagement. L'Audit 360° complet coûte 225 € et comprend 3h d'intervention sur site, un rapport détaillé et un plan d'action chiffré. Un audit PME standard coûte entre 2 000 et 15 000 € HT sur le marché. Détails dans notre guide tarifaire : /blog/cout-audit-informatique-yvelines",
+      "Le diagnostic initial de 60 min est offert, sans engagement. L'Audit 360° complet coûte 550 € et comprend 3h d'intervention sur site, un rapport détaillé et un plan d'action chiffré. Un audit PME standard coûte entre 2 000 et 15 000 € HT sur le marché. Détails dans notre guide tarifaire : /blog/cout-audit-informatique-yvelines",
   },
   {
     question: "Intervenez-vous à Cergy, Pontoise et Argenteuil ?",
@@ -314,7 +314,7 @@ const serviceJsonLd = {
     {
       "@type": "Offer",
       name: "Audit 360° Informatique",
-      price: "225",
+      price: "550",
       priceCurrency: "EUR",
       description:
         "Diagnostic complet de 3h avec rapport détaillé et plan d'action chiffré",

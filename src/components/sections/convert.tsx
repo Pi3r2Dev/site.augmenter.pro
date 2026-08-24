@@ -40,7 +40,7 @@ const PLANS: Plan[] = [
   {
     name: "Audit 360°",
     tagline: "IA Stratégique — feuille de route personnalisée.",
-    price: "225 €",
+    price: "550 €",
     duration: "~3 h + livrable",
     popular: true,
     features: [

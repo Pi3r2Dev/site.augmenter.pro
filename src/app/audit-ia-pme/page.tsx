@@ -245,7 +245,7 @@ const faqItems = [
   {
     question: "Combien coûte un audit IA pour une PME ?",
     answer:
-      "Le diagnostic 180° initial est offert (60 min, sans engagement). L'Audit IA 360° complet coûte 225 € et inclut une demi-journée de cartographie et une feuille de route sur 6 mois. C'est volontairement accessible : sur le marché, un audit IA d'agence coûte généralement entre 3 000 et 20 000 € HT. Le programme Osez l'IA de Bpifrance peut ensuite prendre en charge jusqu'à 80 % du coût d'accompagnement au déploiement.",
+      "Le diagnostic 180° initial est offert (60 min, sans engagement). L'Audit IA 360° complet coûte 550 € et inclut une demi-journée de cartographie et une feuille de route sur 6 mois. C'est volontairement accessible : sur le marché, un audit IA d'agence coûte généralement entre 3 000 et 20 000 € HT. Le programme Osez l'IA de Bpifrance peut ensuite prendre en charge jusqu'à 80 % du coût d'accompagnement au déploiement.",
   },
   {
     question: "Combien de temps prend un audit IA ?",
@@ -313,7 +313,7 @@ const serviceJsonLd = {
     {
       "@type": "Offer",
       name: "Audit IA 360°",
-      price: "225",
+      price: "550",
       priceCurrency: "EUR",
       description:
         "Diagnostic complet avec cartographie des processus et feuille de route IA chiffrée sur 6 mois",

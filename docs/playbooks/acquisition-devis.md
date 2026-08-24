@@ -30,7 +30,7 @@ public un actif qui existe déjà — des clients satisfaits, invisibles.
 
 | # | Levier | Délai | Qui |
 |---|--------|-------|-----|
-| 1 | Canal de réception fonctionnel | jours | code — **fait** (cf. CLAUDE.md § Acquisition) |
+| 1 | Canal de réception fonctionnel | jours | ✅ **fait et vérifié en prod le 2026-08-24** |
 | 2 | Avis Google (bouche-à-oreille → Local Pack) | semaines | manuel |
 | 3 | Catégories + zones GBP | 1 h | manuel |
 | 4 | Trouvabilité sur le nom propre (SEO d'entité) | semaines | mixte |
@@ -42,6 +42,8 @@ commerciales entre 20 et 90, `/audit-informatique-yvelines` à 75,8 en août,
 profil de backlinks vide (aucune citation tierce détectable).
 
 ## Levier 2 — Demander les avis Google
+
+> ⬅ **Chantier courant.** Le levier 1 est clos ; c'est ici que se joue la suite.
 
 **Lien d'avis 1-clic : <https://g.page/r/CWg20PXid2i2EBM/review>**
 (déjà utilisé par le bouton « Avis Google » du footer, event GTM `gbp_click`)
@@ -108,28 +110,66 @@ donc des clients.
 Entité `/g/11n44vnyqf` · cid `13143887329151170152` · compte `legrand.work@gmail.com`
 Service-Area Business, base Jouy-le-Moutier 95280.
 
-**Fait (2026-06-29)** : téléphone `06 79 11 97 74`, 5 posts Google.
+**État constaté le 2026-08-24** (fiche ouverte via Playwright — audit de juin périmé,
+l'essentiel du chantier catégories a été fait entre-temps) :
 
-**Reste — manuel obligatoire** : l'autocomplétion catégories/zones ne se déclenche pas
-en automatisation Playwright, il faut sélectionner dans la liste déroulante sinon la
-valeur ressort « non reconnue ».
+✅ Catégorie principale **« Consultant informatique »** · parasites supprimées
+(« Club privé », « odoo », « erp ») · description canonique en place · tél +
+WhatsApp · **horaires alignés (ferme 19 h)** · adresse masquée · rendez-vous en ligne.
+Secondaires actuelles : Consultant en marketing · Consultant en ingénierie ·
+Service de sécurité informatique · Assistance et services informatiques.
+Zones : Paris · Yvelines · Val-d'Oise. **Avis : 3, tous d'avril.**
 
-Par impact décroissant sur les devis :
+**Manques réels restants, par impact décroissant :**
 
-1. **Catégorie principale** → `Service de conseil en informatique`.
-   Décide sur quelles requêtes la fiche peut apparaître dans le Local Pack.
-   Actuellement « Assistance et services informatiques » = rangé avec le dépannage.
-   Supprimer les parasites non reconnues : « Club privé », « Club d'informatique »,
-   « odoo », « erp ».
-2. **Zones desservies** → 78 / 95 / 92 / 75 + communes.
-3. **Catégories secondaires** → Organisme de formation professionnelle ·
-   Conseiller en gestion d'entreprise · Assistance et services informatiques.
-4. **Services + description** (texte canonique validé 2026-06-29).
-5. **Horaires** — fiche ferme 17 h, site annonce 19 h : incohérence NAP à aligner.
-6. **Photos** — les dernières datent de 60 j.
+✅ **Services — traité le 2026-08-24.** Le panneau est sous le bouton « **Éditer
+services** », distinct de « Modifier les infos » (et sans rapport avec « Fournis par
+l'établissement », qui n'est que la section des *attributs* type « géré par une
+femme », sans effet de matching). La catégorie principale n'avait qu'un service
+générique ; **8 services ont été créés** sous `Consultant informatique` :
 
-Les points 1 et 2 sont structurels : sans eux, les avis collectés font monter une
-fiche qui n'apparaît pas sur les bonnes requêtes.
+Audit 360° IA · Audit 180° infrastructure · Configuration et paramétrage Odoo ·
+Migration et transfert de logiciel ERP · Récupération de données logiciel de
+comptabilité · Atelier Claude Cowork pour dirigeant · Automatisation de tâches avec
+l'IA · Formation IA pour dirigeant et équipe.
+
+**Principe de nommage retenu** (consigne user) : libeller en **langage de la demande**
+— ce que la cible tape — et non en langage d'offre. Cohérent avec la découverte GSC
+« les décideurs cherchent en langage tâche/outil, jamais "consultant ia" ».
+
+Deux fautes publiques corrigées au passage : « audit infrastucture » → **Audit
+infrastructure informatique** et « Intégration ia » → **Intégration IA sur mesure**,
+toutes deux dotées d'une description.
+
+**Manques restants, par impact décroissant :**
+
+1. **LinkedIn absent** des profils sociaux — seul `x.com/Pi3r2Dev` y figure, alors que
+   le `sameAs` du site déclare `linkedin.com/in/legrand-pierre`. LinkedIn est le signal
+   de légitimité B2B principal. **Non automatisable** (cf. tableau ci-dessous).
+2. **Hauts-de-Seine (92) absent des zones** (Paris · Yvelines · Val-d'Oise) alors que
+   la description de la fiche annonce « 78/95/92/75 » → la fiche se contredit.
+3. `Consultant en marketing` et `Consultant en ingénierie` restent **sans aucun
+   service**. Les remplir ou les supprimer — une catégorie vide dilue la lecture.
+4. **« Organisme de formation professionnelle »** absent des secondaires alors que
+   l'Atelier est une offre vendue.
+5. Date de création et Clientèle vides.
+6. Le champ **prix** de chaque service est resté vide volontairement — TJM 550 €/j,
+   à ne pas publier sans validation explicite.
+
+### Ce que Playwright peut / ne peut pas faire sur la fiche (testé 2026-08-24)
+
+| Zone | Écriture automatisée |
+|------|----------------------|
+| **Services** (bouton « Éditer services ») | ✅ **fonctionne** — création, renommage, description, prix |
+| Profils sur les réseaux sociaux | ❌ champ `disabled=true`, `fill()` timeout |
+| Catégories / zones | ❌ non retesté en août ; l'audit de juin conclut à l'échec (autocomplétion inerte, valeur tapée « non reconnue ») |
+| Posts Google | ✅ (juin) |
+| Lecture / audit de la fiche | ✅ fiable — à faire avant tout conseil, la fiche évolue vite |
+
+**Méthode qui marche pour les services** : « Éditer services » → « Ajouter d'autres
+services » sous la catégorie visée → « Ajouter un service personnalisé » → saisir dans
+le `combobox` → « Enregistrer ». Pour modifier un service existant, cliquer dessus :
+le panneau offre nom, **prix** et **description (300 car.)**.
 
 ## Levier 4 — Trouvabilité sur le nom
 

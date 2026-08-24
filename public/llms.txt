@@ -18,7 +18,7 @@ Secteurs servis : BTP, immobilier, industrie, artisanat, commerce, services. PME
 ## Services
 
 - **Audit 180° (Offert)** : Échange de 60 min pour identifier vos besoins en IA et digitalisation. Sans engagement.
-- **Audit 360° IA Stratégique (225 €)** : Diagnostic complet de 3h couvrant infrastructure, workflows et équipes. Livrable : plan d'action chiffré et priorisé.
+- **Audit 360° IA Stratégique (550 €)** : Diagnostic complet de 3h couvrant infrastructure, workflows et équipes. Livrable : plan d'action chiffré et priorisé.
 - **Ateliers Claude Cowork & Claude Code dirigeant (à partir de 450 € HT)** : Deux ateliers d'une demi-journée en tête-à-tête, selon le niveau du dirigeant. Palier 1 — Claude Cowork (450 € HT), entrée no-code : prise en main de l'application desktop, connexion des fichiers et outils, 2-3 skills et workflows métier sans code. Palier 2 — Claude Code (650 € HT), avancé : installation sur le projet réel, CLAUDE.md opérationnel et 2-3 workflows en production. Progression recommandée : Cowork puis Code quand le projet le justifie. Présentiel Yvelines (78) / Val d'Oise (95) ou visio. Page : https://augmenter.pro/atelier-claude-code-dirigeant
 - **Développement sur mesure** : Applications web/mobile, chatbots IA, automatisation de workflows, intégrations CRM.
 - **Formation & Accompagnement** : Ateliers IA pour dirigeants, formation outils collaboratifs, conduite du changement.
@@ -58,7 +58,7 @@ Secteurs servis : BTP, immobilier, industrie, artisanat, commerce, services. PME
 - [Comparatif LLM pour la Vente](https://augmenter.pro/blog/comparatif-llm-vente-commerciale) — Forces, faiblesses et conformité RGPD de chaque LLM pour les équipes commerciales.
 - [5 signes de moderniser l'informatique de votre PME](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme) — Lenteurs, pannes, coûts cachés : les signaux d'alerte pour les PME du BTP et de l'industrie.
 - [NIS2 PME : Guide + Checklist de Conformité 2026](https://augmenter.pro/blog/nis2-pme-yvelines-val-doise) — Directive NIS2 : votre PME est-elle concernée, directement ou via vos donneurs d'ordres ? Auto-diagnostic, les 10 mesures obligatoires en checklist à cocher (avec priorités), sanctions, obligation indirecte via la chaîne d'approvisionnement, plan d'action en 5 étapes. Ancrage Yvelines (78) / Val d'Oise (95).
-- [Combien coûte un audit informatique PME ? Tarifs 2026](https://augmenter.pro/blog/cout-audit-informatique-yvelines) — Guide tarifaire transparent (prix audit informatique et cybersécurité) : grille de prix par type d'audit et taille d'entreprise (1 500 à 20 000 € HT), comparaison Audit 180° offert vs Audit 360° (225 €), 3 cas concrets de PME, critères de choix prestataire, FAQ prix.
+- [Combien coûte un audit informatique PME ? Tarifs 2026](https://augmenter.pro/blog/cout-audit-informatique-yvelines) — Guide tarifaire transparent (prix audit informatique et cybersécurité) : grille de prix par type d'audit et taille d'entreprise (1 500 à 20 000 € HT), comparaison Audit 180° offert vs Audit 360° (550 €), 3 cas concrets de PME, critères de choix prestataire, FAQ prix.
 - [Veille Concurrentielle IA pour PME : Guide Pratique 2026](https://augmenter.pro/blog/veille-concurrentielle-ia-pme) — Comment automatiser votre veille concurrentielle avec l'IA. Méthode en 5 étapes, outils recommandés et retour d'expérience terrain pour PME.
 - [Automatiser Emails et Réseaux Sociaux avec l'IA en PME](https://augmenter.pro/blog/automatiser-emails-reseaux-sociaux-ia) — Gagnez 10h par semaine en automatisant vos emails et publications sociales avec l'IA. Guide pratique et outils testés pour dirigeants de PME.
 
@@ -144,7 +144,7 @@ R: Technique (software & hardware), processus (vente & opérations), formation h
 
 ## Audit IA pour PME
 
-- [Audit IA pour PME : diagnostic & feuille de route chiffrée](https://augmenter.pro/audit-ia-pme) — Landing page nationale dédiée à l'audit IA pour PME françaises. Évaluation de la maturité IA, cartographie des processus, identification des cas d'usage prioritaires par ROI, audit des données (RGPD/AI Act), shadow AI, souveraineté. Diagnostic 180° offert (60 min visio) + Audit IA 360° à 225 € avec feuille de route sur 6 mois. Méthodologie en 4 étapes, cas d'usage par secteur (BTP, immobilier, industrie, services), financement Osez l'IA Bpifrance, FAQ. Visio partout en France, présentiel 78/95.
+- [Audit IA pour PME : diagnostic & feuille de route chiffrée](https://augmenter.pro/audit-ia-pme) — Landing page nationale dédiée à l'audit IA pour PME françaises. Évaluation de la maturité IA, cartographie des processus, identification des cas d'usage prioritaires par ROI, audit des données (RGPD/AI Act), shadow AI, souveraineté. Diagnostic 180° offert (60 min visio) + Audit IA 360° à 550 € avec feuille de route sur 6 mois. Méthodologie en 4 étapes, cas d'usage par secteur (BTP, immobilier, industrie, services), financement Osez l'IA Bpifrance, FAQ. Visio partout en France, présentiel 78/95.
 
 ## Stratégie IA pour PME
 
