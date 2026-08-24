@@ -183,7 +183,17 @@ Priorisés Tier 1 d'abord (cluster Claude/Odoo/ERP = 100 % des clics). Chacun re
 
 Relire alors, dans le repo de mission : `ETAT.md`, puis la section « En cours » de `CHANGELOG.md`, puis les `docs/reva9/suivis/` modifiés depuis la date de synchro en tête de fichier.
 
-**Angles déjà publiés** : *(aucun à ce jour — l'article `configurer-odoo-ia-claude-cowork` précède ce registre et n'est pas sourcé sur lui)*
+**Angles déjà publiés** : aucun article à ce jour — l'article `configurer-odoo-ia-claude-cowork` précède ce registre et n'est pas sourcé sur lui.
+
+**Chiffres du §4 déjà rendus publics** (section « prestations types » de la home, [`src/components/sections/prestations-types.tsx`](../../../src/components/sections/prestations-types.tsx), 2026-08-21) — anonymisés, sans nom de client ni croisement secteur + effectif + ville :
+
+| Chiffre publié | Formulation retenue |
+|---|---|
+| Catalogue reclassé + fiches enrichies | « 7 800 références reclassées, 1 360 fiches enrichies » |
+| Franco de port renseigné | « 14 fournisseurs sur 98 avaient un franco renseigné » |
+| Réconciliation comptable | « 98,6 % rapprochés sur 6 mois de facturation » |
+
+Ces formulations sont désormais **figées** : les reprendre à l'identique dans les articles à venir. Deux versions d'un même chiffre sur le site le rendent invérifiable, donc non citable par un moteur IA.
 
 ---
 

@@ -101,7 +101,7 @@ export function ApproachServices() {
 
       <div className="relative mx-auto max-w-[1320px] px-4 sm:px-6">
         <SectionHead
-          eyebrow="/ 02 — approche & prestations"
+          eyebrow="/ 02 — approche & méthode"
           eyebrowTone="dark"
           title={
             <>

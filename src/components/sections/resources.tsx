@@ -68,7 +68,7 @@ export function Resources() {
     <section id="contenus" className="py-16 md:py-20">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6">
         <SectionHead
-          eyebrow="/ 03 — ressources"
+          eyebrow="/ 04 — ressources"
           title={
             <>
               Idées PME &amp; articles

@@ -492,6 +492,27 @@ export function QuoteWizard() {
     localStorage.removeItem(STORAGE_KEY);
     setSubmitted(true);
 
+    // Capture serveur AVANT de quitter la page. `keepalive` fait survivre la
+    // requête à la navigation, et l'absence d'`await` préserve le user gesture
+    // (sinon window.open serait bloqué par le popup blocker).
+    fetch("/api/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({
+        name: contact.name,
+        email: contact.email,
+        company: contact.company,
+        services: selectedServices,
+        sector: context.sector,
+        teamSize: context.teamSize,
+        urgency: context.urgency,
+        additional: context.additional,
+        brief: finalBrief,
+        channel,
+      }),
+    }).catch(() => {});
+
     if (channel === "email") {
       window.location.href = buildMailtoUrl(selectedServices, context, contact, finalBrief);
     } else {

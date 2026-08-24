@@ -261,7 +261,7 @@ Voir [public/images/](public/images/) — convention WebP, kebab-case, INDEX.md 
 | Schema | Location | Purpose |
 |--------|----------|---------|
 | Organization + LocalBusiness + WebSite | [src/app/layout.tsx](src/app/layout.tsx) (root, toutes pages) | Identité globale, geo-targeting 78/95, contact, social links |
-| AggregateRating + Review[] | [src/app/layout.tsx](src/app/layout.tsx) imbriqué dans `LocalBusiness` du `@graph` | 5 reviews (tableau `REVIEWS` en tête du fichier) → étoiles SERP Google |
+| AggregateRating + Review[] | [src/app/layout.tsx](src/app/layout.tsx) imbriqué dans `LocalBusiness` du `@graph` | 5 reviews (tableau `REVIEWS` en tête du fichier). ⚠ **Ne produit PAS d étoiles en SERP** : depuis 09/2019 Google ignore les avis auto-déclarés (self-serving) sur `LocalBusiness`/`Organization`. Utile pour les AI Overviews uniquement — les vraies étoiles viennent du **Google Business Profile** |
 | **CreativeWork** (`WebPage` + nested) | [src/app/(home)/page.tsx](src/app/(home)/page.tsx) | Positionne `/` comme contenu éditorial narrative |
 | FAQPage | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | FAQ section → Google "People Also Ask" |
 | Service + OfferCatalog | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | 5 services with pricing (0€ et 225€) — `/prestations` redirige 308 vers `/approche#prestations` (ancre dans le Ch07 audits) |
@@ -346,6 +346,37 @@ Use `/create-article <sujet>` or follow this manual process:
 12. Tag(s) doivent matcher les filter pills cliquables de `/blog` : `IA` / `PME` / `Commercial` / `Cybersécurité` / `Audit 360°`. Si tu utilises un tag différent (`Productivité`, `Intégration`, `Claude Code`, etc.), l'article n'apparaîtra que sous le filtre « Tout ». **Ne pas utiliser « Intelligence Artificielle » comme tag** — utiliser `IA` (normalisé site-wide).
 13. Run `npm run build` to verify
 
+## Acquisition & réception des demandes de devis
+
+**Objectif business n°1 du site : recevoir des demandes de devis**, pas du trafic. Tout chantier contenu/SEO s'arbitre là-dessus. Contexte mesuré (GSC, 2026-08-24) : ~3-4 devis/mois dont la quasi-totalité vient du **bouche-à-oreille**, trafic de marque quasi nul (15 impressions / 0 clic sur 6 mois, « pierre legrand » en position 68), et 843 impressions sur des requêtes prix/tarif/devis captées à **0 clic** (tout en page 2-4).
+
+Playbook opérationnel (message de demande d'avis, checklist GBP, ordre de rendement) : [`docs/playbooks/acquisition-devis.md`](docs/playbooks/acquisition-devis.md).
+
+### Chaîne de réception (à ne pas casser)
+
+Le wizard [`src/app/contact/quote-wizard.tsx`](src/app/contact/quote-wizard.tsx) (rendu sur `/contact` via `contact-form.tsx`) se termine historiquement par un `mailto:` ou un lien WhatsApp — deux canaux qui **sortent du site et ne laissent aucune trace serveur**. Depuis 2026-08-24, `handleSend()` POSTe d'abord la demande sur [`/api/quote`](src/app/api/quote/route.ts).
+
+Deux détails d'implémentation qui ne doivent pas être « nettoyés » :
+
+| Détail | Raison |
+|--------|--------|
+| `keepalive: true` sur le `fetch` | la requête doit survivre à la navigation vers le client mail |
+| **pas d'`await`** avant `window.open` | un `await` casse le *user gesture* → WhatsApp bloqué par le popup blocker |
+
+`/api/quote` livre sur trois niveaux, du plus robuste au plus confortable :
+
+1. **`console.log` préfixé `[QUOTE]` — inconditionnel.** Seul canal qui ne dépend d'aucune variable d'environnement. **Ne jamais le retirer** : c'est le filet qui a manqué à `/api/notify-abandon`, dont le webhook n'a jamais été branché (`NOTIFY_WEBHOOK_URL` vide → `graceful no-op` renvoyant `ok: true`, donc panne silencieuse).
+2. **Webhook** si `NOTIFY_WEBHOOK_URL` (n8n, Make, Zapier).
+3. **E-mail Resend** si `RESEND_API_KEY` + `QUOTE_NOTIFY_EMAIL` + `QUOTE_FROM_EMAIL`. Le `reply_to` pointe sur le prospect.
+
+Variables documentées dans [`.env.example`](.env.example). ⚠ **Elles doivent aussi être déclarées côté Hostinger** : sans elles en prod, la demande est captée dans les logs mais **aucune alerte ne part**.
+
+### Envoi e-mail (Resend)
+
+Domaine d'envoi dédié **`mail.augmenter.pro`** (Resend, région `eu-west-1`, **`verified` le 2026-08-24**), expéditeur `devis@mail.augmenter.pro`. Les 3 enregistrements DNS (DKIM `resend._domainkey.mail`, MX + SPF `send.mail`) sont posés dans la zone `augmenter.pro`.
+
+⚠ **Ne jamais déclarer Resend sur le domaine racine `augmenter.pro`** : il porte la messagerie Hostinger (`MX mx1/mx2.hostinger.com`, SPF `_spf.mail.hostinger.com`) sur laquelle `vite@augmenter.pro` **reçoit** le courrier. Toucher au SPF racine risque la réception pour une alerte de devis. Le sous-domaine isole l'envoi sans rien impacter.
+
 ## Déploiement & cache CDN (Hostinger)
 
 Hostinger sert le site derrière son CDN (`hcdn`) et **ne conserve qu'une seule version de build** : au déploiement, les `/_next/static/*` du build précédent sont supprimés. Un HTML mis en cache avant le déploiement référence donc des CSS/JS hashés qui renvoient **404 en `text/plain`** → refus MIME du navigateur → page sans styles + `Application error: a client-side exception has occurred`.
@@ -372,6 +403,7 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 
 ## Key Constraints
 
+- **Réception des devis** : `/api/quote` doit TOUJOURS conserver son `console.log` préfixé `[QUOTE]` (seul canal indépendant de toute variable d'env) ; et dans `quote-wizard.tsx`, ne jamais ajouter d'`await` avant `window.open` ni retirer `keepalive: true` — cf. section Acquisition
 - **Cache CDN** : toute modif de `revalidate` / `expireTime` / du filet `asset-recovery` se vérifie sur les headers réellement émis (`npm run build && npm run start`, puis `curl -sI http://127.0.0.1:3000/`) — cf. section Déploiement & cache CDN
 - **Données hardcodées (pas de CMS)** — articles et idées centralisés dans le catalog [src/data/resources.ts](src/data/resources.ts) (`ARTICLES` / `IDEAS`) ; testimonials, pricing et prompts (`src/data/prompts.ts`) restent inline
 - **Client components** must use `"use client"` (required for framer-motion, gsap, lenis, three.js, interactive forms, mobile menu)
@@ -394,5 +426,6 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 - [docs/decisions/0002-home-narrative-scroll.md](docs/decisions/0002-home-narrative-scroll.md) — décision narrative /
 - [docs/decisions/0003-funnel-geo-conversion.md](docs/decisions/0003-funnel-geo-conversion.md) — stratégie funnel GEO : mesurer d'abord, monétiser le cluster tech sur le persona dirigeant confirmé
 - [docs/decisions/0006-lcp-pages-classiques.md](docs/decisions/0006-lcp-pages-classiques.md) — LCP pages classiques : hero opaque, WebGL différé, GTM idle
+- [docs/playbooks/acquisition-devis.md](docs/playbooks/acquisition-devis.md) — **playbook acquisition de devis** : constat chiffré GSC, ordre de rendement, message de demande d'avis Google (réutilisable), checklist GBP restante
 - [docs/plans/](docs/plans/) — plans d'implémentation détaillés
 - [docs/ClaudeDesign_handoff/](docs/ClaudeDesign_handoff/) — source du design narrative (HTML/CSS/JS prototype)
