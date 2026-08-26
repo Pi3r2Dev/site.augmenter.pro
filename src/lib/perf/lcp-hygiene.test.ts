@@ -13,7 +13,7 @@ describe("hygiène LCP des heroes classiques", () => {
     expect(hero).not.toContain("framer-motion");
     expect(hero).not.toMatch(/<motion\.(h1|p|div)/);
     expect(hero).toContain(
-      "Nous accompagnons les PME et indépendants à trouver l&apos;équilibre",
+      "La performance naît de l&apos;équilibre entre",
     );
   });
 

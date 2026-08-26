@@ -224,7 +224,7 @@ export default function Article() {
       <p>
         Ces scènes ne sortent pas d&apos;une plaquette : elles viennent de nos
         propres systèmes et de nos chantiers en cours chez un client pilote —
-        un distributeur de matériel de motoculture de plusieurs centaines de
+        un distributeur de matériel technique de plusieurs centaines de
         milliers de références, dont l&apos;équipe travaille avec un ERP Odoo.
         Certaines tournent déjà en production, d&apos;autres sont en
         déploiement ; toutes reposent sur la même mécanique.

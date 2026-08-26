@@ -54,6 +54,44 @@ const PLANS: Plan[] = [
   },
 ];
 
+/**
+ * La méthode, en quatre temps — rapatriée de l'ancienne section « approche &
+ * méthode » quand celle-ci est devenue l'explorateur de capacités.
+ *
+ * Libellés verbaux (on regarde / on tranche / on construit / on ajuste) plutôt
+ * que substantifs de plaquette : on assume qui fait quoi. Le nominal reste en
+ * libellé secondaire, pour qui scanne.
+ *
+ * Placée juste sous les deux formules : c'est le « voilà ce que vous achetez »
+ * qui suit immédiatement le prix.
+ */
+const STEPS = [
+  {
+    num: "01",
+    verb: "On regarde",
+    noun: "Diagnostic",
+    detail: "Vos outils, vos process, vos habitudes. Soixante minutes.",
+  },
+  {
+    num: "02",
+    verb: "On tranche",
+    noun: "Sur mesure",
+    detail: "Ce qu'on branche, ce qu'on laisse. Votre métier, votre budget.",
+  },
+  {
+    num: "03",
+    verb: "On construit",
+    noun: "Accompagnement",
+    detail: "Développement et formation en même temps. Vos équipes suivent.",
+  },
+  {
+    num: "04",
+    verb: "On ajuste",
+    noun: "Itération",
+    detail: "On mesure. Ce qui ne sert pas, on le retire.",
+  },
+];
+
 const GUARANTEES = [
   "Sans engagement",
   "Zéro jargon",
@@ -160,6 +198,35 @@ export function Convert() {
             />
             <PlanCard plan={PLANS[1]} />
           </BentoCard>
+
+          {/* Méthode — 4 étapes, une rangée sous les formules */}
+          {STEPS.map((step) => (
+            <BentoCard
+              key={step.num}
+              variant="dark"
+              span={3}
+              rows={2}
+              pad="md"
+              mobileMinH="150px"
+            >
+              <div className="flex h-full flex-col">
+                <div className="flex items-baseline gap-2">
+                  <span className="gradient-text text-[1.5rem] font-extrabold leading-none tracking-[-0.02em]">
+                    {step.num}
+                  </span>
+                  <h3 className="text-[0.95rem] font-semibold text-white">
+                    {step.verb}
+                  </h3>
+                </div>
+                <p className="mt-2 flex-1 text-[0.78rem] leading-normal text-white/60">
+                  {step.detail}
+                </p>
+                <div className="mt-3 text-[0.66rem] font-semibold uppercase tracking-[0.1em] text-violet-300">
+                  Étape {step.num} · {step.noun}
+                </div>
+              </div>
+            </BentoCard>
+          ))}
 
           {/* Contact direct — 4 × 2 */}
           <BentoCard

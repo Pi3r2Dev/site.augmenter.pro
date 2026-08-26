@@ -66,7 +66,7 @@ const PRESTATIONS: Prestation[] = [
     pain: "Vos clients réguliers commandent par téléphone et par mail. Chaque commande est ressaisie à la main, et chaque ressaisie est une erreur en puissance.",
     delivery:
       "On remet d'abord le catalogue en ordre (familles, références, fiches produit), et seulement ensuite on ouvre le réassort en ligne. L'ordre inverse échoue toujours.",
-    proof: "7 800 références reclassées, 1 360 fiches enrichies",
+    proof: "Trois personnes une semaine, désormais une journée",
     sectors: "Distribution · Négoce B2B · E-commerce",
     accent: PALETTES.amber.b,
   },
@@ -76,7 +76,7 @@ const PRESTATIONS: Prestation[] = [
     pain: "Du stock dormant sur un site, une rupture sur l'autre. Et des frais de port payés parce que personne ne voyait qu'il manquait 80 € pour atteindre le franco.",
     delivery:
       "Le besoin net calculé pour vous (commandes confirmées, moins le stock, moins ce qui est déjà en route) et le seuil de franco de port affiché avant de valider.",
-    proof: "14 fournisseurs sur 98 avaient un franco renseigné",
+    proof: "Le franco affiché avant de valider la commande",
     sectors: "Distribution · Multi-dépôts · Atelier",
     accent: PALETTES.cold.b,
   },
@@ -86,7 +86,7 @@ const PRESTATIONS: Prestation[] = [
     pain: "Les mêmes lignes saisies trois fois : dans la gestion commerciale, sur le portail fournisseur, chez le transporteur. Personne n'a signé pour ça.",
     delivery:
       "Le pont entre vos outils, y compris quand aucun n'expose d'API : export mensuel vers le cabinet comptable, transferts automatisés, contrôles de cohérence.",
-    proof: "98,6 % rapprochés sur 6 mois de facturation",
+    proof: "Une journée de contrôle mensuel, réduite aux écarts",
     sectors: "Tous secteurs · PME multi-outils",
     accent: PALETTES.warm.b,
   },
@@ -183,6 +183,57 @@ export function PrestationsTypes() {
               </motion.div>
             </BentoCard>
           ))}
+
+          {/* Preuve terrain — respiration entre six pavés denses et le
+              financement. Arnaud est la preuve vivante de « Catalogue &
+              commandes », et la seule qui nomme notre commune. */}
+          <BentoCard span={12} rows={2} mobileMinH="200px">
+            <motion.figure
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.45 }}
+              className="flex h-full flex-col justify-center gap-4 md:flex-row md:items-center md:justify-between"
+            >
+              <blockquote className="max-w-3xl text-[1.05rem] font-medium italic leading-[1.5] tracking-[-0.01em] md:text-[1.2rem]">
+                &laquo;&nbsp;On gérait notre catalogue sur des fichiers Excel
+                éparpillés. Catalogue centralisé, mise en ligne automatisée
+                &mdash;{" "}
+                <em
+                  className="not-italic"
+                  style={{ color: PALETTES.amber.b }}
+                >
+                  2 h de saisie en moins par jour
+                </em>{" "}
+                et +35 % de demandes clients en ligne.&nbsp;&raquo;
+              </blockquote>
+              <figcaption className="shrink-0 md:text-right">
+                <div className="flex items-center gap-0.5 text-[oklch(0.828_0.189_84.429)] md:justify-end">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <svg
+                      key={i}
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden
+                    >
+                      <polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9" />
+                    </svg>
+                  ))}
+                </div>
+                <div className="mt-1.5 text-[0.85rem] font-semibold">
+                  Arnaud L.
+                </div>
+                <div className="text-[0.75rem] text-muted-foreground">
+                  Gérant, commerce spécialisé &mdash; Île-de-France
+                </div>
+                <div className="mt-1 text-[0.68rem] uppercase tracking-[0.08em] text-muted-foreground">
+                  Catalogue &amp; commandes
+                </div>
+              </figcaption>
+            </motion.figure>
+          </BentoCard>
 
           {/* Financement : l'argument qui débloque la décision */}
           <BentoCard span={12} rows={2} variant="accent" mobileMinH="220px">

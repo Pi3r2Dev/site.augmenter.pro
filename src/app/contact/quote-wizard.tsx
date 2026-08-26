@@ -21,6 +21,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { QUOTE_STORAGE_KEY } from "@/lib/quote-prefill";
 
 // ─── DATA ──────────────────────────────────────────────────────────────────
 
@@ -135,7 +136,7 @@ const INITIAL_CONTACT: WizardContact = { name: "", email: "", company: "" };
 
 const STEP_LABELS = ["Services", "Contexte", "Brief & Contact"];
 
-const STORAGE_KEY = "augmenter-quote-wizard";
+const STORAGE_KEY = QUOTE_STORAGE_KEY;
 
 // ─── HELPERS ────────────────────────────────────────────────────────────────
 

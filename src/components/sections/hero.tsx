@@ -3,19 +3,68 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin, Sparkles, Target, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BentoGrid, BentoCard, Pill } from "@/components/bento/bento-grid";
 import { MiniQuoteCard } from "@/components/bento/pull-quote-card";
-import { TrustStatCard } from "@/components/widgets/trust-stat";
+import { NavTileCard, type NavTileData } from "@/components/widgets/nav-tile";
+import type { Palette } from "@/components/widgets/palettes";
 
 /**
- * Hero bento de `/` : fusion du bloc héro + indicateurs de confiance + preuve sociale.
- * Layout Home.html ligne 255-352 : 6-3-3 / 3-3-3-3.
+ * Hero bento de `/` : fusion du bloc héro, des tuiles de navigation et de la
+ * preuve sociale.
+ *
+ * Les quatre tuiles ont remplacé les cartes de statistiques : elles ne portent
+ * plus un chiffre mais une porte d'entrée. Muettes au repos sur desktop,
+ * libellées sur mobile (cf. NavTileCard).
  *
  * LCP : h1 + lede en HTML opaque (pas de motion opacity nulle — Lighthouse
  * 2026-08-19 mesurait 6,9 s de LCP dont 2,3 s de délai d'élément).
  */
+
+const NAV_TILES: Array<NavTileData & { palette: Palette }> = [
+  {
+    label: "IA souveraines",
+    // TODO(lot 5) : repointer vers /ia-souveraine-pme une fois la page écrite.
+    href: "/audit-ia-pme",
+    seed: 1.1,
+    palette: "violet",
+  },
+  {
+    label: "Intégrations profondes",
+    href: "/integration-mcp",
+    seed: 2.2,
+    palette: "cold",
+  },
+  {
+    label: "Développement sur mesure",
+    href: "/projets",
+    seed: 3.3,
+    palette: "duo",
+  },
+  {
+    label: "Formation continue",
+    href: "/atelier-claude-code-dirigeant",
+    seed: 4.4,
+    palette: "amber",
+  },
+];
+
+function NavTile({ index }: { index: number }) {
+  const tile = NAV_TILES[index];
+  return (
+    <BentoCard
+      span={3}
+      rows={2}
+      variant="flush"
+      mobileMinH="96px"
+      className="col-span-3"
+    >
+      <NavTileCard tile={tile} palette={tile.palette} />
+    </BentoCard>
+  );
+}
+
 export function Hero() {
   return (
     <section className="hero-gradient relative overflow-hidden pt-24 pb-14 md:pt-28 md:pb-16">
@@ -35,23 +84,26 @@ export function Hero() {
                 Conseil IA &amp; Transformation numérique
               </Pill>
             </div>
-            <h1
-              className="mt-4 text-[clamp(2.25rem,4vw,3.5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
-            >
+            <h1 className="mt-4 text-[clamp(2.25rem,4vw,3.5rem)] font-bold leading-[1.02] tracking-[-0.035em]">
               Votre PME,{" "}
               <span className="gradient-text">augmentée par l&apos;IA.</span>
             </h1>
-            <p
-              className="mt-4 max-w-136 text-[0.95rem] leading-[1.55] text-muted-foreground"
-            >
-              Nous accompagnons les PME et indépendants à trouver l&apos;équilibre
-              parfait entre <strong className="font-semibold text-foreground">performance humaine</strong> et{" "}
-              <strong className="font-semibold text-foreground">numérique</strong>. IA,
-              digitalisation, robotique — des solutions sur mesure qui tiennent la route.
+            <p className="mt-4 max-w-136 text-[0.95rem] leading-[1.55] text-muted-foreground">
+              La performance naît de l&apos;équilibre entre{" "}
+              <strong className="font-semibold text-foreground">
+                l&apos;humain
+              </strong>
+              , ses{" "}
+              <strong className="font-semibold text-foreground">outils</strong>{" "}
+              et ses{" "}
+              <strong className="font-semibold text-foreground">
+                habitudes
+              </strong>
+              . On diagnostique l&apos;existant, on branche l&apos;IA dans les
+              logiciels que vous avez déjà, on forme vos équipes — et vous
+              choisissez où vivent vos données.
             </p>
-            <div
-              className="mt-5 flex flex-wrap items-center gap-2.5"
-            >
+            <div className="mt-5 flex flex-wrap items-center gap-2.5">
               <Button asChild size="lg" className="gap-2">
                 <Link href="/contact">
                   Diagnostic — 60 min
@@ -68,35 +120,11 @@ export function Hero() {
             </div>
           </BentoCard>
 
-          {/* Stat widget violet */}
-          <BentoCard span={3} rows={2} variant="flush" mobileMinH="180px">
-            <TrustStatCard
-              stat={{
-                icon: Target,
-                value: "60 min",
-                label: "Sur rendez-vous",
-                description: "Audit complet de votre SI",
-                seed: 1.1,
-              }}
-              palette="violet"
-            />
-          </BentoCard>
+          {/* Tuiles 1-2 — colonnes de droite, rangées 1-2 */}
+          <NavTile index={0} />
+          <NavTile index={1} />
 
-          {/* Stat widget cold */}
-          <BentoCard span={3} rows={2} variant="flush" mobileMinH="180px">
-            <TrustStatCard
-              stat={{
-                icon: MapPin,
-                value: "78 & 95",
-                label: "Zone d'intervention",
-                description: "Yvelines, Val d'Oise & distance",
-                seed: 2.2,
-              }}
-              palette="cold"
-            />
-          </BentoCard>
-
-          {/* Image vedette — cas client Odoo */}
+          {/* Image vedette — cas client Odoo, cliquable vers l'article */}
           <BentoCard
             span={3}
             rows={2}
@@ -134,44 +162,29 @@ export function Hero() {
                 −3 500 €
               </span>
             </div>
+            <Link
+              href="/blog/configurer-odoo-ia-claude-cowork"
+              className="absolute inset-0 z-20 rounded-[22px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <span className="sr-only">
+                Lire le cas client : configurer Odoo avec l&apos;IA, 4 jours au
+                lieu de 3 500 €
+              </span>
+            </Link>
           </BentoCard>
 
           {/* Mini citation client */}
           <BentoCard span={3} rows={2} pad="none" mobileMinH="180px">
             <MiniQuoteCard
-              quote="Devis passés de 2 h à 15 min — mon équipe se concentre sur les chantiers."
-              author="Nathalie R."
-              role="BTP · 95"
+              quote="Moodboards et 3D livrés en 48 h au lieu d'une semaine — la qualité a monté d'un cran."
+              author="Maud J."
+              role="Architecte d'intérieur"
             />
           </BentoCard>
 
-          {/* Stat duo (−30%) */}
-          <BentoCard span={3} rows={2} variant="flush" mobileMinH="180px">
-            <TrustStatCard
-              stat={{
-                icon: TrendingUp,
-                value: "−30 %",
-                label: "Temps gagné",
-                description: "Sur les tâches automatisées",
-                seed: 3.3,
-              }}
-              palette="duo"
-            />
-          </BentoCard>
-
-          {/* Stat amber (48h) */}
-          <BentoCard span={3} rows={2} variant="flush" mobileMinH="180px">
-            <TrustStatCard
-              stat={{
-                icon: Sparkles,
-                value: "48 h",
-                label: "Premiers résultats",
-                description: "Quick wins déployés",
-                seed: 4.4,
-              }}
-              palette="amber"
-            />
-          </BentoCard>
+          {/* Tuiles 3-4 — sous le titre, rangées 5-6 */}
+          <NavTile index={2} />
+          <NavTile index={3} />
         </BentoGrid>
       </div>
     </section>

@@ -110,9 +110,9 @@ export const metadata: Metadata = {
 const REVIEWS = [
   {
     name: "Arnaud L.",
-    role: "Gérant, boutique jardin — Jouy-le-Moutier (95)",
+    role: "Gérant, commerce spécialisé — Île-de-France",
     quote:
-      "On gérait 500 références sur des fichiers Excel éparpillés. Pierre a centralisé notre catalogue et automatisé la mise en ligne sur Le Bon Coin. Résultat : 2h de saisie en moins par jour et +35 % de demandes clients en ligne.",
+      "On gérait notre catalogue sur des fichiers Excel éparpillés. Pierre a centralisé notre catalogue et automatisé la mise en ligne de nos annonces. Résultat : 2h de saisie en moins par jour et +35 % de demandes clients en ligne.",
     stars: 5,
   },
   {

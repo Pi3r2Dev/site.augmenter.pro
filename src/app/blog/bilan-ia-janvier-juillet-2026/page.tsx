@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata = articleMetadata({
   title: "Bilan IA 2026 : ce que votre concurrent a déjà compris",
   description:
-    "–58 % de clics sous AI Overview, tokens –88 %, 190 h de mission terrain pour ≈ 6 000 € : le bilan IA janvier-juillet 2026 en 7 verdicts pour votre PME.",
+    "–58 % de clics sous AI Overview, tokens –88 %, une semaine à trois ramenée à une journée : le bilan IA janvier-juillet 2026 en 7 verdicts pour votre PME.",
   slug: "bilan-ia-janvier-juillet-2026",
 });
 
@@ -327,9 +327,9 @@ export default function Article() {
         marketing autour l&apos;est encore plus. Un agent rentable en PME
         n&apos;est pas un compagnon autonome qui « gère tout » : c&apos;est un
         exécutant <strong>cadré, supervisé, branché sur vos outils réels</strong>
-        . Sur le terrain, c&apos;est ainsi que nous avons reclassé 7 800 produits
-        et reconstruit un export comptable vérifié au centime près (chiffres
-        détaillés au dernier chapitre) — l&apos;agent travaille, l&apos;humain
+        . Sur le terrain, c&apos;est ainsi que nous avons reclassé un catalogue
+        entier et reconstruit un export comptable vérifié au centime près
+        (repère d&apos;effort détaillé au dernier chapitre) — l&apos;agent travaille, l&apos;humain
         valide. Pour comprendre ce qu&apos;est un agent et{" "}
         <Memo type="link" label="Créer son premier agent">
           <Link href="/blog/agent-ia-dirigeant-pme">
@@ -483,18 +483,19 @@ export default function Article() {
         Alors, que coûte vraiment l&apos;IA à une PME en 2026 ? Voici notre
         donnée de terrain, mesurée — pas estimée — sur exactement la période de
         cet article. De fin mars à début juillet 2026, nous avons accompagné une
-        PME de motoculture du Val d&apos;Oise (une dizaine de salariés, ERP
-        Odoo) :{" "}
-        <Memo type="num" label="Terrain : 190 h ≈ 6 000 €">
-          <strong>environ 190 heures de travail facturées ≈ 6 000 € TTC</strong>
+        PME de négoce technique en Île-de-France (une dizaine de salariés, ERP
+        Odoo). Le repère le plus parlant n&apos;est pas un montant, c&apos;est
+        l&apos;effort d&apos;équipe :{" "}
+        <Memo type="num" label="Terrain : 3 personnes × 1 semaine → 1 journée">
+          <strong>
+            ce qui demandait trois personnes pendant une semaine se traite
+            aujourd&apos;hui en une journée
+          </strong>
         </Memo>
-        , à 33 € de l&apos;heure. Au menu : 370 catégories de produits
-        restructurées en 15 familles et 7 800 produits reclassés, 1 360 fiches
-        e-commerce enrichies par IA (avec audit humain des hallucinations), une
-        tarification à 7 niveaux validée sur commandes tests, et un export
-        comptable reconstruit et <strong>vérifié au centime près</strong> avec
-        le cabinet comptable. Ce périmètre, chiffré par un intégrateur
-        classique, part entre 15 000 et 25 000 €.
+        . Sur le seul poste catalogue : plusieurs milliers de références
+        reclassées et des fiches e-commerce enrichies par IA, avec{" "}
+        <strong>audit humain des hallucinations</strong>. Le même périmètre,
+        chiffré par un intégrateur classique, part entre 15 000 et 25 000 €.
       </p>
       <p>
         La différence ne vient pas d&apos;une marge sacrifiée : elle vient de

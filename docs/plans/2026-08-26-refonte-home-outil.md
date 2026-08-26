@@ -2,7 +2,7 @@
 
 Date : 2026-08-26
 Branche : `feat/refonte-home-outil`
-Statut : lot 1 en cours
+Statut : lots 1 à 4 livrés — reste le lot 5 (page `/ia-souveraine-pme`)
 
 ## Objectif
 
@@ -85,10 +85,10 @@ FAQ `/approche` reformulée (actif PAA) — conserver la phrase finale, meilleur
 
 | Lot | Contenu | Dépend de |
 |---|---|---|
-| **1** | Retrait « offert » partout : composants, pages, 15 articles, FAQ, JSON-LD, `llms.txt`, `llms-full.txt` | — |
-| **2** | Section 1 fusionnée : textes, 4 cartes cliquables (+ variante mobile), Odoo cliquable, Maud | — |
-| **3** | Section 2 : l'outil + matrice curée (12-18 combinaisons métier × outil) | contenu à valider par le fondateur |
-| **4** | Frise 4 étapes en section 04 + Arnaud en `PrestationsTypes` | — |
+| ~~**1**~~ | ✅ Retrait « offert » partout : composants, pages, 15 articles, FAQ, JSON-LD, `llms.txt`, `llms-full.txt` | — |
+| ~~**2**~~ | ✅ Section 1 fusionnée : lede, 4 tuiles cliquables (+ variante mobile 2×2), Odoo cliquable, Maud | — |
+| ~~**3**~~ | ✅ Section 2 : `CapabilityExplorer` + 17 capacités curées. ⚠️ **Contenu à relire par le fondateur** (preuves chiffrées, verdicts) | — |
+| ~~**4**~~ | ✅ Frise 4 étapes en section 04 + citation Arnaud en `PrestationsTypes` | — |
 | **5** | Page `/ia-souveraine-pme` — débloque la destination de la 1ʳᵉ carte | optionnel |
 
 En attendant le lot 5, la carte `IA souveraines` pointe vers `/audit-ia-pme` (page qui traite le plus
@@ -100,15 +100,15 @@ Deux axes, résultat visible dès le premier clic, jamais d'écran vide (relâch
 `/augmenter-mon-entreprise`). Pas d'étapes bloquantes — le visiteur est en découverte, pas en demande.
 
 ```
-Votre métier    BTP · Négoce · Industrie · Services · Distribution
-Vos outils      Odoo · Sage · EBP · Batigest · Excel/Drive · Autre
+Votre métier    BTP & rénovation · Négoce & distribution · Industrie · Commerce & service local · Conseil & services
+Vos outils      Odoo · Sage/EBP/Ciel · Logiciel métier · Excel & Drive · Rien de structuré
 
 ┌─ verdicts ──────────────────────────┬─ Où vivent vos données ─┐
 │ ● Déjà en production chez un client │  (deux régimes)         │
 │ ● Faisable, à cadrer      [NOUVEAU] │                         │
 │ ● Pas encore honnête                │                         │
 └─────────────────────────────────────┴─────────────────────────┘
-        [ Vérifier mon cas — 60 min ]  → /contact pré-rempli (métier + outil en query params)
+        [ Vérifier mon cas — 60 min ]  → /contact pré-rempli (via src/lib/quote-prefill.ts)
 ```
 
 Les trois verdicts, dont « pas encore honnête », sont le principal signal E-E-A-T : personne n'affiche

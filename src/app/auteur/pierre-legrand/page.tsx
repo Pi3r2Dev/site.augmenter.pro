@@ -113,9 +113,9 @@ const missions = [
   },
   {
     sector: "Commerce spécialisé — Catalogue produit centralisé",
-    location: "Boutique jardin, Jouy-le-Moutier (95)",
+    location: "Commerce spécialisé, Île-de-France",
     body:
-      "500 références éparpillées sur fichiers Excel consolidées dans un catalogue unique avec mise en ligne automatisée sur Le Bon Coin. Résultat : 2h de saisie en moins par jour et +35 % de demandes clients entrantes.",
+      "Un catalogue éparpillé sur des fichiers Excel, consolidé dans un référentiel unique avec mise en ligne automatisée des annonces. Résultat : 2h de saisie en moins par jour et +35 % de demandes clients entrantes.",
   },
   {
     sector: "Industrie — Audit 360° et mise en conformité",
