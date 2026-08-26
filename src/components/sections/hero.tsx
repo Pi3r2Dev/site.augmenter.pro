@@ -74,7 +74,7 @@ export function Hero() {
               stat={{
                 icon: Target,
                 value: "60 min",
-                label: "Diagnostic offert",
+                label: "Sur rendez-vous",
                 description: "Audit complet de votre SI",
                 seed: 1.1,
               }}

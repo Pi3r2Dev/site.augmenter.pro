@@ -430,7 +430,7 @@ export default function Article() {
         Vous voulez savoir ce que ces cinq scènes donneraient <em>chez vous</em>,
         avec votre ERP, vos fournisseurs, vos corvées à vous ? C&apos;est
         exactement l&apos;objet de notre{" "}
-        <Link href="/contact">Audit 180° offert</Link> : soixante minutes en
+        <Link href="/contact">Audit 180°</Link> : soixante minutes en
         visio, on cartographie vos mi-temps cachés et on vous dit honnêtement
         ce qu&apos;un outil à 20 €/mois règle déjà — et où un agent se
         justifie. Notre façon de travailler est détaillée sur{" "}

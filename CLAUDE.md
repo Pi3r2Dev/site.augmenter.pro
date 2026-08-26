@@ -264,7 +264,7 @@ Voir [public/images/](public/images/) — convention WebP, kebab-case, INDEX.md 
 | AggregateRating + Review[] | [src/app/layout.tsx](src/app/layout.tsx) imbriqué dans `LocalBusiness` du `@graph` | 5 reviews (tableau `REVIEWS` en tête du fichier). ⚠ **Ne produit PAS d étoiles en SERP** : depuis 09/2019 Google ignore les avis auto-déclarés (self-serving) sur `LocalBusiness`/`Organization`. Utile pour les AI Overviews uniquement — les vraies étoiles viennent du **Google Business Profile** |
 | **CreativeWork** (`WebPage` + nested) | [src/app/(home)/page.tsx](src/app/(home)/page.tsx) | Positionne `/` comme contenu éditorial narrative |
 | FAQPage | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | FAQ section → Google "People Also Ask" |
-| Service + OfferCatalog | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | 5 services with pricing (0€ et 225€) — `/prestations` redirige 308 vers `/approche#prestations` (ancre dans le Ch07 audits) |
+| Service + OfferCatalog | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | 5 services with pricing (0€ et 550€) — `/prestations` redirige 308 vers `/approche#prestations` (ancre dans le Ch07 audits) |
 | Article | [src/components/layout/article-layout.tsx](src/components/layout/article-layout.tsx) | Each blog post (author, publisher, tags, URL) |
 | Person | [src/app/auteur/pierre-legrand/page.tsx](src/app/auteur/pierre-legrand/page.tsx) | Person JSON-LD pour E-E-A-T |
 | CollectionPage + ItemList | [src/app/augmenter-mon-entreprise/page.tsx](src/app/augmenter-mon-entreprise/page.tsx) | Hub ressources — carte structurée des destinations (maillage interne + citabilité LLM) |

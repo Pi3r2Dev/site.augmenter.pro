@@ -30,7 +30,7 @@ const SERVICES = [
     name: "Audit 180°",
     desc: "Diagnostic organisationnel — 60 min",
     icon: Search,
-    tag: "Offert",
+    tag: "Sur RDV",
     tagVariant: "secondary" as const,
   },
   {
@@ -70,7 +70,7 @@ const SERVICES = [
 type ServiceId = (typeof SERVICES)[number]["id"];
 
 const SERVICE_LABELS: Record<ServiceId, string> = {
-  "audit-180": "un Audit 180° (diagnostic offert)",
+  "audit-180": "un Audit 180° (premier rendez-vous)",
   "audit-360": "un Audit 360° IA Stratégique",
   dev: "du Développement sur mesure",
   formation: "de la Formation & Accompagnement",

@@ -56,7 +56,7 @@ const COPY: Record<CTAVariant, CTACopy> = {
     title: "Échanger directement <em>avec Pierre</em>.",
     emText: "avec Pierre",
     subtitle:
-      "Un appel de 60 minutes, sans intermédiaire. Audit 180° offert pour les PME qui veulent avancer concrètement.",
+      "Un appel de 60 minutes, sans intermédiaire. On ne facture pas ce premier rendez-vous aux PME qui ont un sujet précis.",
     primaryLabel: "Réserver mon audit",
     primaryHref: "/contact",
   },

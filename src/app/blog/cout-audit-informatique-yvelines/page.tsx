@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = articleMetadata({
   title: "Combien Coûte un Audit Informatique PME ? Tarifs 2026",
   description:
-    "Prix d'un audit informatique ou de cybersécurité PME : de 0 € à 20 000 €. Grille tarifaire 2026 par type et taille, cas concrets, diagnostic offert 60 min.",
+    "Prix d'un audit informatique ou de cybersécurité PME : de 0 € à 20 000 €. Grille tarifaire 2026 par type et taille, cas concrets, premier RDV non facturé 60 min.",
   slug: "cout-audit-informatique-yvelines",
 });
 
@@ -18,7 +18,7 @@ const faqJsonLd = {
       name: "Combien coûte un audit informatique pour une PME ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Un audit flash ou diagnostic coûte entre 1 500 et 6 000 € HT pour une PME de moins de 50 postes. Un audit complet (technique + organisationnel + recommandations) se situe entre 7 000 et 20 000 € HT selon la complexité. Certains prestataires comme augmenter.PRO proposent un diagnostic offert de 60 minutes pour évaluer vos besoins avant engagement.",
+        text: "Un audit flash ou diagnostic coûte entre 1 500 et 6 000 € HT pour une PME de moins de 50 postes. Un audit complet (technique + organisationnel + recommandations) se situe entre 7 000 et 20 000 € HT selon la complexité. Certains prestataires comme augmenter.PRO proposent un premier diagnostic non facturé de 60 minutes pour évaluer vos besoins avant engagement.",
       },
     },
     {
@@ -60,7 +60,7 @@ export default function Article() {
   return (
     <ArticleLayout
       title="Combien coûte un audit informatique PME ? Guide tarifaire 2026"
-      excerpt="De 0 € à 20 000 € : pourquoi un tel écart ? Grille tarifaire par type et par taille d'entreprise, comparaison diagnostic offert vs audit complet, et 3 cas concrets de PME. Le guide prix le plus transparent du marché."
+      excerpt="De 0 € à 20 000 € : pourquoi un tel écart ? Grille tarifaire par type et par taille d'entreprise, comparaison diagnostic à 0 € vs audit complet, et 3 cas concrets de PME. Le guide prix le plus transparent du marché."
       tags={["Audit 360°", "PME"]}
       readTime="8 min"
       date="13 février 2026"
@@ -86,7 +86,7 @@ export default function Article() {
         l&apos;industrie et des services entre Versailles, Poissy et Saint-Germain-en-Laye,
         nous avons décidé de publier ce que personne ne publie : une{" "}
         <strong>grille tarifaire transparente</strong>, des cas concrets, et une
-        comparaison honnête entre un diagnostic offert et un audit complet. Si vous
+        comparaison honnête entre un diagnostic à 0 € et un audit complet. Si vous
         reconnaissez certains des{" "}
         <Link href="/blog/5-signes-moderniser-informatique-pme">
           5 signes qu&apos;il est temps de moderniser votre informatique
@@ -103,7 +103,7 @@ export default function Article() {
           + conformité) 7 000 à 20 000 € HT</strong>. Le prix dépend du
           périmètre, de la taille du parc et du prestataire (freelance
           ~600-800 €/jour, cabinet ~800-1 200 €/jour). En alternative,
-          augmenter.PRO propose un Audit 180° offert (60 min) puis un Audit
+          augmenter.PRO propose un Audit 180° (60 min) puis un Audit
           360° à 550 € HT, sans engagement.
         </p>
       </div>
@@ -205,16 +205,16 @@ export default function Article() {
         positionnement d&apos;augmenter.PRO.
       </p>
 
-      <h2>Diagnostic offert vs audit complet : que vaut un diagnostic à 0 € ?</h2>
+      <h2>Diagnostic à 0 € vs audit complet : que vaut vraiment un premier rendez-vous ?</h2>
 
       <p>
-        Plusieurs prestataires proposent un &quot;diagnostic offert&quot; ou un
+        Plusieurs prestataires proposent un &quot;diagnostic à 0 €&quot; ou un
         &quot;audit sans frais&quot;. Mais attention : <strong>toutes ces offres ne se
         valent pas</strong>. Certains sont de simples rendez-vous commerciaux déguisés.
         Voici ce que nous incluons dans notre offre, en toute transparence :
       </p>
 
-      <h3>Audit 180° Informatique &amp; Organisation — Offert (0 €)</h3>
+      <h3>Audit 180° Informatique &amp; Organisation — non facturé (0 €)</h3>
       <ul>
         <li>Durée : <strong>60 minutes</strong> (visio ou sur site en Yvelines)</li>
         <li>Évaluation de votre maturité digitale sur 8 axes</li>
@@ -252,7 +252,7 @@ export default function Article() {
         de l&apos;infogérance aura tendance à recommander… de l&apos;infogérance.
         Notre modèle : vous donner les clés pour décider, pas vous enfermer dans un
         contrat. Pour réserver votre créneau :{" "}
-        <Link href="/contact">demandez votre diagnostic offert</Link>.
+        <Link href="/contact">demandez votre premier rendez-vous</Link>.
       </p>
 
       <h2>3 cas concrets de PME en Yvelines</h2>
@@ -271,7 +271,7 @@ export default function Article() {
         sécurité, mais aucune sauvegarde testée depuis 2 ans.
       </p>
       <p>
-        <strong>Diagnostic</strong> : Audit 180° offert (60 min) → identification de
+        <strong>Diagnostic</strong> : Audit 180° (60 min) → identification de
         3 urgences : sauvegardes non testées, 8 licences M365 inutilisées (1 200 €/an
         de gaspillage), et accès VPN sans authentification multi-facteurs.
       </p>
@@ -319,7 +319,7 @@ export default function Article() {
       </p>
       <p>
         <strong>Ce que montrent ces 3 cas</strong> : le budget nécessaire varie de
-        0 € à 12 000 € selon la situation. La constante : un diagnostic initial (offert
+        0 € à 12 000 € selon la situation. La constante : un diagnostic initial (à 0 €
         ou à 550 €) suffit souvent à identifier les urgences et à décider si un audit
         complet est justifié.
       </p>
@@ -476,7 +476,7 @@ export default function Article() {
         d&apos;infogérance en aval), <strong>connaissance locale</strong> (tissu PME
         du 78, contraintes sectorielles), et <strong>transparence tarifaire</strong>{" "}
         (grille de prix publiée, pas de devis opaque).{" "}
-        <Link href="/contact">Contactez-nous</Link> pour un premier échange offert
+        <Link href="/contact">Contactez-nous</Link> pour un premier échange non facturé
         de 60 minutes.
       </p>
     </ArticleLayout>

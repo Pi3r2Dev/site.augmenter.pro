@@ -46,7 +46,7 @@ import {
 export const metadata: Metadata = {
   title: "Audit informatique & cybersécurité PME Yvelines (78)",
   description:
-    "Ton prestataire te facture plus qu'il ne résout ? Audit informatique & cybersécurité PME en Yvelines (78) — 60 min offerts, sans CB, sans engagement.",
+    "Ton prestataire te facture plus qu'il ne résout ? Audit informatique & cybersécurité PME en Yvelines (78) — 60 min non facturées, sans CB, sans engagement.",
 };
 
 const stats = [
@@ -70,8 +70,8 @@ const stats = [
   },
   {
     value: "60 min",
-    label: "diagnostic initial offert",
-    detail: "Premier échange sans engagement",
+    label: "diagnostic initial",
+    detail: "Non facturé, sans engagement",
     icon: CheckCircle2,
   },
 ];
@@ -162,7 +162,7 @@ const methodology = [
     description:
       "Échange téléphonique ou en présentiel dans vos locaux en Yvelines. Nous comprenons votre activité, vos enjeux et vos contraintes.",
     details: [
-      "Entretien dirigeant de 60 min (offert)",
+      "Entretien dirigeant de 60 min (non facturé)",
       "Identification des priorités",
       "Périmètre de l'audit défini ensemble",
       "Planification de l'intervention",
@@ -248,7 +248,7 @@ const faqItems = [
   {
     question: "Combien coûte un audit informatique en Yvelines ?",
     answer:
-      "Le diagnostic initial de 60 min est offert, sans engagement. L'Audit 360° complet coûte 550 € et inclut 3h sur site, un rapport détaillé et un plan d'action chiffré. Sur le marché, un audit PME standard coûte entre 2 000 et 15 000 € HT selon la taille et le périmètre. Consultez notre guide complet sur le coût d'un audit informatique en Yvelines : /blog/cout-audit-informatique-yvelines",
+      "On ne facture pas le diagnostic initial de 60 min, sur rendez-vous et sans engagement. L'Audit 360° complet coûte 550 € et inclut 3h sur site, un rapport détaillé et un plan d'action chiffré. Sur le marché, un audit PME standard coûte entre 2 000 et 15 000 € HT selon la taille et le périmètre. Consultez notre guide complet sur le coût d'un audit informatique en Yvelines : /blog/cout-audit-informatique-yvelines",
   },
   {
     question: "Combien de temps dure un audit informatique complet ?",
@@ -306,8 +306,9 @@ const serviceJsonLd = {
       name: "Diagnostic informatique initial",
       price: "0",
       priceCurrency: "EUR",
+      eligibleCustomerType: "http://purl.org/goodrelations/v1#Business",
       description:
-        "Audit initial de 60 minutes pour identifier vos leviers d'optimisation IT",
+        "Audit initial de 60 minutes pour identifier vos leviers d'optimisation IT. Non facturé pour les PME et indépendants ayant un projet identifié, sur rendez-vous.",
       url: "https://augmenter.pro/contact",
     },
     {
@@ -536,8 +537,8 @@ export default function AuditInformatiqueYvelinesPage() {
                 >
                   Combien coûte un audit informatique
                 </Link>{" "}
-                — la grille tarifaire transparente pour budgéter, du diagnostic
-                offert à l&apos;audit complet.
+                — la grille tarifaire transparente pour budgéter, du premier
+                rendez-vous à l&apos;audit complet.
               </span>
             </li>
           </ul>

@@ -46,7 +46,7 @@ import {
 export const metadata: Metadata = {
   title: "Audit informatique Val-d'Oise (95) : 60 min pour y voir clair",
   description:
-    "Pannes, sécurité fragile, infogérance opaque ? Audit informatique PME en Val-d'Oise (95) : 60 min offerts, audit complet dès 550 €. NIS2 & RGPD inclus.",
+    "Pannes, sécurité fragile, infogérance opaque ? Audit informatique PME en Val-d'Oise (95) : 60 min non facturées, audit dès 550 €. NIS2 & RGPD inclus.",
 };
 
 const stats = [
@@ -70,8 +70,8 @@ const stats = [
   },
   {
     value: "60 min",
-    label: "diagnostic initial offert",
-    detail: "Premier échange sans engagement",
+    label: "diagnostic initial",
+    detail: "Non facturé, sans engagement",
     icon: CheckCircle2,
   },
 ];
@@ -162,7 +162,7 @@ const methodology = [
     description:
       "Échange téléphonique ou en présentiel dans vos locaux dans le Val-d'Oise. Nous comprenons votre activité, vos enjeux et vos contraintes.",
     details: [
-      "Entretien dirigeant de 60 min (offert)",
+      "Entretien dirigeant de 60 min (non facturé)",
       "Identification des priorités",
       "Périmètre de l'audit défini ensemble",
       "Planification de l'intervention",
@@ -248,7 +248,7 @@ const faqItems = [
   {
     question: "Quel est le prix d'un audit informatique dans le Val-d'Oise ?",
     answer:
-      "Le diagnostic initial de 60 min est offert, sans engagement. L'Audit 360° complet coûte 550 € et comprend 3h d'intervention sur site, un rapport détaillé et un plan d'action chiffré. Un audit PME standard coûte entre 2 000 et 15 000 € HT sur le marché. Détails dans notre guide tarifaire : /blog/cout-audit-informatique-yvelines",
+      "On ne facture pas le diagnostic initial de 60 min, sur rendez-vous et sans engagement. L'Audit 360° complet coûte 550 € et comprend 3h d'intervention sur site, un rapport détaillé et un plan d'action chiffré. Un audit PME standard coûte entre 2 000 et 15 000 € HT sur le marché. Détails dans notre guide tarifaire : /blog/cout-audit-informatique-yvelines",
   },
   {
     question: "Intervenez-vous à Cergy, Pontoise et Argenteuil ?",
@@ -307,8 +307,9 @@ const serviceJsonLd = {
       name: "Diagnostic informatique initial",
       price: "0",
       priceCurrency: "EUR",
+      eligibleCustomerType: "http://purl.org/goodrelations/v1#Business",
       description:
-        "Audit initial de 60 minutes pour identifier vos leviers d'optimisation IT",
+        "Audit initial de 60 minutes pour identifier vos leviers d'optimisation IT. Non facturé pour les PME et indépendants ayant un projet identifié, sur rendez-vous.",
       url: "https://augmenter.pro/contact",
     },
     {

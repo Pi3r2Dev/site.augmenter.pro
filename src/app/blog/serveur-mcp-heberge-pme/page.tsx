@@ -402,7 +402,7 @@ export default function Article() {
         méritent le cloud souverain ? C&apos;est exactement ce que nous démêlons en{" "}
         <Link href="/integration-mcp">accompagnement d&apos;intégration MCP</Link>{" "}
         — et la première étape est un{" "}
-        <Link href="/approche#prestations">audit 180° offert</Link>, sans
+        <Link href="/approche#prestations">audit 180°</Link>, sans
         engagement, pour cartographier vos outils et trancher le build / louer /
         self-host pour votre cas précis. Pour aller plus loin sur l&apos;IA branchée
         à votre gestion, voyez aussi comment{" "}

@@ -570,7 +570,7 @@ export default function ConfigurerOdooIAClaude() {
       <p>
         Et si vous voulez un accompagnement pour d&eacute;marrer, c&apos;est exactement ce
         que nous faisons. Notre{" "}
-        <Link href="/contact">Audit 180&deg; offert</Link> vous
+        <Link href="/contact">Audit 180&deg;</Link> vous
         permet d&apos;&eacute;valuer en 60 minutes ce que l&apos;IA peut apporter &agrave; votre utilisation
         d&apos;Odoo &mdash; et combien vous pouvez &eacute;conomiser par rapport &agrave; votre prestataire actuel.
         Pour cadrer l&apos;ensemble de votre maturit&eacute; IA, d&eacute;couvrez aussi notre{" "}

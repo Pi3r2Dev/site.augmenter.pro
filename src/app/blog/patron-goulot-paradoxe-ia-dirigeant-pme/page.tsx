@@ -491,7 +491,7 @@ export default function Article() {
       <p>
         Pour ceux qui préfèrent commencer par discuter du diagnostic
         avant tout engagement, l&apos;
-        <Link href="/approche">Audit 180° offert</Link> permet un échange
+        <Link href="/approche">Audit 180°</Link> permet un échange
         de 60 minutes pour mesurer où en est votre organisation IA — et
         si le passage en système-centré est une priorité réaliste à 3-6
         mois. La règle qu&apos;on observe sur le terrain :{" "}

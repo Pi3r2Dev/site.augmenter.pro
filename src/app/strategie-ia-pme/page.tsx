@@ -33,7 +33,7 @@ import {
 export const metadata: Metadata = {
   title: "Stratégie IA PME : feuille de route en 60 min · Visio France + 78/95",
   description:
-    "Tes concurrents avancent sur ChatGPT/Claude et tu tâtonnes ? Feuille de route IA priorisée en 60 min. Financement Bpifrance. Offert.",
+    "Tes concurrents avancent sur ChatGPT/Claude et tu tâtonnes ? Feuille de route IA priorisée en 60 min. Financement Bpifrance. Sur RDV.",
 };
 
 const stats = [
@@ -180,7 +180,7 @@ const faqItems = [
   {
     question: "Combien coûte une stratégie IA pour une PME ?",
     answer:
-      "Notre diagnostic initial est offert (60 min). L’audit IA 360° qui pose la feuille de route coûte 550 € — il est détaillé sur notre page dédiée. Pour le déploiement, le budget dépend des cas d’usage retenus, et le programme Osez l’IA de Bpifrance peut prendre en charge jusqu’à 80 % de l’accompagnement.",
+      "On ne facture pas notre diagnostic initial (60 min). L’audit IA 360° qui pose la feuille de route coûte 550 € — il est détaillé sur notre page dédiée. Pour le déploiement, le budget dépend des cas d’usage retenus, et le programme Osez l’IA de Bpifrance peut prendre en charge jusqu’à 80 % de l’accompagnement.",
   },
   {
     question:

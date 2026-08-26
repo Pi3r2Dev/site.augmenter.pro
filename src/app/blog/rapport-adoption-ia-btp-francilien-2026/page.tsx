@@ -253,7 +253,7 @@ export default function Article() {
         <Link href="/idees">catalogue d&apos;idées IA</Link> détaille des
         scénarios concrets par fonction. Et si la priorisation est l&apos;étape
         bloquante, un{" "}
-        <Link href="/approche">audit 180° offert</Link> permet de cadrer un
+        <Link href="/approche">audit 180°</Link> permet de cadrer un
         plan d&apos;action sur 90 jours sans engagement.
       </p>
     </ArticleLayout>

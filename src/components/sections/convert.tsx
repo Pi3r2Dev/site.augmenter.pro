@@ -25,9 +25,9 @@ interface Plan {
 const PLANS: Plan[] = [
   {
     name: "Audit 180°",
-    tagline: "Informatique & organisation — faisons connaissance.",
-    price: "Offert",
-    duration: "60 min · sans engagement",
+    tagline: "Un premier rendez-vous de travail, pas une découverte commerciale.",
+    price: "60 min",
+    duration: "Sur rendez-vous · sans engagement",
     features: [
       { label: "Diagnostic de votre infrastructure" },
       { label: "Analyse des processus actuels" },

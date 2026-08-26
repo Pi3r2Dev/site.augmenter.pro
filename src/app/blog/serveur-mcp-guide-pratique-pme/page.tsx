@@ -176,7 +176,7 @@ export default function Article() {
         audit préalable sérieux. Si vos données CRM sont mal structurées ou
         incomplètes, l&apos;IA amplifiera le désordre au lieu de le résoudre.
         C&apos;est pourquoi nous commençons toujours par un{" "}
-        <Link href="/approche#prestations">audit 180° offert</Link>.
+        <Link href="/approche#prestations">audit 180°</Link>.
       </p>
 
       <h2>MCP et RGPD : vos données restent-elles en sécurité ?</h2>
@@ -289,7 +289,7 @@ export default function Article() {
       </p>
       <p>
         <strong>Point de départ :</strong>{" "}
-        <Link href="/contact">Notre audit 180° est offert</Link> et permet
+        <Link href="/contact">Notre audit 180°</Link> n&apos;est pas facturé et permet
         d&apos;évaluer vos besoins concrets avant tout engagement. C&apos;est
         60 minutes d&apos;échange qui vous donnent une vision claire de ce que
         MCP peut (et ne peut pas) faire pour vous.

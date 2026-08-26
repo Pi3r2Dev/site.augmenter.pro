@@ -75,7 +75,7 @@ const PRESTATIONS: Prestation[] = [
     title: "Savoir quoi commander, et quand",
     pain: "Du stock dormant sur un site, une rupture sur l'autre. Et des frais de port payés parce que personne ne voyait qu'il manquait 80 € pour atteindre le franco.",
     delivery:
-      "Le besoin net calculé pour vous (commandes confirmées, moins le stock, moins ce qui est déjà en route) et le seuil de port offert affiché avant de valider.",
+      "Le besoin net calculé pour vous (commandes confirmées, moins le stock, moins ce qui est déjà en route) et le seuil de franco de port affiché avant de valider.",
     proof: "14 fournisseurs sur 98 avaient un franco renseigné",
     sectors: "Distribution · Multi-dépôts · Atelier",
     accent: PALETTES.cold.b,
@@ -130,7 +130,7 @@ export function PrestationsTypes() {
                 6 prestations
               </Pill>
               <Pill tone="primary" size="md">
-                Diagnostic 60 min offert
+                Diagnostic 60 min · sur rendez-vous
               </Pill>
             </>
           }

@@ -332,7 +332,7 @@ export default function Article() {
           Vous voulez identifier la <em>bonne</em> première tâche à confier à
           un agent dans votre PME &mdash; celle qui rapporte vite et sans
           risque ? Notre{" "}
-          <Link href="/contact">Audit 180° (60 min, offert)</Link> sert
+          <Link href="/contact">Audit 180° (60 min, sur rendez-vous)</Link> sert
           exactement à ça : on regarde vos tâches répétitives, vos outils en
           place, et on repère le premier agent qui a du sens chez vous. Pour
           cartographier <em>tous</em> vos cas d&apos;usage priorisés par ROI,

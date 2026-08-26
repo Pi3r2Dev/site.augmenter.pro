@@ -9,7 +9,7 @@ interface BriefRequest {
 }
 
 const SERVICE_LABELS: Record<string, string> = {
-  "audit-180": "un Audit 180° (diagnostic organisationnel offert)",
+  "audit-180": "un Audit 180° (diagnostic organisationnel, premier rendez-vous)",
   "audit-360": "un Audit 360° IA Stratégique",
   "dev": "du Développement sur mesure (applications & automatisations IA)",
   "formation": "de la Formation & Accompagnement équipes",

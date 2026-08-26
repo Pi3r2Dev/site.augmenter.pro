@@ -175,7 +175,7 @@ const steps = [
     title: "Audit & Diagnostic",
     description:
       "60 minutes d'échange pour cartographier vos outils, identifier les cas d'usage prioritaires, et évaluer la faisabilité technique.",
-    duration: "1 heure (offert)",
+    duration: "1 heure (sur rendez-vous)",
   },
   {
     icon: PenTool,
@@ -498,9 +498,9 @@ export default function IntegrationMCPPage() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">
                   Découverte
                 </p>
-                <p className="mt-2 text-3xl font-bold">Offert</p>
+                <p className="mt-2 text-3xl font-bold">60 min</p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Audit 180° de 60 minutes
+                  Audit 180°, sur rendez-vous
                 </p>
                 <ul className="mt-6 space-y-3">
                   <li className="flex items-start gap-2 text-sm">

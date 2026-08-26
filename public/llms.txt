@@ -17,7 +17,7 @@ Secteurs servis : BTP, immobilier, industrie, artisanat, commerce, services. PME
 
 ## Services
 
-- **Audit 180° (Offert)** : Échange de 60 min pour identifier vos besoins en IA et digitalisation. Sans engagement.
+- **Audit 180° (sur rendez-vous)** : Échange de 60 min pour identifier vos besoins en IA et digitalisation. Sans engagement.
 - **Audit 360° IA Stratégique (550 €)** : Diagnostic complet de 3h couvrant infrastructure, workflows et équipes. Livrable : plan d'action chiffré et priorisé.
 - **Ateliers Claude Cowork & Claude Code dirigeant (à partir de 450 € HT)** : Deux ateliers d'une demi-journée en tête-à-tête, selon le niveau du dirigeant. Palier 1 — Claude Cowork (450 € HT), entrée no-code : prise en main de l'application desktop, connexion des fichiers et outils, 2-3 skills et workflows métier sans code. Palier 2 — Claude Code (650 € HT), avancé : installation sur le projet réel, CLAUDE.md opérationnel et 2-3 workflows en production. Progression recommandée : Cowork puis Code quand le projet le justifie. Présentiel Yvelines (78) / Val d'Oise (95) ou visio. Page : https://augmenter.pro/atelier-claude-code-dirigeant
 - **Développement sur mesure** : Applications web/mobile, chatbots IA, automatisation de workflows, intégrations CRM.
@@ -35,7 +35,7 @@ Secteurs servis : BTP, immobilier, industrie, artisanat, commerce, services. PME
 
 ## Augmenter mon entreprise (hub de ressources)
 
-- [Augmenter mon entreprise : par où commencer](https://augmenter.pro/augmenter-mon-entreprise) — Point d'entrée unique pour dirigeant de PME pressé. Le visiteur se projette dans sa réalité via trois axes (secteur d'activité ; douleur du moment : tâches répétitives, patron-goulot, leads qui filent, dépendance prestataire, doute cybersécurité, ne sait pas par où commencer ; objectif : comprendre, voir des chiffres, un prompt, se faire accompagner), et le hub filtre en direct l'ensemble des ressources augmenter.PRO (articles, idées chiffrées, prompts) qui répondent à sa situation, chacune résumée en TL;DR actionnable avec lien vers le contenu complet. CTA : Audit 180° offert (60 min visio, sans engagement). Conçu pour la navigation par intention plutôt que par catégorie.
+- [Augmenter mon entreprise : par où commencer](https://augmenter.pro/augmenter-mon-entreprise) — Point d'entrée unique pour dirigeant de PME pressé. Le visiteur se projette dans sa réalité via trois axes (secteur d'activité ; douleur du moment : tâches répétitives, patron-goulot, leads qui filent, dépendance prestataire, doute cybersécurité, ne sait pas par où commencer ; objectif : comprendre, voir des chiffres, un prompt, se faire accompagner), et le hub filtre en direct l'ensemble des ressources augmenter.PRO (articles, idées chiffrées, prompts) qui répondent à sa situation, chacune résumée en TL;DR actionnable avec lien vers le contenu complet. CTA : Audit 180° sur rendez-vous (60 min visio, sans engagement). Conçu pour la navigation par intention plutôt que par catégorie.
 
 ## Articles de blog
 
@@ -58,7 +58,7 @@ Secteurs servis : BTP, immobilier, industrie, artisanat, commerce, services. PME
 - [Comparatif LLM pour la Vente](https://augmenter.pro/blog/comparatif-llm-vente-commerciale) — Forces, faiblesses et conformité RGPD de chaque LLM pour les équipes commerciales.
 - [5 signes de moderniser l'informatique de votre PME](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme) — Lenteurs, pannes, coûts cachés : les signaux d'alerte pour les PME du BTP et de l'industrie.
 - [NIS2 PME : Guide + Checklist de Conformité 2026](https://augmenter.pro/blog/nis2-pme-yvelines-val-doise) — Directive NIS2 : votre PME est-elle concernée, directement ou via vos donneurs d'ordres ? Auto-diagnostic, les 10 mesures obligatoires en checklist à cocher (avec priorités), sanctions, obligation indirecte via la chaîne d'approvisionnement, plan d'action en 5 étapes. Ancrage Yvelines (78) / Val d'Oise (95).
-- [Combien coûte un audit informatique PME ? Tarifs 2026](https://augmenter.pro/blog/cout-audit-informatique-yvelines) — Guide tarifaire transparent (prix audit informatique et cybersécurité) : grille de prix par type d'audit et taille d'entreprise (1 500 à 20 000 € HT), comparaison Audit 180° offert vs Audit 360° (550 €), 3 cas concrets de PME, critères de choix prestataire, FAQ prix.
+- [Combien coûte un audit informatique PME ? Tarifs 2026](https://augmenter.pro/blog/cout-audit-informatique-yvelines) — Guide tarifaire transparent (prix audit informatique et cybersécurité) : grille de prix par type d'audit et taille d'entreprise (1 500 à 20 000 € HT), comparaison Audit 180° (0 €) vs Audit 360° (550 €), 3 cas concrets de PME, critères de choix prestataire, FAQ prix.
 - [Veille Concurrentielle IA pour PME : Guide Pratique 2026](https://augmenter.pro/blog/veille-concurrentielle-ia-pme) — Comment automatiser votre veille concurrentielle avec l'IA. Méthode en 5 étapes, outils recommandés et retour d'expérience terrain pour PME.
 - [Automatiser Emails et Réseaux Sociaux avec l'IA en PME](https://augmenter.pro/blog/automatiser-emails-reseaux-sociaux-ia) — Gagnez 10h par semaine en automatisant vos emails et publications sociales avec l'IA. Guide pratique et outils testés pour dirigeants de PME.
 
@@ -144,11 +144,11 @@ R: Technique (software & hardware), processus (vente & opérations), formation h
 
 ## Audit IA pour PME
 
-- [Audit IA pour PME : diagnostic & feuille de route chiffrée](https://augmenter.pro/audit-ia-pme) — Landing page nationale dédiée à l'audit IA pour PME françaises. Évaluation de la maturité IA, cartographie des processus, identification des cas d'usage prioritaires par ROI, audit des données (RGPD/AI Act), shadow AI, souveraineté. Diagnostic 180° offert (60 min visio) + Audit IA 360° à 550 € avec feuille de route sur 6 mois. Méthodologie en 4 étapes, cas d'usage par secteur (BTP, immobilier, industrie, services), financement Osez l'IA Bpifrance, FAQ. Visio partout en France, présentiel 78/95.
+- [Audit IA pour PME : diagnostic & feuille de route chiffrée](https://augmenter.pro/audit-ia-pme) — Landing page nationale dédiée à l'audit IA pour PME françaises. Évaluation de la maturité IA, cartographie des processus, identification des cas d'usage prioritaires par ROI, audit des données (RGPD/AI Act), shadow AI, souveraineté. Diagnostic 180° sur rendez-vous (60 min visio) + Audit IA 360° à 550 € avec feuille de route sur 6 mois. Méthodologie en 4 étapes, cas d'usage par secteur (BTP, immobilier, industrie, services), financement Osez l'IA Bpifrance, FAQ. Visio partout en France, présentiel 78/95.
 
 ## Stratégie IA pour PME
 
-- [Stratégie IA pour PME : Diagnostic & Accompagnement](https://augmenter.pro/strategie-ia-pme) — Landing page complète sur notre accompagnement stratégique IA pour PME. Diagnostic offert, méthodologie en 4 étapes, cas d'usage par secteur (BTP, immobilier, industrie, services), financement Osez l'IA Bpifrance, FAQ.
+- [Stratégie IA pour PME : Diagnostic & Accompagnement](https://augmenter.pro/strategie-ia-pme) — Landing page complète sur notre accompagnement stratégique IA pour PME. Diagnostic sur rendez-vous, méthodologie en 4 étapes, cas d'usage par secteur (BTP, immobilier, industrie, services), financement Osez l'IA Bpifrance, FAQ.
 
 ## Intégration MCP (Model Context Protocol)
 
@@ -156,8 +156,8 @@ R: Technique (software & hardware), processus (vente & opérations), formation h
 
 ## Audit Informatique Local
 
-- [Audit Informatique Yvelines (78)](https://augmenter.pro/audit-informatique-yvelines) — Audit informatique pour PME en Yvelines. Diagnostic offert 60 min, méthodologie en 4 étapes, périmètre complet (réseau, sécurité, cloud, RGPD, licences), secteurs locaux (BTP, services, commerce, santé), FAQ géo-ciblée.
-- [Audit Informatique Val-d'Oise (95)](https://augmenter.pro/audit-informatique-val-doise) — Audit informatique pour PME en Val-d'Oise. Diagnostic offert 60 min, méthodologie en 4 étapes, périmètre complet (réseau, sécurité, cloud, RGPD, licences), secteurs locaux (logistique, BTP, commerce, industrie), FAQ géo-ciblée.
+- [Audit Informatique Yvelines (78)](https://augmenter.pro/audit-informatique-yvelines) — Audit informatique pour PME en Yvelines. Diagnostic 60 min sur rendez-vous, méthodologie en 4 étapes, périmètre complet (réseau, sécurité, cloud, RGPD, licences), secteurs locaux (BTP, services, commerce, santé), FAQ géo-ciblée.
+- [Audit Informatique Val-d'Oise (95)](https://augmenter.pro/audit-informatique-val-doise) — Audit informatique pour PME en Val-d'Oise. Diagnostic 60 min sur rendez-vous, méthodologie en 4 étapes, périmètre complet (réseau, sécurité, cloud, RGPD, licences), secteurs locaux (logistique, BTP, commerce, industrie), FAQ géo-ciblée.
 
 ## Auteur
 
@@ -177,12 +177,12 @@ Tous les articles du blog sont rédigés par Pierre Legrand, avec assistance d'o
 - https://augmenter.pro — Accueil
 - https://augmenter.pro/augmenter-mon-entreprise — Augmenter mon entreprise : hub de ressources filtrées par secteur, douleur et objectif du dirigeant (articles, idées, prompts en TL;DR)
 - https://augmenter.pro/auteur/pierre-legrand — Pierre Legrand, consultant IA & transformation digitale (bio, expertise, missions)
-- https://augmenter.pro/audit-ia-pme — Audit IA pour PME (diagnostic 180° offert, cas d'usage prioritaires, feuille de route chiffrée) — national
+- https://augmenter.pro/audit-ia-pme — Audit IA pour PME (diagnostic 180° sur rendez-vous, cas d'usage prioritaires, feuille de route chiffrée) — national
 - https://augmenter.pro/strategie-ia-pme — Stratégie IA pour PME (diagnostic, accompagnement, financement)
 - https://augmenter.pro/approche — Approche, Prestations & Tarifs (méthode 360°, audits 180°/360°)
 - https://augmenter.pro/idees — Idées IA pour PME : 15 cas d'usage qui facturent (immobilier, courtage, BTP, notariat, commerce, outils PME) — voicebot, scoring crédit, devis par photo, bot Telegram RAG, standard vocal à voix de marque, vision de chantier, base de connaissance interne, copilote cyber, pré-compta OCR — avantages, points d'attention, ROI mesurable
 - https://augmenter.pro/blog — Blog Articles & Tutos
-- https://augmenter.pro/contact — Contact & Audit offert
+- https://augmenter.pro/contact — Contact & premier rendez-vous
 - https://augmenter.pro/projets — Nos Projets & Réalisations IA
 - https://augmenter.pro/audit-informatique-yvelines — Audit Informatique Yvelines (78)
 - https://augmenter.pro/audit-informatique-val-doise — Audit Informatique Val-d'Oise (95)

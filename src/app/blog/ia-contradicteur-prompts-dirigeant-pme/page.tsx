@@ -455,7 +455,7 @@ Sois ferme. Si tu valides sans réserve, c'est que je t'ai mal briefé.`}</code>
       <p>
         Si vous voulez aller plus loin et structurer une vraie pratique de
         décision IA-augmentée dans votre PME, un{" "}
-        <Link href="/approche">audit 180° offert</Link> permet de cadrer un
+        <Link href="/approche">audit 180°</Link> permet de cadrer un
         plan sur 90 jours adapté à votre contexte. Et pour ceux qui préfèrent
         commencer par tester en autonomie, notre{" "}
         <Link href="/prompts">bibliothèque de prompts dirigeant</Link> donne

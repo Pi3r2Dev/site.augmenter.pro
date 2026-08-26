@@ -698,7 +698,7 @@ export function HeroAugmente() {
           <div className={styles.ctaRow}>
             <AuditButton location="hero" onClick={triggerAudit} pulse={buttonPulse} />
             <span className={styles.ctaHint}>
-              Offert · 60 min · sans engagement
+              60 min · sur rendez-vous · sans engagement
             </span>
           </div>
 

@@ -18,7 +18,7 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 - [Bibliothèque de prompts IA](https://augmenter.pro/prompts) — 2026-02-13
 - [Nos projets & réalisations IA](https://augmenter.pro/projets) — 2026-02-01
 - [Blog — articles & tutos IA pour PME](https://augmenter.pro/blog) — 2026-02-13
-- [Contact & diagnostic offert](https://augmenter.pro/contact) — 2026-02-01
+- [Contact & premier rendez-vous](https://augmenter.pro/contact) — 2026-02-01
 - [Le « patron-goulot » : quand l'IA rend le dirigeant PME encore plus indispensable](https://augmenter.pro/blog/patron-goulot-paradoxe-ia-dirigeant-pme) — 2026-05-21
 - [L'IA comme contradicteur : 5 prompts pour pressure-tester vos décisions de dirigeant PME](https://augmenter.pro/blog/ia-contradicteur-prompts-dirigeant-pme) — 2026-05-21
 - [Rapport 2026 : Adoption de l'IA dans le BTP francilien — état des lieux](https://augmenter.pro/blog/rapport-adoption-ia-btp-francilien-2026) — 2026-05-21
@@ -45,7 +45,7 @@ dateModified: 2026-02-13
 Nous accompagnons les PME et indépendants à trouver l'équilibre parfait entre **performance humaine** et **numérique**. IA, digitalisation, robotique — des solutions sur mesure qui tiennent la route.
 [Diagnostic — 60 min](https://augmenter.pro/contact)[Voir nos prestations](https://augmenter.pro/approche#prestations)
 60 min
-Diagnostic offert
+Sur rendez-vous
 Audit complet de votre SI
 78 & 95
 Zone d'intervention
@@ -122,8 +122,8 @@ prochain niveau ?
 Commencez par un diagnostic de 60 min. Zéro engagement, zéro jargon technique — juste des solutions concrètes et un plan d'action clair.
 [Réserver mon diagnostic](https://augmenter.pro/contact)[WhatsApp](https://wa.me/33679119774)
 Audit 180°
-Informatique & organisation — faisons connaissance.
-Offert
+Un premier rendez-vous de travail, pas une découverte commerciale.
+60 min · sur rendez-vous
 [Réserver](https://augmenter.pro/contact)
 Recommandé
 Audit 360°
@@ -239,8 +239,8 @@ Commencez par un diagnostic de 60 minutes. Zéro engagement, zéro jargon techni
 dateModified: 2026-05-28
 
 # Audit IA pour PME : par où commencer, sans te faire piéger
-Tu sais que l'IA peut t'aider, mais entre le bruit ambiant et les agences qui veulent te vendre un projet à 20 000 €, tu ne sais plus quoi faire. Notre audit IA part de **ton métier** : on identifie les cas d'usage qui comptent vraiment, chiffrés et priorisés. Diagnostic **180° offert**, en visio partout en France.
-[Diagnostic 180° — 60 min offertes](https://augmenter.pro/contact)[Voir nos prestations](https://augmenter.pro/approche#prestations)
+Tu sais que l'IA peut t'aider, mais entre le bruit ambiant et les agences qui veulent te vendre un projet à 20 000 €, tu ne sais plus quoi faire. Notre audit IA part de **ton métier** : on identifie les cas d'usage qui comptent vraiment, chiffrés et priorisés. Diagnostic **180° sur rendez-vous**, en visio partout en France.
+[Diagnostic 180° — 60 min](https://augmenter.pro/contact)[Voir nos prestations](https://augmenter.pro/approche#prestations)
 ## L'audit IA : un réflexe de dirigeant, pas un gadget
 Les recherches « audit IA » ont explosé chez les dirigeants français. La raison est simple : seules les PME qui **cadrent avant d'investir** tirent un vrai retour de l'intelligence artificielle.
 +255 %
@@ -286,9 +286,9 @@ Les agences IA promettent monts et merveilles puis facturent des projets à 20 0
 Sans priorisation, tu investis dans des cas d'usage à faible impact. L'audit identifie les quick wins avant de dépenser un euro.
 Notre [approche 360°](https://augmenter.pro/approche) adresse ces blocages à la racine : technique, processus et humain.
 ## Notre audit IA en 4 étapes
-Du diagnostic offert à la feuille de route exécutable — une méthode cadrée, sans jargon et sans projet imposé.
+Du premier rendez-vous à la feuille de route exécutable — une méthode cadrée, sans jargon et sans projet imposé.
 ÉTAPE 01
-### Diagnostic 180° — 60 min, offert
+### Diagnostic 180° — 60 min, sur rendez-vous
 Un premier échange en visio (partout en France) pour comprendre ton activité, tes irritants et tes objectifs. Sans CB, sans engagement.
 ÉTAPE 02
 ### Audit IA 360° — cartographie & maturité
@@ -354,7 +354,7 @@ dateModified: 2026-04-22
 Chez augmenter.PRO, la performance naît de l'équilibre entre **humain** , **outils** et **habitudes**. PME, ETI et indépendants des Yvelines (78) et du Val d'Oise (95).
 [Diagnostic — 60 min](https://augmenter.pro/contact)[Voir les tarifs](https://augmenter.pro/approche#prestations)
 60 min
-Diagnostic offert
+Sur rendez-vous
 Audit complet de votre SI
 78 & 95
 Zone d'intervention
@@ -402,8 +402,8 @@ Suivi, mesure des résultats et ajustements. Des habitudes solides pour des rés
 ## Deux audits pour commencer, _trois leviers_ pour avancer.
 Audit 180°Audit 360°
 Audit 180°
-Informatique & organisation — faisons connaissance.
-Offert
+Un premier rendez-vous de travail, pas une découverte commerciale.
+60 min · sur rendez-vous
 [Réserver mon diagnostic](https://augmenter.pro/contact)
 Recommandé
 Audit 360°
@@ -435,7 +435,7 @@ Consultants, artisans
 / 05 — questions fréquentes
 ## Les _questions_ qu'on nous pose avant de signer.
 ### Quelle différence entre l'Audit 180° et l'Audit 360° ?
-### Le diagnostic de 60 minutes est-il vraiment offert ?
+### Le premier rendez-vous est-il payant ?
 ### Qu'est-ce que l'expertise technique ?
 ### Comment optimisez-vous les processus ?
 ### L'approche humaine, ça veut dire quoi concrètement ?
@@ -443,7 +443,7 @@ Consultants, artisans
 / 06 — on commence quand ?
 ## 60 minutes pour savoir  
 où cliquer en premier.
-Diagnostic offert, sans engagement. Si le fit n'est pas là, on vous oriente ailleurs — c'est aussi ça un bon audit.
+Diagnostic sur rendez-vous, sans engagement. Si le fit n'est pas là, on vous oriente ailleurs — c'est aussi ça un bon audit.
 [Réserver mon diagnostic](https://augmenter.pro/contact)[WhatsApp direct](https://wa.me/33679119774)
 Contact direct
 vite@augmenter.pro
@@ -492,7 +492,7 @@ Qualification des leads entrants, préparation automatique des réunions clients
 Étape 01
 ### Audit & Diagnostic
 60 minutes d'échange pour cartographier vos outils, identifier les cas d'usage prioritaires, et évaluer la faisabilité technique.
-1 heure (offert)
+1 heure (sur rendez-vous)
 Étape 02
 ### Conception & Architecture
 Choix des serveurs MCP adaptés, design de l'agent IA, validation du périmètre de données accessibles et des règles de sécurité.
@@ -522,8 +522,8 @@ Outlook, Gmail, Slack, Teams
 ## Tarifs indicatifs
 Des formules adaptées à la taille de votre SI et à vos ambitions.
 Découverte
-Offert
-Audit 180° de 60 minutes
+60 min
+Audit 180°, sur rendez-vous
 [Réserver](https://augmenter.pro/contact)
 Standard
 1 000 - 5 000 €
@@ -566,7 +566,7 @@ Licences, maintenance, infra optimisées
 de reprise après incident
 Temps moyen pour une PME non auditée
 60 min
-diagnostic initial offert
+diagnostic initial
 Premier échange sans engagement
 Sources : ANSSI, France Num 2025. [Les 5 signes qu'il est temps de moderniser](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme).
 ## Ce que couvre notre audit informatique
@@ -681,7 +681,7 @@ Licences, maintenance, infra optimisées
 de reprise après incident
 Temps moyen pour une PME non auditée
 60 min
-diagnostic initial offert
+diagnostic initial
 Premier échange sans engagement
 Sources : ANSSI, France Num 2025. [Les 5 signes qu'il est temps de moderniser](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme).
 ## Ce que couvre notre audit informatique
@@ -1185,9 +1185,9 @@ Contexte
 Brief & Contact
 ## Qu'est-ce qui vous intéresse ?
 Sélectionnez un ou plusieurs services pour commencer.
-Audit 180°Offert
+Audit 180°Sur RDV
 Diagnostic organisationnel — 60 min
-Audit 360° IA225 €
+Audit 360° IA550 €
 Feuille de route IA sur mesure
 Développement
 Apps, automatisations & IA
@@ -1509,7 +1509,7 @@ Vous utilisez Odoo et vous voulez tester cette approche ? Voici une checklist ac
   5. **Montez en complexité** : restructuration de données, workflows multi-étapes, rapports personnalisés
 
 **Limite importante** : cette approche fonctionne très bien pour le **paramétrage et la configuration** (80 % des besoins). Pour le développement Python custom (modules sur mesure, intégrations API complexes), vous aurez toujours besoin d'un développeur — mais même là, l'IA accélère considérablement le travail. Sur Odoo.sh, le vibe coding permet déjà de générer des modules entiers en langage naturel.
-Et si vous voulez un accompagnement pour démarrer, c'est exactement ce que nous faisons. Notre [Audit 180° offert](https://augmenter.pro/contact) vous permet d'évaluer en 60 minutes ce que l'IA peut apporter à votre utilisation d'Odoo — et combien vous pouvez économiser par rapport à votre prestataire actuel.
+Et si vous voulez un accompagnement pour démarrer, c'est exactement ce que nous faisons. Notre [Audit 180°](https://augmenter.pro/contact) vous permet d'évaluer en 60 minutes ce que l'IA peut apporter à votre utilisation d'Odoo — et combien vous pouvez économiser par rapport à votre prestataire actuel.
 Pour en savoir plus sur la connexion entre IA et outils métier, consultez aussi nos articles sur le [protocole MCP pour connecter l'IA à vos outils](https://augmenter.pro/blog/serveur-mcp-guide-pratique-pme) et l'[intégration d'agents IA à votre CRM/ERP](https://augmenter.pro/blog/serveur-mcp-integration-crm-erp).
 ## Quel est votre prochain niveau ?
 Commencez par un diagnostic de 60 minutes. Zéro engagement, zéro jargon technique — juste des solutions concrètes.
@@ -1556,7 +1556,7 @@ Nous accompagnons actuellement une PME de services en Yvelines (78) sur exacteme
   * **Étape 4 :** Phase de test supervisé — l'agent propose ses actions, un humain valide pendant 2 semaines, puis passage en autonomie progressive.
 
 **Résultat intermédiaire :** le temps de traitement des demandes entrantes est passé de 45 minutes à 8 minutes en moyenne. La mission est encore en cours, mais la trajectoire est claire.
-**Mise en garde :** ce type d'intégration demande un audit préalable sérieux. Si vos données CRM sont mal structurées ou incomplètes, l'IA amplifiera le désordre au lieu de le résoudre. C'est pourquoi nous commençons toujours par un [audit 180° offert](https://augmenter.pro/approche#prestations).
+**Mise en garde :** ce type d'intégration demande un audit préalable sérieux. Si vos données CRM sont mal structurées ou incomplètes, l'IA amplifiera le désordre au lieu de le résoudre. C'est pourquoi nous commençons toujours par un [audit 180°](https://augmenter.pro/approche#prestations).
 ## MCP et RGPD : vos données restent-elles en sécurité ?
 C'est la première question que posent nos clients — et c'est sain. Voici ce qu'il faut savoir :
   * **Hébergement :** Un serveur MCP peut tourner **en local sur votre infrastructure** ou chez un hébergeur français/européen. Vos données ne transitent pas nécessairement par des serveurs américains.
@@ -1580,7 +1580,7 @@ Les prix varient fortement selon la complexité de votre SI et le nombre d'outil
   * **Intégration avancée (SI complet) :** 5 000 à 20 000 € — ERP, CRM, messagerie, documents, workflows complexes, monitoring.
 
 **Repère de ROI :** nos clients constatent généralement un retour sur investissement en 3 à 6 mois, principalement via le temps gagné sur les tâches administratives et commerciales. Un commercial qui récupère 2 heures par jour, c'est ~40 heures/mois réinvesties en vente effective.
-**Point de départ :** [Notre audit 180° est offert](https://augmenter.pro/contact) et permet d'évaluer vos besoins concrets avant tout engagement. C'est 60 minutes d'échange qui vous donnent une vision claire de ce que MCP peut (et ne peut pas) faire pour vous.
+**Point de départ :** [Notre audit 180°](https://augmenter.pro/contact) n’est pas facturé et permet d'évaluer vos besoins concrets avant tout engagement. C'est 60 minutes d'échange qui vous donnent une vision claire de ce que MCP peut (et ne peut pas) faire pour vous.
 ## Ce que MCP ne fait pas (encore)
 Par honnêteté intellectuelle, voici les limites actuelles du protocole :
   * **Pas de magie sur données sales :** Si votre CRM est mal renseigné, l'IA ne fera pas mieux qu'un humain. La qualité des données reste votre responsabilité.
@@ -1662,7 +1662,7 @@ Par transparence, voici les situations où nous déconseillons MCP à nos client
 ## Passer à l'action
 Si vous reconnaissez votre situation dans cet article — un CRM ou ERP en place, des tâches répétitives qui plombent vos équipes, et la volonté d'aller plus loin avec l'IA — voici les prochaines étapes :
   * **1. Lire** notre [guide complet sur les serveurs MCP](https://augmenter.pro/blog/serveur-mcp-guide-pratique-pme) si vous voulez approfondir le sujet technique.
-  * **2. Évaluer** votre situation avec notre [audit 180° offert (60 min)](https://augmenter.pro/contact) — nous identifions les cas d'usage MCP les plus rentables pour votre entreprise.
+  * **2. Évaluer** votre situation avec notre [audit 180° (60 min)](https://augmenter.pro/contact) — nous identifions les cas d'usage MCP les plus rentables pour votre entreprise.
   * **3. Découvrir** notre [prestation d'intégration MCP](https://augmenter.pro/integration-mcp) — de l'audit au déploiement, en passant par la formation de vos équipes.
 
 L'IA connectée à vos outils métier n'est plus un concept futuriste. C'est une réalité opérationnelle que des PME comme la vôtre déploient maintenant. La question n'est plus _"est-ce que ça marche ?"_ mais _"par où commencer ?"_
@@ -1922,10 +1922,10 @@ Commencez par un diagnostic de 60 minutes. Zéro engagement, zéro jargon techni
 dateModified: 2026-02-13
 
 # Combien coûte un audit informatique en Yvelines (78) ? Guide tarifaire 2026
-De 0 € à 20 000 € : pourquoi un tel écart ? Grille tarifaire par taille d'entreprise, comparaison diagnostic offert vs audit complet, et 3 cas concrets de PME en Yvelines. Le guide le plus transparent du marché.
+De 0 € à 20 000 € : pourquoi un tel écart ? Grille tarifaire par taille d'entreprise, comparaison diagnostic à 0 € vs audit complet, et 3 cas concrets de PME en Yvelines. Le guide le plus transparent du marché.
 ![Combien coûte un audit informatique en Yvelines \(78\) ? Guide tarifaire 2026](https://augmenter.pro/images/blog/cout-audit-informatique-yvelines.webp)
 **Combien coûte un audit informatique pour une PME en Yvelines ?** C'est la question que posent 9 dirigeants sur 10 avant de nous contacter. Et la réponse qu'ils trouvent en ligne est toujours la même : "ça dépend". Fourchettes de 2 000 à 50 000 €, sans savoir ce qui est inclus, ni ce qui justifie l'écart.
-Après avoir réalisé des dizaines de diagnostics pour des PME du BTP, de l'industrie et des services entre Versailles, Poissy et Saint-Germain-en-Laye, nous avons décidé de publier ce que personne ne publie : une **grille tarifaire transparente** , des cas concrets, et une comparaison honnête entre un diagnostic offert et un audit complet. Si vous reconnaissez certains des [5 signes qu'il est temps de moderniser votre informatique](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme), ce guide vous aidera à budgéter la suite.
+Après avoir réalisé des dizaines de diagnostics pour des PME du BTP, de l'industrie et des services entre Versailles, Poissy et Saint-Germain-en-Laye, nous avons décidé de publier ce que personne ne publie : une **grille tarifaire transparente** , des cas concrets, et une comparaison honnête entre un diagnostic à 0 € et un audit complet. Si vous reconnaissez certains des [5 signes qu'il est temps de moderniser votre informatique](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme), ce guide vous aidera à budgéter la suite.
 ## Pourquoi les prix varient autant : les 5 facteurs clés
 Un audit informatique pour une PME de 15 postes à Rambouillet n'a rien à voir avec celui d'une entreprise industrielle de 200 postes à Poissy. Voici ce qui fait varier la facture :
   * **La taille de l'entreprise** : nombre de postes, de serveurs, de sites physiques. Un audit passe de 2 jours (15 postes) à 2 semaines (200+ postes).
@@ -1949,9 +1949,9 @@ Voici les fourchettes de prix constatées sur le marché français en 2026, cons
   * **ETI / 100 à 250 postes** : 10 000 à 25 000 € HT. Multi-sites, ERP, contraintes sectorielles (aéronautique, chimie).
 
 **Limite importante** : ces fourchettes sont des moyennes marché. Le prix exact dépend de votre contexte. Un cabinet comptable de 30 personnes avec un seul serveur cloud sera moins cher à auditer qu'une PME industrielle de 30 personnes avec 3 sites, des automates et un ERP on-premise. Consultez [nos tarifs détaillés](https://augmenter.pro/approche#prestations) pour connaître le positionnement d'augmenter.PRO.
-## Diagnostic offert vs audit complet : que vaut un diagnostic à 0 € ?
-Plusieurs prestataires proposent un "diagnostic offert" ou un "audit sans frais". Mais attention : **toutes ces offres ne se valent pas**. Certains sont de simples rendez-vous commerciaux déguisés. Voici ce que nous incluons dans notre offre, en toute transparence :
-### Audit 180° Informatique & Organisation — Offert (0 €)
+## Diagnostic à 0 € vs audit complet : que vaut vraiment un premier rendez-vous ?
+Plusieurs prestataires proposent un "diagnostic à 0 €" ou un "audit sans engagement". Mais attention : **toutes ces offres ne se valent pas**. Certains sont de simples rendez-vous commerciaux déguisés. Voici ce que nous incluons dans notre offre, en toute transparence :
+### Audit 180° Informatique & Organisation — non facturé (0 €)
   * Durée : **60 minutes** (visio ou sur site en Yvelines)
   * Évaluation de votre maturité digitale sur 8 axes
   * Identification des 3 à 5 priorités d'action
@@ -1968,12 +1968,12 @@ Plusieurs prestataires proposent un "diagnostic offert" ou un "audit sans frais"
   * Livrable : **rapport écrit détaillé** avec plan d'action chiffré et priorisé
 
 **Pourquoi 550 € et pas 5 000 € ?** Notre Audit 360° n'est pas un audit de cybersécurité avec pentest — c'est un **diagnostic stratégique** qui évalue votre SI dans sa globalité (performance, coûts, organisation, sécurité, IA readiness). Il couvre un périmètre plus large qu'un audit purement technique, mais avec une méthodologie calibrée pour les PME : efficace sans mobiliser vos équipes pendant 2 semaines. Si l'audit révèle un besoin de pentest ou d'audit de conformité approfondi, nous vous orienterons vers le bon prestataire — nous ne vendons pas de matériel ni d'infogérance.
-C'est cette indépendance qui fait la différence. Un prestataire qui vend de l'infogérance aura tendance à recommander… de l'infogérance. Notre modèle : vous donner les clés pour décider, pas vous enfermer dans un contrat. Pour réserver votre créneau : [demandez votre diagnostic offert](https://augmenter.pro/contact).
+C'est cette indépendance qui fait la différence. Un prestataire qui vend de l'infogérance aura tendance à recommander… de l'infogérance. Notre modèle : vous donner les clés pour décider, pas vous enfermer dans un contrat. Pour réserver votre créneau : [demandez votre premier rendez-vous](https://augmenter.pro/contact).
 ## 3 cas concrets de PME en Yvelines
 Voici trois situations réelles (anonymisées) issues de nos missions récentes dans le 78. Chaque cas illustre un profil de PME différent, un budget différent et des résultats différents.
 ### Cas 1 : PME BTP à Versailles — 25 postes
 **Situation** : entreprise de rénovation énergétique, 25 salariés. Le dirigeant suspectait des surcoûts sur ses licences Microsoft 365 et voulait savoir si son serveur NAS vieillissant tenait la route. Aucun incident de sécurité, mais aucune sauvegarde testée depuis 2 ans.
-**Diagnostic** : Audit 180° offert (60 min) → identification de 3 urgences : sauvegardes non testées, 8 licences M365 inutilisées (1 200 €/an de gaspillage), et accès VPN sans authentification multi-facteurs.
+**Diagnostic** : Audit 180° (60 min) → identification de 3 urgences : sauvegardes non testées, 8 licences M365 inutilisées (1 200 €/an de gaspillage), et accès VPN sans authentification multi-facteurs.
 **Suite** : le dirigeant a corrigé les 3 points en interne en 2 semaines, sans audit complet supplémentaire. Économie immédiate : 1 200 €/an sur les licences. Coût total pour l'entreprise : **0 €**.
 ### Cas 2 : cabinet de services à Saint-Germain-en-Laye — 45 postes
 **Situation** : cabinet de conseil en RH, 45 salariés sur 2 sites. Migration cloud en cours (Exchange → Microsoft 365), inquiétudes sur la conformité RGPD après le départ d'un collaborateur qui avait accès à toutes les bases clients.
@@ -1983,7 +1983,7 @@ Voici trois situations réelles (anonymisées) issues de nos missions récentes 
 **Situation** : équipementier automobile, 80 salariés, sous-traitant de rang 2 pour un constructeur. Le donneur d'ordres a exigé un audit de cybersécurité dans le cadre des [obligations NIS2 descendantes](https://augmenter.pro/blog/nis2-pme-yvelines-val-doise). Délai imposé : 3 mois.
 **Diagnostic** : Audit 360° (550 €) puis orientation vers un cabinet de cybersécurité pour un audit technique approfondi + pentest. Budget total : environ 12 000 € HT (audit technique + pentest + plan de remédiation).
 **Résultat** : conformité obtenue, contrat renouvelé. Sans l'audit, le sous-traitant risquait de perdre un client représentant 40% de son CA.
-**Ce que montrent ces 3 cas** : le budget nécessaire varie de 0 € à 12 000 € selon la situation. La constante : un diagnostic initial (offert ou à 550 €) suffit souvent à identifier les urgences et à décider si un audit complet est justifié.
+**Ce que montrent ces 3 cas** : le budget nécessaire varie de 0 € à 12 000 € selon la situation. La constante : un diagnostic initial (à 0 € ou à 550 €) suffit souvent à identifier les urgences et à décider si un audit complet est justifié.
 ## Quand déclencher un audit ? Les 4 moments clés
 Beaucoup de PME attendent un incident pour auditer leur SI. C'est l'équivalent de consulter un médecin uniquement aux urgences. Voici les 4 situations où un audit est le plus rentable :
   * **Avant un investissement IT majeur** : migration cloud, changement d'ERP, nouveau site. L'audit évite de construire sur des fondations fragiles.
@@ -2013,7 +2013,7 @@ Pas d'obligation légale générale. Mais la [directive NIS2](https://augmenter.
 ### Quelle différence entre audit informatique et audit cybersécurité ?
 L'audit informatique évalue **l'ensemble du SI** : performance, coûts, organisation, outils, cloud, licences. L'audit de cybersécurité se concentre sur la **sécurité** : vulnérabilités, tests d'intrusion, conformité réglementaire. L'idéal : un audit global qui couvre les deux, comme notre Audit 360°.
 ### Comment choisir son prestataire pour un audit en Yvelines ?
-Trois critères : **indépendance** (pas de vente de matériel ou d'infogérance en aval), **connaissance locale** (tissu PME du 78, contraintes sectorielles), et **transparence tarifaire** (grille de prix publiée, pas de devis opaque). [Contactez-nous](https://augmenter.pro/contact) pour un premier échange offert de 60 minutes.
+Trois critères : **indépendance** (pas de vente de matériel ou d'infogérance en aval), **connaissance locale** (tissu PME du 78, contraintes sectorielles), et **transparence tarifaire** (grille de prix publiée, pas de devis opaque). [Contactez-nous](https://augmenter.pro/contact) pour un premier échange non facturé de 60 minutes.
 ## Quel est votre prochain niveau ?
 Commencez par un diagnostic de 60 minutes. Zéro engagement, zéro jargon technique — juste des solutions concrètes.
 [Réserver mon diagnostic](https://augmenter.pro/contact)[Discuter sur WhatsApp](https://wa.me/33679119774)

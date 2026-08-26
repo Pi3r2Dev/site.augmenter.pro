@@ -7,7 +7,8 @@ import { PromptCard } from "@/components/sections/prompt-card";
 export const metadata = articleMetadata({
   title: "J'ai transformé Claude Cowork en community manager",
   description:
-    "Le setup réel, les prompts que j'utilise, et ce qui a foiré quand j'ai confié mes réseaux sociaux à Claude Cowork. Retour d'expérience sans filtre.",
+    "Le setup réel, les prompts que j'utilise, et ce qui a foiré quand j'ai confié mes réseaux sociaux à Claude Cowork. Retour d'expérience sans filtre.",
+
   slug: "claude-cowork-community-manager",
 });
 
@@ -508,7 +509,7 @@ export default function ClaudeCoworkCommunityManager() {
         </Link>
         . Et si vous préférez qu&apos;on installe ce workflow ensemble sur vos
         cas réels, c&apos;est exactement l&apos;objet de mon{" "}
-        <Link href="/contact">Audit 180&deg; offert</Link> &mdash; 60 minutes
+        <Link href="/contact">Audit 180&deg;</Link> &mdash; 60 minutes
         pour repartir avec un plan concret, sans engagement.
       </p>
 

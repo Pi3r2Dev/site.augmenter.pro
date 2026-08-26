@@ -702,7 +702,7 @@ export default function Article() {
       <p>
         Vous testez Claude Code dans votre PME et vous voulez un regard
         extérieur avant de partir en production ? Notre{" "}
-        <Link href="/contact">Audit 180° (60 min, offert)</Link> sert
+        <Link href="/contact">Audit 180° (60 min, sur rendez-vous)</Link> sert
         exactement à ça : on regarde votre cadrage, vos risques et les quick
         wins à activer en premier. Pour une vue d&apos;ensemble de votre
         maturité IA, voyez notre{" "}

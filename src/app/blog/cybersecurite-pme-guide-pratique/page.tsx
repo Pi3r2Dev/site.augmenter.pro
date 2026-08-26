@@ -761,7 +761,7 @@ export default function Article() {
         sensibilisée — vous tenez là l&apos;essentiel. Si vous voulez un regard
         extérieur pour savoir où vous en êtes vraiment et par quoi commencer dans
         <em>votre</em> contexte, c&apos;est exactement l&apos;objet d&apos;un{" "}
-        <Link href="/contact">premier audit de 60 minutes, offert et sans
+        <Link href="/contact">premier audit de 60 minutes, non facturé et sans
         engagement</Link>. On fait le tour de vos points faibles, et vous repartez
         avec un plan d&apos;action priorisé — que vous le mettiez en œuvre avec
         nous ou seul.

@@ -583,7 +583,7 @@ export default function Article() {
           les ressources filtrées par votre secteur et votre douleur du moment
         </Link>{" "}
         — articles, idées chiffrées et prompts prêts à l&apos;emploi. Ou prenez
-        60 minutes avec nous : l&apos;<strong>Audit 180° est offert</strong>, en
+        60 minutes avec nous : l&apos;<strong>Audit 180° n&apos;est pas facturé</strong>, en
         visio partout en France — on regarde vos processus, on identifie le cas
         d&apos;usage le plus rentable, et vous repartez avec un plan, que vous
         le meniez avec nous ou sans nous.{" "}

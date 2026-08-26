@@ -106,7 +106,7 @@ export default function PromptsPage() {
             informations de votre entreprise, puis collez-le dans ChatGPT,
             Claude ou Gemini : la structure fait le reste. Chaque prompt est
             indépendant du modèle — le même texte fonctionne dans les trois
-            outils, versions offertes comprises. Comptez 2 minutes
+            outils, y compris dans leurs versions sans abonnement. Comptez 2 minutes
             d&apos;adaptation, montre en main :
           </p>
           <ol className="mt-4 list-decimal space-y-2 pl-5 leading-relaxed text-muted-foreground">

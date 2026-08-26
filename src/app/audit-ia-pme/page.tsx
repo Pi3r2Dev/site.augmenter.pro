@@ -39,9 +39,9 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Audit IA PME : diagnostic offert + feuille de route chiffrée",
+  title: "Audit IA PME : diagnostic 180° + feuille de route chiffrée",
   description:
-    "L'IA peut booster ta PME mais tu ne sais pas par où commencer ? Audit IA : cas d'usage prioritaires, ROI chiffré, feuille de route. Diagnostic 180° offert.",
+    "L'IA peut booster ta PME mais tu ne sais pas par où commencer ? Audit IA : cas d'usage prioritaires, ROI chiffré, feuille de route. 1er RDV non facturé.",
   alternates: { canonical: "https://augmenter.pro/audit-ia-pme" },
 };
 
@@ -154,7 +154,7 @@ const methodology = [
   {
     step: "01",
     icon: Phone,
-    title: "Diagnostic 180° — 60 min, offert",
+    title: "Diagnostic 180° — 60 min, sur rendez-vous",
     description:
       "Un premier échange en visio (partout en France) pour comprendre ton activité, tes irritants et tes objectifs. Sans CB, sans engagement.",
     details: [
@@ -245,7 +245,7 @@ const faqItems = [
   {
     question: "Combien coûte un audit IA pour une PME ?",
     answer:
-      "Le diagnostic 180° initial est offert (60 min, sans engagement). L'Audit IA 360° complet coûte 550 € et inclut une demi-journée de cartographie et une feuille de route sur 6 mois. C'est volontairement accessible : sur le marché, un audit IA d'agence coûte généralement entre 3 000 et 20 000 € HT. Le programme Osez l'IA de Bpifrance peut ensuite prendre en charge jusqu'à 80 % du coût d'accompagnement au déploiement.",
+      "On ne facture pas le diagnostic 180° initial (60 min, sur rendez-vous, sans engagement). L'Audit IA 360° complet coûte 550 € et inclut une demi-journée de cartographie et une feuille de route sur 6 mois. C'est volontairement accessible : sur le marché, un audit IA d'agence coûte généralement entre 3 000 et 20 000 € HT. Le programme Osez l'IA de Bpifrance peut ensuite prendre en charge jusqu'à 80 % du coût d'accompagnement au déploiement.",
   },
   {
     question: "Combien de temps prend un audit IA ?",
@@ -274,7 +274,7 @@ const serviceJsonLd = {
   "@type": "Service",
   name: "Audit IA pour PME",
   description:
-    "Audit IA pour PME françaises : évaluation de la maturité IA, cartographie des processus, identification des cas d'usage prioritaires par ROI et feuille de route chiffrée. Diagnostic initial offert.",
+    "Audit IA pour PME françaises : évaluation de la maturité IA, cartographie des processus, identification des cas d'usage prioritaires par ROI et feuille de route chiffrée. Diagnostic initial non facturé, sur rendez-vous.",
   provider: {
     "@type": "Organization",
     "@id": "https://augmenter.pro/#organization",
@@ -306,8 +306,9 @@ const serviceJsonLd = {
       name: "Diagnostic 180° IA",
       price: "0",
       priceCurrency: "EUR",
+      eligibleCustomerType: "http://purl.org/goodrelations/v1#Business",
       description:
-        "Audit initial de 60 minutes pour identifier tes premiers leviers IA",
+        "Audit initial de 60 minutes pour identifier tes premiers leviers IA. Non facturé pour les PME et indépendants ayant un projet identifié, sur rendez-vous.",
       url: "https://augmenter.pro/contact",
     },
     {
@@ -365,12 +366,12 @@ export default function AuditIaPmePage() {
               tu ne sais plus quoi faire. Notre audit IA part de{" "}
               <strong>ton métier</strong> : on identifie les cas d&apos;usage qui
               comptent vraiment, chiffrés et priorisés. Diagnostic{" "}
-              <strong>180° offert</strong>, en visio partout en France.
+              <strong>180° sur rendez-vous</strong>, en visio partout en France.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="gap-2">
                 <Link href="/contact">
-                  Diagnostic 180° — 60 min offertes
+                  Diagnostic 180° — 60 min
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -521,7 +522,7 @@ export default function AuditIaPmePage() {
               Notre audit IA en 4 étapes
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Du diagnostic offert à la feuille de route exécutable — une méthode
+              Du premier rendez-vous à la feuille de route exécutable — une méthode
               cadrée, sans jargon et sans projet imposé.
             </p>
           </div>

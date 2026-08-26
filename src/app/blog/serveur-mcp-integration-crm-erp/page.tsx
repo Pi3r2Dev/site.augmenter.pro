@@ -288,7 +288,7 @@ export default function Article() {
         </li>
         <li>
           <strong>2. Évaluer</strong> votre situation avec notre{" "}
-          <Link href="/contact">audit 180° offert (60 min)</Link> — nous
+          <Link href="/contact">audit 180° (60 min)</Link> — nous
           identifions les cas d&apos;usage MCP les plus rentables pour votre
           entreprise.
         </li>

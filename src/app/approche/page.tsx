@@ -5,7 +5,7 @@ import { FAQ_ITEMS } from "./narrative/data";
 export const metadata: Metadata = {
   title: "Approche, Prestations & Tarifs — Audit IA dès 550 € | PME 78/95",
   description:
-    "Méthode 360° en 4 piliers (technique, process, humain, vision) + audits 180° offert et 360° à 550 €. Pas de jargon, plan d'action concret. PME Yvelines & Val d'Oise.",
+    "Méthode 360° en 4 piliers (technique, process, humain, vision), audit 180° sur rendez-vous, 360° à 550 €. Plan d'action concret. PME Yvelines & Val d'Oise.",
 };
 
 const servicesJsonLd = {
@@ -29,9 +29,10 @@ const servicesJsonLd = {
         "@type": "Offer",
         name: "Audit 180° Informatique & Organisation",
         description:
-          "Échange de 60 min pour identifier vos leviers de croissance numériques. Sans engagement.",
+          "Échange de 60 min pour identifier vos leviers de croissance numériques. Non facturé pour les PME et indépendants ayant un projet identifié, sur rendez-vous et sans engagement.",
         price: "0",
         priceCurrency: "EUR",
+        eligibleCustomerType: "http://purl.org/goodrelations/v1#Business",
         url: "https://augmenter.pro/contact",
       },
       {

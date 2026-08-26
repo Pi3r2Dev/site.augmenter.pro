@@ -30,8 +30,8 @@ const audits: AuditOffer[] = [
     icon: Target,
     badge: "Audit 180°",
     priceBig: "60 min",
-    priceSub: "Offert · sans engagement",
-    title: "Diagnostic offert",
+    priceSub: "Sur rendez-vous · sans engagement",
+    title: "Premier rendez-vous",
     subtitle:
       "Un échange concret pour identifier vos quick wins et vérifier qu'on est alignés.",
     features: [
@@ -153,10 +153,13 @@ export function Ch07Audits() {
         data-anim="up"
         className="max-w-[58ch] text-[clamp(17px,1.5vw,22px)] leading-relaxed text-white/70"
       >
-        Le mot « gratuit » est galvaudé ; le diagnostic 180° est{" "}
-        <strong className="font-medium text-white">offert</strong> parce
-        qu&apos;il sert d&apos;abord à valider qu&apos;on travaillera bien
-        ensemble. Le 360° est payant — c&apos;est un livrable, pas un teaser.
+        On ne facture pas le premier rendez-vous — pas comme une promotion,
+        mais parce qu&apos;il sert d&apos;abord à{" "}
+        <strong className="font-medium text-white">
+          valider qu&apos;on travaillera bien ensemble
+        </strong>
+        . Il est réservé aux PME et aux indépendants qui ont un sujet précis. Le
+        360° est payant — c&apos;est un livrable, pas un teaser.
       </p>
       <div
         data-anim="stagger"

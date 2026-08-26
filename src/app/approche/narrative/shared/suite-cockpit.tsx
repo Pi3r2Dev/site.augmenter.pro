@@ -128,10 +128,10 @@ function AuditCard() {
               60 min
             </div>
             <div className="mt-1.5 font-mono text-[11px] uppercase tracking-widest text-white/65">
-              Offert · sans engagement
+              Sur rendez-vous · sans engagement
             </div>
             <h3 className="mt-5 text-[22px] font-semibold leading-tight text-white">
-              Premier diagnostic offert
+              Premier rendez-vous, non facturé
             </h3>
             <p className="mt-2 max-w-[34ch] text-[13px] leading-snug text-white/75">
               Un échange concret pour identifier vos quick wins et vérifier
