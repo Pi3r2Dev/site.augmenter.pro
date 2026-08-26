@@ -27,8 +27,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   // Borne haute du cache HTML partagé. Combiné au `export const revalidate = 300` du root layout,
-  // Next émet `s-maxage=300, stale-while-revalidate=0` : le CDN ne peut plus servir de réponse
-  // périmée du tout, il repasse par l'origine dès la 5e minute (upstream mesuré ~25 ms).
+  // Next émet `s-maxage=300` (mesuré sur 16.3.3 ; les versions <=16.1.x ajoutaient un
+  // `stale-while-revalidate=0` explicite, désormais omis car redondant) : aucune fenêtre de
+  // stale n'est annoncée, le CDN repasse par l'origine dès la 5e minute (upstream mesuré ~25 ms).
   // Enjeu : Hostinger ne garde qu'une version de build. Un HTML caché au-delà d'un déploiement
   // référence des CSS/JS hashés supprimés (404) → page sans styles et exception à l'hydratation.
   // Valeur précédente 3600 → laissait une fenêtre stale de 55 min après chaque mise en ligne.

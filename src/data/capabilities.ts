@@ -200,7 +200,7 @@ export const CAPABILITIES: Capability[] = [
     sectors: "Tous",
     tools: "Tous",
     since: "2026-06",
-    href: "/audit-ia-pme",
+    href: "/ia-souveraine-pme",
   },
   {
     id: "portail-commande",

@@ -27,6 +27,7 @@ const COLUMNS: FooterColumn[] = [
       { label: "Audit informatique Yvelines (78)", href: "/audit-informatique-yvelines" },
       { label: "Audit informatique Val d'Oise (95)", href: "/audit-informatique-val-doise" },
       { label: "Intégration MCP", href: "/integration-mcp" },
+      { label: "IA souveraine pour PME", href: "/ia-souveraine-pme" },
     ],
   },
   {

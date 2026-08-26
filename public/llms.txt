@@ -152,6 +152,7 @@ R: Technique (software & hardware), processus (vente & opérations), formation h
 
 ## Intégration MCP (Model Context Protocol)
 
+- [IA souveraine pour PME : tes données restent chez toi](https://augmenter.pro/ia-souveraine-pme) — Landing nationale sur l'IA souveraine en PME. Les quatre niveaux réels de « souveraineté » (compte perso, abonnement pro, hébergement européen, modèle ouvert sur infra administrée), les deux régimes proposés (modèle ouvert chez nous ou chez le client / modèle éditeur quand c'est le bon outil), la démarche en quatre crans (cartographier ce qui sort, trier par sensibilité, router, internaliser si le volume le justifie), ce que nous refusons de promettre, conformité RGPD et AI Act, FAQ dirigeants. Thèse : la souveraineté n'est pas un absolu, c'est un routage.
 - [Intégration Serveur MCP pour PME](https://augmenter.pro/integration-mcp) — Service d'intégration du protocole MCP pour connecter CRM, ERP, messagerie et documents à l'IA. Cas d'usage par secteur (BTP, immobilier, industrie, services), méthodologie en 4 étapes (audit, conception, intégration, formation), tarifs indicatifs, FAQ, conformité RGPD. Yvelines (78) et Val-d'Oise (95).
 
 ## Audit Informatique Local
@@ -186,6 +187,7 @@ Tous les articles du blog sont rédigés par Pierre Legrand, avec assistance d'o
 - https://augmenter.pro/projets — Nos Projets & Réalisations IA
 - https://augmenter.pro/audit-informatique-yvelines — Audit Informatique Yvelines (78)
 - https://augmenter.pro/audit-informatique-val-doise — Audit Informatique Val-d'Oise (95)
+- https://augmenter.pro/ia-souveraine-pme — IA souveraine pour PME (modèles ouverts, routage des données, RGPD/AI Act) — national
 - https://augmenter.pro/integration-mcp — Intégration MCP pour PME (serveurs MCP, agents IA, CRM/ERP)
 - https://augmenter.pro/prompts — Prompts ChatGPT & Claude pour PME (15 prompts prêts à l'emploi, 6 catégories)
 - https://augmenter.pro/mentions-legales — Mentions Légales

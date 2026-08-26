@@ -95,6 +95,11 @@ const SECTIONS: SitemapSection[] = [
         desc: "Brancher l'IA sur vos vrais outils métier (CRM, ERP)",
       },
       {
+        href: "/ia-souveraine-pme",
+        label: "IA souveraine pour PME",
+        desc: "Ce qui sort de votre entreprise, et comment le router",
+      },
+      {
         href: "/atelier-claude-code-dirigeant",
         label: "Atelier Claude Cowork & Code",
         desc: "Prendre la main sur Claude pour automatiser votre PME",

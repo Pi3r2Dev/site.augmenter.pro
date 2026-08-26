@@ -25,8 +25,7 @@ import type { Palette } from "@/components/widgets/palettes";
 const NAV_TILES: Array<NavTileData & { palette: Palette }> = [
   {
     label: "IA souveraines",
-    // TODO(lot 5) : repointer vers /ia-souveraine-pme une fois la page écrite.
-    href: "/audit-ia-pme",
+    href: "/ia-souveraine-pme",
     seed: 1.1,
     palette: "violet",
   },

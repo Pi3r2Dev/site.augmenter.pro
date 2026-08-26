@@ -391,7 +391,7 @@ Trois protections en place — **ne pas les retirer** :
 | Couche | Fichier | Effet |
 |--------|---------|-------|
 | `export const revalidate = 300` | [src/app/layout.tsx](src/app/layout.tsx) | fait descendre le `s-maxage` du HTML de 1 an à 5 min. ⚠ `expireTime` **seul n'y suffit pas** sur une route statique pure — il ne pilote que le `stale-while-revalidate` compagnon |
-| `expireTime: 300` | [next.config.ts](next.config.ts) | `swr=0` → le CDN ne peut plus servir de réponse périmée (valeur 3600 = fenêtre stale de 55 min) |
+| `expireTime: 300` | [next.config.ts](next.config.ts) | aucune fenêtre de stale annoncée → le CDN ne peut plus servir de réponse périmée (valeur 3600 = fenêtre stale de 55 min). Header réel sur Next 16.3.3 : `s-maxage=300` seul, le `stale-while-revalidate=0` des versions <=16.1.x n'est plus émis |
 | `ASSET_RECOVERY_SCRIPT` | [src/lib/asset-recovery.ts](src/lib/asset-recovery.ts) | filet client inline dans `<head>` : un asset `_next/static` en échec déclenche un rechargement `?_cb=`, qui force `x-hcdn-cache-status: DYNAMIC`. Garde anti-boucle : 1 tentative/min/session, param retiré de l'URL après coup |
 
 Plus [src/app/global-error.tsx](src/app/global-error.tsx) — error boundary racine, **styles inline obligatoires** (doit rester lisible quand c'est le CSS qui 404).
@@ -432,3 +432,13 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 - [docs/playbooks/acquisition-devis.md](docs/playbooks/acquisition-devis.md) — **playbook acquisition de devis** : constat chiffré GSC, ordre de rendement, message de demande d'avis Google (réutilisable), checklist GBP restante
 - [docs/plans/](docs/plans/) — plans d'implémentation détaillés
 - [docs/ClaudeDesign_handoff/](docs/ClaudeDesign_handoff/) — source du design narrative (HTML/CSS/JS prototype)
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

@@ -18,7 +18,13 @@ function useMorphTick(
   onTick: (t: number) => void,
 ) {
   const onTickRef = React.useRef(onTick);
-  onTickRef.current = onTick;
+  // Latest-ref : l'assignation vit dans un effect (et non pendant le render,
+  // interdit par react-hooks/refs depuis eslint-plugin-react-hooks 7). Le RAF
+  // ne lit `.current` qu'en dehors du render — au pire un frame de retard sur
+  // une animation décorative, invisible.
+  React.useEffect(() => {
+    onTickRef.current = onTick;
+  });
 
   React.useEffect(() => {
     if (typeof window === "undefined") return;
