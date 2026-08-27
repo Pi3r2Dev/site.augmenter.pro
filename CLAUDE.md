@@ -93,6 +93,30 @@ Deux pages sont des **expériences scroll narrative** (Three.js + Lenis + GSAP) 
 | `/contact` | Form + Header/Footer | Server `page.tsx` + client `contact-form.tsx` |
 | `/prompts`, `/projets`, `/strategie-ia-pme`, `/integration-mcp`, `/audit-informatique-{yvelines,val-doise}`, `/auteur/pierre-legrand` | Pages classiques | Header/Footer globaux + le CTA widget en bas |
 | `/mentions-legales`, `/cgv`, `/politique-confidentialite` | Legal | Header/Footer globaux |
+| `/clients/<client>` + `/clients/<client>/<doc>` | **Portail client privé** | Livrables remis à un client derrière un code d'accès. Login = page classique (Header/Footer, `PORTAL_ROBOTS`) + POST `/api/portal/login` (compare timing-safe, cookie HMAC 30 j scopé `/clients/<client>`, 5 essais/15 min par IP). Le document est servi **hors arbre React** (pas de layout, pas de GTM) par un route handler qui déchiffre `src/content/portal/<client>/*.ts` — `private, no-store` + `noindex` obligatoires, cf. [Portail client](#portail-client-clients). **Jamais** dans sitemap/llms.txt/maillage. |
+
+### Portail client (`/clients`)
+
+Héberge un livrable client (HTML autonome produit ailleurs) derrière un code d'accès. V1 : Reva 9, un document. Détail du chantier : [docs/plans/2026-08-27-portail-client-reva9.md](docs/plans/2026-08-27-portail-client-reva9.md).
+
+| Fichier | Rôle |
+|---|---|
+| [src/lib/portal/registry.ts](src/lib/portal/registry.ts) | **Source de vérité** : clients, cookie, documents. Nouveau client = une entrée + une variable d'env, rien d'autre |
+| [src/lib/portal/auth.ts](src/lib/portal/auth.ts) | Token HMAC-SHA256 `v1.<exp>.<hmac>`, comparaison timing-safe (SHA-256 des deux chaînes → indépendante des longueurs), rate-limit mémoire |
+| [src/lib/portal/content.ts](src/lib/portal/content.ts) | Déchiffrement AES-256-GCM + `wrapArtifactHtml()` (enveloppe head/body d'un HTML de convention Artifact) |
+| [src/lib/portal/csp.ts](src/lib/portal/csp.ts) | CSP du document, importée **par next.config.ts et par le handler** — la règle `/(.*)` du site écrase sinon celle du handler (dernier match gagnant) et bloque les polices Google |
+| [scripts/portal-encrypt.mjs](scripts/portal-encrypt.mjs) | Chiffre un HTML en module TS versionnable |
+
+**Le repo est public** : le HTML en clair n'est **jamais** commité (`.gitignore` : `src/content/portal/**/*.html`), seul le module chiffré l'est. Le contenu source reste la propriété de son repo d'origine — on ne l'édite jamais ici. Mise à jour d'un document :
+
+```bash
+node scripts/portal-encrypt.mjs <source.html> src/content/portal/reva9/2026-08-27-point-etape.ts
+git add src/content/portal/reva9 && git commit -m "portal(reva9): maj point d'étape"
+```
+
+Trois variables d'env (`.env.example`, `.env.local`, **hPanel**) : `PORTAL_REVA9_PASSCODE`, `PORTAL_COOKIE_SECRET` (32+ car.), `PORTAL_CONTENT_KEY` (64 hex, **identique à celle du chiffrement** sinon 503). Aucune valeur par défaut : sans elles, login refusé et document indisponible — jamais d'accès ouvert par erreur.
+
+Garde-fous vérifiés par [src/lib/seo-hygiene.test.ts](src/lib/seo-hygiene.test.ts) : `/clients` absent du sitemap, des llms.txt, du plan du site et des navs ; `Disallow` présent dans **chaque** groupe de robots.txt qui autorise `/` (un crawler n'applique que son groupe le plus spécifique) ; aucun `.html` versionné sous `src/content/portal/`.
 
 ### Site-wide hero shader pattern
 
@@ -407,6 +431,7 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 ## Key Constraints
 
 - **Réception des devis** : `/api/quote` doit TOUJOURS conserver son `console.log` préfixé `[QUOTE]` (seul canal indépendant de toute variable d'env) ; et dans `quote-wizard.tsx`, ne jamais ajouter d'`await` avant `window.open` ni retirer `keepalive: true` — cf. section Acquisition
+- **Portail client** : `/clients/*` doit rester en `Cache-Control: private, no-store` + `X-Robots-Tag: noindex` (un document privé mis en cache CDN = une fuite), hors sitemap/llms.txt/maillage, et aucun HTML en clair sous `src/content/portal/` — cf. section Portail client
 - **Cache CDN** : toute modif de `revalidate` / `expireTime` / du filet `asset-recovery` se vérifie sur les headers réellement émis (`npm run build && npm run start`, puis `curl -sI http://127.0.0.1:3000/`) — cf. section Déploiement & cache CDN
 - **Données hardcodées (pas de CMS)** — articles et idées centralisés dans le catalog [src/data/resources.ts](src/data/resources.ts) (`ARTICLES` / `IDEAS`) ; testimonials, pricing et prompts (`src/data/prompts.ts`) restent inline
 - **Client components** must use `"use client"` (required for framer-motion, gsap, lenis, three.js, interactive forms, mobile menu)
