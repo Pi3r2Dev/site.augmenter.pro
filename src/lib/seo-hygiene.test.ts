@@ -1,9 +1,13 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import nextConfig from "../../next.config";
-import { NEWS_SITEMAP_ENABLED, NOINDEX_FOLLOW_PATHS } from "./seo-policy";
+import {
+  NEWS_SITEMAP_ENABLED,
+  NOINDEX_FOLLOW_PATHS,
+  PORTAL_PATH_PREFIX,
+} from "./seo-policy";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -57,6 +61,49 @@ describe("maillage des pages GSC « non indexées » utiles", () => {
       "utf8",
     );
     expect(src).toContain("/blog/claude-cowork-community-manager");
+  });
+});
+
+describe("portail client /clients — hors index, hors maillage", () => {
+  // Une URL commençant par /clients (suivie de /, d'une quote ou d'un espace).
+  const PORTAL_URL_RE = new RegExp(`${PORTAL_PATH_PREFIX}(?=[/"'\`\\s)])`);
+
+  it("n'apparaît ni dans les sitemaps/llms, ni dans le plan du site, ni dans les navs", () => {
+    for (const file of [
+      "public/sitemap.xml",
+      "public/llms.txt",
+      "public/llms-full.txt",
+      "src/app/plan-du-site/page.tsx",
+      "src/components/layout/footer.tsx",
+      "src/components/layout/header.tsx",
+      "src/app/approche/narrative/nav-fixed.tsx",
+      "src/app/approche/narrative/shared/suite-cockpit.tsx",
+    ]) {
+      expect(readFileSync(join(root, file), "utf8"), file).not.toMatch(PORTAL_URL_RE);
+    }
+  });
+
+  it("est interdit au crawl dans chaque groupe de robots.txt qui autorise /", () => {
+    const robots = readFileSync(join(root, "public/robots.txt"), "utf8");
+    const groups = robots
+      .split(/\r?\n[ \t]*\r?\n/)
+      .filter((group) => /^User-agent:/m.test(group));
+    expect(groups.length).toBeGreaterThan(10);
+    for (const group of groups) {
+      if (!/^Allow: \/[ \t]*$/m.test(group)) continue;
+      expect(group).toMatch(/^Disallow: \/clients\/[ \t]*$/m);
+      expect(group).toMatch(/^Disallow: \/api\/portal\/[ \t]*$/m);
+    }
+  });
+
+  it("ne versionne aucun HTML en clair sous src/content/portal (repo public)", () => {
+    const dir = join(root, "src/content/portal");
+    const entries = existsSync(dir) ? readdirSync(dir, { recursive: true }) : [];
+    const html = entries.map(String).filter((entry) => /\.html?$/i.test(entry));
+    expect(html).toEqual([]);
+    expect(readFileSync(join(root, ".gitignore"), "utf8")).toContain(
+      "/src/content/portal/**/*.html",
+    );
   });
 });
 

@@ -21,3 +21,13 @@ export type NoindexFollowPath = (typeof NOINDEX_FOLLOW_PATHS)[number];
  * Le news-sitemap a été retiré (0 URL News indexée, crawl pollué).
  */
 export const NEWS_SITEMAP_ENABLED = false;
+
+/**
+ * Portail client (/clients/<client>/<doc>) : documents remis à un client
+ * derrière un code d'accès. Jamais indexés, jamais suivis, hors sitemap,
+ * hors llms.txt, sans aucun lien entrant depuis le site.
+ */
+export const PORTAL_ROBOTS = { index: false, follow: false } as const;
+
+/** Préfixe d'URL du portail — utilisé par les tests d'hygiène SEO. */
+export const PORTAL_PATH_PREFIX = "/clients";

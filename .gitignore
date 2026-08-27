@@ -59,3 +59,6 @@ Home.html
 # Artefacts de dev jetables à la racine (previews GBP, snapshots) — jamais commités
 /gbp-*.png
 /snap-*.yml
+
+# Portail client : jamais de HTML en clair — seuls les modules chiffrés *.ts sont versionnés
+/src/content/portal/**/*.html

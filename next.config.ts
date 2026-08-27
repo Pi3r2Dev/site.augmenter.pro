@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { NOINDEX_FOLLOW_PATHS } from "./src/lib/seo-policy";
+import { PORTAL_DOC_CSP, PORTAL_DOC_HEADER_SOURCE } from "./src/lib/portal/csp";
 
 const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
@@ -44,6 +45,27 @@ const nextConfig: NextConfig = {
         source,
         headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
       })),
+      {
+        // Portail client : zone entière hors index, en-tête HTTP en plus du
+        // `<meta robots>` de la page de login et de celui injecté dans le document.
+        // Les route handlers le posent déjà ; cette règle couvre aussi les
+        // réponses qu'ils ne fabriquent pas (404, erreurs Next).
+        source: "/clients/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/api/portal/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        // Portail client : document HTML autonome servi hors layout React par
+        // src/app/clients/[client]/[doc]/route.ts. La CSP globale ci-dessus
+        // bloquerait ses polices Google et écrase celle posée par le handler
+        // (dernier match gagnant) → on la redéfinit sur ce chemin précis.
+        // La page de login (/clients/:client, un seul segment) garde la CSP du site.
+        source: PORTAL_DOC_HEADER_SOURCE,
+        headers: [{ key: "Content-Security-Policy", value: PORTAL_DOC_CSP }],
+      },
     ];
   },
   async redirects() {

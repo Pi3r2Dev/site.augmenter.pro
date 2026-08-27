@@ -7,32 +7,52 @@
 # Les `Allow: /` redondants avec `*` sont volontaires : ils garantissent que ces
 # bots restent autorisés même si une règle restrictive était un jour ajoutée à `*`.
 
+# --- Portail client (/clients/) -------------------------------------------
+# Documents remis à un client derrière un code d'accès : jamais crawlés. Le
+# Disallow est répété dans CHAQUE groupe nommé ci-dessous : un crawler n'applique
+# que le groupe le plus spécifique qui le concerne, donc un Disallow posé sous
+# `*` seul serait ignoré par Googlebot, GPTBot, etc. La vraie protection reste
+# côté serveur (code + cookie, X-Robots-Tag: noindex, Cache-Control: no-store).
 User-agent: *
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- OpenAI ----------------------------------------------------------------
 # GPTBot : entraînement ChatGPT
 User-agent: GPTBot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # OAI-SearchBot : index ChatGPT Search (temps réel)
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # ChatGPT-User : fetch on-demand quand un utilisateur clique un lien dans ChatGPT
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Anthropic -------------------------------------------------------------
 # ClaudeBot / Claude-Web / anthropic-ai : entraînement + fetch Claude
 User-agent: ClaudeBot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Google ----------------------------------------------------------------
 # Googlebot : crawl de recherche classique (alimente Search + Gemini AI Mode +
@@ -40,40 +60,56 @@ Allow: /
 # Google-Extended ne doit JAMAIS être confondu avec un blocage de la Search.
 User-agent: Googlebot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # Google-Extended : opt-in pour l'entraînement Gemini / Vertex AI. Ne crawle rien
 # et n'influence PAS la présence dans Gemini AI Mode / AI Overviews (qui reposent
 # sur l'index Google classique via Googlebot ci-dessus).
 User-agent: Google-Extended
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # Google-CloudVertexBot : fetch on-demand pour les agents Vertex AI
 User-agent: Google-CloudVertexBot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Perplexity ------------------------------------------------------------
 # PerplexityBot : index Perplexity Search
 User-agent: PerplexityBot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # Perplexity-User : fetch on-demand (clic utilisateur)
 User-agent: Perplexity-User
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Apple -----------------------------------------------------------------
 # Applebot-Extended : opt-in pour Apple Intelligence / Siri
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Amazon ----------------------------------------------------------------
 # Amazonbot : Alexa / Rufus
 User-agent: Amazonbot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- DuckDuckGo ------------------------------------------------------------
 # DuckAssistBot : DuckDuckGo AI
 User-agent: DuckAssistBot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Réseaux sociaux : previews de partage ---------------------------------
 # facebookexternalhit : génère les aperçus Open Graph lors d'un partage sur
@@ -82,10 +118,14 @@ Allow: /
 # d'entraînement IA de Meta bloqués plus bas.
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # Twitterbot : aperçus X / Twitter Cards (summary_large_image)
 User-agent: Twitterbot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Common Crawl ----------------------------------------------------------
 # CCBot : source data utilisée par de nombreux LLMs (Anthropic, Mistral, etc.).
@@ -94,6 +134,8 @@ Allow: /
 # pas refus global de l'entraînement. Choix de gouvernance, pas incohérence.
 User-agent: CCBot
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Meta : fetch on-demand (autorisé) -------------------------------------
 # meta-externalfetcher : fetch déclenché quand un utilisateur de Meta AI demande
@@ -103,6 +145,8 @@ Allow: /
 # une réponse ponctuelle à un utilisateur qui nous interroge. Favorable à la citation.
 User-agent: meta-externalfetcher
 Allow: /
+Disallow: /clients/
+Disallow: /api/portal/
 
 # --- Décision éditoriale : bloqués par défaut ------------------------------
 # Bytespider (ByteDance / Doubao / TikTok AI) et meta-externalagent (entraînement
