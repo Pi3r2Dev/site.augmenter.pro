@@ -4,7 +4,7 @@ Pont documentaire entre **ce repo** (site vitrine) et le repo de mission **`D:\S
 
 > **À lire après** [`project-context.md`](project-context.md) et **avant** d'écrire un contenu du cluster **Tier 1 (Claude / Odoo / ERP / MCP)** — celui qui draine ~100 % des clics réels.
 >
-> **Dernière synchro** : 2026-08-16 · **État du repo source** : dernière activité 2026-07-31.
+> **Dernière synchro** : 2026-08-27 · **État du repo source** : dernière activité 2026-08-27.
 > Ce fichier est une **photo**, pas un miroir : la source de vérité reste le repo de mission.
 
 ---
@@ -16,6 +16,8 @@ Le principe de méthode n°2 de [`project-context.md`](project-context.md) dit :
 Sans ce pont, cette matière reste invisible depuis le site : le lien existe déjà **éditorialement** (article [`configurer-odoo-ia-claude-cowork`](../../../src/app/blog/configurer-odoo-ia-claude-cowork/page.tsx), idée n°08 du catalog, [`public/downloads/skill-odoo-configuration.md`](../../../public/downloads/skill-odoo-configuration.md)) mais **rien ne documentait** d'où venaient les faits — donc personne ne pouvait les réutiliser ni les vérifier.
 
 **Ce que ce fichier n'est pas** : une autorisation de publier. Voir §2.
+
+**Pont réciproque** : le repo de mission tient sa fiche miroir, `docs/reference/pont-site-augmenter-pro.md` (créée le 2026-08-27, commit `02b2d94`) — identité de marque, offres publiques, formulations déjà publiées, backlog mission → site. Les deux fichiers doivent rester cohérents : une règle qui change ici se répercute là-bas, et inversement.
 
 ---
 
@@ -29,10 +31,14 @@ Le repo de mission contient des données client, comptables et M&A. Trois niveau
 | 🟠 **Accord écrit requis** | Nom du client, secteur + ville simultanés, captures de son instance, chiffres métier (CA, marges, tarifs, noms de ses fournisseurs et clients) | Rien ne part avant un **accord écrit** du dirigeant. Pas d'accord ⇒ on retombe en 🟢 anonymisé |
 | 🔴 **Jamais** | Volet **M&A / reprise** (`docs/reva9/valorisation-reva9-v1.md`, SIREN, comptes, noms de dirigeants, montages), grands livres `0001_GRAND_LIVRE_*.xlsx`, données nominatives clients/fournisseurs, **prix de la prestation augmenter.pro** (devis #002/#003), prospects en cours (`docs/prospects/`) | Ne jamais publier, ne jamais citer, même indirectement, même « anonymisé » |
 
-**Forme d'anonymisation recommandée** (à réutiliser telle quelle) :
-> « un distributeur-réparateur de matériel d'espaces verts, une poignée de salariés, ~1 360 références en ligne »
+**Forme d'anonymisation en vigueur** (minimisation du 2026-08-26 — à reprendre telle quelle) :
+> « une PME de négoce technique en Île-de-France »
 
-⚠️ **Piège géo à lever avant tout usage local** : le `CLAUDE.md` du repo de mission situe le client en *Languedoc-Roussillon*, la fiche mémoire projet le situe à **Jouy-le-Moutier (95)**. Les deux ne peuvent pas être vrais. **Vérifier auprès du client** avant d'utiliser ce cas comme ancrage 78/95 — publier une localisation fausse coûterait plus cher que le bénéfice SEO local.
+L'ancienne formule (« distributeur-réparateur de matériel d'espaces verts, une poignée de salariés ») est **abandonnée** : elle croisait secteur, effectif et volumétrie, donc identifiait le client par son ampleur. **Ne décrire qu'un poste à la fois**, jamais tout le périmètre du chantier.
+
+✅ **Contradiction géographique levée (2026-08-27)** : le `CLAUDE.md` du repo de mission portait *Languedoc-Roussillon*, hérité d'un ancien chantier de livraison par distance. C'était faux, c'est corrigé : le client est bien en **Val d'Oise (95)**.
+
+⚠️ **Cela n'ouvre pas l'usage local pour autant.** La minimisation du 2026-08-26 a retiré du site toute localisation client : le seul repère publiable est « Île-de-France », jamais la commune ni le département. Ce cas ne sert donc **pas** d'ancrage 78/95 — la règle de minimisation prime sur le bénéfice SEO local.
 
 **Règle de prudence supplémentaire** : le même client est cible d'un mandat de reprise (niveau 🔴). Un article trop précis (secteur + taille + ville + calendrier) le rend identifiable, donc rend le volet M&A déductible. **Ne jamais combiner secteur, effectif et localisation** dans un même contenu public.
 
@@ -153,6 +159,7 @@ Priorisés Tier 1 d'abord (cluster Claude/Odoo/ERP = 100 % des clics). Chacun re
 | 8 | **Livrer en France avec Odoo : la liste des connecteurs est un piège** | Tu cherches Colissimo dans la liste, il n'y est pas | Aucun connecteur natif FR ; agrégateur recommandé, alternative points relais | Tier 1 · `demarrage` |
 | 9 | **7 346 emplacements de stock, 0 article rangé dedans** | Ton ERP est « configuré » mais personne ne l'utilise | Emplacements vides + 1 604 casiers gérés en texte + 1 165 produits sans coût d'achat | Tier 2 · `demarrage` |
 | 10 | **Comment on décide dans un ERP : un ADR, 3 options, 1 arbitrage** | Tu subis les choix techniques sans jamais voir le raisonnement | ADR-001 publié en version anonymisée : options A/B/C, critère décisif, risques assumés | Tier 1 · `prestataire` |
+| 11 | **Facturation électronique 2026 : ce que votre ERP doit savoir faire** ⚡ *fraîcheur* | L'échéance approche et personne ne t'a dit ce qui est délégable | Plateforme agréée, **KYC non délégable**, annuaire à J+1 — constats de mission, août 2026 | Tier 1 · `demarrage` |
 
 **Avant d'en lancer un** : passer par `/create-article`, qui relira [`project-context.md`](project-context.md), la [charte éditoriale](charte-editoriale.md) et la [grille E-E-A-T](eeat-grid.md). Le terrain fournit le critère **Experience** (« ≥ 1 exemple terrain réel ») — c'est précisément ce qui manquait aux articles produits sans mission derrière.
 
@@ -171,29 +178,41 @@ Priorisés Tier 1 d'abord (cluster Claude/Odoo/ERP = 100 % des clics). Chacun re
 
 **Utiliser ce fichier** :
 1. Lire le §2 (confidentialité) — non négociable, avant même de choisir l'angle.
-2. Prendre l'angle dans le §5, la donnée chiffrée dans le §4.
+2. Prendre l'angle dans le §5. Le §4 sert à **penser** le contenu ; ce qui se publie passe par le registre « effort d'équipe » du §7, pas par le chiffre brut.
 3. **Rouvrir le fichier source** cité avant de publier le chiffre : ce document est daté, la mission continue.
-4. Anonymiser avec la formule du §2. Ne jamais croiser secteur + effectif + ville.
+4. Anonymiser avec la formule du §2 (« PME de négoce technique en Île-de-France »). Ne jamais croiser secteur + effectif + lieu, ne jamais citer un prix de prestation.
 
 **Rafraîchir ce fichier** — quand l'un de ces événements survient :
 - un chantier de la mission passe en « livré » avec des chiffres nouveaux ;
 - un accord client (ou un refus) fait bouger un niveau de confidentialité ;
-- la contradiction géographique du §2 est levée ;
+- une localisation, un secteur ou un montant redevient publiable (accord client explicite) ;
 - un angle du §5 est publié → le marquer ici avec le slug de l'article, pour ne pas le retraiter.
 
 Relire alors, dans le repo de mission : `ETAT.md`, puis la section « En cours » de `CHANGELOG.md`, puis les `docs/reva9/suivis/` modifiés depuis la date de synchro en tête de fichier.
 
 **Angles déjà publiés** : aucun article à ce jour — l'article `configurer-odoo-ia-claude-cowork` précède ce registre et n'est pas sourcé sur lui.
 
-**Chiffres du §4 déjà rendus publics** (section « prestations types » de la home, [`src/components/sections/prestations-types.tsx`](../../../src/components/sections/prestations-types.tsx), 2026-08-21) — anonymisés, sans nom de client ni croisement secteur + effectif + ville :
+**Ce qui est publié — et sous quelle forme** (révisé le 2026-08-26, minimisation)
 
-| Chiffre publié | Formulation retenue |
+Les chiffres précis de la mission ont été **retirés du site**. La consigne est : *garder les chiffres de travail dans ce registre, retirer l'identité et les montants du public.* Vérifié le 2026-08-27 : plus aucune occurrence de « 7 800 », « 1 360 », « 98,6 % », « 14 fournisseurs sur 98 » ni « motoculture » dans `src/`, `public/llms*.txt`.
+
+**Registre de preuve imposé : l'effort d'équipe.** On ne chiffre plus en euros ni en heures facturées, mais en charge de travail évitée — c'est le repère qui parle au dirigeant, il ne divulgue ni le budget du client ni un taux horaire, et il évite d'ancrer un tarif incohérent avec le TJM.
+
+| Preuve publiée aujourd'hui | Où |
 |---|---|
-| Catalogue reclassé + fiches enrichies | « 7 800 références reclassées, 1 360 fiches enrichies » |
-| Franco de port renseigné | « 14 fournisseurs sur 98 avaient un franco renseigné » |
-| Réconciliation comptable | « 98,6 % rapprochés sur 6 mois de facturation » |
+| « Trois personnes une semaine, désormais une journée » | carte *Catalogue & commandes* |
+| « Une journée de contrôle mensuel, réduite aux écarts » | carte *Back-office & liaisons* |
+| « Le franco affiché avant de valider la commande » | carte *Stocks & approvisionnement* |
+| « Réponse sourcée, ou pas de réponse » | carte *Documentation & réglementaire* |
 
-Ces formulations sont désormais **figées** : les reprendre à l'identique dans les articles à venir. Deux versions d'un même chiffre sur le site le rendent invérifiable, donc non citable par un moteur IA.
+Source : [`src/components/sections/prestations-types.tsx`](../../../src/components/sections/prestations-types.tsx) (section « prestations types » de la home).
+
+**Trois interdits qui découlent de la minimisation** :
+1. **Pas de prix de prestation**, ni total ni horaire — retiré partout (corps d'article, `description` SEO, `tldr` du catalog, `llms.txt`, `llms-full.txt`). La comparaison marché (15 000-25 000 € chez un intégrateur) reste, elle : donnée publique, pas donnée client — et ne pas afficher son propre prix pousse à demander un devis.
+2. **Pas de périmètre énuméré** : catégories + produits + fiches + tarification + export comptable dans la même phrase identifie le client par l'ampleur du chantier. Un poste à la fois.
+3. **Pas de secteur nommé précisément** : « négoce technique », pas « motoculture » ; « Île-de-France », pas le département.
+
+Ces formulations sont **figées** : les reprendre à l'identique. Deux versions d'un même repère sur le site le rendent invérifiable, donc non citable par un moteur IA.
 
 ---
 

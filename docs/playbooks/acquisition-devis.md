@@ -105,6 +105,24 @@ datant tous d'avril aujourd'hui. La **fraîcheur** compte autant que le nombre.
 (*self-serving*) sur `LocalBusiness`/`Organization`. Les étoiles viennent du GBP,
 donc des clients.
 
+### Destinataires identifiés
+
+| Client | Moment à viser | Note |
+|---|---|---|
+| Arnaud (mission ERP) | Activation du portail achat, ou recette de septembre | **Pas à la facturation.** Le pic de satisfaction est le jour où son équipe constate le gain, pas le jour où il reçoit la note |
+
+---
+
+## Engagements de prix en cours
+
+L'Audit 360° est passé de **225 € à 550 € le 2026-08-24**, et le site affiche partout 550 €.
+
+⚠️ **Le lead TAYLUX a été capté le 2026-08-14 sur la grille à 225 € HT** — le prix n'a pas été écrit dans le mail de réponse (choix délibéré : le présenter de vive voix), mais c'est bien l'offre affichée le jour où il a rempli le formulaire. **Honorer 225 €** s'il donne suite, et le dire explicitement comme un tarif d'antériorité : c'est un argument de confiance, pas une perte.
+
+Règle générale : tout lead entré **avant** un changement de grille garde le prix affiché au moment de sa demande. Le dossier prospect vit dans le repo de mission (`docs/prospects/<nom>/`).
+
+---
+
 ## Levier 3 — Fiche Google Business Profile
 
 Entité `/g/11n44vnyqf` · cid `13143887329151170152` · compte `legrand.work@gmail.com`
