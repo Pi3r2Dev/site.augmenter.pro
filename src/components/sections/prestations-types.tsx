@@ -4,8 +4,10 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GBP_MAPS_URL } from "@/lib/gbp";
 import {
   BentoGrid,
   BentoCard,
@@ -231,6 +233,23 @@ export function PrestationsTypes() {
                 <div className="mt-1 text-[0.68rem] uppercase tracking-[0.08em] text-muted-foreground">
                   Catalogue &amp; commandes
                 </div>
+                {/* La preuve vérifiable est sur la fiche Google, pas ici : un
+                    témoignage hébergé chez soi ne prouve rien tout seul. */}
+                <a
+                  href={GBP_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "gbp_click",
+                      location: "home-testimonial",
+                    })
+                  }
+                  className="mt-2 inline-flex items-center gap-1 text-[0.72rem] font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+                >
+                  Voir les avis Google
+                  <ArrowUpRight className="h-3 w-3" />
+                </a>
               </figcaption>
             </motion.figure>
           </BentoCard>

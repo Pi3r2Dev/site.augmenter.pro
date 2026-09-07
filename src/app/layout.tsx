@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ASSET_RECOVERY_SCRIPT } from "@/lib/asset-recovery";
+import { GBP_MAPS_URL } from "@/lib/gbp";
 import {
   OG_IMAGE_ALT,
   OG_IMAGE_PATH,
@@ -117,7 +118,9 @@ const jsonLd = {
         "https://www.linkedin.com/in/legrand-pierre/",
         "https://x.com/Pi3r2Dev",
         "https://github.com/Pi3r2Dev",
-        "https://www.google.com/maps?cid=13143887329151170152",
+        // Fiche GBP : c'est CE lien qui fait remonter les vraies étoiles côté
+        // Google (Local Pack, Maps) — pas un AggregateRating déclaré ici.
+        GBP_MAPS_URL,
       ],
       // Réciproque du `parentOrganization` déclaré par ouquequoi.fr (@id vérifié
       // dans son JSON-LD de prod). Un graphe d'entité unidirectionnel est plus

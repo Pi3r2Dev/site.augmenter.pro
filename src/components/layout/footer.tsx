@@ -5,6 +5,7 @@ import { Zap, Linkedin, Twitter, Github, Mail, Phone, Star } from "lucide-react"
 import type { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { GBP_REVIEW_URL } from "@/lib/gbp";
 
 // Mini-cockpit footer — same DNA as src/app/approche/narrative/shared/suite-cockpit.tsx
 // but compact (no audit card, no engagement hero) for use across all pages
@@ -75,7 +76,7 @@ const SOCIALS: SocialLink[] = [
   { href: "https://wa.me/33679119774", label: "WhatsApp", icon: Phone, external: true },
   // Lien court "Demander un avis" du dashboard GBP → ouvre directement la fenêtre d'avis (1 clic).
   {
-    href: "https://g.page/r/CWg20PXid2i2EBM/review",
+    href: GBP_REVIEW_URL,
     label: "Avis Google",
     icon: Star,
     external: true,
