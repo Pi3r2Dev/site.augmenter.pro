@@ -57,7 +57,8 @@ const stats: Array<{ data: TrustStatData; palette: Palette }> = [
 ];
 
 // Témoignage XL — Karim B., consultant indépendant, parle au cœur de cible PME.
-// Source : REVIEWS in src/app/layout.tsx (AggregateRating + Review JSON-LD).
+// Affichage UI seulement : ne JAMAIS le rebaliser en Review/AggregateRating —
+// les avis auto-déclarés sont interdits par Google (cf. CLAUDE.md §Structured Data).
 const featuredTestimonial = {
   quote:
     "En tant qu'indépendant, je pensais que l'IA n'était pas pour moi. Pierre m'a montré comment gagner 8 heures par semaine avec des outils simples. Mon chiffre d'affaires a augmenté de 30 % en 6 mois.",
