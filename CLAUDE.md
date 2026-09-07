@@ -285,8 +285,8 @@ Voir [public/images/](public/images/) — convention WebP, kebab-case, INDEX.md 
 
 | Schema | Location | Purpose |
 |--------|----------|---------|
-| Organization + LocalBusiness + WebSite | [src/app/layout.tsx](src/app/layout.tsx) (root, toutes pages) | Identité globale, geo-targeting 78/95, contact, social links |
-| AggregateRating + Review[] | [src/app/layout.tsx](src/app/layout.tsx) imbriqué dans `LocalBusiness` du `@graph` | 5 reviews (tableau `REVIEWS` en tête du fichier). ⚠ **Ne produit PAS d étoiles en SERP** : depuis 09/2019 Google ignore les avis auto-déclarés (self-serving) sur `LocalBusiness`/`Organization`. Utile pour les AI Overviews uniquement — les vraies étoiles viennent du **Google Business Profile** |
+| Organization + LocalBusiness + WebSite | [src/app/layout.tsx](src/app/layout.tsx) (root, toutes pages) | Identité globale, geo-targeting 78/95, contact, social links. L'`Organization` déclare `subOrganization` → `https://ouquequoi.fr/#organization` (réciproque du `parentOrganization` déclaré par ouquequoi.fr) |
+| ~~AggregateRating + Review[]~~ | **retiré le 2026-09-07** | ⚠ **Ne jamais réintroduire d'avis auto-déclarés** sur `LocalBusiness`/`Organization` : Google les interdit depuis 09/2019 (self-serving). Ils ne produisent aucune étoile en SERP et exposent à un signal qualité négatif. Les vraies étoiles viennent du **Google Business Profile** (CID en `sameAs`) ; les témoignages restent affichés en UI, sans balisage |
 | **CreativeWork** (`WebPage` + nested) | [src/app/(home)/page.tsx](src/app/(home)/page.tsx) | Positionne `/` comme contenu éditorial narrative |
 | FAQPage | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | FAQ section → Google "People Also Ask" |
 | Service + OfferCatalog | [src/app/approche/page.tsx](src/app/approche/page.tsx) (server) | 5 services with pricing (0€ et 550€) — `/prestations` redirige 308 vers `/approche#prestations` (ancre dans le Ch07 audits) |
@@ -320,6 +320,7 @@ Les commandes fonctionnent sans (fallback web search), mais les données sont **
 ### SEO Conventions
 
 - Every page **must** export `metadata: Metadata` avec `title` (<60 chars) et `description` (<155 chars) optimisés
+- ⚠ **Ne jamais écrire un `openGraph: { … }` à la main dans une page.** Next merge la metadata en **shallow** : l'objet de la page **remplace** celui du root layout, donc une page qui redéclare `openGraph` sans `siteName`, `locale` et `images` perd les trois — carte de partage sans nom de site, sans langue et **sans visuel**. Passer par [`pageOpenGraph()`](src/lib/page-metadata.ts) (pages classiques) ou [`articleMetadata()`](src/lib/article-metadata.ts) (articles)
 - Power words OK : Guide, Offert, 2026, Sans Engagement. **Mot « gratuit » interdit** — utiliser « offert », « sans engagement », « inclus »
 - Geo-targeting 78/95 uniquement quand pertinent (formation présentielle) ; sinon formulation nationale
 - Layout template: `"%s | augmenter.PRO"`

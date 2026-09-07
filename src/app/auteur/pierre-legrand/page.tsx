@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
+import { pageOpenGraph } from "@/lib/page-metadata";
 
 export const metadata: Metadata = {
   title: {
@@ -24,13 +25,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://augmenter.pro/auteur/pierre-legrand",
   },
-  openGraph: {
+  openGraph: pageOpenGraph({
     type: "profile",
-    url: "https://augmenter.pro/auteur/pierre-legrand",
+    path: "/auteur/pierre-legrand",
     title: "Pierre Legrand — Consultant IA & Transformation Digitale PME",
     description:
       "Consultant IA pour PME françaises. Audits 180°/360°, formation présentielle (78/95) et accompagnement visio partout en France.",
-  },
+  }),
 };
 
 const personDescription =

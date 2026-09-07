@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { ARTICLES } from "@/data/resources";
+import { SITE_URL, pageOpenGraph } from "@/lib/page-metadata";
 import { AugmenterView } from "./augmenter-view";
 
-const SITE = "https://augmenter.pro";
+const SITE = SITE_URL;
 const PATH = "/augmenter-mon-entreprise";
 
 export const metadata: Metadata = {
@@ -10,13 +11,12 @@ export const metadata: Metadata = {
   description:
     "Dis-nous ton secteur et ce qui te coûte le plus : on te sort nos articles, idées chiffrées et prompts en TL;DR. Pour décider et agir, pas pour scroller.",
   alternates: { canonical: PATH },
-  openGraph: {
+  openGraph: pageOpenGraph({
     title: "Augmenter mon entreprise : par où commencer | augmenter.PRO",
     description:
       "Tu te méfies des promesses creuses et tu manques de temps ? Dis-nous où tu en es — on te sort les bonnes ressources IA, le verdict en une phrase.",
-    url: `${SITE}${PATH}`,
-    type: "website",
-  },
+    path: PATH,
+  }),
 };
 
 // CollectionPage + ItemList : carte structurée des ressources, citable par les
