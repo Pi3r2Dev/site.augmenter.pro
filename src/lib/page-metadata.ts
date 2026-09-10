@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { UNLISTED_ROBOTS } from "./seo-policy";
 
 /**
  * Bloc `openGraph` des pages classiques (hors articles — cf. `articleMetadata`).
@@ -56,5 +57,34 @@ export function pageOpenGraph(opts: {
     title,
     description,
     images: images ?? [OG_IMAGE],
+  };
+}
+
+/**
+ * Metadata d'une page unlisted (`/notes/<slug>`, etc.) : noindex/nofollow,
+ * canonical + Open Graph + Twitter Card via `pageOpenGraph` (carte de partage
+ * quand on colle l'URL dans un mail ou un formulaire), titre `absolute` pour
+ * ne pas hériter du template `%s | augmenter.PRO`.
+ */
+export function unlistedPageMetadata(opts: {
+  title: string;
+  description: string;
+  /** Chemin absolu depuis la racine, ex. `/notes/arlequin`. */
+  path: string;
+}): Metadata {
+  const { title, description, path } = opts;
+  return {
+    title: { absolute: title },
+    description,
+    robots: UNLISTED_ROBOTS,
+    alternates: { canonical: path },
+    openGraph: pageOpenGraph({ title, description, path }),
+    twitter: {
+      card: "summary_large_image",
+      creator: "@Pi3r2Dev",
+      title,
+      description,
+      images: [OG_IMAGE_PATH],
+    },
   };
 }

@@ -94,6 +94,21 @@ Deux pages sont des **expériences scroll narrative** (Three.js + Lenis + GSAP) 
 | `/prompts`, `/projets`, `/strategie-ia-pme`, `/integration-mcp`, `/audit-informatique-{yvelines,val-doise}`, `/auteur/pierre-legrand` | Pages classiques | Header/Footer globaux + le CTA widget en bas |
 | `/mentions-legales`, `/cgv`, `/politique-confidentialite` | Legal | Header/Footer globaux |
 | `/clients/<client>` + `/clients/<client>/<doc>` | **Portail client privé** | Livrables remis à un client derrière un code d'accès. Login = page classique (Header/Footer, `PORTAL_ROBOTS`) + POST `/api/portal/login` (compare timing-safe, cookie HMAC 30 j scopé `/clients/<client>`, 5 essais/15 min par IP). Le document est servi **hors arbre React** (pas de layout, pas de GTM) par un route handler qui déchiffre `src/content/portal/<client>/*.ts` — `private, no-store` + `noindex` obligatoires, cf. [Portail client](#portail-client-clients). **Jamais** dans sitemap/llms.txt/maillage. |
+| `/notes/<slug>` | **Note unlisted** | Document lisible par URL (candidature, travail), sans Header/Footer ni CTA commercial. `UNLISTED_ROBOTS` (`noindex, nofollow`), `X-Robots-Tag`, `Disallow: /notes/` dans chaque groupe robots.txt, hors sitemap/llms.txt/maillage. Pas de code d'accès. Helper [`unlistedPageMetadata()`](src/lib/page-metadata.ts). V1 : `/notes/arlequin`. |
+
+### Notes unlisted (`/notes`)
+
+Pages **librement lisibles** (pas de code) mais **jamais indexées** ni maillées depuis le site. Une URL à coller dans un formulaire, un mail, un Slack — pas une page du site vitrine.
+
+| Fichier | Rôle |
+|---|---|
+| [src/lib/seo-policy.ts](src/lib/seo-policy.ts) | `UNLISTED_ROBOTS`, `NOTES_PATH_PREFIX` |
+| [src/lib/page-metadata.ts](src/lib/page-metadata.ts) | `unlistedPageMetadata()` — robots + canonical + OG + Twitter, titre `absolute` |
+| [src/app/notes/layout.tsx](src/app/notes/layout.tsx) | Strip Header/Footer (même CSS que `/approche`) |
+| [src/data/notes/arlequin.ts](src/data/notes/arlequin.ts) | Copy de la note Arlequin (source de vérité) |
+| [src/app/notes/arlequin/](src/app/notes/arlequin/) | Page + vue — pas de JSON-LD, pas de CTA devis |
+
+Nouvelle note = un slug sous `src/app/notes/<slug>/` + une entrée data + les tests d'hygiène (le préfixe `/notes/` est déjà Disallow). **Ne jamais** lier depuis header/footer/plan du site/llms/sitemap. Le cas client lié depuis Arlequin est l'article public anonymisé, **pas** le portail `/clients/reva9` (🔴).
 
 ### Portail client (`/clients`)
 
@@ -433,6 +448,7 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 
 - **Réception des devis** : `/api/quote` doit TOUJOURS conserver son `console.log` préfixé `[QUOTE]` (seul canal indépendant de toute variable d'env) ; et dans `quote-wizard.tsx`, ne jamais ajouter d'`await` avant `window.open` ni retirer `keepalive: true` — cf. section Acquisition
 - **Portail client** : `/clients/*` doit rester en `Cache-Control: private, no-store` + `X-Robots-Tag: noindex` (un document privé mis en cache CDN = une fuite), hors sitemap/llms.txt/maillage, et aucun HTML en clair sous `src/content/portal/` — cf. section Portail client
+- **Notes unlisted** : `/notes/*` reste `noindex, nofollow`, hors sitemap/llms.txt/maillage, sans lien depuis les navs. Lisible par URL, pas de code d'accès. Helper `unlistedPageMetadata()`. Ne pas y coller de contenu 🔴 (portail client).
 - **Cache CDN** : toute modif de `revalidate` / `expireTime` / du filet `asset-recovery` se vérifie sur les headers réellement émis (`npm run build && npm run start`, puis `curl -sI http://127.0.0.1:3000/`) — cf. section Déploiement & cache CDN
 - **Données hardcodées (pas de CMS)** — articles et idées centralisés dans le catalog [src/data/resources.ts](src/data/resources.ts) (`ARTICLES` / `IDEAS`) ; testimonials, pricing et prompts (`src/data/prompts.ts`) restent inline
 - **Client components** must use `"use client"` (required for framer-motion, gsap, lenis, three.js, interactive forms, mobile menu)
@@ -456,7 +472,8 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 - [docs/decisions/0003-funnel-geo-conversion.md](docs/decisions/0003-funnel-geo-conversion.md) — stratégie funnel GEO : mesurer d'abord, monétiser le cluster tech sur le persona dirigeant confirmé
 - [docs/decisions/0006-lcp-pages-classiques.md](docs/decisions/0006-lcp-pages-classiques.md) — LCP pages classiques : hero opaque, WebGL différé, GTM idle
 - [docs/playbooks/acquisition-devis.md](docs/playbooks/acquisition-devis.md) — **playbook acquisition de devis** : constat chiffré GSC, ordre de rendement, message de demande d'avis Google (réutilisable), checklist GBP restante
-- [docs/plans/](docs/plans/) — plans d'implémentation détaillés
+- [docs/plans/2026-08-27-portail-client-reva9.md](docs/plans/2026-08-27-portail-client-reva9.md) — mini portail client Reva 9
+- [docs/plans/2026-09-10-note-candidature-arlequin.md](docs/plans/2026-09-10-note-candidature-arlequin.md) — note unlisted candidature Arlequin AI
 - [docs/ClaudeDesign_handoff/](docs/ClaudeDesign_handoff/) — source du design narrative (HTML/CSS/JS prototype)
 
 <!-- BEGIN:nextjs-agent-rules -->

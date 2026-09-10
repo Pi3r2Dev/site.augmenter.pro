@@ -7,16 +7,19 @@
 # Les `Allow: /` redondants avec `*` sont volontaires : ils garantissent que ces
 # bots restent autorisés même si une règle restrictive était un jour ajoutée à `*`.
 
-# --- Portail client (/clients/) -------------------------------------------
-# Documents remis à un client derrière un code d'accès : jamais crawlés. Le
-# Disallow est répété dans CHAQUE groupe nommé ci-dessous : un crawler n'applique
-# que le groupe le plus spécifique qui le concerne, donc un Disallow posé sous
-# `*` seul serait ignoré par Googlebot, GPTBot, etc. La vraie protection reste
-# côté serveur (code + cookie, X-Robots-Tag: noindex, Cache-Control: no-store).
+# --- Portail client (/clients/) et notes unlisted (/notes/) ---------------
+# Portail : documents remis à un client derrière un code d'accès.
+# Notes : candidatures / documents de travail lisibles par URL, jamais maillés.
+# Le Disallow est répété dans CHAQUE groupe nommé ci-dessous : un crawler
+# n'applique que le groupe le plus spécifique qui le concerne, donc un Disallow
+# posé sous `*` seul serait ignoré par Googlebot, GPTBot, etc. La vraie
+# protection reste côté serveur (X-Robots-Tag: noindex ; portail : code + cookie
+# + Cache-Control: no-store).
 User-agent: *
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- OpenAI ----------------------------------------------------------------
 # GPTBot : entraînement ChatGPT
@@ -24,18 +27,21 @@ User-agent: GPTBot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # OAI-SearchBot : index ChatGPT Search (temps réel)
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # ChatGPT-User : fetch on-demand quand un utilisateur clique un lien dans ChatGPT
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Anthropic -------------------------------------------------------------
 # ClaudeBot / Claude-Web / anthropic-ai : entraînement + fetch Claude
@@ -43,16 +49,19 @@ User-agent: ClaudeBot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 User-agent: Claude-Web
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 User-agent: anthropic-ai
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Google ----------------------------------------------------------------
 # Googlebot : crawl de recherche classique (alimente Search + Gemini AI Mode +
@@ -62,6 +71,7 @@ User-agent: Googlebot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # Google-Extended : opt-in pour l'entraînement Gemini / Vertex AI. Ne crawle rien
 # et n'influence PAS la présence dans Gemini AI Mode / AI Overviews (qui reposent
@@ -70,12 +80,14 @@ User-agent: Google-Extended
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # Google-CloudVertexBot : fetch on-demand pour les agents Vertex AI
 User-agent: Google-CloudVertexBot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Perplexity ------------------------------------------------------------
 # PerplexityBot : index Perplexity Search
@@ -83,12 +95,14 @@ User-agent: PerplexityBot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # Perplexity-User : fetch on-demand (clic utilisateur)
 User-agent: Perplexity-User
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Apple -----------------------------------------------------------------
 # Applebot-Extended : opt-in pour Apple Intelligence / Siri
@@ -96,6 +110,7 @@ User-agent: Applebot-Extended
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Amazon ----------------------------------------------------------------
 # Amazonbot : Alexa / Rufus
@@ -103,6 +118,7 @@ User-agent: Amazonbot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- DuckDuckGo ------------------------------------------------------------
 # DuckAssistBot : DuckDuckGo AI
@@ -110,6 +126,7 @@ User-agent: DuckAssistBot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Réseaux sociaux : previews de partage ---------------------------------
 # facebookexternalhit : génère les aperçus Open Graph lors d'un partage sur
@@ -120,12 +137,14 @@ User-agent: facebookexternalhit
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # Twitterbot : aperçus X / Twitter Cards (summary_large_image)
 User-agent: Twitterbot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Common Crawl ----------------------------------------------------------
 # CCBot : source data utilisée par de nombreux LLMs (Anthropic, Mistral, etc.).
@@ -136,6 +155,7 @@ User-agent: CCBot
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Meta : fetch on-demand (autorisé) -------------------------------------
 # meta-externalfetcher : fetch déclenché quand un utilisateur de Meta AI demande
@@ -147,6 +167,7 @@ User-agent: meta-externalfetcher
 Allow: /
 Disallow: /clients/
 Disallow: /api/portal/
+Disallow: /notes/
 
 # --- Décision éditoriale : bloqués par défaut ------------------------------
 # Bytespider (ByteDance / Doubao / TikTok AI) et meta-externalagent (entraînement

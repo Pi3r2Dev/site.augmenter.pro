@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { NOINDEX_FOLLOW_PATHS } from "./src/lib/seo-policy";
+import { NOINDEX_FOLLOW_PATHS, NOTES_PATH_PREFIX } from "./src/lib/seo-policy";
 import { PORTAL_DOC_CSP, PORTAL_DOC_HEADER_SOURCE } from "./src/lib/portal/csp";
 
 const securityHeaders = [
@@ -55,6 +55,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/api/portal/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        // Notes unlisted : hors index (en-tête HTTP en plus du <meta robots>).
+        source: `${NOTES_PATH_PREFIX}/:path*`,
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
       {

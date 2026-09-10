@@ -6,10 +6,35 @@ import nextConfig from "../../next.config";
 import {
   NEWS_SITEMAP_ENABLED,
   NOINDEX_FOLLOW_PATHS,
+  NOTES_PATH_PREFIX,
   PORTAL_PATH_PREFIX,
 } from "./seo-policy";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
+
+/** Fichiers de maillage public : une URL unlisted n'a rien à y faire. */
+const PUBLIC_GRAPH_FILES = [
+  "public/sitemap.xml",
+  "public/llms.txt",
+  "public/llms-full.txt",
+  "src/app/plan-du-site/page.tsx",
+  "src/components/layout/footer.tsx",
+  "src/components/layout/header.tsx",
+  "src/app/approche/narrative/nav-fixed.tsx",
+  "src/app/approche/narrative/shared/suite-cockpit.tsx",
+] as const;
+
+function pathPrefixRe(prefix: string): RegExp {
+  return new RegExp(`${prefix}(?=[/"'\`\\s)])`);
+}
+
+function robotsGroupsAllowingRoot(): string[] {
+  const robots = readFileSync(join(root, "public/robots.txt"), "utf8");
+  return robots
+    .split(/\r?\n[ \t]*\r?\n/)
+    .filter((group) => /^User-agent:/m.test(group))
+    .filter((group) => /^Allow: \/[ \t]*$/m.test(group));
+}
 
 describe("politique noindex légal", () => {
   it("liste les trois pages légales et désactive le news-sitemap", () => {
@@ -65,32 +90,18 @@ describe("maillage des pages GSC « non indexées » utiles", () => {
 });
 
 describe("portail client /clients — hors index, hors maillage", () => {
-  // Une URL commençant par /clients (suivie de /, d'une quote ou d'un espace).
-  const PORTAL_URL_RE = new RegExp(`${PORTAL_PATH_PREFIX}(?=[/"'\`\\s)])`);
+  const PORTAL_URL_RE = pathPrefixRe(PORTAL_PATH_PREFIX);
 
   it("n'apparaît ni dans les sitemaps/llms, ni dans le plan du site, ni dans les navs", () => {
-    for (const file of [
-      "public/sitemap.xml",
-      "public/llms.txt",
-      "public/llms-full.txt",
-      "src/app/plan-du-site/page.tsx",
-      "src/components/layout/footer.tsx",
-      "src/components/layout/header.tsx",
-      "src/app/approche/narrative/nav-fixed.tsx",
-      "src/app/approche/narrative/shared/suite-cockpit.tsx",
-    ]) {
+    for (const file of PUBLIC_GRAPH_FILES) {
       expect(readFileSync(join(root, file), "utf8"), file).not.toMatch(PORTAL_URL_RE);
     }
   });
 
   it("est interdit au crawl dans chaque groupe de robots.txt qui autorise /", () => {
-    const robots = readFileSync(join(root, "public/robots.txt"), "utf8");
-    const groups = robots
-      .split(/\r?\n[ \t]*\r?\n/)
-      .filter((group) => /^User-agent:/m.test(group));
+    const groups = robotsGroupsAllowingRoot();
     expect(groups.length).toBeGreaterThan(10);
     for (const group of groups) {
-      if (!/^Allow: \/[ \t]*$/m.test(group)) continue;
       expect(group).toMatch(/^Disallow: \/clients\/[ \t]*$/m);
       expect(group).toMatch(/^Disallow: \/api\/portal\/[ \t]*$/m);
     }
@@ -103,6 +114,36 @@ describe("portail client /clients — hors index, hors maillage", () => {
     expect(html).toEqual([]);
     expect(readFileSync(join(root, ".gitignore"), "utf8")).toContain(
       "/src/content/portal/**/*.html",
+    );
+  });
+});
+
+describe("notes unlisted /notes — hors index, hors maillage", () => {
+  const NOTES_URL_RE = pathPrefixRe(NOTES_PATH_PREFIX);
+
+  it("n'apparaît ni dans les sitemaps/llms, ni dans le plan du site, ni dans les navs", () => {
+    for (const file of PUBLIC_GRAPH_FILES) {
+      expect(readFileSync(join(root, file), "utf8"), file).not.toMatch(NOTES_URL_RE);
+    }
+  });
+
+  it("est interdit au crawl dans chaque groupe de robots.txt qui autorise /", () => {
+    const groups = robotsGroupsAllowingRoot();
+    expect(groups.length).toBeGreaterThan(10);
+    for (const group of groups) {
+      expect(group).toMatch(/^Disallow: \/notes\/[ \t]*$/m);
+    }
+  });
+
+  it("pose X-Robots-Tag noindex, nofollow sur /notes/:path*", async () => {
+    const headers = nextConfig.headers ? await nextConfig.headers() : [];
+    expect(headers).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          source: `${NOTES_PATH_PREFIX}/:path*`,
+          headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+        }),
+      ]),
     );
   });
 });

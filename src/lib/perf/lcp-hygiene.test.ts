@@ -39,6 +39,13 @@ describe("hygiène LCP des heroes classiques", () => {
     expect(hub).not.toMatch(/<motion\.h1/);
   });
 
+  it("n'anime pas le h1 de la note unlisted /notes/arlequin", () => {
+    const note = src("app/notes/arlequin/note-view.tsx");
+    expect(note).not.toContain("framer-motion");
+    expect(note).not.toMatch(/<motion\.(h1|p|div)/);
+    expect(note).toContain("Le siège manquant");
+  });
+
   it("n'empile plus un second canvas WebGL sur la carte featured /blog", () => {
     const card = src("components/bento/article-bento-card.tsx");
     expect(card).not.toMatch(

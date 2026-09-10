@@ -23,11 +23,24 @@ export type NoindexFollowPath = (typeof NOINDEX_FOLLOW_PATHS)[number];
 export const NEWS_SITEMAP_ENABLED = false;
 
 /**
+ * Pages hors index ET hors graphe de liens : noindex, nofollow, absentes du
+ * sitemap, de llms.txt et de toute nav. Couvre le portail client (code d'accès)
+ * et les notes unlisted (lisibles par URL, jamais maillées depuis le site).
+ */
+export const UNLISTED_ROBOTS = { index: false, follow: false } as const;
+
+/**
  * Portail client (/clients/<client>/<doc>) : documents remis à un client
  * derrière un code d'accès. Jamais indexés, jamais suivis, hors sitemap,
  * hors llms.txt, sans aucun lien entrant depuis le site.
  */
-export const PORTAL_ROBOTS = { index: false, follow: false } as const;
+export const PORTAL_ROBOTS = UNLISTED_ROBOTS;
 
 /** Préfixe d'URL du portail — utilisé par les tests d'hygiène SEO. */
 export const PORTAL_PATH_PREFIX = "/clients";
+
+/**
+ * Notes unlisted (/notes/<slug>) : pages librement lisibles par URL
+ * (candidature, document de travail), jamais indexées, jamais maillées.
+ */
+export const NOTES_PATH_PREFIX = "/notes";
