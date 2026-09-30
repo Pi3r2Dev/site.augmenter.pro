@@ -63,18 +63,21 @@ describe("politique noindex légal", () => {
     expect(existsSync(join(root, "public/news-sitemap.xml"))).toBe(false);
   });
 
-  it("signale les 3 articles à réindexer avec un lastmod 2026-08-16", () => {
+  it("garde les 3 articles à réindexer signalés rafraîchis (lastmod ≥ 2026-08-16)", () => {
+    // Renforcés le 2026-08-16 pour sortir de « Détectée, non indexée » ; un
+    // lastmod antérieur annulerait ce signal. Un lastmod plus récent est
+    // légitime (ex. nettoyage JSON-LD site-wide du 2026-09-07).
     const sitemap = readFileSync(join(root, "public/sitemap.xml"), "utf8");
     for (const slug of [
       "claude-cowork-community-manager",
       "machine-de-guerre-commerciale",
       "comparatif-llm-vente-commerciale",
     ]) {
-      expect(sitemap).toMatch(
-        new RegExp(
-          `/blog/${slug}</loc>\\s*<lastmod>2026-08-16</lastmod>`,
-        ),
+      const match = sitemap.match(
+        new RegExp(`/blog/${slug}</loc>\\s*<lastmod>(\\d{4}-\\d{2}-\\d{2})</lastmod>`),
       );
+      expect(match, slug).not.toBeNull();
+      expect(match![1] >= "2026-08-16", `${slug} lastmod=${match![1]}`).toBe(true);
     }
   });
 });
