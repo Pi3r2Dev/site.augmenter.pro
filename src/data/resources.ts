@@ -93,6 +93,19 @@ export interface CatalogArticle extends ArticleBentoData {
 
 export const ARTICLES: CatalogArticle[] = [
   {
+    slug: "ma-pme-en-2027",
+    title:
+      "Ma PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la fois",
+    excerpt:
+      "Guide d'achat pour dirigeant. Devis express, comparatif avec les logiciels déjà payés, ce qu'on branche — et ce qu'on refuse encore de vendre.",
+    tldr: "En 2027, la PME qui s'en sort n'a pas embauché une armée d'agents. Elle a un copilot dans les outils déjà là (Odoo, mail, devis, PDF), qui prépare, signale les écarts, et laisse l'humain signer. On commence par le back-office. On coupe les licences à 10 % d'usage. On ne cède pas le client. Fourchettes HT : ~2 à 10 k€ une tâche ; Audit 180° non facturé ; atelier dès 450 €.",
+    tags: ["IA", "PME"],
+    readTime: "16 min",
+    image: "/images/blog/ma-pme-en-2027.webp",
+    sectors: ["Tous", "BTP & rénovation", "Industrie"],
+    pains: ["goulot", "demarrage", "prestataire"],
+  },
+  {
     slug: "compte-rendu-reunion-ia",
     title:
       "Compte rendu de réunion par IA : les outils font le résumé, l'agent fait le travail",

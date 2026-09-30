@@ -4,6 +4,7 @@ Session handoff and orchestration tracker. Created and maintained by `/flow`.
 
 | Date | Slug | Status | Mode | Next step |
 |------|------|--------|------|-----------|
+| 2026-09-18 | [article-ma-pme-en-2027](2026-09-18-article-ma-pme-en-2027.md) | open | solo | Hero Gemini · ping IndexNow post-deploy · /relecture-editoriale |
 | 2026-08-16 | [gsc-pages-non-indexees](../seo-audits/2026-08-16-gsc-pages-non-indexees.md) | open | solo | Déployer · ne pas valider le bac redirections · GSC : inspecter les 3 articles + supprimer news-sitemap · recrawl storages |
 | 2026-08-12 | [article-bilan-ia-2026](2026-08-12-article-bilan-ia-2026.md) | open | solo | Ping IndexNow post-deploy · captures LLM T0 · /relecture-editoriale |
 | 2026-06-17 | [ligne-editoriale-lockert-tu](2026-06-17-ligne-editoriale-lockert-tu.md) | open | solo | `npm run build` · valider claims robotique · variantes lede home Ch1 · registre `tu` pages services/audits · suivre A/B |

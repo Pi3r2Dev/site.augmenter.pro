@@ -15,6 +15,18 @@
 
 ---
 
+## ma-pme-en-2027.webp
+
+- **Type** : Fond abstrait placeholder (violet + ambre) — **à remplacer** par illustration Gemini 16:9
+- **Dimensions** : Paysage 16:9 — 1600×900
+- **Poids** : 3 Ko (placeholder dégradé) — viser < 300 Ko après Gemini
+- **Description** : Dégradé papier près du blanc, wash violet à gauche, accent ambre à droite. Pas de texte. En attendant le hero définitif (guide d'achat 2027 : cinq postes du gérant vs copilote dans l'existant).
+- **Contexte éditorial** : Image hero de l'article « Ma PME en 2027 ».
+- **Usage suggéré** : Hero `/blog/ma-pme-en-2027` + OG `og/ma-pme-en-2027.jpg`.
+- **Alt text suggéré** : "Illustration abstraite violet et ambre pour le guide d'achat IA PME 2027"
+
+---
+
 ## bilan-ia-janvier-juillet-2026.webp
 
 - **Type** : Illustration flat design (IA générée via Gemini)

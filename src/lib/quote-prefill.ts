@@ -39,17 +39,18 @@ export function prefillQuote({ service, sector, additional }: PrefillInput) {
     // Une session déjà avancée n'est pas touchée.
     if (saved.step && saved.step > 1) return;
 
-    const selectedServices: string[] = saved.selectedServices?.length
-      ? saved.selectedServices
-      : service
-        ? [service]
+    const selectedServices: string[] = service
+      ? [service]
+      : saved.selectedServices?.length
+        ? saved.selectedServices
         : [];
 
     const context = {
       sector: saved.context?.sector || sector || "",
       teamSize: saved.context?.teamSize || "",
       urgency: saved.context?.urgency || "",
-      additional: { ...additional, ...(saved.context?.additional ?? {}) },
+      // Les clés déjà saisies restent ; le dernier CTA complète (porte, guide).
+      additional: { ...(saved.context?.additional ?? {}), ...additional },
     };
 
     window.localStorage.setItem(

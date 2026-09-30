@@ -347,26 +347,34 @@ export function QuoteWizard() {
   const abandonFiredRef = useRef(false);
 
   // ── Restore from localStorage ──
+  // Ne pas persister avant cette hydratation : sinon le premier paint (état
+  // vide) écrase le pré-remplissage déposé par `prefillQuote` (porte du guide,
+  // métier de l'explorateur). En Strict Mode React, ce wipe est définitif.
+  const [hydrated, setHydrated] = useState(false);
+
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (!saved) return;
-      const data = JSON.parse(saved);
-      if (data.selectedServices?.length) setSelectedServices(data.selectedServices);
-      if (data.context) setContext(data.context);
-      if (data.contact) setContact(data.contact);
-      if (data.step && data.step <= 3) {
-        setStep(data.step);
-        // Restore brief if we were on step 3
-        if (data.step === 3 && data.brief) setBrief(data.brief);
+      if (saved) {
+        const data = JSON.parse(saved);
+        if (data.selectedServices?.length) setSelectedServices(data.selectedServices);
+        if (data.context) setContext(data.context);
+        if (data.contact) setContact(data.contact);
+        if (data.step && data.step <= 3) {
+          setStep(data.step);
+          // Restore brief if we were on step 3
+          if (data.step === 3 && data.brief) setBrief(data.brief);
+        }
       }
     } catch {
       // Ignore malformed storage
     }
+    setHydrated(true);
   }, []);
 
   // ── Persist to localStorage ──
   useEffect(() => {
+    if (!hydrated) return;
     try {
       localStorage.setItem(
         STORAGE_KEY,
@@ -375,7 +383,7 @@ export function QuoteWizard() {
     } catch {
       // Storage might be full — ignore
     }
-  }, [step, selectedServices, context, contact, brief]);
+  }, [hydrated, step, selectedServices, context, contact, brief]);
 
   // ── Exit intent (desktop only) ──
   useEffect(() => {
