@@ -1,5 +1,5 @@
 import { Children, isValidElement, type ReactNode } from "react";
-import { groupJournal, wordCount, type JournalBlock } from "@/lib/article/journal-flow";
+import { groupJournal, textOf, wordCount, type JournalBlock } from "@/lib/article/journal-flow";
 
 /** Sous ce nombre de mots, une tranche reste sur une colonne (deux colonnes de deux lignes = bruit). */
 const MIN_WORDS_FOR_COLUMNS = 40;
@@ -67,8 +67,11 @@ function splitLede(blocks: JournalBlock[]): Array<JournalBlock | { kind: "lede";
 
 function renderBlock(block: JournalBlock | { kind: "lede"; node: ReactNode }, key: number) {
   if (block.kind === "lede") {
+    // Lettrine seulement sur une lettre : « 7 » sorti de « 77 % » serait un contresens.
+    const first = textOf(block.node).trimStart().charAt(0);
+    const cap = /\p{L}/u.test(first);
     return (
-      <div key={key} className="journal-lede">
+      <div key={key} className={cap ? "journal-lede journal-lede--cap" : "journal-lede"}>
         {block.node}
       </div>
     );

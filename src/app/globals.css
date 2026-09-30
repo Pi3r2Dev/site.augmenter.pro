@@ -281,6 +281,10 @@ html {
   --rv-700: oklch(0.491 0.27 292);
   --ra-400: oklch(0.828 0.189 84.4);
   --ra-500: oklch(0.769 0.188 70.08);
+  /* `--font-display` vit dans `@theme inline` : Tailwind ne l'émet pas comme
+     variable CSS, seule l'utilitaire `font-display` l'inline. Le CSS direct
+     (h2, pull-quote, signature, lettrine) a donc besoin de cette redéclaration. */
+  --font-display: var(--font-fraunces);
   background: var(--paper);
 }
 
@@ -1043,7 +1047,7 @@ h3[id] {
     line-height: 1.55;
     margin-bottom: 2rem;
   }
-  .journal-lede p::first-letter {
+  .journal-lede--cap p::first-letter {
     float: left;
     margin: 0.12em 0.16em 0 0;
     font-family: var(--font-display);
@@ -1131,6 +1135,11 @@ h3[id] {
     border-left: 0;
     border-top: 1px solid var(--hair);
     border-bottom: 1px solid var(--hair);
+  }
+  /* En fin de section, le filet bas ferait doublon avec le filet plein de la section suivante. */
+  .journal-section > .journal-wide:last-child > .pull-quote {
+    border-bottom: 0;
+    padding-bottom: 0.4rem;
   }
   .journal-wide > .pull-quote p {
     max-width: 46rem;

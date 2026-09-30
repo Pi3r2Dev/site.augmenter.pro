@@ -21,8 +21,8 @@ export const FLOW_TAGS: ReadonlySet<string> = new Set(["p", "ul", "ol", "h3", "h
 /** Intertitres qui ne doivent jamais fermer une tranche (orphelin en bas de colonne). */
 const SUBHEAD_TAGS: ReadonlySet<string> = new Set(["h3", "h4"]);
 
-/** Taille cible d'une tranche : ~280 mots ≈ 12-14 lignes par colonne, toujours sous un écran. */
-export const MAX_WORDS_PER_FLOW = 280;
+/** Taille cible d'une tranche : ~240 mots ≈ 11-13 lignes par colonne, toujours sous un écran. */
+export const MAX_WORDS_PER_FLOW = 240;
 
 export type JournalBlock =
   | { kind: "flow"; items: ReactNode[]; words: number }

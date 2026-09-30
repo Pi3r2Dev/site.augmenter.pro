@@ -253,6 +253,20 @@ src/app/home-narrative/
 - [src/components/ui/](src/components/ui/) — shadcn/ui primitives
 - [src/lib/utils.ts](src/lib/utils.ts) — `cn()` utility
 
+### Lecture d'article — mise en page « journal » (bureau ≥ 1080px)
+
+Depuis le 2026-09-30, [ArticleLayout](src/components/layout/article-layout.tsx) rend le corps via [`JournalFlow`](src/components/article/journal-flow.tsx), qui regroupe le JSX plat de l'article (logique pure et testée dans [src/lib/article/journal-flow.ts](src/lib/article/journal-flow.ts)) :
+
+- **Une** : titre + chapeau + dateline + TL;DR à gauche, visuel (4:3) à droite — tout l'en-tête tient au-dessus du pli. Sous 1080px, empilement mobile inchangé.
+- **Rail gauche sticky** : sommaire numéroté **et** fil de mémoire (le bandeau `.memobar` est re-parenté dans le rail par `ReadingRail` via `matchMedia`, classe `memobar--rail`) — plus de bandeau fixe qui mange la hauteur d'écran sur bureau.
+- **Sections** : une par `<h2>` (`.journal-section`, filet plein + numéro du sommaire + titre Fraunces) ; l'intro avant le premier h2 ouvre sur un **lede** (premier `<p>`, grand corps, lettrine si le texte commence par une lettre).
+- **Tranches** `.journal-flow` : `p`/`ul`/`ol`/`h3`/`h4` consécutifs, bornés à `MAX_WORDS_PER_FLOW` (240) mots, coulés en **2 colonnes CSS équilibrées** (justifié + `hyphens: auto`). Une tranche tient dans un écran → jamais de zigzag descendre/remonter. Un `h3` enjambe les colonnes et n'est jamais orphelin en fin de tranche. Sous 40 mots : une colonne.
+- **Éléments larges** `.journal-wide` : tout le reste (tableaux, `<Callout>`, `<PullQuote>`, `<KeyTakeaways>`, `<AtelierCallout>`, `<pre>`, `<Image>`, composants) coupe la tranche et prend toute la largeur. Le `<PullQuote>` devient une citation entre filets à guillemets amber.
+
+Gotcha : `--font-display` est déclaré dans `@theme inline`, donc **pas émis comme variable CSS** — seul l'utilitaire Tailwind `font-display` l'inline. `.article-shell` le redéclare pour le CSS direct (h2, pull-quote, signature, lettrine). Ne pas retirer.
+
+Rien ne change pour le rédacteur : le corps reste un JSX plat, mêmes primitives ([article-primitives.md](.claude/templates/seo/article-primitives.md)). Un nouvel élément de texte courant à couler en colonnes s'ajoute à `FLOW_TAGS`.
+
 ### Footer global (mini-cockpit)
 
 Le [Footer](src/components/layout/footer.tsx) est rendu par le root [layout.tsx](src/app/layout.tsx) sur toutes les routes **sauf** `/` et `/approche` (qui le hide via leur layout local). Pattern dark mini-cockpit, même DNA que le `SuiteCockpit` mais sans audit card :
