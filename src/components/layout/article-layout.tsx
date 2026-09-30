@@ -7,6 +7,7 @@ import { ReadingRail } from "@/components/article/reading-rail";
 import { TldrBox } from "@/components/article/tldr-box";
 import { AuthorSignoff } from "@/components/article/author-signoff";
 import { RelatedArticles } from "@/components/article/related-articles";
+import { JournalFlow } from "@/components/article/journal-flow";
 import { getArticleBySlug, getRelatedArticles } from "@/data/resources";
 
 interface ArticleLayoutProps {
@@ -91,8 +92,12 @@ export function ArticleLayout({
 
       <ReadingRail bodyId="article-body" ctaHref="/contact" ctaLabel="Diagnostic" />
 
-      {/* En-tête éditorial — pas de byline (ligne « on parle du client, pas de nous ») */}
-      <header className="mx-auto max-w-3xl px-4 pt-10 sm:px-6">
+      {/*
+        En-tête « une » — pas de byline (ligne « on parle du client, pas de nous »).
+        Mobile : titre → visuel → TL;DR empilés. Bureau (≥1080px) : titre, chapeau
+        et TL;DR à gauche, visuel à droite — tout l'en-tête tient au-dessus du pli.
+      */}
+      <header className="journal-head mx-auto px-4 pt-10 sm:px-6">
         <Link
           href="/blog"
           className="inline-flex items-center gap-1.5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-[var(--ink-faint)] hover:text-[var(--rv-600)]"
@@ -101,65 +106,71 @@ export function ArticleLayout({
           Tous les articles
         </Link>
 
-        <div className="article-eyebrow mt-8">
-          <span className="dot" />
-          {tags[0]}
-          <span className="sep">/</span>
-          <span className="muted">{readTime} de lecture</span>
+        <div className="journal-head__grid mt-8">
+          <div className="journal-head__text">
+            <div className="article-eyebrow">
+              <span className="dot" />
+              {tags[0]}
+              <span className="sep">/</span>
+              <span className="muted">{readTime} de lecture</span>
+            </div>
+
+            <h1 className="mt-4 font-display text-[clamp(2.4rem,4.6vw,3.5rem)] font-[560] leading-[1.04] tracking-[-0.02em] text-[var(--ink)]">
+              {title}
+            </h1>
+
+            <p className="journal-head__deck mt-4 max-w-[42rem] text-[1.32rem] leading-[1.55] text-[var(--ink-soft)]">
+              {excerpt}
+            </p>
+
+            <p className="article-dateline mt-5 border-b border-[var(--hair)] pb-6">
+              Publié {date}
+              {dateModified && dateModified !== dateISO
+                ? ` · mis à jour ${formatDateFr(dateModified)}`
+                : ""}
+            </p>
+          </div>
+
+          {image && (
+            <figure className="journal-head__figure relative mt-9 aspect-video overflow-hidden rounded-2xl">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1080px) 768px, 420px"
+                priority
+              />
+            </figure>
+          )}
+
+          {showTldr && tldr ? (
+            <div className="journal-head__tldr mt-9">
+              <TldrBox>{tldr}</TldrBox>
+            </div>
+          ) : null}
         </div>
-
-        <h1 className="mt-4 font-display text-[clamp(2.4rem,5.2vw,3.7rem)] font-[560] leading-[1.04] tracking-[-0.02em] text-[var(--ink)]">
-          {title}
-        </h1>
-
-        <p className="mt-4 max-w-[42rem] text-[1.32rem] leading-[1.55] text-[var(--ink-soft)]">
-          {excerpt}
-        </p>
-
-        <p className="article-dateline mt-5 border-b border-[var(--hair)] pb-6">
-          Publié {date}
-          {dateModified && dateModified !== dateISO
-            ? ` · mis à jour ${formatDateFr(dateModified)}`
-            : ""}
-        </p>
-
-        {image && (
-          <div className="relative mt-9 aspect-video overflow-hidden rounded-2xl">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
-              priority
-            />
-          </div>
-        )}
-
-        {showTldr && tldr ? (
-          <div className="mt-9">
-            <TldrBox>{tldr}</TldrBox>
-          </div>
-        ) : null}
 
         {/* Point de montage de l'accordéon TOC mobile (rempli par ReadingRail) */}
         <div id="toc-mobile-mount" className="mt-8" />
       </header>
 
-      {/* Corps + rail TOC desktop */}
-      <div className="article-grid mx-auto mt-14 max-w-[78rem] px-4 sm:px-6">
+      {/* Corps journal + rail (sommaire + fil de mémoire) sur bureau */}
+      <div className="article-grid mx-auto mt-12 px-4 sm:px-6">
         <div id="reading-rail-mount" className="reading-rail-col" />
-        <article id="article-body" className="prose-article [&_h2]:font-display">
-          {children}
+        <article id="article-body" className="prose-article">
+          <JournalFlow>{children}</JournalFlow>
         </article>
-        <div aria-hidden />
       </div>
 
-      {/* Pied éditorial */}
-      <div className="mx-auto mt-20 max-w-[52rem] px-4 sm:px-6">
-        <AuthorSignoff shareUrl={shareUrl} title={title} />
-        <div className="mt-14">
-          <RelatedArticles articles={related} />
+      {/* Pied éditorial, aligné sous la colonne de lecture */}
+      <div className="article-grid mx-auto mt-16 px-4 sm:px-6">
+        <div aria-hidden className="reading-rail-col" />
+        <div className="journal-foot">
+          <AuthorSignoff shareUrl={shareUrl} title={title} />
+          <div className="mt-14">
+            <RelatedArticles articles={related} />
+          </div>
         </div>
       </div>
 

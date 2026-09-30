@@ -153,9 +153,23 @@ export function ReadingRail({
     });
 
     const hasMemos = memos.length > 0;
+    // Bureau : le fil de mémoire vit dans le rail (sous le sommaire), en liste
+    // verticale — il ne mange plus de hauteur d'écran. Mobile : bandeau fixe en haut.
+    const desktop = window.matchMedia("(min-width: 1080px)");
+    const placeMemobar = () => {
+      if (!hasMemos) return;
+      if (desktop.matches && railMount) {
+        memobar.classList.add("memobar--rail");
+        railMount.appendChild(memobar);
+      } else {
+        memobar.classList.remove("memobar--rail");
+        document.body.appendChild(memobar);
+      }
+    };
+    placeMemobar();
     if (hasMemos) {
-      document.body.appendChild(memobar);
       created.push(memobar);
+      desktop.addEventListener("change", placeMemobar);
     }
 
     const updateCount = () =>
@@ -269,6 +283,7 @@ export function ReadingRail({
     // ── Cleanup ───────────────────────────────────────────────────────────
     return () => {
       document.removeEventListener("scroll", onScrollThrottled);
+      desktop.removeEventListener("change", placeMemobar);
       created.forEach((n) => n.remove());
       railMount?.replaceChildren();
       tocMobileMount?.replaceChildren();
