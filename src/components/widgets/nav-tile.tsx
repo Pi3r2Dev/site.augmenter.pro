@@ -23,12 +23,11 @@ interface NavTileCardProps {
 /**
  * NavTileCard — tuile de navigation « peinture d'abord ».
  *
- * Desktop : muette au repos (le lava lamp seul), libellé et flèche révélés au
- * survol ou au focus clavier.
- * Mobile : format compact, libellé toujours visible — un décor muet de 180 px
- * n'a aucun sens sur un écran où il faut le scroller pour atteindre le contenu.
+ * Libellé toujours visible (un peu retenu au repos). Au survol ou au focus
+ * clavier : texte en blanc plein, léger soulèvement, soulignement dégradé
+ * violet→ambre tracé de gauche à droite, flèche qui file en diagonale.
  *
- * La révélation est pilotée par l'état React plutôt que par un variant
+ * L'état actif est piloté par React plutôt que par un variant
  * `group-hover/…`, pour la même raison que le gradient `<em>` du narrative est
  * écrit en CSS direct : les sélecteurs Tailwind composés ne compilent pas
  * toujours comme attendu dans ce setup (Next 16 + Tailwind 4 + webpack).
@@ -54,21 +53,33 @@ export function NavTileCard({ tile, palette = "violet" }: NavTileCardProps) {
         <div className="absolute inset-0 flex items-end justify-between gap-2 p-4 md:p-5">
           <span
             className={cn(
-              "text-[13px] font-semibold leading-tight tracking-[-0.01em] transition-[opacity,transform] duration-300 md:text-[15px]",
-              "opacity-100 md:translate-y-1 md:opacity-0",
-              active && "md:translate-y-0 md:opacity-100"
+              "relative pb-1 text-[13px] font-semibold leading-tight tracking-[-0.01em] transition-[color,transform] duration-300 ease-out md:text-[15px]",
+              active ? "-translate-y-0.5 text-white" : "text-white/80"
             )}
             style={{ textShadow: "0 1px 12px rgba(0,0,0,0.55)" }}
           >
             {tile.label}
+            <span
+              aria-hidden
+              className={cn(
+                "absolute bottom-0 left-0 h-0.5 w-full origin-left rounded-full transition-transform duration-500 ease-out",
+                active ? "scale-x-100" : "scale-x-0"
+              )}
+              style={{
+                background:
+                  "linear-gradient(90deg, var(--violet-300), var(--amber-400))",
+                boxShadow: "0 0 10px var(--amber-400)",
+              }}
+            />
           </span>
           <ArrowUpRight
             aria-hidden
             strokeWidth={2.5}
             className={cn(
-              "h-4 w-4 shrink-0 transition-[opacity,transform] duration-300",
-              "opacity-70 md:opacity-0",
-              active && "md:translate-x-0.5 md:opacity-90"
+              "h-4 w-4 shrink-0 transition-[opacity,transform] duration-300 ease-out",
+              active
+                ? "-translate-y-0.5 translate-x-0.5 opacity-100"
+                : "opacity-70"
             )}
           />
         </div>

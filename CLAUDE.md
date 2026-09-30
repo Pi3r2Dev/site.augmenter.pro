@@ -83,7 +83,7 @@ Deux pages sont des **expériences scroll narrative** (Three.js + Lenis + GSAP) 
 
 | Route | Type | Structure |
 |-------|------|-----------|
-| `/` | **Bento** (Header/Footer globaux) | [src/app/page.tsx](src/app/page.tsx) : `<Hero />` + `<CapabilityExplorer />` + `<PrestationsTypes />` + `<Resources />` + `<Convert />`. LCP = lede du Hero — **interdit** `motion` opacity 0 (ADR 0006). Le hero porte 4 tuiles de navigation muettes au repos (desktop) / libellées (mobile) — cf. `src/components/widgets/nav-tile.tsx`. |
+| `/` | **Bento** (Header/Footer globaux) | [src/app/page.tsx](src/app/page.tsx) : `<Hero />` + `<CapabilityExplorer />` + `<PrestationsTypes />` + `<Resources />` + `<Convert />`. LCP = lede du Hero — **interdit** `motion` opacity 0 (ADR 0006). Le hero porte 4 tuiles de navigation libellées en permanence (soulignement dégradé au survol) — cf. `src/components/widgets/nav-tile.tsx`. |
 | `/accueil-narrative` | **Narrative** (6 chapitres) | [src/app/home-narrative/](src/app/home-narrative/) — preview du récit, pas l'URL publique. |
 | `/approche` | **Narrative** (9 chapitres) | [src/app/approche/layout.tsx](src/app/approche/layout.tsx) strip Header/Footer. `page.tsx` injecte `FAQPage` + `Service`/`OfferCatalog` JSON-LDs + render `<ApprocheNarrative />` depuis [src/app/approche/narrative/](src/app/approche/narrative/). Absorbe `/prestations` via redirect 308 (ancre `#prestations` à l'intérieur du Ch07 audits). |
 | `/blog` | Bento + Header/Footer globaux | `page.tsx` (metadata) + `blog-view.tsx` (`"use client"`, importe `ARTICLES` depuis le catalog `src/data/resources.ts`) |
