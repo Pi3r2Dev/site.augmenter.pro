@@ -51,7 +51,7 @@ const UPDATED_LABEL = "30 septembre 2026";
 export const metadata: Metadata = {
   title: "À propos : qui est augmenter.PRO, en faits vérifiables",
   description:
-    "Qui est derrière augmenter.PRO, pour qui, où, combien, ce qu'on refuse, et la carte des ressources pour décider. Premier rendez-vous de 60 min non facturé.",
+    "Tu te méfies des consultants IA ? Tu as raison. Qui est derrière augmenter.PRO, pour qui, combien, ce qu'on refuse, et la carte pour décider.",
   alternates: { canonical: PATH },
   openGraph: pageOpenGraph({
     title: "À propos d'augmenter.PRO : qui, quoi, pour qui, combien",
@@ -158,7 +158,9 @@ const IDENTITY: IdentityRow[] = [
         Les dirigeants de PME de 10 à 200 salariés : BTP et rénovation, négoce,
         industrie, commerce et artisanat, services. Le profil type : un patron
         débordé, curieux de l&apos;IA, qui veut comprendre ce qu&apos;il achète
-        sans dépendre d&apos;un intégrateur opaque.
+        sans dépendre d&apos;un intégrateur opaque. Pas pour : les groupes
+        au-delà de 200 salariés, les projets sans sujet précis, la régie longue
+        durée à la place de ton équipe.
       </>
     ),
   },
