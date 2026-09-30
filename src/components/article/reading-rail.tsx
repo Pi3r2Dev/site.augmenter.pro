@@ -156,14 +156,29 @@ export function ReadingRail({
     // Bureau : le fil de mémoire vit dans le rail (sous le sommaire), en liste
     // verticale — il ne mange plus de hauteur d'écran. Mobile : bandeau fixe en haut.
     const desktop = window.matchMedia("(min-width: 1080px)");
+    // Dans le rail, le fil est une carte stable : toutes les pastilles sont
+    // présentes dès le départ, en « fantôme » tant que le passage n'est pas lu.
+    // Elles s'allument au passage et s'éteignent au retour — sans vol ni reflow
+    // (le FLIP horizontal du bandeau mobile devient illisible en vertical).
+    const inRail = () => memobar.classList.contains("memobar--rail");
     const placeMemobar = () => {
       if (!hasMemos) return;
       if (desktop.matches && railMount) {
         memobar.classList.add("memobar--rail");
         railMount.appendChild(memobar);
+        memos.forEach((m) => {
+          m.chip.style.display = "inline-flex";
+          m.chip.style.visibility = "visible";
+          m.chip.classList.toggle("chip--ghost", !m.collected);
+        });
+        memobar.classList.toggle("memobar--show", memos.some((m) => m.collected));
       } else {
         memobar.classList.remove("memobar--rail");
         document.body.appendChild(memobar);
+        memos.forEach((m) => {
+          m.chip.classList.remove("chip--ghost");
+          m.chip.style.display = m.collected ? "inline-flex" : "none";
+        });
       }
     };
     placeMemobar();
@@ -172,8 +187,12 @@ export function ReadingRail({
       desktop.addEventListener("change", placeMemobar);
     }
 
-    const updateCount = () =>
-      (cnt.textContent = String(memos.filter((m) => m.collected).length));
+    const updateCount = () => {
+      const n = memos.filter((m) => m.collected).length;
+      cnt.textContent = String(n);
+      // Rail : le bloc n'apparaît qu'à partir du premier repère collecté.
+      if (inRail()) memobar.classList.toggle("memobar--show", n > 0);
+    };
 
     function fly(
       from: DOMRect,
@@ -212,6 +231,15 @@ export function ReadingRail({
       m.collected = true;
       m.el.classList.add("memo--collected");
       updateCount();
+      if (inRail()) {
+        m.chip.classList.remove("chip--ghost");
+        if (!reduce)
+          m.chip.animate(
+            [{ transform: "translateX(-4px)", opacity: 0.6 }, { transform: "none", opacity: 1 }],
+            { duration: 320, easing: "cubic-bezier(.22,1,.36,1)" },
+          );
+        return;
+      }
       const from = m.el.getBoundingClientRect();
       m.chip.style.display = "inline-flex";
       m.chip.style.visibility = "hidden";
@@ -227,6 +255,10 @@ export function ReadingRail({
       m.collected = false;
       m.el.classList.remove("memo--collected");
       updateCount();
+      if (inRail()) {
+        m.chip.classList.add("chip--ghost");
+        return;
+      }
       const from = m.chip.getBoundingClientRect();
       m.chip.style.display = "none";
       const to = m.el.getBoundingClientRect();
@@ -263,7 +295,7 @@ export function ReadingRail({
       );
 
       if (hasMemos) {
-        memobar.classList.toggle("memobar--show", root.scrollTop > 480);
+        if (!inRail()) memobar.classList.toggle("memobar--show", root.scrollTop > 480);
         for (const m of memos) {
           const top = m.el.getBoundingClientRect().top;
           if (top < THRESHOLD && !m.collected) lift(m);
