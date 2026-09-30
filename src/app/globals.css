@@ -1165,8 +1165,10 @@ h3[id] {
     min-width: 0;
   }
 
-  /* Fil de mémoire dans le rail : liste verticale, toujours visible. */
+  /* Fil de mémoire dans le rail : carte verticale stable, visible dès le
+     premier repère collecté ; les repères à venir restent en fantôme. */
   .memobar--rail {
+    display: none;
     position: static;
     transform: none;
     flex-direction: column;
@@ -1199,6 +1201,77 @@ h3[id] {
   .memobar--rail .memobar__cta {
     align-self: flex-start;
     margin-top: 0.3rem;
+  }
+  .memobar--rail.memobar--show {
+    display: flex;
+  }
+  .memobar--rail .chip {
+    transition: opacity 0.25s, border-color 0.25s, color 0.25s, background 0.25s;
+  }
+  .memobar--rail .chip:hover {
+    transform: none;
+  }
+  .chip--ghost {
+    opacity: 0.55;
+    background: transparent;
+    border-style: dashed;
+    color: var(--ink-faint);
+    box-shadow: none;
+  }
+  .chip--ghost .chip__dot {
+    opacity: 0.5;
+  }
+}
+
+/* ── Grand écran (≥ 1400px) : marge droite pour les encadrés courts ── */
+@media (min-width: 1400px) {
+  .journal-head,
+  .article-grid {
+    max-width: 90rem; /* rail 13 + 3.5 + texte 56 + 3.5 + marge 14 */
+  }
+  .journal-head__text,
+  .journal-head__tldr {
+    max-width: 52rem;
+  }
+  .article-grid {
+    grid-template-columns: 13rem minmax(0, 56rem) 14rem;
+  }
+  .article-grid > .prose-article {
+    grid-column: 2 / 4;
+  }
+  .article-grid > .journal-foot {
+    grid-column: 2;
+  }
+  /* Chaque section est une grille « texte | marge » ; les blocs portent leur ligne en style inline. */
+  .journal-intro,
+  .journal-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 14rem;
+    column-gap: 3.5rem;
+    align-items: start;
+  }
+  .journal-intro > *,
+  .journal-section > * {
+    grid-column: 1;
+    min-width: 0;
+  }
+  .journal-section > .journal-section__head {
+    grid-column: 1 / -1;
+  }
+  .journal-aside {
+    grid-column: 2;
+    margin: 0.2rem 0 0;
+  }
+  .journal-aside > .callout-block {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding: 0.95rem 1.05rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  .journal-aside > .callout-block .callout-block__icon {
+    width: 26px;
+    height: 26px;
   }
 }
 #toc-mobile-mount:empty {
