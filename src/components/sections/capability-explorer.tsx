@@ -32,6 +32,9 @@ const VERDICT_ORDER: Verdict[] = ["production", "cadrer", "pas-encore"];
  */
 const TODAY = "2026-08";
 
+/** Le verdict « par crans » est l'argument de la section : on l'affiche en chiffre. */
+const REFUSED_COUNT = CAPABILITIES.filter((c) => c.verdict === "pas-encore").length;
+
 /**
  * Section 02 de `/` — « Ce que l'IA sait faire chez vous ».
  *
@@ -108,7 +111,7 @@ export function CapabilityExplorer() {
                 size="md"
                 className="bg-white! text-foreground! border-white!"
               >
-                Contenu vérifié à la main
+                Dont {REFUSED_COUNT} qu&apos;on refuse de vendre d&apos;emblée
               </Pill>
             </>
           }
