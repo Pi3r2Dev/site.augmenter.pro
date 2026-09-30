@@ -588,7 +588,7 @@ export default function AProposPage() {
                 className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground"
               >
                 {intent.short}
-                <span className="font-mono text-[11px] text-muted-foreground/70">{items.length}</span>
+                <span className="font-mono text-[11px] text-muted-foreground">{items.length}</span>
               </a>
             ))}
           </nav>
