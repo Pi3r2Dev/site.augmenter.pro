@@ -352,46 +352,12 @@ export function pickDecisive(resources: SiteResource[], n = 8): SiteResource[] {
 }
 
 // ─── Recherche sur les titres (404) ────────────────────────────────────────
+// La recherche elle-même vit dans src/lib/title-search.ts (sans dépendance
+// vers les données) pour que la 404 n'embarque pas le catalog côté client.
 
-/** Minuscules, sans accents, espaces normalisés — pour comparer sans surprise. */
-export function normalizeText(s: string): string {
-  return s
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/[’']/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-/** Projection minimale d'une ressource pour la recherche côté client. */
-export interface SearchEntry {
-  title: string;
-  href: string;
-  typeLabel: string;
-}
+import type { SearchEntry } from "@/lib/title-search";
+export { normalizeText, searchTitles, type SearchEntry } from "@/lib/title-search";
 
 export function toSearchIndex(resources: SiteResource[]): SearchEntry[] {
   return resources.map(({ title, href, typeLabel }) => ({ title, href, typeLabel }));
-}
-
-/**
- * Recherche « tous les mots » sur les titres, insensible aux accents et à la
- * casse. Moins de deux caractères utiles → aucun résultat (on n'affiche pas
- * tout le site sur une lettre).
- */
-export function searchTitles<T extends { title: string }>(
-  entries: T[],
-  query: string,
-  limit = 8,
-): T[] {
-  const q = normalizeText(query);
-  if (q.length < 2) return [];
-  const words = q.split(" ");
-  return entries
-    .filter((e) => {
-      const t = normalizeText(e.title);
-      return words.every((w) => t.includes(w));
-    })
-    .slice(0, limit);
 }

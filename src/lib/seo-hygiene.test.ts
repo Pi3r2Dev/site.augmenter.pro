@@ -189,8 +189,11 @@ describe("page /a-propos — identité citable, maillée partout", () => {
   it("n'emploie aucun mot interdit (« gratuit », « offert ») ni balisage d'avis", () => {
     const dir = join(root, "src/app/a-propos");
     const files = readdirSync(dir).map((f) => join(dir, f));
-    files.push(join(root, "src/app/not-found.tsx"));
-    expect(files.length).toBeGreaterThan(1);
+    files.push(
+      join(root, "src/app/not-found.tsx"),
+      join(root, "src/components/layout/not-found-view.tsx"),
+    );
+    expect(files.length).toBeGreaterThan(2);
     for (const file of files) {
       const src = readFileSync(file, "utf8");
       expect(src, file).not.toMatch(/\b(gratuit|offert)\w*/i);
