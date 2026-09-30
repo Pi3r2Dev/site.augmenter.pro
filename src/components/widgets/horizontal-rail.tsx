@@ -259,7 +259,24 @@ export function HorizontalRail({
         ) : (
           <div className="hrail__lead">{lead}</div>
         )}
-        <div className="hrail__nav">
+      </div>
+
+      <div
+        ref={trackRef}
+        className="hrail__track"
+        role="group"
+        aria-label={label}
+        tabIndex={0}
+        onKeyDown={onKey}
+      >
+        {children}
+      </div>
+
+      <div className="hrail__progress" aria-hidden>
+        <span style={{ transform: `scaleX(${Math.max(0.04, progress)})` }} />
+      </div>
+
+      <div className="hrail__nav">
           {autoplay && (
             <button
               type="button"
@@ -289,22 +306,6 @@ export function HorizontalRail({
           >
             <ChevronRight className="size-4" />
           </button>
-        </div>
-      </div>
-
-      <div
-        ref={trackRef}
-        className="hrail__track"
-        role="group"
-        aria-label={label}
-        tabIndex={0}
-        onKeyDown={onKey}
-      >
-        {children}
-      </div>
-
-      <div className="hrail__progress" aria-hidden>
-        <span style={{ transform: `scaleX(${Math.max(0.04, progress)})` }} />
       </div>
     </div>
   );

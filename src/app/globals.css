@@ -337,8 +337,9 @@ html {
 }
 .hrail__nav {
   display: flex;
-  gap: 0.35rem;
-  flex: none;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
 }
 .hrail__btn {
   display: grid;
