@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHead, Pill } from "@/components/bento/bento-grid";
+import { HorizontalRail } from "@/components/widgets/horizontal-rail";
 import { cn } from "@/lib/utils";
 import { prefillQuote } from "@/lib/quote-prefill";
 import {
@@ -129,36 +130,48 @@ export function CapabilityExplorer() {
           />
         </div>
 
-        {/* ── Résultats + souveraineté ────────────────────────────────── */}
-        <div className="mt-4 grid gap-4 md:grid-cols-12">
-          <div className="space-y-6 md:col-span-8">
-            {relaxedTool && (
-              <p className="text-[0.8rem] leading-relaxed text-white/50">
-                Sur ce métier, rien ne dépend spécifiquement de votre outil —
-                voici ce qui s&apos;applique dans tous les cas.
-              </p>
-            )}
+        {/* ── Résultats : une frise, trois groupes de verdict ─────────── */}
+        <div className="mt-6">
+          {relaxedTool && (
+            <p className="mb-3 text-[0.8rem] leading-relaxed text-white/50">
+              Sur ce métier, rien ne dépend spécifiquement de votre outil —
+              voici ce qui s&apos;applique dans tous les cas.
+            </p>
+          )}
 
+          <HorizontalRail
+            label="Capacités par verdict"
+            tone="dark"
+            speed={34}
+            className="cap-rail"
+            markers={grouped.map((g) => ({
+              id: g.verdict,
+              label: VERDICTS[g.verdict].label,
+              count: g.list.length,
+              color: VERDICTS[g.verdict].color,
+            }))}
+          >
             {grouped.map((group) => (
-              <div key={group.verdict}>
-                <div className="flex items-baseline gap-2.5">
-                  <span
-                    aria-hidden
-                    className="inline-block h-2 w-2 shrink-0 translate-y-[-1px] rounded-full"
-                    style={{ background: VERDICTS[group.verdict].color }}
-                  />
-                  <h3 className="text-[0.78rem] font-semibold uppercase tracking-[0.1em] text-white">
-                    {VERDICTS[group.verdict].label}
-                  </h3>
-                  <span className="text-[0.72rem] text-white/40">
-                    {VERDICTS[group.verdict].hint}
-                  </span>
+              <React.Fragment key={group.verdict}>
+                <div
+                  className="hrail__item hrail__item--divider"
+                  data-rail-marker={group.verdict}
+                >
+                  <div
+                    className="flex h-full flex-col justify-end rounded-[18px] border border-white/[0.07] bg-white/[0.02] p-4"
+                    style={{ borderTop: `3px solid ${VERDICTS[group.verdict].color}` }}
+                  >
+                    <h3 className="text-[0.78rem] font-semibold uppercase leading-snug tracking-[0.1em] text-white">
+                      {VERDICTS[group.verdict].label}
+                    </h3>
+                    <p className="mt-2 text-[0.72rem] leading-[1.45] text-white/45">
+                      {VERDICTS[group.verdict].hint}
+                    </p>
+                  </div>
                 </div>
-
-                <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                  {group.list.map((c) => (
+                {group.list.map((c) => (
+                  <div className="hrail__item" key={c.id}>
                     <CapabilityCard
-                      key={c.id}
                       title={c.title}
                       detail={c.detail}
                       proof={c.proof}
@@ -167,56 +180,52 @@ export function CapabilityExplorer() {
                       color={VERDICTS[c.verdict].color}
                       muted={c.verdict === "pas-encore"}
                     />
-                  ))}
-                </div>
-              </div>
+                  </div>
+                ))}
+              </React.Fragment>
             ))}
-          </div>
-
-          {/* Où vivent vos données — colonne persistante */}
-          <aside className="md:col-span-4">
-            <div className="sticky top-24 rounded-[22px] border border-white/[0.07] bg-[linear-gradient(180deg,#13101d,#0f0c1a)] p-5 sm:p-6">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4 text-violet-300" />
-                <span className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-violet-300">
-                  Où vivent vos données
-                </span>
-              </div>
-              <p className="mt-3 text-[0.88rem] leading-[1.55] text-white/80">
-                Deux régimes, et c&apos;est vous qui choisissez lequel.
-              </p>
-              <dl className="mt-4 space-y-3.5">
-                <div>
-                  <dt className="text-[0.82rem] font-semibold text-white">
-                    Chez nous
-                  </dt>
-                  <dd className="mt-1 text-[0.78rem] leading-[1.5] text-white/60">
-                    Modèles ouverts, sur des serveurs que nous administrons.
-                    C&apos;est notre configuration par défaut — et celle qui fait
-                    tourner nos propres outils tous les jours.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-[0.82rem] font-semibold text-white">
-                    Chez l&apos;éditeur
-                  </dt>
-                  <dd className="mt-1 text-[0.78rem] leading-[1.5] text-white/60">
-                    Quand vous voulez la puissance d&apos;un Claude ou
-                    équivalent, on le branche — et on vous dit ce qui transite,
-                    ce qui est conservé, et ce qui n&apos;entraîne aucun modèle.
-                  </dd>
-                </div>
-              </dl>
-              <p className="mt-4 border-t border-white/[0.07] pt-4 text-[0.78rem] leading-[1.5] text-white/70">
-                Dans les deux cas, la question est posée{" "}
-                <strong className="font-medium text-white">
-                  avant la première ligne de code
-                </strong>
-                , pas après.
-              </p>
-            </div>
-          </aside>
+          </HorizontalRail>
         </div>
+
+        {/* ── Où vivent vos données — bande compacte sous la frise ────── */}
+        <aside className="mt-6 grid gap-5 rounded-[22px] border border-white/[0.07] bg-[linear-gradient(180deg,#13101d,#0f0c1a)] p-5 sm:p-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_minmax(0,1.4fr)_minmax(0,1fr)]">
+          <div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4 text-violet-300" />
+              <span className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-violet-300">
+                Où vivent vos données
+              </span>
+            </div>
+            <p className="mt-2.5 text-[0.9rem] leading-[1.5] text-white/80">
+              Deux régimes, et c&apos;est vous qui choisissez lequel.
+            </p>
+          </div>
+          <div>
+            <p className="text-[0.82rem] font-semibold text-white">Chez nous</p>
+            <p className="mt-1 text-[0.78rem] leading-[1.5] text-white/60">
+              Modèles ouverts, sur des serveurs que nous administrons.
+              C&apos;est notre configuration par défaut — et celle qui fait
+              tourner nos propres outils tous les jours.
+            </p>
+          </div>
+          <div>
+            <p className="text-[0.82rem] font-semibold text-white">
+              Chez l&apos;éditeur
+            </p>
+            <p className="mt-1 text-[0.78rem] leading-[1.5] text-white/60">
+              Quand vous voulez la puissance d&apos;un Claude ou équivalent, on
+              le branche — et on vous dit ce qui transite, ce qui est conservé,
+              et ce qui n&apos;entraîne aucun modèle.
+            </p>
+          </div>
+          <p className="text-[0.78rem] leading-[1.5] text-white/70 md:border-l md:border-white/[0.07] md:pl-5">
+            Dans les deux cas, la question est posée{" "}
+            <strong className="font-medium text-white">
+              avant la première ligne de code
+            </strong>
+            , pas après.
+          </p>
+        </aside>
 
         {/* ── Sortie ──────────────────────────────────────────────────── */}
         <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">

@@ -15,6 +15,7 @@ import {
   Pill,
 } from "@/components/bento/bento-grid";
 import { PALETTES } from "@/components/widgets/palettes";
+import { HorizontalRail } from "@/components/widgets/horizontal-rail";
 
 interface Prestation {
   /** Famille de besoin, en langage métier (pas en langage techno). */
@@ -138,54 +139,64 @@ export function PrestationsTypes() {
           }
         />
 
+        {/* Six chantiers sur une frise : une rangée à hauteur fixe, pas deux
+            rangées de pavés — le reste de la section remonte d'un écran. */}
+        <div className="mt-8">
+          <HorizontalRail
+            label="Prestations types"
+            tone="light"
+            speed={30}
+            className="presta-rail"
+            lead={
+              <span className="text-[0.8rem]">
+                Six chantiers. Faites défiler, ou laissez la frise avancer.
+              </span>
+            }
+          >
+            {PRESTATIONS.map((p) => (
+              <article key={p.tag} className="hrail__item">
+                <div className="flex h-full flex-col rounded-[22px] border border-border bg-card p-5">
+                  <div className="flex items-center gap-2">
+                    <span
+                      aria-hidden
+                      className="h-1.5 w-1.5 shrink-0 rounded-full"
+                      style={{ background: p.accent }}
+                    />
+                    <span className="text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                      {p.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-2.5 text-[1.05rem] font-semibold leading-tight tracking-[-0.01em]">
+                    {p.title}
+                  </h3>
+
+                  <p className="mt-2 text-[0.8rem] leading-[1.5] text-muted-foreground">
+                    {p.pain}
+                  </p>
+
+                  <p className="mt-2.5 flex-1 text-[0.8rem] leading-[1.5] text-foreground/85">
+                    {p.delivery}
+                  </p>
+
+                  <div className="mt-3 border-t border-border pt-2.5">
+                    <div
+                      className="text-[0.72rem] font-semibold"
+                      style={{ color: p.accent }}
+                    >
+                      {p.proof}
+                    </div>
+                    <div className="mt-0.5 text-[0.68rem] text-muted-foreground">
+                      {p.sectors}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </HorizontalRail>
+        </div>
+
         <BentoGrid>
-          {PRESTATIONS.map((p, i) => (
-            <BentoCard key={p.tag} span={4} rows={3} mobileMinH="300px">
-              <motion.div
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
-                className="flex h-full flex-col"
-              >
-                <div className="flex items-center gap-2">
-                  <span
-                    aria-hidden
-                    className="h-1.5 w-1.5 shrink-0 rounded-full"
-                    style={{ background: p.accent }}
-                  />
-                  <span className="text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
-                    {p.tag}
-                  </span>
-                </div>
-
-                <h3 className="mt-2.5 text-[1.05rem] font-semibold leading-tight tracking-[-0.01em]">
-                  {p.title}
-                </h3>
-
-                <p className="mt-2 text-[0.8rem] leading-[1.5] text-muted-foreground">
-                  {p.pain}
-                </p>
-
-                <p className="mt-2.5 flex-1 text-[0.8rem] leading-[1.5] text-foreground/85">
-                  {p.delivery}
-                </p>
-
-                <div className="mt-3 border-t border-border pt-2.5">
-                  <div
-                    className="text-[0.72rem] font-semibold"
-                    style={{ color: p.accent }}
-                  >
-                    {p.proof}
-                  </div>
-                  <div className="mt-0.5 text-[0.68rem] text-muted-foreground">
-                    {p.sectors}
-                  </div>
-                </div>
-              </motion.div>
-            </BentoCard>
-          ))}
-
           {/* Preuve terrain — respiration entre six pavés denses et le
               financement. Arnaud est la preuve vivante de « Catalogue &
               commandes », et la seule qui nomme notre commune. */}

@@ -253,6 +253,16 @@ src/app/home-narrative/
 - [src/components/ui/](src/components/ui/) — shadcn/ui primitives
 - [src/lib/utils.ts](src/lib/utils.ts) — `cn()` utility
 
+### Frises horizontales de la home (`HorizontalRail`)
+
+Depuis le 2026-09-30, les sections 02 (`CapabilityExplorer`) et 03 (`PrestationsTypes`) de `/` posent leurs cartes sur une **piste horizontale** [`src/components/widgets/horizontal-rail.tsx`](src/components/widgets/horizontal-rail.tsx) au lieu d'une grille qui empile (section 02 : 2 134 → 1 033 px à 1440 px de large). Comportement :
+
+- Défilement natif (molette, tactile, `scroll-snap` proximity) + boutons précédent/suivant + flèches clavier quand la piste a le focus ; barre de position sous la piste.
+- **Auto-défilement** lent en aller-retour (`speed` px/s), uniquement bureau + pointeur fin + pas de `prefers-reduced-motion`, uniquement quand la piste est dans le viewport ; il s'arrête au survol, au focus, et **dès la première interaction** (molette, clic, toucher, clavier) jusqu'à la prochaine entrée dans le viewport. Bouton pause/lecture obligatoire (WCAG 2.2.2) — ne pas le retirer. Pendant l'auto-défilement, la classe `hrail--auto` neutralise le snap (sinon il saccade).
+- **Repères** (`markers` + `data-rail-marker` sur un enfant) : onglets au-dessus de la piste qui sautent au groupe et se colorent au passage (scroll-spy). Section 02 : un repère par verdict, matérialisé par une carte-séparateur `.hrail__item--divider` dans la piste.
+- Chaque enfant est un `.hrail__item` ; largeur par `--hrail-w` (`.cap-rail` 19rem, `.presta-rail` 23rem, 82vw sous 768px). Les items s'étirent à la même hauteur (flex), donc `h-full` sur la carte.
+- L'encart « Où vivent vos données » n'est plus une colonne sticky mais une **bande 4 colonnes** sous la piste.
+
 ### Lecture d'article — mise en page « journal » (bureau ≥ 1080px)
 
 Depuis le 2026-09-30, [ArticleLayout](src/components/layout/article-layout.tsx) rend le corps via [`JournalFlow`](src/components/article/journal-flow.tsx), qui regroupe le JSX plat de l'article (logique pure et testée dans [src/lib/article/journal-flow.ts](src/lib/article/journal-flow.ts)) :

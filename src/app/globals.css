@@ -262,6 +262,181 @@ html {
 }
 
 /* ============================================================
+   PISTE HORIZONTALE (frise) — widgets/horizontal-rail.tsx
+   Une rangée à hauteur fixe au lieu d'une grille qui empile.
+   ============================================================ */
+.hrail {
+  --hrail-w: 20rem;
+  --hrail-gap: 0.75rem;
+  position: relative;
+}
+.hrail--light {
+  --hrail-fg: var(--foreground);
+  --hrail-fg-muted: color-mix(in oklch, var(--foreground) 55%, transparent);
+  --hrail-line: color-mix(in oklch, var(--foreground) 12%, transparent);
+  --hrail-fill: color-mix(in oklch, var(--foreground) 6%, transparent);
+  --hrail-accent: oklch(0.541 0.281 293);
+}
+.hrail--dark {
+  --hrail-fg: #fff;
+  --hrail-fg-muted: rgba(255, 255, 255, 0.55);
+  --hrail-line: rgba(255, 255, 255, 0.12);
+  --hrail-fill: rgba(255, 255, 255, 0.07);
+  --hrail-accent: oklch(0.828 0.189 84.429);
+}
+.hrail__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.hrail__lead {
+  min-width: 0;
+  color: var(--hrail-fg-muted);
+}
+.hrail__markers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.hrail__marker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--hrail-line);
+  background: transparent;
+  color: var(--hrail-fg-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s, background 0.18s;
+}
+.hrail__marker:hover {
+  color: var(--hrail-fg);
+}
+.hrail__marker[aria-selected="true"] {
+  color: var(--hrail-fg);
+  border-color: var(--hrail-fg-muted);
+  background: var(--hrail-fill);
+}
+.hrail__marker-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex: none;
+}
+.hrail__marker-count {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  opacity: 0.7;
+}
+.hrail__nav {
+  display: flex;
+  gap: 0.35rem;
+  flex: none;
+}
+.hrail__btn {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  border: 1px solid var(--hrail-line);
+  background: transparent;
+  color: var(--hrail-fg);
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, opacity 0.18s;
+}
+.hrail__btn:hover:not(:disabled),
+.hrail__btn[aria-pressed="true"] {
+  background: var(--hrail-fill);
+  border-color: var(--hrail-fg-muted);
+}
+.hrail__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.hrail__track {
+  display: flex;
+  align-items: stretch;
+  gap: var(--hrail-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 0.25rem;
+  padding: 0.25rem 0.25rem 1rem;
+  scrollbar-width: none;
+}
+.hrail__track::-webkit-scrollbar {
+  display: none;
+}
+.hrail__track:focus-visible {
+  outline: 2px solid var(--hrail-fg-muted);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+.hrail--auto .hrail__track {
+  scroll-snap-type: none;
+}
+.hrail__item {
+  flex: 0 0 var(--hrail-w);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+.hrail__item > * {
+  flex: 1;
+}
+.hrail__item--divider {
+  flex-basis: 9.5rem;
+}
+.hrail__progress {
+  height: 2px;
+  border-radius: 2px;
+  background: var(--hrail-line);
+  overflow: hidden;
+}
+.hrail__progress span {
+  display: block;
+  height: 100%;
+  transform-origin: left;
+  background: var(--hrail-accent);
+  transition: transform 0.12s linear;
+}
+.cap-rail {
+  --hrail-w: 19rem;
+}
+.presta-rail {
+  --hrail-w: 23rem;
+}
+@media (max-width: 767px) {
+  .hrail,
+  .cap-rail,
+  .presta-rail {
+    --hrail-w: 82vw;
+  }
+  .hrail__bar {
+    flex-wrap: wrap;
+  }
+  .hrail__item--divider {
+    flex-basis: 8rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hrail__progress span,
+  .hrail__btn,
+  .hrail__marker {
+    transition: none;
+  }
+}
+
+/* ============================================================
    LECTURE D'ARTICLE — refonte parcours/lecture
    Tokens locaux (papier tiédi + encre pleine) puis prose,
    fil de mémoire, TOC, primitives rédacteur, signature.
