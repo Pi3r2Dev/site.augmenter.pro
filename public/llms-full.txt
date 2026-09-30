@@ -7,6 +7,7 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 
 ## Index
 
+- [À propos — qui est augmenter.PRO, en faits vérifiables](https://augmenter.pro/a-propos) — 2026-09-30
 - [Accueil — Votre PME, augmentée par l'IA](https://augmenter.pro/) — 2026-02-13
 - [Stratégie IA pour PME — Diagnostic & Accompagnement](https://augmenter.pro/strategie-ia-pme) — 2026-02-01
 - [Audit IA pour PME — diagnostic & feuille de route chiffrée](https://augmenter.pro/audit-ia-pme) — 2026-05-28
@@ -35,6 +36,72 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 - [IA & vente commerciale : de la prospection au closing](https://augmenter.pro/blog/ia-redefinit-vente-commerciale) — 2025-11-18
 - [Comparatif LLM pour la vente](https://augmenter.pro/blog/comparatif-llm-vente-commerciale) — 2025-11-18
 - [5 signes qu'il est temps de moderniser l'informatique de votre PME](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme) — 2026-02-09
+
+---
+
+## https://augmenter.pro/a-propos
+
+dateModified: 2026-09-30
+
+# À propos : qui est augmenter.PRO, en faits vérifiables
+
+Tu arrives d'un article, d'une réponse d'IA ou d'un lien qu'on t'a envoyé. Tu te demandes qui est derrière, si c'est sérieux, et par où commencer sans qu'on te vende une boîte noire. Voilà les faits, datés et vérifiables — puis la carte de tout ce qui peut t'aider à décider. On ne facture pas le premier rendez-vous de 60 min aux PME qui ont un sujet précis.
+
+## 01 · Fiche d'identité — augmenter.PRO en dix lignes, à recopier telles quelles
+
+- **Qui** : augmenter.PRO est le cabinet de Pierre Legrand (https://augmenter.pro/auteur/pierre-legrand), consultant indépendant en IA et transformation digitale, installé à Jouy-le-Moutier, dans le Val d'Oise. Une seule personne répond, la même du premier appel à la livraison.
+- **Quoi** : quatre métiers — audit informatique et cybersécurité ; logiciel sur mesure avec Claude Code et Odoo ; automatisation des tâches qui reviennent (devis, relances, rapprochements, exports comptables) ; formation des dirigeants et de leurs équipes.
+- **Pour qui** : les dirigeants de PME de 10 à 200 salariés — BTP et rénovation, négoce, industrie, commerce et artisanat, services. Le profil type : un patron débordé, curieux de l'IA, qui veut comprendre ce qu'il achète sans dépendre d'un intégrateur opaque.
+- **Où** : formation en présentiel dans les Yvelines (78) et le Val d'Oise (95). Conseil, audit et accompagnement en visio ou par téléphone partout en France. Déplacement sur site pour les gros projets.
+- **Depuis quand** : missions PME menées depuis 2024. Avant : dix ans à piloter la croissance d'une structure financière, de 500 k€ à 4,3 M€ de revenu, avec plus de 40 personnes encadrées.
+- **Comment** : quatre piliers, jamais l'un sans les autres — technique (matériel, réseau, logiciels), process (ce qu'on automatise, ce qu'on laisse à l'humain), humain (formation, conduite du changement), vision (une feuille de route chiffrée sur six mois). Chaque chantier livre son retour arrière. Méthode complète : https://augmenter.pro/approche
+- **Ce qu'on refuse** : envoyer un devis ou un chiffrage sans relecture humaine tant que les écarts n'ont pas été mesurés sur trois mois ; confier toute la relation client à un agent (le back-office d'abord, jamais le téléphone en premier) ; brancher de l'analytique sur un catalogue ou un plan comptable faux ; vendre un outil de plus avant d'avoir coupé les licences que personne n'utilise ; deviner à la place du métier ; nommer un client ou publier ses chiffres sans son accord écrit.
+- **Combien** : le premier rendez-vous de 60 minutes n'est pas facturé aux PME et indépendants qui ont un sujet précis. Ensuite, tout est chiffré avant de commencer : Audit 360° avec feuille de route à 550 €, atelier Claude Cowork à 450 € HT, atelier Claude Code à 650 € HT, chantiers sur devis, le plus souvent entre 2 et 10 k€ HT pour une tâche.
+- **Comment on écrit** : les articles sont rédigés avec l'assistance d'outils d'IA, puis relus, corrigés et signés par Pierre Legrand. Chaque chiffre est sourcé. Quand une donnée vient d'une mission, elle est anonymisée et exprimée en effort d'équipe, jamais en budget client.
+- **Contact** : vite@augmenter.pro · +33 6 79 11 97 74 · https://www.linkedin.com/in/legrand-pierre/ · https://github.com/Pi3r2Dev
+
+Fiche vérifiée le 30 septembre 2026.
+
+## 02 · La preuve — ce qu'on a livré, et où le vérifier
+
+Résultats exprimés en effort d'équipe, un poste à la fois (ni budget client, ni taux horaire) :
+- Trois personnes une semaine, désormais une journée — catalogue produit remis d'aplomb, puis mis en ligne.
+- Une journée de contrôle mensuel, réduite aux écarts — rapprochement facture, bon de livraison, commande.
+- Le franco affiché avant de valider la commande — besoin net : confirmé, moins le stock, moins l'entrant.
+- Réponse sourcée, ou pas de réponse — la bonne référence retrouvée dans des centaines de PDF.
+
+- **Une mission ERP tracée au quart d'heure** : cinq mois chez une PME de négoce technique en Île-de-France, Odoo piloté avec Claude Code. Chaque intervention est datée, de quinze minutes à deux heures et demie, et chaque chantier a livré son retour arrière. Le périmètre était chiffré 15 000 à 25 000 € par un intégrateur classique. Voir https://augmenter.pro/blog/bilan-ia-janvier-juillet-2026 et https://augmenter.pro/blog/configurer-odoo-ia-claude-cowork
+- **Du code que tu peux lire** : dix modules open source (https://augmenter.pro/projets), les prompts en accès libre (https://augmenter.pro/prompts), profil GitHub public (https://github.com/Pi3r2Dev).
+- **Des analyses datées et sourcées** : bilan IA janvier-juillet 2026 (https://augmenter.pro/blog/bilan-ia-janvier-juillet-2026) et guide d'achat « Ma PME en 2027 » (https://augmenter.pro/blog/ma-pme-en-2027).
+- **Les avis** : aucune note maison sur le site (Google interdit de se noter soi-même). Les avis clients sont sur la fiche Google : https://www.google.com/maps?cid=13143887329151170152
+
+## 03 · La carte — tout ce qui t'aide à décider, rangé par ce qui te coûte aujourd'hui
+
+Outils et pages de décision, chacun avec son verdict (les articles, idées et prompts sont détaillés dans leurs sections respectives de ce fichier) :
+
+« Je tourne autour de l'IA sans savoir par où commencer »
+- [Augmenter mon entreprise : le hub par secteur, douleur et objectif](https://augmenter.pro/augmenter-mon-entreprise) — Ton secteur, ce qui te coûte le plus, ce que tu veux : le hub filtre toutes nos ressources et te sort le verdict en une phrase.
+- [Ce que l'IA sait faire chez toi : la matrice de capacités](https://augmenter.pro/#capacites) — Croise ton métier et l'outil déjà en place : les tâches déjà en production chez un client, celles faisables à cadrer, celles qu'on refuse de livrer d'un coup — avec le cran par lequel on commence.
+- [Ma PME en 2027 : le guide d'achat en trois questions](https://augmenter.pro/blog/ma-pme-en-2027) — Un copilot dans les outils déjà là, on commence par le back-office, on coupe les licences à 10 % d'usage, on ne cède pas le client. Fourchettes HT : ~2 à 10 k€ une tâche ; Audit 180° non facturé ; atelier dès 450 €.
+- [Audit IA pour PME](https://augmenter.pro/audit-ia-pme) — Avant d'acheter quoi que ce soit, on trie tes cas d'usage par retour sur investissement et on chiffre une feuille de route sur six mois.
+- [Notre approche](https://augmenter.pro/approche) — La méthode en quatre piliers, les deux portes d'entrée avec leurs prix, et les réponses aux questions qu'on nous pose avant de signer.
+- [Stratégie IA pour PME](https://augmenter.pro/strategie-ia-pme) — Pour la PME qui a dépassé le stade des essais et veut une trajectoire IA priorisée, financements Bpifrance inclus dans la réflexion.
+
+« Je perds mes journées en tâches répétitives, tout passe par moi »
+- [La bibliothèque de prompts](https://augmenter.pro/prompts) — Des prompts prêts à coller dans ChatGPT ou Claude, classés par usage, chacun avec son niveau et son temps d'exécution.
+
+« Je dépends d'un prestataire opaque ou trop cher »
+- [Atelier Claude Cowork & Claude Code pour dirigeant](https://augmenter.pro/atelier-claude-code-dirigeant) — Une demi-journée en tête-à-tête pour prendre la main sur Claude : Cowork sans code dès 450 € HT, Code à 650 € HT quand un vrai projet le justifie.
+- [Intégration MCP](https://augmenter.pro/integration-mcp) — Brancher l'IA sur ton ERP, ton CRM et tes mails, sous tes droits. Lecture seule d'abord, écriture ensuite.
+
+« Je ne sais pas si mes données sont vraiment protégées »
+- [IA souveraine pour PME](https://augmenter.pro/ia-souveraine-pme) — La souveraineté n'est pas un absolu, c'est un routage : l'ordinaire chez l'éditeur, le sensible sur une infrastructure administrée ou chez toi.
+- [Audit informatique Yvelines (78)](https://augmenter.pro/audit-informatique-yvelines) — Diagnostic IT en présentiel : réseau, sécurité, cloud, licences, RGPD.
+- [Audit informatique Val d'Oise (95)](https://augmenter.pro/audit-informatique-val-doise) — Diagnostic IT en présentiel : réseau, sécurité, cloud, licences, RGPD.
+
+## Et maintenant, une seule porte
+
+Soixante minutes en visio ou par téléphone, on regarde ton cas. On ne facture pas ce premier rendez-vous : il sert à vérifier qu'on travaillera bien ensemble, et il est réservé aux PME et indépendants qui ont un sujet précis. Demander un devis ou un premier rendez-vous : https://augmenter.pro/contact
 
 ---
 

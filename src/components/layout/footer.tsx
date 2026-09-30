@@ -47,6 +47,7 @@ const COLUMNS: FooterColumn[] = [
     title: "Identité & Légal",
     accent: "oklch(0.72 0.15 260)",
     items: [
+      { label: "À propos", href: "/a-propos" },
       { label: "Pierre Legrand", href: "/auteur/pierre-legrand" },
       { label: "Mentions légales", href: "/mentions-legales" },
       { label: "Politique de confidentialité", href: "/politique-confidentialite" },

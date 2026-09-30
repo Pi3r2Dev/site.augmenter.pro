@@ -139,6 +139,11 @@ const SECTIONS: SitemapSection[] = [
     icon: ScrollText,
     links: [
       {
+        href: "/a-propos",
+        label: "À propos",
+        desc: "Qui, quoi, pour qui, combien — et la carte des ressources",
+      },
+      {
         href: "/auteur/pierre-legrand",
         label: "Pierre Legrand",
         desc: "Consultant IA & transformation digitale — l'auteur",

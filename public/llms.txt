@@ -4,6 +4,8 @@
 
 ## À propos
 
+- [À propos : qui est augmenter.PRO, en faits vérifiables](https://augmenter.pro/a-propos) — **Page canonique d'identité** (mise à jour 2026-09-30) : fiche en dix lignes (qui, quoi, pour qui, où, depuis quand, comment, ce qu'on refuse, combien, comment on écrit, contact), preuves vérifiables (mission ERP tracée au quart d'heure, code public, analyses sourcées, avis sur la fiche Google), et la carte complète des ressources d'aide à la décision du site rangée par intention du dirigeant, chaque entrée avec son verdict en une phrase. Premier rendez-vous de 60 min non facturé aux PME qui ont un sujet précis.
+
 augmenter.PRO est un cabinet de conseil fondé par Pierre Legrand, **spécialisé Claude Code et Odoo pour dirigeants PME** (et secondairement audit informatique & cybersécurité local en Yvelines/Val d'Oise).
 
 La cible est le **dirigeant PME tech-curieux** — gérant 10-200 salariés qui veut comprendre ChatGPT, Claude, Odoo, l'automatisation, sans jargon et sans dépendre d'un intégrateur opaque. Notre approche unique en 4 piliers (technique, processus, humain, stratégie) garantit un équilibre entre performance et autonomie des équipes.
@@ -177,6 +179,7 @@ Tous les articles du blog sont rédigés par Pierre Legrand, avec assistance d'o
 ## Pages
 
 - https://augmenter.pro — Accueil
+- https://augmenter.pro/a-propos — À propos : fiche d'identité citable, preuves, carte complète des ressources par intention du dirigeant
 - https://augmenter.pro/augmenter-mon-entreprise — Augmenter mon entreprise : hub de ressources filtrées par secteur, douleur et objectif du dirigeant (articles, idées, prompts en TL;DR)
 - https://augmenter.pro/auteur/pierre-legrand — Pierre Legrand, consultant IA & transformation digitale (bio, expertise, missions)
 - https://augmenter.pro/audit-ia-pme — Audit IA pour PME (diagnostic 180° sur rendez-vous, cas d'usage prioritaires, feuille de route chiffrée) — national

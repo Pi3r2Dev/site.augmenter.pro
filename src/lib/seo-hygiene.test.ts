@@ -151,6 +151,54 @@ describe("notes unlisted /notes — hors index, hors maillage", () => {
   });
 });
 
+describe("page /a-propos — identité citable, maillée partout", () => {
+  // Pas `pathPrefixRe` : dans le sitemap l'URL est suivie de `<`.
+  const A_PROPOS_RE = /\/a-propos(?![\w-])/;
+
+  it("est présente dans le sitemap, les llms.txt, le plan du site et le footer", () => {
+    for (const file of [
+      "public/sitemap.xml",
+      "public/llms.txt",
+      "public/llms-full.txt",
+      "src/app/plan-du-site/page.tsx",
+      "src/components/layout/footer.tsx",
+      "src/app/auteur/pierre-legrand/page.tsx",
+    ]) {
+      expect(readFileSync(join(root, file), "utf8"), file).toMatch(A_PROPOS_RE);
+    }
+  });
+
+  it("ouvre la section « À propos » de llms.txt (page canonique pour les agents IA)", () => {
+    const llms = readFileSync(join(root, "public/llms.txt"), "utf8");
+    const section = llms.slice(llms.indexOf("## À propos"));
+    const firstLink = section.indexOf("https://augmenter.pro/a-propos");
+    const nextHeading = section.indexOf("\n## ", 3);
+    expect(firstLink).toBeGreaterThan(0);
+    expect(firstLink).toBeLessThan(nextHeading);
+  });
+
+  it("porte un lastmod du jour de publication ou plus récent dans le sitemap", () => {
+    const sitemap = readFileSync(join(root, "public/sitemap.xml"), "utf8");
+    const match = sitemap.match(
+      /\/a-propos<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/,
+    );
+    expect(match).not.toBeNull();
+    expect(match![1] >= "2026-09-30").toBe(true);
+  });
+
+  it("n'emploie aucun mot interdit (« gratuit », « offert ») ni balisage d'avis", () => {
+    const dir = join(root, "src/app/a-propos");
+    const files = readdirSync(dir).map((f) => join(dir, f));
+    files.push(join(root, "src/app/not-found.tsx"));
+    expect(files.length).toBeGreaterThan(1);
+    for (const file of files) {
+      const src = readFileSync(file, "utf8");
+      expect(src, file).not.toMatch(/\b(gratuit|offert)\w*/i);
+      expect(src, file).not.toMatch(/AggregateRating|"Review"/);
+    }
+  });
+});
+
 describe("redirections SEO", () => {
   it("redirige /accueil-2 vers / en 301 (plus d'URL publique de démo)", async () => {
     const redirects = nextConfig.redirects

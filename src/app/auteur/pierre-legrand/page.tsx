@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   Briefcase,
+  Building2,
   Github,
   GraduationCap,
   Linkedin,
@@ -195,6 +196,13 @@ export default function PierreLegrandPage() {
               </div>
 
               <div className="mt-5 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/a-propos"
+                  className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-primary/5 px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+                >
+                  <Building2 className="h-4 w-4" />
+                  À propos d&apos;augmenter.PRO
+                </Link>
                 <a
                   href="https://www.linkedin.com/in/legrand-pierre/"
                   target="_blank"
