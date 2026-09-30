@@ -17,13 +17,13 @@
 
 ## ma-pme-en-2027.webp
 
-- **Type** : Fond abstrait placeholder (violet + ambre) — **à remplacer** par illustration Gemini 16:9
-- **Dimensions** : Paysage 16:9 — 1600×900
-- **Poids** : 3 Ko (placeholder dégradé) — viser < 300 Ko après Gemini
-- **Description** : Dégradé papier près du blanc, wash violet à gauche, accent ambre à droite. Pas de texte. En attendant le hero définitif (guide d'achat 2027 : cinq postes du gérant vs copilote dans l'existant).
-- **Contexte éditorial** : Image hero de l'article « Ma PME en 2027 ».
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-09-30)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover)
+- **Poids** : 77 Ko (WebP, qualité 80) ; OG `og/ma-pme-en-2027.jpg` 1200×630, 83 Ko
+- **Description** : Scène coupée en deux par une signature manuscrite dégradée violet → ambre. À gauche, en violet (#7c3aed), un gérant épuisé à son bureau de nuit, entouré de cinq silhouettes fantômes de lui-même portant chacune un objet d'un poste (calculatrice, bac à courrier, badge, casque et téléphone avec bulle de client en colère, écran de caméra), reliées à lui par des pointillés emmêlés. À droite, en ambre (#f59e0b), le même gérant, serein, signe un seul document ; un petit robot ambre installé dans les outils déjà présents (mail, messagerie, tableau d'ERP) lui prépare un dossier (devis, PDF, tableur avec trois lignes d'écart surlignées), flux en pointillés droits. Motifs de circuits imprimés dans les coins. Seul texte : le mot « Signature », deux fois, en écriture manuscrite.
+- **Contexte éditorial** : Image hero de l'article « Ma PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la fois » — le gérant qui tient cinq postes, puis l'assistant qui prépare et l'humain qui signe (règle de signature).
 - **Usage suggéré** : Hero `/blog/ma-pme-en-2027` + OG `og/ma-pme-en-2027.jpg`.
-- **Alt text suggéré** : "Illustration abstraite violet et ambre pour le guide d'achat IA PME 2027"
+- **Alt text suggéré** : "Illustration d'un dirigeant de PME débordé qui tient cinq postes à la fois, puis du même dirigeant qui signe un seul document préparé par un assistant IA branché sur ses outils existants"
 
 ---
 
