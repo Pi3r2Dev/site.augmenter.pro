@@ -103,7 +103,7 @@ export function groupJournal(children: ReactNode): JournalSection[] {
         }
         flush();
         run = carry;
-        runWords = carry.reduce((n, c) => n + wordCount(c), 0);
+        runWords = carry.reduce<number>((n, c) => n + wordCount(c), 0);
       }
       run.push(node);
       runWords += w;
