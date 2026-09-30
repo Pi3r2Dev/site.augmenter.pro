@@ -45,11 +45,11 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: {
     default:
-      "Audit informatique & logiciel sur mesure PME · Yvelines (78) · augmenter.PRO",
+      "IA agentique & logiciel sur mesure PME · Audit IT 78 · augmenter.PRO",
     template: "%s | augmenter.PRO",
   },
   description:
-    "Consultant pour dirigeants de PME : audit IT & cybersécurité, logiciel sur mesure (Claude Code, Odoo), automatisation. Présentiel 78/95, visio France.",
+    "Consultant pour dirigeants de PME : IA agentique, logiciel sur mesure (Claude Code, Odoo), audit IT & cybersécurité. Présentiel 78/95, visio France.",
   keywords: [
     "consultant IA PME",
     "audit informatique PME",
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
   openGraph: pageOpenGraph({
     // Racine sans slash final — même forme que le `<loc>` du sitemap.
     path: "",
-    title: "Audit informatique & logiciel sur mesure PME · Yvelines (78) · augmenter.PRO",
+    title: "IA agentique & logiciel sur mesure PME · Audit IT 78 · augmenter.PRO",
     description:
-      "Consultant pour dirigeants de PME : audit IT & cybersécurité, logiciel sur mesure (Claude Code, Odoo), automatisation. Présentiel 78/95, visio France.",
+      "Consultant pour dirigeants de PME : IA agentique, logiciel sur mesure (Claude Code, Odoo), audit IT & cybersécurité. Présentiel 78/95, visio France.",
   }),
   twitter: {
     card: "summary_large_image",
