@@ -18,7 +18,7 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 - [Bibliothèque de prompts IA](https://augmenter.pro/prompts) — 2026-02-13
 - [Nos projets & réalisations IA](https://augmenter.pro/projets) — 2026-02-01
 - [Blog — articles & tutos IA pour PME](https://augmenter.pro/blog) — 2026-02-13
-- [Ma PME en 2027 : guide d'achat IA (soustraire, fourchettes HT, on refuse l'agent client)](https://augmenter.pro/blog/ma-pme-en-2027) — 2026-09-18
+- [Ma PME en 2027 : guide d'achat IA (soustraire d'abord, fourchettes HT, règle de signature, on refuse l'agent client)](https://augmenter.pro/blog/ma-pme-en-2027) — 2026-09-30
 - [Contact & premier rendez-vous](https://augmenter.pro/contact) — 2026-02-01
 - [Le « patron-goulot » : quand l'IA rend le dirigeant PME encore plus indispensable](https://augmenter.pro/blog/patron-goulot-paradoxe-ia-dirigeant-pme) — 2026-05-21
 - [L'IA comme contradicteur : 5 prompts pour pressure-tester vos décisions de dirigeant PME](https://augmenter.pro/blog/ia-contradicteur-prompts-dirigeant-pme) — 2026-05-21

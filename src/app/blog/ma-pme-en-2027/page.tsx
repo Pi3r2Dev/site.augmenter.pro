@@ -16,40 +16,42 @@ import {
 } from "@/data/buying-guide-2027";
 
 export const metadata = articleMetadata({
-  title: "Guide d'achat IA PME 2027 : ce qu'on branche, ce qu'on coupe",
+  title: "Guide d'achat IA PME 2027 : ce qu'on branche, ce qu'on résilie",
   description:
-    "En 2027, la PME qui s'en sort n'a pas embauché une armée d'agents. Devis express HT, licences déjà payées, ce qu'on refuse. Audit 180° ou atelier dès 450 €.",
+    "Avant d'acheter de l'IA, ouvrez vos factures éditeurs. Ce qu'une PME branche en 2027, ce qu'elle coupe, ce que ça coûte en HT, et ce qu'on refuse de vendre en premier.",
   slug: "ma-pme-en-2027",
 });
 
 const faqItems = [
   {
-    question:
-      "Combien coûte le déploiement de l'IA dans une PME française en 2026-2027 ?",
+    question: "Combien coûte un premier chantier d'IA dans une PME ?",
     answer:
-      "Selon Pierre Legrand (augmenter.PRO, guide d'achat septembre 2026), un premier chantier utile — une tâche, branché sur les outils déjà là, avec validation humaine — se situe entre environ 2 000 et 10 000 € HT. L'Audit 180° (60 min) n'est pas facturé ; la cartographie 6 mois coûte 550 € HT ; former l'équipe à Claude Cowork commence à 450 € HT la demi-journée. Les pages qui annoncent 15 000 à 50 000 € parlent souvent d'un « projet IA » générique. L'écart, c'est le périmètre : on soustrait les licences fantômes, on n'ajoute pas une stack.",
+      "Entre 2 000 et 10 000 € HT quand il porte sur une seule tâche, branchée sur les outils déjà en place, avec un humain qui valide ce qui engage la marge. Ce sont les fourchettes de missions livrées par Pierre Legrand (augmenter.PRO), élargies d'un cran vers le haut. Les pages qui annoncent 15 000 à 50 000 € HT chiffrent un « projet IA » à périmètre ouvert, souvent avec une nouvelle stack à installer. L'écart vient du périmètre, pas d'un rabais.",
   },
   {
-    question:
-      "Faut-il Microsoft 365 Copilot pour toute l'équipe d'une PME ?",
+    question: "Le premier rendez-vous est-il payant ?",
     answer:
-      "Non. Copilot Chat est déjà inclus dans les offres Microsoft 365 Business éligibles : c'est un chat ancré sur le web, pas sur vos mails ni vos fichiers. Le complément Copilot Business coûte 18,20 € HT par utilisateur et par mois au catalogue France (promo 15,60 € jusqu'au 30 septembre 2026, première année). Quinze sièges à ce tarif, c'est environ 3 300 € HT par an. On ne les achète que là où le flux mail et réunion est réel — deux ou trois personnes, pas quinze.",
+      "Non. L'Audit 180° dure 60 minutes, en visio partout en France ou en présentiel dans les Yvelines et le Val-d'Oise, et n'est pas facturé, sous conditions : une PME ou un indépendant, un sujet précis, l'intention d'agir. La cartographie complète (Audit 360°, une demi-journée, feuille de route sur 6 mois) coûte 550 € HT. Un atelier Claude Cowork pour l'équipe commence à 450 € HT la demi-journée.",
+  },
+  {
+    question: "Faut-il Microsoft 365 Copilot pour toute l'équipe ?",
+    answer:
+      "Rarement. Copilot Chat, le chat ancré sur le web, est déjà compris dans les abonnements Microsoft 365 Business éligibles. Le complément Copilot Business, celui qui lit vos mails et vos fichiers, coûte 18,20 € HT par utilisateur et par mois au catalogue France (15,60 € la première année jusqu'au 31 décembre 2026). Quinze sièges à ce tarif représentent environ 3 300 € HT par an. On les réserve aux deux ou trois personnes dont la journée se passe réellement dans Outlook et Teams.",
   },
   {
     question: "Un agent IA peut-il répondre aux clients à la place du commercial ?",
     answer:
-      "augmenter.PRO refuse de le vendre en premier. On commence par le back-office : ressaisie, recherche sourcée, préparation des réponses. Le téléphone et le lien commercial restent les vôtres. En France, la CNIL juge excessive une surveillance constante des salariés ; un agent qui « décroche tout » pose le même problème de confiance, côté client.",
+      "Techniquement, oui. Nous refusons de le livrer en premier. Un client régulier qui appelle veut aussi parler à quelqu'un, et une réponse ratée coûte plus qu'une heure de tri. On commence par le back-office : ressaisie, recherche sourcée, préparation des réponses que le commercial relit et envoie. Le premier niveau automatisé ne vient qu'ensuite, sur les sujets sans enjeu, une fois les écarts mesurés.",
   },
   {
-    question:
-      "Faut-il changer d'ERP (Sage, EBP, Odoo) pour faire de l'IA ?",
+    question: "Faut-il changer d'ERP (Sage, EBP, Odoo) pour faire de l'IA ?",
     answer:
-      "Non. Si Sage ou EBP suffisent au quotidien, on pont : export, écarts, assistant par-dessus ce qui marche. On ne migre pas « pour l'IA ». Odoo n'est un chantier que s'il est déjà là et bloqué chez l'intégrateur — cas déjà mesuré : 4 jours de remise d'aplomb plus formation, contre un devis à 3 500 €.",
+      "Non. Si Sage ou EBP tiennent le quotidien, on relie : export, rapprochement des écarts, assistant par-dessus ce qui fonctionne. On ne migre jamais « pour l'IA ». Odoo ne devient un chantier que s'il est déjà installé et bloqué chez l'intégrateur ; dans un cas publié, la remise à plat a pris quatre jours de travail face à un devis à 3 500 €.",
   },
   {
-    question: "Par où commencer si tout passe encore par le gérant ?",
+    question: "Par où commencer quand tout passe encore par le gérant ?",
     answer:
-      "Par le geste quotidien que personne n'aime, et par la facture éditeur ouverte à moins de 10 % d'usage réel. Souvent le premier livrable est une résiliation partielle — Copilot trop large, apps Odoo allumées pour rien — puis un copilote de triage et de comptes rendus qui produisent des actions. Vous signez encore. Vous ne triez plus.",
+      "Par deux inventaires : le geste quotidien que personne n'aime (devis, PDF, rapprochement, file de mails, relances) et les licences payées mais ouvertes à moins de 10 %. Le premier livrable est souvent une résiliation partielle, puis un assistant de triage et de comptes rendus qui produit des actions. Le gérant signe encore. Il ne trie plus.",
   },
 ];
 
@@ -63,42 +65,16 @@ const faqJsonLd = {
   })),
 };
 
-const howToJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  name: "Choisir quoi acheter en IA pour une PME en 2027",
-  description:
-    "Trois questions pour orienter un dirigeant de PME vers une porte d'entrée chiffrée, et vers ce qu'il ne faut pas acheter.",
-  totalTime: "PT5M",
-  step: [
-    {
-      "@type": "HowToStep",
-      name: "Le geste quotidien",
-      text: "Identifier le geste qui revient tous les jours et que personne n'aime : devis, PDF, rapprochement, file mail, relance, commande.",
-    },
-    {
-      "@type": "HowToStep",
-      name: "Les licences fantômes",
-      text: "Ouvrir les factures éditeurs. Si l'usage réel de la semaine est sous 10 %, résilier ou réduire les sièges avant d'ajouter un outil.",
-    },
-    {
-      "@type": "HowToStep",
-      name: "La validation humaine",
-      text: "Si ça engage la marge, le juridique ou le client, l'IA prépare et un humain signe. Sinon on peut aller plus vite, avec une revue a posteriori les premières semaines.",
-    },
-  ],
-};
-
 export default function Article() {
   return (
     <ArticleLayout
       title="Ma PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la fois"
-      excerpt="Guide d'achat pour dirigeant. Devis express, comparatif avec les logiciels déjà payés, ce qu'on branche — et ce qu'on refuse encore de vendre."
+      excerpt="Guide d'achat pour dirigeant. Ce qu'une PME branche en 2027, ce qu'elle résilie avant, ce que ça coûte en ordre de grandeur HT, et ce que nous refusons de vendre en premier."
       tags={["IA", "PME"]}
-      readTime="16 min"
+      readTime="14 min"
       date="18 septembre 2026"
       dateISO="2026-09-18"
-      dateModified="2026-09-18"
+      dateModified="2026-09-30"
       image="/images/blog/ma-pme-en-2027.webp"
       slug="ma-pme-en-2027"
     >
@@ -106,21 +82,33 @@ export default function Article() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
-      />
 
       <p>
-        En France, en 2025,{" "}
+        Le mardi soir, vous êtes encore dans la voiture quand le téléphone
+        vibre. Un client mécontent sur WhatsApp. Un écart de caisse que la
+        comptable a remarqué en fermant. Un devis que l’une de vos agences a
+        chiffré à un autre prix que l’autre agence, pour le même chantier.
+        Aucun de ces messages ne parle d’intelligence artificielle. Ils
+        parlent d’un gérant qui tient cinq postes en même temps, parce que
+        dans une PME de 5 à 80 personnes, la comptabilité, la file des mails,
+        les ressources humaines, les litiges et parfois la sécurité du dépôt
+        finissent toutes sur le même téléphone.
+      </p>
+      <p>
+        Ce qu’on vous propose pour en sortir a un vocabulaire bien rodé : des
+        « agents » qui répondraient à vos clients, Copilot sur chaque poste,
+        un « projet IA » facturé entre 15 000 et 50 000 € HT. Vous avez
+        peut-être déjà signé une partie de tout ça. Et vous êtes toujours dans
+        la voiture à 23 h.
+      </p>
+      <p>
+        Les chiffres publics racontent la même histoire, plus froidement. En
+        2025,{" "}
         <Memo type="num" label="18 % des entreprises 10+">
-          18&nbsp;% des entreprises de 10 salariés ou plus
+          18&nbsp;% des entreprises françaises de 10 salariés ou plus
         </Memo>{" "}
-        déclarent au moins une technologie d&apos;IA —{" "}
-        <Memo type="num" label="10 % dans le BTP">
-          10&nbsp;% dans la construction
-        </Memo>
-        . Source :{" "}
+        déclarent utiliser au moins une technologie d’IA, 15&nbsp;% sous 50
+        salariés et 10&nbsp;% dans la construction (
         <a
           href="https://www.insee.fr/fr/statistiques/9025878"
           target="_blank"
@@ -128,169 +116,201 @@ export default function Article() {
         >
           Insee Première n°&nbsp;2120
         </a>
-        , 21 juillet 2026. Le Baromètre{" "}
+        , juillet 2026). Le{" "}
         <a
-          href="https://www.francenum.gouv.fr/guides-et-conseils/strategie-numerique/comprendre-le-numerique/barometre-france-num-2025-le"
+          href="https://www.entreprises.gouv.fr/espace-presse/france-num-presente-la-6e-edition-de-son-barometre-annuel-sur-la-transformation"
           target="_blank"
           rel="noreferrer"
         >
-          France Num 2025
+          baromètre France Num 2025
         </a>{" "}
-        monte à 26&nbsp;% des TPE-PME, mais l&apos;usage utile reste minuscule :{" "}
-        6&nbsp;% analysent des documents, 5&nbsp;% automatisent une tâche. Le
-        reste, c&apos;est du texte généré. Vous «&nbsp;utilisez l&apos;IA&nbsp;».
-        Vous n&apos;avez rien déployé.
+        monte à 26&nbsp;% des TPE-PME, un taux qui a doublé en un an. Dans les
+        deux enquêtes, « utiliser l’IA » veut le plus souvent dire qu’un
+        abonnement a été souscrit et que quelqu’un rédige ses mails avec.
+        Entre cet abonnement et une tâche réellement retirée de l’agenda du
+        gérant, il y a tout ce guide.
       </p>
       <p>
-        Mardi, 23&nbsp;h, parking. WhatsApp d&apos;un client mécontent, mail
-        d&apos;un écart comptable, devis d&apos;une agence à un autre prix que
-        l&apos;agence d&apos;à côté. Personne n&apos;a «&nbsp;un problème
-        d&apos;IA&nbsp;». Le gérant d&apos;une PME de 5 à 80 personnes{" "}
-        <strong>est déjà cinq postes</strong> : il survole la compta, la file
-        mail, les RH, les conflits, parfois les caméras. L&apos;IA utile, c&apos;est
-        celle qui l&apos;en sort — pas cinq surveillants de plus.
+        C’est un guide d’achat. Il dit ce qu’une PME a intérêt à brancher en
+        2027, ce qu’elle a intérêt à résilier avant, ce que ça coûte en ordre
+        de grandeur HT, et ce que nous refusons de vendre en premier. Les
+        fourchettes sont celles de missions livrées par{" "}
+        <Link href="/auteur/pierre-legrand">Pierre Legrand</Link>, élargies
+        d’un cran vers le haut ; un devis signé sort de l’
+        <Link href="/contact">Audit 180°</Link>, pas de cette page. Mise à jour
+        le <time dateTime="2026-09-30">30 septembre 2026</time>.
       </p>
       <PullQuote>
-        Copilote 2027, selon augmenter.PRO : une IA dans les outils déjà payés,
-        qui prépare ; un humain qui signe l&apos;argent, le juridique et le
-        client.
+        Une PME de 2027 n’a pas embauché cinq salariés virtuels. Elle a retiré
+        trois tâches de l’agenda du gérant, et gardé la signature.
       </PullQuote>
-      <p>
-        Mise à jour du{" "}
-        <time dateTime="2026-09-18">18 septembre 2026</time>. Les fourchettes
-        ci-dessous sont un devis express — ordres de grandeur HT, missions
-        78/95 ou visio, signées par{" "}
-        <Link href="/auteur/pierre-legrand">Pierre Legrand</Link>. Pas un devis
-        signé. Le chiffrage précis sort de l&apos;
-        <Link href="/contact">Audit 180°</Link>.
-      </p>
 
       <KeyTakeaways title="À retenir en 30 secondes">
         <ul>
           <li>
-            La valeur n&apos;est pas dans un nouvel abonnement. Elle est dans{" "}
-            <strong>vos règles</strong> (marges, catalogue, PDF, habitudes) et
-            dans une validation humaine sur l&apos;argent, le juridique, le
-            client.
+            La valeur ne vient pas d’un abonnement de plus. Elle vient de{" "}
+            <strong>vos règles</strong> (marges, catalogue, habitudes de
+            réponse) mises à portée d’un assistant, et d’un humain qui signe
+            ce qui engage l’argent, le juridique ou le client.
           </li>
           <li>
-            Avant d&apos;acheter de l&apos;IA, on regarde ce qui est{" "}
-            <strong>payé et utilisé à 10&nbsp;%</strong>. Souvent l&apos;économie
-            est là : on coupe, on ne rajoute pas.
+            Le premier geste est une <strong>soustraction</strong> : toute
+            licence ouverte à moins de 10&nbsp;% se réduit ou se résilie avant
+            le moindre achat. Le budget récupéré paie souvent le premier
+            chantier.
           </li>
           <li>
-            Un chantier utile chez nous :{" "}
-            <Memo type="num" label="~2 à 10 k€ HT une tâche">
-              ~2 à 10&nbsp;k€ HT
-            </Memo>
-            , une tâche, overlay sur l&apos;existant. Les pages qui vendent
-            15–50&nbsp;k€ un «&nbsp;projet IA&nbsp;» n&apos;ont pas ouvert vos
-            factures éditeurs.
+            Un chantier utile porte sur <strong>une tâche</strong>, dans
+            l’écran déjà ouvert, entre 2 et 10&nbsp;k€ HT. Les « projets IA »
+            à 15 ou 50&nbsp;k€ chiffrent autre chose.
           </li>
           <li>
-            On refuse l&apos;agent qui parle à vos clients. Back-office d&apos;abord.
+            L’agent qui parle à vos clients, le devis envoyé sans relecture et
+            l’analytique posée sur des données non tenues attendent. Le
+            back-office passe d’abord.
           </li>
         </ul>
       </KeyTakeaways>
 
       <BuyingGuideTool />
 
-      <h2>2027, ce n&apos;est pas l&apos;IA qui gère l&apos;entreprise</h2>
+      <h2>Ce qui change vraiment dans une PME en 2027</h2>
       <p>
-        C&apos;est une journée où le dirigeant n&apos;ouvre plus 600 lignes pour
-        trouver trois erreurs. Où le commercial, client au téléphone, a la{" "}
-        <strong>bonne fiche technique citée</strong> en dix secondes. Où un
-        devis sort homogène d&apos;une agence à l&apos;autre — et quelqu&apos;un{" "}
-        <strong>valide</strong> avant envoi. Où la colère d&apos;un client
-        n&apos;atterrit plus en premier sur le gérant, à 23&nbsp;h, dans la
-        voiture.
+        En 2027, l’IA utile à une PME tient en trois pièces : une mémoire
+        métier, une règle de signature, et l’écran que l’équipe ouvre déjà.
+        Tout le reste (le modèle retenu, l’hébergement, le protocole qui relie
+        l’assistant à l’ERP) se règle après, et se change sans casser le
+        reste.
       </p>
       <p>
-        Trois organes. Pas cinq agents. C&apos;est l&apos;architecture que nous
-        vendons déjà — audit, intégration, co-construction. Le code n&apos;est
-        que le support.
+        Concrètement, c’est une journée où vous n’ouvrez plus 600 lignes pour
+        trouver trois erreurs, parce que seul l’écart vous est présenté. Où
+        le commercial, client au téléphone, obtient la bonne fiche technique
+        en dix secondes, avec la page d’où elle vient. Où le devis sort
+        homogène d’une agence à l’autre parce qu’il part du même catalogue et
+        des mêmes règles de marge, et où quelqu’un le relit avant envoi. Où
+        la colère d’un client arrive d’abord sous forme de brouillon de
+        réponse, avec l’historique de son dossier, et non en premier sur
+        votre téléphone.
       </p>
       <div className="my-6 overflow-x-auto">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="border-b border-border text-left">
-              <th className="py-2 pr-4 font-semibold">Organe</th>
-              <th className="py-2 pr-4 font-semibold">En français</th>
-              <th className="py-2 font-semibold">Ce que ça change</th>
+              <th className="py-2 pr-4 font-semibold">La pièce</th>
+              <th className="py-2 pr-4 font-semibold">Ce que c’est chez vous</th>
+              <th className="py-2 font-semibold">Pourquoi elle compte</th>
             </tr>
           </thead>
           <tbody className="text-muted-foreground">
-            <tr className="border-b border-border/50">
+            <tr className="border-b border-border/50 align-top">
               <td className="py-2 pr-4 font-medium text-foreground">
-                Le coffre-fort métier
+                La mémoire métier
               </td>
               <td className="py-2 pr-4">
-                Vos devis, PDF, mails, règles de marge — indexés, chez vous ou
-                chez nous, <strong>vous choisissez</strong>
+                Vos devis passés, vos fiches techniques, vos mails types, vos
+                règles de marge, indexés une fois. Hébergés chez vous ou sur
+                nos machines, c’est vous qui choisissez.
               </td>
               <td className="py-2">
-                L&apos;IA générique ne connaît pas «&nbsp;chez nous, on fait
-                comme ça&nbsp;»
+                Un assistant générique ne sait pas que « chez nous, on ne
+                descend jamais sous 22&nbsp;% sur la pose ». Le vôtre, si.
               </td>
             </tr>
-            <tr className="border-b border-border/50">
+            <tr className="border-b border-border/50 align-top">
               <td className="py-2 pr-4 font-medium text-foreground">
-                Le droit de signer
+                La règle de signature
               </td>
               <td className="py-2 pr-4">
-                L&apos;IA propose. Un humain tranche sur le devis, l&apos;écart
-                comptable, le message qui engage
+                L’assistant prépare. Une personne nommée tranche sur le devis,
+                l’écart comptable, le message qui engage.
               </td>
               <td className="py-2">
-                Vous vendez de la sérénité, pas de la vitesse aveugle
+                Un devis engage votre marge, une réponse engage votre
+                relation client. La vitesse sans relecture coûte plus qu’elle
+                ne rapporte.
               </td>
             </tr>
-            <tr>
+            <tr className="align-top">
               <td className="py-2 pr-4 font-medium text-foreground">
-                L&apos;écran déjà ouvert
+                L’écran déjà ouvert
               </td>
               <td className="py-2 pr-4">
-                Extension, mail, Telegram, overlay Odoo —{" "}
-                <strong>pas une app de plus</strong>
+                L’assistant vit dans le mail, dans WhatsApp ou Telegram, dans
+                une fenêtre à côté de l’ERP. Jamais dans une application de
+                plus à apprendre.
               </td>
-              <td className="py-2">L&apos;adoption se joue à la friction près</td>
+              <td className="py-2">
+                L’adoption se joue à la friction près. Une application
+                supplémentaire est ouverte trois semaines, puis oubliée.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
       <p>
-        Ce qu&apos;on ne construit pas : un poste qui «&nbsp;regarde toutes les
-        caméras&nbsp;», un flicage des badges, une IA qui «&nbsp;incentive&nbsp;»
-        l&apos;équipe. En France, c&apos;est toxique — et ce n&apos;est pas
-        augmenter.PRO. La{" "}
+        Il y a aussi ce que nous ne construisons pas, et que certains vous
+        proposeront : un poste qui « regarde toutes les caméras », un suivi
+        des badges, une IA qui « motive » l’équipe. La{" "}
         <a
-          href="https://cnil.fr/fr/la-videosurveillance-videoprotection-au-travail"
+          href="https://www.cnil.fr/fr/la-videosurveillance-videoprotection-au-travail"
           target="_blank"
           rel="noreferrer"
         >
           CNIL
         </a>{" "}
-        juge excessive une caméra au-dessus du poste, images en direct sur le
-        téléphone du gérant. Les caméras, uniquement en{" "}
-        <strong>anomalie</strong> (chantier, dépôt, sécurité). Les RH : un
-        aide-mémoire pour le boss, pas un chef d&apos;orchestre.
+        rappelle que les caméras ne doivent pas filmer les salariés sur leur
+        poste de travail, et elle a sanctionné un employeur dont le dispositif,
+        consulté en direct sur son téléphone, plaçait un salarié « sous
+        surveillance permanente et constante ». Les caméras servent à
+        l’anomalie (un dépôt ouvert à 3&nbsp;h du matin), pas au management.
+        Les ressources humaines reçoivent un aide-mémoire pour le dirigeant,
+        pas un chef d’orchestre.
       </p>
 
-      <h2>D&apos;abord soustraire : les logiciels payés, ouverts à 10&nbsp;%</h2>
+      <h2>Commencez par soustraire : les licences ouvertes à 10&nbsp;%</h2>
       <p>
-        Le réflexe 2026, c&apos;est d&apos;ajouter Copilot, un CRM, Make,
-        Notion. Le réflexe 2027, c&apos;est d&apos;ouvrir les factures éditeurs
-        et de demander : <strong>qui s&apos;en sert, vraiment, cette
-        semaine&nbsp;?</strong> Ordres de grandeur, pas une étude de marché.
-        Une PME type 12–20 personnes.
+        Avant d’acheter un outil d’IA, ouvrez les factures des éditeurs que
+        vous payez déjà. Dans la plupart des PME de 10 à 20 personnes que nous
+        auditons, le premier gain se trouve dans une résiliation, pas dans un
+        abonnement de plus. Le réflexe 2026 consistait à ajouter Copilot, un
+        CRM, Make ou Notion. Le réflexe 2027 consiste à demander, outil par
+        outil : qui s’en est servi, cette semaine ?
+      </p>
+      <p>L’inventaire tient en une après-midi.</p>
+      <ol>
+        <li>
+          <strong>Exportez les factures éditeurs</strong> des douze derniers
+          mois et rangez-les en trois colonnes : facturé au siège (Copilot,
+          ChatGPT Team, Odoo, Monday), facturé au forfait (Make, Zapier, un
+          logiciel métier), facturé par un prestataire (l’intégrateur, la
+          régie).
+        </li>
+        <li>
+          <strong>Comptez les sièges payés et les personnes qui ont ouvert
+          l’outil</strong> sur les trente derniers jours. Le centre
+          d’administration Microsoft 365 publie ces rapports d’utilisation ;
+          Odoo liste les applications installées et les utilisateurs actifs ;
+          pour les autres, une question à la cantonade suffit souvent.
+        </li>
+        <li>
+          <strong>Sous 10&nbsp;% d’usage réel, réduisez ou résiliez</strong>{" "}
+          avant tout achat. Ne « formez pas mieux » à un outil que personne
+          n’a demandé. Le budget récupéré va sur une seule tâche à volume.
+        </li>
+      </ol>
+      <p>
+        Les ordres de grandeur ci-dessous valent pour une PME de 12 à 20
+        personnes. Ce n’est pas une étude de marché, c’est ce que nous
+        retrouvons sur les factures.
       </p>
       <div className="my-6 overflow-x-auto">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="border-b border-border text-left">
               <th className="py-2 pr-4 font-semibold">Vous payez déjà</th>
-              <th className="py-2 pr-4 font-semibold">Tarif public (ordre)</th>
-              <th className="py-2 pr-4 font-semibold">Le piège 10&nbsp;%</th>
+              <th className="py-2 pr-4 font-semibold">Tarif public</th>
+              <th className="py-2 pr-4 font-semibold">Le piège des 10&nbsp;%</th>
               <th className="py-2 font-semibold">À la place</th>
             </tr>
           </thead>
@@ -300,33 +320,37 @@ export default function Article() {
                 Microsoft 365 Copilot
               </td>
               <td className="py-2 pr-4">
+                Complément Copilot Business :{" "}
                 <a
                   href="https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  18,20&nbsp;€ HT / user / mois
+                  18,20&nbsp;€ HT par utilisateur et par mois
                 </a>{" "}
-                au catalogue ; promo 15,60&nbsp;€ jusqu&apos;au{" "}
-                <strong>30 sept. 2026</strong> (1re année)
+                au catalogue France, 15,60&nbsp;€ la première année sur
+                engagement annuel (offre valable jusqu’au 31 décembre 2026).
               </td>
               <td className="py-2 pr-4">
-                15 licences, 2 personnes cliquent.{" "}
+                Quinze licences, deux personnes qui cliquent. Soit{" "}
                 <Memo type="num" label="~3 300 € HT / an à vide">
-                  ~{COPILOT_GHOST_YEAR_EUR.toLocaleString("fr-FR")}&nbsp;€ HT / an
+                  ~{COPILOT_GHOST_YEAR_EUR.toLocaleString("fr-FR")}&nbsp;€ HT
+                  par an
                 </Memo>{" "}
-                pour du vide. Copilot Chat est souvent{" "}
+                pour des sièges vides, alors que Copilot Chat est{" "}
                 <a
                   href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-licensing"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  déjà inclus
-                </a>
+                  déjà compris
+                </a>{" "}
+                dans les abonnements Business éligibles.
               </td>
               <td className="py-2">
-                2–3 licences là où le mail vit. Le métier (devis, PDF, écarts)
-                se branche sur Odoo / le catalogue, pas sur Word
+                Deux ou trois sièges, pour les personnes dont la journée se
+                passe dans Outlook et Teams. Le métier (devis, PDF, écarts) se
+                branche sur le catalogue et l’ERP, pas sur Word.
               </td>
             </tr>
             <tr className="border-b border-border/50 align-top">
@@ -334,74 +358,87 @@ export default function Article() {
                 Odoo + intégrateur
               </td>
               <td className="py-2 pr-4">
+                À partir de{" "}
                 <a
-                  href="https://www.odoo.com/pricing"
+                  href="https://www.odoo.com/fr_FR/pricing-plan"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  19,90–29,90&nbsp;€ / user / mois
+                  19,90&nbsp;€ HT par utilisateur et par mois
                 </a>{" "}
-                (promo 1re année) + devis intégrateur type{" "}
-                <strong>3&nbsp;500&nbsp;€</strong>
+                (plan Standard, engagement annuel), plus le devis de
+                l’intégrateur : 3&nbsp;500&nbsp;€ déjà vus pour une remise à
+                plat.
               </td>
               <td className="py-2 pr-4">
-                15 apps allumées, 5 utilisées. Chaque tweak = rappeler le
-                prestataire
+                Quinze applications installées, cinq utilisées. Chaque réglage
+                repasse par le prestataire, à la journée.
               </td>
               <td className="py-2">
-                Socle 5–7 modules. Paramétrage + formation (cas réel :{" "}
-                <strong>4 jours</strong> au lieu de 3&nbsp;500&nbsp;€)
+                Un socle de cinq à sept modules, paramétré et expliqué à
+                l’équipe. Cas publié : quatre jours de travail au lieu du
+                devis à 3&nbsp;500&nbsp;€.
               </td>
             </tr>
             <tr className="border-b border-border/50 align-top">
               <td className="py-2 pr-4 font-medium text-foreground">
-                Sage / EBP / Ciel
+                Sage, EBP, Ciel
               </td>
               <td className="py-2 pr-4">
-                Sage 50 Comptabilité Simply :{" "}
+                Sage 50 Comptabilité Simply : environ{" "}
                 <a
                   href="https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/pdf/conditions-generales/2026/guide-produits-et-tarifs_2026_01_15_sans_spc.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  252&nbsp;€ HT / an
-                </a>
-                , 1 utilisateur. EBP GC Pro : ~50–62&nbsp;€ HT / mois, 1 user
-                inclus — pas «&nbsp;par siège&nbsp;» comme Copilot
+                  252&nbsp;€ HT par an
+                </a>{" "}
+                pour un poste (guide tarifs de janvier 2026). EBP Gestion
+                Commerciale Pro : de l’ordre de 50 à 60&nbsp;€ HT par mois, un
+                utilisateur compris. Ces outils se facturent au poste, pas au
+                siège.
               </td>
               <td className="py-2 pr-4">
-                Module CRM, stock ou «&nbsp;IA&nbsp;» acheté, Excel reste la
-                source de vérité
+                Un module CRM, stock ou « IA » acheté en plus, et Excel qui
+                reste la source de vérité.
               </td>
               <td className="py-2">
-                On ne migre pas pour migrer. On pont : export, écarts, assistant
-                par-dessus ce qui marche
+                On ne migre pas pour migrer. On relie : export, rapprochement
+                des écarts, assistant par-dessus ce qui fonctionne.
               </td>
             </tr>
             <tr className="border-b border-border/50 align-top">
               <td className="py-2 pr-4 font-medium text-foreground">
-                ChatGPT Team / Claude × l&apos;équipe
+                ChatGPT Team, Claude pour toute l’équipe
               </td>
-              <td className="py-2 pr-4">Dizaines d&apos;€ / user / mois</td>
               <td className="py-2 pr-4">
-                Tout le monde a un siège, personne n&apos;a le{" "}
-                <strong>contexte entreprise</strong>
+                Quelques dizaines d’euros par utilisateur et par mois.
+              </td>
+              <td className="py-2 pr-4">
+                Tout le monde a un siège, personne n’a le contexte de
+                l’entreprise : ni les marges, ni le catalogue, ni les
+                habitudes de réponse.
               </td>
               <td className="py-2">
-                1–3 sièges + un coffre-fort (PDF, devis, règles)
+                Un à trois sièges, et une mémoire métier partagée (devis,
+                PDF, règles) que chaque siège consulte.
               </td>
             </tr>
             <tr className="align-top">
               <td className="py-2 pr-4 font-medium text-foreground">
-                Make / Zapier / Monday
+                Make, Zapier, Monday
               </td>
-              <td className="py-2 pr-4">20–300&nbsp;€ / mois, ou 8–20&nbsp;€ / user</td>
               <td className="py-2 pr-4">
-                Scénarios cassés, ou le vrai Kanban c&apos;est le tableau blanc
+                De 20 à 300&nbsp;€ par mois selon le volume, ou 8 à 20&nbsp;€
+                par utilisateur.
+              </td>
+              <td className="py-2 pr-4">
+                Des scénarios cassés que plus personne n’ose toucher. Le vrai
+                kanban est resté sur le tableau blanc.
               </td>
               <td className="py-2">
-                Une brique, mesurée. Relance devis{" "}
-                <strong>avec arrêt si le client répond</strong>
+                Une brique, mesurée. Par exemple la relance de devis qui
+                s’arrête dès que le client répond.
               </td>
             </tr>
           </tbody>
@@ -410,26 +447,29 @@ export default function Article() {
       <p className="text-xs text-muted-foreground">{DISCLAIMER}</p>
       <Callout>
         <p>
-          <strong>Règle des 10&nbsp;%.</strong> Si l&apos;usage réel de la
-          semaine est sous 10&nbsp;%, on ne «&nbsp;forme pas mieux&nbsp;». On{" "}
-          <strong>résilie</strong> ou on réduit les sièges, et on met le budget
-          sur une seule tâche à volume. C&apos;est souvent plus rentable
-          qu&apos;un copilote générique — et c&apos;est de l&apos;agilité, pas
-          du low-cost : moins d&apos;outils, plus de geste fini.
+          <strong>
+            <Memo type="idea" label="Règle des 10 %">
+              Règle des 10&nbsp;%.
+            </Memo>
+          </strong>{" "}
+          Si moins d’une personne sur dix a ouvert l’outil cette semaine, on
+          ne forme pas mieux, on réduit ou on résilie, et le budget va sur une
+          seule tâche à volume. Ce n’est pas une politique d’économies, c’est
+          une politique d’attention : moins d’outils, plus de gestes finis.
         </p>
       </Callout>
 
-      <h2>Devis express : le marché à 15–50&nbsp;k€, une tâche à 2–10&nbsp;k€</h2>
+      <h2>Combien ça coûte : 15 à 50&nbsp;k€ sur le marché, 2 à 10&nbsp;k€ pour une tâche</h2>
       <p>
-        Les pages «&nbsp;coût projet IA PME 2026&nbsp;» que les moteurs
-        recopient déjà annoncent{" "}
-        <strong>15&nbsp;000 à 50&nbsp;000&nbsp;€ HT</strong> un premier projet.
-        Chez augmenter.PRO, le premier chantier utile est plus étroit — et
-        c&apos;est voulu. On utilise l&apos;IA pour{" "}
-        <strong>accélérer une tâche que vous faites déjà</strong>, dans
-        l&apos;écran que l&apos;équipe ouvre déjà. Moins de semaines, moins de
-        stack, plus de productivité mesurable. C&apos;est notre force : pas un
-        discount, une agilité de périmètre.
+        Un premier chantier d’IA utile dans une PME coûte entre 2 000 et
+        10 000&nbsp;€ HT quand il porte sur une seule tâche, branchée sur les
+        outils en place, avec un humain qui valide. Les pages qui annoncent
+        15 000 à 50 000&nbsp;€ HT ne mentent pas : elles chiffrent un
+        « projet IA » à périmètre ouvert, souvent avec une nouvelle stack à
+        installer et à faire adopter. L’écart vient du périmètre. Accélérer
+        une tâche que l’équipe fait déjà, dans l’écran qu’elle ouvre déjà,
+        demande moins de semaines et moins de logiciels qu’en installer une
+        nouvelle.
       </p>
       <div className="my-6 overflow-x-auto">
         <table className="w-full border-collapse text-sm">
@@ -437,7 +477,7 @@ export default function Article() {
             <tr className="border-b border-border text-left">
               <th className="py-2 pr-4 font-semibold">Poste</th>
               <th className="py-2 pr-4 font-semibold">Ce que le web répond</th>
-              <th className="py-2 font-semibold">Ce qu&apos;on livre</th>
+              <th className="py-2 font-semibold">Ce que nous livrons</th>
             </tr>
           </thead>
           <tbody className="text-muted-foreground">
@@ -454,18 +494,32 @@ export default function Article() {
         </table>
       </div>
       <p>
-        Fourchettes <strong>HT</strong>, missions déjà livrées. Cela ne
-        s&apos;applique pas si vous n&apos;avez ni catalogue, ni file mail, ni
-        ERP : d&apos;abord un process, pas un copilote.
+        Trois choses font bouger une fourchette. La propreté des données
+        d’abord : un catalogue plein de doublons ou un plan comptable
+        approximatif ajoute des jours, parce qu’il faut remettre en ordre
+        avant de brancher quoi que ce soit. Le nombre d’écrans à toucher
+        ensuite : un assistant qui lit l’ERP coûte moins qu’un assistant qui
+        lit l’ERP, le mail et le portail fournisseur. Le niveau de validation
+        enfin : plus la règle de signature est stricte, plus il faut de
+        temps pour la calibrer, et c’est du temps bien placé. Dans nos
+        fourchettes, nous comptons le cadrage, la mise en place, la formation
+        de la personne qui valide et le suivi des écarts les premières
+        semaines. Les abonnements aux modèles (quelques dizaines d’euros par
+        mois) et la reprise d’un catalogue sale restent à part.
+      </p>
+      <p>
+        Onze portes, une par situation. La première colonne est la phrase
+        que vous prononceriez ; la dernière dit ce que vous gardez et ce que
+        vous n’achetez pas.
       </p>
       <div className="my-6 overflow-x-auto">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="border-b border-border text-left">
-              <th className="py-2 pr-4 font-semibold">Si c&apos;est ça, chez vous</th>
+              <th className="py-2 pr-4 font-semibold">Si c’est ça, chez vous</th>
               <th className="py-2 pr-4 font-semibold">Porte</th>
               <th className="py-2 pr-4 font-semibold">Ordre de grandeur</th>
-              <th className="py-2 font-semibold">Vous gardez / vous coupez</th>
+              <th className="py-2 font-semibold">Vous gardez (vous n’achetez pas)</th>
             </tr>
           </thead>
           <tbody className="text-muted-foreground">
@@ -490,77 +544,134 @@ export default function Article() {
       </div>
       <p className="text-xs text-muted-foreground">{DISCLAIMER}</p>
       <p>
-        Preuves déjà publiques, pas des promesses : devis BTP{" "}
+        Ces fourchettes s’appuient sur des chantiers déjà publiés, pas sur
+        des promesses. Un assistant de chiffrage chez une PME du BTP a ramené
+        le devis de{" "}
         <Memo type="num" label="2 h → 15 min">
-          2&nbsp;h → 15&nbsp;min
+          deux heures à quinze minutes
         </Memo>
-        ; Odoo remis d&apos;aplomb en 4 jours contre 3&nbsp;500&nbsp;€. Un ERP
-        de négoce technique en Île-de-France peut afficher des centaines de
-        milliers de fiches pour quelques milliers de produits réellement en
-        stock :{" "}
+        , avec relecture avant envoi. Un Odoo bloqué chez l’intégrateur a été
+        remis d’aplomb en quatre jours, face à un devis à 3&nbsp;500&nbsp;€.
+        Et chez une PME de négoce technique en Île-de-France, le catalogue
+        comptait ses fiches en centaines de milliers pour quelques milliers
+        de produits réellement en stock :{" "}
         <Memo type="idea" label="Aucun agent ne rattrape des données non tenues">
           aucun agent ne rattrape des données non tenues
         </Memo>
-        . Catalogue d&apos;abord, portail ensuite — on refuse l&apos;ordre
-        inverse.
+        . On remet le catalogue en ordre, puis on ouvre le portail. L’ordre
+        inverse échoue toujours.
+      </p>
+      <p>
+        Une limite, franche : si vous n’avez ni catalogue, ni file de mails
+        structurée, ni logiciel de gestion, ces fourchettes ne s’appliquent
+        pas. Il vous faut d’abord un processus écrit, pas un assistant.
       </p>
 
       <AtelierCallout />
 
-      <h2>Cran 2, après 90 jours — pas un devis d&apos;emblée</h2>
+      <h2>La règle de signature : l’IA prépare, quelqu’un chez vous tranche</h2>
       <p>
-        Une fois le premier geste en production, trois sujets deviennent
-        discutables. Avant, on les refuse : trop tôt, trop de surface, trop de
-        confiance accordée à un outil que personne n&apos;a encore corrigé.
+        <Memo type="idea" label="L'IA prépare, un humain signe">
+          Tout ce qui engage la marge, le juridique ou la relation client est
+          préparé par l’assistant et signé par une personne nommée
+        </Memo>
+        . Le reste (tri, recherche, premier jet, compte rendu) peut partir
+        seul, avec une relecture a posteriori les premières semaines. Cette
+        règle est la seule pièce du dispositif qui ne se négocie pas au
+        démarrage, parce qu’elle protège ce que l’IA ne voit pas : un devis
+        engage votre marge, une réponse à un client mécontent engage dix ans
+        de relation, une écriture comptable engage le bilan.
       </p>
-      <ul>
-        <li>
-          <strong>Brancher l&apos;IA sur l&apos;ERP.</strong> Lecture seule
-          d&apos;abord, écriture ensuite. En français : l&apos;assistant voit
-          stocks, clients, historiques, sous vos droits — pas un second logiciel
-          à apprendre.
-        </li>
-        <li>
-          <strong>Dossiers que vous n&apos;envoyez nulle part.</strong> Contrats,
-          RH, pièces d&apos;un litige : le modèle tourne chez vous, ou chez nous
-          sur nos machines. Vous choisissez.
-        </li>
-        <li>
-          <strong>Portail de réassort pour les clients réguliers.</strong> Ils
-          commandent seuls. Condition non négociable : le catalogue est propre.
-          Sinon le portail expose le désordre.
-        </li>
-      </ul>
+      <p>
+        Elle se relâche ensuite, mais sur des écarts mesurés, jamais sur une
+        promesse. Après trois mois, vous savez combien de lignes de devis
+        l’assistant a proposées et combien ont été corrigées. Si les lignes
+        standard (une pose au mètre, une référence catalogue) sortent justes
+        à chaque fois, elles peuvent passer en validation automatique, et la
+        relecture se concentre sur les lignes inhabituelles. Si le taux de
+        correction ne descend pas, le problème n’est pas l’assistant, ce sont
+        les règles de marge qui ne sont pas écrites, et c’est une information
+        utile en soi.
+      </p>
       <Callout>
         <p>
-          <strong>À retenir.</strong> Le cran 2 n&apos;est pas une ligne du
-          tableau ci-dessus. C&apos;est la suite, si le cran 1 tient trois mois
-          — écarts mesurés, pas une promesse.
+          <strong>À retenir.</strong> La validation humaine n’est pas une
+          prudence transitoire qu’on retire dès que « ça marche ». Elle est
+          le mécanisme par lequel vous apprenez, chiffres en main, où
+          l’assistant est fiable et où il ne l’est pas encore.
         </p>
       </Callout>
 
-      <h2>Ce que 2027 n&apos;est pas</h2>
+      <h2>Après 90 jours : ce qui devient discutable</h2>
       <p>
-        Pas un abonnement qui subit la baisse des prix de l&apos;IA. Pas cinq
-        salariés virtuels qui regardent tout. Pas une app de plus. Pas un devis
-        envoyé sans relecture — un devis{" "}
-        <strong>engage votre marge</strong>.
+        Une fois le premier geste en production depuis trois mois, trois
+        sujets s’ouvrent. Avant, nous les refusons : trop de surface, trop de
+        confiance accordée à un outil que personne n’a encore corrigé.
       </p>
+      <ul>
+        <li>
+          <strong>Brancher l’assistant sur l’ERP.</strong> En lecture seule
+          d’abord, en écriture ensuite. L’assistant voit les stocks, les
+          clients, l’historique des commandes, sous les droits de la personne
+          qui l’interroge (via un serveur MCP, le protocole qui relie un
+          assistant à un logiciel métier). Ce n’est pas un second logiciel à
+          apprendre, c’est le vôtre qui répond aux questions.
+        </li>
+        <li>
+          <strong>Les dossiers que vous n’envoyez nulle part.</strong>{" "}
+          Contrats, pièces d’un litige, éléments de rémunération : le modèle
+          tourne chez vous, ou sur nos machines, sans passer par un service
+          américain. Vous choisissez.
+        </li>
+        <li>
+          <strong>Le portail de réassort pour les clients réguliers.</strong>{" "}
+          Ils commandent seuls, sans ressaisie chez vous. La condition n’est
+          pas négociable : le catalogue est propre. Sinon le portail expose le
+          désordre à vos clients.
+        </li>
+      </ul>
+
+      <h2>Ce que nous refusons de vendre en premier</h2>
       <p>
-        C&apos;est un gérant qui n&apos;est plus comptable, standardiste, RH et
-        punching ball en même temps — et une équipe qui retrouve la pièce, le
-        prix, l&apos;écart,{" "}
-        <strong>dans l&apos;écran qu&apos;elle a déjà</strong>.
+        Quatre chantiers sont techniquement faisables aujourd’hui et
+        n’entrent pas dans un premier devis chez nous. Ils reviennent par
+        crans, quand le cran précédent a tenu.
       </p>
+      <ul>
+        <li>
+          <strong>L’agent qui parle à vos clients.</strong> Vos clients
+          réguliers appellent aussi pour parler à quelqu’un, et une réponse
+          ratée coûte plus qu’une heure de tri. On commence par le
+          back-office : ressaisie, recherche sourcée, brouillons que le
+          commercial relit. Le premier niveau automatisé vient ensuite, sur
+          les sujets sans enjeu.
+        </li>
+        <li>
+          <strong>Le devis envoyé sans relecture.</strong> Voir la règle de
+          signature ci-dessus. Cran 1, tout est relu ; cran 2, les lignes
+          standard passent seules, sur des écarts mesurés.
+        </li>
+        <li>
+          <strong>L’analytique posée sur des données non tenues.</strong> Si
+          le plan comptable ou le catalogue est faux, l’assistant ne le
+          corrige pas, il industrialise l’erreur. On chiffre d’abord la
+          remise en ordre, souvent moins lourde que redouté, puis on branche
+          l’analytique dessus.
+        </li>
+        <li>
+          <strong>La migration d’ERP « pour l’IA ».</strong> Un ERP se change
+          quand il bloque le métier, pas parce qu’un assistant aurait besoin
+          d’une API. Si Sage ou EBP tiennent le quotidien, on relie, on ne
+          remplace pas.
+        </li>
+      </ul>
       <p>
-        Si vous voulez d&apos;abord vous situer sans chiffre — métier × outil
-        déjà en place — l&apos;explorateur de la{" "}
-        <Link href="/">page d&apos;accueil</Link> montre ce qui est déjà en
-        production, ce qui se cadre, ce qu&apos;on refuse d&apos;emblée. Cette
-        page-ci est le guide d&apos;achat. Les deux ne se remplacent pas. Le
-        hub{" "}
+        Si vous voulez d’abord vous situer sans parler budget, l’explorateur
+        de la <Link href="/">page d’accueil</Link> croise votre métier et vos
+        outils en place, et dit ce qui est déjà en production, ce qui se
+        cadre, et ce qui attend. Le hub{" "}
         <Link href="/augmenter-mon-entreprise">Augmenter mon entreprise</Link>{" "}
-        range les ressources par douleur.
+        range les autres ressources par douleur.
       </p>
 
       <h2>Questions fréquentes</h2>
@@ -571,26 +682,33 @@ export default function Article() {
         </div>
       ))}
 
-      <h2>Prochain cran</h2>
+      <h2>Par où commencer cette semaine</h2>
       <p>
-        Soixante minutes. Vos outils, vos process, vos factures éditeurs. On
-        vous dit ce qu&apos;on branche, ce qu&apos;on laisse, ce qu&apos;on
-        résilie. Ou une demi-journée : l&apos;équipe apprend à pêcher, sur vos
-        cas, dès 450&nbsp;€ HT.
+        Trois choses se font sans nous, et valent d’être faites avant tout
+        rendez-vous. Sortez les factures éditeurs et comptez les sièges
+        ouverts sur trente jours. Notez le geste que vous, ou quelqu’un de
+        l’équipe, refaites chaque jour en soupirant. Décidez qui, chez vous,
+        signera ce que l’assistant prépare. Avec ces trois réponses, un
+        premier chantier se cadre en une heure.
       </p>
       <p>
-        <Link href="/contact">
-          <strong>Audit 180°</strong>
-        </Link>{" "}
-        — sur rendez-vous, présentiel 78/95 ou visio.{" "}
+        Cette heure, c’est l’<Link href="/contact">Audit 180°</Link> : vos
+        outils, vos processus, vos factures. Nous vous disons ce qu’on
+        branche, ce qu’on laisse, ce qu’on résilie, et nous vous orientons
+        ailleurs si le sujet n’est pas pour nous. Sur rendez-vous, en visio
+        partout en France ou en présentiel dans les Yvelines et le
+        Val-d’Oise. Si l’équipe doit d’abord apprendre à se servir de
+        l’outil elle-même, l’
         <Link href="/atelier-claude-code-dirigeant">
-          Atelier Claude Cowork / Code
+          atelier Claude Cowork
         </Link>{" "}
-        — dès 450&nbsp;€ HT. vite@augmenter.pro · +33 6 79 11 97 74
+        commence à 450&nbsp;€ HT la demi-journée, sur vos cas. La méthode
+        complète est décrite sur <Link href="/approche">l’approche</Link>.
       </p>
       <p>
-        La méthode et les tarifs d&apos;entrée sont aussi sur{" "}
-        <Link href="/approche">l&apos;approche</Link>.
+        Et si l’inventaire montre que tout est utilisé, que rien ne bloque
+        et que personne ne soupire, gardez ce guide sous le coude. Vous
+        n’avez pas besoin de nous cette année.
       </p>
     </ArticleLayout>
   );

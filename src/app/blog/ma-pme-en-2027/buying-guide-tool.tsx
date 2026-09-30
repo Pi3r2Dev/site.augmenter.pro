@@ -50,11 +50,11 @@ export function BuyingGuideTool() {
         L&apos;outil — 3 questions
       </p>
       <p className="mt-2 text-xl font-semibold tracking-tight">
-        Quelle porte, chez vous — et ce qu&apos;on ne vend pas
+        Quelle porte chez vous, et ce que vous n&apos;achetez pas
       </p>
       <p className="mt-2 text-sm text-muted-foreground">
         Un clic suffit. La fourchette est un ordre de grandeur HT, pas un devis
-        signé. Le diagnostic précise.
+        signé : le chiffrage précis sort de l&apos;Audit 180°.
       </p>
 
       <fieldset className="mt-6">
@@ -127,8 +127,9 @@ export function BuyingGuideTool() {
         </p>
         {rec.hitl ? (
           <p className="mt-2 text-sm">
-            <strong>Validation humaine.</strong> Devis, écart, message qui
-            engage : l&apos;IA propose, quelqu&apos;un chez vous tranche.
+            <strong>Règle de signature.</strong> Devis, écart comptable,
+            message qui engage : l&apos;assistant prépare, une personne nommée
+            chez vous tranche.
           </p>
         ) : null}
         {rec.cutFirst ? (
