@@ -183,8 +183,8 @@ export function ArlequinNote() {
           et du crédit immobilier aux particuliers, ouvert une structure de
           crédit professionnel, signé des partenariats bancaires et obtenu
           l&apos;agrément d&apos;intermédiaire en opérations de banque. J&apos;y
-          ai dirigé le développement pendant six ans : de 5 collaborateurs à
-          70, de 750&nbsp;k€ à 3,8&nbsp;M€ de chiffre d&apos;affaires.
+          ai dirigé le développement pendant cinq ans : de 5 collaborateurs à
+          47, de 750&nbsp;k€ à 2,7&nbsp;M€ de chiffre d&apos;affaires.
         </p>
         <p>
           Ce que j&apos;en retiens et qui sert un déploiement : un dossier
