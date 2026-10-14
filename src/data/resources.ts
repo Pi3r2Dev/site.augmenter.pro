@@ -172,6 +172,19 @@ export const ARTICLES: CatalogArticle[] = [
   // ── Pilier technique du cluster Claude / Odoo (2026-10-14) — angle 4 du
   //    terrain .claude/templates/seo/terrain-odoo-reva9.md (RPC, Playwright, CLAUDE.md)
   {
+    slug: "claude-code-odoo-workflow",
+    title:
+      "Claude Code et Odoo : le workflow technique pour piloter votre ERP sans module Python",
+    excerpt:
+      "Odoo Online refuse tout module Python, et chaque retouche devient un ticket. Code à l'appui : RPC call_kw, Playwright, CLAUDE.md, pièges payés, puis le passage au serveur MCP quand l'agent ne doit plus cliquer.",
+    tldr: "Sur Odoo Online, quatre portes restent ouvertes sans Python : Studio, actions serveur, modules data-only et RPC. Claude Code pilote le navigateur connecté et parle à Odoo par call_kw : lire (fields_get), créer un champ related, poser la colonne dans la vue, vérifier, livrer le rollback. Pièges : champ calculé non stocké infiltrable, ZIP Windows refusé, « Force init » qui efface. Pour un agent au quotidien, on arrête de cliquer : serveur MCP, avec zéro paramètre prix vérifié par test et écriture bornée au brouillon.",
+    tags: ["IA", "Claude Code", "PME"],
+    readTime: "11 min",
+    image: "/images/blog/claude-code-odoo-workflow.webp",
+    sectors: ["Tous", "Commerce & service local", "Industrie"],
+    pains: ["prestataire", "demarrage"],
+  },
+  {
     slug: "ma-pme-en-2027",
     title:
       "Ma PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la fois",

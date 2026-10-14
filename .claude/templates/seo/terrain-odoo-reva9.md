@@ -192,6 +192,7 @@ Relire alors, dans le repo de mission : `ETAT.md`, puis la section « En cours �
 
 **Angles déjà publiés** :
 - **Angle 1** → `/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer` (2026-10-14, essaim MCP/Odoo 20 de `terrain-iacommerce.md`). Reprend : aucun Python custom, module de livraison refusé, Studio + champs calculés non stockés, actions serveur (board d'achat ~8 h 30), data-only + piège ZIP Windows, API JSON-2, connecteurs transporteurs absents. Anonymisation : « une PME de négoce technique en Île-de-France », durée « cinq mois » seule, aucun montant.
+- **Angle 4** → `/blog/claude-code-odoo-workflow` (2026-10-14, pilier technique long). Reprend : les quatre portes d'Odoo Online (renvoi vers l'angle 1 pour le détail), workflow RPC `call_kw` en cinq étapes (CLAUDE.md, `fields_get`, champ related via `ir.model.fields`, vue via `ir.ui.view`, rollback), pièges (champ calculé non stocké, ZIP Windows, Force init, Kanban 19, upload impossible), puis passage au serveur MCP (renvoi vers l'essaim). Anonymisation : « une PME de négoce technique en Île-de-France », aucune durée, aucune volumétrie, aucun montant.
 - L'article `configurer-odoo-ia-claude-cowork` précède ce registre et n'est pas sourcé sur lui.
 
 **Ce qui est publié — et sous quelle forme** (révisé le 2026-08-26, minimisation)

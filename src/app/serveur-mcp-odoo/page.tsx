@@ -286,6 +286,12 @@ const ARTICLES_ESSAIM = [
     titre: "Construire un logiciel avec des agents : dix semaines, 436 tâches",
     duree: "5 min",
   },
+  {
+    href: "/blog/claude-code-odoo-workflow",
+    titre:
+      "Claude Code et Odoo : le workflow technique pour piloter votre ERP sans module Python",
+    duree: "11 min",
+  },
 ];
 
 export default function ServeurMcpOdooPage() {

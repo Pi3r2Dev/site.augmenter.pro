@@ -15,6 +15,17 @@
 
 ---
 
+## claude-code-odoo-workflow.webp
+
+- **Type** : ⚠️ **Visuel provisoire** (dégradé violet → ambre déterministe, `scripts/blog-placeholder-images.mjs`, 2026-10-14) — à remplacer par l'illustration Gemini
+- **Dimensions** : Paysage 16:9 — 1600×900 ; OG `og/claude-code-odoo-workflow.jpg` 1200×630
+- **Description cible (prompt Gemini)** : Illustration flat design, violet/lavande dominant (#7c3aed) + accents ambre (#f59e0b), 16:9. À gauche, un terminal stylisé avec des lignes de code symboliques (pas de texte lisible) ; à droite, une interface d'ERP schématique (tableau, champs, colonnes) ; entre les deux, un flux de données en pointillés qui passe par un petit cadenas ouvert ambre (les quatre portes autorisées). En bas, une main humaine qui appuie sur un unique bouton (le geste humain qui reste). Fond dégradé subtil violet vers ambre, sans texte.
+- **Contexte éditorial** : Image hero de l'article « Claude Code et Odoo : le workflow technique pour piloter votre ERP sans module Python ».
+- **Usage suggéré** : Hero `/blog/claude-code-odoo-workflow` + OG `og/claude-code-odoo-workflow.jpg`.
+- **Alt text suggéré** : "Illustration d'un terminal Claude Code relié à une interface Odoo par un flux de données, avec une main humaine qui valide la dernière étape"
+
+---
+
 ## ma-pme-en-2027.webp
 
 - **Type** : Illustration flat design (IA générée via Gemini, 2026-09-30)
