@@ -4,6 +4,7 @@ Session handoff and orchestration tracker. Created and maintained by `/flow`.
 
 | Date | Slug | Status | Mode | Next step |
 |------|------|--------|------|-----------|
+| 2026-10-14 | [essaim-mcp-odoo20](2026-10-14-essaim-mcp-odoo20.md) | open | solo | Visuel `cout-agent-ia-odoo` · corriger lint `quote-wizard.tsx` · push/déploiement · IndexNow + GSC (9 URL, `/serveur-mcp-odoo` d'abord) |
 | 2026-09-30 | [page-a-propos-et-404](2026-09-30-page-a-propos-et-404.md) | open | solo | Relire `/a-propos` + 404 en local · merge ff `feat/a-propos` → main · push/déploiement · IndexNow · GSC : `/a-propos` en premier |
 | 2026-09-18 | [article-ma-pme-en-2027](2026-09-18-article-ma-pme-en-2027.md) | open | solo | Hero Gemini · ping IndexNow post-deploy · /relecture-editoriale |
 | 2026-08-16 | [gsc-pages-non-indexees](../seo-audits/2026-08-16-gsc-pages-non-indexees.md) | open | solo | Déployer · ne pas valider le bac redirections · GSC : inspecter les 3 articles + supprimer news-sitemap · recrawl storages |
