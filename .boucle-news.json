@@ -4,7 +4,7 @@
   "backlogFile": "docs/backlog-news.md",
   "promise": "BOUCLE-TERMINEE",
   "model": "claude-opus-5-5",
-  "perimetreRegex": "^(src/app/layout\\.tsx$|src/app/news-sitemap\\.xml/|src/components/layout/article-layout\\.tsx$|src/data/resources\\.ts$|src/lib/(seo-policy\\.ts$|seo-hygiene\\.test\\.ts$|news-sitemap|discover-news)|public/robots\\.txt$|CLAUDE\\.md$|\\.claude/commands/create-article\\.md$|\\.claude/templates/seo/checklist\\.md$|docs/backlog-news\\.md$)",
+  "perimetreRegex": "^(src/app/layout\\.tsx$|src/app/news-sitemap\\.xml/|src/components/layout/article-layout\\.tsx$|src/data/resources\\.ts$|src/lib/(seo-policy\\.ts$|seo-hygiene\\.test\\.ts$|news-sitemap|discover-news|image-dimensions)|public/robots\\.txt$|CLAUDE\\.md$|\\.claude/commands/create-article\\.md$|\\.claude/templates/seo/checklist\\.md$|docs/backlog-news\\.md$)",
   "maxTurns": 60,
   "permissionMode": "acceptEdits",
   "budgetUsdParTour": 5,
