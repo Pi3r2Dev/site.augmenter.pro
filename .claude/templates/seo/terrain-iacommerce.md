@@ -175,7 +175,7 @@ Ton à tenir : **sympathique, jamais hostile** (voir `guidelines-x.md` du repo s
 - Odoo publie la documentation développeur du serveur MCP ;
 - un angle du §7 est publié (le marquer ici avec son slug).
 
-**Angles déjà publiés** (essaim du 2026-10-14, visuels provisoires à remplacer — cf. `public/images/blog/INDEX.md`) :
+**Angles déjà publiés** (essaim du 2026-10-14, illustrations Gemini en place — cf. `public/images/blog/INDEX.md`) :
 
 | # | Slug | Note |
 |---|---|---|

@@ -17,10 +17,10 @@
 
 ## claude-code-odoo-workflow.webp
 
-- **Type** : ⚠️ **Visuel provisoire** (dégradé violet → ambre déterministe, `scripts/blog-placeholder-images.mjs`, 2026-10-14) — à remplacer par l'illustration Gemini
-- **Dimensions** : Paysage 16:9 — 1600×900 ; OG `og/claude-code-odoo-workflow.jpg` 1200×630
-- **Description cible (prompt Gemini)** : Illustration flat design, violet/lavande dominant (#7c3aed) + accents ambre (#f59e0b), 16:9. À gauche, un terminal stylisé avec des lignes de code symboliques (pas de texte lisible) ; à droite, une interface d'ERP schématique (tableau, champs, colonnes) ; entre les deux, un flux de données en pointillés qui passe par un petit cadenas ouvert ambre (les quatre portes autorisées). En bas, une main humaine qui appuie sur un unique bouton (le geste humain qui reste). Fond dégradé subtil violet vers ambre, sans texte.
-- **Contexte éditorial** : Image hero de l'article « Claude Code et Odoo : le workflow technique pour piloter votre ERP sans module Python ».
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-10-14)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover) ; OG `og/claude-code-odoo-workflow.jpg` 1200×630
+- **Description** : Sur fond dégradé violet vers pêche, à gauche un écran d'ordinateur violet affiche des lignes de code symboliques violettes et ambre. À droite, une interface d'ERP schématique : onglets, tableau à colonnes, formulaire à champs et boutons. Entre les deux, des flux de pointillés ambre convergent vers un cadenas ambre ouvert. En bas au centre, un index humain appuie sur un bouton rond ambre. Style épuré, sans texte lisible.
+- **Contexte éditorial** : Image hero de l'article « Claude Code et Odoo : le workflow technique pour piloter votre ERP sans module Python ». Le terminal figure Claude Code, l'interface Odoo, le cadenas ouvert les portes autorisées (RPC, navigateur), le bouton le geste humain qui reste.
 - **Usage suggéré** : Hero `/blog/claude-code-odoo-workflow` + OG `og/claude-code-odoo-workflow.jpg`.
 - **Alt text suggéré** : "Illustration d'un terminal Claude Code relié à une interface Odoo par un flux de données, avec une main humaine qui valide la dernière étape"
 
@@ -466,17 +466,17 @@
 
 ---
 
-## Essaim MCP / Odoo 20 (2026-10-14) — visuels PROVISOIRES à remplacer
+## odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp
 
-Installer une illustration livrée : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis déplacer la ligne ci-dessous en entrée complète.
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-10-14)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover) ; OG `og/odoo-online-ce-que-vous-ne-pouvez-pas-installer.jpg` 1200×630
+- **Description** : Composition centrée sur fond dégradé violet vers ambre. Au centre, un grand nuage lavande contient une fenêtre de code barrée d'un panneau d'interdiction. Un anneau ambre entoure le nuage et le relie à quatre médaillons : une palette et un pinceau, un engrenage, un petit serveur en réseau, un carton fermé. Style épuré, sans texte lisible hormis les symboles de code.
+- **Contexte éditorial** : Image hero de l'article « Odoo Online : ce que vous ne pourrez jamais y installer ». Le code barré dans le nuage figure l'interdiction des modules Python sur le SaaS ; les quatre médaillons, les contournements qui marchent : Studio, actions serveur, modules data-only importés, programme externe par l'API.
+- **Usage suggéré** : Hero `/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer` + OG.
+- **Alt text suggéré** : "Nuage contenant une fenêtre de code barrée, entouré de quatre icônes reliées (palette, engrenage, serveur, carton) — sur Odoo Online, le code est interdit mais quatre contournements restent possibles"
 
-Six articles courts adossés à la page `/serveur-mcp-odoo`. Les fichiers ci-dessous sont des **dégradés violet → ambre générés par `scripts/blog-placeholder-images.mjs`** (hero WebP 1600×900 + OG JPEG 1200×630 dans `og/`), posés pour qu'aucune carte ni aucun `og:image` ne soit cassé. À remplacer par l'illustration Gemini (même nom de fichier, puis régénérer l'OG avec sharp).
+---
 
-| Fichier | Article | Prompt Gemini suggéré |
-| --- | --- | --- |
-| `odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp` | Odoo Online : ce que vous ne pourrez jamais y installer | Illustration flat design violet/ambre 16:9. Un nuage violet (SaaS) avec un panneau « interdit » sur une brique de code à l'intérieur, et autour du nuage quatre passerelles ambre qui le contournent (un pinceau Studio, un engrenage, un paquet ZIP, un serveur externe relié par un câble). Sans texte. |
+## Visuels provisoires (`scripts/blog-placeholder-images.mjs`)
 
-- **Type** : dégradé SVG → WebP/JPEG, généré localement (provisoire)
-- **Dimensions** : 1600×900 (hero) · 1200×630 (OG)
-- **Poids** : ~20-40 Ko chacun
-- **Alt text** : porté par `ArticleLayout` (titre de l'article)
+Quand un article part sans son illustration, `node scripts/blog-placeholder-images.mjs <slug>` pose un dégradé violet → ambre (hero + OG) pour qu'aucune carte ni aucun `og:image` ne casse. À l'arrivée du visuel Gemini : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis entrée complète dans cet index.
