@@ -62,3 +62,6 @@ Home.html
 
 # Portail client : jamais de HTML en clair — seuls les modules chiffrés *.ts sont versionnés
 /src/content/portal/**/*.html
+
+# Boucle agentique (/boucle) : journal, logs de tours, état — jamais versionnés
+/.boucle/

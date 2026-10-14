@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "promptFile": "PROMPT.md",
+  "backlogFile": "docs/backlog.md",
+  "promise": "BOUCLE-TERMINEE",
+  "model": "claude-opus-5-5",
+  "perimetreRegex": "^(src/app/blog/|src/app/(serveur-mcp-odoo|ia-souveraine-pme|atelier-claude-code-dirigeant|integration-mcp)/|src/data/resources|src/components/article/|src/lib/maillage|public/llms-full\\.txt|docs/backlog)",
+  "maxTurns": 60,
+  "permissionMode": "acceptEdits",
+  "budgetUsdParTour": 5,
+  "budgetUsdParRun": 40,
+  "timeoutMinutesParTour": 30,
+  "verifierPromesse": true,
+  "attenteLimiteMinutes": 0,
+  "journalGarde": 3,
+  "verifyCmd": "npx vitest run --reporter=dot",
+  "verifyTimeoutMinutes": 5,
+  "tentativesMax": 2,
+  "confirmer": true,
+  "confirmerMaxTurns": 8,
+  "confirmerBudgetUsd": 1,
+  "interdits": ["Bash(npm run build:*)", "Bash(npm run dev:*)", "Bash(npm run start:*)", "Bash(npx next:*)"]
+}
