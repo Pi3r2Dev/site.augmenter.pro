@@ -360,7 +360,7 @@ export default function Article() {
               <td className="py-2 pr-4">
                 À partir de{" "}
                 <a
-                  href="https://www.odoo.com/fr_FR/pricing-plan"
+                  href="https://www.odoo.com/fr_FR/pricing"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -387,13 +387,13 @@ export default function Article() {
               <td className="py-2 pr-4">
                 Sage 50 Comptabilité Simply : environ{" "}
                 <a
-                  href="https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/pdf/conditions-generales/2026/guide-produits-et-tarifs_2026_01_15_sans_spc.pdf"
+                  href="https://www.sage.com/fr-fr/-/media/files/sagedotcom/france/documents/terms_and_conditions/current/cgu/guide-produits-et-tarifs-sans-spc.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
                   252&nbsp;€ HT par an
                 </a>{" "}
-                pour un poste (guide tarifs de janvier 2026). EBP Gestion
+                pour un poste (guide tarifs Sage du 10 septembre 2026). EBP Gestion
                 Commerciale Pro : de l’ordre de 50 à 60&nbsp;€ HT par mois, un
                 utilisateur compris. Ces outils se facturent au poste, pas au
                 siège.

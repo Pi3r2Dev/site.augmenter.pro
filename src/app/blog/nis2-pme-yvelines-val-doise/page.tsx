@@ -29,7 +29,7 @@ const faqJsonLd = {
       name: "Quand NIS2 entre-t-elle en vigueur en France ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La directive européenne NIS2 est applicable depuis le 18 octobre 2024 dans ses principes. En France, la Loi Résilience qui transpose NIS2 a été adoptée par le Sénat en mars 2025 et en commission à l'Assemblée nationale en septembre 2025. En février 2026, son inscription à l'ordre du jour de l'Assemblée est toujours en attente. Le pré-enregistrement ANSSI est ouvert depuis novembre 2025 sur MonEspaceNIS2.",
+        text: "La directive européenne NIS2 est applicable depuis le 18 octobre 2024 dans ses principes. En France, la Loi Résilience qui transpose NIS2 a été adoptée par le Sénat en mars 2025 et en commission à l'Assemblée nationale en septembre 2025. En février 2026, son inscription à l'ordre du jour de l'Assemblée est toujours en attente. Le pré-enregistrement ANSSI est ouvert depuis novembre 2025 sur MesServicesCyber.",
       },
     },
     {
@@ -53,7 +53,7 @@ const faqJsonLd = {
       name: "Comment savoir si mon entreprise est une entité essentielle ou importante ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Utilisez le simulateur officiel MonEspaceNIS2 de l'ANSSI (monespacenis2.cyber.gouv.fr/simulateur). En 5 à 10 minutes, vous saurez si votre entreprise est concernée. Les entités essentielles sont les grandes entreprises (> 250 salariés) dans les 11 secteurs hautement critiques. Les entités importantes sont les moyennes entreprises (50-249 salariés) dans les 18 secteurs concernés.",
+        text: "Utilisez le simulateur officiel MesServicesCyber de l'ANSSI (messervices.cyber.gouv.fr/simulateur-nis2). En 5 à 10 minutes, vous saurez si votre entreprise est concernée. Les entités essentielles sont les grandes entreprises (> 250 salariés) dans les 11 secteurs hautement critiques. Les entités importantes sont les moyennes entreprises (50-249 salariés) dans les 18 secteurs concernés.",
       },
     },
     {
@@ -193,11 +193,11 @@ export default function Article() {
         <strong>Outil officiel</strong> : le{" "}
         <Memo type="link" label="Simulateur ANSSI">
           <a
-            href="https://monespacenis2.cyber.gouv.fr/simulateur"
+            href="https://messervices.cyber.gouv.fr/simulateur-nis2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            simulateur MonEspaceNIS2 de l&apos;ANSSI
+            simulateur MesServicesCyber de l&apos;ANSSI
           </a>
         </Memo>{" "}
         vous permet de vérifier votre éligibilité en 5 à 10 minutes.
@@ -564,11 +564,11 @@ export default function Article() {
 
       <h2>Se mettre en conformité : plan d&apos;action en 5 étapes</h2>
 
-      <h3>Étape 1 — Vérifier son éligibilité sur MonEspaceNIS2</h3>
+      <h3>Étape 1 — Vérifier son éligibilité sur MesServicesCyber</h3>
       <p>
         Rendez-vous sur le{" "}
         <a
-          href="https://monespacenis2.cyber.gouv.fr/simulateur"
+          href="https://messervices.cyber.gouv.fr/simulateur-nis2"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -632,23 +632,21 @@ export default function Article() {
 
       <ul>
         <li>
-          <strong>ANSSI — MonEspaceNIS2</strong> :{" "}
+          <strong>ANSSI — MesServicesCyber</strong> :{" "}
           <a
-            href="https://monespacenis2.cyber.gouv.fr/"
+            href="https://messervices.cyber.gouv.fr/simulateur-nis2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            simulateur d&apos;éligibilité et pré-enregistrement
+            simulateur d&apos;éligibilité
           </a>
-        </li>
-        <li>
-          <strong>MesServicesCyber</strong> :{" "}
+          , puis{" "}
           <a
             href="https://messervices.cyber.gouv.fr/nis2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            portail de notification d&apos;incidents
+            espace NIS 2 (enregistrement, notification d&apos;incidents)
           </a>
         </li>
         <li>
@@ -720,11 +718,11 @@ export default function Article() {
       <p>
         Utilisez le{" "}
         <a
-          href="https://monespacenis2.cyber.gouv.fr/simulateur"
+          href="https://messervices.cyber.gouv.fr/simulateur-nis2"
           target="_blank"
           rel="noopener noreferrer"
         >
-          simulateur MonEspaceNIS2
+          simulateur MesServicesCyber
         </a>{" "}
         de l&apos;ANSSI. En 5 à 10 minutes, vous aurez votre réponse.
       </p>

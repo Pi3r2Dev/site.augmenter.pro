@@ -109,7 +109,7 @@ export default function Article() {
         continues. Chez <strong>Anthropic</strong>, l&apos;année a enchaîné les
         Opus 4.6, 4.7 et 4.8, puis{" "}
         <a
-          href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/"
+          href="https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/"
           target="_blank"
           rel="noopener noreferrer"
         >

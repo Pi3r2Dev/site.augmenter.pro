@@ -184,7 +184,7 @@ export default function ClaudeCoworkCommunityManager() {
         outils en espérant qu&apos;ils règlent un problème qui est, en réalité,
         un problème de <em>production de contenu</em>. La{" "}
         <a
-          href="https://www.francenum.gouv.fr/guides-et-conseils/communication-et-publicite/reseaux-sociaux/comment-ameliorer-la-gestion-de-ses"
+          href="https://www.francenum.gouv.fr/guides-et-conseils/intelligence-artificielle/generation-de-contenus-texte-image-son-video/comment"
           target="_blank"
           rel="noopener noreferrer"
         >
