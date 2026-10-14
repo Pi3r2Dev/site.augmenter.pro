@@ -473,6 +473,13 @@ export default function AtelierClaudeCodePage() {
             </li>
             <li>
               →{" "}
+              <Link href="/serveur-mcp-odoo" className="text-primary hover:underline">
+                Notre serveur MCP pour Odoo
+              </Link>{" "}
+              (l&apos;étape d&apos;après : votre équipe interroge Odoo, avec des garde-fous dans le code)
+            </li>
+            <li>
+              →{" "}
               <a
                 href="https://github.com/Pi3r2Dev/claude-md-templates-pme"
                 target="_blank"

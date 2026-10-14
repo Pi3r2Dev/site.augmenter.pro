@@ -608,7 +608,12 @@ export default function Article() {
         générer un devis, configurer un module Odoo, auditer un composant,
         rédiger un compte-rendu. C&apos;est exactement ce que les{" "}
         <strong>Skills</strong> de Claude Code permettent
-        d&apos;industrialiser.
+        d&apos;industrialiser. Pour le module Odoo, l&apos;enchaînement complet
+        est décrit dans{" "}
+        <Link href="/blog/claude-code-odoo-workflow">
+          le workflow technique Claude Code + Odoo
+        </Link>
+        &nbsp;: cinq étapes, et les pièges que nous avons payés.
       </p>
 
       <h3>Ce qu&apos;est un Skill</h3>
@@ -641,6 +646,13 @@ export default function Article() {
         </strong>
         . C&apos;est le passage du &laquo;&nbsp;bricolage par
         prompt&nbsp;&raquo; à un véritable poste de travail augmenté.
+        Poussée au bout, cette logique tient un chantier entier : un agent
+        par tâche, les règles écrites avant le code, un juge à chaque
+        passage. C&apos;est ainsi que nous avons pu{" "}
+        <Link href="/blog/logiciel-construit-par-agents-dix-semaines">
+          construire un logiciel avec des agents en dix semaines
+        </Link>
+        .
       </p>
 
       {/* ===== H2 : Pour aller plus loin ===== */}
@@ -685,7 +697,10 @@ export default function Article() {
         <Link href="/blog/bilan-ia-janvier-juillet-2026">
           bilan IA janvier-juillet 2026
         </Link>{" "}
-        fait le point en un article.
+        fait le point en un article. Quand l&apos;étape suivante consiste à
+        laisser un agent travailler dans votre Odoo sans qu&apos;il puisse
+        toucher à vos prix, c&apos;est le rôle de{" "}
+        <Link href="/serveur-mcp-odoo">notre serveur MCP pour Odoo</Link>.
       </p>
 
       <p>

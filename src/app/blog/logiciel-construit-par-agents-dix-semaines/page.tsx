@@ -99,8 +99,11 @@ export default function Article() {
           ce qui engage le produit pour deux ans.
         </li>
         <li>
-          <strong>Les réglages de qualité.</strong> Quand le premier lot
-          d&apos;enrichissement du catalogue a donné des types approximatifs,
+          <strong>Les réglages de qualité.</strong> Quand le{" "}
+          <Link href="/blog/ia-enrichir-catalogue-sans-perdre-la-main">
+            premier lot d&apos;enrichissement du catalogue
+          </Link>{" "}
+          a donné des types approximatifs,
           c&apos;est une relecture humaine qui a dit lesquels, et une itération
           qui a monté la justesse à environ 20 sur 22. L&apos;agent ne sait pas
           qu&apos;il s&apos;est trompé tant que personne ne le lui dit.

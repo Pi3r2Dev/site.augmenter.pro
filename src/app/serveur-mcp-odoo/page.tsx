@@ -779,7 +779,16 @@ export default function ServeurMcpOdooPage() {
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Quatre étapes, en lecture d&apos;abord. L&apos;écriture vient
-              quand les chiffres ont été recoupés.
+              quand les chiffres ont été recoupés. Si c&apos;est ton
+              paramétrage Odoo qui est à reprendre d&apos;abord, on commence
+              par là : on l&apos;a fait chez un client,{" "}
+              <Link
+                href="/blog/configurer-odoo-ia-claude-cowork"
+                className="text-primary underline underline-offset-4"
+              >
+                tout son Odoo reconfiguré en 4 jours avec Claude Cowork
+              </Link>
+              .
             </p>
           </div>
           <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -876,6 +885,14 @@ export default function ServeurMcpOdooPage() {
               className="text-primary underline underline-offset-4"
             >
               intégration MCP pour PME
+            </Link>
+            . Pour piloter ton Odoo toi-même avec Claude, sans serveur à
+            faire tourner :{" "}
+            <Link
+              href="/atelier-claude-code-dirigeant"
+              className="text-primary underline underline-offset-4"
+            >
+              l&apos;atelier Claude Code pour dirigeants
             </Link>
             .
           </p>

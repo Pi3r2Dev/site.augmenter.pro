@@ -409,7 +409,9 @@ export default function Article() {
         <Link href="/blog/configurer-odoo-ia-claude-cowork">
           configurer Odoo avec une IA
         </Link>
-        .
+        . Et si votre gestion tourne déjà sur Odoo, le serveur à brancher
+        existe : c&apos;est{" "}
+        <Link href="/serveur-mcp-odoo">notre serveur MCP pour Odoo</Link>.
       </p>
     </ArticleLayout>
   );

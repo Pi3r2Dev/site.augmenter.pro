@@ -372,7 +372,24 @@ export default function IaSouverainePmePage() {
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   Hébergé sur une infrastructure que nous administrons et que tu
                   utilises comme un service, ou installé dans tes murs si tu veux
-                  tout garder en interne.
+                  tout garder en interne. Sur une question de gestion (un stock,
+                  un client, un devis), un modèle ouvert bien outillé n&apos;a
+                  rien à deviner :{" "}
+                  <Link
+                    href="/blog/petit-modele-bien-outille"
+                    className="text-primary underline underline-offset-4"
+                  >
+                    un petit modèle bien outillé bat un gros modèle qui devine
+                  </Link>
+                  . Et sur une machine administrée à distance, la question
+                  coûte zéro euro :{" "}
+                  <Link
+                    href="/blog/cout-agent-ia-odoo"
+                    className="text-primary underline underline-offset-4"
+                  >
+                    crédits, abonnements ou une machine, le calcul
+                  </Link>
+                  .
                 </p>
                 <ul className="mt-5 space-y-2.5">
                   {[

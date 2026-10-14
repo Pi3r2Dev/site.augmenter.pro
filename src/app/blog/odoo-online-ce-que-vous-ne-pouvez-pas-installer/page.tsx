@@ -233,7 +233,7 @@ export default function Article() {
         . Pour la voie n°4 en détail, piloter Odoo de l&apos;extérieur depuis
         Claude Code (RPC, navigateur, pièges) :{" "}
         <Link href="/blog/claude-code-odoo-workflow">
-          le workflow technique Claude Code et Odoo
+          le workflow technique Claude Code + Odoo
         </Link>
         . Et pour la méthode de départ sur un Odoo existant,{" "}
         <Link href="/blog/configurer-odoo-ia-claude-cowork">

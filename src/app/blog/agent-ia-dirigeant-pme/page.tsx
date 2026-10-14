@@ -259,7 +259,13 @@ export default function Article() {
             employé.</strong> Son objectif, ses étapes, ce qu&apos;il doit
             faire dans les cas particuliers, et surtout ses{" "}
             <em>limites</em> (ce qu&apos;il ne doit jamais décider seul). Ce
-            cadrage est un simple document &mdash; pas du code.
+            cadrage est un simple document &mdash; pas du code. Pour les
+            limites qui coûtent cher, une consigne écrite ne suffit pas :
+            voyez comment on construit{" "}
+            <Link href="/blog/agent-ia-qui-ne-touche-pas-aux-prix">
+              un agent IA qui ne peut pas toucher aux prix
+            </Link>
+            .
           </li>
           <li>
             <strong>Le connecter à vos outils.</strong> C&apos;est l&apos;étape
@@ -267,7 +273,8 @@ export default function Article() {
             votre ERP. Le protocole{" "}
             <Link href="/blog/serveur-mcp-guide-pratique-pme">MCP</Link>{" "}
             standardise justement cette connexion entre une IA et vos outils
-            métier.
+            métier. Si votre ERP est Odoo, c&apos;est le rôle de{" "}
+            <Link href="/serveur-mcp-odoo">notre serveur MCP pour Odoo</Link>.
           </li>
           <li>
             <strong>Tester en double, puis lâcher progressivement.</strong>{" "}
@@ -280,9 +287,11 @@ export default function Article() {
         <p>
           Côté outillage, beaucoup de PME démarrent avec{" "}
           <Link href="/blog/claude-code-prompt-architecture">Claude Code</Link>{" "}
-          pour bâtir et cadrer l&apos;agent, et le protocole{" "}
-          <Link href="/integration-mcp">MCP</Link> pour le brancher aux outils
-          existants. <strong>Selon Pierre Legrand, consultant IA chez
+          pour bâtir et cadrer l&apos;agent, et le protocole MCP pour le
+          brancher aux outils existants &mdash; c&apos;est tout l&apos;objet
+          d&apos;une{" "}
+          <Link href="/integration-mcp">intégration MCP pour PME</Link>.{" "}
+          <strong>Selon Pierre Legrand, consultant IA chez
           augmenter.PRO</strong>, la règle d&apos;or est de
           &laquo;&nbsp;commencer ridiculement petit&nbsp;&raquo; : un premier
           agent qui fait <em>une</em> chose bien crée plus de valeur (et de
@@ -298,7 +307,13 @@ export default function Article() {
           traité. Le vrai investissement est le{" "}
           <strong>cadrage et l&apos;intégration</strong> : d&apos;une
           demi-journée pour un agent simple à quelques jours pour un agent
-          connecté à plusieurs outils.
+          connecté à plusieurs outils. Sur Odoo, la facture d&apos;usage
+          dépend surtout de la formule choisie (crédits, abonnements par siège
+          ou machine à vous) : nous avons comparé les trois dans{" "}
+          <Link href="/blog/cout-agent-ia-odoo">
+            ce que coûte vraiment un agent IA sur Odoo
+          </Link>
+          .
         </p>
         <p>
           Le bon réflexe : ne pas budgéter un &laquo;&nbsp;grand projet

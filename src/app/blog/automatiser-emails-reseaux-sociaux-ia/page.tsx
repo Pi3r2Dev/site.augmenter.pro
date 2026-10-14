@@ -104,12 +104,12 @@ export default function AutomatiserEmailsReseauxSociauxIA() {
         Le niveau avancé consiste à extraire automatiquement les informations
         clés de vos emails (montants, dates, noms de contacts, références de
         commande) et à les router vers vos outils métier — CRM, planning,
-        comptabilité. C&apos;est là que l&apos;intégration avec{" "}
+        comptabilité. C&apos;est là qu&apos;une{" "}
         <Link
           href="/integration-mcp"
           className="text-primary underline-offset-4 hover:underline"
         >
-          le protocole MCP
+          intégration MCP pour PME
         </Link>{" "}
         prend tout son sens : vos agents IA accèdent directement à vos outils
         pour y déposer les données extraites.

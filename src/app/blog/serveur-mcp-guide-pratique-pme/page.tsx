@@ -145,7 +145,8 @@ export default function Article() {
       <p>
         Transparence d&apos;abord : nous n&apos;avons pas encore de client avec
         ce montage CRM en production. Le schéma ci-dessous est celui que nous
-        avons monté chez nous, sur notre propre serveur MCP branché à Odoo, et
+        avons monté chez nous, sur{" "}
+        <Link href="/serveur-mcp-odoo">notre serveur MCP pour Odoo</Link>, et
         que nous proposons de reproduire sur votre CRM :
       </p>
       <ul>

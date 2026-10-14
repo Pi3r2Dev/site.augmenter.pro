@@ -101,9 +101,18 @@ export default function Article() {
           depuis fin 2025
         </li>
         <li>
+          <strong>Odoo :</strong> Serveur MCP natif depuis Odoo 20 — voyez{" "}
+          <Link href="/blog/odoo-20-serveur-mcp-agents">
+            ce qu&apos;Odoo 20 change, et ce qui lui manque encore
+          </Link>
+        </li>
+        <li>
           <strong>ERP divers :</strong> Serveurs MCP communautaires pour SAP,
           Sage, et les ERP open source. Pour les ERP de niche, développement
-          sur mesure nécessaire.
+          sur mesure nécessaire. Côté Odoo, les garde-fous qui manquent au
+          serveur natif (aucun prix modifiable, des écritures qui
+          s&apos;arrêtent au brouillon), nous les avons construits dans{" "}
+          <Link href="/serveur-mcp-odoo">notre serveur MCP pour Odoo</Link>.
         </li>
       </ul>
       <p>

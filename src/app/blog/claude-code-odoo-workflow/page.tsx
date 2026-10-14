@@ -399,14 +399,20 @@ export default function ClaudeCodeOdooWorkflow() {
         </Memo>{" "}
         au 14 octobre 2026, onze décisions d&apos;architecture écrites avec
         leurs options rejetées, et chaque capacité vérifiée en direct puis
-        recoupée dans Odoo au centime. Le serveur MCP natif d&apos;Odoo 20
+        recoupée dans Odoo au centime. Ce serveur, une boucle d&apos;agents
+        l&apos;a construit tâche par tâche, avec un juge à chaque tâche et un
+        humain sur ce qui ne se délègue pas :{" "}
+        <Link href="/blog/logiciel-construit-par-agents-dix-semaines">
+          construire un logiciel avec des agents en dix semaines
+        </Link>
+        . Le serveur MCP natif d&apos;Odoo 20
         pourra devenir, demain, une des façons dont ces outils parlent à Odoo.
         La valeur n&apos;est pas le tuyau, c&apos;est ce qui passe dedans. Ce
         que ce serveur ajoute à Odoo 20, point par point :{" "}
         <Link href="/serveur-mcp-odoo">notre page serveur MCP pour Odoo</Link>.
-        Pour choisir entre coder, louer ou héberger, la{" "}
-        <Link href="/integration-mcp">page intégration MCP</Link> détaille les
-        trois chemins.
+        Choisir entre coder, louer ou héberger, c&apos;est le point de départ
+        de notre{" "}
+        <Link href="/integration-mcp">intégration MCP pour PME</Link>.
       </p>
 
       <h2>Quand ce workflow n&apos;est pas le bon</h2>

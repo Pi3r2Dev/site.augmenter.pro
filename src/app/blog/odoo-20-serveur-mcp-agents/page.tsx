@@ -268,7 +268,12 @@ export default function Article() {
           <strong>L&apos;écriture qui s&apos;arrête au brouillon.</strong>{" "}
           Devis, demande de prix, proposition de type produit : l&apos;agent
           prépare, un humain appuie sur le bouton. Chaque écriture garde la
-          valeur d&apos;avant et s&apos;annule d&apos;une commande.
+          valeur d&apos;avant et s&apos;annule d&apos;une commande. Le cas du
+          catalogue, verrou par verrou :{" "}
+          <Link href="/blog/ia-enrichir-catalogue-sans-perdre-la-main">
+            laisser une IA enrichir votre catalogue sans perdre la main
+          </Link>
+          .
         </li>
         <li>
           <strong>Un coût qui ne grimpe pas avec l&apos;usage.</strong> Nos
