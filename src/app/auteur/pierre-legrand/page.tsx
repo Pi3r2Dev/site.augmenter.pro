@@ -106,24 +106,52 @@ const expertiseDomains = [
   "RAG & agents IA",
 ];
 
+// Seules des missions clients réelles, sans chiffre qu'on ne peut pas sourcer.
+// Formulation « effort d'équipe » figée : cf. .claude/templates/seo/terrain-odoo-reva9.md §7
+// (ne jamais nommer le client ni croiser secteur + effectif + lieu).
 const missions = [
   {
-    sector: "BTP — Automatisation des devis",
-    location: "PME du Val d'Oise",
+    sector: "Catalogue & commandes — ERP remis d'aplomb",
+    location: "PME de négoce technique, Île-de-France",
     body:
-      "Cycle devis ramené de 2 heures à 15 minutes par dossier, via un workflow d'extraction et de pré-remplissage. L'équipe terrain a pu se reconcentrer sur le suivi chantier sans embauche supplémentaire.",
+      "Un catalogue éparpillé entre fichiers Excel et fiches en doublon, consolidé dans l'ERP puis publié sur le site. Ce qui demandait trois personnes une semaine se traite désormais en une journée.",
+  },
+];
+
+// Nos propres chiffres, pas ceux d'un client : relevés par Pierre sur son
+// activité (post X du 2026-10-13, lien en source sous la liste).
+const OWN_FIGURES_SOURCE =
+  "https://x.com/Pi3r2Dev/status/2109950964752937448";
+const ownFigures = [
+  {
+    value: "×6",
+    label: "de travail livré par semaine",
+    body: "Mesuré sur 48 dépôts git, après neuf mois à coder avec Claude.",
   },
   {
-    sector: "Commerce spécialisé — Catalogue produit centralisé",
-    location: "Commerce spécialisé, Île-de-France",
-    body:
-      "Un catalogue éparpillé sur des fichiers Excel, consolidé dans un référentiel unique avec mise en ligne automatisée des annonces. Résultat : 2h de saisie en moins par jour et +35 % de demandes clients entrantes.",
+    value: "1 / h",
+    label: "commit sérieux par heure, stable",
+    body: "Le rendement à l'heure n'a pas bougé depuis janvier. Le gain vient d'ailleurs.",
   },
   {
-    sector: "Industrie — Audit 360° et mise en conformité",
-    location: "PME industrielle, Île-de-France",
-    body:
-      "Diagnostic complet infrastructure et sécurité : failles RGPD identifiées et corrigées en 3 mois, budget IT réduit de 20 % par rationalisation des licences et de l'hébergement.",
+    value: "2 → 10",
+    label: "projets menés en parallèle par mois",
+    body: "L'IA rend les idées peu chères à commencer.",
+  },
+  {
+    value: "97 %",
+    label: "de contexte relu",
+    body: "Sur 1,7 milliard de tokens par semaine. Le travail, c'est donner le bon contexte et valider ce qui sort.",
+  },
+  {
+    value: "447",
+    label: "commits en deux semaines, sans personne au clavier",
+    body: "Une boucle d'agents autonome, cadrée par des règles écrites et des tests.",
+  },
+  {
+    value: "2 h → 15 min",
+    label: "pour un devis, chez nous",
+    body: "Nos propres devis, préparés par un assistant et relus avant envoi.",
   },
 ];
 
@@ -304,8 +332,8 @@ export default function PierreLegrandPage() {
               Missions &amp; expérience
             </h2>
             <p className="mt-3 max-w-2xl text-muted-foreground">
-              Sélection de missions récentes (clients anonymisés). Chaque ligne
-              correspond à un audit ou un accompagnement réel mené depuis 2024.
+              Missions clients réelles, anonymisées. On n&apos;y publie que ce
+              qu&apos;on peut montrer.
             </p>
 
             <ol className="mt-8 space-y-6 border-l-2 border-primary/30 pl-6">
@@ -327,7 +355,46 @@ export default function PierreLegrandPage() {
             </ol>
 
             <p className="mt-6 text-xs text-muted-foreground">
-              Mis à jour le 21 mai 2026.
+              Mis à jour le 14 octobre 2026.
+            </p>
+          </section>
+
+          {/* Nos propres chiffres --------------------------------------- */}
+          <section className="mt-20">
+            <h2 className="text-3xl font-bold tracking-tight">
+              Ce que Claude a changé chez nous
+            </h2>
+            <p className="mt-3 max-w-2xl text-muted-foreground">
+              Avant de le conseiller à un dirigeant, on le mesure sur nous.
+              Ces chiffres sont les nôtres, pas ceux d&apos;un client.
+            </p>
+            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {ownFigures.map((f) => (
+                <li
+                  key={f.label}
+                  className="rounded-xl border border-border bg-background/70 p-5"
+                >
+                  <p className="text-3xl font-bold tracking-tight text-primary">
+                    {f.value}
+                  </p>
+                  <p className="mt-1 text-sm font-semibold">{f.label}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {f.body}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-xs text-muted-foreground">
+              Source :{" "}
+              <a
+                href={OWN_FIGURES_SOURCE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-foreground"
+              >
+                le détail du relevé, publié sur X le 13 octobre 2026
+              </a>
+              .
             </p>
           </section>
 
