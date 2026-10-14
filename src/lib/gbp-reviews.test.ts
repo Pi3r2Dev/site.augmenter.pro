@@ -56,6 +56,33 @@ const FABRICATED = [
   /chez une PME du BTP\s*:?\s*(a ramené|de 2 h)/,
   /Cabinet immobilier — synthèse de visites/,
   /missions vérifiables\. Avis publiés/,
+  // Cas « clients » géolocalisés et moyennes de marché sans source, retirés le
+  // 2026-10-14 : aucune mission connue derrière, aucune étude retrouvée. Les
+  // preuves affichées sont nos propres mesures, le cas réel du terrain Odoo et
+  // des objectifs fixés ensemble (jamais un résultat prêté à un tiers).
+  /(PME|Entreprise|Cabinet|Agence|Artisan|Réseau|Restaurant|Transporteur)[^".\n]{0,40}à (Versailles|Cergy|Pontoise|Saint-Germain|Poissy|Rambouillet|Gonesse|Ermont|Enghien|Persan) \((78|95)\) ?:/,
+  /\(Versailles, 78\)|à Cergy \(95\) —|à Pontoise \(95\) —/,
+  /165 ?%/,
+  /\+255 ?%/,
+  /ROI (complet en moins de 12 mois|médian)/,
+  /jusqu.{1,3}à 80 ?% (du coût|pris en charge|de l.{1,3}accompagnement|de votre accompagnement)/,
+  /50-80 ?%/,
+  /72 ?%[^\n]{0,40}(attaqu|ANSSI)|audit récent \(ANSSI\)/,
+  // Le mythe « 60 % des PME attaquées ferment » : le site le démonte dans
+  // l'article cyber, il ne doit plus être affirmé nulle part.
+  /déposent le bilan/,
+  /Gain de temps moyen|Premier livrable|Premiers résultats|Résultats 48 h/,
+  // « Les artisans d'Ermont gagnent 2h par jour » : un résultat prêté à une
+  // population locale qu'on n'a jamais mesurée.
+  /(Les|Un|Une) [^.\n]{0,40}(de|à|d['’]) ?(Versailles|Cergy|Pontoise|Saint-Germain|Poissy|Gonesse|Ermont|Taverny|Persan|Roissy)[^.\n]{0,40}(gagnent|réduisent|récupèrent|visualisent|réduit)/,
+  /Jusqu.{1,3}à (50|70) ?% de/,
+  /(25 à 30|20-35|30-50) ?%/,
+  /nos clients constatent|PME accompagnées constatent|Dans nos accompagnements|observons chez nos clients/,
+  /dizaines de diagnostics|trentaine de PME|situations réelles \(anonymisées\)/,
+  /étude Mirax|Mirax\/McKinsey/,
+  /67 ?% des PME/,
+  // Mission CRM « en cours » chez une PME des Yvelines : elle n'a jamais existé.
+  /accompagnons actuellement une PME|45 minutes à 8 minutes/,
 ];
 
 describe("avis Google", () => {
