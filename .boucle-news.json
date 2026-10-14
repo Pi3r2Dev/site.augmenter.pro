@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "promptFile": "PROMPT-news.md",
+  "backlogFile": "docs/backlog-news.md",
+  "promise": "BOUCLE-TERMINEE",
+  "model": "claude-opus-5-5",
+  "perimetreRegex": "^(src/app/layout\\.tsx$|src/app/news-sitemap\\.xml/|src/components/layout/article-layout\\.tsx$|src/data/resources\\.ts$|src/lib/(seo-policy\\.ts$|seo-hygiene\\.test\\.ts$|news-sitemap|discover-news)|public/robots\\.txt$|CLAUDE\\.md$|\\.claude/commands/create-article\\.md$|\\.claude/templates/seo/checklist\\.md$|docs/backlog-news\\.md$)",
+  "maxTurns": 60,
+  "permissionMode": "acceptEdits",
+  "budgetUsdParTour": 5,
+  "budgetUsdParRun": 30,
+  "timeoutMinutesParTour": 30,
+  "verifierPromesse": true,
+  "attenteLimiteMinutes": 0,
+  "journalGarde": 3,
+  "verifyCmd": "npx vitest run --reporter=dot",
+  "verifyTimeoutMinutes": 5,
+  "tentativesMax": 2,
+  "confirmer": true,
+  "confirmerMaxTurns": 8,
+  "confirmerBudgetUsd": 1,
+  "interdits": ["Bash(npm run build:*)", "Bash(npm run dev:*)", "Bash(npm run start:*)", "Bash(npx next:*)"]
+}
