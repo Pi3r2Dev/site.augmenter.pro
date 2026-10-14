@@ -410,13 +410,26 @@
 
 ---
 
+## odoo-20-serveur-mcp-agents.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-10-14)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover) ; OG `og/odoo-20-serveur-mcp-agents.jpg` 1200×630
+- **Poids** : ~52 Ko (hero) · ~70 Ko (OG)
+- **Description** : Mur de tableaux de bord ERP stylisés (graphiques en barres, courbes, camemberts, lignes de données) sur fond dégradé violet profond vers ambre. Au centre, une porte violette grande ouverte donne sur une salle lumineuse aux rayonnages de serveurs et de données ordonnés, baignée de lumière chaude. Sur le seuil, un petit robot ambre arrondi tient une grande clé dorée. Au pied de la porte, un petit panneau lumineux ambre marqué d'un point d'interrogation. Style épuré, sans texte lisible.
+- **Contexte éditorial** : Image hero de l'article sur Odoo 20 et son serveur MCP natif. La porte ouverte figure l'ERP qui s'ouvre aux agents, la clé l'accès donné par l'utilisateur (droits de celui qui donne la clé), le point d'interrogation la question restante : qui empêche l'agent de dire n'importe quoi ?
+- **Usage suggéré** : Hero `/blog/odoo-20-serveur-mcp-agents` + OG.
+- **Alt text suggéré** : "Petit robot tenant une clé devant une porte ouverte sur une salle de serveurs ordonnée, au milieu d'un mur de tableaux de bord ERP — Odoo 20 ouvre son ERP aux agents IA"
+
+---
+
 ## Essaim MCP / Odoo 20 (2026-10-14) — visuels PROVISOIRES à remplacer
+
+Installer une illustration livrée : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis déplacer la ligne ci-dessous en entrée complète.
 
 Six articles courts adossés à la page `/serveur-mcp-odoo`. Les fichiers ci-dessous sont des **dégradés violet → ambre générés par `scripts/blog-placeholder-images.mjs`** (hero WebP 1600×900 + OG JPEG 1200×630 dans `og/`), posés pour qu'aucune carte ni aucun `og:image` ne soit cassé. À remplacer par l'illustration Gemini (même nom de fichier, puis régénérer l'OG avec sharp).
 
 | Fichier | Article | Prompt Gemini suggéré |
 | --- | --- | --- |
-| `odoo-20-serveur-mcp-agents.webp` | Odoo 20 ouvre la porte aux agents | Illustration flat design, palette violet/lavande dominante + accents ambre/doré, 16:9. Une grande porte violette entrouverte dans un mur d'écrans ERP (tableaux, fiches produit), un petit robot ambre sur le seuil qui tient une clé, et derrière la porte des rayonnages de données ordonnées. Sans texte, fond dégradé violet vers ambre. |
 | `agent-ia-qui-ne-touche-pas-aux-prix.webp` | L'agent qui ne peut pas toucher aux prix | Illustration flat design violet/ambre 16:9. Un robot assistant stylisé tend la main vers une étiquette de prix ambre protégée par un cadenas violet et une vitre ; à côté, un document « brouillon » qu'un humain tient avec un tampon. Icônes symboliques, sans texte. |
 | `petit-modele-bien-outille.webp` | Un petit modèle bien outillé | Illustration flat design violet/ambre 16:9. Deux robots côte à côte : un petit robot violet équipé d'une ceinture d'outils (clé, loupe, dossier client) qui tient une fiche exacte ; un grand robot gris flou avec un point d'interrogation. Fond dégradé, sans texte. |
 | `ia-enrichir-catalogue-sans-perdre-la-main.webp` | Enrichir votre catalogue sans perdre la main | Illustration flat design violet/ambre 16:9. Une étagère de fiches produit (filtres, courroies, bidons stylisés) ; un robot pose des étiquettes ambre « en transit » sur un plateau, une main humaine violette valide avec une coche, une flèche de retour symbolise l'annulation. Sans texte. |
