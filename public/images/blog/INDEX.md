@@ -444,6 +444,17 @@
 
 ---
 
+## ia-enrichir-catalogue-sans-perdre-la-main.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-10-14)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover) ; OG `og/ia-enrichir-catalogue-sans-perdre-la-main.jpg` 1200×630
+- **Description** : Vue isométrique sur fond dégradé lavande vers pêche. À gauche, une étagère violette garnie de fiches produit, d'étiquettes ambre et de pièces stylisées (filtres, courroie, bidons, bougies). Au centre, un petit robot violet souriant dépose des étiquettes ambre dans un plateau posé sur un comptoir, à l'écart de l'étagère. À droite, une main humaine violette tient une étiquette ambre frappée d'une grande coche ; une flèche circulaire de retour arrière flotte à côté. Style épuré, sans texte lisible.
+- **Contexte éditorial** : Image hero de l'article sur l'enrichissement du catalogue par IA. Le plateau figure les champs de transit (rien n'est écrit dans la fiche), la coche la validation humaine, la flèche de retour l'annulation d'un lot en une commande.
+- **Usage suggéré** : Hero `/blog/ia-enrichir-catalogue-sans-perdre-la-main` + OG.
+- **Alt text suggéré** : "Robot déposant des étiquettes produit dans un plateau d'attente devant une étagère de pièces, pendant qu'une main humaine valide une étiquette d'une coche — l'IA propose, l'humain valide"
+
+---
+
 ## Essaim MCP / Odoo 20 (2026-10-14) — visuels PROVISOIRES à remplacer
 
 Installer une illustration livrée : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis déplacer la ligne ci-dessous en entrée complète.
@@ -452,7 +463,6 @@ Six articles courts adossés à la page `/serveur-mcp-odoo`. Les fichiers ci-des
 
 | Fichier | Article | Prompt Gemini suggéré |
 | --- | --- | --- |
-| `ia-enrichir-catalogue-sans-perdre-la-main.webp` | Enrichir votre catalogue sans perdre la main | Illustration flat design violet/ambre 16:9. Une étagère de fiches produit (filtres, courroies, bidons stylisés) ; un robot pose des étiquettes ambre « en transit » sur un plateau, une main humaine violette valide avec une coche, une flèche de retour symbolise l'annulation. Sans texte. |
 | `odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp` | Odoo Online : ce que vous ne pourrez jamais y installer | Illustration flat design violet/ambre 16:9. Un nuage violet (SaaS) avec un panneau « interdit » sur une brique de code à l'intérieur, et autour du nuage quatre passerelles ambre qui le contournent (un pinceau Studio, un engrenage, un paquet ZIP, un serveur externe relié par un câble). Sans texte. |
 | `logiciel-construit-par-agents-dix-semaines.webp` | Construire un logiciel avec des agents | Illustration flat design violet/ambre 16:9. Une chaîne de montage circulaire : des petits robots violets posent des blocs de code, un robot juge ambre avec une loupe contrôle chaque bloc, un humain au centre tient un plan et une liste cochée. Compteur stylisé de tests verts. Sans texte. |
 
