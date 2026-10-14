@@ -462,7 +462,14 @@ export default function IntegrationMCPPage() {
               >
                 serveur MCP métier pour Odoo
               </Link>
-              , compatible Odoo Online et Odoo 20.
+              , compatible Odoo Online et Odoo 20, et{" "}
+              <Link
+                href="/blog/claude-code-odoo-workflow"
+                className="text-primary underline underline-offset-4 hover:text-primary/80"
+              >
+                le workflow technique Claude Code + Odoo
+              </Link>{" "}
+              qui montre, code à l&apos;appui, comment on s&apos;y prend.
             </p>
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-2">

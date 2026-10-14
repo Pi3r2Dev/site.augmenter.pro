@@ -600,7 +600,12 @@ export default function ConfigurerOdooIAClaude() {
         </Link>.
       </p>
       <p>
-        Et une fois Odoo configur&eacute;, l&apos;&eacute;tape suivante est de le faire
+        Pour la version outill&eacute;e de cette m&eacute;thode, terminal, RPC et
+        garde-fous compris, lisez{" "}
+        <Link href="/blog/claude-code-odoo-workflow">
+          le workflow technique Claude Code + Odoo
+        </Link>
+        . Et une fois Odoo configur&eacute;, l&apos;&eacute;tape suivante est de le faire
         parler &agrave; un agent sans qu&apos;il dise n&apos;importe quoi : ce
         qu&apos;Odoo 20 apporte avec son serveur MCP natif, et{" "}
         <Link href="/serveur-mcp-odoo">

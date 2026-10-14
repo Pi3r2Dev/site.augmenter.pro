@@ -507,8 +507,11 @@ export default function Article() {
           <Link href="/blog/claude-code-prompt-architecture">
             prompt d&apos;architecte Claude Code
           </Link>{" "}
-          (le pendant &laquo;&nbsp;construction&nbsp;&raquo; de cet audit),
-          explorez la{" "}
+          (le pendant &laquo;&nbsp;construction&nbsp;&raquo; de cet audit), suivez{" "}
+          <Link href="/blog/claude-code-odoo-workflow">
+            le workflow technique Claude Code + Odoo
+          </Link>{" "}
+          si le projet audit&eacute; est votre ERP, explorez la{" "}
           <Link href="/prompts">bibliothèque de prompts IA</Link>, ou venez
           apprendre à piloter tout cela vous-même lors de l&apos;
           <Link href="/atelier-claude-code-dirigeant">

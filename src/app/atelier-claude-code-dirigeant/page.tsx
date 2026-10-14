@@ -466,6 +466,13 @@ export default function AtelierClaudeCodePage() {
             </li>
             <li>
               →{" "}
+              <Link href="/blog/claude-code-odoo-workflow" className="text-primary hover:underline">
+                Le workflow technique Claude Code + Odoo
+              </Link>{" "}
+              (RPC, Playwright, CLAUDE.md, MCP — ce qu&apos;on pratique en atelier)
+            </li>
+            <li>
+              →{" "}
               <a
                 href="https://github.com/Pi3r2Dev/claude-md-templates-pme"
                 target="_blank"
