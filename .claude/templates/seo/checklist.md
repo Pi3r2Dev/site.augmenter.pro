@@ -55,9 +55,10 @@ Règle : ces points sont **prioritaires sur le SEO on-page**. En cas de conflit,
 
 ## ✅ D. Intégration site (chaque nouvelle ressource)
 
-- [ ] `public/sitemap.xml` : entrée `<url>` avec `<lastmod>` ISO 8601 réel + priorité adaptée (1.0 home, 0.9 approche/contact, 0.8 services, 0.7 articles/comparatifs, 0.5 glossaire). **Pas de pages légales** (noindex). **Pas de news-sitemap.**
+- [ ] `public/sitemap.xml` : entrée `<url>` avec `<lastmod>` ISO 8601 réel + priorité adaptée (1.0 home, 0.9 approche/contact, 0.8 services, 0.7 articles/comparatifs, 0.5 glossaire). **Pas de pages légales** (noindex). **Pas de news-sitemap statique** (le sitemap news est généré par `/news-sitemap.xml`, ADR 0007).
 - [ ] `public/llms.txt` : entrée dans la section appropriée (`## Articles de blog`, `## Pages sectorielles`, `## Glossaire`, `## Pages`…)
 - [ ] Si article : `src/data/resources.ts` (catalog, **vraie source de vérité**) → ajouter en **première position** du tableau `ARTICLES`, avec `tldr` + `sectors` + `pains` (alimente aussi le hub `/augmenter-mon-entreprise`). `blog-view.tsx` l'importe — ne pas l'éditer. (⚠️ `src/components/sections/blog-preview.tsx` est **legacy** — ne pas y toucher)
+- [ ] Si l'article est daté (événement, publié sous 24-48 h, ADR 0007) : `kind: "news"` + `datePublished` (= `dateISO` de la page) dans le catalog, et slug ajouté à `NEWS_SLUGS` du juge `src/lib/discover-news.test.ts`. Sinon rien : c'est un guide.
 - [ ] Si idée : `src/data/resources.ts` → ajouter dans le tableau `IDEAS` (`EnrichedIdea` : `sector` + `pains` + pros/cons honnêtes). `idees-view.tsx` l'importe.
 - [ ] Si page sectorielle / locale / légale : `src/components/layout/footer.tsx` → lien dans la section correcte (services / secteurs / zones / legal)
 - [ ] Si image hero requise : `public/images/blog/<slug>.webp` (WebP, 16:9, < 300 Ko) + entrée dans `public/images/blog/INDEX.md` + prop `image` passé à `ArticleLayout`

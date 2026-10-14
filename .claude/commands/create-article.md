@@ -215,6 +215,16 @@ Si le brief utilise ce format, les règles standard sont remplacées par :
 - **Schémas JSON-LD complémentaires** : ajouter manuellement `Dataset` ou `Report` si pertinent (au-delà du `Article` schema auto-généré)
 - **Objectif business** : visibilité dans les sources citées par les LLMs (mesurable via `/seo-audit` Phase 6.3 boucle de validation T+7/T+30/T+90), pas trafic search direct
 
+### Format news (sujets datés uniquement)
+
+Décision 3 de l'[ADR 0007](../../docs/decisions/0007-google-news-discover.md). **Par défaut, un article est un guide** : on ne pose rien, il reste un `Article` et n'entre jamais dans le sitemap news.
+
+- **Quand** : seulement pour un **événement daté** (sortie d'Odoo 20, lancement d'un modèle Claude, changement du plan Osez l'IA, bilan semestriel IA), 2 à 3 par trimestre, **publié sous 24 à 48 h** après l'événement. Passé ce délai, c'est un guide.
+- **Quoi poser** : dans l'entrée du catalog `src/data/resources.ts`, `kind: "news"` et `datePublished: "AAAA-MM-JJ"`, **égal** au `dateISO` de la `page.tsx` (le juge `src/lib/discover-news.test.ts` compare les deux). Ajouter aussi le slug à `NEWS_SLUGS` dans ce juge : il fixe la liste exacte des articles « news ». `ArticleLayout` émet alors `NewsArticle`, et `/news-sitemap.xml` liste l'article pendant ses 48 premières heures, puis l'oublie (sitemap souvent vide : c'est normal).
+- **Titre** : factuel, il dit l'événement. Pas de « guide », pas d'année d'appât (« … en 2026 »).
+- **Le reste ne change pas** : visuel ≥ 1 200 px, primitives de lecture, maillage, même charte.
+- ⚠️ Ne jamais reclasser en « news » un guide existant.
+
 ## Étape 4 — Image de l'article (OBLIGATOIRE)
 
 Chaque article **doit** avoir une image hero. Le workflow est le suivant :
