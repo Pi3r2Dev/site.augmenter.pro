@@ -85,9 +85,19 @@ export const metadata: Metadata = {
       },
     ],
   },
+  // Discover (ADR 0007) : sans max-image-preview:large, Google ne montre
+  // qu'une vignette. Une page qui redéclare robots perd ce bloc (fusion
+  // superficielle) : réservé aux pages noindex de src/lib/seo-policy.ts.
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
