@@ -27,10 +27,12 @@ Assets partagés hors blog / équipe. Référence pour LLM et cohérence des alt
 ## gbp-cover.jpg (couverture Google Business Profile)
 
 - **Statut** : visuel de couverture de la fiche Google augmenter.pro (remplace la photo de sceaux Ouquequoi.fr qui s'y affichait au 2026-10-14)
-- **Source** : recadrage centré 16:9 de `og-augmenter-pro.jpg` (1200 × 630 → 1120 × 630, aucun agrandissement)
-- **Dimensions** : 1120 × 630 px (16:9 — minimum Google 1024 × 576)
-- **Poids** : ~108 Ko (JPEG q=90)
-- **Usage** : upload manuel dans GBP → Photos → Couverture. Non référencé par le site.
+- **Source** : illustration Gemini dédiée (`Gemini_Generated_Image_r5jo1kr5jo1kr5jo.jpg`, 2752 × 1536), redimensionnée en 16:9. Remplace le premier jet du 2026-10-14 tiré de l'OG.
+- **Description** : diorama isométrique 3D d'un bureau de dirigeant, palette violet / ambre / beige. Un homme travaille sur un portable affichant un tableau de bord, un petit robot assistant souriant se tient à côté, tableau blanc couvert de schémas, plantes et bibliothèques. Aucun texte dans l'image.
+- **Dimensions** : 1920 × 1080 px (16:9 — minimum Google 1024 × 576)
+- **Poids** : ~138 Ko (JPEG q=85)
+- **Alt text** : "Bureau de dirigeant de PME en illustration isométrique, accompagné d'un assistant IA — augmenter.PRO"
+- **Usage** : upload manuel dans GBP → Photos → Couverture. Non référencé par le site. Scène centrée avec marge : supporte le recadrage en bandeau large de Google sur mobile.
 
 ## gbp-logo.png (logo Google Business Profile)
 
