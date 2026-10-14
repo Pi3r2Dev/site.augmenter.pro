@@ -91,6 +91,17 @@ export interface CatalogArticle extends ArticleBentoData {
   pains: PainId[];
   /** Articles liés choisis à la main, servis en premier dans le bloc « articles liés ». */
   related?: string[];
+  /**
+   * Type éditorial (ADR 0007). Absent = « guide ». « news » est réservé aux
+   * sujets datés publiés sous 48 h : balisage `NewsArticle` et sitemap news.
+   */
+  kind?: "guide" | "news";
+  /**
+   * Date de publication AAAA-MM-JJ, obligatoire pour une « news » (fenêtre de
+   * 48 h du sitemap news, ADR 0007). Doit égaler le `dateISO` de la page :
+   * double écriture assumée, gardée par src/lib/discover-news.test.ts.
+   */
+  datePublished?: string;
 }
 
 export const ARTICLES: CatalogArticle[] = [
@@ -126,6 +137,8 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/odoo-20-serveur-mcp-agents.webp",
     sectors: ["Tous", "Industrie", "Commerce & service local"],
     pains: ["prestataire", "demarrage"],
+    kind: "news",
+    datePublished: "2026-10-14",
     related: [
       "agent-ia-qui-ne-touche-pas-aux-prix",
       "cout-agent-ia-odoo",
@@ -277,6 +290,8 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/bilan-ia-janvier-juillet-2026.webp",
     sectors: ["Tous"],
     pains: ["demarrage", "cyber", "prestataire"],
+    kind: "news",
+    datePublished: "2026-07-29",
   },
   {
     slug: "serveur-mcp-heberge-pme",
@@ -953,6 +968,14 @@ export function buildHubResources(prompts: Prompt[]): HubResource[] {
 /** Retrouve une entrée article du catalog par son slug. */
 export function getArticleBySlug(slug: string): CatalogArticle | undefined {
   return ARTICLES.find((a) => a.slug === slug);
+}
+
+/**
+ * `@type` schema.org du JSON-LD d'un article (ADR 0007) : `NewsArticle` pour
+ * une « news », `Article` pour un guide ou un article hors catalog.
+ */
+export function articleSchemaType(article?: CatalogArticle): "Article" | "NewsArticle" {
+  return article?.kind === "news" ? "NewsArticle" : "Article";
 }
 
 /**

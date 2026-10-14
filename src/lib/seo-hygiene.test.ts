@@ -37,13 +37,13 @@ function robotsGroupsAllowingRoot(): string[] {
 }
 
 describe("politique noindex légal", () => {
-  it("liste les trois pages légales et désactive le news-sitemap", () => {
+  it("liste les trois pages légales et active le news-sitemap dynamique (ADR 0007)", () => {
     expect([...NOINDEX_FOLLOW_PATHS]).toEqual([
       "/mentions-legales",
       "/cgv",
       "/politique-confidentialite",
     ]);
-    expect(NEWS_SITEMAP_ENABLED).toBe(false);
+    expect(NEWS_SITEMAP_ENABLED).toBe(true);
   });
 
   it("n'expose plus les pages légales dans public/sitemap.xml", () => {
@@ -53,9 +53,9 @@ describe("politique noindex légal", () => {
     }
   });
 
-  it("ne déclare plus le news-sitemap dans robots.txt", () => {
+  it("déclare le news-sitemap dynamique dans robots.txt (ADR 0007)", () => {
     const robots = readFileSync(join(root, "public/robots.txt"), "utf8");
-    expect(robots).not.toContain("news-sitemap.xml");
+    expect(robots).toMatch(/^Sitemap: https:\/\/augmenter\.pro\/news-sitemap\.xml\r?$/m);
     expect(robots).toContain("Sitemap: https://augmenter.pro/sitemap.xml");
   });
 

@@ -17,10 +17,13 @@ export const NOINDEX_FOLLOW_PATHS = [
 export type NoindexFollowPath = (typeof NOINDEX_FOLLOW_PATHS)[number];
 
 /**
- * Google News n'accepte pas un site de conseil PME comme publication News.
- * Le news-sitemap a été retiré (0 URL News indexée, crawl pollué).
+ * Sitemap news dynamique (/news-sitemap.xml), décidé par l'ADR 0007
+ * (docs/decisions/0007-google-news-discover.md) : seuls les articles
+ * `kind: "news"` publiés depuis moins de 48 h y figurent, calculés à chaque
+ * requête. L'ancien fichier statique (retiré le 2026-08-16) ne revient pas.
+ * `false` = la route répond 404 (interrupteur de retrait sans redéploiement de code).
  */
-export const NEWS_SITEMAP_ENABLED = false;
+export const NEWS_SITEMAP_ENABLED = true;
 
 /**
  * Pages hors index ET hors graphe de liens : noindex, nofollow, absentes du

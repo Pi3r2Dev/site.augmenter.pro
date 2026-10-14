@@ -8,7 +8,7 @@ import { TldrBox } from "@/components/article/tldr-box";
 import { AuthorSignoff } from "@/components/article/author-signoff";
 import { RelatedArticles } from "@/components/article/related-articles";
 import { JournalFlow } from "@/components/article/journal-flow";
-import { getArticleBySlug, getRelatedArticles } from "@/data/resources";
+import { articleSchemaType, getArticleBySlug, getRelatedArticles } from "@/data/resources";
 
 interface ArticleLayoutProps {
   title: string;
@@ -40,7 +40,7 @@ export function ArticleLayout({
 }: ArticleLayoutProps) {
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": articleSchemaType(slug ? getArticleBySlug(slug) : undefined),
     headline: title,
     description: excerpt,
     author: {
