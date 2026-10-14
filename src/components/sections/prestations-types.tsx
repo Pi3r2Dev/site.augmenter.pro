@@ -4,10 +4,8 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { sendGTMEvent } from "@next/third-parties/google";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GBP_MAPS_URL } from "@/lib/gbp";
 import {
   BentoGrid,
   BentoCard,
@@ -197,74 +195,6 @@ export function PrestationsTypes() {
         </div>
 
         <BentoGrid>
-          {/* Preuve terrain — respiration entre six pavés denses et le
-              financement. Arnaud est la preuve vivante de « Catalogue &
-              commandes », et la seule qui nomme notre commune. */}
-          <BentoCard span={12} rows={2} mobileMinH="200px">
-            <motion.figure
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.45 }}
-              className="flex h-full flex-col justify-center gap-4 md:flex-row md:items-center md:justify-between"
-            >
-              <blockquote className="max-w-3xl text-[1.05rem] font-medium italic leading-[1.5] tracking-[-0.01em] md:text-[1.2rem]">
-                &laquo;&nbsp;On gérait notre catalogue sur des fichiers Excel
-                éparpillés. Catalogue centralisé, mise en ligne automatisée
-                &mdash;{" "}
-                <em
-                  className="not-italic"
-                  style={{ color: PALETTES.amber.b }}
-                >
-                  2 h de saisie en moins par jour
-                </em>{" "}
-                et +35 % de demandes clients en ligne.&nbsp;&raquo;
-              </blockquote>
-              <figcaption className="shrink-0 md:text-right">
-                <div className="flex items-center gap-0.5 text-[oklch(0.828_0.189_84.429)] md:justify-end">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg
-                      key={i}
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden
-                    >
-                      <polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9" />
-                    </svg>
-                  ))}
-                </div>
-                <div className="mt-1.5 text-[0.85rem] font-semibold">
-                  Arnaud L.
-                </div>
-                <div className="text-[0.75rem] text-muted-foreground">
-                  Gérant, commerce spécialisé &mdash; Île-de-France
-                </div>
-                <div className="mt-1 text-[0.68rem] uppercase tracking-[0.08em] text-muted-foreground">
-                  Catalogue &amp; commandes
-                </div>
-                {/* La preuve vérifiable est sur la fiche Google, pas ici : un
-                    témoignage hébergé chez soi ne prouve rien tout seul. */}
-                <a
-                  href={GBP_MAPS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() =>
-                    sendGTMEvent({
-                      event: "gbp_click",
-                      location: "home-testimonial",
-                    })
-                  }
-                  className="mt-2 inline-flex items-center gap-1 text-[0.72rem] font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
-                >
-                  Voir les avis Google
-                  <ArrowUpRight className="h-3 w-3" />
-                </a>
-              </figcaption>
-            </motion.figure>
-          </BentoCard>
-
           {/* Financement : l'argument qui débloque la décision */}
           <BentoCard span={12} rows={2} variant="accent" mobileMinH="220px">
             <motion.div

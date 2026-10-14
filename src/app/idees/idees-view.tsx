@@ -19,6 +19,7 @@ import {
   Pill,
 } from "@/components/bento/bento-grid";
 import { PullQuoteCard } from "@/components/bento/pull-quote-card";
+import { MAUD_J } from "@/lib/gbp";
 import { IdeaCardBigNumber } from "@/components/widgets/idea-card";
 import { TrustStatCard } from "@/components/widgets/trust-stat";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
@@ -244,10 +245,9 @@ export function IdeesView() {
               mobileMinH="180px"
             >
               <PullQuoteCard
-                quote="Devis passés de 2 h à 15 min — mon équipe se concentre sur les chantiers."
-                author="Nathalie R."
-                role="BTP · 95"
-                stars={5}
+                review={MAUD_J}
+                excerpt="recommandation"
+                location="idees-pull-quote"
               />
             </BentoCard>
 

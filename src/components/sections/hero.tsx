@@ -7,6 +7,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BentoGrid, BentoCard, Pill } from "@/components/bento/bento-grid";
 import { MiniQuoteCard } from "@/components/bento/pull-quote-card";
+import { MAUD_J } from "@/lib/gbp";
 import { NavTileCard, type NavTileData } from "@/components/widgets/nav-tile";
 import type { Palette } from "@/components/widgets/palettes";
 
@@ -172,13 +173,10 @@ export function Hero() {
             </Link>
           </BentoCard>
 
-          {/* Mini citation client */}
+          {/* Mini citation client — extrait mot pour mot d'un avis de la fiche
+              Google (src/lib/gbp.ts), jamais un texte libre. */}
           <BentoCard span={3} rows={2} pad="none" mobileMinH="180px">
-            <MiniQuoteCard
-              quote="Moodboards et 3D livrés en 48 h au lieu d'une semaine — la qualité a monté d'un cran."
-              author="Maud J."
-              role="Architecte d'intérieur"
-            />
+            <MiniQuoteCard review={MAUD_J} excerpt="resultat" location="home-hero" />
           </BentoCard>
 
           {/* Tuiles 3-4 — sous le titre, rangées 5-6 */}

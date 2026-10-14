@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { TrendingDown, Clock, Star, Reply } from "lucide-react";
+import { TrendingDown, Clock, Star, Reply, ArrowUpRight } from "lucide-react";
+import { GBP_MAPS_URL, MAUD_J } from "@/lib/gbp";
 import { CardShell, LiquidBlob } from "@/components/widgets/blobs";
 import {
   TrustStatCard,
@@ -56,15 +57,14 @@ const stats: Array<{ data: TrustStatData; palette: Palette }> = [
   },
 ];
 
-// Témoignage XL — Karim B., consultant indépendant, parle au cœur de cible PME.
+// Témoignage XL — extrait mot pour mot de l'avis Google de Maud J. (src/lib/gbp.ts).
 // Affichage UI seulement : ne JAMAIS le rebaliser en Review/AggregateRating —
 // les avis auto-déclarés sont interdits par Google (cf. CLAUDE.md §Structured Data).
+// Jusqu'au 2026-10-14 ce bloc citait un témoignage absent de la fiche Google.
 const featuredTestimonial = {
-  quote:
-    "En tant qu'indépendant, je pensais que l'IA n'était pas pour moi. Pierre m'a montré comment gagner 8 heures par semaine avec des outils simples. Mon chiffre d'affaires a augmenté de 30 % en 6 mois.",
-  name: "Karim B.",
-  role: "Consultant indépendant",
-  gain: "+30 % de CA en 6 mois",
+  quote: MAUD_J.excerpts.recommandation,
+  name: MAUD_J.author,
+  role: MAUD_J.role,
 };
 
 function TestimonialXL() {
@@ -107,9 +107,15 @@ function TestimonialXL() {
                 {featuredTestimonial.role}
               </div>
             </div>
-            <span className="rounded-full border border-amber-400/40 bg-amber-400/15 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-amber-300">
-              {featuredTestimonial.gain}
-            </span>
+            <a
+              href={GBP_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/15 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-amber-300 hover:bg-amber-400/25"
+            >
+              Avis Google
+              <ArrowUpRight className="h-3 w-3" aria-hidden />
+            </a>
           </div>
         </div>
       </CardShell>
@@ -137,8 +143,9 @@ export function H04Preuves() {
         data-anim="up"
         className="max-w-[58ch] text-[clamp(17px,1.5vw,22px)] leading-relaxed text-white/70"
       >
-        Quatre chiffres et une voix. Tous sourcés sur des missions réelles —
-        anonymisés quand il faut, vérifiables sur demande.
+        Quatre chiffres et une voix, celle-ci tirée de notre fiche Google.
+        Les chiffres viennent de missions réelles, anonymisés quand il faut,
+        vérifiables sur demande.
       </p>
       <div
         data-anim="stagger"

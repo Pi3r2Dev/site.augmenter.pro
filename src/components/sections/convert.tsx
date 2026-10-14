@@ -3,7 +3,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight, Check, Clock } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Clock } from "lucide-react";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { GBP_MAPS_URL, GBP_RATING } from "@/lib/gbp";
 import { Button } from "@/components/ui/button";
 import { BentoGrid, BentoCard } from "@/components/bento/bento-grid";
 
@@ -301,14 +303,21 @@ export function Convert() {
             pad="md"
             mobileMinH="180px"
           >
+            {/* Note relevée sur la fiche Google (src/lib/gbp.ts), jamais une note
+                maison : un chiffre qui ne se retrouve pas au clic décrédibilise
+                tout le reste. */}
             <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-violet-300">
-              Avis clients
+              Avis Google
             </span>
             <div className="mt-3 flex items-baseline gap-2">
               <div className="text-[2rem] font-bold leading-none tracking-[-0.02em] text-white">
-                5.0
+                {GBP_RATING.value}
               </div>
-              <div className="flex gap-0.5 text-amber-400">
+              <div
+                className="flex gap-0.5 text-amber-400"
+                role="img"
+                aria-label={`${GBP_RATING.value} étoiles sur 5`}
+              >
                 {Array.from({ length: 5 }).map((_, i) => (
                   <svg
                     key={i}
@@ -324,8 +333,21 @@ export function Convert() {
               </div>
             </div>
             <div className="mt-2 text-[0.75rem] text-white/60">
-              sur 5 retours clients — BTP, déco, industrie, commerce
+              {GBP_RATING.count} avis sur notre fiche Google, relevé{" "}
+              {GBP_RATING.checkedOn}
             </div>
+            <a
+              href={GBP_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                sendGTMEvent({ event: "gbp_click", location: "home-convert" })
+              }
+              className="mt-2 inline-flex items-center gap-1 text-[0.75rem] font-medium text-violet-200 underline-offset-4 hover:text-white hover:underline"
+            >
+              Lire les avis
+              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+            </a>
           </BentoCard>
         </BentoGrid>
       </div>

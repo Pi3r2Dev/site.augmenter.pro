@@ -123,8 +123,8 @@ Yvelines, Val d'Oise & distance
 ![Cas client : Odoo configuré avec Claude Cowork](https://augmenter.pro/images/blog/configurer-odoo-ia-claude-cowork.webp)
 IA · cas client
 Odoo configuré avec Claude−3 500 €
-« Devis passés de 2 h à 15 min — mon équipe se concentre sur les chantiers. »
-Nathalie R.·BTP · 95
+« Aujourd'hui, la majorité de mes clients me découvrent grâce au bon référencement de mon site. »
+Maud J.·Architecte d'intérieur · avis Google (https://www.google.com/maps?cid=13143887329151170152)
 −30 %
 Temps gagné
 Sur les tâches automatisées
@@ -154,8 +154,8 @@ Suivi, mesure des résultats et ajustements. Des habitudes solides pour des rés
 [ Digitalisation 3× Digitalisation, mais humaine Changer d'outil est un projet humain avant d'être technique. Nous accompagnons vos équipes vers des outils qui simplifient vraiment. ](https://augmenter.pro/approche#prestations)
 [ Robotique & IoT 24/7 Robotique, capteurs & terrain Drones, robots, capteurs, caméras — on explore les technologies émergentes adaptées à votre secteur et à vos contraintes terrain. ](https://augmenter.pro/approche#prestations)
 “
-Moodboards et 3D livrés en 48 h au lieu d'une semaine — la qualité a monté d'un cran.
-Maud J.·Architecte d'intérieur indépendante
+Aujourd'hui, la majorité de mes clients me découvrent grâce au bon référencement de mon site.
+Maud J.·Architecte d'intérieur · avis Google (https://www.google.com/maps?cid=13143887329151170152)
 / 03 — ressources
 ## Idées PME & articles  
 pour passer au niveau supérieur.
@@ -205,9 +205,9 @@ vite@augmenter.pro
 +33 6 79 11 97 74 · Jouy-le-Moutier (95)
 Écrire[Appeler](tel:+33679119774)
 Nos engagements
-Avis clients
-5.0
-sur 5 retours clients — BTP, déco, industrie, commerce
+Avis Google
+5,0
+3 avis sur notre fiche Google, relevé octobre 2026 — https://www.google.com/maps?cid=13143887329151170152
 
 ---
 
@@ -491,8 +491,8 @@ Stratégie
 Vision 360° de votre maturité numérique. Feuille de route, benchmark, arbitrages technologiques.
 Nos engagements
 “
-Moodboards et 3D livrés en 48 h au lieu d'une semaine — la qualité a monté d'un cran.
-Maud J.·Architecte d'intérieur indépendante
+Aujourd'hui, la majorité de mes clients me découvrent grâce au bon référencement de mon site.
+Maud J.·Architecte d'intérieur · avis Google (https://www.google.com/maps?cid=13143887329151170152)
 / 04 — pour qui
 ## PME, startups, indépendants — _78 & 95_.
 Présentiel ou distance
@@ -969,8 +969,8 @@ Comment décider
   * 3. L'équipe est-elle prête au changement d'outil ?
 
 “
-Devis passés de 2 h à 15 min — mon équipe se concentre sur les chantiers.
-Nathalie R.·BTP · 95
+Disponible, motivant, pédagogue et réactif, je recommande Pierre à tous les entrepreneurs qui veulent améliorer leur chiffre d'affaires grâce à leur site.
+Maud J.·Architecte d'intérieur · avis Google (https://www.google.com/maps?cid=13143887329151170152)
 Une autre idée en tête ?
 ### Décrivez votre cas d'usage — on estime le ROI sous 48 h.
 [](https://augmenter.pro/contact)
@@ -1903,7 +1903,7 @@ NIS2 distingue deux catégories d'entités régulées :
   * **Entités essentielles** : grandes entreprises (> 250 salariés, > 50 M€ de CA) dans les 11 secteurs hautement critiques (énergie, transports, santé, infrastructures numériques, etc.)
   * **Entités importantes** : moyennes entreprises (50 à 249 salariés, 10 à 50 M€ de CA) dans les 18 secteurs concernés
 
-**Outil officiel** : le [simulateur MonEspaceNIS2 de l'ANSSI](https://monespacenis2.cyber.gouv.fr/simulateur) vous permet de vérifier votre éligibilité en 5 à 10 minutes.
+**Outil officiel** : le [simulateur MesServicesCyber de l'ANSSI](https://messervices.cyber.gouv.fr/simulateur-nis2) vous permet de vérifier votre éligibilité en 5 à 10 minutes.
 ### Les 18 secteurs concernés
 **11 secteurs hautement critiques** (entités essentielles) : énergie, transports, secteur bancaire, marchés financiers, santé, eaux potables, eaux usées, infrastructures numériques, gestion des services TIC (B2B), administrations publiques, espace.
 **7 secteurs critiques** (entités importantes) : services postaux, gestion des déchets, produits chimiques, **industrie manufacturière** , agroalimentaire, fournisseurs numériques, recherche.
@@ -1952,8 +1952,8 @@ Le Val d'Oise compte plus de 41 000 établissements actifs et concentre des sect
 ### BTP et services : l'impact indirect par les donneurs d'ordres
 Le BTP est le secteur le plus représenté dans les deux départements (2 875 entreprises d'installation électrique dans le 95 seul). Le BTP n'est pas directement dans les 18 secteurs NIS2. Mais un sous-traitant BTP de 30 salariés à Versailles qui travaille pour Bouygues Construction (entité essentielle) devra démontrer sa conformité cyber pour **conserver ses marchés**. Même logique pour les prestataires IT intervenant dans les hôpitaux ou collectivités du 78/95.
 ## Se mettre en conformité : plan d'action en 5 étapes
-### Étape 1 — Vérifier son éligibilité sur MonEspaceNIS2
-Rendez-vous sur le [simulateur ANSSI](https://monespacenis2.cyber.gouv.fr/simulateur). En 5 à 10 minutes, vous saurez si vous êtes directement concerné. Si non, évaluez votre exposition indirecte : combien de vos clients sont eux-mêmes des entités régulées ?
+### Étape 1 — Vérifier son éligibilité sur MesServicesCyber
+Rendez-vous sur le [simulateur ANSSI](https://messervices.cyber.gouv.fr/simulateur-nis2). En 5 à 10 minutes, vous saurez si vous êtes directement concerné. Si non, évaluez votre exposition indirecte : combien de vos clients sont eux-mêmes des entités régulées ?
 ### Étape 2 — Réaliser un audit de cybersécurité
 Un **audit 360°** couvre l'ensemble des 10 mesures NIS2 : cartographie des actifs, analyse des risques, test des sauvegardes, évaluation des accès, revue des contrats fournisseurs. C'est le point de départ indispensable — on ne peut pas sécuriser ce qu'on ne connaît pas. Nous proposons un [diagnostic initial de 60 minutes](https://augmenter.pro/contact) pour évaluer votre niveau de maturité.
 ### Étape 3 — Déployer les 10 mesures par priorité
@@ -1963,8 +1963,7 @@ NIS2 impose explicitement la formation des dirigeants en cybersécurité. Mais l
 ### Étape 5 — Documenter, maintenir, améliorer
 La conformité NIS2 n'est pas un projet ponctuel. C'est un processus continu : audits réguliers, mise à jour des politiques, tests d'intrusion périodiques. Si vous construisez en parallèle une [stratégie IA conforme et sécurisée](https://augmenter.pro/strategie-ia-pme), vous alignerez modernisation et conformité — deux investissements qui se renforcent mutuellement.
 ## Ressources et aides disponibles en Île-de-France
-  * **ANSSI — MonEspaceNIS2** : [simulateur d'éligibilité et pré-enregistrement](https://monespacenis2.cyber.gouv.fr/)
-  * **MesServicesCyber** : [portail de notification d'incidents](https://messervices.cyber.gouv.fr/nis2)
+  * **ANSSI — MesServicesCyber** : [simulateur d'éligibilité](https://messervices.cyber.gouv.fr/simulateur-nis2), puis [espace NIS 2 (enregistrement, notification d'incidents)](https://messervices.cyber.gouv.fr/nis2)
   * **Cybermalveillance.gouv.fr** : assistance et ressources sans frais pour TPE-PME
   * **CCI Yvelines (78)** et **CCI Val d'Oise (95)** : diagnostics cybersécurité avec conseillers spécialisés
   * **Urgence Cyber Île-de-France** : plateforme d'assistance régionale en cas d'incident
@@ -1980,7 +1979,7 @@ Audit initial : 2 000 à 10 000 € HT. Mise en conformité complète : 7 000 à
 ### Quelles sont les sanctions NIS2 pour les dirigeants ?
 Amende personnelle jusqu'à 140 000 €. Pour les entités essentielles : interdiction temporaire d'exercer. L'entreprise risque jusqu'à 10 M€ ou 2% du CA mondial.
 ### Comment savoir si mon entreprise est une entité essentielle ou importante ?
-Utilisez le [simulateur MonEspaceNIS2](https://monespacenis2.cyber.gouv.fr/simulateur) de l'ANSSI. En 5 à 10 minutes, vous aurez votre réponse.
+Utilisez le [simulateur MesServicesCyber](https://messervices.cyber.gouv.fr/simulateur-nis2) de l'ANSSI. En 5 à 10 minutes, vous aurez votre réponse.
 ## Quel est votre prochain niveau ?
 Commencez par un diagnostic de 60 minutes. Zéro engagement, zéro jargon technique — juste des solutions concrètes.
 [Réserver mon diagnostic](https://augmenter.pro/contact)[Discuter sur WhatsApp](https://wa.me/33679119774)
