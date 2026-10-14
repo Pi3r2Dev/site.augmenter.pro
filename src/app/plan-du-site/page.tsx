@@ -90,6 +90,11 @@ const SECTIONS: SitemapSection[] = [
         desc: "Diagnostic IT en présentiel dans le Val d'Oise",
       },
       {
+        href: "/serveur-mcp-odoo",
+        label: "Serveur MCP pour Odoo",
+        desc: "Ce qu'Odoo 20 fait tout seul, ce qu'on ajoute par-dessus",
+      },
+      {
         href: "/integration-mcp",
         label: "Intégration MCP",
         desc: "Brancher l'IA sur vos vrais outils métier (CRM, ERP)",

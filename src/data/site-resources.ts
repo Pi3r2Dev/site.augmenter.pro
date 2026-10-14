@@ -212,6 +212,16 @@ const STATIC_PAGES: StaticPage[] = [
     meta: "½ journée · dès 450 € HT",
   },
   {
+    id: "serveur-mcp-odoo",
+    type: "page",
+    title: "Serveur MCP pour Odoo : ce qu'Odoo 20 ne fait pas",
+    tldr: "Odoo 20 a son serveur MCP, générique et sous les droits de celui qui donne la clé. On ajoute les outils qui parlent ton métier, des garde-fous dans le code (aucun paramètre prix, écriture au brouillon), un chiffre vérifié avant d'être cité et un modèle qui tourne chez toi. Marche sur Odoo Online.",
+    href: "/serveur-mcp-odoo",
+    intent: "prestataire",
+    weight: 84,
+    meta: "Odoo 19 & 20 · Odoo Online",
+  },
+  {
     id: "integration-mcp",
     type: "page",
     title: "Intégration MCP : brancher l'IA sur ton ERP, ton CRM et tes mails",

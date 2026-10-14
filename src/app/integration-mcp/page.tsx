@@ -455,7 +455,14 @@ export default function IntegrationMCPPage() {
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Chaque outil de votre SI peut être connecté à un agent IA via un
-              serveur MCP dédié.
+              serveur MCP dédié. Vous êtes sur Odoo ? Nous avons un{" "}
+              <Link
+                href="/serveur-mcp-odoo"
+                className="text-primary underline underline-offset-4 hover:text-primary/80"
+              >
+                serveur MCP métier pour Odoo
+              </Link>
+              , compatible Odoo Online et Odoo 20.
             </p>
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-2">
