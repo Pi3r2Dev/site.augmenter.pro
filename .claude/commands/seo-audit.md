@@ -87,7 +87,7 @@ Vérifier validité et complétude de chaque schema :
 - [ ] `article-layout.tsx` — Article (headline, author Pierre Legrand, publisher, datePublished, dateModified, keywords, url via slug, image)
 - [ ] `approche/page.tsx` — FAQPage (mainEntity, questions/answers suffisamment longues)
 - [ ] `prestations/page.tsx` — Service + OfferCatalog (prix, descriptions, URLs, areaServed)
-- [ ] `testimonials.tsx` — AggregateRating + Review (ratingValue, reviewCount, reviewBody authentique)
+- [ ] **Aucun** `AggregateRating` / `Review` dans le JSON-LD (avis auto-déclarés interdits par Google depuis 09/2019, retirés le 2026-09-07). Toute citation client affichée = extrait mot pour mot de `GBP_QUOTES` dans [`src/lib/gbp.ts`](../../src/lib/gbp.ts), avec lien vers la fiche ; note et nombre d'avis = `GBP_RATING` (relevé manuel, à tenir à jour). Garde-fou : `src/lib/seo-hygiene.test.ts`
 - [ ] Tous les articles passent bien le prop `slug` et `dateISO` à ArticleLayout
 
 **Validation externe** : pour 3-5 URLs prioritaires, appel `mcp-calls.md` §7 (`on_page_content_parsing`) sur l'URL publique pour récupérer le DOM réel et croiser avec le code source (vérifie que le SSR produit bien ce qui est attendu).

@@ -47,7 +47,7 @@ Règle : ces points sont **prioritaires sur le SEO on-page**. En cas de conflit,
 - [ ] Article de blog → prop `slug` passé à `ArticleLayout` (génère l'URL canonique du JSON-LD `Article`)
 - [ ] Page custom → JSON-LD inline approprié (Service, LocalBusiness, FAQPage, ItemList, DefinedTerm, etc.)
 - [ ] FAQ section présente → JSON-LD `FAQPage` ajouté
-- [ ] Pas de stats inventées dans `Review` / `AggregateRating` — réutiliser le tableau `REVIEWS` de [`src/app/layout.tsx`](../../src/app/layout.tsx)
+- [ ] **Aucun** `AggregateRating` / `Review` dans le JSON-LD (avis auto-déclarés interdits par Google depuis 09/2019, retirés le 2026-09-07). Toute citation client affichée = extrait mot pour mot de `GBP_QUOTES` dans [`src/lib/gbp.ts`](../../../src/lib/gbp.ts), avec lien vers la fiche ; note et nombre d'avis = `GBP_RATING` (relevé manuel, à tenir à jour). Garde-fou : `src/lib/seo-hygiene.test.ts`
 - [ ] Pages indexables → vérifier `metadata.robots` non défini ou `index: true`
 - [ ] Pages légales / utilitaires → `robots: { index: false, follow: true }`
 

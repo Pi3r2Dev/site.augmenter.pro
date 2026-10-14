@@ -54,7 +54,7 @@ Le projet utilise `dangerouslySetInnerHTML` pour injecter du JSON-LD dans plusie
 - `src/components/layout/article-layout.tsx` — JSON-LD Article (avec slug dynamique)
 - `src/app/prestations/page.tsx` — JSON-LD Service/OfferCatalog
 - `src/app/approche/page.tsx` — JSON-LD FAQPage
-- `src/components/sections/testimonials.tsx` — JSON-LD AggregateRating/Review
+- `src/lib/gbp.ts` — liens fiche Google + avis citables (`GBP_QUOTES`) ; **aucun** JSON-LD AggregateRating/Review (interdit, retiré le 2026-09-07)
 
 **Pour chaque usage, vérifie** :
 - [ ] Le contenu injecté est-il entièrement statique (hardcodé) ou dérivé de données inline ?
@@ -242,7 +242,7 @@ Génère un rapport structuré :
 | article-layout.tsx | Article (slug dynamique) | Slug hardcodé par page | ✅ |
 | prestations/page.tsx | Service/OfferCatalog | Statique | ✅ |
 | approche/page.tsx | FAQPage | Statique | ✅ |
-| testimonials.tsx | AggregateRating/Review | Statique | ✅ |
+| `src/lib/gbp.ts` | Avis Google affichés en clair, sans balisage | Statique | ✅ |
 
 ## Plan de remédiation (par priorité)
 1. [CRITIQUE] Headers de sécurité dans next.config.ts

@@ -32,7 +32,7 @@ Fichier de référence partagé par toutes les commandes SEO (`/seo-audit`, `/cr
 
 ## Stack SEO/LLM en place
 
-- **JSON-LD** : Organization + LocalBusiness + WebSite (layout.tsx), Article (article-layout.tsx), FAQPage (approche), Service + OfferCatalog (prestations), AggregateRating + Review (testimonials)
+- **JSON-LD** : Organization + LocalBusiness + WebSite (layout.tsx), Article (article-layout.tsx), FAQPage (approche), Service + OfferCatalog (prestations). **Pas** d'AggregateRating ni de Review (interdits, retirés le 2026-09-07) : les avis sont sur la fiche Google, cités en clair depuis `src/lib/gbp.ts`
 - **llms.txt** : `public/llms.txt` pour crawlers LLM (Perplexity, ChatGPT, Claude)
 - **robots.txt** + **sitemap.xml** dans `public/` (pas de news-sitemap — le site n'est pas Google News)
 - **Events GA4** : `contact_form_submit` (formulaire), `lecture_article` (via `ArticleReadEvent` dans `ArticleLayout`)

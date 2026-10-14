@@ -50,7 +50,7 @@ Duplication restante : les données d'un article existent encore en **deux endro
 Vérifie si d'autres données sont dupliquées :
 - [ ] Prix : contenu visible `/approche` (absorbe l'ancien `/prestations`) vs JSON-LD Service/OfferCatalog (`approche/page.tsx`)
 - [ ] FAQ : `approche/page.tsx` contenu visible vs JSON-LD FAQPage
-- [ ] Témoignages : tableau `REVIEWS` dans `layout.tsx` + JSON-LD AggregateRating/Review
+- [ ] Avis : `GBP_RATING` / `GBP_QUOTES` de `src/lib/gbp.ts` conformes à la fiche Google ; **aucun** JSON-LD AggregateRating/Review
 - [ ] Informations de contact : `contact-form.tsx`, `footer.tsx`, `llms.txt`, layout.tsx JSON-LD
 
 ### 1.4 Patterns & anti-patterns

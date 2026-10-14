@@ -102,7 +102,7 @@ Vérifie la cohérence des données structurées :
 | Article | `article-layout.tsx` | Chaque article passe bien le prop `slug` |
 | FAQPage | `approche/page.tsx` | Questions/réponses synchronisées avec le contenu visible |
 | Service/OfferCatalog | `prestations/page.tsx` | Prix et descriptions synchronisés avec `pricing.tsx` |
-| AggregateRating/Review | `testimonials.tsx` | ratingValue et reviewCount à jour |
+| Avis Google (pas de JSON-LD d'avis) | `src/lib/gbp.ts` | `GBP_RATING` et `GBP_QUOTES` conformes à la fiche Google ; aucun `AggregateRating`/`Review` |
 
 ## Phase 3 — Audit du code source
 
