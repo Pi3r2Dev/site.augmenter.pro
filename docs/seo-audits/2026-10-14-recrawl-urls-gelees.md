@@ -1,6 +1,6 @@
 # Recrawl des URL gelées — état au 2026-10-14
 
-Suite de [2026-08-12-diagnostic-chute-juillet-plan-action.md](2026-08-12-diagnostic-chute-juillet-plan-action.md). Inspection d'URL GSC (API) sur les 41 URL du sitemap, le 2026-10-14. Mis à jour le même jour avec les 8 URL du cluster MCP / Odoo 20 (commits `ecee8c8`, `b4b42b3`, `6357ff9`, `8bc9682`).
+Suite de [2026-08-12-diagnostic-chute-juillet-plan-action.md](2026-08-12-diagnostic-chute-juillet-plan-action.md). Inspection d'URL GSC (API) sur les 41 URL du sitemap, le 2026-10-14. Mis à jour le même jour avec les 9 URL du cluster MCP / Odoo 20 (commits `ecee8c8`, `b4b42b3`, `6357ff9`, `8bc9682`, `157d9af`).
 
 ## Constat
 
@@ -8,12 +8,18 @@ Suite de [2026-08-12-diagnostic-chute-juillet-plan-action.md](2026-08-12-diagnos
 - **21 pages n'ont pas été recrawlées depuis le retrait du balisage (2026-09-07)** : Google y voit encore « Extraits d'avis × 6 ».
 - **4 URL du sitemap sont inconnues de Google** (« Google ne reconnaît pas cette URL ») alors qu'elles y figurent depuis 5 semaines : le sitemap seul ne suffit plus à faire découvrir une page.
 - `/audit-informatique-val-doise` recrawlée le 30 septembre puis **retirée de l'index** (« Explorée, actuellement non indexée »).
-- **8 nouvelles URL** (landing + 7 articles) attendent le déploiement : elles renvoient **404 en prod** au 2026-10-14. Vu le point précédent, elles ne seront pas découvertes par le sitemap seul.
+- **9 nouvelles URL** (landing + 8 articles) attendent le déploiement : elles renvoient **404 en prod** au 2026-10-14. Vu le point précédent, elles ne seront pas découvertes par le sitemap seul.
 - Ping IndexNow envoyé le 2026-10-14 sur les 41 URL **déjà en ligne** (HTTP 200). IndexNow ne touche **pas** Google (Bing, Yandex, Naver, Seznam) : pour Google, seule la demande manuelle compte.
 
 ## Préalable : déployer, puis pinger les 8 nouvelles URL
 
 > **Fait le 2026-10-14 au soir** : les 8 URL répondent 200 en production avec leur titre, ping IndexNow envoyé (réponse 200). GSC les inspecte encore comme « URL inconnue de Google » : seule la demande manuelle d'indexation (ci-dessous) les fera découvrir. Les 7 pages clés gelées montrent toujours « Extraits d'avis » avec un dernier crawl de juillet-septembre.
+>
+> **Oubli rattrapé** : `/blog/cout-agent-ia-odoo` (commit `157d9af`, pivot coût de l'essaim, publié le même soir) répond 200 et figure au sitemap, mais **n'était ni dans le ping IndexNow ni dans le plan GSC**. Ajouté au jour 2. Ping à envoyer :
+>
+> ```bash
+> curl -s -o /dev/null -w "indexnow %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json; charset=utf-8" --data '{"host":"augmenter.pro","key":"96dcfd53b10246a296724faac42d91da","keyLocation":"https://augmenter.pro/96dcfd53b10246a296724faac42d91da.txt","urlList":["https://augmenter.pro/blog/cout-agent-ia-odoo"]}'
+> ```
 
 1. Pousser `main` (déploiement Hostinger). Vérifier que les nouvelles pages répondent :
 
@@ -50,6 +56,7 @@ Quota : ~10 demandes par jour et par propriété. Quatre jours, dans cet ordre, 
 
 | URL | Dernier crawl | État |
 |---|---|---|
+| `/blog/cout-agent-ia-odoo` | jamais | **nouveau** pivot coût |
 | `/blog/odoo-20-serveur-mcp-agents` | jamais | **nouveau** |
 | `/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer` | jamais | **nouveau** |
 | `/blog/agent-ia-qui-ne-touche-pas-aux-prix` | jamais | **nouveau** |
@@ -59,7 +66,6 @@ Quota : ~10 demandes par jour et par propriété. Quatre jours, dans cet ordre, 
 | `/blog/ma-pme-en-2027` | jamais | inconnue de Google |
 | `/blog/claude-cowork-community-manager` | jamais | inconnue de Google |
 | `/prompts` | 2026-08-12 | avis encore vus |
-| `/projets` | 2026-07-12 | avis encore vus |
 
 ### Jour 3 — cluster Claude / MCP / IA dirigeant gelé
 
@@ -85,6 +91,7 @@ Quota : ~10 demandes par jour et par propriété. Quatre jours, dans cet ordre, 
 | `/blog/rapport-adoption-ia-btp-francilien-2026` | 2026-07-11 |
 | `/blog/5-signes-moderniser-informatique-pme` | 2026-06-27 |
 | `/audit-informatique-val-doise` | 2026-09-30 (non indexée) |
+| `/projets` | 2026-07-12 (avis encore vus, décalée du jour 2 pour le quota) |
 
 ## Pages propres (recrawlées après le 2026-09-07, sans balisage d'avis, non modifiées depuis)
 
@@ -100,4 +107,4 @@ curl -s -o /dev/null -w "indexnow %{http_code}\n" -X POST "https://api.indexnow.
 
 ## Contrôle
 
-Rejouer l'inspection deux semaines après le jour 1 (au plus tôt le 2026-10-28). Critères : plus aucune page avec « Extraits d'avis », les 4 inconnues et les 8 nouvelles découvertes et indexées, courbe d'impressions relue sur la semaine suivante.
+Rejouer l'inspection deux semaines après le jour 1 (au plus tôt le 2026-10-28). Critères : plus aucune page avec « Extraits d'avis », les 4 inconnues et les 9 nouvelles découvertes et indexées, courbe d'impressions relue sur la semaine suivante.
