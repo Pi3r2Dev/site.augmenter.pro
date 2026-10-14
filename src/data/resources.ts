@@ -92,6 +92,85 @@ export interface CatalogArticle extends ArticleBentoData {
 }
 
 export const ARTICLES: CatalogArticle[] = [
+  // ── Essaim MCP / Odoo 20 (2026-10-14) — lectures courtes adossées à la
+  //    page /serveur-mcp-odoo. Terrain : .claude/templates/seo/terrain-iacommerce.md
+  {
+    slug: "odoo-20-serveur-mcp-agents",
+    title:
+      "Odoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encore",
+    excerpt:
+      "Odoo 20 livre un serveur MCP et des agents qui écrivent dans la base. Ce que la version fait vraiment, ce qu'elle ne fait pas, et la question à poser avant de brancher : qui empêche l'agent de dire n'importe quoi ?",
+    tldr: "Odoo 20 expose un serveur MCP natif (clé API ou OAuth, outils génériques en lecture seule sur la pré-version) et des agents qui créent et modifient des enregistrements, avec les droits de celui qui a donné la clé et des crédits IAP à chaque appel. Si vos questions tiennent dans « montre-moi ce champ », ça suffit. Il manque les outils métier, les garde-fous dans le code, le chiffre vérifié avant d'être cité et l'écriture limitée au brouillon : c'est ce qu'on construit par-dessus.",
+    tags: ["IA", "PME"],
+    readTime: "5 min",
+    image: "/images/blog/odoo-20-serveur-mcp-agents.webp",
+    sectors: ["Tous", "Industrie", "Commerce & service local"],
+    pains: ["prestataire", "demarrage"],
+  },
+  {
+    slug: "agent-ia-qui-ne-touche-pas-aux-prix",
+    title: "L'agent qui ne peut pas toucher aux prix",
+    excerpt:
+      "Peur qu'un agent accorde une remise ou valide une commande ? Une consigne dans un prompt ne protège de rien. Comment on rend l'interdiction physique : schéma d'outils, test automatique, écriture au brouillon.",
+    tldr: "Un prompt qui dit « ne change jamais un prix » est une suggestion. Un schéma d'outils sans paramètre prix, coût ni validation de commande est une impossibilité, et un test le vérifie à chaque livraison. L'écriture s'arrête au brouillon, un humain appuie sur le bouton. En contrepartie, l'agent ne fera jamais de remise à votre place, même quand vous le voudriez.",
+    tags: ["IA", "PME"],
+    readTime: "4 min",
+    image: "/images/blog/agent-ia-qui-ne-touche-pas-aux-prix.webp",
+    sectors: ["Tous", "Commerce & service local", "Industrie"],
+    pains: ["cyber", "prestataire"],
+  },
+  {
+    slug: "petit-modele-bien-outille",
+    title: "Un petit modèle bien outillé bat un gros modèle qui devine",
+    excerpt:
+      "On vous vend le plus gros modèle du marché. Sur un ERP, la justesse vient de l'outil qui répond, pas de la taille du modèle. Un modèle local, des outils par intention, un index à 31 ms, et un chiffre vérifié par du code.",
+    tldr: "Sur un ERP, la justesse d'un agent se décide dans l'outil qui lui répond, pas dans la taille du modèle : un modèle ouvert de taille moyenne qui reçoit « le dossier de ce client » tout fait bat un grand modèle qui doit reconstruire la réponse depuis le schéma d'Odoo. Modèle hébergé en France ou chez vous, recherche en 31 ms sur un index local, prix et stock relus en direct, chiffre vérifié par du code. Les grands modèles gardent l'avantage sur la rédaction ouverte.",
+    tags: ["IA", "PME"],
+    readTime: "5 min",
+    image: "/images/blog/petit-modele-bien-outille.webp",
+    sectors: ["Tous", "Industrie"],
+    pains: ["demarrage", "cyber"],
+  },
+  {
+    slug: "ia-enrichir-catalogue-sans-perdre-la-main",
+    title: "Laisser une IA enrichir votre catalogue, sans perdre la main",
+    excerpt:
+      "Odoo 20 propose d'éditer vos produits par IA, prix compris. Tentant quand 1 300 fiches attendent. Mais une description que personne n'a relue est une dette. Les six verrous avant qu'un mot entre dans l'ERP.",
+    tldr: "Un enrichissement de catalogue par IA ne vaut que par ce qu'on peut annuler : le modèle propose un type, le code refuse tout mot absent de la fiche d'origine, les propositions attendent dans des champs de transit qu'un humain valide en lot, une seule fonction écrit sur une liste fermée de champs (jamais prix, coût, catégorie, stock), chaque écriture garde la valeur d'avant et un lot s'annule d'une commande. Premier lot : 22 produits, environ 20 types justes après relecture. Si vos fiches sont vides, commencez par les données.",
+    tags: ["IA", "PME"],
+    readTime: "5 min",
+    image: "/images/blog/ia-enrichir-catalogue-sans-perdre-la-main.webp",
+    sectors: ["Commerce & service local", "Industrie"],
+    pains: ["repetitif", "goulot"],
+  },
+  {
+    slug: "odoo-online-ce-que-vous-ne-pouvez-pas-installer",
+    title:
+      "Odoo Online : ce que vous ne pourrez jamais y installer (et les quatre contournements qui marchent)",
+    excerpt:
+      "Vous payez un abonnement Odoo Online et votre intégrateur répond « impossible sur le SaaS ». Vrai sur un point, faux sur quatre. Studio, actions serveur, modules data-only, programme externe : la carte après cinq mois sur une instance Online.",
+    tldr: "Sur Odoo Online, aucun module Python custom ne s'installe, point. Mais « impossible dans Odoo » ne veut pas dire « impossible autour » : Odoo Studio, les actions serveur en bac à sable, les modules data-only (XML, JS, SCSS) importés en ZIP, et tout programme externe qui parle à l'API JSON-2 (un serveur MCP, un bot). En cinq mois sur une instance Online, un seul vrai impossible : un module de livraison. Gardez la migration Odoo.sh pour la logique transactionnelle lourde et les connecteurs synchrones.",
+    tags: ["IA", "PME"],
+    readTime: "5 min",
+    image: "/images/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp",
+    sectors: ["Tous", "Commerce & service local", "Industrie"],
+    pains: ["prestataire", "demarrage"],
+  },
+  {
+    slug: "logiciel-construit-par-agents-dix-semaines",
+    title:
+      "Construire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests",
+    excerpt:
+      "« L'IA code n'importe quoi. » Vrai quand on la laisse faire. 436 tâches livrées en dix semaines, 320 par des agents, 116 par un humain, 5 794 tests au vert. Ce qui a marché, ce qui a cassé, et ce que l'humain garde.",
+    tldr: "Un agent livre exactement aussi bien que les règles écrites avant lui : fichier d'instructions, fichiers de garde-fous interdits de modification, une tâche par run à contexte neuf, un juge à chaque tâche. En dix semaines, 436 tâches dont 116 humaines, celles qui décident (11 ADR), vérifient en direct sur de vraies données et corrigent la qualité. Exigez des chiffres et des fichiers, pas des adjectifs : combien de tests, où sont les règles, qui a vérifié.",
+    tags: ["IA", "PME"],
+    readTime: "5 min",
+    image: "/images/blog/logiciel-construit-par-agents-dix-semaines.webp",
+    sectors: ["Tous", "Conseil & services"],
+    pains: ["prestataire", "demarrage"],
+  },
+  // ── Pilier technique du cluster Claude / Odoo (2026-10-14) — angle 4 du
+  //    terrain .claude/templates/seo/terrain-odoo-reva9.md (RPC, Playwright, CLAUDE.md)
   {
     slug: "ma-pme-en-2027",
     title:

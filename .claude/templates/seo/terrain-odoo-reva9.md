@@ -190,7 +190,9 @@ Priorisés Tier 1 d'abord (cluster Claude/Odoo/ERP = 100 % des clics). Chacun re
 
 Relire alors, dans le repo de mission : `ETAT.md`, puis la section « En cours » de `CHANGELOG.md`, puis les `docs/reva9/suivis/` modifiés depuis la date de synchro en tête de fichier.
 
-**Angles déjà publiés** : aucun article à ce jour — l'article `configurer-odoo-ia-claude-cowork` précède ce registre et n'est pas sourcé sur lui.
+**Angles déjà publiés** :
+- **Angle 1** → `/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer` (2026-10-14, essaim MCP/Odoo 20 de `terrain-iacommerce.md`). Reprend : aucun Python custom, module de livraison refusé, Studio + champs calculés non stockés, actions serveur (board d'achat ~8 h 30), data-only + piège ZIP Windows, API JSON-2, connecteurs transporteurs absents. Anonymisation : « une PME de négoce technique en Île-de-France », durée « cinq mois » seule, aucun montant.
+- L'article `configurer-odoo-ia-claude-cowork` précède ce registre et n'est pas sourcé sur lui.
 
 **Ce qui est publié — et sous quelle forme** (révisé le 2026-08-26, minimisation)
 

@@ -599,6 +599,19 @@ export default function ConfigurerOdooIAClaude() {
           community manager pour g&eacute;rer des r&eacute;seaux sociaux
         </Link>.
       </p>
+      <p>
+        Et une fois Odoo configur&eacute;, l&apos;&eacute;tape suivante est de le faire
+        parler &agrave; un agent sans qu&apos;il dise n&apos;importe quoi : ce
+        qu&apos;Odoo 20 apporte avec son serveur MCP natif, et{" "}
+        <Link href="/serveur-mcp-odoo">
+          ce que notre serveur MCP pour Odoo ajoute par-dessus
+        </Link>
+        . Si vous &ecirc;tes sur l&apos;offre Online, lisez d&apos;abord{" "}
+        <Link href="/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer">
+          ce que vous ne pourrez jamais y installer
+        </Link>
+        .
+      </p>
     </ArticleLayout>
   );
 }

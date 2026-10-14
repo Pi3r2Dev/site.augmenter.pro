@@ -396,3 +396,23 @@
 - **Contexte éditorial** : Image hero de l'article comparatif sur les comptes rendus de réunion par IA et l'agent qui vit dans les conversations (WhatsApp/Telegram) — dictée, suivi fournisseurs, devis signés. La composition « l'agent dans le chat, les actions qui en sortent » illustre la thèse : l'outil transcrit, l'agent travaille.
 - **Usage suggéré** : Hero d'article "Compte rendu de réunion par IA : les outils font le résumé, l'agent fait le travail".
 - **Alt text suggéré** : "Main tenant un smartphone avec une conversation de messagerie où un robot assistant IA répond, entouré d'icônes de compte rendu, validation, livraison et signature électronique — l'agent IA qui agit depuis le chat"
+
+---
+
+## Essaim MCP / Odoo 20 (2026-10-14) — visuels PROVISOIRES à remplacer
+
+Six articles courts adossés à la page `/serveur-mcp-odoo`. Les fichiers ci-dessous sont des **dégradés violet → ambre générés par `scripts/blog-placeholder-images.mjs`** (hero WebP 1600×900 + OG JPEG 1200×630 dans `og/`), posés pour qu'aucune carte ni aucun `og:image` ne soit cassé. À remplacer par l'illustration Gemini (même nom de fichier, puis régénérer l'OG avec sharp).
+
+| Fichier | Article | Prompt Gemini suggéré |
+| --- | --- | --- |
+| `odoo-20-serveur-mcp-agents.webp` | Odoo 20 ouvre la porte aux agents | Illustration flat design, palette violet/lavande dominante + accents ambre/doré, 16:9. Une grande porte violette entrouverte dans un mur d'écrans ERP (tableaux, fiches produit), un petit robot ambre sur le seuil qui tient une clé, et derrière la porte des rayonnages de données ordonnées. Sans texte, fond dégradé violet vers ambre. |
+| `agent-ia-qui-ne-touche-pas-aux-prix.webp` | L'agent qui ne peut pas toucher aux prix | Illustration flat design violet/ambre 16:9. Un robot assistant stylisé tend la main vers une étiquette de prix ambre protégée par un cadenas violet et une vitre ; à côté, un document « brouillon » qu'un humain tient avec un tampon. Icônes symboliques, sans texte. |
+| `petit-modele-bien-outille.webp` | Un petit modèle bien outillé | Illustration flat design violet/ambre 16:9. Deux robots côte à côte : un petit robot violet équipé d'une ceinture d'outils (clé, loupe, dossier client) qui tient une fiche exacte ; un grand robot gris flou avec un point d'interrogation. Fond dégradé, sans texte. |
+| `ia-enrichir-catalogue-sans-perdre-la-main.webp` | Enrichir votre catalogue sans perdre la main | Illustration flat design violet/ambre 16:9. Une étagère de fiches produit (filtres, courroies, bidons stylisés) ; un robot pose des étiquettes ambre « en transit » sur un plateau, une main humaine violette valide avec une coche, une flèche de retour symbolise l'annulation. Sans texte. |
+| `odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp` | Odoo Online : ce que vous ne pourrez jamais y installer | Illustration flat design violet/ambre 16:9. Un nuage violet (SaaS) avec un panneau « interdit » sur une brique de code à l'intérieur, et autour du nuage quatre passerelles ambre qui le contournent (un pinceau Studio, un engrenage, un paquet ZIP, un serveur externe relié par un câble). Sans texte. |
+| `logiciel-construit-par-agents-dix-semaines.webp` | Construire un logiciel avec des agents | Illustration flat design violet/ambre 16:9. Une chaîne de montage circulaire : des petits robots violets posent des blocs de code, un robot juge ambre avec une loupe contrôle chaque bloc, un humain au centre tient un plan et une liste cochée. Compteur stylisé de tests verts. Sans texte. |
+
+- **Type** : dégradé SVG → WebP/JPEG, généré localement (provisoire)
+- **Dimensions** : 1600×900 (hero) · 1200×630 (OG)
+- **Poids** : ~20-40 Ko chacun
+- **Alt text** : porté par `ArticleLayout` (titre de l'article)

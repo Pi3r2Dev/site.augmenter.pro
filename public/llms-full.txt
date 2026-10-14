@@ -13,6 +13,7 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 - [Audit IA pour PME — diagnostic & feuille de route chiffrée](https://augmenter.pro/audit-ia-pme) — 2026-05-28
 - [Approche, prestations & tarifs](https://augmenter.pro/approche) — 2026-04-22
 - [Intégration MCP — Connecter l'IA à vos outils métier](https://augmenter.pro/integration-mcp) — 2026-02-10
+- [Serveur MCP pour Odoo — ce qu'Odoo 20 ne fait pas](https://augmenter.pro/serveur-mcp-odoo) — 2026-10-14
 - [Audit informatique Yvelines (78)](https://augmenter.pro/audit-informatique-yvelines) — 2026-02-01
 - [Audit informatique Val-d'Oise (95)](https://augmenter.pro/audit-informatique-val-doise) — 2026-02-01
 - [Idées IA pour PME : 9 cas d'usage qui facturent en 2026](https://augmenter.pro/idees) — 2026-05-21

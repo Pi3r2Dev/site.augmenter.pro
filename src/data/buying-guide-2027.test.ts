@@ -113,10 +113,12 @@ describe("fourchettes signées (élargies vers le haut, sept. 2026)", () => {
 });
 
 describe("publication /blog/ma-pme-en-2027", () => {
-  it("est en tête du catalog, avec les trois douleurs du brief", () => {
-    const article = ARTICLES[0];
-    expect(article.slug).toBe("ma-pme-en-2027");
-    expect(article.pains).toEqual(["goulot", "demarrage", "prestataire"]);
+  it("est dans le catalog, avec les trois douleurs du brief", () => {
+    // « En tête » n'était vrai qu'à la publication : le catalog est trié du
+    // plus récent au plus ancien, chaque nouvel article passe devant.
+    const article = ARTICLES.find((a) => a.slug === "ma-pme-en-2027");
+    expect(article).toBeDefined();
+    expect(article?.pains).toEqual(["goulot", "demarrage", "prestataire"]);
   });
 
   it("propose trois articles liés en pied — pas dans le corps", () => {

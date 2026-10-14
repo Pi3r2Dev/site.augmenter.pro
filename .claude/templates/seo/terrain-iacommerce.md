@@ -175,4 +175,15 @@ Ton à tenir : **sympathique, jamais hostile** (voir `guidelines-x.md` du repo s
 - Odoo publie la documentation développeur du serveur MCP ;
 - un angle du §7 est publié (le marquer ici avec son slug).
 
-**Angles déjà publiés** : aucun à ce jour.
+**Angles déjà publiés** (essaim du 2026-10-14, visuels provisoires à remplacer — cf. `public/images/blog/INDEX.md`) :
+
+| # | Slug | Note |
+|---|---|---|
+| 1 (page) | `/serveur-mcp-odoo` | Landing tutoiement, tableau §6 repris ligne à ligne, FAQ, « ce qu'on refuse ». Produit **non nommé** (🟠 en attente d'accord), aucun prix de gamme |
+| 2 | `/blog/odoo-20-serveur-mcp-agents` | Sources §5 citées ; à mettre à jour quand la doc développeur Odoo 20 sort |
+| 3 | `/blog/petit-modele-bien-outille` | 27B / 9B, 31 ms, homonymes départagés par la ville |
+| 4 | `/blog/ia-enrichir-catalogue-sans-perdre-la-main` | Les 6 verrous, 22 produits / ~20 justes — à rafraîchir quand le lot est écrit |
+| 5 | `/blog/logiciel-construit-par-agents-dix-semaines` | 436 / 320 / 116, 5 794 tests, 11 ADR. Coût des runs **non chiffré** (🟠) : « quelques dollars de calcul par tâche » |
+| 6 | `/blog/agent-ia-qui-ne-touche-pas-aux-prix` | Test de schéma, brouillon, écriture fermée par défaut |
+
+L'angle 1 du terrain Odoo (`terrain-odoo-reva9.md` §5) est sorti dans le même essaim : `/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer`.
