@@ -134,6 +134,15 @@ export default function Article() {
         116. C&apos;est beaucoup moins qu&apos;une équipe, et beaucoup plus que
         zéro.
       </p>
+      <p>
+        Distinction qui compte pour votre budget : ce coût est celui de la{" "}
+        <em>construction</em>. Une fois livré, le logiciel ne tourne pas sur
+        les grands modèles qui l&apos;ont écrit. Il tourne sur un modèle
+        ouvert, sur une machine équipée d&apos;une bonne carte graphique,
+        administrée à distance, et chaque question de votre équipe coûte zéro.
+        Pas de crédit, pas de siège.{" "}
+        <Link href="/blog/cout-agent-ia-odoo">Le calcul détaillé</Link>.
+      </p>
 
       <AtelierCallout />
 

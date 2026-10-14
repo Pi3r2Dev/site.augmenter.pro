@@ -143,6 +143,22 @@ export default function Article() {
         connaître, c&apos;est signer un chèque en blanc. Le rythme montera une
         fois le taux connu, pas avant.
       </p>
+      <p>
+        Reste la question du prix, que l&apos;édition par IA d&apos;Odoo 20 pose
+        à chaque fiche : ses fonctions d&apos;IA se paient en crédits, 1 €
+        pièce, sans que la consommation par demande soit publiée. Nos
+        propositions sont calculées la nuit par un modèle ouvert, sur une
+        machine équipée d&apos;une bonne carte graphique :{" "}
+        <Memo type="idea" label="Relancer un lot coûte zéro">
+          relancer un lot après une itération sur la qualité coûte zéro
+        </Memo>
+        . C&apos;est ce qui permet de commencer petit, de mesurer, et de
+        recommencer autant qu&apos;il faut. Le calcul complet :{" "}
+        <Link href="/blog/cout-agent-ia-odoo">
+          crédits, abonnements ou une machine à vous
+        </Link>
+        .
+      </p>
 
       <h2>Quand il ne faut pas enrichir par IA</h2>
       <p>

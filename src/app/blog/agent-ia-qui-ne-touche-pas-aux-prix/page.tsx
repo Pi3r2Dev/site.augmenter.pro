@@ -135,6 +135,19 @@ export default function Article() {
         prix dynamiques ajustés par IA toutes les heures, ce n&apos;est pas le
         bon outil, et nous vous le dirons dans les dix premières minutes.
       </p>
+      <p>
+        Un dernier point que les démonstrations taisent : la prudence coûte
+        des appels. Un agent qui vérifie chaque chiffre auprès d&apos;un outil
+        avant de répondre en fait beaucoup plus qu&apos;un agent qui devine.
+        Avec des crédits à 1 € pièce, comme ceux d&apos;Odoo 20, chaque
+        vérification se paie. Le nôtre tourne sur un modèle ouvert, sur une
+        machine équipée d&apos;une bonne carte graphique administrée à
+        distance :{" "}
+        <Link href="/blog/cout-agent-ia-odoo">
+          zéro euro à la question
+        </Link>
+        , donc aucune raison de rogner sur les vérifications.
+      </p>
 
       <h2>La version courte pour votre prochain rendez-vous intégrateur</h2>
       <p>

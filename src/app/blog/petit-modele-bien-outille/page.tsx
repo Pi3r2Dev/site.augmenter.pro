@@ -102,6 +102,46 @@ export default function Article() {
         </p>
       </Callout>
 
+      <h2>Ce que ça coûte : une carte graphique, pas un compteur</h2>
+      <p>
+        Le second effet d&apos;un petit modèle bien outillé, c&apos;est
+        l&apos;argent. Il tourne sur un ordinateur équipé d&apos;une bonne carte
+        graphique, et{" "}
+        <Memo type="idea" label="Zéro euro à la question">
+          chaque question coûte zéro euro
+        </Memo>
+        . En face, Odoo 20 facture ses fonctions d&apos;IA 1 € le crédit sans
+        publier combien en consomme une question, et les assistants du marché
+        se paient de 20 à 25 $ par siège et par mois, qu&apos;on s&apos;en
+        serve ou non.
+      </p>
+      <p>
+        Pour commencer, une carte de joueur de 8 Go suffit : notre modèle de 9
+        milliards y tourne en permanence et classe chaque message. Pour
+        rédiger des réponses justes sur un ERP, on vise 24 Go, le niveau du
+        modèle de 27 milliards. Ordre de grandeur :{" "}
+        <Memo type="num" label="Machine 24 Go ≈ 2 000 à 2 500 €">
+          2 000 à 2 500 € de matériel une fois
+        </Memo>
+        , administré à distance. Beaucoup de dirigeants ont déjà la machine
+        sans le savoir. Le calcul détaillé :{" "}
+        <Link href="/blog/cout-agent-ia-odoo">
+          crédits, abonnements ou une machine à vous
+        </Link>
+        .
+      </p>
+      <p>
+        Et si un modèle ouvert ne parle pas assez votre métier, il
+        s&apos;entraîne sur ce même matériel. Nous avons outillé un
+        fine-tuning (un adaptateur LoRA) sur une carte de 8 Go pour le jury de
+        chant de{" "}
+        <a href="https://kiaraoke.fr" target="_blank" rel="noreferrer">
+          kiaraoke.fr
+        </a>
+        . On ne commence jamais par là, mais on s&apos;y colle quand les
+        erreurs mesurées le justifient.
+      </p>
+
       <h2>Ce que le petit modèle ne fait pas</h2>
       <p>
         Soyons honnêtes, parce que c&apos;est le seul moyen que vous nous
@@ -141,6 +181,10 @@ export default function Article() {
           <li>
             L&apos;agent reçoit-il un <strong>dossier</strong> tout fait, ou
             doit-il reconstruire la réponse depuis le schéma de l&apos;ERP ?
+          </li>
+          <li>
+            Combien coûte une question ? Crédit, siège ou zéro : si personne
+            ne sait répondre, c&apos;est un compteur.
           </li>
           <li>
             Où tourne le modèle, et qu&apos;est-ce qui transite ? Une question

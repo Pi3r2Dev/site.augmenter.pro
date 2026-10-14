@@ -325,6 +325,18 @@ export default function ClaudeCodeOdooWorkflow() {
         </Link>
         .
       </p>
+      <p>
+        Un détail de budget à garder en tête : avec Odoo 20, les fonctions
+        d&apos;IA intégrées se paient en crédits, 1 € pièce sur le catalogue
+        officiel, sans que la consommation par question soit publiée. Un
+        serveur MCP externe choisit son modèle. Un modèle ouvert sur une
+        machine équipée d&apos;une bonne carte graphique, administrée à
+        distance, répond pour zéro euro à la question :{" "}
+        <Link href="/blog/cout-agent-ia-odoo">
+          crédits, abonnements ou une machine à vous
+        </Link>
+        .
+      </p>
       <h3>Ce qu&apos;un serveur MCP métier ajoute par-dessus</h3>
       <p>
         Un serveur MCP générique donne au modèle le schéma d&apos;Odoo et le

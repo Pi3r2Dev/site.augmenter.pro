@@ -102,6 +102,28 @@ Premier lot : 22 produits d'une même famille, en attente de validation humaine 
 
 ---
 
+### Le coût à l'usage — second levier après la souveraineté (ajouté 2026-10-14)
+
+Oublié dans la première version de l'essaim, rattrapé le jour même à la demande de Pierre. **À mettre dans toute ressource Odoo/MCP** : un modèle ouvert sur une machine administrée à distance coûte zéro à la question, face aux crédits d'Odoo 20 et aux abonnements par siège.
+
+| Fait | Valeur | Source | Niveau |
+|---|---|---|---|
+| Crédits Odoo AI (Odoo 20) | **1 € le crédit**, packs 10 / 100 / 500 / 1 000, **sans remise de volume**, 20 crédits de départ ; consommation « selon la fonction, la complexité et la taille de la demande », **non publiée** | [catalogue IAP officiel](https://iap.odoo.com/iap/in-app-services/867), relevé 2026-10-14 | 🟢 public |
+| Odoo 20 : plus de clé API propre | Toute l'IA passe par le service Odoo, en crédits, quel que soit l'hébergement (Odoo 19 hors Online : clé OpenAI/Gemini propre) | [Dynapps](https://www.dynapps.be/en/blog/requirements-ai-odoo) | 🟢 public, à revérifier |
+| Claude Team | 20 $/siège/mois annuel, 25 $ mensuel (Premium 100/125 $) | [claude.com/pricing](https://claude.com/pricing) | 🟢 public |
+| Copilot PME | 21 $ HT/utilisateur/mois + licence M365 | [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-baisse-le-prix-de-m365%C2%A0copilot%C2%A0pour-les-pme-98552.html) | 🟢 public |
+| ChatGPT Business | même ordre de grandeur (page officielle inaccessible au relevé) | — | ne pas chiffrer |
+| Coût d'une question sur modèle local | **~0** (« local = coût ~0 », VISION pari 1) | `docs/VISION.md` | 🟢 |
+| Carte 8 Go | le 9B tourne en permanence sur une 3070 (classe chaque message) | `docs/architecture/infra-hebergement.md` | 🟢 |
+| Carte 24 Go | tient le **27B quantifié** + Whisper + vision ; 16 Go ne le tient pas ; 9B inventait des chiffres, 27B non (essais 2026-10-05, H-36) | idem | 🟢 |
+| Machine 24 Go | **~2 000-2 500 €** de matériel (mini-PC + 3090 d'occasion) | idem | 🟢 comme **prix marché du matériel**, 🟠 dès qu'on le présente comme prix de la box Souverain |
+| GPU cloud 24/7 | ~550 €/mois → à n'utiliser qu'en lot, allumé/éteint | idem | 🟢 |
+| Fine-tuning | QLoRA Qwen3-4B (Unsloth) sur RTX 3070 8 Go pour les 3 personas de jury de **kiaraoke.fr** — outillé, **jamais activé en prod** (ne pas écrire « en production ») ; LoRA de personnages sur la chaîne de vidéos animées (cluster anime-shorts) | `../kiaraoke.fr/fine-tuning/train.py`, portfolio KB | 🟢 « outillé », pas « en prod » |
+
+**Positionnement validé** : beaucoup de dirigeants tech-curieux ont déjà la machine (PC de joueur, modèle téléchargé pour voir). On se présente comme les experts qui la reprennent, l'administrent à distance et la font monter en puissance rapidement, au coût d'une machine et non d'un compteur. Le coût se déplace du compteur vers l'administration — honnêteté : pas « moins cher dans l'absolu ». **Jamais « gratuit » ni « offert »** : « zéro euro à la question », « aucun compteur ».
+
+Article pivot : `/blog/cout-agent-ia-odoo`. Les prix de gamme (abonnements Essentiel/Pro/Souverain) restent 🟠.
+
 ## 5. Odoo 20 : ce qu'Odoo fait désormais tout seul
 
 Présenté à l'**Odoo Experience 2026** (Bruxelles, fin septembre). L'IA est le thème principal de la version.
@@ -185,5 +207,6 @@ Ton à tenir : **sympathique, jamais hostile** (voir `guidelines-x.md` du repo s
 | 4 | `/blog/ia-enrichir-catalogue-sans-perdre-la-main` | Les 6 verrous, 22 produits / ~20 justes — à rafraîchir quand le lot est écrit |
 | 5 | `/blog/logiciel-construit-par-agents-dix-semaines` | 436 / 320 / 116, 5 794 tests, 11 ADR. Coût des runs **non chiffré** (🟠) : « quelques dollars de calcul par tâche » |
 | 6 | `/blog/agent-ia-qui-ne-touche-pas-aux-prix` | Test de schéma, brouillon, écriture fermée par défaut |
+| 7 (nouveau) | `/blog/cout-agent-ia-odoo` | Coût à l'usage : crédits / sièges / machine, tailles de carte, fine-tuning. Coût ajouté le même jour dans la page et les 6 autres articles + le workflow Claude Code |
 
 L'angle 1 du terrain Odoo (`terrain-odoo-reva9.md` §5) est sorti dans le même essaim : `/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer`.

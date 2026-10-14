@@ -142,6 +142,19 @@ export default function Article() {
         </p>
       </Callout>
 
+      <p>
+        La voie n°4 a un second avantage, qui n&apos;a rien de technique : le
+        coût. Avec Odoo 20, les fonctions d&apos;IA intégrées se paient en
+        crédits, 1 € pièce, sans que la consommation par question soit
+        publiée. Un programme externe choisit son modèle. Le nôtre tourne sur
+        un modèle ouvert, sur une machine équipée d&apos;une bonne carte
+        graphique administrée à distance, et{" "}
+        <Link href="/blog/cout-agent-ia-odoo">
+          ne décompte rien à la question
+        </Link>
+        .
+      </p>
+
       <h2>Quand la migration vers Odoo.sh se justifie quand même</h2>
       <p>
         Nous ne vendons pas de migration, nous pouvons donc le dire sans

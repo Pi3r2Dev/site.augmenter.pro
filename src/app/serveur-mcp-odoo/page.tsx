@@ -5,7 +5,11 @@ import {
   Ban,
   Check,
   Clock,
+  Coins,
+  Cpu,
+  CreditCard,
   Database,
+  Sparkles,
   FileCheck,
   Lock,
   MessageSquare,
@@ -29,7 +33,7 @@ import { pageOpenGraph } from "@/lib/page-metadata";
 
 const TITLE = "Serveur MCP pour Odoo : ce qu'Odoo 20 ne fait pas";
 const DESCRIPTION =
-  "Odoo 20 a son serveur MCP. Il manque les outils métier, l'agent qui ne touche pas aux prix et le chiffre vérifié par du code. Marche sur Odoo Online.";
+  "Odoo 20 facture l'IA en crédits. Notre serveur MCP tourne sur un modèle ouvert chez toi : zéro crédit à la question, aucun prix modifiable.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -83,10 +87,10 @@ const ODOO_20_DONNE = [
       "Ta donnée catalogue reste sous contrôle. Tu sais qui a validé quoi, quand, et tu peux tout annuler d'une commande.",
   },
   {
-    odoo: "Des crédits IAP chez les fournisseurs de modèles choisis par Odoo",
-    nous: "Des modèles qui tournent dans tes murs, ou en France sous contrat",
+    odoo: "Des crédits IA à 1 € pièce, chez les fournisseurs de modèles choisis par Odoo, sans dire combien en consomme une question",
+    nous: "Un modèle ouvert sur une machine chez toi, ou que nous administrons à distance : zéro crédit à la question",
     pourquoi:
-      "Ta comptabilité, tes marges et tes clients ne transitent pas par un fournisseur américain pour répondre à une question de stock.",
+      "Ton coût ne grimpe pas avec l'usage. Et ta comptabilité, tes marges, tes clients ne sortent pas de tes murs pour répondre à une question de stock.",
   },
   {
     odoo: "L'interface d'Odoo et les clients MCP du marché (Claude, ChatGPT)",
@@ -204,9 +208,14 @@ const FAQ_ITEMS = [
       "Il se trompera, parfois. La question est ce qui se passe ensuite. Un chiffre qu'aucun outil n'a rendu est repéré par du code : la réponse est bloquée, pas envoyée. Une écriture garde la valeur d'avant, qui a validé, quand, avec quel modèle, et un lot entier s'annule d'une commande. Sur le pilote en cours, chaque capacité est recoupée au centime dans Odoo avant d'être ouverte à l'équipe.",
   },
   {
+    question: "Pourquoi pas simplement les crédits IA d'Odoo 20 ?",
+    answer:
+      "Parce que c'est un compteur dont tu ne connais pas la vitesse. Le service Odoo AI se vend 1 € le crédit, en packs de 10 à 1 000, sans remise de volume, et Odoo ne publie pas combien de crédits consomme une question : ça dépend de la fonction et de la taille de la demande. Un agent utile appelle beaucoup d'outils, donc décompte beaucoup. Un modèle ouvert sur une machine à toi répond à autant de questions que la machine en absorbe, pour zéro euro à la question. Si ton équipe pose dix questions par mois, les crédits suffisent. Si elle s'en sert tous les jours, fais le calcul.",
+  },
+  {
     question: "Combien ça coûte et combien de temps ?",
     answer:
-      "Un premier rendez-vous de 60 minutes n'est pas facturé : on regarde ton Odoo, l'état de tes données, et on choisit trois questions. Le branchement en lecture sur Telegram se compte en jours. L'écriture au brouillon vient après une semaine de recoupement. Le devis sort du rendez-vous, pas de cette page, parce que le prix dépend d'une chose qu'on ne connaît pas encore : l'état de tes données.",
+      "Un premier rendez-vous de 60 minutes n'est pas facturé : on regarde ton Odoo, l'état de tes données, la machine que tu as peut-être déjà, et on choisit trois questions. Côté matériel, une machine avec une carte graphique de 24 Go, le niveau qui répond juste sur un ERP, coûte de l'ordre de 2 000 à 2 500 € une fois ; une carte de 8 Go suffit pour commencer. Ensuite, zéro euro à la question. Le branchement en lecture sur Telegram se compte en jours, l'écriture au brouillon vient après une semaine de recoupement. Le devis sort du rendez-vous, parce que le prix dépend d'une chose qu'on ne connaît pas encore : l'état de tes données.",
   },
 ];
 
@@ -217,7 +226,7 @@ const serviceJsonLd = {
   name: "Serveur MCP pour Odoo",
   serviceType: "Intégration IA / serveur MCP pour ERP Odoo",
   description:
-    "Serveur MCP métier pour Odoo (Online, .sh ou sur serveur), compatible Odoo 19 et Odoo 20 : outils par intention (dossier client, produit, devis, chiffre d'affaires), garde-fous dans le code (aucun paramètre prix, écriture limitée au brouillon), chiffres vérifiés par du code, modèle ouvert hébergé en France ou chez le client, bot Telegram pour l'équipe et assistant client identifié sur le site.",
+    "Serveur MCP métier pour Odoo (Online, .sh ou sur serveur), compatible Odoo 19 et Odoo 20 : outils par intention (dossier client, produit, devis, chiffre d'affaires), garde-fous dans le code (aucun paramètre prix, écriture limitée au brouillon), chiffres vérifiés par du code, modèle ouvert sur une machine chez le client administrée à distance (aucun crédit ni abonnement par siège à l'usage) ou hébergé en France, fine-tuning si nécessaire, bot Telegram pour l'équipe et assistant client identifié sur le site.",
   provider: {
     "@type": "Organization",
     "@id": "https://augmenter.pro/#organization",
@@ -255,7 +264,42 @@ const faqJsonLd = {
   })),
 };
 
+// Coût à l'usage — chiffres relevés le 2026-10-14 (sources affichées sous les
+// cartes). Le matériel est un ordre de grandeur marché (carte 24 Go
+// d'occasion), jamais un prix de gamme (terrain-iacommerce §2, 🟠).
+const COUTS = [
+  {
+    icon: Coins,
+    titre: "Crédits IA d'Odoo 20",
+    prix: "1 € le crédit",
+    texte:
+      "Packs de 10 à 1 000, sans remise de volume. Combien de crédits par question ? Odoo ne le publie pas : ça dépend de la tâche et de la taille de la demande. Plus l'agent travaille, plus il décompte.",
+    nous: false,
+  },
+  {
+    icon: CreditCard,
+    titre: "Abonnements par siège",
+    prix: "20 à 25 $ / siège / mois",
+    texte:
+      "Claude Team, ChatGPT Business, ou Copilot à 21 $ HT plus la licence Microsoft 365. Dix personnes, 2 400 à 3 000 $ par an, qu'elles s'en servent ou non. Et rien n'est branché sur ton Odoo.",
+    nous: false,
+  },
+  {
+    icon: Cpu,
+    titre: "Une machine chez toi",
+    prix: "0 € à la question",
+    texte:
+      "Un modèle ouvert sur un ordinateur avec une bonne carte graphique, administré à distance. De l'ordre de 2 000 à 2 500 € de matériel une fois pour 24 Go, puis plus de compteur. Et tes données restent chez toi.",
+    nous: true,
+  },
+];
+
 const ARTICLES_ESSAIM = [
+  {
+    href: "/blog/cout-agent-ia-odoo",
+    titre: "Agent IA sur Odoo : crédits, abonnements ou une machine à vous ?",
+    duree: "6 min",
+  },
   {
     href: "/blog/odoo-20-serveur-mcp-agents",
     titre: "Odoo 20 ouvre la porte aux agents : ce qui change, ce qu'il manque",
@@ -326,6 +370,11 @@ export default function ServeurMcpOdooPage() {
               changer un prix, d&apos;envoyer un devis sans relecture ? Notre
               serveur MCP pour Odoo répond à ça. Des outils qui parlent ton
               métier, des garde-fous dans le code, un humain sur le bouton.
+              Et pas de compteur : le modèle tourne sur une machine chez toi,{" "}
+              <strong className="text-foreground">
+                zéro crédit à la question
+              </strong>
+              .
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button asChild size="lg" className="gap-2">
@@ -470,8 +519,149 @@ export default function ServeurMcpOdooPage() {
         </div>
       </section>
 
-      {/* Garde-fous */}
+      {/* Coût à l'usage */}
       <section className="bg-muted/30 py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Ce que ça coûte à l&apos;usage :{" "}
+              <span className="gradient-text">le levier dont personne ne parle</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Un agent utile pose beaucoup de questions à ton ERP. Trois
+              façons de les payer, et une seule qui ne grimpe pas avec
+              l&apos;usage.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
+            {COUTS.map((c) => (
+              <Card
+                key={c.titre}
+                className={
+                  c.nous ? "h-full border-2 border-primary" : "h-full"
+                }
+              >
+                <CardContent className="flex h-full flex-col p-6">
+                  <c.icon
+                    className={
+                      c.nous
+                        ? "h-5 w-5 text-primary"
+                        : "h-5 w-5 text-muted-foreground"
+                    }
+                  />
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    {c.titre}
+                  </p>
+                  <p
+                    className={
+                      c.nous
+                        ? "mt-1 text-2xl font-bold text-primary"
+                        : "mt-1 text-2xl font-bold"
+                    }
+                  >
+                    {c.prix}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {c.texte}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <p className="mx-auto mt-4 max-w-5xl text-xs text-muted-foreground">
+            Sources :{" "}
+            <a
+              href="https://iap.odoo.com/iap/in-app-services/867"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2"
+            >
+              catalogue officiel Odoo AI
+            </a>
+            ,{" "}
+            <a
+              href="https://claude.com/pricing"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2"
+            >
+              tarifs Claude Team
+            </a>
+            ,{" "}
+            <a
+              href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-baisse-le-prix-de-m365%C2%A0copilot%C2%A0pour-les-pme-98552.html"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2"
+            >
+              Copilot pour PME (Le Monde Informatique)
+            </a>
+            . Relevés le 14 octobre 2026.
+          </p>
+
+          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-primary/20 bg-background p-6">
+              <Cpu className="h-5 w-5 text-primary" />
+              <h3 className="mt-3 text-lg font-semibold">
+                Une bonne carte graphique suffit pour commencer
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Tu as peut-être déjà la machine : un PC de joueur, un modèle
+                téléchargé un dimanche pour voir. Une carte de 8 Go suffit pour
+                classer, transcrire, résumer. Pour qu&apos;un agent réponde
+                juste sur ton ERP, on vise 24 Go : sur nos essais, le modèle de
+                9 milliards de paramètres inventait des chiffres, celui de 27
+                milliards non.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">
+                  On l&apos;administre à distance
+                </strong>{" "}
+                : mises à jour, supervision, sauvegardes. Tu n&apos;as personne
+                à former pour ça. Et on monte en puissance quand l&apos;usage
+                le demande, au coût d&apos;une machine, pas d&apos;un compteur.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-primary/20 bg-background p-6">
+              <Sparkles className="h-5 w-5 text-primary" />
+              <h3 className="mt-3 text-lg font-semibold">
+                Et s&apos;il faut entraîner le modèle, on s&apos;y colle
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Le plus souvent, de bons outils suffisent et l&apos;entraînement
+                est inutile. Quand un modèle doit parler un vocabulaire ou un
+                ton très particulier, on l&apos;entraîne sur du matériel
+                courant. On l&apos;a outillé pour le jury de chant de{" "}
+                <a
+                  href="https://kiaraoke.fr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-primary underline underline-offset-4"
+                >
+                  kiaraoke.fr
+                </a>
+                , sur une carte de 8 Go, et pour tenir les personnages de notre
+                chaîne de vidéos animées d&apos;un épisode à l&apos;autre.
+              </p>
+            </div>
+          </div>
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm text-muted-foreground">
+            Le calcul complet, avec les tailles de carte et les cas où ce
+            n&apos;est pas rentable :{" "}
+            <Link
+              href="/blog/cout-agent-ia-odoo"
+              className="text-primary underline underline-offset-4"
+            >
+              crédits, abonnements ou une machine à toi
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* Garde-fous */}
+      <section className="py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -516,7 +706,7 @@ export default function ServeurMcpOdooPage() {
       </section>
 
       {/* Ce qui tourne */}
-      <section className="py-24">
+      <section className="bg-muted/30 py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -540,7 +730,7 @@ export default function ServeurMcpOdooPage() {
       </section>
 
       {/* Ce qu'on refuse */}
-      <section className="bg-muted/30 py-24">
+      <section className="py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Ce qu&apos;on refuse de brancher en premier
@@ -581,7 +771,7 @@ export default function ServeurMcpOdooPage() {
       </section>
 
       {/* Étapes */}
-      <section className="py-24">
+      <section className="bg-muted/30 py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -617,14 +807,14 @@ export default function ServeurMcpOdooPage() {
       </section>
 
       {/* Essaim */}
-      <section className="bg-muted/30 py-24">
+      <section className="py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Six lectures courtes avant de décider
+              Huit lectures avant de décider
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Cinq minutes chacune. Ce qu&apos;on a appris en construisant ce
+              De quatre à onze minutes. Ce qu&apos;on a appris en construisant ce
               serveur, sans enjoliver.
             </p>
           </div>
@@ -649,7 +839,7 @@ export default function ServeurMcpOdooPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24">
+      <section className="bg-muted/30 py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
             Les questions qu&apos;on nous pose avant de brancher

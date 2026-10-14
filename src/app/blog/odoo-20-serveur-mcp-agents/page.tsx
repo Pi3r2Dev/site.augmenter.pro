@@ -37,7 +37,7 @@ const faqJsonLd = {
       name: "Les agents IA d'Odoo 20 sont-ils payants ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Oui. Les notes de version indiquent que toutes les fonctions d'IA consomment des crédits achetés via IAP, et qu'Odoo choisit automatiquement le modèle selon la tâche une fois le fournisseur sélectionné.",
+        text: "Oui. Les notes de version indiquent que toutes les fonctions d'IA consomment des crédits achetés via IAP, et qu'Odoo choisit automatiquement le modèle selon la tâche une fois le fournisseur sélectionné. Sur le catalogue officiel, le service Odoo AI se vend 1 € le crédit, en packs de 10 à 1 000 crédits sans remise de volume, avec 20 crédits de départ. Odoo ne publie pas combien de crédits consomme une question.",
       },
     },
   ],
@@ -115,6 +115,25 @@ export default function Article() {
         sélectionné.
       </p>
       <p>
+        Le prix, lui, est affiché. Sur le{" "}
+        <a
+          href="https://iap.odoo.com/iap/in-app-services/867"
+          target="_blank"
+          rel="noreferrer"
+        >
+          catalogue officiel
+        </a>
+        , le service Odoo AI se vend{" "}
+        <Memo type="num" label="1 € le crédit, sans remise">
+          1 € le crédit, en packs de 10 à 1 000, sans remise de volume
+        </Memo>
+        , avec 20 crédits de départ. Ce qui n&apos;est pas affiché, c&apos;est
+        combien de crédits consomme une question : « selon la fonction, la
+        complexité de la tâche et la taille de la demande ». Un agent qui
+        travaille bien appelle beaucoup d&apos;outils. Plus il est utile, plus
+        il décompte.
+      </p>
+      <p>
         Sources : les{" "}
         <a
           href="https://www.odoo.com/odoo-20-release-notes"
@@ -168,7 +187,7 @@ export default function Article() {
 
       <h2>Ce qui manque encore, et que nous avons dû construire</h2>
       <p>
-        Sur notre pilote, les quatre manques sont apparus dans cet ordre, et
+        Sur notre pilote, les cinq manques sont apparus dans cet ordre, et
         chacun a coûté une décision d&apos;architecture écrite.
       </p>
       <ul>
@@ -211,6 +230,18 @@ export default function Article() {
           prépare, un humain appuie sur le bouton. Chaque écriture garde la
           valeur d&apos;avant et s&apos;annule d&apos;une commande.
         </li>
+        <li>
+          <strong>Un coût qui ne grimpe pas avec l&apos;usage.</strong> Nos
+          réponses sont rédigées par un modèle ouvert qui tourne sur une
+          machine équipée d&apos;une bonne carte graphique, chez le client ou
+          chez nous, administrée à distance. Zéro crédit à la question, et
+          aucune donnée qui sort pour répondre à une question de stock. Le
+          calcul complet :{" "}
+          <Link href="/blog/cout-agent-ia-odoo">
+            crédits, abonnements ou une machine à vous
+          </Link>
+          .
+        </li>
       </ul>
       <p>
         Une limite honnête : ces garde-fous ont un prix en souplesse. Un
@@ -245,8 +276,10 @@ export default function Article() {
             pas recoupé une semaine de réponses avec l&apos;écran Odoo.
           </li>
           <li>
-            Chiffrez les <strong>crédits IAP</strong> sur un mois d&apos;usage
-            réel avant d&apos;ouvrir l&apos;agent à toute l&apos;équipe.
+            Consommez les <strong>20 crédits de départ</strong> sur une
+            semaine réelle avant d&apos;acheter un pack : c&apos;est la seule
+            façon de connaître votre consommation. Puis comparez avec une
+            machine à vous, qui ne décompte rien à la question.
           </li>
           <li>
             Si l&apos;agent doit parler à vos clients ou préparer des devis,
