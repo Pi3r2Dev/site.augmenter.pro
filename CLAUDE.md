@@ -483,6 +483,7 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 - **Blog articles** : routes statiques directory-based (pas dynamiques `[slug]`), chaque article est `src/app/blog/<slug>/page.tsx`
 - **llms.txt et sitemap.xml doivent être mis à jour** quand on ajoute pages ou articles ; un article/idée s'ajoute au catalog [src/data/resources.ts](src/data/resources.ts) (avec `tldr`/`sectors`/`pains`), pas dans les vues. Pages légales : `robots: LEGAL_ROBOTS` (`src/lib/seo-policy.ts`), hors sitemap.
 - **JSON-LD structured data** ajouter sur toute page indexable. Sur les narrative pages, le JSON-LD vit dans le server `page.tsx`, le narrative component est rendu client-side en dessous.
+- **Maillage du cluster Claude / Odoo / MCP** : gardé par [src/lib/maillage-cluster.test.ts](src/lib/maillage-cluster.test.ts) (liens et ancres canoniques vers `/serveur-mcp-odoo` et `/blog/claude-code-odoo-workflow`, ≥ 3 entrants éditoriaux par article de l'essaim, index llms-full complet). Le juge ne lit que les `href` littéraux : un lien rendu depuis un tableau de données ne compte pas. Ne jamais relâcher une assertion pour passer au vert
 - **Dev server force webpack** (`next dev --webpack`) — voir Commands ci-dessus pour la raison
 - **Ne jamais utiliser des ancres** (`/route#section`) dans le footer ou le NavFixed — seuls les liens pages réels. Si une section n'a pas sa page, soit on consolide sous un parent, soit on la skip.
 
