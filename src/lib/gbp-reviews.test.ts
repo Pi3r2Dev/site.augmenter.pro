@@ -46,6 +46,15 @@ const FABRICATED = [
   /Marc L\./,
   /Moodboards et 3D/,
   /retours clients/,
+  // Chiffres « de cas » tirés des mêmes faux témoignages (retirés le 2026-10-14).
+  // Le « 2 h → 15 min » reste, mais comme mesure faite chez nous, jamais prêté
+  // à un client.
+  /budget IT réduit/,
+  /2 ?h de saisie en moins/,
+  /demandes clients (entrantes|en ligne)/,
+  /15 min, PME du BTP/,
+  /chez une PME du BTP\s*:?\s*(a ramené|de 2 h)/,
+  /Cabinet immobilier — synthèse de visites/,
 ];
 
 describe("avis Google", () => {

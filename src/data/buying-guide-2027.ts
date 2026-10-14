@@ -109,7 +109,7 @@ export const DOORS: Record<DoorId, Door> = {
     title: "Assistant de chiffrage (catalogue et marges, relecture humaine)",
     when: "Deux heures pour un devis, deux prix selon l'agence",
     range: "~4 à 10 k€ HT selon propreté du catalogue",
-    keep: "Cas mesuré chez une PME du BTP : de 2 h à 15 min par devis. Personne n'envoie sans relecture.",
+    keep: "Mesuré chez nous : nos propres devis sont passés de 2 h à 15 min. Personne n'envoie sans relecture.",
     cut: "Le portail client tant que le catalogue est sale.",
     cta: "audit-180",
   },

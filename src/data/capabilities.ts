@@ -99,7 +99,7 @@ export const CAPABILITIES: Capability[] = [
     title: "Un devis chiffré depuis votre catalogue",
     detail:
       "Un assistant nourri par vos références et vos règles de marge, qui sort un devis structuré — le même d'une agence à l'autre.",
-    proof: "2 h → 15 min, PME du BTP",
+    proof: "2 h → 15 min sur nos propres devis",
     verdict: "production",
     sectors: ["BTP & rénovation", "Négoce & distribution", "Conseil & services"],
     tools: ["Odoo", "Logiciel métier", "Excel & Drive"],

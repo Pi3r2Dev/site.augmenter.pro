@@ -544,9 +544,9 @@ export default function Article() {
       </div>
       <p className="text-xs text-muted-foreground">{DISCLAIMER}</p>
       <p>
-        Ces fourchettes s’appuient sur des chantiers déjà publiés, pas sur
-        des promesses. Un assistant de chiffrage chez une PME du BTP a ramené
-        le devis de{" "}
+        Ces fourchettes s’appuient sur ce qu’on vit et sur des chantiers déjà
+        publiés, pas sur des promesses. Chez nous, l’assistant de chiffrage a
+        ramené nos propres devis de{" "}
         <Memo type="num" label="2 h → 15 min">
           deux heures à quinze minutes
         </Memo>

@@ -57,7 +57,7 @@ const PRESTATIONS: Prestation[] = [
     pain: "Chaque agence chiffre à sa façon. Le même chantier ressort à deux prix différents selon la personne qui décroche.",
     delivery:
       "Un assistant de chiffrage nourri par votre catalogue et vos règles de marge, qui produit un devis structuré et homogène d'un site à l'autre.",
-    proof: "2 h → 15 min, PME du BTP",
+    proof: "2 h → 15 min sur nos propres devis",
     sectors: "BTP · Négoce · Services",
     accent: PALETTES.duo.c,
   },

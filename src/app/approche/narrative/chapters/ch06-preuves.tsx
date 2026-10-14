@@ -36,7 +36,7 @@ const stats: Array<{ data: TrustStatData; palette: Palette }> = [
       icon: Zap,
       value: "2 h → 15 min",
       label: "Tâche type compressée",
-      description: "Cabinet immobilier — synthèse de visites par assistant IA.",
+      description: "Nos propres devis, préparés par assistant IA et relus avant envoi.",
       seed: 17,
     },
   },
