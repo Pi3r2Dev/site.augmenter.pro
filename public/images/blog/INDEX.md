@@ -422,6 +422,17 @@
 
 ---
 
+## agent-ia-qui-ne-touche-pas-aux-prix.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-10-14)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover) ; OG `og/agent-ia-qui-ne-touche-pas-aux-prix.jpg` 1200×630
+- **Description** : Sur fond dégradé lavande vers pêche, un robot humanoïde violet de profil, articulations ambre, tend la main vers une vitrine en verre. Dans la vitrine, une grande étiquette de prix ambre marquée d'un symbole euro, fermée par un cadenas violet. À droite, une main humaine en manche de costume tient une feuille à coin plié portant l'icône d'un tampon (le brouillon qu'un humain valide). Style épuré, sans texte lisible.
+- **Contexte éditorial** : Image hero de l'article sur l'agent qui ne peut pas toucher aux prix. La vitrine cadenassée figure l'impossibilité dans le code (aucun paramètre prix), la feuille au tampon l'écriture qui s'arrête au brouillon, avec un humain sur le bouton.
+- **Usage suggéré** : Hero `/blog/agent-ia-qui-ne-touche-pas-aux-prix` + OG.
+- **Alt text suggéré** : "Robot violet tendant la main vers une étiquette de prix enfermée sous vitrine et cadenas, pendant qu'une main humaine tient un document à tamponner — l'agent IA qui ne peut pas toucher aux prix"
+
+---
+
 ## Essaim MCP / Odoo 20 (2026-10-14) — visuels PROVISOIRES à remplacer
 
 Installer une illustration livrée : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis déplacer la ligne ci-dessous en entrée complète.
@@ -430,7 +441,6 @@ Six articles courts adossés à la page `/serveur-mcp-odoo`. Les fichiers ci-des
 
 | Fichier | Article | Prompt Gemini suggéré |
 | --- | --- | --- |
-| `agent-ia-qui-ne-touche-pas-aux-prix.webp` | L'agent qui ne peut pas toucher aux prix | Illustration flat design violet/ambre 16:9. Un robot assistant stylisé tend la main vers une étiquette de prix ambre protégée par un cadenas violet et une vitre ; à côté, un document « brouillon » qu'un humain tient avec un tampon. Icônes symboliques, sans texte. |
 | `petit-modele-bien-outille.webp` | Un petit modèle bien outillé | Illustration flat design violet/ambre 16:9. Deux robots côte à côte : un petit robot violet équipé d'une ceinture d'outils (clé, loupe, dossier client) qui tient une fiche exacte ; un grand robot gris flou avec un point d'interrogation. Fond dégradé, sans texte. |
 | `ia-enrichir-catalogue-sans-perdre-la-main.webp` | Enrichir votre catalogue sans perdre la main | Illustration flat design violet/ambre 16:9. Une étagère de fiches produit (filtres, courroies, bidons stylisés) ; un robot pose des étiquettes ambre « en transit » sur un plateau, une main humaine violette valide avec une coche, une flèche de retour symbolise l'annulation. Sans texte. |
 | `odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp` | Odoo Online : ce que vous ne pourrez jamais y installer | Illustration flat design violet/ambre 16:9. Un nuage violet (SaaS) avec un panneau « interdit » sur une brique de code à l'intérieur, et autour du nuage quatre passerelles ambre qui le contournent (un pinceau Studio, un engrenage, un paquet ZIP, un serveur externe relié par un câble). Sans texte. |
