@@ -80,7 +80,7 @@ const IDEES: FeatureItem[] = [
     tag: "Logistique",
     title: "Optimisation des tournées",
     excerpt:
-      "Algorithme Google OR-Tools sur vos livraisons : −30 % de carburant, trajets plus courts, moins de stress pour les chauffeurs.",
+      "Algorithme Google OR-Tools sur vos livraisons : moins de kilomètres, des trajets plus courts, moins de stress pour les chauffeurs.",
     href: "/idees#optimisation-tournees",
     palette: "mono",
     seed: 74,

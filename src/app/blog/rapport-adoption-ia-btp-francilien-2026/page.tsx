@@ -70,8 +70,8 @@ export default function Article() {
         données CCI Île-de-France ; (2) une revue des outils IA réellement
         proposés au secteur (Tolteck, ProDevis, Aubay, solutions verticales BIM
         + IA) ; (3) les observations terrain de l&apos;équipe augmenter.PRO
-        auprès d&apos;une trentaine de PME du BTP dans les Yvelines et le Val
-        d&apos;Oise sur les douze derniers mois. Les niveaux de maturité sont
+        auprès de PME du BTP et du négoce technique en Île-de-France, sans
+        prétendre à un échantillon statistique. Les niveaux de maturité sont
         qualitatifs (faible / émergent / en cours / établi) — aucun pourcentage
         précis n&apos;est avancé en l&apos;absence d&apos;enquête statistique
         dédiée à ce périmètre.

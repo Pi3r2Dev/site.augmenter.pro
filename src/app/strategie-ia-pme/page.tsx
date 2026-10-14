@@ -44,21 +44,24 @@ const stats = [
     icon: TrendingUp,
   },
   {
-    value: "165 %",
-    label: "ROI médian constaté",
-    detail: "Retour en 6 à 7 mois en moyenne",
+    // Mesure maison, jamais prêtée à un client (cf. src/lib/gbp-reviews.test.ts).
+    value: "2 h \u2192 15 min",
+    label: "sur nos propres devis",
+    detail: "Assistant IA, relecture avant envoi. Mesuré chez nous.",
     icon: BarChart3,
   },
   {
-    value: "60 %",
-    label: "freinées par les compétences",
-    detail: "Premier frein identifié par les dirigeants",
+    // Cas réel : formule figée dans .claude/templates/seo/terrain-odoo-reva9.md.
+    value: "1 sem. \u2192 1 j",
+    label: "catalogue et commandes remis d\u2019aplomb",
+    detail: "Cas réel, PME de négoce technique en Île-de-France",
     icon: Users,
   },
   {
-    value: "80 %",
-    label: "de prise en charge possible",
-    detail: "Via le programme Osez l\u2019IA (Bpifrance)",
+    // Taux officiel du Diagnostic Data IA (entreprises.gouv.fr/osez-lia, relevé 2026-10-14).
+    value: "40 %",
+    label: "du Diagnostic Data IA pris en charge",
+    detail: "Plan Osez l\u2019IA, France 2030 / Bpifrance",
     icon: Banknote,
   },
 ];
@@ -151,28 +154,32 @@ const sectors = [
     title: "BTP & Rénovation",
     description:
       "Automatisez vos devis, optimisez la planification chantier et internalisez votre prospection commerciale.",
-    example: "PME du BTP à Versailles (78) : devis générés 3\u00d7 plus vite",
+    example:
+      "Ce qu\u2019on vise ensemble : le devis en 15 min au lieu de 2 h, comme sur les nôtres.",
   },
   {
     icon: MapPin,
     title: "Immobilier",
     description:
       "IA pour l\u2019estimation, la rédaction d\u2019annonces, le scoring acquéreur et le suivi client automatisé.",
-    example: "Agence à Cergy (95) : 50 % de temps gagné sur les estimations",
+    example:
+      "Ce qu’on vise ensemble : l’annonce rédigée et l’acquéreur qualifié avant votre premier appel.",
   },
   {
     icon: Cog,
     title: "Industrie & Artisanat",
     description:
       "Maintenance prédictive, gestion de stock intelligente, optimisation des itinéraires et contrôle qualité.",
-    example: "Artisan à Pontoise (95) : stock optimisé, ruptures réduites de 40 %",
+    example:
+      "Cas réel : catalogue et commandes d’une PME de négoce technique en Île-de-France remis d’aplomb, une semaine de travail à trois devenue une journée.",
   },
   {
     icon: GraduationCap,
     title: "Services & Conseil",
     description:
       "Assistants IA pour la veille, la rédaction, l\u2019analyse documentaire et l\u2019automatisation administrative.",
-    example: "Cabinet conseil à Saint-Germain (78) : productivité +35 %",
+    example:
+      "Ce qu’on vise ensemble : la veille et les comptes-rendus qui ne débordent plus sur vos soirées.",
   },
 ];
 
@@ -180,7 +187,7 @@ const faqItems = [
   {
     question: "Combien coûte une stratégie IA pour une PME ?",
     answer:
-      "On ne facture pas notre diagnostic initial (60 min). L’audit IA 360° qui pose la feuille de route coûte 550 € — il est détaillé sur notre page dédiée. Pour le déploiement, le budget dépend des cas d’usage retenus, et le programme Osez l’IA de Bpifrance peut prendre en charge jusqu’à 80 % de l’accompagnement.",
+      "On ne facture pas notre diagnostic initial (60 min). L’audit IA 360° qui pose la feuille de route coûte 550 € — il est détaillé sur notre page dédiée. Pour le déploiement, le budget dépend des cas d’usage retenus, et le plan Osez l’IA (France 2030 / Bpifrance) prend en charge 40 % du Diagnostic Data IA pour les PME de 10 salariés et plus.",
   },
   {
     question:
@@ -191,7 +198,7 @@ const faqItems = [
   {
     question: "Quels résultats concrets peut-on attendre ?",
     answer:
-      "Les PME accompagnées constatent en moyenne un ROI de 165 % avec un retour en 6-7 mois. Concrètement : réduction des tâches répétitives de 30-50 %, amélioration de la productivité de 20-35 %, et des décisions commerciales mieux informées grâce à l\u2019analyse de données.",
+      "Pas de moyenne promise : on fixe ensemble un objectif par cas d\u2019usage pendant le diagnostic, puis on le mesure. Pour l\u2019ordre de grandeur, voici ce que nous vivons nous-mêmes : nos devis sont passés de 2 h à 15 min avec un assistant IA relu avant envoi, et chez une PME de négoce technique en Île-de-France, une semaine de travail à trois sur le catalogue et les commandes tient désormais en une journée.",
   },
   {
     question:
@@ -203,7 +210,7 @@ const faqItems = [
     question:
       "Qu\u2019est-ce que le programme Osez l\u2019IA de Bpifrance ?",
     answer:
-      "Osez l\u2019IA (anciennement IA Booster France 2030) est un programme gouvernemental doté de 200 millions d\u2019euros. Il finance jusqu\u2019à 80 % du coût d\u2019accompagnement IA pour les PME de 10 à 2 000 salariés. Nous aidons nos clients à préparer leur dossier et à identifier les phases les plus pertinentes pour leur situation.",
+      "Osez l\u2019IA (anciennement IA Booster France 2030) est un programme gouvernemental doté de 200 millions d\u2019euros. Il prend en charge 40 % du Diagnostic Data IA (8 jours, 10 000 € HT) pour les PME et ETI de 10 à 2 000 salariés, et 46 % des Accélérateurs IA, réservés aux entreprises de plus de 50 salariés et 8 M€ de chiffre d\u2019affaires. Nous aidons nos clients à préparer leur dossier et à identifier les phases les plus pertinentes pour leur situation.",
   },
   {
     question: "Intervenez-vous uniquement en Yvelines et Val-d\u2019Oise ?",
@@ -362,7 +369,8 @@ export default function StrategieIaPmePage() {
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Sources : Baromètre France Num 2025, Bpifrance Le Lab.{" "}
+            Sources : Baromètre France Num 2025, plan Osez l&apos;IA
+            (entreprises.gouv.fr), nos propres mesures.{" "}
             <Link
               href="/blog/5-signes-moderniser-informatique-pme"
               className="text-primary underline-offset-4 hover:underline"
@@ -508,8 +516,8 @@ export default function StrategieIaPmePage() {
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Chaque métier a ses propres cas d&apos;usage IA. Nous adaptons
-              notre accompagnement à vos enjeux terrain, avec des exemples
-              concrets de PME locales.
+              notre accompagnement à vos enjeux terrain : un cas réel, et des
+              objectifs qu&apos;on fixe ensemble, chiffrés au diagnostic.
             </p>
           </div>
           <div className="mt-16 grid gap-8 md:grid-cols-2">
@@ -554,10 +562,10 @@ export default function StrategieIaPmePage() {
                 Financez votre transformation IA
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Le programme <strong>Osez l&apos;IA</strong> (Bpifrance /
-                France 2030) finance jusqu&apos;à{" "}
-                <strong>80 % du coût</strong> d&apos;accompagnement IA pour les
-                PME. Nous vous aidons à en bénéficier.
+                Le plan <strong>Osez l&apos;IA</strong> (Bpifrance / France
+                2030) prend en charge <strong>40 % du Diagnostic Data IA</strong>{" "}
+                et 46 % des Accélérateurs IA, pour les PME de 10 salariés et
+                plus. Nous vous aidons à en bénéficier.
               </p>
             </div>
 
@@ -571,9 +579,7 @@ export default function StrategieIaPmePage() {
                     <ul className="mt-3 space-y-2">
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                        <span>
-                          PME de 10 à 2 000 salariés, CA &gt; 250 K&euro;
-                        </span>
+                        <span>PME et ETI de 10 à 2 000 salariés</span>
                       </li>
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -582,12 +588,16 @@ export default function StrategieIaPmePage() {
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                         <span>
-                          Diagnostic + accompagnement pris en charge à 50-80 %
+                          Diagnostic Data IA : 8 jours, 10 000 &euro; HT, 40 %
+                          pris en charge
                         </span>
                       </li>
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                        <span>Tous secteurs d&apos;activité éligibles</span>
+                        <span>
+                          Accélérateurs IA : 46 % pris en charge (&gt; 50
+                          salariés, CA &gt; 8 M&euro;)
+                        </span>
                       </li>
                     </ul>
                   </div>

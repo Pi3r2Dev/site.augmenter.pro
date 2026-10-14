@@ -55,7 +55,7 @@ export default function Article() {
         tout casse.
       </p>
 
-      <h3>Retour terrain : ce que nous observons chez nos clients PME</h3>
+      <h3>Retour terrain : le blocage qu&apos;on voit partout</h3>
       <p>
         En accompagnant des PME en Yvelines et Val-d&apos;Oise, nous voyons le
         même schéma se répéter. Le dirigeant a compris l&apos;intérêt de
@@ -64,9 +64,11 @@ export default function Article() {
         réelles</strong> — CRM, ERP, messagerie, fichiers partagés.
       </p>
       <p>
-        Le chiffre le confirme : selon McKinsey,{" "}
-        <strong>95% des projets IA en entreprise échouent sur
-        l&apos;intégration technique</strong>. Ce n&apos;est pas l&apos;IA qui
+        Le chiffre le confirme : selon le rapport <em>The GenAI Divide</em> du
+        MIT NANDA (août 2025),{" "}
+        <strong>95 % des organisations étudiées n&apos;ont tiré aucun retour
+        mesurable de leurs pilotes d&apos;IA générative</strong>, faute
+        d&apos;intégration aux flux de travail. Ce n&apos;est pas l&apos;IA qui
         manque de capacité — c&apos;est la tuyauterie entre l&apos;IA et vos
         outils qui fait défaut.
       </p>
@@ -115,7 +117,7 @@ export default function Article() {
         Exemple concret : un agent qui qualifie les leads et met à jour le CRM
       </h3>
       <p>
-        Voici un cas type que nous mettons en place chez nos clients.
+        Voici un cas type, tel qu&apos;on le monte avec une PME.
         L&apos;agent IA est connecté à HubSpot via MCP et à la messagerie
         Outlook. Quand un nouveau lead arrive :
       </p>
@@ -153,17 +155,17 @@ export default function Article() {
 
       <h3>Temps gagné sur les tâches répétitives</h3>
       <p>
-        Les données que nous observons chez nos clients et dans la littérature
-        secteur convergent :
+        Les ordres de grandeur qu&apos;on vise avec une PME, à mesurer avant et
+        après plutôt qu&apos;à croire sur parole :
       </p>
       <ul>
         <li>
-          <strong>Qualification de leads :</strong> -70% de temps de traitement
-          (de 45 min à 8 min par lead en moyenne)
+          <strong>Qualification de leads :</strong> passer de trois quarts
+          d&apos;heure à moins de dix minutes par lead
         </li>
         <li>
-          <strong>Relances commerciales :</strong> Les relances oubliées passent
-          de ~30% à moins de 5% — l&apos;agent ne procrastine pas
+          <strong>Relances commerciales :</strong> les relances oubliées ramenées
+          à presque zéro — l&apos;agent ne procrastine pas
         </li>
         <li>
           <strong>Rapports hebdomadaires :</strong> Génération automatique à
@@ -177,26 +179,29 @@ export default function Article() {
 
       <h3>Impact sur le taux de conversion et le cycle de vente</h3>
       <p>
-        Une étude Mirax (2025) sur des PME de 50 à 250 salariés ayant intégré
-        des agents IA à leur CRM montre :
+        Nous n&apos;avons pas d&apos;étude maison à vous opposer, et les
+        « +X % de conversion » des éditeurs se vérifient rarement. Voici ce
+        qu&apos;on vous propose de mesurer chez vous, avant et après :
       </p>
       <ul>
         <li>
-          <strong>+22% de taux de conversion</strong> sur le pipeline commercial
+          <strong>Le délai de première réponse</strong> à un lead : de « quand
+          on a le temps » à quelques minutes, c&apos;est le levier le plus net
+          sur la conversion.
         </li>
         <li>
-          <strong>-30% sur la durée du cycle de vente</strong> (le lead est
-          traité plus vite, mieux qualifié, relancé sans délai)
+          <strong>La durée du cycle de vente</strong> : comptez les jours entre
+          le premier contact et le devis. Un lead qualifié et relancé sans
+          délai avance plus vite.
         </li>
         <li>
-          <strong>Satisfaction équipe :</strong> 81% des commerciaux utilisant
-          l&apos;IA déclarent un gain de productivité significatif (Salesforce
-          State of Sales 2024)
+          <strong>Le temps commercial récupéré</strong> : chez nous, le devis
+          est passé de 2 h à 15 min avec un assistant relu avant envoi.
         </li>
       </ul>
       <p>
-        <strong>Nuance importante :</strong> ces résultats concernent des PME
-        qui avaient déjà un CRM structuré et des processus de vente définis. Si
+        <strong>Nuance importante :</strong> ces gains supposent un CRM
+        structuré et des processus de vente définis. Si
         vos données sont éparpillées entre des fichiers Excel, des post-it et
         des emails non classés, le gain sera moindre — et il faudra d&apos;abord
         structurer avant d&apos;automatiser.

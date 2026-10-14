@@ -5,7 +5,7 @@ import { ArticleLayout } from "@/components/layout/article-layout";
 export const metadata = articleMetadata({
   title: "Veille Concurrentielle IA pour PME : Guide Pratique 2026",
   description:
-    "Comment automatiser votre veille concurrentielle avec l'IA. Méthode en 5 étapes, outils recommandés et retour d'expérience terrain pour PME.",
+    "Comment automatiser votre veille concurrentielle avec l'IA. Méthode en 5 étapes, outils recommandés et retour d'expérience terrain pour PME.",
   slug: "veille-concurrentielle-ia-pme",
 });
 
@@ -40,10 +40,10 @@ export default function VeilleConcurrentielleIAPME() {
 
       <h2>Pourquoi la veille concurrentielle est vitale pour les PME</h2>
       <p>
-        Selon une étude Bpifrance Le Lab (2024), <strong>67 % des PME
-        françaises ne font aucune veille concurrentielle formalisée</strong>.
-        Elles se fient au bouche-à-oreille, aux salons professionnels et à la
-        lecture occasionnelle de la presse spécialisée.
+        Dans les PME que nous rencontrons, <strong>la veille concurrentielle
+        n&apos;est presque jamais formalisée</strong>. Elles se fient au
+        bouche-à-oreille, aux salons professionnels et à la lecture
+        occasionnelle de la presse spécialisée.
       </p>
       <p>
         Le problème : ce mode de fonctionnement crée des angles morts. Un
@@ -246,20 +246,19 @@ export default function VeilleConcurrentielleIAPME() {
         Retour d&apos;expérience : ce que la veille IA révèle (et ses limites)
       </h2>
       <p>
-        En accompagnant des PME du bâtiment et du conseil en Yvelines, nous
-        avons observé des résultats concrets :
+        Deux situations types où la veille change une décision :
       </p>
       <ul>
         <li>
-          Un artisan plombier-chauffagiste a détecté qu&apos;un concurrent
-          venait de lancer une offre de maintenance préventive 20 % moins
-          chère. Il a ajusté sa proposition commerciale en 48 h au lieu de
-          le découvrir 3 mois plus tard via un client perdu.
+          Un artisan plombier-chauffagiste détecte qu&apos;un concurrent vient
+          de lancer une offre de maintenance préventive 20 % moins chère. Il
+          ajuste sa proposition commerciale en 48 h au lieu de le découvrir
+          trois mois plus tard via un client perdu.
         </li>
         <li>
-          Une agence immobilière a identifié qu&apos;aucun concurrent local
-          ne proposait de visite virtuelle IA — un différenciateur qu&apos;elle
-          a rapidement mis en avant.
+          Une agence immobilière constate qu&apos;aucun concurrent local ne
+          propose de visite virtuelle IA : un différenciateur à mettre en
+          avant tout de suite.
         </li>
       </ul>
       <p>

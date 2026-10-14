@@ -96,9 +96,11 @@ export default function Article() {
 
       <h3>Le chiffre qui résume tout : 95% d&apos;échec</h3>
       <p>
-        Selon une étude Mirax/McKinsey, <strong>95% des projets IA en
-        entreprise échouent sur l&apos;intégration technique</strong> — pas sur
-        l&apos;IA elle-même. L&apos;algorithme fonctionne, mais il ne peut pas
+        Selon le rapport <em>The GenAI Divide</em> du MIT NANDA (août 2025),{" "}
+        <strong>95 % des organisations étudiées n&apos;ont tiré aucun retour
+        mesurable de leurs pilotes d&apos;IA générative</strong> — et le rapport
+        pointe la mise en œuvre et l&apos;intégration aux flux de travail, pas
+        les modèles. L&apos;algorithme fonctionne, mais il ne peut pas
         accéder aux données métier. C&apos;est comme avoir un expert brillant
         enfermé dans une pièce sans téléphone.
       </p>
@@ -138,12 +140,13 @@ export default function Article() {
       </ul>
 
       <h2>
-        Cas terrain — Comment nous connectons un CRM à un agent IA via MCP
+        Cas concret — Comment nous connectons un CRM à un agent IA via MCP
       </h2>
       <p>
-        Nous accompagnons actuellement une PME de services en Yvelines (78) sur
-        exactement ce sujet. Sans entrer dans les détails confidentiels, voici
-        le schéma type que nous déployons :
+        Transparence d&apos;abord : nous n&apos;avons pas encore de client avec
+        ce montage CRM en production. Le schéma ci-dessous est celui que nous
+        avons monté chez nous, sur notre propre serveur MCP branché à Odoo, et
+        que nous proposons de reproduire sur votre CRM :
       </p>
       <ul>
         <li>
@@ -167,9 +170,11 @@ export default function Article() {
         </li>
       </ul>
       <p>
-        <strong>Résultat intermédiaire :</strong> le temps de traitement des
-        demandes entrantes est passé de 45 minutes à 8 minutes en moyenne. La
-        mission est encore en cours, mais la trajectoire est claire.
+        <strong>Ce que nous mesurons chez nous :</strong> nos propres devis
+        sont passés de 2 h à 15 min, l&apos;assistant prépare, un humain relit
+        avant envoi. L&apos;objectif qu&apos;on fixerait ensemble sur vos
+        demandes entrantes : le temps de première réponse, mesuré avant et
+        après.
       </p>
       <p>
         <strong>Mise en garde :</strong> ce type d&apos;intégration demande un
@@ -281,9 +286,9 @@ export default function Article() {
         </li>
       </ul>
       <p>
-        <strong>Repère de ROI :</strong> nos clients constatent généralement un
-        retour sur investissement en 3 à 6 mois, principalement via le temps
-        gagné sur les tâches administratives et commerciales. Un commercial qui
+        <strong>Repère de ROI :</strong> raisonnez en temps gagné plutôt
+        qu&apos;en pourcentage promis. Chez nous, le premier gain mesuré a été
+        le devis, passé de 2 h à 15 min avec un assistant relu avant envoi. Un commercial qui
         récupère 2 heures par jour, c&apos;est ~40 heures/mois réinvesties en
         vente effective.
       </p>

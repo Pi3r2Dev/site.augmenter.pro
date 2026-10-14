@@ -85,8 +85,9 @@ export default function Article() {
         informatique, workflows de travail et entretiens équipes.
       </p>
       <p>
-        <strong>Exemple :</strong> Une agence à Versailles (78) a réduit ses
-        tâches répétitives de 50% après notre intervention.
+        <strong>Ce qu&apos;on vise ensemble :</strong> diviser par deux les
+        tâches répétitives repérées pendant le diagnostic, et le mesurer un
+        mois plus tard.
       </p>
       <p>
         <strong>Résultat :</strong> Un plan chiffré pour adopter des solutions IA

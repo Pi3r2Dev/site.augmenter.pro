@@ -98,7 +98,7 @@ const GUARANTEES = [
   "Sans engagement",
   "Zéro jargon",
   "RGPD compliant",
-  "Résultats 48 h",
+  "Réponse < 24 h",
 ];
 
 export function Convert() {

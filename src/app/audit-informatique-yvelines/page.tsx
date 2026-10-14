@@ -51,21 +51,23 @@ export const metadata: Metadata = {
 
 const stats = [
   {
-    value: "72 %",
-    label: "des PME attaquées sans audit",
-    detail: "N'avaient pas réalisé d'audit récent (ANSSI)",
+    value: "550 €",
+    label: "l'audit 360° complet",
+    detail: "Prix annoncé, sans devis à rallonge",
     icon: Shield,
   },
   {
-    value: "−35 %",
-    label: "de coûts IT après audit",
-    detail: "Licences, maintenance, infra optimisées",
+    // Mesure maison, jamais prêtée à un client (cf. src/lib/gbp-reviews.test.ts).
+    value: "2 h → 15 min",
+    label: "sur nos propres devis",
+    detail: "Assistant IA, relecture avant envoi. Mesuré chez nous.",
     icon: TrendingDown,
   },
   {
-    value: "4h",
-    label: "de reprise après incident",
-    detail: "Temps moyen pour une PME non auditée",
+    // Cas réel : formule figée dans .claude/templates/seo/terrain-odoo-reva9.md.
+    value: "1 sem. → 1 j",
+    label: "catalogue et commandes remis d'aplomb",
+    detail: "Cas réel, PME de négoce technique en Île-de-France",
     icon: Clock,
   },
   {
@@ -138,7 +140,7 @@ const painPoints = [
     icon: ShieldAlert,
     title: "Sécurité informatique insuffisante",
     description:
-      "Les PME des Yvelines sont des cibles privilégiées : ransomware, phishing, vol de données. 60 % des PME attaquées déposent le bilan dans les 18 mois.",
+      "Les PME des Yvelines sont des cibles privilégiées : ransomware, phishing, vol de données. Une attaque, ce sont des jours d'arrêt, des données clients exposées et une facture qui dépasse vite le prix d'un audit.",
   },
   {
     icon: Banknote,
@@ -216,7 +218,7 @@ const sectors = [
     description:
       "Les entreprises du BTP à Versailles et Mantes-la-Jolie ont besoin d'un SI fiable pour gérer les chantiers, la facturation et les appels d'offres.",
     example:
-      "Entreprise BTP à Poissy (78) : temps de facturation divisé par 3 après audit",
+      "Ce qu'on vise ensemble : la facture qui part le jour de la fin de chantier, pas trois semaines après.",
   },
   {
     icon: Briefcase,
@@ -224,7 +226,7 @@ const sectors = [
     description:
       "Cabinets de conseil, ESN et prestataires à Saint-Germain-en-Laye : votre informatique doit être aussi performante que vos prestations.",
     example:
-      "Cabinet RH à Saint-Germain (78) : migration cloud réussie, 0 interruption",
+      "Ce qu'on vise ensemble : une migration cloud sans journée perdue, préparée avant d'être lancée.",
   },
   {
     icon: ShoppingCart,
@@ -232,7 +234,7 @@ const sectors = [
     description:
       "Points de vente, e-commerce, logistique : un audit révèle les failles de votre caisse, de votre stock et de votre site web.",
     example:
-      "Réseau de boutiques à Rambouillet (78) : sécurité POS renforcée",
+      "Ce qu'on vise ensemble : une caisse et un stock dont vous connaissez les failles avant la panne.",
   },
   {
     icon: Heart,
@@ -240,7 +242,7 @@ const sectors = [
     description:
       "Médecins, avocats, architectes en Yvelines : vos données patients et clients exigent une conformité et une sécurité irréprochables.",
     example:
-      "Cabinet médical à Versailles (78) : conformité RGPD et HDS validée",
+      "Ce qu'on vise ensemble : savoir où sont vos données patients et qui y accède, preuve à l'appui.",
   },
 ];
 
@@ -664,18 +666,19 @@ export default function AuditInformatiqueYvelinesPage() {
               Un audit informatique en 2026, ce n&apos;est plus seulement
               vérifier vos serveurs — c&apos;est identifier les processus que
               l&apos;IA peut{" "}
-              <strong>automatiser, accélérer ou simplifier</strong>. 60 % des
-              organisations obtiennent un ROI complet en moins de 12 mois.
+              <strong>automatiser, accélérer ou simplifier</strong>. Chez
+              nous, le premier gain mesuré a été le devis : 2 h hier, 15 min
+              aujourd&apos;hui.
             </p>
           </div>
 
-          {/* Stats row */}
+          {/* Stats row — mesures maison et cas réel, jamais une moyenne de marché */}
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { value: "+30 %", label: "de productivité", icon: TrendingUp },
-              { value: "−35 %", label: "de coûts opérationnels", icon: TrendingDown },
-              { value: "< 12 mois", label: "pour un ROI complet", icon: BarChart3 },
-              { value: "−75 %", label: "d'erreurs manuelles", icon: CheckCircle2 },
+              { value: "2 h → 15 min", label: "sur nos propres devis", icon: TrendingUp },
+              { value: "1 sem. → 1 j", label: "catalogue et commandes, cas réel", icon: TrendingDown },
+              { value: "60 min", label: "pour poser le premier objectif", icon: BarChart3 },
+              { value: "1 objectif", label: "chiffré ensemble, puis mesuré", icon: CheckCircle2 },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <s.icon className="mx-auto h-5 w-5 text-primary" />
@@ -694,7 +697,7 @@ export default function AuditInformatiqueYvelinesPage() {
                 icon: FileSpreadsheet,
                 title: "Devis & facturation automatisés",
                 description:
-                  "Génération automatique de devis à partir de vos modèles, envoi et relance par IA. Les entreprises du BTP à Versailles gagnent 2h par jour sur l'administratif.",
+                  "Génération automatique de devis à partir de vos modèles, envoi et relance par IA. Objectif à fixer ensemble : une heure d'administratif récupérée par jour, mesurée au bout d'un mois.",
               },
               {
                 icon: Bot,
@@ -706,13 +709,13 @@ export default function AuditInformatiqueYvelinesPage() {
                 icon: Repeat,
                 title: "Workflows métier sans couture",
                 description:
-                  "Connexion automatique entre vos outils (CRM, compta, email, planning) pour éliminer la double saisie et les oublis. Jusqu'à 50 % de tâches manuelles en moins.",
+                  "Connexion automatique entre vos outils (CRM, compta, email, planning) pour éliminer la double saisie et les oublis. L'objectif qu'on chiffre ensemble : la double saisie à zéro.",
               },
               {
                 icon: FileText,
                 title: "Analyse documentaire IA",
                 description:
-                  "Extraction de données dans vos contrats, factures et appels d'offres. Un cabinet à Saint-Germain réduit son temps de traitement de 70 %.",
+                  "Extraction de données dans vos contrats, factures et appels d'offres. Objectif à fixer ensemble : le temps de traitement d'un dossier divisé par deux, puis mesuré.",
               },
               {
                 icon: BarChart3,

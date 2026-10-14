@@ -47,27 +47,30 @@ export const metadata: Metadata = {
 
 const stats = [
   {
-    value: "+255 %",
-    label: "de recherches « audit IA » en 1 an",
-    detail: "Le sujet explose chez les dirigeants (Google, FR)",
+    value: "26 %",
+    label: "des PME utilisent l'IA",
+    detail: "Doublement en 1 an (Baromètre France Num 2025)",
     icon: TrendingUp,
   },
   {
-    value: "165 %",
-    label: "ROI médian d'un projet IA bien ciblé",
-    detail: "Retour en 6 à 7 mois en moyenne",
+    // Mesure maison, jamais prêtée à un client (cf. src/lib/gbp-reviews.test.ts).
+    value: "2 h → 15 min",
+    label: "sur nos propres devis",
+    detail: "Assistant IA, relecture avant envoi. Mesuré chez nous.",
     icon: BarChart3,
   },
   {
-    value: "60 %",
-    label: "des PME freinées par les compétences",
-    detail: "Premier frein cité par les dirigeants",
+    // Cas réel : formule figée dans .claude/templates/seo/terrain-odoo-reva9.md.
+    value: "1 sem. → 1 j",
+    label: "catalogue et commandes remis d'aplomb",
+    detail: "Cas réel, PME de négoce technique en Île-de-France",
     icon: Users,
   },
   {
-    value: "80 %",
-    label: "de prise en charge possible",
-    detail: "Via le programme Osez l'IA (Bpifrance)",
+    // Taux officiel du Diagnostic Data IA (entreprises.gouv.fr/osez-lia, relevé 2026-10-14).
+    value: "40 %",
+    label: "du Diagnostic Data IA pris en charge",
+    detail: "Plan Osez l'IA, France 2030 / Bpifrance",
     icon: Banknote,
   },
 ];
@@ -119,7 +122,7 @@ const auditScope = [
     icon: Banknote,
     title: "Éligibilité au financement",
     description:
-      "On vérifie si ton projet rentre dans Osez l'IA (Bpifrance) — jusqu'à 80 % pris en charge.",
+      "On vérifie si ton projet rentre dans Osez l'IA (Bpifrance) — 40 % du Diagnostic Data IA pris en charge.",
   },
 ];
 
@@ -211,28 +214,32 @@ const sectors = [
     title: "BTP & Rénovation",
     description:
       "Devis générés à la chaîne, planning chantier optimisé, comptes-rendus automatisés et prospection internalisée.",
-    example: "PME BTP à Versailles (78) : devis générés 3× plus vite",
+    example:
+      "Ce qu'on vise ensemble : ton devis en 15 min au lieu de 2 h, comme sur les nôtres.",
   },
   {
     icon: Home,
     title: "Immobilier",
     description:
       "Estimation assistée, rédaction d'annonces, scoring acquéreur et suivi client automatisé de bout en bout.",
-    example: "Agence à Cergy (95) : 50 % de temps gagné sur les estimations",
+    example:
+      "Ce qu'on vise ensemble : l'annonce rédigée et l'acquéreur qualifié avant ton premier appel.",
   },
   {
     icon: Factory,
     title: "Industrie & Artisanat",
     description:
       "Maintenance prédictive, gestion de stock intelligente, optimisation des tournées et contrôle qualité.",
-    example: "Artisan à Pontoise (95) : ruptures de stock réduites de 40 %",
+    example:
+      "Cas réel : catalogue et commandes d'une PME de négoce technique en Île-de-France remis d'aplomb, une semaine de travail à trois devenue une journée.",
   },
   {
     icon: Briefcase,
     title: "Services & Conseil",
     description:
       "Assistants IA pour la veille, la rédaction, l'analyse documentaire et l'automatisation administrative.",
-    example: "Cabinet à Saint-Germain (78) : productivité +35 %",
+    example:
+      "Ce qu'on vise ensemble : la veille et les comptes-rendus qui ne débordent plus sur tes soirées.",
   },
 ];
 
@@ -245,7 +252,7 @@ const faqItems = [
   {
     question: "Combien coûte un audit IA pour une PME ?",
     answer:
-      "On ne facture pas le diagnostic 180° initial (60 min, sur rendez-vous, sans engagement). L'Audit IA 360° complet coûte 550 € et inclut une demi-journée de cartographie et une feuille de route sur 6 mois. C'est volontairement accessible : sur le marché, un audit IA d'agence coûte généralement entre 3 000 et 20 000 € HT. Le programme Osez l'IA de Bpifrance peut ensuite prendre en charge jusqu'à 80 % du coût d'accompagnement au déploiement.",
+      "On ne facture pas le diagnostic 180° initial (60 min, sur rendez-vous, sans engagement). L'Audit IA 360° complet coûte 550 € et inclut une demi-journée de cartographie et une feuille de route sur 6 mois. C'est volontairement accessible : sur le marché, un audit IA d'agence coûte généralement entre 3 000 et 20 000 € HT. Le plan Osez l'IA (France 2030 / Bpifrance) prend ensuite en charge 40 % du Diagnostic Data IA pour les PME de 10 salariés et plus.",
   },
   {
     question: "Combien de temps prend un audit IA ?",
@@ -395,8 +402,8 @@ export default function AuditIaPmePage() {
               L&apos;audit IA : un réflexe de dirigeant, pas un gadget
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Les recherches « audit IA » ont explosé chez les dirigeants
-              français. La raison est simple : seules les PME qui{" "}
+              L&apos;usage de l&apos;IA a doublé en un an dans les PME
+              françaises. La raison d&apos;auditer est simple : seules celles qui{" "}
               <strong>cadrent avant d&apos;investir</strong> tirent un vrai
               retour de l&apos;intelligence artificielle.
             </p>
@@ -420,8 +427,8 @@ export default function AuditIaPmePage() {
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            Sources : Google Trends FR, Baromètre France Num 2025, Bpifrance Le
-            Lab.{" "}
+            Sources : Baromètre France Num 2025, plan Osez l&apos;IA
+            (entreprises.gouv.fr), nos propres mesures.{" "}
             <Link
               href="/blog/agent-ia-dirigeant-pme"
               className="text-primary underline-offset-4 hover:underline"
@@ -584,8 +591,8 @@ export default function AuditIaPmePage() {
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Chaque métier a ses propres cas d&apos;usage IA. On part de tes
-              enjeux terrain, avec des exemples concrets de PME — locales et
-              partout en France.
+              enjeux terrain : un cas réel, et des objectifs qu&apos;on fixe
+              ensemble, chiffrés dès l&apos;audit.
             </p>
           </div>
           <div className="mt-16 grid gap-8 md:grid-cols-2">
@@ -629,10 +636,10 @@ export default function AuditIaPmePage() {
                 Fais financer ton projet IA
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Le programme <strong>Osez l&apos;IA</strong> (Bpifrance / France
-                2030) finance jusqu&apos;à <strong>80 % du coût</strong>{" "}
-                d&apos;accompagnement IA pour les PME. On t&apos;aide à en
-                bénéficier dès l&apos;audit.
+                Le plan <strong>Osez l&apos;IA</strong> (Bpifrance / France
+                2030) prend en charge <strong>40 % du Diagnostic Data IA</strong>{" "}
+                et 46 % des Accélérateurs IA, pour les PME de 10 salariés et
+                plus. On t&apos;aide à en bénéficier dès l&apos;audit.
               </p>
             </div>
 
@@ -646,7 +653,7 @@ export default function AuditIaPmePage() {
                     <ul className="mt-3 space-y-2">
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                        <span>PME de 10 à 2 000 salariés, CA &gt; 250 K&euro;</span>
+                        <span>PME et ETI de 10 à 2 000 salariés</span>
                       </li>
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -655,12 +662,16 @@ export default function AuditIaPmePage() {
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                         <span>
-                          Diagnostic + accompagnement pris en charge à 50-80 %
+                          Diagnostic Data IA : 8 jours, 10 000 &euro; HT, 40 %
+                          pris en charge
                         </span>
                       </li>
                       <li className="flex items-start gap-2 text-sm">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                        <span>Tous secteurs d&apos;activité éligibles</span>
+                        <span>
+                          Accélérateurs IA : 46 % pris en charge (&gt; 50
+                          salariés, CA &gt; 8 M&euro;)
+                        </span>
                       </li>
                     </ul>
                   </div>

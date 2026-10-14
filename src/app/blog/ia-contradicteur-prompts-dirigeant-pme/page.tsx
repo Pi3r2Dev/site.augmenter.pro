@@ -42,7 +42,7 @@ const faqJsonLd = {
       name: "Combien de temps faut-il pour voir les effets de cette pratique ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dans nos accompagnements de PME, les dirigeants qui systématisent ces prompts en amont de leurs décisions structurantes rapportent deux effets après 3 à 6 mois : des décisions tranchées plus vite (les angles morts identifiés tôt évitent les retours en arrière en cours de route), et moins de projets engagés mais plus aboutis (le pré-mortem en particulier filtre 20-30 % des projets, presque toujours ceux qui auraient mal fini).",
+        text: "Dès la première décision : le prompt sort des objections que vous n'auriez pas listées seul. L'effet cumulatif se voit après quelques mois de pratique. Ce que nous constatons sur nos propres décisions : on tranche plus vite parce que les angles morts sortent avant, et on renonce plus tôt aux projets qui auraient mal fini. Nous n'avons pas de statistique à vous vendre là-dessus : tenez votre propre compte.",
       },
     },
     {
@@ -400,13 +400,13 @@ Sois ferme. Si tu valides sans réserve, c'est que je t'ai mal briefé.`}</code>
 
       <h3>Combien de temps faut-il pour voir les effets de cette pratique ?</h3>
       <p>
-        Dans nos accompagnements de PME, les dirigeants qui systématisent ces
-        prompts en amont de leurs décisions structurantes rapportent deux
-        effets après 3 à 6 mois : des décisions tranchées plus vite (les
-        angles morts identifiés tôt évitent les retours en arrière en cours
-        de route), et moins de projets engagés mais plus aboutis (le
-        pré-mortem en particulier filtre 20-30 % des projets, presque toujours
-        ceux qui auraient mal fini).
+        Dès la première décision : le prompt sort des objections que vous
+        n&apos;auriez pas listées seul. L&apos;effet cumulatif se voit après
+        quelques mois de pratique. Ce que nous constatons sur nos propres
+        décisions : on tranche plus vite parce que les angles morts sortent
+        avant, et on renonce plus tôt aux projets qui auraient mal fini. Nous
+        n&apos;avons pas de statistique à vous vendre là-dessus : tenez votre
+        propre compte.
       </p>
 
       <h3>Ces prompts marchent-ils aussi sur Claude et Gemini, pas seulement ChatGPT ?</h3>
@@ -424,10 +424,8 @@ Sois ferme. Si tu valides sans réserve, c'est que je t'ai mal briefé.`}</code>
       <h2>Ce que change cette pratique sur 6 mois</h2>
 
       <p>
-        Dans nos accompagnements de PME en Yvelines et Val d&apos;Oise, les
-        dirigeants qui systématisent l&apos;usage de ces prompts contradicteurs
-        en amont de leurs décisions structurantes rapportent deux effets
-        concrets après 3 à 6 mois :
+        Ce que nous constatons sur nos propres décisions après quelques mois
+        de pratique, sans statistique à vous vendre :
       </p>
       <ol>
         <li>
@@ -439,7 +437,7 @@ Sois ferme. Si tu valides sans réserve, c'est que je t'ai mal briefé.`}</code>
         <li>
           <strong>Moins de projets engagés, mais plus de projets aboutis.</strong>{" "}
           Le pré-mortem (prompt #2) en particulier a un effet de filtre : on
-          renonce à 20-30 % des projets, et ce sont presque toujours ceux qui
+          renonce à une partie des projets, et ce sont presque toujours ceux qui
           auraient fini en chantier mal cadré. La trésorerie et l&apos;énergie
           d&apos;équipe se concentrent sur ce qui a vraiment des chances.
         </li>

@@ -126,12 +126,12 @@ IA · cas client
 Odoo configuré avec Claude−3 500 €
 « Aujourd'hui, la majorité de mes clients me découvrent grâce au bon référencement de mon site. »
 Maud J.·Architecte d'intérieur · avis Google (https://www.google.com/maps?cid=13143887329151170152)
-−30 %
-Temps gagné
-Sur les tâches automatisées
-48 h
-Premiers résultats
-Quick wins déployés
+1 sem. → 1 j
+Catalogue & commandes
+PME de négoce technique en Île-de-France : une semaine à trois, désormais une journée
+60 min
+Premier diagnostic
+Non facturé, objectif chiffré à mesurer ensemble
 / 02 — approche & prestations
 ## La performance naît de l'équilibre entre l'_humain_ , ses _outils_ et ses habitudes.
 Méthode · 4 étapes3 leviers
@@ -179,7 +179,7 @@ Une assistante infatigable : grâce à l'IA, gagnez des heures précieuses chaqu
 Idée 03
 ### Optimisation des tournées
 Des livraisons plus malignes : optimisez vos tournées avec des algorithmes.
-**−30 % coûts carburant**
+**Moins de kilomètres, moins de carburant**
 [![Automatiser emails & réseaux sociaux : 10 h/sem gagnées](https://augmenter.pro/images/blog/automatiser-emails-reseaux-sociaux-ia.webp) Intelligence ArtificielleProductivité Automatiser emails & réseaux sociaux : 10 h/sem gagnées ](https://augmenter.pro/blog/automatiser-emails-reseaux-sociaux-ia)
 [![Comment l'IA redéfinit la vente commerciale](https://augmenter.pro/images/blog/ia-redefinit-vente-commerciale.webp) Intelligence ArtificielleCommercial Comment l'IA redéfinit la vente commerciale ](https://augmenter.pro/blog/ia-redefinit-vente-commerciale)
 [![5 signes qu'il est temps de moderniser l'informatique](https://augmenter.pro/images/blog/5-signes-moderniser-informatique-pme.webp) Audit 360°PME 5 signes qu'il est temps de moderniser l'informatique ](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme)
@@ -224,16 +224,16 @@ L'adoption de l'intelligence artificielle dans les PME françaises a doublé en 
 26 %
 des PME utilisent l’IA
 Doublement en 1 an (France Num 2025)
-165 %
-ROI médian constaté
-Retour en 6 à 7 mois en moyenne
-60 %
-freinées par les compétences
-Premier frein identifié par les dirigeants
-80 %
-de prise en charge possible
-Via le programme Osez l’IA (Bpifrance)
-Sources : Baromètre France Num 2025, Bpifrance Le Lab. [Découvrez les 5 signes qu'il est temps de moderniser](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme).
+2 h → 15 min
+sur nos propres devis
+Assistant IA, relecture avant envoi. Mesuré chez nous.
+1 sem. → 1 j
+catalogue et commandes remis d'aplomb
+Cas réel, PME de négoce technique en Île-de-France
+40 %
+du Diagnostic Data IA pris en charge
+Plan Osez l'IA, France 2030 / Bpifrance
+Sources : Baromètre France Num 2025, plan Osez l'IA (entreprises.gouv.fr), nos propres mesures. [Découvrez les 5 signes qu'il est temps de moderniser](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme).
 ## Pourquoi votre PME a besoin d'une stratégie IA structurée
 43 % des dirigeants de PME ont adopté une démarche IA, mais beaucoup naviguent à vue. Sans cadre clair, les mêmes erreurs se répètent.
 ### Outils IA éparpillés
@@ -261,27 +261,27 @@ Un plan d’action chiffré et priorisé : quels outils, quel calendrier, quel b
 Nous restons à vos côtés pendant la mise en œuvre : formation, intégration, ajustements. Votre stratégie IA prend vie concrètement.
 [Voir les tarifs détaillés](https://augmenter.pro/approche#prestations)
 ## Une stratégie IA adaptée à votre secteur
-Chaque métier a ses propres cas d'usage IA. Nous adaptons notre accompagnement à vos enjeux terrain, avec des exemples concrets de PME locales.
+Chaque métier a ses propres cas d'usage IA. Nous adaptons notre accompagnement à vos enjeux terrain, : un cas réel, et des objectifs qu'on fixe ensemble, chiffrés au diagnostic.
 ### BTP & Rénovation
 Automatisez vos devis, optimisez la planification chantier et internalisez votre prospection commerciale.
-PME du BTP à Versailles (78) : devis générés 3× plus vite
+Ce qu'on vise ensemble : le devis en 15 min au lieu de 2 h, comme sur les nôtres.
 ### Immobilier
 IA pour l’estimation, la rédaction d’annonces, le scoring acquéreur et le suivi client automatisé.
-Agence à Cergy (95) : 50 % de temps gagné sur les estimations
+Ce qu'on vise ensemble : l'annonce rédigée et l'acquéreur qualifié avant le premier appel.
 ### Industrie & Artisanat
 Maintenance prédictive, gestion de stock intelligente, optimisation des itinéraires et contrôle qualité.
-Artisan à Pontoise (95) : stock optimisé, ruptures réduites de 40 %
+Cas réel : catalogue et commandes d'une PME de négoce technique en Île-de-France remis d'aplomb, une semaine de travail à trois devenue une journée.
 ### Services & Conseil
 Assistants IA pour la veille, la rédaction, l’analyse documentaire et l’automatisation administrative.
-Cabinet conseil à Saint-Germain (78) : productivité +35 %
+Ce qu'on vise ensemble : la veille et les comptes-rendus qui ne débordent plus sur vos soirées.
 Découvrez comment [l'IA redéfinit la vente commerciale](https://augmenter.pro/blog/ia-redefinit-vente-commerciale) dans tous les secteurs.
 ## Financez votre transformation IA
-Le programme **Osez l'IA** (Bpifrance / France 2030) finance jusqu'à **80 % du coût** d'accompagnement IA pour les PME. Nous vous aidons à en bénéficier.
+Le plan **Osez l'IA** (Bpifrance / France 2030) prend en charge **40 % du Diagnostic Data IA** et 46 % des Accélérateurs IA, pour les PME de 10 salariés et plus. Nous vous aidons à en bénéficier.
 ### Osez l'IA (ex-IA Booster France 2030)
-  * PME de 10 à 2 000 salariés, CA > 250 K€
+  * PME et ETI de 10 à 2 000 salariés
   * Budget total : 200 millions d'euros
-  * Diagnostic + accompagnement pris en charge à 50-80 %
-  * Tous secteurs d'activité éligibles
+  * Diagnostic Data IA : 8 jours, 10 000 € HT, 40 % pris en charge
+  * Accélérateurs IA : 46 % pris en charge (> 50 salariés, CA > 8 M€)
 
 ### Notre rôle dans votre dossier
   * Évaluation de votre éligibilité
@@ -313,20 +313,20 @@ dateModified: 2026-05-28
 Tu sais que l'IA peut t'aider, mais entre le bruit ambiant et les agences qui veulent te vendre un projet à 20 000 €, tu ne sais plus quoi faire. Notre audit IA part de **ton métier** : on identifie les cas d'usage qui comptent vraiment, chiffrés et priorisés. Diagnostic **180° sur rendez-vous**, en visio partout en France.
 [Diagnostic 180° — 60 min](https://augmenter.pro/contact)[Voir nos prestations](https://augmenter.pro/approche#prestations)
 ## L'audit IA : un réflexe de dirigeant, pas un gadget
-Les recherches « audit IA » ont explosé chez les dirigeants français. La raison est simple : seules les PME qui **cadrent avant d'investir** tirent un vrai retour de l'intelligence artificielle.
-+255 %
-de recherches « audit IA » en 1 an
-Le sujet explose chez les dirigeants (Google, FR)
-165 %
-ROI médian d'un projet IA bien ciblé
-Retour en 6 à 7 mois en moyenne
-60 %
-des PME freinées par les compétences
-Premier frein cité par les dirigeants
-80 %
-de prise en charge possible
-Via le programme Osez l'IA (Bpifrance)
-Sources : Google Trends FR, Baromètre France Num 2025, Bpifrance Le Lab. [Comprendre ce qu'un agent IA peut faire pour toi](https://augmenter.pro/blog/agent-ia-dirigeant-pme).
+L'usage de l'IA a doublé en un an dans les PME françaises. La raison d'auditer est simple : seules celles qui **cadrent avant d'investir** tirent un vrai retour de l'intelligence artificielle.
+26 %
+des PME utilisent l'IA
+Doublement en 1 an (Baromètre France Num 2025)
+2 h → 15 min
+sur nos propres devis
+Assistant IA, relecture avant envoi. Mesuré chez nous.
+1 sem. → 1 j
+catalogue et commandes remis d'aplomb
+Cas réel, PME de négoce technique en Île-de-France
+40 %
+du Diagnostic Data IA pris en charge
+Plan Osez l'IA, France 2030 / Bpifrance
+Sources : Baromètre France Num 2025, plan Osez l'IA (entreprises.gouv.fr), nos propres mesures. [Comprendre ce qu'un agent IA peut faire pour toi](https://augmenter.pro/blog/agent-ia-dirigeant-pme).
 ## Ce que couvre notre audit IA
 Un diagnostic à 360° de ton potentiel IA — des processus terrain à la conformité, sans angle mort.
 ### Maturité IA de l'entreprise
@@ -344,7 +344,7 @@ L'IA utilisée en douce par tes équipes, hors cadre. On la révèle et on la s�
 ### Souveraineté & sécurité
 Où partent tes données ? Hébergement européen, solutions souveraines quand c'est pertinent.
 ### Éligibilité au financement
-On vérifie si ton projet rentre dans Osez l'IA (Bpifrance) — jusqu'à 80 % pris en charge.
+On vérifie si ton projet rentre dans Osez l'IA (Bpifrance) — 40 % du Diagnostic Data IA pris en charge.
 ## Ces blocages te parlent ?
 Tu n'es pas en retard. Tu manques juste d'un cadre clair. Un audit IA fait passer ta PME de l'hésitation à la décision.
 ### Tu ne sais pas par où commencer
@@ -372,27 +372,27 @@ Un livrable clair et actionnable : cas d'usage priorisés par ROI, outils recomm
 On ne te laisse pas seul avec un rapport. Mise en œuvre, formation des équipes et ajustements pour transformer le plan en résultats.
 [Lancer mon diagnostic 180°](https://augmenter.pro/contact)
 ## Un audit IA adapté à ton secteur
-Chaque métier a ses propres cas d'usage IA. On part de tes enjeux terrain, avec des exemples concrets de PME — locales et partout en France.
+Chaque métier a ses propres cas d'usage IA. On part de tes enjeux terrain, : un cas réel, et des objectifs qu'on fixe ensemble, chiffrés dès l'audit.
 ### BTP & Rénovation
 Devis générés à la chaîne, planning chantier optimisé, comptes-rendus automatisés et prospection internalisée.
-PME BTP à Versailles (78) : devis générés 3× plus vite
+Ce qu'on vise ensemble : ton devis en 15 min au lieu de 2 h, comme sur les nôtres.
 ### Immobilier
 Estimation assistée, rédaction d'annonces, scoring acquéreur et suivi client automatisé de bout en bout.
-Agence à Cergy (95) : 50 % de temps gagné sur les estimations
+Ce qu'on vise ensemble : l'annonce rédigée et l'acquéreur qualifié avant le premier appel.
 ### Industrie & Artisanat
 Maintenance prédictive, gestion de stock intelligente, optimisation des tournées et contrôle qualité.
-Artisan à Pontoise (95) : ruptures de stock réduites de 40 %
+Cas réel : catalogue et commandes d'une PME de négoce technique en Île-de-France remis d'aplomb, une semaine de travail à trois devenue une journée.
 ### Services & Conseil
 Assistants IA pour la veille, la rédaction, l'analyse documentaire et l'automatisation administrative.
-Cabinet à Saint-Germain (78) : productivité +35 %
+Ce qu'on vise ensemble : la veille et les comptes-rendus qui ne débordent plus sur tes soirées.
 Découvre comment [l'IA facture déjà dans 9 cas d'usage concrets](https://augmenter.pro/idees) par secteur.
 ## Fais financer ton projet IA
-Le programme **Osez l'IA** (Bpifrance / France 2030) finance jusqu'à **80 % du coût** d'accompagnement IA pour les PME. On t'aide à en bénéficier dès l'audit.
+Le plan **Osez l'IA** (Bpifrance / France 2030) prend en charge **40 % du Diagnostic Data IA** et 46 % des Accélérateurs IA, pour les PME de 10 salariés et plus. On t'aide à en bénéficier dès l'audit.
 ### Osez l'IA (ex-IA Booster France 2030)
-  * PME de 10 à 2 000 salariés, CA > 250 K€
+  * PME et ETI de 10 à 2 000 salariés
   * Budget total : 200 millions d'euros
-  * Diagnostic + accompagnement pris en charge à 50-80 %
-  * Tous secteurs d'activité éligibles
+  * Diagnostic Data IA : 8 jours, 10 000 € HT, 40 % pris en charge
+  * Accélérateurs IA : 46 % pris en charge (> 50 salariés, CA > 8 M€)
 
 ### Notre rôle dans ton dossier
   * Évaluation de ton éligibilité
@@ -438,15 +438,15 @@ TechniqueProcessHumainVision
 Pilier 01
 ### Technique (Software & Hardware)
 Diagnostic complet : infrastructure, serveurs, réseaux, logiciels métier. On identifie ce qui ralentit, ce qui coûte et ce qui peut devenir un levier.
-**Exemple : **Agence immobilière (Versailles, 78) — modernisation hardware, −50 % de temps d'arrêt.
+**Cas réel : **catalogue et commandes d'une PME de négoce technique en Île-de-France remis d'aplomb — une semaine à trois, désormais une journée.
 Pilier 02
 ### Process (Vente & Opérations)
 Cartographie de vos flux de prospection, production et facturation. On automatise les tâches à faible valeur pour libérer du temps commercial.
-**Exemple : **Commercial à Cergy (95) — 10 h par semaine récupérées sur la génération de devis.
+**Mesuré chez nous : **nos propres devis, 2 h hier, 15 min aujourd'hui, relus avant envoi.
 Pilier 03
 ### Humain (Formation & Accompagnement)
 Les outils ne changent rien sans les équipes. Formations courtes, ateliers terrain, conduite du changement — pour une adoption qui dure.
-**Exemple : **Artisans à Pontoise (95) — engagement équipe +30 % après sessions ciblées.
+**Ce qu'on vise ensemble : **une équipe qui reprend la main sur ses outils, mesuré par ce qu'elle fait seule un mois plus tard.
 Pilier 04
 ### Vision Globale & Stratégique
 La différence augmenter.PRO : ne pas vendre un outil isolé mais une feuille de route. L'audit 360° chiffre les gains et priorise les actions.
@@ -626,16 +626,16 @@ dateModified: 2026-02-01
 Votre informatique ralentit votre activité au lieu de l'accélérer ? Notre audit révèle les failles, les surcoûts et les risques de votre SI — avec un **plan d'action concret** pour y remédier. Intervention sur site à **Versailles, Saint-Germain-en-Laye, Rambouillet, Poissy** et dans tout le 78.
 [Diagnostic initial — 60 min](https://augmenter.pro/contact)[Voir nos prestations](https://augmenter.pro/approche#prestations)
 ## Pourquoi auditer votre informatique ?
-Un audit informatique n'est pas un luxe — c'est une assurance. Les PME qui auditent régulièrement leur SI réduisent leurs coûts, leurs risques et leurs temps d'arrêt.
-72 %
-des PME attaquées sans audit
-N'avaient pas réalisé d'audit récent (ANSSI)
-−35 %
-de coûts IT après audit
-Licences, maintenance, infra optimisées
-4h
-de reprise après incident
-Temps moyen pour une PME non auditée
+Un audit informatique n'est pas un luxe — c'est voir avant de payer : ce qui coûte, ce qui risque, ce qui peut tomber.
+550 €
+l'audit 360° complet
+Prix annoncé, sans devis à rallonge
+2 h → 15 min
+sur nos propres devis
+Assistant IA, relecture avant envoi. Mesuré chez nous.
+1 sem. → 1 j
+catalogue et commandes remis d'aplomb
+Cas réel, PME de négoce technique en Île-de-France
 60 min
 diagnostic initial
 Premier échange sans engagement
@@ -663,7 +663,7 @@ Ces situations vous parlent ? Un audit informatique permet de passer de la réac
 ### Pannes récurrentes et temps d'arrêt
 Votre équipe à Versailles perd des heures chaque semaine à cause de lenteurs réseau ou de pannes matérielles. Sans diagnostic, vous subissez au lieu d'anticiper.
 ### Sécurité informatique insuffisante
-Les PME des Yvelines sont des cibles privilégiées : ransomware, phishing, vol de données. 60 % des PME attaquées déposent le bilan dans les 18 mois.
+Les PME des Yvelines sont des cibles privilégiées : ransomware, phishing, vol de données. Une attaque, ce sont des jours d'arrêt, des données clients exposées et une facture qui dépasse vite le prix d'un audit.
 ### Budget IT opaque et non maîtrisé
 Licences inutilisées, contrats de maintenance surdimensionnés, matériel vieillissant : votre SI coûte plus cher qu'il ne devrait.
 ### Pas de plan de continuité d'activité
@@ -686,23 +686,23 @@ Nous ne vous laissons pas seul avec un rapport. Suivi de la mise en œuvre et su
 [Demander un diagnostic](https://augmenter.pro/contact)
 IA & Automatisation
 ## Optimisez vos flux de travail grâce à l'IA
-Un audit informatique en 2026, ce n'est plus seulement vérifier vos serveurs — c'est identifier les processus que l'IA peut **automatiser, accélérer ou simplifier**. 60 % des organisations obtiennent un ROI complet en moins de 12 mois.
-+30 %
-de productivité
-−35 %
-de coûts opérationnels
-< 12 mois
-pour un ROI complet
-−75 %
-d'erreurs manuelles
+Un audit informatique en 2026, ce n'est plus seulement vérifier vos serveurs — c'est identifier les processus que l'IA peut **automatiser, accélérer ou simplifier**. Chez nous, le premier gain mesuré a été le devis : 2 h hier, 15 min aujourd'hui.
+2 h → 15 min
+sur nos propres devis
+1 sem. → 1 j
+catalogue et commandes, cas réel
+60 min
+pour poser le premier objectif
+1 objectif
+chiffré ensemble, puis mesuré
 ### Devis & facturation automatisés
-Génération automatique de devis à partir de vos modèles, envoi et relance par IA. Les entreprises du BTP à Versailles gagnent 2h par jour sur l'administratif.
+Génération automatique de devis à partir de vos modèles, envoi et relance par IA. Objectif à fixer ensemble : une heure d'administratif récupérée par jour, mesurée au bout d'un mois.
 ### Accueil client intelligent
 Chatbot ou standard téléphonique IA qui qualifie les demandes, prend les rendez-vous et répond aux questions fréquentes 24h/24.
 ### Workflows métier sans couture
-Connexion automatique entre vos outils (CRM, compta, email, planning) pour éliminer la double saisie et les oublis. Jusqu'à 50 % de tâches manuelles en moins.
+Connexion automatique entre vos outils (CRM, compta, email, planning) pour éliminer la double saisie et les oublis. L'objectif qu'on chiffre ensemble : la double saisie à zéro.
 ### Analyse documentaire IA
-Extraction de données dans vos contrats, factures et appels d'offres. Un cabinet à Saint-Germain réduit son temps de traitement de 70 %.
+Extraction de données dans vos contrats, factures et appels d'offres. Objectif à fixer ensemble : le temps de traitement d'un dossier divisé par deux, puis mesuré.
 ### Reporting & tableaux de bord
 Tableaux de bord générés par IA qui consolident vos données métier en temps réel. Fini les exports Excel manuels chaque vendredi.
 ### Détection d'anomalies
@@ -742,15 +742,15 @@ Pannes à répétition, sécurité fragile, budget IT flou ? Notre audit identif
 [Diagnostic initial — 60 min](https://augmenter.pro/contact)[Voir nos prestations](https://augmenter.pro/approche#prestations)
 ## Pourquoi auditer votre informatique ?
 Les cyberattaques ciblent de plus en plus les PME. Un audit régulier de votre SI est le meilleur investissement pour protéger votre activité et optimiser vos coûts.
-72 %
-des PME attaquées sans audit
-N'avaient pas réalisé d'audit récent (ANSSI)
-−35 %
-de coûts IT après audit
-Licences, maintenance, infra optimisées
-4h
-de reprise après incident
-Temps moyen pour une PME non auditée
+550 €
+l'audit 360° complet
+Prix annoncé, sans devis à rallonge
+2 h → 15 min
+sur nos propres devis
+Assistant IA, relecture avant envoi. Mesuré chez nous.
+1 sem. → 1 j
+catalogue et commandes remis d'aplomb
+Cas réel, PME de négoce technique en Île-de-France
 60 min
 diagnostic initial
 Premier échange sans engagement
@@ -801,27 +801,27 @@ Nous ne vous laissons pas seul avec un rapport. Suivi de la mise en œuvre et su
 [Demander un diagnostic](https://augmenter.pro/contact)
 IA & Automatisation
 ## Optimisez vos flux de travail grâce à l'IA
-En 2026, un audit informatique va plus loin que la technique : il identifie les processus que l'IA peut **automatiser, accélérer ou fiabiliser**. Les PME qui automatisent constatent en moyenne 25 à 30 % de gains de productivité sur les processus traités.
-+30 %
-de productivité
-−35 %
-de coûts opérationnels
-< 12 mois
-pour un ROI complet
-−75 %
-d'erreurs manuelles
+En 2026, un audit informatique va plus loin que la technique : il identifie les processus que l'IA peut **automatiser, accélérer ou fiabiliser**. Chez nous, le premier gain mesuré a été le devis : 2 h hier, 15 min aujourd'hui.
+2 h → 15 min
+sur nos propres devis
+1 sem. → 1 j
+catalogue et commandes, cas réel
+60 min
+pour poser le premier objectif
+1 objectif
+chiffré ensemble, puis mesuré
 ### Chaîne logistique automatisée
-Suivi des expéditions, gestion des stocks et optimisation des itinéraires par IA. Les transporteurs de Gonesse et Roissy réduisent leurs coûts logistiques de 25 %.
+Suivi des expéditions, gestion des stocks et optimisation des itinéraires par IA. Objectif à fixer ensemble : des kilomètres et des ressaisies en moins, mesurés sur un mois.
 ### Standard téléphonique IA
 Un assistant vocal intelligent qui qualifie les appels, prend les rendez-vous et répond aux questions courantes. Disponible 24h/24, sans embauche.
 ### Facturation & relances auto
-Génération automatique de factures, envoi et relances par IA. Les artisans d'Ermont et Taverny gagnent 2h par jour sur la paperasse.
+Génération automatique de factures, envoi et relances par IA. Objectif à fixer ensemble : une heure de paperasse récupérée par jour, mesurée au bout d'un mois.
 ### Pilotage en temps réel
-Tableaux de bord IA qui consolident production, trésorerie et RH. Les PME industrielles de Persan visualisent leurs KPI sans export Excel.
+Tableaux de bord IA qui consolident production, trésorerie et RH. Vos indicateurs lus le lundi matin, sans l'export Excel du vendredi soir.
 ### Traitement documentaire IA
-Extraction automatique de données dans vos bons de commande, contrats et factures fournisseurs. Jusqu'à 70 % de temps de traitement en moins.
+Extraction automatique de données dans vos bons de commande, contrats et factures fournisseurs. Objectif à fixer ensemble : le temps de traitement d'un dossier divisé par deux, puis mesuré.
 ### Maintenance prédictive
-L'IA analyse les données de vos équipements pour anticiper les pannes avant qu'elles ne paralysent votre production. Jusqu'à 50 % de temps d'arrêt en moins.
+L'IA analyse les données de vos équipements pour anticiper les pannes avant qu'elles ne paralysent votre production. Objectif à fixer ensemble : les arrêts non planifiés comptés, puis réduits.
 Notre audit identifie les processus à automatiser en priorité. [En savoir plus sur notre accompagnement IA](https://augmenter.pro/strategie-ia-pme).
 ## Un audit adapté à votre secteur dans le 95
 Chaque métier a ses propres enjeux informatiques. Nous adaptons notre audit au tissu économique du Val-d'Oise.
@@ -1385,7 +1385,7 @@ Tableau de maturité par sous-secteur (gros œuvre, second œuvre, artisanat, n�
 ## Résumé exécutif
 En 2026, l'adoption de l'IA dans le BTP francilien reste hétérogène. Les entreprises de gros œuvre s'en emparent d'abord pour la planification chantier ; le second œuvre et l'artisanat privilégient le devis-facture et la communication client ; le négoce, malgré une donnée clients riche, reste en retrait sur les usages relationnels. Trois usages se détachent comme prioritaires pour les PME de 10 à 50 salariés : automatisation du devis, assistance à la rédaction de comptes-rendus chantier, tri intelligent des appels d'offres.
 ## Méthodologie
-Croisement de trois sources : (1) publications publiques disponibles en mai 2026 — études Bpifrance Le Lab, baromètres FFB, données CCI Île-de-France ; (2) revue des outils IA réellement proposés au secteur (Tolteck, ProDevis, solutions BIM + IA) ; (3) observations terrain augmenter.PRO auprès d'une trentaine de PME du BTP 78/95 sur les 12 derniers mois. Niveaux de maturité qualitatifs (faible / émergent / en cours / établi).
+Croisement de trois sources : (1) publications publiques disponibles en mai 2026 — études Bpifrance Le Lab, baromètres FFB, données CCI Île-de-France ; (2) revue des outils IA réellement proposés au secteur (Tolteck, ProDevis, solutions BIM + IA) ; (3) observations terrain augmenter.PRO auprès de PME du BTP et du négoce technique en Île-de-France, sans prétendre à un échantillon statistique. Niveaux de maturité qualitatifs (faible / émergent / en cours / établi).
 ## Tableau de maturité IA — BTP francilien 2026
 | Sous-secteur | Devis & facture | Planning chantier | Comptes-rendus | Relation client | Maturité globale |
 |---|---|---|---|---|---|
@@ -1611,7 +1611,7 @@ C'est la question que nous posent 9 dirigeants sur 10 en mission. Voici la compa
 **Notre avis :** MCP ne remplace pas Zapier pour les automatisations simples. Mais dès que vous avez besoin que l'IA _comprenne_ et _décide_ , MCP est la bonne approche.
 ## Pourquoi les PME ont tout à gagner avec MCP en 2026
 ### Le chiffre qui résume tout : 95% d'échec
-Selon une étude Mirax/McKinsey, **95% des projets IA en entreprise échouent sur l'intégration technique** — pas sur l'IA elle-même. L'algorithme fonctionne, mais il ne peut pas accéder aux données métier. C'est comme avoir un expert brillant enfermé dans une pièce sans téléphone.
+Selon le rapport *The GenAI Divide* du MIT NANDA (août 2025), **95 % des organisations étudiées n'ont tiré aucun retour mesurable de leurs pilotes d'IA générative** — et le rapport pointe la mise en œuvre et l'intégration aux flux de travail, pas les modèles. L'algorithme fonctionne, mais il ne peut pas accéder aux données métier. C'est comme avoir un expert brillant enfermé dans une pièce sans téléphone.
 MCP résout ce blocage structurellement. Et les chiffres d'adoption le confirment : **97 millions de téléchargements SDK par mois** (source : Pento.ai, bilan 2025), et Gartner prévoit que **75% des fournisseurs de passerelles API** intégreront MCP d'ici fin 2026.
 ### Ce que ça change pour une PME du BTP, de l'immobilier ou de l'industrie
 Concrètement, voici ce qu'un agent IA connecté via MCP peut faire pour vous :
@@ -1619,14 +1619,14 @@ Concrètement, voici ce qu'un agent IA connecté via MCP peut faire pour vous :
   * **Immobilier :** Un prospect remplit votre formulaire web. L'agent vérifie son dossier dans votre CRM, évalue la faisabilité du projet, et envoie une réponse personnalisée en 3 minutes — pas en 48 heures.
   * **Industrie :** L'agent analyse les bons de commande fournisseurs, compare avec les niveaux de stock, et alerte le responsable achats avant la rupture.
 
-## Cas terrain — Comment nous connectons un CRM à un agent IA via MCP
-Nous accompagnons actuellement une PME de services en Yvelines (78) sur exactement ce sujet. Sans entrer dans les détails confidentiels, voici le schéma type que nous déployons :
+## Cas concret — Comment nous connectons un CRM à un agent IA via MCP
+Transparence d'abord : nous n'avons pas encore de client avec ce montage CRM en production. Le schéma ci-dessous est celui que nous avons monté chez nous, sur notre propre serveur MCP branché à Odoo, et que nous proposons de reproduire sur votre CRM :
   * **Étape 1 :** Audit des outils existants — CRM (HubSpot), messagerie (Outlook), et fichiers partagés (Google Drive).
   * **Étape 2 :** Installation de serveurs MCP pour chaque outil. Chaque serveur expose les actions utiles : lire les contacts, créer des tâches, envoyer des emails, chercher des documents.
   * **Étape 3 :** Configuration d'un agent IA (basé sur Claude) qui orchestre ces serveurs MCP pour traiter les demandes entrantes.
   * **Étape 4 :** Phase de test supervisé — l'agent propose ses actions, un humain valide pendant 2 semaines, puis passage en autonomie progressive.
 
-**Résultat intermédiaire :** le temps de traitement des demandes entrantes est passé de 45 minutes à 8 minutes en moyenne. La mission est encore en cours, mais la trajectoire est claire.
+**Ce que nous mesurons chez nous :** nos propres devis sont passés de 2 h à 15 min, l'assistant prépare, un humain relit avant envoi. L'objectif qu'on fixerait ensemble sur vos demandes entrantes : le temps de première réponse, mesuré avant et après.
 **Mise en garde :** ce type d'intégration demande un audit préalable sérieux. Si vos données CRM sont mal structurées ou incomplètes, l'IA amplifiera le désordre au lieu de le résoudre. C'est pourquoi nous commençons toujours par un [audit 180°](https://augmenter.pro/approche#prestations).
 ## MCP et RGPD : vos données restent-elles en sécurité ?
 C'est la première question que posent nos clients — et c'est sain. Voici ce qu'il faut savoir :
@@ -1650,7 +1650,7 @@ Les prix varient fortement selon la complexité de votre SI et le nombre d'outil
   * **Intégration standard (2-3 outils) :** 1 000 à 5 000 € — plusieurs serveurs MCP, agent IA configuré, formation des équipes.
   * **Intégration avancée (SI complet) :** 5 000 à 20 000 € — ERP, CRM, messagerie, documents, workflows complexes, monitoring.
 
-**Repère de ROI :** nos clients constatent généralement un retour sur investissement en 3 à 6 mois, principalement via le temps gagné sur les tâches administratives et commerciales. Un commercial qui récupère 2 heures par jour, c'est ~40 heures/mois réinvesties en vente effective.
+**Repère de ROI :** raisonnez en temps gagné plutôt qu'en pourcentage promis. Chez nous, le premier gain mesuré a été le devis, passé de 2 h à 15 min avec un assistant relu avant envoi. Un commercial qui récupère 2 heures par jour, c'est ~40 heures/mois réinvesties en vente effective.
 **Point de départ :** [Notre audit 180°](https://augmenter.pro/contact) n’est pas facturé et permet d'évaluer vos besoins concrets avant tout engagement. C'est 60 minutes d'échange qui vous donnent une vision claire de ce que MCP peut (et ne peut pas) faire pour vous.
 ## Ce que MCP ne fait pas (encore)
 Par honnêteté intellectuelle, voici les limites actuelles du protocole :
@@ -1679,7 +1679,7 @@ Ce mur a un nom : **le problème d'intégration**. Et il coûte cher — en temp
 ### APIs, connecteurs, middleware : la jungle technique
 Connecter une IA à votre CRM via des APIs classiques, c'est comme apprendre une nouvelle langue pour chaque outil. HubSpot a son API, Salesforce a la sienne, votre ERP aussi. Chaque connexion est un développement spécifique : authentication, mapping de données, gestion des erreurs, maintenance.
 Résultat : une PME qui veut connecter 3 outils à un agent IA se retrouve avec 3 développements distincts, des mois de travail, et une fragilité structurelle — si l'API d'un seul outil change, tout casse.
-### Retour terrain : ce que nous observons chez nos clients PME
+### Retour terrain : le blocage qu'on voit partout
 En accompagnant des PME en Yvelines et Val-d'Oise, nous voyons le même schéma se répéter. Le dirigeant a compris l'intérêt de l'IA. Il a investi dans un outil ou un premier POC. Mais le projet stagne au moment de le connecter aux **données métier réelles** — CRM, ERP, messagerie, fichiers partagés.
 Le chiffre le confirme : selon McKinsey, **95% des projets IA en entreprise échouent sur l'intégration technique**. Ce n'est pas l'IA qui manque de capacité — c'est la tuyauterie entre l'IA et vos outils qui fait défaut.
 ## MCP : le protocole qui simplifie tout
@@ -1693,7 +1693,7 @@ En pratique, les principaux CRM et ERP ont déjà des serveurs MCP disponibles e
 
 Pour comprendre les bases du protocole, consultez notre [guide pratique MCP pour PME](https://augmenter.pro/blog/serveur-mcp-guide-pratique-pme).
 ### Exemple concret : un agent qui qualifie les leads et met à jour le CRM
-Voici un cas type que nous mettons en place chez nos clients. L'agent IA est connecté à HubSpot via MCP et à la messagerie Outlook. Quand un nouveau lead arrive :
+Voici un cas type, tel qu'on le monte avec une PME. L'agent IA est connecté à HubSpot via MCP et à la messagerie Outlook. Quand un nouveau lead arrive :
   * **1.** L'agent lit l'email ou le formulaire entrant.
   * **2.** Il vérifie dans HubSpot si ce contact existe déjà et consulte l'historique des interactions.
   * **3.** Il évalue le potentiel du lead (secteur, taille, besoin exprimé) en croisant avec vos critères de qualification.
@@ -1703,19 +1703,19 @@ Voici un cas type que nous mettons en place chez nos clients. L'agent IA est con
 **Résultat :** ce qui prenait 30-45 minutes par lead (lire, chercher, rédiger, mettre à jour) se fait en 3-5 minutes. Sur 20 leads par semaine, c'est **10 à 15 heures récupérées** — du temps que vos commerciaux réinvestissent en rendez-vous qualifiés.
 ## ROI concret : chiffres avant/après intégration MCP
 ### Temps gagné sur les tâches répétitives
-Les données que nous observons chez nos clients et dans la littérature secteur convergent :
-  * **Qualification de leads :** -70% de temps de traitement (de 45 min à 8 min par lead en moyenne)
-  * **Relances commerciales :** Les relances oubliées passent de ~30% à moins de 5% — l'agent ne procrastine pas
+Les ordres de grandeur qu'on vise avec une PME, à mesurer avant et après plutôt qu'à croire sur parole :
+  * **Qualification de leads :** passer de trois quarts d'heure à moins de dix minutes par lead
+  * **Relances commerciales :** les relances oubliées ramenées à presque zéro — l'agent ne procrastine pas
   * **Rapports hebdomadaires :** Génération automatique à partir des données CRM + email — 2 heures gagnées par semaine
   * **Mise à jour CRM :** Les fiches sont mises à jour en temps réel au lieu de "quand on a le temps"
 
 ### Impact sur le taux de conversion et le cycle de vente
-Une étude Mirax (2025) sur des PME de 50 à 250 salariés ayant intégré des agents IA à leur CRM montre :
-  * **+22% de taux de conversion** sur le pipeline commercial
-  * **-30% sur la durée du cycle de vente** (le lead est traité plus vite, mieux qualifié, relancé sans délai)
-  * **Satisfaction équipe :** 81% des commerciaux utilisant l'IA déclarent un gain de productivité significatif (Salesforce State of Sales 2024)
+Nous n'avons pas d'étude maison à vous opposer, et les « +X % de conversion » des éditeurs se vérifient rarement. Voici ce qu'on vous propose de mesurer chez vous, avant et après :
+  * **Le délai de première réponse** à un lead : de « quand on a le temps » à quelques minutes, c'est le levier le plus net sur la conversion.
+  * **La durée du cycle de vente** : comptez les jours entre le premier contact et le devis. Un lead qualifié et relancé sans délai avance plus vite.
+  * **Le temps commercial récupéré** : chez nous, le devis est passé de 2 h à 15 min avec un assistant relu avant envoi.
 
-**Nuance importante :** ces résultats concernent des PME qui avaient déjà un CRM structuré et des processus de vente définis. Si vos données sont éparpillées entre des fichiers Excel, des post-it et des emails non classés, le gain sera moindre — et il faudra d'abord structurer avant d'automatiser.
+**Nuance importante :** ces gains supposent un CRM structuré et des processus de vente définis. Si vos données sont éparpillées entre des fichiers Excel, des post-it et des emails non classés, le gain sera moindre — et il faudra d'abord structurer avant d'automatiser.
 ## Comparatif : MCP vs Zapier vs Make vs intégrateur traditionnel
 Voici notre grille de comparaison, basée sur notre expérience terrain avec des PME :
   * **Zapier/Make :** Automatisations simples (si A alors B). Pas d'intelligence contextuelle. Idéal pour des flux basiques. Coût : 20-200 €/mois. Limite : ne comprend pas, ne décide pas.
@@ -1995,7 +1995,7 @@ dateModified: 2026-02-13
 De 0 € à 20 000 € : pourquoi un tel écart ? Grille tarifaire par taille d'entreprise, comparaison diagnostic à 0 € vs audit complet, et 3 cas concrets de PME en Yvelines. Le guide le plus transparent du marché.
 ![Combien coûte un audit informatique en Yvelines \(78\) ? Guide tarifaire 2026](https://augmenter.pro/images/blog/cout-audit-informatique-yvelines.webp)
 **Combien coûte un audit informatique pour une PME en Yvelines ?** C'est la question que posent 9 dirigeants sur 10 avant de nous contacter. Et la réponse qu'ils trouvent en ligne est toujours la même : "ça dépend". Fourchettes de 2 000 à 50 000 €, sans savoir ce qui est inclus, ni ce qui justifie l'écart.
-Après avoir réalisé des dizaines de diagnostics pour des PME du BTP, de l'industrie et des services entre Versailles, Poissy et Saint-Germain-en-Laye, nous avons décidé de publier ce que personne ne publie : une **grille tarifaire transparente** , des cas concrets, et une comparaison honnête entre un diagnostic à 0 € et un audit complet. Si vous reconnaissez certains des [5 signes qu'il est temps de moderniser votre informatique](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme), ce guide vous aidera à budgéter la suite.
+Parce que la question revient à chaque premier rendez-vous, nous avons décidé de publier ce que personne ne publie : une **grille tarifaire transparente** , des cas concrets, et une comparaison honnête entre un diagnostic à 0 € et un audit complet. Si vous reconnaissez certains des [5 signes qu'il est temps de moderniser votre informatique](https://augmenter.pro/blog/5-signes-moderniser-informatique-pme), ce guide vous aidera à budgéter la suite.
 ## Pourquoi les prix varient autant : les 5 facteurs clés
 Un audit informatique pour une PME de 15 postes à Rambouillet n'a rien à voir avec celui d'une entreprise industrielle de 200 postes à Poissy. Voici ce qui fait varier la facture :
   * **La taille de l'entreprise** : nombre de postes, de serveurs, de sites physiques. Un audit passe de 2 jours (15 postes) à 2 semaines (200+ postes).
@@ -2040,16 +2040,16 @@ Plusieurs prestataires proposent un "diagnostic à 0 €" ou un "audit sans enga
 **Pourquoi 550 € et pas 5 000 € ?** Notre Audit 360° n'est pas un audit de cybersécurité avec pentest — c'est un **diagnostic stratégique** qui évalue votre SI dans sa globalité (performance, coûts, organisation, sécurité, IA readiness). Il couvre un périmètre plus large qu'un audit purement technique, mais avec une méthodologie calibrée pour les PME : efficace sans mobiliser vos équipes pendant 2 semaines. Si l'audit révèle un besoin de pentest ou d'audit de conformité approfondi, nous vous orienterons vers le bon prestataire — nous ne vendons pas de matériel ni d'infogérance.
 C'est cette indépendance qui fait la différence. Un prestataire qui vend de l'infogérance aura tendance à recommander… de l'infogérance. Notre modèle : vous donner les clés pour décider, pas vous enfermer dans un contrat. Pour réserver votre créneau : [demandez votre premier rendez-vous](https://augmenter.pro/contact).
 ## 3 cas concrets de PME en Yvelines
-Voici trois situations réelles (anonymisées) issues de nos missions récentes dans le 78. Chaque cas illustre un profil de PME différent, un budget différent et des résultats différents.
-### Cas 1 : PME BTP à Versailles — 25 postes
+Voici trois situations types, composées à partir de ce que l'on rencontre en diagnostic : effectifs, montants et résultats sont des ordres de grandeur illustratifs, pas des dossiers clients. Chaque cas illustre un profil de PME différent, un budget différent et des résultats différents.
+### Cas type 1 : PME BTP — 25 postes
 **Situation** : entreprise de rénovation énergétique, 25 salariés. Le dirigeant suspectait des surcoûts sur ses licences Microsoft 365 et voulait savoir si son serveur NAS vieillissant tenait la route. Aucun incident de sécurité, mais aucune sauvegarde testée depuis 2 ans.
 **Diagnostic** : Audit 180° (60 min) → identification de 3 urgences : sauvegardes non testées, 8 licences M365 inutilisées (1 200 €/an de gaspillage), et accès VPN sans authentification multi-facteurs.
 **Suite** : le dirigeant a corrigé les 3 points en interne en 2 semaines, sans audit complet supplémentaire. Économie immédiate : 1 200 €/an sur les licences. Coût total pour l'entreprise : **0 €**.
-### Cas 2 : cabinet de services à Saint-Germain-en-Laye — 45 postes
+### Cas type 2 : cabinet de services — 45 postes
 **Situation** : cabinet de conseil en RH, 45 salariés sur 2 sites. Migration cloud en cours (Exchange → Microsoft 365), inquiétudes sur la conformité RGPD après le départ d'un collaborateur qui avait accès à toutes les bases clients.
 **Diagnostic** : Audit 360° (550 € HT, 3h sur site) → rapport de 18 pages. Résultats : 12 comptes actifs d'anciens collaborateurs non désactivés, aucune politique de mots de passe formalisée, données clients sur des drives personnels.
 **Suite** : mise en conformité avec un prestataire IT local sur 3 mois. Budget total (audit + remédiation) : environ 4 500 € HT. Le cabinet a évité un risque RGPD estimé à 20 000 € minimum en cas de contrôle CNIL.
-### Cas 3 : sous-traitant industriel à Poissy — 80 postes
+### Cas type 3 : sous-traitant industriel — 80 postes
 **Situation** : équipementier automobile, 80 salariés, sous-traitant de rang 2 pour un constructeur. Le donneur d'ordres a exigé un audit de cybersécurité dans le cadre des [obligations NIS2 descendantes](https://augmenter.pro/blog/nis2-pme-yvelines-val-doise). Délai imposé : 3 mois.
 **Diagnostic** : Audit 360° (550 €) puis orientation vers un cabinet de cybersécurité pour un audit technique approfondi + pentest. Budget total : environ 12 000 € HT (audit technique + pentest + plan de remédiation).
 **Résultat** : conformité obtenue, contrat renouvelé. Sans l'audit, le sous-traitant risquait de perdre un client représentant 40% de son CA.
@@ -2100,7 +2100,7 @@ Comment automatiser votre veille concurrentielle avec l'IA. Méthode en 5 étape
 Dans les Yvelines et le Val d'Oise, les PME du BTP, de l'immobilier et de l'industrie évoluent dans un environnement où les concurrents bougent vite — nouveaux tarifs, nouvelles offres, embauches stratégiques. Pourtant, la majorité des dirigeants que nous accompagnons n'ont **aucun processus de veille structuré**. Ils découvrent les mouvements de leurs concurrents par hasard, souvent trop tard.
 L'IA change la donne : elle permet de surveiller automatiquement vos concurrents et de recevoir des alertes ciblées, sans y consacrer des heures chaque semaine. Voici comment mettre en place une veille concurrentielle IA dans votre PME, étape par étape.
 ## Pourquoi la veille concurrentielle est vitale pour les PME
-Selon une étude Bpifrance Le Lab (2024), **67 % des PME françaises ne font aucune veille concurrentielle formalisée**. Elles se fient au bouche-à-oreille, aux salons professionnels et à la lecture occasionnelle de la presse spécialisée.
+Dans les PME que nous rencontrons, **la veille concurrentielle n'est presque jamais formalisée**. Elles se fient au bouche-à-oreille, aux salons professionnels et à la lecture occasionnelle de la presse spécialisée.
 Le problème : ce mode de fonctionnement crée des angles morts. Un concurrent qui baisse ses prix de 15 % peut capter vos prospects pendant des semaines avant que vous ne vous en rendiez compte. Une nouvelle réglementation (comme [NIS2 en 2025](https://augmenter.pro/blog/nis2-pme-yvelines-val-doise)) peut créer des opportunités que vos concurrents saisissent avant vous.
 Pour une PME du bâtiment à Versailles ou un cabinet de conseil à Cergy, surveiller 5 à 10 concurrents locaux et 3 à 5 acteurs nationaux suffit souvent à couvrir 90 % des mouvements qui impactent votre activité.
 ## Les limites de la veille manuelle
@@ -2183,7 +2183,7 @@ dateModified: 2026-02-13
 # Automatiser Emails et Réseaux Sociaux avec l'IA en PME
 Gagnez 10h par semaine en automatisant vos emails et publications sociales avec l'IA. Guide pratique et outils testés pour dirigeants de PME.
 ![Automatiser Emails et Réseaux Sociaux avec l'IA en PME](https://augmenter.pro/images/blog/automatiser-emails-reseaux-sociaux-ia.webp)
-Un dirigeant de PME passe en moyenne **28 % de sa journée de travail sur les emails** (McKinsey, 2023) et 1 à 2 heures supplémentaires sur les réseaux sociaux professionnels. Pour une entreprise de 5 à 20 salariés en Yvelines ou Val d'Oise, ces heures cumulées représentent un coût caché considérable — et une opportunité d'automatisation immédiate.
+Un dirigeant de PME passe en moyenne **28 % de sa journée de travail sur les emails** (McKinsey Global Institute, 2012) et 1 à 2 heures supplémentaires sur les réseaux sociaux professionnels. Pour une entreprise de 5 à 20 salariés en Yvelines ou Val d'Oise, ces heures cumulées représentent un coût caché considérable — et une opportunité d'automatisation immédiate.
 L'objectif n'est pas de tout automatiser aveuglément, mais d'identifier les tâches répétitives à faible valeur ajoutée et de laisser l'IA les gérer, pour que vous puissiez vous concentrer sur ce qui compte : la relation client, la stratégie, le terrain.
 ## Le vrai coût des emails et réseaux sociaux pour une PME
 Prenons un cas concret : une PME du BTP à Saint-Germain-en-Laye avec un dirigeant et 3 responsables de chantier. Chacun reçoit 40 à 80 emails par jour. La majorité sont des confirmations, des relances fournisseurs, des notifications administratives. Sur ces 60 emails quotidiens, peut-être 10 nécessitent une réponse réfléchie.
@@ -2451,7 +2451,7 @@ Vos salariés évitent les outils numériques ? Notre approche humaniste (format
 Maintenance imprévue ou pertes de données ? Toujours plus d'abonnements, de process, de répétition ? Contactez-nous pour uniformiser.
 ## Comment notre Audit 360° vous aide ?
 Notre service prioritaire : un diagnostic complet couvrant parc informatique, workflows de travail et entretiens équipes.
-**Exemple :** Une agence à Versailles (78) a réduit ses tâches répétitives de 50% après notre intervention.
+**Ce qu'on vise ensemble :** diviser par deux les tâches répétitives repérées pendant le diagnostic, et le mesurer un mois plus tard.
 **Résultat :** Un plan chiffré pour adopter des solutions IA simples et durables.
 ## Quel est votre prochain niveau ?
 Commencez par un diagnostic de 60 minutes. Zéro engagement, zéro jargon technique — juste des solutions concrètes.

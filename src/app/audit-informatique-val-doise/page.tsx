@@ -51,21 +51,23 @@ export const metadata: Metadata = {
 
 const stats = [
   {
-    value: "72 %",
-    label: "des PME attaquées sans audit",
-    detail: "N'avaient pas réalisé d'audit récent (ANSSI)",
+    value: "550 €",
+    label: "l'audit 360° complet",
+    detail: "Prix annoncé, sans devis à rallonge",
     icon: Shield,
   },
   {
-    value: "−35 %",
-    label: "de coûts IT après audit",
-    detail: "Licences, maintenance, infra optimisées",
+    // Mesure maison, jamais prêtée à un client (cf. src/lib/gbp-reviews.test.ts).
+    value: "2 h → 15 min",
+    label: "sur nos propres devis",
+    detail: "Assistant IA, relecture avant envoi. Mesuré chez nous.",
     icon: TrendingDown,
   },
   {
-    value: "4h",
-    label: "de reprise après incident",
-    detail: "Temps moyen pour une PME non auditée",
+    // Cas réel : formule figée dans .claude/templates/seo/terrain-odoo-reva9.md.
+    value: "1 sem. → 1 j",
+    label: "catalogue et commandes remis d'aplomb",
+    detail: "Cas réel, PME de négoce technique en Île-de-France",
     icon: Clock,
   },
   {
@@ -216,7 +218,7 @@ const sectors = [
     description:
       "Le Val-d'Oise, avec la plateforme de Roissy et les zones logistiques de Gonesse et Saint-Ouen-l'Aumône, concentre des PME dont le SI doit fonctionner 24h/24.",
     example:
-      "Transporteur à Gonesse (95) : PRA mis en place, reprise en 2h garantie",
+      "Ce qu'on vise ensemble : un plan de reprise écrit, testé, avec un délai de redémarrage que vous connaissez.",
   },
   {
     icon: Building2,
@@ -224,7 +226,7 @@ const sectors = [
     description:
       "Artisans et entreprises du bâtiment à Pontoise, Taverny, Ermont : un audit révèle les outils sous-utilisés et les failles de sécurité.",
     example:
-      "Artisan plombier à Ermont (95) : factures automatisées, 2h/semaine gagnées",
+      "Ce qu'on vise ensemble : la facture qui part le jour de la fin de chantier, sans ressaisie.",
   },
   {
     icon: Store,
@@ -232,7 +234,7 @@ const sectors = [
     description:
       "Les zones commerciales de Cergy, Argenteuil et Enghien-les-Bains regorgent de commerces dont la caisse, le stock et le site web méritent un check-up.",
     example:
-      "Restaurant à Enghien (95) : système de caisse sécurisé, tickets conformes",
+      "Ce qu'on vise ensemble : une caisse conforme et un stock dont vous connaissez les failles avant la panne.",
   },
   {
     icon: Factory,
@@ -240,7 +242,7 @@ const sectors = [
     description:
       "Les zones industrielles du Val-d'Oise — Persan, Bruyères-sur-Oise — abritent des PME dont l'outil de production dépend d'un SI fiable et sécurisé.",
     example:
-      "PME industrielle à Persan (95) : réseau segmenté, production protégée",
+      "Ce qu'on vise ensemble : un réseau de production isolé du reste, et la preuve que ça tient.",
   },
 ];
 
@@ -585,19 +587,19 @@ export default function AuditInformatiqueValDoisePage() {
             <p className="mt-4 text-lg text-muted-foreground">
               En 2026, un audit informatique va plus loin que la technique :
               il identifie les processus que l&apos;IA peut{" "}
-              <strong>automatiser, accélérer ou fiabiliser</strong>. Les PME
-              qui automatisent constatent en moyenne 25 à 30 % de gains de
-              productivité sur les processus traités.
+              <strong>automatiser, accélérer ou fiabiliser</strong>. Chez
+              nous, le premier gain mesuré a été le devis : 2 h hier, 15 min
+              aujourd&apos;hui.
             </p>
           </div>
 
-          {/* Stats row */}
+          {/* Stats row — mesures maison et cas réel, jamais une moyenne de marché */}
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { value: "+30 %", label: "de productivité", icon: TrendingUp },
-              { value: "−35 %", label: "de coûts opérationnels", icon: TrendingDown },
-              { value: "< 12 mois", label: "pour un ROI complet", icon: BarChart3 },
-              { value: "−75 %", label: "d'erreurs manuelles", icon: CheckCircle2 },
+              { value: "2 h → 15 min", label: "sur nos propres devis", icon: TrendingUp },
+              { value: "1 sem. → 1 j", label: "catalogue et commandes, cas réel", icon: TrendingDown },
+              { value: "60 min", label: "pour poser le premier objectif", icon: BarChart3 },
+              { value: "1 objectif", label: "chiffré ensemble, puis mesuré", icon: CheckCircle2 },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <s.icon className="mx-auto h-5 w-5 text-primary" />
@@ -616,7 +618,7 @@ export default function AuditInformatiqueValDoisePage() {
                 icon: Repeat,
                 title: "Chaîne logistique automatisée",
                 description:
-                  "Suivi des expéditions, gestion des stocks et optimisation des itinéraires par IA. Les transporteurs de Gonesse et Roissy réduisent leurs coûts logistiques de 25 %.",
+                  "Suivi des expéditions, gestion des stocks et optimisation des itinéraires par IA. Objectif à fixer ensemble : des kilomètres et des ressaisies en moins, mesurés sur un mois.",
               },
               {
                 icon: Bot,
@@ -628,25 +630,25 @@ export default function AuditInformatiqueValDoisePage() {
                 icon: FileSpreadsheet,
                 title: "Facturation & relances auto",
                 description:
-                  "Génération automatique de factures, envoi et relances par IA. Les artisans d'Ermont et Taverny gagnent 2h par jour sur la paperasse.",
+                  "Génération automatique de factures, envoi et relances par IA. Objectif à fixer ensemble : une heure de paperasse récupérée par jour, mesurée au bout d'un mois.",
               },
               {
                 icon: BarChart3,
                 title: "Pilotage en temps réel",
                 description:
-                  "Tableaux de bord IA qui consolident production, trésorerie et RH. Les PME industrielles de Persan visualisent leurs KPI sans export Excel.",
+                  "Tableaux de bord IA qui consolident production, trésorerie et RH. Vos indicateurs lus le lundi matin, sans l'export Excel du vendredi soir.",
               },
               {
                 icon: FileText,
                 title: "Traitement documentaire IA",
                 description:
-                  "Extraction automatique de données dans vos bons de commande, contrats et factures fournisseurs. Jusqu'à 70 % de temps de traitement en moins.",
+                  "Extraction automatique de données dans vos bons de commande, contrats et factures fournisseurs. Objectif à fixer ensemble : le temps de traitement d'un dossier divisé par deux, puis mesuré.",
               },
               {
                 icon: Zap,
                 title: "Maintenance prédictive",
                 description:
-                  "L'IA analyse les données de vos équipements pour anticiper les pannes avant qu'elles ne paralysent votre production. Jusqu'à 50 % de temps d'arrêt en moins.",
+                  "L'IA analyse les données de vos équipements pour anticiper les pannes avant qu'elles ne paralysent votre production. Objectif à fixer ensemble : les arrêts non planifiés comptés, puis réduits.",
               },
             ].map((useCase) => (
               <Card key={useCase.title} className="border-border/50">

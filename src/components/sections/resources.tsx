@@ -50,7 +50,7 @@ const IDEAS: Array<IdeaData & { palette: Palette }> = [
     title: "Optimisation des tournées",
     description:
       "Des livraisons plus malignes : optimisez vos tournées avec des algorithmes.",
-    pros: ["−30 % coûts carburant", "Livraisons plus rapides"],
+    pros: ["Moins de kilomètres, moins de carburant", "Livraisons plus rapides"],
     cons: ["Nécessite données trafic temps réel"],
     seed: 3.5,
     palette: "duo",

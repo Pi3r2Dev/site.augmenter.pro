@@ -82,9 +82,8 @@ export default function Article() {
         ni ce qui justifie l&apos;écart.
       </p>
       <p>
-        Après avoir réalisé des dizaines de diagnostics pour des PME du BTP, de
-        l&apos;industrie et des services entre Versailles, Poissy et Saint-Germain-en-Laye,
-        nous avons décidé de publier ce que personne ne publie : une{" "}
+        Parce que la question revient à chaque premier rendez-vous, nous avons
+        décidé de publier ce que personne ne publie : une{" "}
         <strong>grille tarifaire transparente</strong>, des cas concrets, et une
         comparaison honnête entre un diagnostic à 0 € et un audit complet. Si vous
         reconnaissez certains des{" "}
@@ -258,12 +257,14 @@ export default function Article() {
       <h2>3 cas concrets de PME en Yvelines</h2>
 
       <p>
-        Voici trois situations réelles (anonymisées) issues de nos missions
-        récentes dans le 78. Chaque cas illustre un profil de PME différent, un
-        budget différent et des résultats différents.
+        Voici trois situations types, composées à partir de ce que l&apos;on
+        rencontre en diagnostic : effectifs, montants et résultats sont des
+        ordres de grandeur illustratifs, pas des dossiers clients. Chaque cas
+        illustre un profil de PME différent, un budget différent et des
+        résultats différents.
       </p>
 
-      <h3>Cas 1 : PME BTP à Versailles — 25 postes</h3>
+      <h3>Cas type 1 : PME BTP — 25 postes</h3>
       <p>
         <strong>Situation</strong> : entreprise de rénovation énergétique, 25 salariés.
         Le dirigeant suspectait des surcoûts sur ses licences Microsoft 365 et voulait
@@ -281,7 +282,7 @@ export default function Article() {
         sur les licences. Coût total pour l&apos;entreprise : <strong>0 €</strong>.
       </p>
 
-      <h3>Cas 2 : cabinet de services à Saint-Germain-en-Laye — 45 postes</h3>
+      <h3>Cas type 2 : cabinet de services — 45 postes</h3>
       <p>
         <strong>Situation</strong> : cabinet de conseil en RH, 45 salariés sur 2 sites.
         Migration cloud en cours (Exchange → Microsoft 365), inquiétudes sur la conformité
@@ -298,7 +299,7 @@ export default function Article() {
         risque RGPD estimé à 20 000 € minimum en cas de contrôle CNIL.
       </p>
 
-      <h3>Cas 3 : sous-traitant industriel à Poissy — 80 postes</h3>
+      <h3>Cas type 3 : sous-traitant industriel — 80 postes</h3>
       <p>
         <strong>Situation</strong> : équipementier automobile, 80 salariés, sous-traitant
         de rang 2 pour un constructeur. Le donneur d&apos;ordres a exigé un audit de

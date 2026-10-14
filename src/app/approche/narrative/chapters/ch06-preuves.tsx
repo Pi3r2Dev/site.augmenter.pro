@@ -14,9 +14,11 @@ const stats: Array<{ data: TrustStatData; palette: Palette }> = [
     palette: "violet",
     data: {
       icon: TrendingDown,
-      value: "−30 %",
-      label: "Gain de temps moyen",
-      description: "Sur les tâches automatisées (admin, devis, relances).",
+      // Cas réel : formule figée dans .claude/templates/seo/terrain-odoo-reva9.md.
+      value: "1 sem. → 1 j",
+      label: "Catalogue & commandes",
+      description:
+        "PME de négoce technique en Île-de-France : trois personnes une semaine, désormais une journée.",
       seed: 5,
     },
   },
@@ -24,9 +26,9 @@ const stats: Array<{ data: TrustStatData; palette: Palette }> = [
     palette: "cold",
     data: {
       icon: Clock,
-      value: "48 h",
-      label: "Délai de premier livrable",
-      description: "Du diagnostic au premier outil opérationnel.",
+      value: "60 min",
+      label: "Premier diagnostic",
+      description: "Non facturé. On en sort avec un objectif chiffré, à mesurer ensemble.",
       seed: 11,
     },
   },
@@ -72,9 +74,9 @@ export function Ch06Preuves() {
         data-anim="up"
         className="max-w-[58ch] text-[clamp(17px,1.5vw,22px)] leading-relaxed text-white/70"
       >
-        Quelques chiffres observés sur les missions de l&apos;année écoulée.
-        Pas de moyenne marketing : des cas réels, anonymisés, vérifiables sur
-        demande.
+        Un cas réel, anonymisé, et ce que nous mesurons chez nous. Pas de
+        moyenne marketing : chaque chiffre a une source qu&apos;on peut vous
+        montrer.
       </p>
       <div
         data-anim="stagger"

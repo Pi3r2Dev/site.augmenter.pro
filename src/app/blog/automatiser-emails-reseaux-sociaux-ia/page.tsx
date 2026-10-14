@@ -5,7 +5,7 @@ import { ArticleLayout } from "@/components/layout/article-layout";
 export const metadata = articleMetadata({
   title: "Automatiser Emails et Réseaux Sociaux avec l'IA en PME",
   description:
-    "Gagnez 10h par semaine en automatisant vos emails et publications sociales avec l'IA. Guide pratique et outils testés pour dirigeants de PME.",
+    "Gagnez 10h par semaine en automatisant vos emails et publications sociales avec l'IA. Guide pratique et outils testés pour dirigeants de PME.",
   slug: "automatiser-emails-reseaux-sociaux-ia",
 });
 
@@ -24,7 +24,7 @@ export default function AutomatiserEmailsReseauxSociauxIA() {
     >
       <p>
         Un dirigeant de PME passe en moyenne <strong>28 % de sa journée de
-        travail sur les emails</strong> (McKinsey, 2023) et 1 à 2 heures
+        travail sur les emails</strong> (McKinsey Global Institute, 2012) et 1 à 2 heures
         supplémentaires sur les réseaux sociaux professionnels. Pour une
         entreprise de 5 à 20 salariés en Yvelines ou Val d&apos;Oise, ces
         heures cumulées représentent un coût caché considérable — et une
@@ -39,7 +39,7 @@ export default function AutomatiserEmailsReseauxSociauxIA() {
 
       <h2>Le vrai coût des emails et réseaux sociaux pour une PME</h2>
       <p>
-        Prenons un cas concret : une PME du BTP à Saint-Germain-en-Laye avec
+        Prenons un cas type : une PME du BTP avec
         un dirigeant et 3 responsables de chantier. Chacun reçoit 40 à 80
         emails par jour. La majorité sont des confirmations, des relances
         fournisseurs, des notifications administratives. Sur ces 60 emails
@@ -224,12 +224,11 @@ export default function AutomatiserEmailsReseauxSociauxIA() {
         </li>
       </ul>
       <p>
-        Un cas concret : un cabinet de conseil en gestion de patrimoine à
-        Poissy a mis en place l&apos;automatisation email + réseaux sociaux en
-        3 semaines. Le dirigeant a récupéré l&apos;équivalent d&apos;une
-        journée complète par semaine — qu&apos;il a réinvestie en
-        rendez-vous clients, avec un impact direct sur le chiffre
-        d&apos;affaires.
+        L&apos;ordre de grandeur à viser, plutôt qu&apos;un cas inventé : si
+        vous récupérez une heure par jour sur le tri et les réponses types,
+        c&apos;est une journée par semaine réinvestie en rendez-vous clients.
+        C&apos;est l&apos;objectif qu&apos;on fixe ensemble au démarrage, puis
+        qu&apos;on mesure à la fin du premier mois.
       </p>
 
       <h2>Pièges à éviter</h2>

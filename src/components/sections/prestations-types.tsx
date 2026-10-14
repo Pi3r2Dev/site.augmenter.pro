@@ -209,14 +209,14 @@ export function PrestationsTypes() {
                   Financement
                 </Pill>
                 <h3 className="mt-2.5 text-[1.15rem] font-semibold leading-tight tracking-[-0.015em]">
-                  Bpifrance finance jusqu&apos;à 80 % de votre accompagnement IA
+                  France 2030 prend en charge 40 % de votre Diagnostic Data IA
                 </h3>
                 <p className="mt-1.5 text-[0.82rem] leading-[1.5] text-current/75">
-                  Le programme{" "}
+                  Le plan{" "}
                   <strong className="font-semibold text-current">
                     Osez l&apos;IA
                   </strong>{" "}
-                  (France 2030) s&apos;adresse aux PME. Nous vérifions votre
+                  (Bpifrance) s&apos;adresse aux PME de 10 salariés et plus. Nous vérifions votre
                   éligibilité pendant le diagnostic et vous accompagnons dans le
                   montage du dossier.
                 </p>
