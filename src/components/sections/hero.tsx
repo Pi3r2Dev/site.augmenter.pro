@@ -124,10 +124,12 @@ export function Hero() {
           <NavTile index={0} />
           <NavTile index={1} />
 
-          {/* Image vedette — cas client Odoo, cliquable vers l'article */}
+          {/* Image vedette — cas client Odoo, cliquable vers l'article.
+              4 rangées : remplit avec l'avis le coin bas-droit (rangées 5-6)
+              qui restait vide, et donne à l'avis entier la place de se lire. */}
           <BentoCard
             span={3}
-            rows={2}
+            rows={4}
             pad="none"
             mobileMinH="220px"
             className="border-transparent!"
@@ -173,10 +175,10 @@ export function Hero() {
             </Link>
           </BentoCard>
 
-          {/* Mini citation client — extrait mot pour mot d'un avis de la fiche
-              Google (src/lib/gbp.ts), jamais un texte libre. */}
-          <BentoCard span={3} rows={2} pad="none" mobileMinH="180px">
-            <MiniQuoteCard review={MAUD_J} excerpt="resultat" location="home-hero" />
+          {/* Mini citation client — un avis de la fiche Google en entier
+              (src/lib/gbp.ts), jamais un texte libre ni un extrait. */}
+          <BentoCard span={3} rows={4} pad="none" mobileMinH="180px">
+            <MiniQuoteCard review={MAUD_J} location="home-hero" />
           </BentoCard>
 
           {/* Tuiles 3-4 — sous le titre, rangées 5-6 */}

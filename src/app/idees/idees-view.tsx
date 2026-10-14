@@ -210,11 +210,11 @@ export function IdeesView() {
               </BentoCard>
             ))}
 
-            {/* Carte "Comment choisir" — 6 × 2 */}
+            {/* Carte "Comment choisir" — 6 × 3 (même hauteur que l'avis à côté) */}
             <BentoCard
               variant="dark"
               span={6}
-              rows={2}
+              rows={3}
               pad="lg"
               mobileMinH="180px"
             >
@@ -236,19 +236,15 @@ export function IdeesView() {
               </ul>
             </BentoCard>
 
-            {/* Pull quote — 6 × 2 */}
+            {/* Pull quote — 6 × 3 : l'avis Google s'affiche en entier */}
             <BentoCard
               variant="dark"
               span={6}
-              rows={2}
+              rows={3}
               pad="none"
               mobileMinH="180px"
             >
-              <PullQuoteCard
-                review={MAUD_J}
-                excerpt="recommandation"
-                location="idees-pull-quote"
-              />
+              <PullQuoteCard review={MAUD_J} location="idees-pull-quote" />
             </BentoCard>
 
             {/* CTA propose ton idée — 12 × 2 accent */}

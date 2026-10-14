@@ -60,12 +60,13 @@ const stats: Array<{ data: TrustStatData; palette: Palette }> = [
   },
 ];
 
-// Témoignage XL — extrait mot pour mot de l'avis Google de Maud J. (src/lib/gbp.ts).
+// Témoignage XL — l'avis Google de Maud J. en entier (src/lib/gbp.ts), jamais
+// un extrait : sorti de son contexte, ce n'est plus son avis.
 // Affichage UI seulement : ne JAMAIS le rebaliser en Review/AggregateRating —
 // les avis auto-déclarés sont interdits par Google (cf. CLAUDE.md §Structured Data).
 // Jusqu'au 2026-10-14 ce bloc citait un témoignage absent de la fiche Google.
 const featuredTestimonial = {
-  quote: MAUD_J.excerpts.recommandation,
+  quote: MAUD_J.text,
   name: MAUD_J.author,
   role: MAUD_J.role,
 };
@@ -73,7 +74,7 @@ const featuredTestimonial = {
 function TestimonialXL() {
   const [hovered, setHovered] = useState(false);
   return (
-    <div className="h-[300px]">
+    <div className="h-[520px] sm:h-[420px] lg:h-[360px]">
       <CardShell palette="duo" hovered={hovered} onHover={setHovered}>
         <div
           aria-hidden
@@ -92,7 +93,7 @@ function TestimonialXL() {
               />
             ))}
           </div>
-          <blockquote className="max-w-[42ch] text-[clamp(18px,2vw,26px)] font-medium leading-tight tracking-[-0.015em] text-white">
+          <blockquote className="max-w-[68ch] whitespace-pre-line text-[clamp(14px,1.25vw,17px)] font-medium leading-snug tracking-[-0.01em] text-white">
             <span className="text-(--violet-300)" aria-hidden>
               «{" "}
             </span>

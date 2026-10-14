@@ -18,9 +18,15 @@
  * site affichait cinq « témoignages » dont aucun n'existait sur la fiche, l'un
  * d'eux attribuant à une vraie cliente (Maud J.) une phrase qu'elle n'a jamais
  * écrite, à côté d'un lien « Voir les avis Google ». Un visiteur qui clique et ne
- * retrouve pas la citation conclut que tout le site est inventé. Règle : une
- * citation client affichée = un extrait MOT POUR MOT d'un avis de la fiche, tiré
- * de `GBP_QUOTES`. Garde-fou : `src/lib/gbp-reviews.test.ts`.
+ * retrouve pas la citation conclut que tout le site est inventé.
+ *
+ * Pourquoi l'avis s'affiche EN ENTIER et jamais en extrait : le 2026-10-14 au
+ * soir, une phrase isolée (« la majorité de mes clients me découvrent grâce au
+ * bon référencement de mon site ») a été jugée trompeuse par Pierre — sortie de
+ * son contexte (l'accompagnement, le « 1/10 il y a un an », la recommandation),
+ * ce n'est plus l'avis de Maud. Règle : une citation client affichée = le texte
+ * intégral d'un avis de la fiche, tiré de `GBP_QUOTES`, sans coupe ni retouche.
+ * Garde-fou : `src/lib/gbp-reviews.test.ts`.
  */
 
 /** Fiche + avis en lecture. Le CID identifie la fiche de façon stable. */
@@ -48,14 +54,14 @@ export const GBP_RATING = {
 } as const;
 
 /**
- * Avis de la fiche relevés le 2026-10-14 (Google Maps, onglet Avis) :
+ * Avis de la fiche relevés le 2026-10-14 (Google Maps, onglet Avis, re-vérifié
+ * le soir même mot pour mot) :
  *   - JOLY Maud, 5 étoiles, avec texte (seul avis citable) ;
  *   - Ben Cana, 5 étoiles, sans texte ;
  *   - Alvin S, 5 étoiles, sans texte.
  *
- * `text` reproduit l'avis à l'identique. Les `excerpts` sont des phrases
- * entières tirées de `text`, sans aucune retouche : le garde-fou vérifie que
- * chaque extrait figure mot pour mot dans le texte source.
+ * `text` reproduit l'avis à l'identique, fautes de frappe et espaces compris,
+ * avec ses retours à la ligne. C'est ce texte, entier, que les cartes affichent.
  */
 export const GBP_QUOTES = [
   {
@@ -64,14 +70,6 @@ export const GBP_QUOTES = [
     role: "Architecte d'intérieur",
     stars: 5,
     text: "Pierre m'a accompagnée dans la création de mon site internet ( je suis architecte d'intérieur dans la région lilloise). Il m'a apporté son expertise dans tous les domaines : hébergement, SEO, mails...Il m'a donné les outils pour améliorer les performances de mon site.\nAujourd'hui, la majorité de mes clients me découvrent grâce au bon référencement de mon site. ( 1/10 il ya un an).\nDisponible, motivant, pédagogue et réactif, je recommande Pierre à tous les entrepreneurs qui veulent améliorer leur chiffre d'affaires grâce à leur site.",
-    excerpts: {
-      resultat:
-        "Aujourd'hui, la majorité de mes clients me découvrent grâce au bon référencement de mon site.",
-      recommandation:
-        "Disponible, motivant, pédagogue et réactif, je recommande Pierre à tous les entrepreneurs qui veulent améliorer leur chiffre d'affaires grâce à leur site.",
-      accompagnement:
-        "Il m'a apporté son expertise dans tous les domaines : hébergement, SEO, mails...Il m'a donné les outils pour améliorer les performances de mon site.",
-    },
   },
 ] as const;
 

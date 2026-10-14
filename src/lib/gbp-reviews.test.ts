@@ -86,15 +86,36 @@ const FABRICATED = [
 ];
 
 describe("avis Google", () => {
-  it("cite chaque extrait mot pour mot depuis l'avis d'origine", () => {
+  it("n'expose que des avis entiers, sans champ d'extrait", () => {
     expect(GBP_QUOTES.length).toBeGreaterThan(0);
     for (const review of GBP_QUOTES) {
-      const excerpts = Object.values(review.excerpts);
-      expect(excerpts.length, review.id).toBeGreaterThan(0);
-      for (const excerpt of excerpts) {
-        expect(review.text, `${review.id} : « ${excerpt} »`).toContain(excerpt);
+      expect(review.text.trim().length, review.id).toBeGreaterThan(50);
+      // Un extrait sorti de son contexte n'est plus l'avis de la personne
+      // (constat du 2026-10-14) : aucun champ ne doit le permettre.
+      expect(Object.keys(review)).not.toContain("excerpts");
+    }
+  });
+
+  it("n'affiche jamais une phrase isolée de l'avis de Maud J.", () => {
+    // Les trois phrases qui servaient d'extraits : si l'une réapparaît seule
+    // (sans la phrase qui la précède dans l'avis), c'est une coupe.
+    const lone = [
+      "Aujourd'hui, la majorité de mes clients me découvrent",
+      "Disponible, motivant, pédagogue et réactif",
+    ];
+    const hits: string[] = [];
+    for (const file of servedFiles()) {
+      const src = readFileSync(file, "utf8");
+      for (const phrase of lone) {
+        const i = src.indexOf(phrase);
+        if (i === -1) continue;
+        const before = src.slice(Math.max(0, i - 220), i);
+        if (!/mon site\.|un an\)\./.test(before)) {
+          hits.push(`${relative(root, file)} → « ${phrase}… » sans son contexte`);
+        }
       }
     }
+    expect(hits).toEqual([]);
   });
 
   it("annonce une note et un nombre d'avis cohérents avec les avis relevés", () => {

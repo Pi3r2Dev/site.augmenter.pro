@@ -7,16 +7,16 @@ import { sendGTMEvent } from "@next/third-parties/google";
 import { GBP_MAPS_URL, GBP_QUOTES } from "@/lib/gbp";
 
 /**
- * Ces deux cartes n'acceptent PAS de citation libre : elles prennent un avis de
- * la fiche Google (`GBP_QUOTES`) et le nom d'un de ses extraits. Impossible
- * donc d'y glisser un témoignage qui n'existe pas sur la fiche — c'est ce qui
- * s'était produit jusqu'au 2026-10-14 (cf. `src/lib/gbp.ts`).
+ * Ces deux cartes n'acceptent PAS de citation libre ni d'extrait : elles
+ * prennent un avis de la fiche Google (`GBP_QUOTES`) et l'affichent EN ENTIER.
+ * Impossible donc d'y glisser un témoignage qui n'existe pas sur la fiche, ni
+ * une phrase sortie de son contexte — les deux dérives constatées le
+ * 2026-10-14 (cf. `src/lib/gbp.ts`).
  */
 type GbpQuote = (typeof GBP_QUOTES)[number];
 
-interface QuoteCardProps<Q extends GbpQuote = GbpQuote> {
-  review: Q;
-  excerpt: keyof Q["excerpts"];
+interface QuoteCardProps {
+  review: GbpQuote;
   /** Emplacement remonté dans l'événement GTM `gbp_click`. */
   location: string;
 }
@@ -63,10 +63,9 @@ function GbpSourceLink({
 
 /**
  * Grande citation pour sections bento sombres.
- * Guillemet décoratif + extrait d'avis Google + auteur/rôle + lien vers la fiche.
+ * Guillemet décoratif + avis Google intégral + auteur/rôle + lien vers la fiche.
  */
-export function PullQuoteCard({ review, excerpt, location }: QuoteCardProps) {
-  const quote = review.excerpts[excerpt as keyof GbpQuote["excerpts"]];
+export function PullQuoteCard({ review, location }: QuoteCardProps) {
   return (
     <figure className="flex h-full flex-col justify-between p-6 sm:p-7">
       <div
@@ -76,8 +75,8 @@ export function PullQuoteCard({ review, excerpt, location }: QuoteCardProps) {
       >
         &ldquo;
       </div>
-      <blockquote className="mt-4 flex-1 text-[1rem] font-medium leading-[1.5] text-white sm:text-[1.05rem]">
-        {quote}
+      <blockquote className="mt-3 flex-1 overflow-y-auto whitespace-pre-line text-[0.82rem] font-medium leading-[1.45] text-white sm:text-[0.88rem]">
+        {review.text}
       </blockquote>
       <figcaption className="mt-4 flex flex-wrap items-center gap-2 text-[0.72rem] text-white/60">
         <span className="font-semibold text-white">{review.author}</span>
@@ -100,10 +99,9 @@ export function PullQuoteCard({ review, excerpt, location }: QuoteCardProps) {
 }
 
 /**
- * Mini carte blanche pour le hero : étoiles + extrait d'avis Google + lien.
+ * Mini carte blanche pour le hero : étoiles + avis Google intégral + lien.
  */
-export function MiniQuoteCard({ review, excerpt, location }: QuoteCardProps) {
-  const quote = review.excerpts[excerpt as keyof GbpQuote["excerpts"]];
+export function MiniQuoteCard({ review, location }: QuoteCardProps) {
   return (
     <figure className="flex h-full flex-col p-5">
       <div
@@ -113,8 +111,10 @@ export function MiniQuoteCard({ review, excerpt, location }: QuoteCardProps) {
       >
         <Stars count={review.stars} size={11} />
       </div>
-      <blockquote className="mt-2 flex-1 text-[0.88rem] italic leading-[1.45] text-foreground">
-        &laquo;&nbsp;{quote}&nbsp;&raquo;
+      {/* Avis entier : la carte fait 4 rangées dans le hero. Le défilement
+          interne n'est qu'un filet si une police système est plus large. */}
+      <blockquote className="mt-3 flex-1 overflow-y-auto whitespace-pre-line text-[0.82rem] italic leading-[1.45] text-foreground">
+        &laquo;&nbsp;{review.text}&nbsp;&raquo;
       </blockquote>
       <figcaption className="mt-3 flex flex-wrap items-center gap-1.5 text-[0.7rem] text-muted-foreground">
         <span className="font-semibold text-foreground not-italic">
