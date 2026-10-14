@@ -455,6 +455,17 @@
 
 ---
 
+## logiciel-construit-par-agents-dix-semaines.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-10-14)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover) ; OG `og/logiciel-construit-par-agents-dix-semaines.jpg` 1200×630
+- **Description** : Vue isométrique sur fond dégradé violet vers pêche. Un tapis roulant circulaire porte des cubes violets et ambre marqués de symboles de code ; tout autour, des robots violets identiques les posent avec des bras articulés. À l'intérieur de l'anneau, un robot ambre inspecte un cube à la loupe, et au centre un humain tient un plan bleu déroulé et une liste de cases cochées. En haut à droite, un panneau affiche une rangée de coches vertes. Style épuré, sans texte lisible hormis les symboles de code.
+- **Contexte éditorial** : Image hero de l'article « Construire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests ». Les robots violets figurent les agents qui livrent une tâche par run, le robot ambre le juge à chaque tâche, l'humain au centre les décisions et vérifications qui restent humaines, le panneau les tests au vert.
+- **Usage suggéré** : Hero `/blog/logiciel-construit-par-agents-dix-semaines` + OG.
+- **Alt text suggéré** : "Chaîne de montage circulaire où des robots posent des blocs de code, contrôlés à la loupe par un robot juge, avec au centre un humain tenant un plan et une liste cochée — construire un logiciel avec des agents"
+
+---
+
 ## Essaim MCP / Odoo 20 (2026-10-14) — visuels PROVISOIRES à remplacer
 
 Installer une illustration livrée : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis déplacer la ligne ci-dessous en entrée complète.
@@ -464,7 +475,6 @@ Six articles courts adossés à la page `/serveur-mcp-odoo`. Les fichiers ci-des
 | Fichier | Article | Prompt Gemini suggéré |
 | --- | --- | --- |
 | `odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp` | Odoo Online : ce que vous ne pourrez jamais y installer | Illustration flat design violet/ambre 16:9. Un nuage violet (SaaS) avec un panneau « interdit » sur une brique de code à l'intérieur, et autour du nuage quatre passerelles ambre qui le contournent (un pinceau Studio, un engrenage, un paquet ZIP, un serveur externe relié par un câble). Sans texte. |
-| `logiciel-construit-par-agents-dix-semaines.webp` | Construire un logiciel avec des agents | Illustration flat design violet/ambre 16:9. Une chaîne de montage circulaire : des petits robots violets posent des blocs de code, un robot juge ambre avec une loupe contrôle chaque bloc, un humain au centre tient un plan et une liste cochée. Compteur stylisé de tests verts. Sans texte. |
 
 - **Type** : dégradé SVG → WebP/JPEG, généré localement (provisoire)
 - **Dimensions** : 1600×900 (hero) · 1200×630 (OG)
