@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { TrendingDown, Clock, Star, Reply, ArrowUpRight } from "lucide-react";
-import { GBP_MAPS_URL, MAUD_J } from "@/lib/gbp";
+import { GBP_MAPS_URL, GBP_RATING, MAUD_J } from "@/lib/gbp";
 import { CardShell, LiquidBlob } from "@/components/widgets/blobs";
 import {
   TrustStatCard,
@@ -39,9 +39,10 @@ const stats: Array<{ data: TrustStatData; palette: Palette }> = [
     palette: "amber",
     data: {
       icon: Star,
-      value: "5 / 5",
-      label: "Satisfaction client",
-      description: "Moyenne sur 5 missions vérifiables. Avis publiés.",
+      // Note relevée sur la fiche Google, jamais une moyenne maison.
+      value: `${GBP_RATING.value} / 5`,
+      label: "Avis Google",
+      description: `${GBP_RATING.count} avis sur notre fiche Google, relevé ${GBP_RATING.checkedOn}.`,
       seed: 113,
     },
   },

@@ -55,6 +55,7 @@ const FABRICATED = [
   /15 min, PME du BTP/,
   /chez une PME du BTP\s*:?\s*(a ramené|de 2 h)/,
   /Cabinet immobilier — synthèse de visites/,
+  /missions vérifiables\. Avis publiés/,
 ];
 
 describe("avis Google", () => {
