@@ -190,6 +190,11 @@ export default function Article() {
         <Link href="/blog/odoo-20-serveur-mcp-agents">
           Odoo 20 ouvre la porte aux agents
         </Link>
+        . Pour la voie n°4 en détail, piloter Odoo de l&apos;extérieur depuis
+        Claude Code (RPC, navigateur, pièges) :{" "}
+        <Link href="/blog/claude-code-odoo-workflow">
+          le workflow technique Claude Code et Odoo
+        </Link>
         . Et pour la méthode de départ sur un Odoo existant,{" "}
         <Link href="/blog/configurer-odoo-ia-claude-cowork">
           configurer Odoo avec l&apos;IA
