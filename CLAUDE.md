@@ -342,7 +342,7 @@ Voir [public/images/](public/images/) — convention WebP, kebab-case, INDEX.md 
 - [public/llms-full.txt](public/llms-full.txt) — version étendue (llmstxt.org spec)
 - [public/robots.txt](public/robots.txt) — directives crawlers + sitemap reference + bot AI explicites
 - [public/sitemap.xml](public/sitemap.xml) — URLs **indexables** uniquement (pas de pages légales noindex)
-- **Pas de news-sitemap** : le site n'est pas une publication Google News (retiré 2026-08-16)
+- **Google Actualités / Discover — décision du 2026-10-14 ([ADR 0007](docs/decisions/0007-google-news-discover.md))** : on ne vise pas l'onglet Actualités (inclusion algorithmique depuis 2025, critère = fraîcheur, pas qualité). On vise **Discover** (`max-image-preview:large`, visuels ≥ 1 200 px). Le format « news » (`NewsArticle` + sitemap news **dynamique**, articles datés de moins de 48 h) est réservé aux sujets datés. **Pas encore implémenté** : chantier de boucle [docs/backlog-news.md](docs/backlog-news.md), lancé après le run « maillage ». Jusqu'à la fin de ce chantier, l'ancien interdit (« pas de news-sitemap statique », retiré le 2026-08-16) reste ce que le code impose
 
 ### Google Tag Manager (GTM) — GA4 et événements
 
@@ -498,6 +498,7 @@ curl -sI https://augmenter.pro/ | grep -iE 'cache-control|x-hcdn-cache-status|^a
 - [docs/decisions/0002-home-narrative-scroll.md](docs/decisions/0002-home-narrative-scroll.md) — décision narrative /
 - [docs/decisions/0003-funnel-geo-conversion.md](docs/decisions/0003-funnel-geo-conversion.md) — stratégie funnel GEO : mesurer d'abord, monétiser le cluster tech sur le persona dirigeant confirmé
 - [docs/decisions/0006-lcp-pages-classiques.md](docs/decisions/0006-lcp-pages-classiques.md) — LCP pages classiques : hero opaque, WebGL différé, GTM idle
+- [docs/decisions/0007-google-news-discover.md](docs/decisions/0007-google-news-discover.md) — Google Actualités : Discover d'abord, format « news » réservé aux sujets datés ; revue le 2026-11-15, critère d'arrêt le 2026-12-15
 - [docs/playbooks/acquisition-devis.md](docs/playbooks/acquisition-devis.md) — **playbook acquisition de devis** : constat chiffré GSC, ordre de rendement, message de demande d'avis Google (réutilisable), checklist GBP restante
 - [docs/plans/2026-08-27-portail-client-reva9.md](docs/plans/2026-08-27-portail-client-reva9.md) — mini portail client Reva 9
 - [docs/plans/2026-09-10-note-candidature-arlequin.md](docs/plans/2026-09-10-note-candidature-arlequin.md) — note unlisted candidature Arlequin AI
