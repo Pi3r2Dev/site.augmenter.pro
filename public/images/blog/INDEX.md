@@ -477,6 +477,17 @@
 
 ---
 
+## cout-agent-ia-odoo.webp
+
+- **Type** : ⚠️ **Visuel provisoire** (dégradé violet → ambre, `scripts/blog-placeholder-images.mjs`, 2026-10-14) — à remplacer par l'illustration Gemini
+- **Dimensions** : Paysage 16:9 — 1600×900 ; OG `og/cout-agent-ia-odoo.jpg` 1200×630
+- **Description cible (prompt Gemini)** : Illustration flat design professionnelle et épurée, format paysage 16:9. Palette violet/lavande dominant (#7c3aed) avec accents ambre/doré (#f59e0b), fond en dégradé subtil violet vers ambre. À gauche, un compteur ou taximètre stylisé qui fait défiler des pièces ambre, et à côté une pile de cartes d'abonnement identiques avec des silhouettes de sièges vides. À droite, mise en valeur, un ordinateur tour violet ouvert sur une grosse carte graphique lumineuse, relié par une petite antenne ou un signal à une main qui tient une clé à molette à distance (administration à distance), avec un compteur à zéro posé dessus. Icônes symboliques, aucun texte lisible, pas de logo, pas de photo réaliste.
+- **Contexte éditorial** : Image hero de l'article « Agent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coût ». Gauche : les deux modes de paiement qui comptent (crédits, sièges). Droite : la machine administrée à distance, zéro à la question.
+- **Usage suggéré** : Hero `/blog/cout-agent-ia-odoo` + OG.
+- **Alt text suggéré** : "Compteur de pièces et cartes d'abonnement face à un ordinateur équipé d'une carte graphique administré à distance, compteur à zéro — le vrai coût d'un agent IA sur Odoo"
+
+---
+
 ## Visuels provisoires (`scripts/blog-placeholder-images.mjs`)
 
 Quand un article part sans son illustration, `node scripts/blog-placeholder-images.mjs <slug>` pose un dégradé violet → ambre (hero + OG) pour qu'aucune carte ni aucun `og:image` ne casse. À l'arrivée du visuel Gemini : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis entrée complète dans cet index.
