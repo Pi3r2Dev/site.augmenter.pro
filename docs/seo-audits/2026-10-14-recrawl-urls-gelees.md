@@ -88,6 +88,14 @@ Quota : ~10 demandes par jour et par propriété. Quatre jours, dans cet ordre, 
 
 `/`, `/approche`, `/audit-ia-pme`, `/atelier-claude-code-dirigeant`, `/augmenter-mon-entreprise`, `/auteur/pierre-legrand`, `/idees`, `/blog/claude-code-prompt-architecture`, `/blog/cout-audit-informatique-yvelines`, `/blog/nis2-pme-yvelines-val-doise`, `/blog/serveur-mcp-guide-pratique-pme`, `/blog/cybersecurite-pme-guide-pratique`, `/blog/agent-ia-dirigeant-pme`, `/blog/ia-redefinit-vente-commerciale`.
 
+### Jour 5 — pages « propres » modifiées le 2026-10-14 au soir (commits `f52ee32`, `dff6939`)
+
+La purge des chiffres non sourcés et des cas clients inventés a touché cinq pages de la liste ci-dessus : `/`, `/approche`, `/audit-ia-pme`, `/blog/cout-audit-informatique-yvelines`, `/blog/serveur-mcp-guide-pratique-pme`. Elles ne sont plus « non modifiées » : les demander en jour 5. Les huit autres pages modifiées par la même purge (`/strategie-ia-pme`, `/audit-informatique-yvelines`, `/audit-informatique-val-doise`, `/blog/ia-contradicteur-prompts-dirigeant-pme`, `/blog/rapport-adoption-ia-btp-francilien-2026`, `/blog/veille-concurrentielle-ia-pme`, `/blog/automatiser-emails-reseaux-sociaux-ia`, `/blog/serveur-mcp-integration-crm-erp`, `/blog/5-signes-moderniser-informatique-pme`) figurent déjà dans les jours 1 à 4. Le `lastmod` du sitemap est passé au 2026-10-14 pour les 13. Après déploiement, les ajouter au ping IndexNow :
+
+```bash
+curl -s -o /dev/null -w "indexnow %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json; charset=utf-8" --data '{"host":"augmenter.pro","key":"96dcfd53b10246a296724faac42d91da","keyLocation":"https://augmenter.pro/96dcfd53b10246a296724faac42d91da.txt","urlList":["https://augmenter.pro/","https://augmenter.pro/approche","https://augmenter.pro/strategie-ia-pme","https://augmenter.pro/audit-ia-pme","https://augmenter.pro/audit-informatique-yvelines","https://augmenter.pro/audit-informatique-val-doise","https://augmenter.pro/blog/cout-audit-informatique-yvelines","https://augmenter.pro/blog/serveur-mcp-guide-pratique-pme","https://augmenter.pro/blog/serveur-mcp-integration-crm-erp","https://augmenter.pro/blog/ia-contradicteur-prompts-dirigeant-pme","https://augmenter.pro/blog/rapport-adoption-ia-btp-francilien-2026","https://augmenter.pro/blog/veille-concurrentielle-ia-pme","https://augmenter.pro/blog/automatiser-emails-reseaux-sociaux-ia","https://augmenter.pro/blog/5-signes-moderniser-informatique-pme"]}'
+```
+
 ## Contrôle
 
 Rejouer l'inspection deux semaines après le jour 1 (au plus tôt le 2026-10-28). Critères : plus aucune page avec « Extraits d'avis », les 4 inconnues et les 8 nouvelles découvertes et indexées, courbe d'impressions relue sur la semaine suivante.
