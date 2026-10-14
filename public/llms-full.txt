@@ -15,6 +15,12 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 - [Intégration MCP — Connecter l'IA à vos outils métier](https://augmenter.pro/integration-mcp) — 2026-02-10
 - [Serveur MCP pour Odoo — ce qu'Odoo 20 ne fait pas](https://augmenter.pro/serveur-mcp-odoo) — 2026-10-14
 - [Agent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coût](https://augmenter.pro/blog/cout-agent-ia-odoo) — 2026-10-14
+- [Odoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encore](https://augmenter.pro/blog/odoo-20-serveur-mcp-agents) — 2026-10-14
+- [L'agent qui ne peut pas toucher aux prix](https://augmenter.pro/blog/agent-ia-qui-ne-touche-pas-aux-prix) — 2026-10-14
+- [Un petit modèle bien outillé bat un gros modèle qui devine](https://augmenter.pro/blog/petit-modele-bien-outille) — 2026-10-14
+- [Laisser une IA enrichir votre catalogue, sans perdre la main](https://augmenter.pro/blog/ia-enrichir-catalogue-sans-perdre-la-main) — 2026-10-14
+- [Odoo Online : ce que vous ne pourrez jamais y installer (et les quatre contournements qui marchent)](https://augmenter.pro/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer) — 2026-10-14
+- [Construire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests](https://augmenter.pro/blog/logiciel-construit-par-agents-dix-semaines) — 2026-10-14
 - [Audit informatique Yvelines (78)](https://augmenter.pro/audit-informatique-yvelines) — 2026-02-01
 - [Audit informatique Val-d'Oise (95)](https://augmenter.pro/audit-informatique-val-doise) — 2026-02-01
 - [Idées IA pour PME : 9 cas d'usage qui facturent en 2026](https://augmenter.pro/idees) — 2026-05-21
@@ -23,6 +29,9 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 - [Blog — articles & tutos IA pour PME](https://augmenter.pro/blog) — 2026-02-13
 - [Claude Code et Odoo : le workflow technique (RPC call_kw, Playwright, CLAUDE.md, pièges Odoo Online, passage au serveur MCP)](https://augmenter.pro/blog/claude-code-odoo-workflow) — 2026-10-14
 - [Ma PME en 2027 : guide d'achat IA (soustraire d'abord, fourchettes HT, règle de signature, on refuse l'agent client)](https://augmenter.pro/blog/ma-pme-en-2027) — 2026-09-30
+- [IA janvier-juillet 2026 : sept mois de bascule, et ce que votre PME doit en retenir](https://augmenter.pro/blog/bilan-ia-janvier-juillet-2026) — 2026-07-29
+- [Compte rendu de réunion par IA : les outils font le résumé, l'agent fait le travail](https://augmenter.pro/blog/compte-rendu-reunion-ia) — 2026-08-12
+- [Agent IA pour dirigeant de PME : c'est quoi, et comment en créer un sans se faire avoir](https://augmenter.pro/blog/agent-ia-dirigeant-pme) — 2026-05-26
 - [Contact & premier rendez-vous](https://augmenter.pro/contact) — 2026-02-01
 - [Le « patron-goulot » : quand l'IA rend le dirigeant PME encore plus indispensable](https://augmenter.pro/blog/patron-goulot-paradoxe-ia-dirigeant-pme) — 2026-05-21
 - [L'IA comme contradicteur : 5 prompts pour pressure-tester vos décisions de dirigeant PME](https://augmenter.pro/blog/ia-contradicteur-prompts-dirigeant-pme) — 2026-05-21
@@ -30,8 +39,12 @@ Auteur du site : Pierre Legrand — consultant IA pour dirigeants PME, spéciali
 - [Configurer Odoo avec l'IA : 4 jours au lieu de 3 500 €](https://augmenter.pro/blog/configurer-odoo-ia-claude-cowork) — 2026-03-29
 - [Serveur MCP : guide pratique pour connecter l'IA à vos outils métier](https://augmenter.pro/blog/serveur-mcp-guide-pratique-pme) — 2026-02-10
 - [Intégrer un agent IA à votre CRM/ERP : MCP change la donne](https://augmenter.pro/blog/serveur-mcp-integration-crm-erp) — 2026-02-10
+- [Serveur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ? (guide PME 2026)](https://augmenter.pro/blog/serveur-mcp-heberge-pme) — 2026-06-17
 - [Claude Code : le prompt indispensable](https://augmenter.pro/blog/claude-code-prompt-architecture) — 2026-04-21
+- [Votre code vieillit en silence : le prompt Claude Fable qui audite tout votre projet et rend le plan de remise à niveau](https://augmenter.pro/blog/prompt-audit-projet-claude-fable) — 2026-06-10
+- [J'ai transformé Claude Cowork en community manager : le setup, les prompts, ce qui a foiré](https://augmenter.pro/blog/claude-cowork-community-manager) — 2026-05-28
 - [NIS2 et PME : guide pratique pour les Yvelines et le Val d'Oise](https://augmenter.pro/blog/nis2-pme-yvelines-val-doise) — 2026-02-13
+- [Cybersécurité PME : 93 % des attaques sont évitables avec du bon sens](https://augmenter.pro/blog/cybersecurite-pme-guide-pratique) — 2026-06-11
 - [Combien coûte un audit informatique en Yvelines ? Tarifs 2026](https://augmenter.pro/blog/cout-audit-informatique-yvelines) — 2026-02-13
 - [Veille concurrentielle IA pour PME : guide pratique 2026](https://augmenter.pro/blog/veille-concurrentielle-ia-pme) — 2026-02-13
 - [Automatiser emails et réseaux sociaux avec l'IA en PME](https://augmenter.pro/blog/automatiser-emails-reseaux-sociaux-ia) — 2026-02-13
