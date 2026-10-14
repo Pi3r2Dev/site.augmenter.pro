@@ -89,6 +89,8 @@ export interface CatalogArticle extends ArticleBentoData {
   tldr: string;
   sectors: Sector[];
   pains: PainId[];
+  /** Articles liés choisis à la main, servis en premier dans le bloc « articles liés ». */
+  related?: string[];
 }
 
 export const ARTICLES: CatalogArticle[] = [
@@ -106,6 +108,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/cout-agent-ia-odoo.webp",
     sectors: ["Tous", "Commerce & service local", "Industrie"],
     pains: ["prestataire", "cyber", "demarrage"],
+    related: [
+      "petit-modele-bien-outille",
+      "odoo-20-serveur-mcp-agents",
+      "serveur-mcp-heberge-pme",
+    ],
   },
   {
     slug: "odoo-20-serveur-mcp-agents",
@@ -119,6 +126,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/odoo-20-serveur-mcp-agents.webp",
     sectors: ["Tous", "Industrie", "Commerce & service local"],
     pains: ["prestataire", "demarrage"],
+    related: [
+      "agent-ia-qui-ne-touche-pas-aux-prix",
+      "cout-agent-ia-odoo",
+      "claude-code-odoo-workflow",
+    ],
   },
   {
     slug: "agent-ia-qui-ne-touche-pas-aux-prix",
@@ -131,6 +143,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/agent-ia-qui-ne-touche-pas-aux-prix.webp",
     sectors: ["Tous", "Commerce & service local", "Industrie"],
     pains: ["cyber", "prestataire"],
+    related: [
+      "ia-enrichir-catalogue-sans-perdre-la-main",
+      "odoo-20-serveur-mcp-agents",
+      "logiciel-construit-par-agents-dix-semaines",
+    ],
   },
   {
     slug: "petit-modele-bien-outille",
@@ -143,6 +160,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/petit-modele-bien-outille.webp",
     sectors: ["Tous", "Industrie"],
     pains: ["demarrage", "cyber"],
+    related: [
+      "cout-agent-ia-odoo",
+      "agent-ia-qui-ne-touche-pas-aux-prix",
+      "serveur-mcp-guide-pratique-pme",
+    ],
   },
   {
     slug: "ia-enrichir-catalogue-sans-perdre-la-main",
@@ -155,6 +177,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/ia-enrichir-catalogue-sans-perdre-la-main.webp",
     sectors: ["Commerce & service local", "Industrie"],
     pains: ["repetitif", "goulot"],
+    related: [
+      "agent-ia-qui-ne-touche-pas-aux-prix",
+      "petit-modele-bien-outille",
+      "configurer-odoo-ia-claude-cowork",
+    ],
   },
   {
     slug: "odoo-online-ce-que-vous-ne-pouvez-pas-installer",
@@ -168,6 +195,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp",
     sectors: ["Tous", "Commerce & service local", "Industrie"],
     pains: ["prestataire", "demarrage"],
+    related: [
+      "claude-code-odoo-workflow",
+      "configurer-odoo-ia-claude-cowork",
+      "odoo-20-serveur-mcp-agents",
+    ],
   },
   {
     slug: "logiciel-construit-par-agents-dix-semaines",
@@ -181,6 +213,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/logiciel-construit-par-agents-dix-semaines.webp",
     sectors: ["Tous", "Conseil & services"],
     pains: ["prestataire", "demarrage"],
+    related: [
+      "claude-code-prompt-architecture",
+      "prompt-audit-projet-claude-fable",
+      "agent-ia-qui-ne-touche-pas-aux-prix",
+    ],
   },
   // ── Pilier technique du cluster Claude / Odoo (2026-10-14) — angle 4 du
   //    terrain .claude/templates/seo/terrain-odoo-reva9.md (RPC, Playwright, CLAUDE.md)
@@ -196,6 +233,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/claude-code-odoo-workflow.webp",
     sectors: ["Tous", "Commerce & service local", "Industrie"],
     pains: ["prestataire", "demarrage"],
+    related: [
+      "odoo-online-ce-que-vous-ne-pouvez-pas-installer",
+      "configurer-odoo-ia-claude-cowork",
+      "claude-code-prompt-architecture",
+    ],
   },
   {
     slug: "ma-pme-en-2027",
@@ -347,6 +389,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/configurer-odoo-ia-claude-cowork.webp",
     sectors: ["Tous", "Industrie", "Commerce & service local"],
     pains: ["prestataire", "demarrage"],
+    related: [
+      "claude-code-odoo-workflow",
+      "odoo-online-ce-que-vous-ne-pouvez-pas-installer",
+      "cout-agent-ia-odoo",
+    ],
   },
   {
     slug: "veille-concurrentielle-ia-pme",
@@ -441,6 +488,11 @@ export const ARTICLES: CatalogArticle[] = [
     image: "/images/blog/claude-code-prompt-architecture.webp",
     sectors: ["Tous", "Industrie"],
     pains: ["prestataire", "demarrage"],
+    related: [
+      "prompt-audit-projet-claude-fable",
+      "claude-code-odoo-workflow",
+      "logiciel-construit-par-agents-dix-semaines",
+    ],
   },
   {
     slug: "comparatif-llm-vente-commerciale",
@@ -904,18 +956,41 @@ export function getArticleBySlug(slug: string): CatalogArticle | undefined {
 }
 
 /**
- * Articles liés à `slug`, classés par proximité éditoriale.
+ * Hash FNV-1a 32 bits : départage stable mais dispersé des ex aequo.
+ * L'ordre du catalog comme départage renvoyait tous les articles vers les
+ * trois mêmes (les premiers de la liste).
+ */
+export function tieBreakHash(source: string, candidate: string): number {
+  let h = 0x811c9dc5;
+  const key = `${source}>${candidate}`;
+  for (let i = 0; i < key.length; i++) {
+    h ^= key.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+/**
+ * Articles liés à `slug` : d'abord sa sélection `related` (dans l'ordre),
+ * puis les mieux classés par proximité éditoriale.
  * Score : douleur commune +4, secteur exact commun +3, secteur transversal "Tous" +1.
- * Même barème que le scoring du hub (augmenter-view.tsx).
+ * Même barème que le scoring du hub (augmenter-view.tsx). Ex aequo : `tieBreakHash`.
  */
 export function getRelatedArticles(slug: string, n = 3): CatalogArticle[] {
   const source = getArticleBySlug(slug);
   if (!source) return [];
 
+  const curated = (source.related ?? [])
+    .filter((s, i, all) => s !== slug && all.indexOf(s) === i)
+    .map(getArticleBySlug)
+    .filter((a): a is CatalogArticle => a !== undefined)
+    .slice(0, n);
+  const taken = new Set([slug, ...curated.map((a) => a.slug)]);
+
   const sourceSectors = new Set(source.sectors);
   const sourcePains = new Set(source.pains);
 
-  return ARTICLES.filter((a) => a.slug !== slug)
+  const scored = ARTICLES.filter((a) => !taken.has(a.slug))
     .map((a) => {
       let score = 0;
       for (const p of a.pains) if (sourcePains.has(p)) score += 4;
@@ -923,9 +998,11 @@ export function getRelatedArticles(slug: string, n = 3): CatalogArticle[] {
         if (s === "Tous") score += 1;
         else if (sourceSectors.has(s)) score += 3;
       }
-      return { article: a, score };
+      return { article: a, score, tie: tieBreakHash(slug, a.slug) };
     })
-    .sort((x, y) => y.score - x.score)
-    .slice(0, n)
+    .sort((x, y) => y.score - x.score || x.tie - y.tie)
+    .slice(0, n - curated.length)
     .map((x) => x.article);
+
+  return [...curated, ...scored];
 }
