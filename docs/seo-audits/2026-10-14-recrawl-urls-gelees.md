@@ -13,6 +13,8 @@ Suite de [2026-08-12-diagnostic-chute-juillet-plan-action.md](2026-08-12-diagnos
 
 ## Préalable : déployer, puis pinger les 8 nouvelles URL
 
+> **Fait le 2026-10-14 au soir** : les 8 URL répondent 200 en production avec leur titre, ping IndexNow envoyé (réponse 200). GSC les inspecte encore comme « URL inconnue de Google » : seule la demande manuelle d'indexation (ci-dessous) les fera découvrir. Les 7 pages clés gelées montrent toujours « Extraits d'avis » avec un dernier crawl de juillet-septembre.
+
 1. Pousser `main` (déploiement Hostinger). Vérifier que les nouvelles pages répondent :
 
 ```bash
