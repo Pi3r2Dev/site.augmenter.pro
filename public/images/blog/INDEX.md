@@ -433,6 +433,17 @@
 
 ---
 
+## petit-modele-bien-outille.webp
+
+- **Type** : Illustration flat design (IA générée via Gemini, 2026-10-14)
+- **Dimensions** : Paysage 16:9 — 1600×900 (source 2752×1536, recadrage cover) ; OG `og/petit-modele-bien-outille.jpg` 1200×630
+- **Description** : Sur fond dégradé violet vers pêche, à gauche un petit robot violet souriant, ceinture d'outils ambre (clé à molette, loupe, fiche, pochette), qui tend une feuille frappée d'une grande coche verte ; un chronomètre ambre file au-dessus de lui. À droite, un grand robot gris flou et vaporeux, bras ouverts en signe d'hésitation, entouré de nuages et de points d'interrogation jaunes. Style épuré, sans texte lisible.
+- **Contexte éditorial** : Image hero de l'article « Un petit modèle bien outillé bat un gros modèle qui devine ». Le petit robot net et outillé figure le modèle local qui reçoit le bon dossier, le chronomètre la recherche en 31 ms, le grand robot flou le gros modèle qui complète au lieu de lire.
+- **Usage suggéré** : Hero `/blog/petit-modele-bien-outille` + OG.
+- **Alt text suggéré** : "Petit robot violet équipé d'une ceinture d'outils tenant une fiche validée, face à un grand robot gris flou entouré de points d'interrogation — un petit modèle bien outillé contre un gros modèle qui devine"
+
+---
+
 ## Essaim MCP / Odoo 20 (2026-10-14) — visuels PROVISOIRES à remplacer
 
 Installer une illustration livrée : `node scripts/blog-hero-image.mjs <source> <slug>` (hero WebP 1600×900 + OG JPEG 1200×630), puis déplacer la ligne ci-dessous en entrée complète.
@@ -441,7 +452,6 @@ Six articles courts adossés à la page `/serveur-mcp-odoo`. Les fichiers ci-des
 
 | Fichier | Article | Prompt Gemini suggéré |
 | --- | --- | --- |
-| `petit-modele-bien-outille.webp` | Un petit modèle bien outillé | Illustration flat design violet/ambre 16:9. Deux robots côte à côte : un petit robot violet équipé d'une ceinture d'outils (clé, loupe, dossier client) qui tient une fiche exacte ; un grand robot gris flou avec un point d'interrogation. Fond dégradé, sans texte. |
 | `ia-enrichir-catalogue-sans-perdre-la-main.webp` | Enrichir votre catalogue sans perdre la main | Illustration flat design violet/ambre 16:9. Une étagère de fiches produit (filtres, courroies, bidons stylisés) ; un robot pose des étiquettes ambre « en transit » sur un plateau, une main humaine violette valide avec une coche, une flèche de retour symbolise l'annulation. Sans texte. |
 | `odoo-online-ce-que-vous-ne-pouvez-pas-installer.webp` | Odoo Online : ce que vous ne pourrez jamais y installer | Illustration flat design violet/ambre 16:9. Un nuage violet (SaaS) avec un panneau « interdit » sur une brique de code à l'intérieur, et autour du nuage quatre passerelles ambre qui le contournent (un pinceau Studio, un engrenage, un paquet ZIP, un serveur externe relié par un câble). Sans texte. |
 | `logiciel-construit-par-agents-dix-semaines.webp` | Construire un logiciel avec des agents | Illustration flat design violet/ambre 16:9. Une chaîne de montage circulaire : des petits robots violets posent des blocs de code, un robot juge ambre avec une loupe contrôle chaque bloc, un humain au centre tient un plan et une liste cochée. Compteur stylisé de tests verts. Sans texte. |
