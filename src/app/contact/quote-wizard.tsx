@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -139,6 +139,47 @@ const STEP_LABELS = ["Services", "Contexte", "Brief & Contact"];
 const STORAGE_KEY = QUOTE_STORAGE_KEY;
 
 // ─── HELPERS ────────────────────────────────────────────────────────────────
+
+interface BriefResult {
+  text: string;
+  source: "ai" | "fallback";
+  /** Services choisis, joints par virgule — payload de l'événement GTM */
+  services: string;
+}
+
+/**
+ * Demande le brief à l'API ; en cas d'échec réseau ou serveur, construit le
+ * brief de secours côté client. Ne rejette jamais : le wizard a toujours un
+ * texte à afficher à l'étape 3.
+ */
+async function requestBrief(
+  selectedServices: ServiceId[],
+  context: WizardContext
+): Promise<BriefResult> {
+  const services = selectedServices.join(",");
+  try {
+    const res = await fetch("/api/generate-brief", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        services: selectedServices,
+        sector: context.sector,
+        teamSize: context.teamSize,
+        urgency: context.urgency,
+        additionalContext: context.additional,
+      }),
+    });
+    if (!res.ok) throw new Error();
+    const { brief: generated } = await res.json();
+    return { text: generated, source: "ai", services };
+  } catch {
+    return {
+      text: buildClientFallbackBrief(selectedServices, context.sector, context.teamSize),
+      source: "fallback",
+      services,
+    };
+  }
+}
 
 function buildClientFallbackBrief(
   services: ServiceId[],
@@ -327,6 +368,55 @@ function ExitIntentPopup({
   );
 }
 
+// ─── PROGRESS BAR ───────────────────────────────────────────────────────────
+// Déclarée hors du wizard : un composant créé à chaque rendu du parent est
+// remonté (et perd son état) à chaque rendu — cf. règle `static-components`.
+
+function ProgressBar({ step }: { step: number }) {
+  return (
+    <div className="mb-8">
+      <div className="flex items-center justify-between">
+        {STEP_LABELS.map((label, i) => {
+          const stepNum = i + 1;
+          const isCompleted = stepNum < step;
+          const isCurrent = stepNum === step;
+          return (
+            <div key={label} className="flex flex-1 items-center">
+              <div className="flex flex-col items-center">
+                <div
+                  className={`flex h-8 w-8 items-center justify-center rounded-full border-2 text-xs font-semibold transition-colors ${
+                    isCompleted
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : isCurrent
+                      ? "border-primary bg-background text-primary"
+                      : "border-border bg-background text-muted-foreground"
+                  }`}
+                >
+                  {isCompleted ? <Check className="h-4 w-4" /> : stepNum}
+                </div>
+                <span
+                  className={`mt-1 hidden text-xs sm:block ${
+                    isCurrent ? "font-medium text-foreground" : "text-muted-foreground"
+                  }`}
+                >
+                  {label}
+                </span>
+              </div>
+              {i < STEP_LABELS.length - 1 && (
+                <div
+                  className={`mx-2 h-0.5 flex-1 transition-colors ${
+                    isCompleted ? "bg-primary" : "bg-border"
+                  }`}
+                />
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 // ─── MAIN WIZARD ────────────────────────────────────────────────────────────
 
 export function QuoteWizard() {
@@ -352,6 +442,11 @@ export function QuoteWizard() {
   // métier de l'explorateur). En Strict Mode React, ce wipe est définitif.
   const [hydrated, setHydrated] = useState(false);
 
+  // `localStorage` n'existe pas côté serveur : la relecture doit se faire après
+  // le montage, dans un effet, sinon le HTML serveur et le premier rendu client
+  // divergent. C'est le cas d'usage que la règle `set-state-in-effect` ne sait
+  // pas distinguer — désactivée ici seulement, pour cet effet d'hydratation.
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -362,8 +457,23 @@ export function QuoteWizard() {
         if (data.contact) setContact(data.contact);
         if (data.step && data.step <= 3) {
           setStep(data.step);
-          // Restore brief if we were on step 3
-          if (data.step === 3 && data.brief) setBrief(data.brief);
+          if (data.step === 3) {
+            if (data.brief) {
+              // Restore brief if we were on step 3
+              setBrief(data.brief);
+            } else {
+              // Quitté pendant l'analyse : on la relance avec le contexte restauré
+              setBriefLoading(true);
+              void requestBrief(
+                data.selectedServices ?? [],
+                data.context ?? INITIAL_CONTEXT
+              ).then(({ text, source, services }) => {
+                setBrief(text);
+                setBriefLoading(false);
+                sendGTMEvent({ event: "brief_generated", source, services });
+              });
+            }
+          }
         }
       }
     } catch {
@@ -371,6 +481,7 @@ export function QuoteWizard() {
     }
     setHydrated(true);
   }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   // ── Persist to localStorage ──
   useEffect(() => {
@@ -401,52 +512,31 @@ export function QuoteWizard() {
     return () => document.removeEventListener("mouseleave", handleMouseLeave);
   }, [step, submitted]);
 
+  // ── Brief generation (lancée depuis le geste utilisateur, pas depuis un effet) ──
+  function startBrief() {
+    setBriefLoading(true);
+    setBrief(null);
+    void requestBrief(selectedServices, context).then(({ text, source, services }) => {
+      setBrief(text);
+      setBriefLoading(false);
+      sendGTMEvent({ event: "brief_generated", source, services });
+    });
+  }
+
   // ── Navigation ──
   function goNext() {
     setDirection(1);
     setStep((s) => s + 1);
     sendGTMEvent({ event: "quote_step_completed", step });
+    // Entrée à l'étape 3 : l'analyse part une seule fois (le brief est conservé
+    // si l'on revient en arrière puis en avant — même comportement qu'avant)
+    if (step === 2 && brief === null && !briefLoading) startBrief();
   }
 
   function goBack() {
     setDirection(-1);
     setStep((s) => s - 1);
   }
-
-  // ── Brief generation (called on entering step 3) ──
-  const generateBrief = useCallback(async () => {
-    setBriefLoading(true);
-    setBrief(null);
-    try {
-      const res = await fetch("/api/generate-brief", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          services: selectedServices,
-          sector: context.sector,
-          teamSize: context.teamSize,
-          urgency: context.urgency,
-          additionalContext: context.additional,
-        }),
-      });
-      if (!res.ok) throw new Error();
-      const { brief: generated } = await res.json();
-      setBrief(generated);
-      sendGTMEvent({ event: "brief_generated", source: "ai", services: selectedServices.join(",") });
-    } catch {
-      setBrief(buildClientFallbackBrief(selectedServices, context.sector, context.teamSize));
-      sendGTMEvent({ event: "brief_generated", source: "fallback", services: selectedServices.join(",") });
-    } finally {
-      setBriefLoading(false);
-    }
-  }, [selectedServices, context]);
-
-  // Trigger brief generation when reaching step 3
-  useEffect(() => {
-    if (step === 3 && brief === null && !briefLoading) {
-      generateBrief();
-    }
-  }, [step, brief, briefLoading, generateBrief]);
 
   // ── Email blur handler (abandon tracking) ──
   function handleEmailBlur() {
@@ -544,52 +634,6 @@ export function QuoteWizard() {
 
   const step3Complete = contact.name && contact.email;
 
-  // ── Progress bar ──
-  function ProgressBar() {
-    return (
-      <div className="mb-8">
-        <div className="flex items-center justify-between">
-          {STEP_LABELS.map((label, i) => {
-            const stepNum = i + 1;
-            const isCompleted = stepNum < step;
-            const isCurrent = stepNum === step;
-            return (
-              <div key={label} className="flex flex-1 items-center">
-                <div className="flex flex-col items-center">
-                  <div
-                    className={`flex h-8 w-8 items-center justify-center rounded-full border-2 text-xs font-semibold transition-colors ${
-                      isCompleted
-                        ? "border-primary bg-primary text-primary-foreground"
-                        : isCurrent
-                        ? "border-primary bg-background text-primary"
-                        : "border-border bg-background text-muted-foreground"
-                    }`}
-                  >
-                    {isCompleted ? <Check className="h-4 w-4" /> : stepNum}
-                  </div>
-                  <span
-                    className={`mt-1 hidden text-xs sm:block ${
-                      isCurrent ? "font-medium text-foreground" : "text-muted-foreground"
-                    }`}
-                  >
-                    {label}
-                  </span>
-                </div>
-                {i < STEP_LABELS.length - 1 && (
-                  <div
-                    className={`mx-2 h-0.5 flex-1 transition-colors ${
-                      isCompleted ? "bg-primary" : "bg-border"
-                    }`}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  }
-
   // ── Submitted state ──
   if (submitted) {
     return (
@@ -611,7 +655,7 @@ export function QuoteWizard() {
 
   return (
     <>
-      <ProgressBar />
+      <ProgressBar step={step} />
 
       <AnimatePresence mode="wait" custom={direction}>
         {/* ── STEP 1 : Services ─────────────────────────────────────── */}

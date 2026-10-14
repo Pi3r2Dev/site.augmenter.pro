@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Prototypes de design (HTML/CSS/JS livrés par Claude Design) : jamais
+    // bundlés, en partie gitignorés — leur lint n'apprend rien sur le site.
+    "docs/**",
   ]),
 ]);
 
