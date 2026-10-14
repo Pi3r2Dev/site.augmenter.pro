@@ -74,7 +74,17 @@ export default function ClaudeCodeOdooWorkflow() {
         <Link href="/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer">
           Odoo Online : ce que vous ne pourrez jamais y installer
         </Link>
-        .
+        . Une condition préalable : Studio et l&apos;API externe, donc tout
+        ce workflow par RPC, ne sont ouverts que sur le{" "}
+        <a
+          href="https://www.odoo.com/fr_FR/pricing-plan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          plan Custom
+        </a>{" "}
+        (44,90 € par utilisateur et par mois en annuel, contre 24,90 € en
+        Standard).
       </p>
       <table>
         <thead>

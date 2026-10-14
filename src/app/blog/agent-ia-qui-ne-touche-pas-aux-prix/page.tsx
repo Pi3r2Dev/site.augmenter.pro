@@ -57,7 +57,18 @@ export default function Article() {
           avec les droits de l&apos;utilisateur qui a donné la clé
         </Memo>
         . Si c&apos;est le dirigeant, l&apos;agent peut tout ce que le
-        dirigeant peut. Les droits Odoo protègent contre un utilisateur mal
+        dirigeant peut. Et parmi les 27 outils que liste la{" "}
+        <a
+          href="https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server/mcp_tools.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          documentation officielle
+        </a>
+        , « Update Records » met à jour tous les enregistrements qui
+        correspondent à un filtre. La page ne documente aucune liste de
+        champs exclus : le prix n&apos;est protégé que par les droits de
+        l&apos;utilisateur. Les droits Odoo protègent contre un utilisateur mal
         intentionné, pas contre un modèle qui complète une phrase.
       </p>
 

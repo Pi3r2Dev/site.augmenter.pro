@@ -106,6 +106,21 @@ export default function Article() {
         Et un agent qui travaille bien, c&apos;est un agent qui appelle beaucoup
         d&apos;outils : plus il est utile, plus il décompte.
       </p>
+      <p>
+        Et ces crédits s&apos;ajoutent à l&apos;abonnement : l&apos;IA agentique
+        n&apos;est ouverte que sur le{" "}
+        <a
+          href="https://www.odoo.com/fr_FR/pricing-plan"
+          target="_blank"
+          rel="noreferrer"
+        >
+          plan Custom
+        </a>
+        , à 44,90 € par utilisateur et par mois en annuel contre 24,90 € pour
+        le Standard. Soyons justes : une connexion externe par API, comme la
+        nôtre, demande le même plan. Ce surcoût ne départage donc pas les deux
+        voies, mais il faut l&apos;avoir en tête avant de comparer.
+      </p>
 
       <h2>Les abonnements par siège : on paie la présence, pas l&apos;usage</h2>
       <p>
@@ -134,6 +149,13 @@ export default function Article() {
         ouvrent la fenêtre. Et aucun de ces abonnements ne lit votre Odoo tel
         quel : il faut encore le brancher, et décider ce qui sort de chez vous.
       </p>
+      <p>
+        C&apos;est d&apos;ailleurs ce que fait le serveur MCP natif d&apos;Odoo
+        20 : il laisse Claude, ChatGPT ou Codex lire votre base avec une clé
+        API. Ce chemin-là ne décompte pas de crédits Odoo, mais il passe par
+        l&apos;abonnement du client IA, donc par siège, et vos données sortent
+        vers son éditeur pour être lues.
+      </p>
 
       <h2>Une machine à vous : zéro à la question</h2>
       <p>
@@ -145,7 +167,9 @@ export default function Article() {
           zéro euro à la question
         </Memo>
         . Pas de crédit, pas de siège, pas de compteur. Et vos données ne
-        quittent pas la machine.
+        quittent pas la machine. Zéro à la marge, pas au total : la machine,
+        l&apos;électricité et son administration restent à payer, et c&apos;est
+        tout le calcul qui suit.
       </p>
       <p>
         Ce qu&apos;il faut comme carte, d&apos;après ce qui tourne chez nous :

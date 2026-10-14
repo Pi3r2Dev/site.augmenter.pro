@@ -21,7 +21,7 @@ const faqJsonLd = {
       name: "Odoo 20 a-t-il un serveur MCP natif ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Oui. Les notes de version d'Odoo 20 annoncent une connexion à la base par MCP (Model Context Protocol). Sur la pré-version testée en septembre 2026, il s'agit d'un module standard qui expose un point d'accès /mcp, protégé par une clé API à portée MCP ou par OAuth 2.1, avec Claude, ChatGPT et Grok comme clients autorisés par défaut.",
+        text: "Oui. D'après la documentation officielle 20.0, un client compatible MCP (Claude Code, Claude Desktop, Codex…) se connecte à l'adresse /mcp de la base avec une clé API statique à portée MCP, créée dans les préférences d'un utilisateur. Il agit avec les droits de cet utilisateur. L'IA agentique et l'API externe sont réservées au plan Custom.",
       },
     },
     {
@@ -29,7 +29,7 @@ const faqJsonLd = {
       name: "Le serveur MCP d'Odoo 20 peut-il écrire dans la base ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sur la pré-version, les outils exposés par défaut sont en lecture seule : modèles, champs, recherche, regroupement. Un administrateur peut exposer une action serveur de son choix, y compris en écriture. L'agent agit alors avec les droits de l'utilisateur qui a donné la clé. Ce point est à vérifier sur la version finale.",
+        text: "Oui. La documentation officielle liste 27 outils MCP, dont deux d'écriture dans la base : Create Records et Update Records, qui met à jour tous les enregistrements correspondant à un filtre. Le statut lecture seule de chaque outil n'y est qu'une suggestion, et la page ne dit pas lesquels sont actifs par défaut. L'agent agit avec les droits de l'utilisateur qui a créé la clé.",
       },
     },
     {
@@ -62,7 +62,7 @@ export default function Article() {
 
       <p>
         Si vous êtes sur Odoo, vous avez vu passer l&apos;annonce : la version
-        20, présentée à Bruxelles fin septembre, met l&apos;IA au centre. Un
+        20, disponible depuis fin septembre, met l&apos;IA au centre. Un
         serveur MCP pour « connecter Odoo à tout », des agents qui créent et
         modifient des enregistrements, une édition de produit par IA depuis la
         boutique. Votre intégrateur vous en parlera au prochain rendez-vous,
@@ -70,8 +70,8 @@ export default function Article() {
       </p>
       <p>
         Nous construisons depuis août 2026 un serveur MCP pour Odoo, testé sur
-        un pilote en cours. Nous avons donc lu les notes de version et les
-        premiers tests de la pré-version avec un intérêt très précis : qu&apos;est-ce
+        un pilote en cours. Nous avons donc lu les notes de version et la
+        documentation officielle avec un intérêt très précis : qu&apos;est-ce
         qu&apos;Odoo fait désormais tout seul, et qu&apos;est-ce qu&apos;il
         reste à faire pour confier un agent à une équipe de vente ? Voici la
         réponse, sans enjoliver dans un sens ni dans l&apos;autre.
@@ -79,43 +79,96 @@ export default function Article() {
 
       <h2>Ce qu&apos;Odoo 20 fait vraiment</h2>
       <p>
-        Les notes de version officielles annoncent une connexion à la base de
-        données par MCP sous le titre « Connect Odoo to anything ». Sur la{" "}
-        <Memo type="idea" label="Pré-version 20.0 testée en sept. 2026">
-          pré-version Enterprise testée fin septembre
-        </Memo>
-        , c&apos;est un module standard qui expose un point d&apos;accès{" "}
-        <code>/mcp</code> sur votre base. Deux façons d&apos;y entrer : une clé
-        API à portée « MCP » (une clé RPC classique est refusée) ou un flux OAuth
-        2.1, avec claude.ai, chatgpt.com et grok.com comme clients autorisés par
-        défaut.
+        Odoo 20 est disponible depuis fin septembre, et sa{" "}
+        <a
+          href="https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          documentation officielle
+        </a>{" "}
+        décrit le serveur MCP sans ambiguïté. Un client compatible (Claude
+        Code, Claude Desktop, Codex…) se connecte à l&apos;adresse{" "}
+        <code>/mcp</code> de votre base avec une clé API statique, créée dans
+        les préférences d&apos;un utilisateur avec une portée « MCP » et une
+        durée de validité. Le client agit{" "}
+        <strong>avec les droits de l&apos;utilisateur qui a créé la clé</strong>
+        . Si c&apos;est le compte administrateur, l&apos;agent a les droits de
+        l&apos;administrateur.
       </p>
       <p>
-        Les outils exposés sont génériques : lister les modèles, lire les
-        champs, chercher, regrouper. Sur la pré-version, ils sont{" "}
-        <Memo type="idea" label="Lecture seule par défaut">
-          tous en lecture seule
+        Ce que l&apos;agent peut faire est listé sur la page des{" "}
+        <a
+          href="https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server/mcp_tools.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          outils MCP disponibles
+        </a>{" "}
+        :{" "}
+        <Memo type="num" label="27 outils MCP natifs">
+          27 outils
         </Memo>
-        . Un administrateur peut cocher « disponible dans MCP » sur une action
-        serveur de son choix, y compris en écriture. L&apos;agent agit alors{" "}
-        <strong>avec les droits de l&apos;utilisateur qui a donné la clé</strong>
-        : règles d&apos;enregistrement, sociétés, droits sur les champs.
+        , génériques. Lister les modèles et leurs champs, chercher, regrouper,
+        ouvrir une vue, faire une recherche web. Et{" "}
+        <Memo type="idea" label="Écriture native : Update Records">
+          deux outils d&apos;écriture dans la base
+        </Memo>
+        : « Create Records » et « Update Records », ce dernier mettant à jour
+        tous les enregistrements qui correspondent à un filtre. La page précise
+        que le statut « lecture seule » de chaque outil est une{" "}
+        <em>suggestion</em>. Elle ne dit pas lesquels sont actifs par défaut.
+        La pré-version testée en septembre par{" "}
+        <a
+          href="https://octurasolutions.com/resources/odoo-20-mcp-server-connect-claude-chatgpt-any-client"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Octura
+        </a>{" "}
+        n&apos;en exposait que cinq, en lecture. Vérifiez sur votre base, pas
+        sur un blog.
       </p>
       <p>
-        À côté du serveur, les agents IA d&apos;Odoo 20 créent des
-        enregistrements (y compris à partir d&apos;un PDF d&apos;instructions),
-        les mettent à jour, se déclenchent par des actions automatisées ou
-        planifiées, et demandent une confirmation par bouton quand ils
-        atteignent leur limite d&apos;appels d&apos;outils. Deux détails
-        comptent pour votre budget :{" "}
-        <Memo type="num" label="Crédits IAP obligatoires">
-          toutes les fonctions d&apos;IA consomment des crédits IAP
-        </Memo>
-        , et Odoo choisit le modèle à votre place une fois le fournisseur
-        sélectionné.
+        À côté du serveur, les{" "}
+        <a
+          href="https://www.odoo.com/documentation/20.0/applications/productivity/ai/agents.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          agents IA
+        </a>{" "}
+        d&apos;Odoo 20 lisent, créent et mettent à jour des enregistrements, se
+        déclenchent par des actions automatisées ou planifiées, et s&apos;appuient
+        sur vos documents. Le{" "}
+        <a
+          href="https://www.odoo.com/documentation/20.0/applications/productivity/ai/live-chat.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          chat IA du site
+        </a>
+        , lui, reste modeste : son seul outil documenté est la création
+        d&apos;une piste commerciale, rien sur le prix, le stock ou les devis.
       </p>
       <p>
-        Le prix, lui, est affiché. Sur le{" "}
+        Trois détails comptent pour votre budget. D&apos;abord,{" "}
+        <Memo type="num" label="Plan Custom requis">
+          l&apos;IA agentique et l&apos;API externe sont réservées au plan
+          Custom
+        </Memo>{" "}
+        (44,90 € par utilisateur et par mois en annuel, contre 24,90 € pour le
+        Standard, sur la{" "}
+        <a
+          href="https://www.odoo.com/fr_FR/pricing-plan"
+          target="_blank"
+          rel="noreferrer"
+        >
+          page tarifs
+        </a>
+        ). Ensuite, toutes les fonctions d&apos;IA intégrées consomment des
+        crédits, et Odoo choisit le modèle à votre place. Enfin, le prix de ces
+        crédits est affiché : sur le{" "}
         <a
           href="https://iap.odoo.com/iap/in-app-services/867"
           target="_blank"
@@ -134,25 +187,11 @@ export default function Article() {
         il décompte.
       </p>
       <p>
-        Sources : les{" "}
-        <a
-          href="https://www.odoo.com/odoo-20-release-notes"
-          target="_blank"
-          rel="noreferrer"
-        >
-          notes de version Odoo 20
-        </a>{" "}
-        et le{" "}
-        <a
-          href="https://octurasolutions.com/resources/odoo-20-mcp-server-connect-claude-chatgpt-any-client"
-          target="_blank"
-          rel="noreferrer"
-        >
-          test de la pré-version par Octura
-        </a>{" "}
-        (19 septembre 2026). Les noms et menus peuvent bouger avant la version
-        générale ; nous mettrons cet article à jour quand la documentation
-        développeur sera publiée.
+        La documentation annonce aussi une page sur les clés d&apos;API
+        d&apos;IA propres, encore en construction au 14 octobre. C&apos;est
+        elle qui dira si l&apos;on pourra brancher son propre modèle sur les
+        agents d&apos;Odoo. Nous mettrons cet article à jour quand elle sera
+        publiée.
       </p>
 
       <h2>Ce que ça change pour une PME</h2>
@@ -165,12 +204,13 @@ export default function Article() {
       </p>
       <p>
         Mais regardez ce que ces trois faits disent ensemble : des outils
-        génériques, les droits de celui qui a donné la clé, des agents qui
-        écrivent. Le dirigeant qui branche Claude sur son Odoo avec sa propre
+        génériques, les droits de celui qui a créé la clé, un outil qui
+        écrit. Le dirigeant qui branche Claude sur son Odoo avec sa propre
         clé donne à un modèle de langage{" "}
         <strong>la lecture de ses marges, de ses salaires et de sa
-        comptabilité</strong>, et, dès qu&apos;il expose une action
-        d&apos;écriture, le droit de modifier une fiche. Rien dans le
+        comptabilité</strong>, et, si « Update Records » est actif, le droit
+        de modifier en une fois toutes les fiches qui correspondent à un
+        filtre, prix compris. Rien dans le
         protocole n&apos;empêche le modèle de citer un stock qu&apos;il
         n&apos;a pas lu.
       </p>
@@ -259,8 +299,9 @@ export default function Article() {
         donc{" "}
         <Link href="/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer">
           compatible Odoo Online
-        </Link>
-        . Le tuyau changera peut-être. Ce qui passe dedans, des outils métier,
+        </Link>{" "}
+        sur le plan Custom, le même que celui qu&apos;exige l&apos;IA agentique
+        d&apos;Odoo 20. Le tuyau changera peut-être. Ce qui passe dedans, des outils métier,
         des garde-fous, un modèle qui tourne chez vous et un humain qui garde la
         main, c&apos;est ça que nous vendons.
       </p>
@@ -272,8 +313,14 @@ export default function Article() {
             droits réduits, jamais sur le compte administrateur.
           </li>
           <li>
-            Restez en <strong>lecture seule</strong> tant que vous n&apos;avez
-            pas recoupé une semaine de réponses avec l&apos;écran Odoo.
+            Restez en <strong>lecture seule</strong> : retirez « Create
+            Records » et « Update Records » des outils exposés tant que vous
+            n&apos;avez pas recoupé une semaine de réponses avec l&apos;écran
+            Odoo.
+          </li>
+          <li>
+            Vérifiez votre <strong>plan</strong> : sans le plan Custom, ni
+            l&apos;IA agentique ni l&apos;API externe ne sont ouvertes.
           </li>
           <li>
             Consommez les <strong>20 crédits de départ</strong> sur une

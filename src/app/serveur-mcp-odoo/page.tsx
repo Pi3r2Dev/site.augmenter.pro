@@ -63,13 +63,13 @@ export const metadata: Metadata = {
 
 const ODOO_20_DONNE = [
   {
-    odoo: "Un serveur MCP générique : modèles, champs, recherche, regroupement",
+    odoo: "Un serveur MCP générique : 27 outils, de « lister les champs » à « mettre à jour tous les enregistrements d'un filtre »",
     nous: "Des outils par intention : « le dossier de ce client », « mon chiffre d'affaires de la semaine », « ce produit, son prix, son stock libre »",
     pourquoi:
       "Le modèle n'a pas besoin de connaître le schéma d'Odoo. Un petit modèle suffit, parce que l'outil répond juste.",
   },
   {
-    odoo: "Les droits de l'utilisateur qui a donné la clé",
+    odoo: "Les droits de l'utilisateur qui a créé la clé, et un statut « lecture seule » qui n'est qu'une suggestion",
     nous: "Des garde-fous dans le code : aucun outil n'a de paramètre prix ou coût, l'écriture s'arrête au brouillon",
     pourquoi:
       "Un agent qui ne peut pas changer un tarif, même si on le lui demande. Un test compare le schéma des outils à chaque livraison.",
@@ -148,9 +148,9 @@ const CE_QUI_TOURNE = [
   },
   {
     icon: Wrench,
-    titre: "Compatible Odoo Online",
+    titre: "Compatible Odoo Online (plan Custom)",
     texte:
-      "Pas une ligne de Python dans ton Odoo. Le serveur parle à l'API JSON-2 d'Odoo 19, de l'extérieur. Ça marche sur l'offre en ligne où aucun module custom n'est installable.",
+      "Pas une ligne de Python dans ton Odoo. Le serveur parle à l'API JSON-2 d'Odoo 19, de l'extérieur. Ça marche sur l'offre en ligne où aucun module custom n'est installable, dès que ton abonnement est sur le plan Custom, celui qui ouvre l'API externe.",
   },
 ];
 
@@ -190,7 +190,7 @@ const FAQ_ITEMS = [
   {
     question: "Est-ce que ça marche sur Odoo Online (l'offre SaaS) ?",
     answer:
-      "Oui, et c'est fait pour. Odoo Online n'accepte aucun module Python custom. Notre serveur MCP tourne à l'extérieur et parle à Odoo par son API JSON-2, sans rien installer dedans. Odoo 19 et, d'après la pré-version, Odoo 20. Sur Odoo.sh ou sur serveur, ça marche aussi, avec plus de latitude.",
+      "Oui, et c'est fait pour. Odoo Online n'accepte aucun module Python custom. Notre serveur MCP tourne à l'extérieur et parle à Odoo par son API JSON-2, sans rien installer dedans. Odoo 19 et, d'après la pré-version, Odoo 20. Sur Odoo.sh ou sur serveur, ça marche aussi, avec plus de latitude. Une condition à vérifier avant tout : l'API externe n'est ouverte que sur le plan Custom d'Odoo (44,90 € par utilisateur et par mois en annuel, contre 24,90 € en Standard). L'IA agentique d'Odoo 20 demande le même plan, donc ça ne départage pas les deux voies.",
   },
   {
     question: "L'agent peut-il modifier un prix, valider une commande, envoyer un devis ?",
@@ -273,7 +273,7 @@ const COUTS = [
     titre: "Crédits IA d'Odoo 20",
     prix: "1 € le crédit",
     texte:
-      "Packs de 10 à 1 000, sans remise de volume. Combien de crédits par question ? Odoo ne le publie pas : ça dépend de la tâche et de la taille de la demande. Plus l'agent travaille, plus il décompte.",
+      "Packs de 10 à 1 000, sans remise de volume, en plus du plan Custom. Combien de crédits par question ? Odoo ne le publie pas : ça dépend de la tâche et de la taille de la demande. Plus l'agent travaille, plus il décompte.",
     nous: false,
   },
   {
@@ -796,10 +796,10 @@ export default function ServeurMcpOdooPage() {
             ))}
           </div>
           <div className="mx-auto mt-10 flex max-w-5xl flex-wrap items-center gap-3 text-sm text-muted-foreground">
-            <Check className="h-4 w-4 text-primary" /> Odoo Online, Odoo.sh ou
-            sur serveur
+            <Check className="h-4 w-4 text-primary" /> Odoo Online (plan Custom),
+            Odoo.sh ou sur serveur
             <Check className="ml-4 h-4 w-4 text-primary" /> Odoo 19 aujourd&apos;hui,
-            Odoo 20 dès sa sortie
+            Odoo 20 dès que ton instance y passe
             <Check className="ml-4 h-4 w-4 text-primary" /> Rollback livré à
             chaque chantier
           </div>

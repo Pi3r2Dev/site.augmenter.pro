@@ -21,7 +21,7 @@ const faqJsonLd = {
       name: "Peut-on installer un module personnalisé sur Odoo Online ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Non, pas un module contenant du code Python. Odoo Online (l'offre SaaS) n'accepte que les modules du catalogue officiel. Restent quatre voies : Odoo Studio, les actions serveur dans leur bac à sable, les modules « data-only » (vues XML, JavaScript, SCSS) importés en ZIP, et tout ce qui tourne à l'extérieur en parlant à Odoo par son API, un serveur MCP par exemple.",
+        text: "Non, pas un module contenant du code Python. Odoo Online (l'offre SaaS) n'accepte que les modules du catalogue officiel. Restent quatre voies : Odoo Studio, les actions serveur dans leur bac à sable, les modules « data-only » (vues XML, JavaScript, SCSS) importés en ZIP, et tout ce qui tourne à l'extérieur en parlant à Odoo par son API, un serveur MCP par exemple. Studio et l'API externe sont réservés au plan Custom (44,90 € par utilisateur et par mois en annuel, contre 24,90 € en Standard) : sur le Standard, la première étape est un changement de plan, pas une migration.",
       },
     },
     {
@@ -29,7 +29,7 @@ const faqJsonLd = {
       name: "Un serveur MCP fonctionne-t-il avec Odoo Online ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Oui, à condition qu'il tourne à l'extérieur d'Odoo et parle à l'instance par son API (JSON-2 sur Odoo 19). Il n'y a rien à installer dans Odoo. Odoo 20 ajoute par ailleurs son propre serveur MCP natif.",
+        text: "Oui, à condition qu'il tourne à l'extérieur d'Odoo, parle à l'instance par son API (JSON-2 sur Odoo 19) et que l'abonnement soit sur le plan Custom, le seul qui ouvre l'API externe. Il n'y a rien à installer dans Odoo. Odoo 20 ajoute par ailleurs son propre serveur MCP natif.",
       },
     },
   ],
@@ -86,11 +86,34 @@ export default function Article() {
         côté serveur.
       </p>
 
+      <h2>Avant tout : regardez votre plan</h2>
+      <p>
+        C&apos;est la vérification que personne ne fait, et elle change tout.
+        Odoo Online se vend en deux plans payants. Sur la{" "}
+        <a
+          href="https://www.odoo.com/fr_FR/pricing-plan"
+          target="_blank"
+          rel="noreferrer"
+        >
+          page tarifs
+        </a>
+        , le Standard coûte 24,90 € par utilisateur et par mois en annuel, le
+        Custom 44,90 €. Et{" "}
+        <Memo type="idea" label="Studio et API : plan Custom">
+          Studio, l&apos;API externe et l&apos;IA agentique ne sont ouverts
+          que sur le Custom
+        </Memo>
+        . Si votre intégrateur dit « impossible » et que vous êtes sur le
+        Standard, la réponse n&apos;est peut-être pas une migration vers Odoo.sh,
+        mais un changement de plan, bien moins coûteux. Les voies n°1 et n°4
+        ci-dessous en dépendent.
+      </p>
+
       <h2>Les quatre contournements qui marchent</h2>
       <ul>
         <li>
           <strong>1. Odoo Studio.</strong> Champs, vues, automatisations
-          simples, rapports. Inclus dans l&apos;abonnement, sans code, et
+          simples, rapports. Inclus dans le plan Custom, sans code, et
           suffisant pour une bonne part des demandes « impossibles ». Sa
           limite : tout ce qui est calculé doit rester simple, et un champ
           calculé non stocké ne se filtre pas dans les vues. Nous l&apos;avons
@@ -128,7 +151,7 @@ export default function Article() {
           </Memo>
           . C&apos;est la voie par laquelle{" "}
           <Link href="/serveur-mcp-odoo">notre serveur MCP pour Odoo</Link>{" "}
-          fonctionne sur Online.
+          fonctionne sur Online, avec le plan Custom.
         </li>
       </ul>
 
@@ -175,6 +198,10 @@ export default function Article() {
 
       <KeyTakeaways title="Avant d'accepter un devis de migration">
         <ul>
+          <li>
+            Vérifiez votre <strong>plan</strong> : Standard ou Custom. Sur le
+            Standard, ni Studio ni l&apos;API externe.
+          </li>
           <li>
             Demandez si la fonction a été tentée avec <strong>Studio</strong>{" "}
             et avec une <strong>action serveur</strong>. Deux réponses « non »

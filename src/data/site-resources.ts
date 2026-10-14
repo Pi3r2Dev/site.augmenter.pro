@@ -215,11 +215,11 @@ const STATIC_PAGES: StaticPage[] = [
     id: "serveur-mcp-odoo",
     type: "page",
     title: "Serveur MCP pour Odoo : ce qu'Odoo 20 ne fait pas",
-    tldr: "Odoo 20 a son serveur MCP, générique et sous les droits de celui qui donne la clé. On ajoute les outils qui parlent ton métier, des garde-fous dans le code (aucun paramètre prix, écriture au brouillon), un chiffre vérifié avant d'être cité et un modèle ouvert sur une machine chez toi, administrée à distance : zéro crédit à la question, là où Odoo 20 facture 1 € le crédit. Marche sur Odoo Online.",
+    tldr: "Odoo 20 a son serveur MCP, générique et sous les droits de celui qui donne la clé. On ajoute les outils qui parlent ton métier, des garde-fous dans le code (aucun paramètre prix, écriture au brouillon), un chiffre vérifié avant d'être cité et un modèle ouvert sur une machine chez toi, administrée à distance : zéro crédit à la question, là où Odoo 20 facture 1 € le crédit. Marche sur Odoo Online, plan Custom.",
     href: "/serveur-mcp-odoo",
     intent: "prestataire",
     weight: 84,
-    meta: "Odoo 19 & 20 · Odoo Online",
+    meta: "Odoo 19 & 20 · Online (plan Custom)",
   },
   {
     id: "integration-mcp",
