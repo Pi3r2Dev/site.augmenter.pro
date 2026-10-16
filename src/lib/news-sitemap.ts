@@ -8,6 +8,14 @@ import type { CatalogArticle } from "@/data/resources";
  * incluse si `published <= now < published + 48 h`. Pas de fuseau
  * Europe/Paris : le serveur tourne en UTC, et une ou deux heures d'écart ne
  * comptent pas pour Google.
+ *
+ * Jamais vide : le schéma sitemaps.org exige au moins un `<url>` ; un urlset
+ * vide est rejeté par Search Console (« Balise XML manquante », lu le
+ * 2026-10-16, deux jours après la seule news du moment). Quand rien n'est dans
+ * la fenêtre, on garde donc la news la plus récente déjà publiée. Google
+ * autorise à laisser une news de plus de deux jours (il l'ignore pour
+ * l'onglet Actualités) ; une news datée du futur n'entre jamais. Urlset vide
+ * seulement si le catalog n'a aucune news publiée.
  */
 
 const SITE_URL = "https://augmenter.pro";
@@ -27,12 +35,13 @@ function escapeXml(text: string): string {
 
 export function buildNewsSitemap(articles: CatalogArticle[], now: Date): string {
   const nowMs = now.getTime();
-  const entries = articles
+  const published = articles
     .filter((a) => a.kind === "news" && a.datePublished)
     .map((a) => ({ article: a, published: new Date(`${a.datePublished}T00:00:00Z`).getTime() }))
-    .filter(({ published }) => published <= nowMs && nowMs < published + WINDOW_MS)
-    .sort((x, y) => y.published - x.published)
-    .slice(0, MAX_URLS);
+    .filter(({ published }) => published <= nowMs)
+    .sort((x, y) => y.published - x.published);
+  const inWindow = published.filter(({ published }) => nowMs < published + WINDOW_MS);
+  const entries = (inWindow.length > 0 ? inWindow : published.slice(0, 1)).slice(0, MAX_URLS);
 
   const urls = entries.map(
     ({ article }) =>

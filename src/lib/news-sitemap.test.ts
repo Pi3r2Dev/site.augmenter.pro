@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { CatalogArticle } from "@/data/resources";
+import { ARTICLES, type CatalogArticle } from "@/data/resources";
 import { buildNewsSitemap } from "./news-sitemap";
 
 // Horloge fixe : 2026-10-14 à midi UTC.
@@ -29,14 +29,34 @@ describe("buildNewsSitemap — fenêtre de 48 h", () => {
     expect(xml).toContain("<loc>https://augmenter.pro/blog/a</loc>");
   });
 
-  it("exclut une news publiée il y a 49 h", () => {
-    const xml = buildNewsSitemap([news("a", "2026-10-12")], new Date("2026-10-14T01:00:00Z"));
-    expect(xml).not.toContain("<loc>");
+  it("exclut une news publiée il y a 49 h quand une autre est dans la fenêtre", () => {
+    const xml = buildNewsSitemap(
+      [news("vieille", "2026-10-12"), news("recente", "2026-10-14")],
+      new Date("2026-10-14T01:00:00Z"),
+    );
+    expect(xml).toContain("<loc>https://augmenter.pro/blog/recente</loc>");
+    expect(xml).not.toContain("/blog/vieille");
   });
 
-  it("exclut une news datée de demain", () => {
+  it("n'inclut jamais une news datée de demain, même en repli", () => {
     const xml = buildNewsSitemap([news("a", "2026-10-15")], NOW);
     expect(xml).not.toContain("<loc>");
+  });
+});
+
+describe("buildNewsSitemap — jamais vide (Search Console : « Balise XML manquante »)", () => {
+  it("garde la news la plus récente déjà publiée quand rien n'est dans la fenêtre", () => {
+    const xml = buildNewsSitemap(
+      [news("septembre", "2026-09-01"), news("octobre", "2026-10-01"), news("demain", "2026-10-15")],
+      NOW,
+    );
+    expect(xml.match(/<url>/g)?.length).toBe(1);
+    expect(xml).toContain("<loc>https://augmenter.pro/blog/octobre</loc>");
+  });
+
+  it("le sitemap servi par le vrai catalog contient au moins une URL", () => {
+    expect(ARTICLES.some((a) => a.kind === "news")).toBe(true);
+    expect(buildNewsSitemap(ARTICLES, new Date())).toContain("<url>");
   });
 
   it("n'inclut jamais un guide, même publié aujourd'hui", () => {
@@ -56,7 +76,7 @@ describe("buildNewsSitemap — XML", () => {
     expect(xml).toContain('xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"');
   });
 
-  it("produit un urlset vide valide quand rien n'est dans la fenêtre", () => {
+  it("produit un urlset vide seulement quand le catalog n'a aucune news", () => {
     const xml = buildNewsSitemap([article("guide")], NOW);
     expect(xml).toMatch(/<urlset [^>]+>\s*<\/urlset>\s*$/);
     expect(xml).not.toContain("<url>");
