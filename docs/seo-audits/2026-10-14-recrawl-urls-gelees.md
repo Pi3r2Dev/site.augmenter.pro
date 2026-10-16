@@ -105,6 +105,19 @@ La purge des chiffres non sourcés et des cas clients inventés a touché cinq p
 curl -s -o /dev/null -w "indexnow %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json; charset=utf-8" --data '{"host":"augmenter.pro","key":"96dcfd53b10246a296724faac42d91da","keyLocation":"https://augmenter.pro/96dcfd53b10246a296724faac42d91da.txt","urlList":["https://augmenter.pro/","https://augmenter.pro/approche","https://augmenter.pro/strategie-ia-pme","https://augmenter.pro/audit-ia-pme","https://augmenter.pro/audit-informatique-yvelines","https://augmenter.pro/audit-informatique-val-doise","https://augmenter.pro/blog/cout-audit-informatique-yvelines","https://augmenter.pro/blog/serveur-mcp-guide-pratique-pme","https://augmenter.pro/blog/serveur-mcp-integration-crm-erp","https://augmenter.pro/blog/ia-contradicteur-prompts-dirigeant-pme","https://augmenter.pro/blog/rapport-adoption-ia-btp-francilien-2026","https://augmenter.pro/blog/veille-concurrentielle-ia-pme","https://augmenter.pro/blog/automatiser-emails-reseaux-sociaux-ia","https://augmenter.pro/blog/5-signes-moderniser-informatique-pme"]}'
 ```
 
+## Point au 2026-10-16
+
+Inspection API des 50 URL (MCP GSC hors service, appel direct avec la clé du compte de service, lecture seule).
+
+- **Sitemap resoumis le 2026-10-14 à 20h35**, relu dans la foulée : 50 URL vues (41 avant).
+- **Jour 1 passé** : 9 des 10 URL recrawlées le 2026-10-14, propres et indexées (`/serveur-mcp-odoo`, `/blog/claude-code-odoo-workflow`, `/integration-mcp`, `/blog/configurer-odoo-ia-claude-cowork`, `/audit-informatique-yvelines`, `/contact`, `/blog`, `/a-propos`). `/ia-souveraine-pme` : crawlée mais « Explorée, actuellement non indexée ». **`/strategie-ia-pme` pas recrawlée** (dernier crawl 2026-08-05, avis encore vus) : à redemander.
+- `/` recrawlée le 2026-10-15 (purge vue). `/blog/cout-agent-ia-odoo` crawlée le 2026-10-16, « Explorée, actuellement non indexée » (souvent transitoire sur une page de 2 jours).
+- **Pages encore vues avec « Extraits d'avis » : 17** (21 le 2026-10-14).
+- Nouvelles URL de l'essaim : 4 « Google ne reconnaît pas cette URL », 2 « Détectée, actuellement non indexée ». `/blog/ma-pme-en-2027` et `/blog/claude-cowork-community-manager` passées d'inconnues à détectées.
+- Trafic (30 j) : 2 à 11 impressions par jour, 2 clics, pas encore de reprise visible (les données GSC ont 2 à 3 jours de retard).
+
+Jour 2 révisé : `/strategie-ia-pme` + les 6 nouveaux articles + `/blog/ma-pme-en-2027` + `/blog/claude-cowork-community-manager` + `/prompts`. `/blog/cout-agent-ia-odoo` sort du jour 2 (déjà crawlée).
+
 ## Contrôle
 
 Rejouer l'inspection deux semaines après le jour 1 (au plus tôt le 2026-10-28). Critères : plus aucune page avec « Extraits d'avis », les 4 inconnues et les 9 nouvelles découvertes et indexées, courbe d'impressions relue sur la semaine suivante.
