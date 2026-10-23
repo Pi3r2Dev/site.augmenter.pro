@@ -129,6 +129,17 @@ Inspection API des 50 URL + courbe quotidienne sur 60 jours (MCP GSC toujours ho
 - Le décompte « Extraits d'avis » n'a pas été refait (le filtre du script ne reconnaissait pas le libellé français).
 - **Trafic : plat.** 1 à 11 impressions par jour sur 60 jours, 1 clic depuis le 2026-10-14. La position moyenne se dégrade depuis le 2026-10-14 (20 à 60) : les nouvelles pages entrent dans l'index, mais loin.
 
+### Audit technique du 2026-10-23 (soir)
+
+Crawl complet de la prod (50 URL + 68 liens internes) et inspection GSC avec le libellé anglais des résultats enrichis.
+
+- **Demandes du jour efficaces** : `/strategie-ia-pme`, `/prompts` et 4 articles du jour 3 crawlés le 2026-10-23, propres.
+- **« Extraits d'avis » encore vus : 9 pages**, toutes au dernier crawl avant le 2026-09-07 : `/blog/5-signes-moderniser-informatique-pme`, `/blog/ia-contradicteur-prompts-dirigeant-pme`, `/blog/patron-goulot-paradoxe-ia-dirigeant-pme`, `/blog/rapport-adoption-ia-btp-francilien-2026`, `/blog/bilan-ia-janvier-juillet-2026`, `/plan-du-site`, `/blog/machine-de-guerre-commerciale`, `/blog/comparatif-llm-vente-commerciale`, `/blog/compte-rendu-reunion-ia`.
+- **Canonique absent sur 9 pages** (home, `/strategie-ia-pme`, 2 pages audit, `/approche`, `/contact`, `/blog`, `/prompts`, `/integration-mcp`) et **og:url vers la home sur 15 pages** : corrigés (`07874ea`, `5e5575d`), juges ajoutés dans `seo-hygiene.test.ts`. À déployer.
+- Sain : 0 lien interne cassé, JSON-LD valide, plus aucun balisage d'avis émis, redirections http/www/slash/`/accueil-2`/`/prestations` correctes, vraie 404, `s-maxage=300`, réponse médiane 182 ms, sitemaps lus sans erreur.
+- Positions faibles des pages commerciales sur 90 j : `/audit-informatique-yvelines` 72,8 (44 impr.), `/audit-ia-pme` 86,1 (31 impr.).
+- Restent à surveiller : 33 titles > 70 caractères avec le suffixe ` | augmenter.PRO` (Google tronque vers 60), 8 descriptions > 160 caractères.
+
 ## Contrôle
 
 Rejouer l'inspection deux semaines après le jour 1 (au plus tôt le 2026-10-28). Critères : plus aucune page avec « Extraits d'avis », les 4 inconnues et les 9 nouvelles découvertes et indexées, courbe d'impressions relue sur la semaine suivante.
