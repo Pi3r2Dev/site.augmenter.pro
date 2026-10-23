@@ -118,6 +118,17 @@ Inspection API des 50 URL (MCP GSC hors service, appel direct avec la clé du co
 
 Jour 2 révisé : `/strategie-ia-pme` + les 6 nouveaux articles + `/blog/ma-pme-en-2027` + `/blog/claude-cowork-community-manager` + `/prompts`. `/blog/cout-agent-ia-odoo` sort du jour 2 (déjà crawlée).
 
+## Point au 2026-10-23
+
+Inspection API des 50 URL + courbe quotidienne sur 60 jours (MCP GSC toujours hors service, même méthode).
+
+- **Indexées : 46 / 50.** Le jour 2 est passé : les 6 articles de l'essaim, `/blog/cout-agent-ia-odoo` et `/blog/ma-pme-en-2027` ont été crawlés le 2026-10-16 et sont « Envoyée et indexée ».
+- **Pas de reprise spontanée du crawl.** Depuis le 2026-10-17, seulement 2 pages crawlées : `/projets` (10-20) et `/blog/prompt-audit-projet-claude-fable` (10-21). Tous les mouvements depuis le 14 correspondent à des pages demandées à la main.
+- **Toujours gelées (dernier crawl avant le 2026-09-07) : 15 pages**, dont `/strategie-ia-pme` (2026-08-05, redemandée au jour 2 sans effet), `/prompts`, `/plan-du-site` et 8 articles du jour 3. Le reste du jour 3 et le jour 4 sont à faire.
+- Encore non indexées : `/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer` (détectée, jamais crawlée), `/blog/claude-cowork-community-manager` (inconnue de Google), `/ia-souveraine-pme` et `/audit-informatique-val-doise` (explorées, non indexées).
+- Le décompte « Extraits d'avis » n'a pas été refait (le filtre du script ne reconnaissait pas le libellé français).
+- **Trafic : plat.** 1 à 11 impressions par jour sur 60 jours, 1 clic depuis le 2026-10-14. La position moyenne se dégrade depuis le 2026-10-14 (20 à 60) : les nouvelles pages entrent dans l'index, mais loin.
+
 ## Contrôle
 
 Rejouer l'inspection deux semaines après le jour 1 (au plus tôt le 2026-10-28). Critères : plus aucune page avec « Extraits d'avis », les 4 inconnues et les 9 nouvelles découvertes et indexées, courbe d'impressions relue sur la semaine suivante.
