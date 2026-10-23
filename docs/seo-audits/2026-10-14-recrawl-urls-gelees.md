@@ -140,6 +140,28 @@ Crawl complet de la prod (50 URL + 68 liens internes) et inspection GSC avec le 
 - Positions faibles des pages commerciales sur 90 j : `/audit-informatique-yvelines` 72,8 (44 impr.), `/audit-ia-pme` 86,1 (31 impr.).
 - Restent à surveiller : 33 titles > 70 caractères avec le suffixe ` | augmenter.PRO` (Google tronque vers 60), 8 descriptions > 160 caractères.
 
+### Demandes d'indexation du 2026-10-24 (11 URL)
+
+Les 9 pages encore vues avec « Extraits d'avis », dans cet ordre (les deux premières ont échoué le 23 sur quota), puis les 2 inconnues de Google :
+
+```
+https://augmenter.pro/blog/patron-goulot-paradoxe-ia-dirigeant-pme
+https://augmenter.pro/blog/ia-contradicteur-prompts-dirigeant-pme
+https://augmenter.pro/blog/bilan-ia-janvier-juillet-2026
+https://augmenter.pro/blog/compte-rendu-reunion-ia
+https://augmenter.pro/blog/comparatif-llm-vente-commerciale
+https://augmenter.pro/blog/machine-de-guerre-commerciale
+https://augmenter.pro/blog/rapport-adoption-ia-btp-francilien-2026
+https://augmenter.pro/blog/5-signes-moderniser-informatique-pme
+https://augmenter.pro/plan-du-site
+https://augmenter.pro/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer
+https://augmenter.pro/blog/claude-cowork-community-manager
+```
+
+**Erreur « Petit problème… Une erreur s'est produite »** à la demande d'indexation : c'est presque toujours le **quota quotidien épuisé** (Google ne dit pas « quota »). Le compteur est par propriété et le quota réel est souvent sous 10. Vérifié le 2026-10-23 : les deux URL refusées répondaient 200, `index, follow`, canonique correct. Si l'erreur tombe dès la première demande de la journée, ce n'est plus le quota.
+
+Après le déploiement des commits `07874ea` et `5e5575d` (canonique + `og:url`) : **resoumettre `sitemap.xml`** dans GSC (dernière lecture par Google le 2026-10-14).
+
 ## Contrôle
 
 Rejouer l'inspection deux semaines après le jour 1 (au plus tôt le 2026-10-28). Critères : plus aucune page avec « Extraits d'avis », les 4 inconnues et les 9 nouvelles découvertes et indexées, courbe d'impressions relue sur la semaine suivante.
