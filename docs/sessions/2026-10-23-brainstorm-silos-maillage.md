@@ -56,6 +56,12 @@ Source : [2026-10-23-positionnement-integration-ia.md § 7 bis](../seo-audits/20
 7. **Formation** : « formation Claude Code » est-elle un silo (avec satellites tutoriels / prompts) ou un satellite commercial du silo Claude Code ?
 8. **Home et `/approche`** : rôle dans l'architecture (hub d'entrée vers les piliers ? récit de marque hors silo ?). Aujourd'hui `/` n'a que 3 entrants éditoriaux et vit par la nav.
 9. **Ce qu'on mesure** : quel indicateur par silo (clics GSC, position des requêtes pilier, citations LLM) et quel seuil de révision.
+10. **Un journal des annonces IA** (demande de Pierre, 2026-10-23) : une page vivante qui retrace les nouveautés et les relie aux publications officielles des labos. Pistes déjà instruites :
+    - **Pas une « histoire de l'IA » généraliste** : « histoire de l'ia », « actualité ia » sont tenues par Wikipédia, les médias et les labos eux-mêmes ; sur 16 mois, une seule requête « actualité » a touché le site (22 impr., 0 clic), et l'article `bilan-ia-janvier-juillet-2026` n'a fait que 2 impressions.
+    - **Mais un journal cadré sur nos outils** : la demande existe en ces termes (« actualité ia entreprise », « actualité ia claude », « nouvelle ia claude », « nouveautés odoo 20 », « sortie odoo 20 »). Chaque entrée : date, labo, **lien vers la publication officielle**, ce que ça change pour une PME sur Odoo / Claude / MCP / modèles ouverts, **verdict** (à tester / à attendre / à ignorer), lien vers la page pilier du silo concerné. C'est l'apport que les LLM ne trouvent pas chez le labo : la traduction en décision.
+    - **Rôle dans l'architecture** : hub transversal (il lie vers tous les silos) ou satellite d'un silo ? Une grosse annonce (ex. Odoo 20) devient en plus un article au format news de l'ADR 0007.
+    - **Coût et risque** : une page « vivante » qui n'est pas tenue devient pire que pas de page (anti-pattern « fausses mises à jour » de CLAUDE.md). Outillage disponible : boucle news déjà montée (`PROMPT-news.md`, `docs/backlog-news.md`), Firecrawl pour relever les notes de version des labos ; le verdict reste humain.
+    - **Critère** : se caler sur la revue de l'ADR 0007 (2026-11-15, arrêt possible le 2026-12-15) : un pilote de 3 mois, 2 mises à jour par mois, mesuré en citations LLM (limelit) et en clics vers les piliers, pas en trafic propre.
 
 ## Contraintes dures
 
