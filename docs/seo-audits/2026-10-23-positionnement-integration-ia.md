@@ -116,6 +116,21 @@ Risques à regarder en face :
 
 Préalable à tout : **poser la mesure GEO** (limelit ou elmo sur le VPS, prompts de [geo-prompts.md](2026-05-21-data/geo-prompts.md), cf. mémoire « Outils GEO & positionnement ») pour avoir un avant/après, et finir la sortie de sanction (9 pages avec avis à faire recrawler).
 
+## 7 bis. Orientations retenues en séance (2026-10-23, réponses de Pierre)
+
+Pas encore une ADR : des orientations qui cadrent le brainstorm et le dialectic à venir.
+
+| Question | Orientation |
+|---|---|
+| Identité structurée | **Réécrire** `Organization` (intégration IA / Odoo / Claude Code, zone France) ; **garder `LocalBusiness` restreint** à la formation en présentiel 78/95, aligné sur la fiche Google |
+| `/strategie-ia-pme` + `/audit-ia-pme` | **Fusionner** en une page « intégration IA PME », 301 depuis les deux |
+| Pages audit local | **Ancrage léger** : garder, différencier la page 95, ajouter les prix, lier à la fiche Google, pas de refonte |
+| Tête de pont Odoo × Claude | **Non tranché** : question requalifiée en **architecture de silos et de maillage** (quels silos, quelle page pilier par silo, circulation du jus, outils tiers dans quel silo), à brainstormer avant de choisir une URL |
+| Formation Claude Code | **Renommer** l'atelier avec les mots cherchés (« formation Claude Code pour dirigeants »), sans CPF / Qualiopi |
+| `jobTitle` Person | **« Consultant intégration IA · Odoo & Claude Code »**, repris sur `/auteur`, `/a-propos`, LinkedIn |
+| Terrain Reva 9 | **Rester anonymisé** (🟢) : pas de demande d'accord écrit, le volet M&A reste ouvert |
+| Séquence avant l'ADR 0008 | 1. **brainstorm silos & maillage** · 2. **`/dialectic`** sur la thèse · 3. **mesure GEO** (limelit sur le VPS, prompts de `geo-prompts.md`) · puis rédaction de l'ADR |
+
 ## 8. Reproductibilité
 
 Scripts versionnés dans [`scripts/seo/`](../../scripts/seo/), sans dépendance, lecture seule :
