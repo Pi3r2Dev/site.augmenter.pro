@@ -35,7 +35,7 @@ Registres : pages commerciales et piliers en **tu**, articles de fond en **vous*
 | Rôle | Page | Statut |
 |---|---|---|
 | **Pilier hub** | `/integration-ia-pme` *(URL proposée, à figer dans l'ADR)* | **à créer** par fusion ; **301** depuis `/strategie-ia-pme` et `/audit-ia-pme` (décision déjà prise) |
-| Satellites | `/blog/agent-ia-dirigeant-pme` (porte « agent ia pme », 123 impr., pos. 16), `/blog/ma-pme-en-2027`, `/ia-souveraine-pme`, `/blog/patron-goulot-paradoxe-ia-dirigeant-pme`, `/blog/bilan-ia-janvier-juillet-2026` | existants |
+| Satellites | `/blog/agent-ia-dirigeant-pme` (porte « agent ia pme », 123 impr., pos. 16), `/blog/ma-pme-en-2027`, `/ia-souveraine-pme`, `/blog/patron-goulot-paradoxe-ia-dirigeant-pme`, `/blog/bilan-ia-janvier-juillet-2026` (absorbé par le journal IA si le pilote part, § 2.9) | existants |
 
 Le hub **distribue** : il lie les deux piliers, le sous-pilier MCP et peut lier n'importe quel satellite. Tout silo peut **remonter** vers une page du hub.
 
@@ -86,6 +86,20 @@ Le hub **distribue** : il lie les deux piliers, le sous-pilier MCP et peut lier 
 
 `claude-code-odoo-workflow`, `configurer-odoo-ia-claude-cowork`, `logiciel-construit-par-agents-dix-semaines`. Elles appartiennent au silo Odoo mais traitent de Claude Code autant que d'Odoo : elles peuvent **recevoir** des liens des deux silos et **lier** les deux silos. Sans elles, trois assertions du juge actuel (MA-1, MA-4c, liste workflow) contrediraient le découpage. Liste plafonnée à 3 (règle R5).
 
+### 2.9 Journal des annonces IA (question 10 du dossier, ajoutée après la séance)
+
+| Choix | Décision proposée | Pourquoi |
+|---|---|---|
+| **Place** | **satellite du hub**, pas un silo ni une page-liste exemptée | Une entrée concerne Odoo, Claude ou un modèle ouvert : seul le hub a le droit de lier les deux silos (R5). Exempté, il échapperait aux règles alors qu'il porte du contenu éditorial (verdicts) |
+| **URL** | `/journal-ia` *(à figer dans l'ADR)* ; **absorbe** `bilan-ia-janvier-juillet-2026` (301) | Le bilan de juillet est déjà un journal rétrospectif (2 impr.) : deux pages « que s'est-il passé en IA » dans le hub se cannibaliseraient |
+| **Périmètre** | annonces qui changent une décision sur Odoo, Claude / Cowork, MCP, modèles ouverts ; rien d'autre | « actualité ia » généraliste est tenue par les médias et les labos (1 requête en 16 mois, 0 clic) |
+| **Entrée** | date · labo · lien vers la publication officielle · ce que ça change pour une PME · verdict (`tester` / `attendre` / `ignorer`) · pilier du silo concerné | La traduction en décision est ce que les LLM ne trouvent pas chez le labo |
+| **Données** | `src/data/journal-ia.ts`, une entrée = un objet typé ; la page rend la liste | Rend R11 testable en famille (C) ; le lien vers le pilier est dérivé du `silo`, jamais tapé à la main |
+| **Fraîcheur** | `dateModified` du JSON-LD = date de la dernière entrée, calculée ; jamais posée à la main | Anti-pattern « fausses mises à jour » de CLAUDE.md |
+| **Grosse annonce** | en plus de l'entrée, un article `kind: "news"` (ADR 0007), satellite du silo concerné ; l'entrée le lie | Odoo 20 a été le premier cas |
+| **Tenue** | 2 entrées par mois minimum ; relevé automatisable (boucle news `PROMPT-news.md`, Firecrawl sur les notes de version), **verdict humain** | Une page vivante abandonnée fait plus de mal que pas de page |
+| **Pilote** | 3 mois, calé sur la revue de l'ADR 0007 (2026-11-15, arrêt possible le 2026-12-15) | Mesuré en citations LLM et en clics vers les piliers, pas en trafic propre |
+
 ## 3. Règles de maillage testables
 
 À encoder dans [`maillage-cluster.test.ts`](../../src/lib/maillage-cluster.test.ts) (ou un juge frère `maillage-silos.test.ts` qui réutilise ses extracteurs).
@@ -112,6 +126,8 @@ Deux familles de mesure : **(L)** liens écrits en dur, lus par le walk existant
 | **R8** Local étanche | Aucune page `odoo`, `claude`, `hors` ne lie une page `local` ; une page `local` ne lie aucun satellite national | (L) + R2 | 0 | 1 lien Claude → local, 2 hors → local (annexe B) |
 | **R9** Hors maillage | Aucune page de silo ni du hub ne lie une page `hors` | (L) | 0 | 2 liens Claude → hors |
 | **R10** Portes d'entrée | `/` et `/approche` lient en dur le pilier hub, `/serveur-mcp-odoo` et le pilier formation, avec leurs ancres canoniques | (L) | 3 / 3 par page | `/` lie `/integration-mcp` (« Intégrations profondes ») mais aucun pilier ❌ |
+| **R11** Journal sourcé | Chaque entrée de `journal-ia.ts` a une date ISO, une URL source `https` hors `augmenter.pro`, un `silo` ∈ {hub, odoo, claude}, un verdict de l'énumération ; la page rend le lien vers le pilier de chaque silo cité ; `dateModified` = max des dates | (C) + (L) | 0 entrée incomplète | à créer |
+| **R12** Journal tenu | La dernière entrée a moins de **45 jours** ; au-delà, la page passe d'elle-même en `noindex` et sort du sitemap (calculé au rendu, pas un test qui rougit le CI à date fixe) | (C) | 45 j | à créer |
 
 ### 3.3 Garde-fous anti-vacuum (obligatoires)
 
@@ -120,6 +136,7 @@ Deux familles de mesure : **(L)** liens écrits en dur, lus par le walk existant
 - R2 lit **≥ 30** articles et voit **≥ 90** cartes.
 - R5 voit **≥ 150** liens en dur entre pages de silo (198 aujourd'hui).
 - R7 voit ≥ 10 ancres vers `/serveur-mcp-odoo` et ≥ 5 vers le pilier formation.
+- R11 lit ≥ 6 entrées (amorçage : les annonces d'août à octobre 2026, Odoo 20 compris).
 
 ### 3.4 Tests négatifs (avant de déclarer le juge bon)
 
@@ -177,6 +194,7 @@ Point de départ : le crawl est gelé depuis la sanction de juillet ([recrawl](.
 | Odoo & agents | clics GSC des 14 pages | « serveur mcp odoo », « odoo claude », « claude code odoo », « claude cowork odoo », « coût agent ia odoo » | aucune des 5 en page 1 → revoir le pilier (page « Odoo × Claude » distincte ?) |
 | Claude Code & Cowork | contacts `?offer=formation` + clics | « formation claude code » (+ « en français »), « prompt claude code », « claude cowork prix » | pilier formation hors du top 20 sur « formation claude code » **et** 0 contact attribué → rouvrir le choix du pilier (prompt architecture) |
 | Hub | citations LLM (limelit, prompts de [geo-prompts.md](../seo-audits/2026-05-21-data/geo-prompts.md)) + recherches de marque | « agent ia pme », « automatisation ia pme », « consultant intégration ia » | 0 citation sur les prompts « intégration IA / Odoo » → revoir l'entité avant le maillage |
+| Journal IA (pilote) | citations LLM sur « actualité ia claude », « nouveautés odoo 20 », « actualité ia entreprise » + clics sortants vers les piliers (GA4) | « actualité ia entreprise », « actualité ia claude », « nouveautés odoo 20 » | 0 citation et < 2 entrées/mois tenues au 2026-12-15 → dépublier (301 vers le hub) |
 | Local | actions fiche Google (appels, itinéraires) ; pas d'objectif SEO | « audit informatique yvelines » (info) | — (ancrage, pas un combat) |
 | Maillage (tous) | juge vert ; cohésion recalculée par `node scripts/seo/link-graph.mjs` | — | cible Odoo ≥ 85 %, Claude ≥ 70 %, Local ≥ 80 %, cartes hors silo = 0 |
 
@@ -189,6 +207,7 @@ Calendrier : **T0** = mise en ligne après l'ADR 0008 (baseline GSC + link-graph
 3. Recâblage : les 6 violations, les ancres R7, les entrants Claude R6 (~8 liens), les portes R10.
 4. Pages : hub par fusion (301 ×2), renommage formation (301), sous-pilier `/integration-mcp` repositionné. `pageOpenGraph()`, sitemap, llms.txt, `seo-hygiene.test.ts`.
 5. Mesure T0.
+6. Journal IA, **seulement si** le pilote est validé à la revue ADR 0007 du 2026-11-15 : données + page + 301 du bilan + R11/R12, amorcé avec 6 entrées.
 
 ## Annexe A — demande par graine (2026-10-23)
 
