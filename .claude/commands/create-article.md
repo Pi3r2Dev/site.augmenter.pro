@@ -10,7 +10,7 @@ Ce fichier centralise : positionnement, stack technique, stack SEO/LLM, audience
 
 Spécifique aux articles :
 - Chaque article génère automatiquement un JSON-LD `Article` via `ArticleLayout` (passer le prop `slug` pour l'URL canonique)
-- L'objectif de conversion par défaut est : Audit 180° offert (gratuit mais **jamais** écrire « gratuit ») → Audit 360° IA Booster (225 €)
+- L'objectif de conversion par défaut est : Audit 180° (non facturé, **jamais** écrire « gratuit » ni « offert » : « on ne facture pas le premier rendez-vous ») → Audit 360° IA Booster (225 €)
 
 **Check-lists & appels MCP communs** :
 - Check-lists A à D : [`.claude/templates/seo/checklist.md`](.claude/templates/seo/checklist.md) (SEO on-page, E-E-A-T, JSON-LD, intégration site)
@@ -93,7 +93,7 @@ Propose à l'utilisateur un **brief éditorial complet** avant de rédiger.
 
 **Format standard** : [`.claude/templates/seo/article-brief.md`](.claude/templates/seo/article-brief.md)
 
-Ce template couvre tous les champs requis : titre SEO (< 60 chars, power word — **jamais « Gratuit »**), meta description (< 155 chars), slug (kebab-case, 3-5 mots), **Format** (`guide` / `tutoriel` / `comparatif` / `cas-client` / `glossaire` / `rapport-sectoriel-local`), tags, intent, pilier, cible lecteur, douleur, angle différenciant, preuves, plan H2/H3, longueur calibrée, liens internes, CTA (Audit 180° offert / Audit 360° / contact), RICE, trafic estimé.
+Ce template couvre tous les champs requis : titre SEO (< 60 chars, power word — **jamais « Gratuit »**), meta description (< 155 chars), slug (kebab-case, 3-5 mots), **Format** (`guide` / `tutoriel` / `comparatif` / `cas-client` / `glossaire` / `rapport-sectoriel-local`), tags, intent, pilier, cible lecteur, douleur, angle différenciant, preuves, plan H2/H3, longueur calibrée, liens internes, CTA (Audit 180° sur rendez-vous / Audit 360° / contact), RICE, trafic estimé.
 
 **Choix du format** : si le sujet se prête à un classement local, une étude sectorielle ou un comparatif d'acteurs (ex. « cabinets IA pour PME en Yvelines », « adoption IA dans le BTP francilien »), proposer le format **`rapport-sectoriel-local`** — il est spécifiquement optimisé pour la citation par les LLMs (ChatGPT Search, Perplexity, Gemini AI Mode). Voir détail dans le template + Étape 3 ci-dessous.
 
@@ -339,7 +339,7 @@ Vérifie et affiche un rapport :
 - [ ] Mot-clé principal dans title, H1, meta description, premier paragraphe
 - [ ] Minimum 3 liens internes (vers /prestations, /approche, /contact, /blog/*, /idees, /prompts)
 - [ ] Si prompt associé existe dans `src/data/prompts.ts` → `<PromptCard slug="...">` intégré dans l'article
-- [ ] Au moins 1 CTA clair (Audit 180° offert, contact, etc. — **pas** « gratuit »)
+- [ ] Au moins 1 CTA clair (Audit 180°, contact, etc. — **ni** « gratuit » **ni** « offert »)
 - [ ] Tags cohérents avec les tags existants
 - [ ] Image hero générée (Gemini), convertie en WebP, placée dans `public/images/blog/<slug>.webp`
 - [ ] Prop `image` passé à `ArticleLayout`

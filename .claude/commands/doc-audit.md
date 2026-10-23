@@ -115,7 +115,7 @@ Pour chaque composant dans `src/components/`, vérifie :
 
 **Fichiers clés à analyser :**
 - `src/components/layout/article-layout.tsx` — Props : title, excerpt, tags, readTime, date, slug (optionnel pour JSON-LD canonical)
-- `src/components/layout/header.tsx` — Navigation avec liens + CTA "Audit offert" (le mot « gratuit » est interdit sur le site)
+- `src/components/layout/header.tsx` — Navigation avec liens + CTA audit (« gratuit » et « offert » sont interdits sur le site)
 - `src/components/layout/footer.tsx` — Liens footer
 - `src/components/sections/*.tsx` — 9 sections de la homepage
 

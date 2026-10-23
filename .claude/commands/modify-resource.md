@@ -320,7 +320,7 @@ Re-scorer la ressource avec la grille [`.claude/templates/seo/eeat-grid.md`](.cl
 - [ ] Les données chiffrées sont toujours sourcées et à jour
 - [ ] Les limites/nuances sont toujours présentes
 - [ ] Le contenu reste actionnable pour le lecteur
-- [ ] Aucune occurrence du mot « gratuit » introduite par la modification (remplacer systématiquement par « offert », « sans engagement », « inclus »)
+- [ ] Aucune occurrence de « gratuit » ni « offert » introduite par la modification (registre : « on ne facture pas le premier rendez-vous », « sans engagement », « inclus »)
 
 ### 5.3 SEO — Vérifier après modification
 

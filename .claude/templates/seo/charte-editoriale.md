@@ -71,8 +71,8 @@ Détail opérationnel (patterns d'accroche, boîte à outils PNL, structure « e
 
 ## 4. Lexique & interdits
 
-- 🚫 **Mot « gratuit » interdit** → « offert », « sans engagement », « inclus », « sans CB », « 0 € ». *Exception* : citer ou critiquer l'usage du mot chez un concurrent.
-- ✅ **Power words autorisés** : Guide, Offert, 2026, Sans Engagement, Inclus.
+- 🚫 **Champ lexical du cadeau interdit sur notre offre** : « gratuit », « offert » (retiré le 2026-08-26), « sans frais », « cadeau », « bonus ». Registre de la politique commerciale : **« On ne facture pas le premier rendez-vous »** (phrase canonique), « Sur rendez-vous · sans engagement » (micro-label), la **durée** (« 60 min ») plutôt que le prix, FAQ « Le premier rendez-vous est-il payant ? ». *Exceptions* : citer ou critiquer l'usage du mot chez un concurrent ; décrire un outil ou un contenu métier tiers (« la MFA, c'est gratuit », « port offert »).
+- ✅ **Power words autorisés** : Guide, 2026, Sans Engagement, Inclus, Sur rendez-vous.
 - 🚫 **Zéro jargon corporate** : pas de « nous proposons », « solutions innovantes », « synergies », « cutting-edge », ni listes de services en mode catalogue.
 - **NAP** : une seule forme du nom — **`augmenter.PRO`** (cf. [checklist.md](checklist.md) §G.3). Identifiants de code en anglais ; copy user-facing en français.
 

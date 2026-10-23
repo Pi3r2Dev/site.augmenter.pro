@@ -81,7 +81,7 @@ La zone géographique doit être nuancée selon les modalités d'intervention :
 | Palier | Prix | Format | Zone | Cible |
 |---|---|---|---|---|
 | Lead magnet | 0 € | PDF / check-list / outil | National | Tout prospect |
-| Audit 180° offert | 0 € | 60 min visio | **France entière** | Premier contact qualifié |
+| Audit 180° (non facturé, sous conditions) | 0 € | 60 min visio | **France entière** | Premier contact qualifié |
 | Audit 360° IA Booster | 225 € | 1 demi-journée | Visio ou présentiel 78/95 | Dirigeant prêt à investir |
 | Prestations sur mesure | sur devis | Projet dédié | National (déplacements gros projets) | Missions spécifiques |
 

@@ -8,7 +8,7 @@ Check-lists partagées par les 4 commandes SEO (`/seo-audit`, `/create-article`,
 
 ## ✅ A. SEO on-page (toute page indexable)
 
-- [ ] `<title>` unique, **< 60 caractères**, contient le mot-clé principal et ≥ 1 power word (Guide, Offert, 2026, Sans Engagement, Inclus…)
+- [ ] `<title>` unique, **< 60 caractères**, contient le mot-clé principal et ≥ 1 power word (Guide, 2026, Sans Engagement, Inclus…)
 - [ ] `<meta description>` unique, **< 155 caractères**, avec CTA clair et mot-clé principal
 - [ ] **Géo-ciblage 78/95 uniquement si pertinent** (formation présentielle / page locale). Pour intent national → formulation « PME française », « dirigeant PME » (cf. [`project-context.md`](project-context.md) §Audience)
 - [ ] Mot-clé principal dans : H1, premier paragraphe, ≥ 2 H2
@@ -17,9 +17,9 @@ Check-lists partagées par les 4 commandes SEO (`/seo-audit`, `/create-article`,
 - [ ] Slug URL court et descriptif (kebab-case, **≤ 4-5 mots**)
 - [ ] Échappement JSX OK : `&apos;` pour ', `&amp;` pour &, `&quot;` pour "
 - [ ] ≥ 3 liens internes via `<Link href="/...">` (import `next/link`) — ancres descriptives, pas « cliquez ici »
-- [ ] ≥ 1 CTA clair (Audit 180° offert / Audit 360° / `/contact`)
+- [ ] ≥ 1 CTA clair (Audit 180° sur rendez-vous / Audit 360° / `/contact`)
 - [ ] Images via `<Image>` de `next/image`, format WebP, `alt` descriptif en français
-- [ ] **Pas d'occurrence du mot « gratuit »** — remplacer par « offert », « sans engagement », « inclus », « 0 € »
+- [ ] **Ni « gratuit » ni « offert »** — registre : « on ne facture pas le premier rendez-vous », « sans engagement », « inclus » (charte §4)
 
 ---
 

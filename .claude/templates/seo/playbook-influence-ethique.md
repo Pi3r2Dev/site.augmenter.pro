@@ -119,7 +119,7 @@ Lockert décrit l'ouverture en : **1. élargissement → 2. rayonnement (connexi
 
 `Synchroniser (sa réalité, ses mots) → élargir le cadre (sortir du symptôme) → faire prendre conscience (le constat qui éclaire) → ratifier (valider ce qu'il vit déjà) → inviter (porte ouverte, sortie libre)`
 
-> *Exemple :* « Tu as sûrement déjà testé ChatGPT pour rédiger deux-trois trucs. *(synchro)* Le vrai sujet n'est pas l'outil — c'est de savoir **où** il te fait gagner une journée, et où il te fait perdre ton temps. *(élargir)* La plupart des dirigeants sur-utilisent l'IA sur des gadgets et la sous-utilisent sur l'admin. *(prise de conscience)* Si tu te reconnais, c'est normal — personne ne t'a montré la carte. *(ratification)* J'ai mis la méthode complète à plat dans ce guide, offert et sans CB. Si ça te parle, c'est là. Sinon, garde-le sous le coude. *(invitation + sortie libre)* »
+> *Exemple :* « Tu as sûrement déjà testé ChatGPT pour rédiger deux-trois trucs. *(synchro)* Le vrai sujet n'est pas l'outil — c'est de savoir **où** il te fait gagner une journée, et où il te fait perdre ton temps. *(élargir)* La plupart des dirigeants sur-utilisent l'IA sur des gadgets et la sous-utilisent sur l'admin. *(prise de conscience)* Si tu te reconnais, c'est normal — personne ne t'a montré la carte. *(ratification)* J'ai mis la méthode complète à plat dans ce guide, en accès libre. Si ça te parle, c'est là. Sinon, garde-le sous le coude. *(invitation + sortie libre)* »
 
 C'est l'**anti-tunnel** : on ouvre vers une idée utile et une porte, on ne rétrécit pas vers un bouton « réserve ». Le CTA vient **en plus**, jamais **à la place** (charte §3.1).
 

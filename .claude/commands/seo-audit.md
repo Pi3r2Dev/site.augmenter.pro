@@ -76,7 +76,7 @@ Cette baseline servira de référence pour mesurer l'impact des actions proposé
 - [ ] Signaux E-E-A-T (Phase 7)
 - [ ] Contenu people-first (actionnable, angle original)
 - [ ] Originalité : apporte une valeur absente des SERP concurrents
-- [ ] Pas d'utilisation du mot interdit « gratuit » (remplacer par « offert »)
+- [ ] Pas d'utilisation des mots interdits « gratuit » ni « offert » (registre : « on ne facture pas le premier rendez-vous »)
 
 ### 1.2 Données structurées (JSON-LD)
 
@@ -691,13 +691,13 @@ Lire avec une attention particulière :
 |---------|--------------|
 | Value proposition | Est-elle identique sur home / approche / prestations / contact ? Si non, hiérarchiser et harmoniser. |
 | Différenciation services | Les 5 (ou N) services sont-ils clairement distincts dans l'esprit du lecteur ? Qui fait quoi, pour qui, à quel prix ? |
-| Parcours de conversion | Le lecteur comprend-il en 10 secondes quelle est la **prochaine étape** (Audit 180° offert) ? |
+| Parcours de conversion | Le lecteur comprend-il en 10 secondes quelle est la **prochaine étape** (Audit 180°, premier rendez-vous non facturé) ? |
 | Cohérence des prix | L'offre 0€ → 225€ → sur mesure crée-t-elle une échelle lisible ? Y a-t-il un palier manquant (150€ ? 500€ ? 1500€ abonnement) ? |
 | Naming des offres | « Audit 180° », « Audit 360° IA Booster » sont-ils mémorables, différenciants, parlent-ils au client ? |
 | CTAs | Sont-ils homogènes (même libellé, même URL cible) à travers le site ? |
 | Ton | Le ton « provocateur, douleur-centric » est-il porté partout, ou dilué en SEO corporate sur certaines pages ? |
 | Preuves | Sur chaque page clé, y a-t-il au moins : un chiffre, un logo client, un témoignage, un cas concret ? |
-| Anti-« gratuit » | Le mot « gratuit » est-il absent partout ? Remplacé correctement par « offert », « sans engagement », « inclus » ? |
+| Anti-« gratuit » | « Gratuit » et « offert » sont-ils absents partout ? Registre « on ne facture pas le premier rendez-vous », « sans engagement », « inclus » ? |
 
 Produire un **tableau des incohérences détectées** avec : page concernée, problème, correction proposée.
 
@@ -719,7 +719,7 @@ Appliquer à **chaque service** présent dans `services.tsx` / `pricing.tsx` / `
 
 ### 9.4 Enrichissement de l'offre (nouveaux paliers / produits)
 
-**Pyramide d'offres de référence** : voir [`.claude/templates/seo/service-card.md`](.claude/templates/seo/service-card.md) section « Pyramide d'offres de référence » (Lead magnet → Audit 180° offert → Audit 360° → Atelier collectif → Sprint découverte → Accompagnement mensuel → Abonnement veille → Hotline IA → Prestations sur mesure).
+**Pyramide d'offres de référence** : voir [`.claude/templates/seo/service-card.md`](.claude/templates/seo/service-card.md) section « Pyramide d'offres de référence » (Lead magnet → Audit 180° non facturé → Audit 360° → Atelier collectif → Sprint découverte → Accompagnement mensuel → Abonnement veille → Hotline IA → Prestations sur mesure).
 
 Analyser la pyramide actuelle du site vs. celle de référence et proposer les paliers manquants. Pour chaque proposition, justifier :
 - **Pourquoi maintenant** (signal marché / gap concurrentiel)
@@ -735,7 +735,7 @@ Considérer également : **partenariats / labels** (Activateur France Num, Bpifr
 Vérifier via lecture systématique :
 
 - [ ] Le bouton « Audit 180° » pointe-t-il vers la **même URL** depuis toutes les pages (home, header, footer, articles, prestations) ?
-- [ ] Le libellé du CTA est-il **rigoureusement identique** ? (Sinon harmoniser : « Réserver mon audit 180° offert » par ex.)
+- [ ] Le libellé du CTA est-il **rigoureusement identique** ? (Sinon harmoniser : « Réserver mon audit 180° » par ex.)
 - [ ] Chaque page de service linke-t-elle vers un cas client concret ?
 - [ ] Chaque article linke-t-il vers au moins un service pertinent (maillage édito → conversion) ?
 - [ ] La page `/contact` est-elle accessible en 1 clic depuis n'importe où ?

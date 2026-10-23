@@ -112,7 +112,7 @@ Propose un brief complet **avant de coder**, au format adapté au type de ressou
 **Champs supplémentaires spécifiques à create-resource** (à ajouter au brief choisi) :
 - **Type de ressource** choisi + **justification** (pourquoi ce format vs. les autres)
 - **JSON-LD prévu** (schema + propriétés clés — voir section « JSON-LD par type de ressource » plus bas)
-- **CTA principal** : Audit 180° offert / Audit 360° / contact / ou autre — **jamais** « gratuit »
+- **CTA principal** : Audit 180° / Audit 360° / contact / ou autre — **jamais** « gratuit » ni « offert »
 
 **Tags existants à aligner** (si article) : `"Intelligence Artificielle"`, `"Commercial"`, `"Audit 360°"`, `"PME"`, `"Claude Code"`.
 
@@ -364,14 +364,14 @@ export default function LegalPage() {
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Audit IA 180° offert pour PME",
+  "name": "Audit IA 180° pour PME",
   "description": "...",
   "provider": { "@type": "Organization", "@id": "https://augmenter.pro/#organization" },
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "EUR",
-    "description": "Audit 180° offert de 60 minutes, sans engagement"
+    "description": "Premier rendez-vous de 60 minutes non facturé, sans engagement, pour PME avec un sujet précis"
   }
 }
 ```
@@ -501,7 +501,7 @@ Vérifie et affiche un rapport adapté au type créé :
 - [ ] Slug URL court et descriptif (max 4-5 mots)
 - [ ] Mot-clé principal dans title, H1, meta description, premier paragraphe
 - [ ] Minimum 3 liens internes
-- [ ] Au moins 1 CTA clair (Audit 180° offert, contact, etc. — **pas** « gratuit »)
+- [ ] Au moins 1 CTA clair (Audit 180°, contact, etc. — **ni** « gratuit » **ni** « offert »)
 - [ ] URL ajoutée dans `sitemap.xml` (priorité adaptée)
 - [ ] Ressource ajoutée dans `llms.txt` (section adaptée)
 - [ ] **Ping IndexNow** déclenché sur l'URL publiée (ou TODO si clé pas encore en place — cf. §G.8)

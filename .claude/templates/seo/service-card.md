@@ -26,7 +26,7 @@ Format standard pour la réécriture des services (Phase 9.3) et la spécificati
 | Palier | Prix indicatif | Format | Cible | Statut |
 |--------|----------------|--------|-------|--------|
 | Lead magnet | 0 € | PDF / check-list / calculateur | Tout prospect | À développer |
-| Audit 180° offert | 0 € | 60 min visio | Premier contact qualifié | Actif |
+| Audit 180° (non facturé, sous conditions) | 0 € | 60 min visio | Premier contact qualifié | Actif |
 | Audit 360° IA Booster | 225 € | 1 demi-journée | Dirigeant prêt à investir | Actif |
 | Atelier collectif | 450-750 €/pers | 1/2 journée, 4-6 PME | Pairs qui veulent apprendre ensemble | À tester |
 | Sprint découverte | ~1 500 € | 2 semaines | PME prête à tester un use case | À tester |
@@ -37,7 +37,7 @@ Format standard pour la réécriture des services (Phase 9.3) et la spécificati
 
 Lors d'une refonte d'offre, vérifier :
 - Chaque palier est **distinguable** du précédent (livrable différent, pas juste prix différent)
-- Il existe un **palier d'entrée offert** qui convertit vers payant
+- Il existe un **palier d'entrée non facturé** (sous conditions : sujet précis, intention d'agir) qui convertit vers payant
 - Il existe **au moins un palier récurrent** (LTV > one-shot)
 - Les écarts de prix entre paliers sont cohérents (x3 à x5 entre paliers adjacents, pas plus)
 

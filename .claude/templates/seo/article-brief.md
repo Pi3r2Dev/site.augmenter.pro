@@ -27,7 +27,7 @@ Format standard pour les briefs d'articles livrés par `/seo-audit` (Phase 8.2) 
     - H3 : <...>
   - H2 : FAQ (3-5 questions piochées dans PAA DataForSEO / GSC)
   - H2 : Conclusion + CTA (le CTA vient *en plus* de la valeur déjà donnée, pas à la place)
-- **CTA cible** : Audit 180° offert / Audit 360° IA Booster / page service X
+- **CTA cible** : Audit 180° (premier rendez-vous non facturé) / Audit 360° IA Booster / page service X
 - **Longueur cible** : X mots (calibrée sur la longueur moyenne du top 3 SERP)
 - **Article(s) interne(s) à linker** : [URLs]
 - **Score RICE** : (Reach × Impact × Confidence) / Effort = X
@@ -50,7 +50,7 @@ Format optimisé pour la visibilité dans les LLMs (ChatGPT Search, Perplexity, 
 
 ## Contraintes éditoriales
 
-- **Mot « gratuit » interdit** — préférer « offert », « sans engagement », « inclus »
+- **« Gratuit » et « offert » interdits** — registre : « on ne facture pas le premier rendez-vous », « sur rendez-vous · sans engagement » (cf. charte §4)
 - **Arc « douleur d'abord, solution complète ensuite »** — principe structurel : ouvrir frontalement sur la douleur du dirigeant, puis livrer la solution *entière* et actionnable (pas un teaser qui renvoie au contact). Voir [`project-context.md`](project-context.md) §Contraintes éditoriales #2.
 - **Ton provocateur**, douleurs PME frontales — pas de SEO corporate lisse
   - ✅ « ChatGPT dans votre PME : 3 chantiers utiles, 5 pièges qui coûtent cher »

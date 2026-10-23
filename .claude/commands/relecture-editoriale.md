@@ -59,7 +59,7 @@ Si `$ARGUMENTS` est vide :
 | Repères de lecture (Memo) | … |
 
 ### Écarts à corriger
-1. **[Lexique]** L. 42 : « …diagnostic gratuit… » → mot interdit (charte §4). Remplacer par « diagnostic offert ».
+1. **[Lexique]** L. 42 : « …diagnostic gratuit… » → mot interdit (charte §4). Remplacer par « on ne facture pas ce premier diagnostic ».
 2. **[Arc]** L. 8 : l'intro liste les services (catalogue) au lieu d'ouvrir sur une douleur (§3.1/§3.2). Proposition : « … ».
 3. …
 
