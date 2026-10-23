@@ -359,11 +359,14 @@ Si configurés, ces MCP servers fournissent des données SEO réelles aux comman
 
 Les commandes fonctionnent sans (fallback web search), mais les données sont **beaucoup plus fiables** avec.
 
+**Repli quand le MCP GSC ne démarre pas** (timeout `npx` au lancement, constaté 2026-10-16 et 2026-10-23) : les scripts sans dépendance de [`scripts/seo/`](scripts/seo/) appellent l'API Search Console en direct avec la même clé de compte de service, en lecture seule. `GOOGLE_APPLICATION_CREDENTIALS=<clé.json> node scripts/seo/<script>.mjs` — `gsc-portfolio.mjs` (pages par cluster, 16 mois), `audit-gsc.mjs` (inspection des URL du sitemap : crawl, index, résultats enrichis, canonique), `audit-prod.mjs [base]` (crawl technique prod ou build local), `link-graph.mjs` (maillage interne), `autocomplete-map.mjs` (suggestions Google FR, sans clé). Mode d'emploi : [note de positionnement § 8](docs/seo-audits/2026-10-23-positionnement-integration-ia.md).
+
 ### SEO Conventions
 
 - Every page **must** export `metadata: Metadata` avec `title` (<60 chars) et `description` (<155 chars) optimisés
 - ⚠ **Ne jamais écrire un `openGraph: { … }` à la main dans une page.** Next merge la metadata en **shallow** : l'objet de la page **remplace** celui du root layout, donc une page qui redéclare `openGraph` sans `siteName`, `locale` et `images` perd les trois — carte de partage sans nom de site, sans langue et **sans visuel**. Passer par [`pageOpenGraph()`](src/lib/page-metadata.ts) (pages classiques) ou [`articleMetadata()`](src/lib/article-metadata.ts) (articles)
-- Power words OK : Guide, Offert, 2026, Sans Engagement. **Mot « gratuit » interdit** — utiliser « offert », « sans engagement », « inclus »
+- ⚠ **Chaque URL du sitemap déclare son canonique et sa propre carte de partage.** Le canonique ne peut **pas** vivre dans le root layout : il serait hérité par toute page qui n'en déclare pas et les pointerait toutes vers la home. Une page sans `openGraph` propre hérite de l'`og:url` de la home. Incident du 2026-10-23 : 9 pages sans canonique, 15 avec l'`og:url` de la home. Juge : [src/lib/seo-hygiene.test.ts](src/lib/seo-hygiene.test.ts) (`alternates.canonical` + `pageOpenGraph()` ou `articleMetadata()` exigés)
+- Power words OK : Guide, 2026, Sans Engagement. **Mots « gratuit » et « offert » interdits** sur l'offre — registre : « on ne facture pas le premier rendez-vous », « sur rendez-vous », « sans engagement », « inclus ». Un « gratuit » qui décrit un outil tiers (« la MFA, c'est gratuit ») reste admis
 - Geo-targeting 78/95 uniquement quand pertinent (formation présentielle) ; sinon formulation nationale
 - Layout template: `"%s | augmenter.PRO"`
 - Blog articles : passer `slug` à `ArticleLayout` pour canonical URL dans Article schema
