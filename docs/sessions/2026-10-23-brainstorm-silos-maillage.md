@@ -9,7 +9,7 @@ tags: [seo, positionnement, silos, maillage, geo, adr-0008]
 # Brainstorm : architecture de silos et circulation du jus pour le positionnement « intégration IA / Odoo »
 
 ## Status
-open — brainstorm mené le 2026-10-23 : **scénario hybride retenu** (hub « intégration IA PME » + silos Odoo & agents / Claude Code & Cowork + local fermé). Livrable : [plan d'architecture des silos](../plans/2026-10-23-architecture-silos.md). Prochaine étape : `/dialectic` sur la thèse + le plan.
+open — brainstorm mené le 2026-10-23 : **scénario hybride retenu** (hub « intégration IA PME » + silos Odoo & agents / Claude Code & Cowork + local fermé). Livrable : [plan d'architecture des silos](../plans/2026-10-23-architecture-silos.md), révisé après la revue croisée (verdicts point par point au § 9 : 8 points intégrés, 1 réfuté par la mesure). Prochaine étape : `/dialectic` sur la thèse + le plan.
 
 ## Objet
 
