@@ -338,6 +338,25 @@ Une vague se ferme quand le juge est vert et que `/relecture-editoriale` est pas
 
 Bilan cible : **55 pages en silo** (Odoo 27, hub 16, Claude 12) au lieu de 33 aujourd'hui (Odoo 14, hub 13, Claude 4, hors maillage 2 ; le local, 6 pages, ne bouge pas), 0 hors maillage, chaque page avec sa preuve et sa place dans le maillage testée par le juge.
 
+## 11. Issue du `/dialectic` (2026-10-23)
+
+Débat en 2 rounds : avocat contre red team, synthèse par l'orchestrateur. **Verdict : GO avec réserves.** La thèse et l'architecture cible (§ 10) partent dans l'ADR 0008. Ce qui conditionne chaque vague change : **une preuve par page et l'état du crawl**, pas un nombre de devis.
+
+| Sujet | Retenu | Écarté, et pourquoi |
+|---|---|---|
+| Séquencement | Vague 1 Odoo **par lots de 3-4 pages**, dès que l'essaim du 2026-10-14 montre des impressions après recrawl. Publier pendant que le crawl est gelé ne rapporte rien, et brouillerait la revue | V1 d'un bloc avant l'ADR |
+| Vague 0 (outillage, aucune page indexable) | **Démarre maintenant**, suivi de l'origine des devis en tête : il faut une base de comparaison avant tout changement (ADR 0003, « mesurer d'abord ») | V0 après l'ADR (proposé par l'avocat en round 2) |
+| Critère de décision | Devis attribuables (page d'origine et UTM enregistrées côté serveur, plus un champ déclaratif en complément) + impressions hors des 2 articles dominants ; revue **90 jours après la mise en place du suivi** ; mesure muette → on prolonge ; signal négatif → on rouvre la thèse | « clics du cluster A » (passe au vert grâce aux 2 vieux articles) ; « 0 devis = pas de V1 » (à 3-4 devis/mois, signal nul : ce serait un gel sans fin) |
+| Véracité | **Une page = une preuve 🟢 nommée** dans le registre terrain + relecture humaine avant publication ; le gisement plafonne le nombre de pages (55 = cible, pas quota) | se fier au juge, qui ne vérifie que le maillage |
+| Nouvelle étape | **Consolider** l'essaim du 2026-10-14 et les 2 articles forts (maillage, CTA vers `/serveur-mcp-odoo`, tags d'origine) avant toute page nouvelle | — |
+| Statut de la thèse | **Hypothèse explicite** dans l'ADR tant qu'aucun devis ne lui est attribué | — |
+
+Prémisses du débat corrigées par l'orchestrateur :
+- « l'audience du cluster, ce sont des développeurs » est déjà réfuté par l'ADR 0003 (des dirigeants arrivés en prospects via ce trafic) ;
+- la sanction est attribuée au balisage d'avis retiré le 2026-09-07 et à la mise à jour de juillet, pas à du contenu en masse. Les lots restent justes, parce que c'est le crawl qui limite.
+
+Garde-fou de la vague 0 : le suivi de l'origine touche la chaîne des devis. Conserver le `console.log [QUOTE]` de `src/app/api/quote/route.ts`, le `keepalive: true` et l'absence d'`await` avant `window.open` dans `src/app/contact/quote-wizard.tsx`, et tester en local avant le déploiement par Pierre.
+
 ## Annexe A — demande par graine (2026-10-23)
 
 Suggestions Google FR distinctes, graine + 9 modificateurs + a-z, `hl=fr&gl=fr`, sans clé (méthode de `scripts/seo/autocomplete-map.mjs`).
