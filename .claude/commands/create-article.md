@@ -10,7 +10,7 @@ Ce fichier centralise : positionnement, stack technique, stack SEO/LLM, audience
 
 Spécifique aux articles :
 - Chaque article génère automatiquement un JSON-LD `Article` via `ArticleLayout` (passer le prop `slug` pour l'URL canonique)
-- L'objectif de conversion par défaut est : Audit 180° (non facturé, **jamais** écrire « gratuit » ni « offert » : « on ne facture pas le premier rendez-vous ») → Audit 360° IA Booster (225 €)
+- L'objectif de conversion par défaut est : Audit 180° (non facturé, **jamais** écrire « gratuit » ni « offert » : « on ne facture pas le premier rendez-vous ») → Audit 360° IA Booster (550 €)
 
 **Check-lists & appels MCP communs** :
 - Check-lists A à D : [`.claude/templates/seo/checklist.md`](.claude/templates/seo/checklist.md) (SEO on-page, E-E-A-T, JSON-LD, intégration site)

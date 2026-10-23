@@ -523,7 +523,7 @@ Pour chaque SERP analysé :
 
 Vérifier que `public/llms.txt` contient :
 - [ ] Résumé clair (5-10 lignes) : qui, quoi, pour qui, pourquoi
-- [ ] Liste structurée des services avec prix exacts (0 €, 225 €)
+- [ ] Liste structurée des services avec prix exacts (0 €, 550 €)
 - [ ] Liste complète des articles avec titre + URL + résumé en 1 ligne + **date de publication ISO 8601**
 - [ ] FAQ principales extraites de `/approche`
 - [ ] Contact + zone géographique (Yvelines, Val d'Oise, visio France entière)
@@ -692,7 +692,7 @@ Lire avec une attention particulière :
 | Value proposition | Est-elle identique sur home / approche / prestations / contact ? Si non, hiérarchiser et harmoniser. |
 | Différenciation services | Les 5 (ou N) services sont-ils clairement distincts dans l'esprit du lecteur ? Qui fait quoi, pour qui, à quel prix ? |
 | Parcours de conversion | Le lecteur comprend-il en 10 secondes quelle est la **prochaine étape** (Audit 180°, premier rendez-vous non facturé) ? |
-| Cohérence des prix | L'offre 0€ → 225€ → sur mesure crée-t-elle une échelle lisible ? Y a-t-il un palier manquant (150€ ? 500€ ? 1500€ abonnement) ? |
+| Cohérence des prix | L'offre 0 € → 550 € → sur mesure crée-t-elle une échelle lisible ? Y a-t-il un palier manquant (atelier 450-650 € ? abonnement ?) ? |
 | Naming des offres | « Audit 180° », « Audit 360° IA Booster » sont-ils mémorables, différenciants, parlent-ils au client ? |
 | CTAs | Sont-ils homogènes (même libellé, même URL cible) à travers le site ? |
 | Ton | Le ton « provocateur, douleur-centric » est-il porté partout, ou dilué en SEO corporate sur certaines pages ? |

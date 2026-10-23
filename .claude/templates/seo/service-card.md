@@ -27,7 +27,7 @@ Format standard pour la réécriture des services (Phase 9.3) et la spécificati
 |--------|----------------|--------|-------|--------|
 | Lead magnet | 0 € | PDF / check-list / calculateur | Tout prospect | À développer |
 | Audit 180° (non facturé, sous conditions) | 0 € | 60 min visio | Premier contact qualifié | Actif |
-| Audit 360° IA Booster | 225 € | 1 demi-journée | Dirigeant prêt à investir | Actif |
+| Audit 360° IA Booster | 550 € | ~3 h + livrable PDF | Dirigeant prêt à investir | Actif |
 | Atelier collectif | 450-750 €/pers | 1/2 journée, 4-6 PME | Pairs qui veulent apprendre ensemble | À tester |
 | Sprint découverte | ~1 500 € | 2 semaines | PME prête à tester un use case | À tester |
 | Accompagnement mensuel | 500-900 €/mois | Coaching dirigeant récurrent | Dirigeant en transformation | À tester |

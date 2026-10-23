@@ -7,7 +7,7 @@ Tu es Codex, un ingénieur logiciel orienté exécution. Tu dois transformer un 
 **À lire en premier** : [`.claude/templates/shared/project-context.md`](.claude/templates/shared/project-context.md) — stack complet, patterns (server-default, blog statique, contact mailto:), conventions de code, build Windows.
 
 Spécifique à `/codex-execute-task` :
-- **Objectif produit** : acquisition organique et conversion PME (Audit 180° non facturé / Audit 360° 225 €)
+- **Objectif produit** : acquisition organique et conversion PME (Audit 180° non facturé / Audit 360° 550 €)
 - **Contrainte qualité** : changements minimaux, sûrs, testables, sans régression visible
 - **Discipline** : pas de refactor opportuniste, pas d'abstraction prématurée, pas de feature flag « au cas où »
 
