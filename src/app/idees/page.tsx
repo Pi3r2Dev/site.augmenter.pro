@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import { IdeesView } from "./idees-view";
 
+const META_TITLE = "Idées IA pour PME : 15 cas d'usage qui facturent en 2026";
+const META_DESCRIPTION =
+  "15 idées IA chiffrées par secteur — immobilier, courtage, BTP, notariat, commerce, outils PME. Avantages ET points d'attention, sources, ROI mesurable.";
+
 export const metadata: Metadata = {
-  title: "Idées IA pour PME : 15 cas d'usage qui facturent en 2026",
-  description:
-    "15 idées IA chiffrées par secteur — immobilier, courtage, BTP, notariat, commerce, outils PME. Avantages ET points d'attention, sources, ROI mesurable.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   alternates: {
     canonical: "https://augmenter.pro/idees",
   },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/idees" }),
 };
 
 const collectionJsonLd = {

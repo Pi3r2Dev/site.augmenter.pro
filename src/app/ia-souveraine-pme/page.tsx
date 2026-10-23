@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import Link from "next/link";
 import {
   AlertTriangle,
@@ -25,11 +26,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const META_TITLE = "IA souveraine PME : tes données restent chez toi";
+const META_DESCRIPTION =
+  "Tes équipes collent déjà des contrats dans ChatGPT ? Modèles ouverts hébergés sur une infra qu'on administre, ou chez toi. Ce qui sort, ce qui reste.";
+
 export const metadata: Metadata = {
-  title: "IA souveraine PME : tes données restent chez toi",
-  description:
-    "Tes équipes collent déjà des contrats dans ChatGPT ? Modèles ouverts hébergés sur une infra qu'on administre, ou chez toi. Ce qui sort, ce qui reste.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   alternates: { canonical: "https://augmenter.pro/ia-souveraine-pme" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/ia-souveraine-pme" }),
 };
 
 /**

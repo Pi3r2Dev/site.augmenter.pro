@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import { CTA } from "@/components/sections/cta";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 import Link from "next/link";
@@ -38,11 +39,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const META_TITLE = "Audit IA PME : diagnostic 180° + feuille de route chiffrée";
+const META_DESCRIPTION =
+  "L'IA peut booster ta PME mais tu ne sais pas par où commencer ? Audit IA : cas d'usage prioritaires, ROI chiffré, feuille de route. 1er RDV non facturé.";
+
 export const metadata: Metadata = {
-  title: "Audit IA PME : diagnostic 180° + feuille de route chiffrée",
-  description:
-    "L'IA peut booster ta PME mais tu ne sais pas par où commencer ? Audit IA : cas d'usage prioritaires, ROI chiffré, feuille de route. 1er RDV non facturé.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   alternates: { canonical: "https://augmenter.pro/audit-ia-pme" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/audit-ia-pme" }),
 };
 
 const stats = [

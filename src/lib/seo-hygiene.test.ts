@@ -247,4 +247,14 @@ describe("canonique déclaré sur chaque URL du sitemap", () => {
       /articleMetadata\(/.test(src);
     expect(declares, `${expected} : ni alternates.canonical ni articleMetadata()`).toBe(true);
   });
+
+  // Même dégât côté partage : sans openGraph propre, la page hérite de celui
+  // du root layout et son og:url pointe vers la home (15 pages le 2026-10-23).
+  it.each(locs.filter((p) => p !== ""))("%s déclare sa propre carte de partage", (path) => {
+    const src = readFileSync(join(root, "src/app", path, "page.tsx"), "utf8");
+    expect(
+      /pageOpenGraph\(|articleMetadata\(/.test(src),
+      `${path} : ni pageOpenGraph() ni articleMetadata()`,
+    ).toBe(true);
+  });
 });

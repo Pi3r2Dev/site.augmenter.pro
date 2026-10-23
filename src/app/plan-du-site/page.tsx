@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import Link from "next/link";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 import { ARTICLES } from "@/data/resources";
@@ -13,11 +14,15 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
+const META_TITLE = "Plan du site : pages, articles & ressources";
+const META_DESCRIPTION =
+  "Toutes les pages d'augmenter.PRO en un coup d'œil : approche, prestations IA & audit, articles, prompts, idées et mentions légales.";
+
 export const metadata: Metadata = {
-  title: "Plan du site : pages, articles & ressources",
-  description:
-    "Toutes les pages d'augmenter.PRO en un coup d'œil : approche, prestations IA & audit, articles, prompts, idées et mentions légales.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   alternates: { canonical: "/plan-du-site" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/plan-du-site" }),
 };
 
 // ─────────────────────────────────────────────────────────────────────────

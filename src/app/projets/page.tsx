@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -8,13 +9,17 @@ import { Separator } from "@/components/ui/separator";
 import { modules, techStack } from "@/data/modules";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 
+const META_TITLE = "Nos Projets & Réalisations IA";
+const META_DESCRIPTION =
+  "Découvrez les projets IA développés par augmenter.PRO : 10 modules pour veille automatisée, email intelligent, transcription vocale et plus.";
+
 export const metadata: Metadata = {
-  title: "Nos Projets & Réalisations IA",
-  description:
-    "Découvrez les projets IA développés par augmenter.PRO : 10 modules pour veille automatisée, email intelligent, transcription vocale et plus.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   alternates: {
     canonical: "https://augmenter.pro/projets",
   },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/projets" }),
 };
 
 const categoryLabels: Record<string, string> = {

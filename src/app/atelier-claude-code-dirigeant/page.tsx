@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,11 +17,15 @@ import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 
+const META_TITLE = "Atelier Claude Cowork & Claude Code Dirigeant PME";
+const META_DESCRIPTION =
+  "Deux ateliers ½ journée pour dirigeant PME : Claude Cowork no-code (450 €) puis Claude Code (650 €) selon votre projet. Présentiel 78/95 ou visio.";
+
 export const metadata: Metadata = {
-  title: "Atelier Claude Cowork & Claude Code Dirigeant PME",
-  description:
-    "Deux ateliers ½ journée pour dirigeant PME : Claude Cowork no-code (450 €) puis Claude Code (650 €) selon votre projet. Présentiel 78/95 ou visio.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   alternates: { canonical: "https://augmenter.pro/atelier-claude-code-dirigeant" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/atelier-claude-code-dirigeant" }),
 };
 
 const serviceJsonLd = {
