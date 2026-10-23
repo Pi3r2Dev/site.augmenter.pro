@@ -218,3 +218,33 @@ describe("redirections SEO", () => {
     );
   });
 });
+
+// Dégât réel (constaté en GSC le 2026-10-23) : 9 pages du sitemap, dont la home,
+// /strategie-ia-pme et les deux pages audit, n'émettaient aucun <link rel="canonical">.
+// Google choisit alors seul l'URL de référence ; une variante (?utm, www) peut
+// lui être préférée. Le canonique ne peut pas vivre dans le root layout : il
+// serait hérité par toutes les pages et les pointerait vers la home.
+describe("canonique déclaré sur chaque URL du sitemap", () => {
+  const locs = [
+    ...readFileSync(join(root, "public/sitemap.xml"), "utf8").matchAll(
+      /<loc>https:\/\/augmenter\.pro([^<]*)<\/loc>/g,
+    ),
+  ].map((m) => m[1].replace(/\/$/, ""));
+
+  it("trouve assez d'URL pour que la vérification ait un sens", () => {
+    expect(locs.length).toBeGreaterThanOrEqual(40);
+  });
+
+  it.each(locs)("%s déclare son canonique", (path) => {
+    const file = join(root, "src/app", path, "page.tsx");
+    expect(existsSync(file), `${file} introuvable`).toBe(true);
+    const src = readFileSync(file, "utf8");
+    const expected = path === "" ? "/" : path;
+    const declares =
+      src.includes(`canonical: "${expected}"`) ||
+      src.includes(`canonical: "https://augmenter.pro${expected}"`) ||
+      /canonical: PATH\b/.test(src) ||
+      /articleMetadata\(/.test(src);
+    expect(declares, `${expected} : ni alternates.canonical ni articleMetadata()`).toBe(true);
+  });
+});

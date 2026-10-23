@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import { CTA } from "@/components/sections/cta";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 import Link from "next/link";
@@ -32,10 +33,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const META_TITLE = "Intégration Serveur MCP pour PME | Yvelines & Val-d'Oise";
+const META_DESCRIPTION =
+  "Connectez vos outils métier (CRM, ERP, email) à l'IA grâce au protocole MCP. Intégration sur mesure pour PME en Île-de-France. Diagnostic inclus.";
+
 export const metadata: Metadata = {
-  title: "Intégration Serveur MCP pour PME | Yvelines & Val-d'Oise",
-  description:
-    "Connectez vos outils métier (CRM, ERP, email) à l'IA grâce au protocole MCP. Intégration sur mesure pour PME en Île-de-France. Diagnostic inclus.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  alternates: { canonical: "/integration-mcp" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/integration-mcp" }),
 };
 
 const serviceJsonLd = {

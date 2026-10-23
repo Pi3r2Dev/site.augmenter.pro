@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import { CTA } from "@/components/sections/cta";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 import Link from "next/link";
@@ -30,10 +31,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const META_TITLE = "Stratégie IA PME : feuille de route en 60 min · Visio France + 78/95";
+const META_DESCRIPTION =
+  "Tes concurrents avancent sur ChatGPT/Claude et tu tâtonnes ? Feuille de route IA priorisée en 60 min. Financement Bpifrance. Sur RDV.";
+
 export const metadata: Metadata = {
-  title: "Stratégie IA PME : feuille de route en 60 min · Visio France + 78/95",
-  description:
-    "Tes concurrents avancent sur ChatGPT/Claude et tu tâtonnes ? Feuille de route IA priorisée en 60 min. Financement Bpifrance. Sur RDV.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  alternates: { canonical: "/strategie-ia-pme" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/strategie-ia-pme" }),
 };
 
 const stats = [

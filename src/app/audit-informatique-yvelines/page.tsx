@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import { CTA } from "@/components/sections/cta";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 import Link from "next/link";
@@ -43,10 +44,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const META_TITLE = "Audit informatique & cybersécurité PME Yvelines (78)";
+const META_DESCRIPTION =
+  "Ton prestataire te facture plus qu'il ne résout ? Audit informatique & cybersécurité PME en Yvelines (78) — 60 min non facturées, sans CB, sans engagement.";
+
 export const metadata: Metadata = {
-  title: "Audit informatique & cybersécurité PME Yvelines (78)",
-  description:
-    "Ton prestataire te facture plus qu'il ne résout ? Audit informatique & cybersécurité PME en Yvelines (78) — 60 min non facturées, sans CB, sans engagement.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  alternates: { canonical: "/audit-informatique-yvelines" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/audit-informatique-yvelines" }),
 };
 
 const stats = [

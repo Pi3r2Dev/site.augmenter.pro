@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PromptLibrary } from "./prompt-library";
 import { prompts, categories } from "@/data/prompts";
 
+const META_TITLE = "Prompts ChatGPT & Claude pour PME — Prêts à l'Emploi";
+const META_DESCRIPTION = `${prompts.length} prompts ChatGPT et Claude testés en PME : commercial, marketing, ERP Odoo, cybersécurité. Copie, colle et adapte à ton entreprise en 2 minutes.`;
+
 export const metadata: Metadata = {
-  title: "Prompts ChatGPT & Claude pour PME — Prêts à l'Emploi",
-  description: `${prompts.length} prompts ChatGPT et Claude testés en PME : commercial, marketing, ERP Odoo, cybersécurité. Copie, colle et adapte à ton entreprise en 2 minutes.`,
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  alternates: { canonical: "/prompts" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/prompts" }),
 };
 
 const jsonLd = {

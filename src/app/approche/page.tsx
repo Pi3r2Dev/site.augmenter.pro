@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import { ApprocheNarrative } from "./narrative";
 import { FAQ_ITEMS } from "./narrative/data";
 
+const META_TITLE = "Approche, Prestations & Tarifs — Audit IA dès 550 € | PME 78/95";
+const META_DESCRIPTION =
+  "Méthode 360° en 4 piliers (technique, process, humain, vision), audit 180° sur rendez-vous, 360° à 550 €. Plan d'action concret. PME Yvelines & Val d'Oise.";
+
 export const metadata: Metadata = {
-  title: "Approche, Prestations & Tarifs — Audit IA dès 550 € | PME 78/95",
-  description:
-    "Méthode 360° en 4 piliers (technique, process, humain, vision), audit 180° sur rendez-vous, 360° à 550 €. Plan d'action concret. PME Yvelines & Val d'Oise.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  alternates: { canonical: "/approche" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/approche" }),
 };
 
 const servicesJsonLd = {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/page-metadata";
 import { CTA } from "@/components/sections/cta";
 import { ShaderBackdrop } from "@/components/widgets/shader-backdrop";
 import Link from "next/link";
@@ -43,10 +44,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const META_TITLE = "Audit informatique Val-d'Oise (95) : 60 min pour y voir clair";
+const META_DESCRIPTION =
+  "Pannes, sécurité fragile, infogérance opaque ? Audit informatique PME en Val-d'Oise (95) : 60 min non facturées, audit dès 550 €. NIS2 & RGPD inclus.";
+
 export const metadata: Metadata = {
-  title: "Audit informatique Val-d'Oise (95) : 60 min pour y voir clair",
-  description:
-    "Pannes, sécurité fragile, infogérance opaque ? Audit informatique PME en Val-d'Oise (95) : 60 min non facturées, audit dès 550 €. NIS2 & RGPD inclus.",
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  alternates: { canonical: "/audit-informatique-val-doise" },
+  openGraph: pageOpenGraph({ title: META_TITLE, description: META_DESCRIPTION, path: "/audit-informatique-val-doise" }),
 };
 
 const stats = [
