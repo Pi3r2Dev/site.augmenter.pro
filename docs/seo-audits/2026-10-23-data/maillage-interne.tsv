@@ -1,0 +1,736 @@
+from	cluster_from	to	cluster_to	anchor
+/	D	/contact	D	Diagnostic — 60 min
+/	D	/approche	D	Voir nos prestations
+/	D	/ia-souveraine-pme	A	IA souveraines
+/	D	/integration-mcp	A	Intégrations profondes
+/	D	/blog/configurer-odoo-ia-claude-cowork	A	Lire le cas client : configurer Odoo avec l'IA, 4 jours au lieu de 3 500 €
+/	D	/projets	D	Développement sur mesure
+/	D	/atelier-claude-code-dirigeant	A	Formation continue
+/	D	/blog/compte-rendu-reunion-ia	C	Un compte rendu de réunion qui produit les actionsLe résumé, n'importe quel outi
+/	D	/blog/configurer-odoo-ia-claude-cowork	A	Configurer votre ERP sans y passer un trimestreParamétrage, reprise de données, 
+/	D	/integration-mcp	A	Brancher l'IA directement sur votre ERPNouveauUn serveur MCP qui donne à l'assis
+/	D	/ia-souveraine-pme	A	Un modèle ouvert, chez nous ou chez vousNouveauPour les dossiers que vous ne vou
+/	D	/contact	D	Vérifier mon cas — 60 min
+/	D	/augmenter-mon-entreprise	D	Explorer par situation plutôt que par outil
+/	D	/audit-ia-pme	C	Le financement en détail
+/	D	/blog/cout-agent-ia-odoo	A	À la uneIAPMEAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le
+/	D	/blog/odoo-20-serveur-mcp-agents	A	IAPMEOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encor
+/	D	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAPMEL'agent qui ne peut pas toucher aux prix4 min
+/	D	/blog/petit-modele-bien-outille	A	IAPMEUn petit modèle bien outillé bat un gros modèle qui devine5 min
+/	D	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	IAPMELaisser une IA enrichir votre catalogue, sans perdre la main5 min
+/	D	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAPMEOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre cont
+/	D	/blog/logiciel-construit-par-agents-dix-semaines	A	IAPMEConstruire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 te
+/	D	/blog	D	Voir tout
+/	D	/contact	D	Réserver mon diagnostic
+/	D	/contact	D	Réserver
+/	D	/contact	D	Démarrer
+/augmenter-mon-entreprise	D	/blog/cout-agent-ia-odoo	A	Article6 min de lectureAgent IA sur Odoo : crédits, abonnements ou une machine à
+/augmenter-mon-entreprise	D	/blog/odoo-20-serveur-mcp-agents	A	Article5 min de lectureOdoo 20 ouvre la porte aux agents : ce qui change, et ce 
+/augmenter-mon-entreprise	D	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	Article4 min de lectureL'agent qui ne peut pas toucher aux prixTL;DR — Un prompt
+/augmenter-mon-entreprise	D	/blog/petit-modele-bien-outille	A	Article5 min de lectureUn petit modèle bien outillé bat un gros modèle qui devin
+/augmenter-mon-entreprise	D	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	Article5 min de lectureLaisser une IA enrichir votre catalogue, sans perdre la m
+/augmenter-mon-entreprise	D	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	Article5 min de lectureOdoo Online : ce que vous ne pourrez jamais y installer (
+/augmenter-mon-entreprise	D	/blog/logiciel-construit-par-agents-dix-semaines	A	Article5 min de lectureConstruire un logiciel avec des agents : dix semaines, 43
+/augmenter-mon-entreprise	D	/blog/claude-code-odoo-workflow	A	Article11 min de lectureClaude Code et Odoo : le workflow technique pour piloter
+/augmenter-mon-entreprise	D	/blog/ma-pme-en-2027	A	Article14 min de lectureMa PME en 2027 : vous n'êtes plus obligé d'être cinq per
+/augmenter-mon-entreprise	D	/blog/compte-rendu-reunion-ia	C	Article12 min de lectureCompte rendu de réunion par IA : les outils font le résu
+/augmenter-mon-entreprise	D	/blog/bilan-ia-janvier-juillet-2026	C	Article14 min de lectureIA janvier-juillet 2026 : sept mois de bascule, et ce qu
+/augmenter-mon-entreprise	D	/blog/serveur-mcp-heberge-pme	A	Article10 min de lectureServeur MCP hébergé : faut-il le coder, le louer ou l'hé
+/augmenter-mon-entreprise	D	/blog/cybersecurite-pme-guide-pratique	B	Article13 min de lectureCybersécurité PME : 93 % des attaques sont évitables ave
+/augmenter-mon-entreprise	D	/blog/prompt-audit-projet-claude-fable	A	Article11 min de lectureVotre code vieillit en silence : le prompt Claude Fable 
+/augmenter-mon-entreprise	D	/blog/claude-cowork-community-manager	A	Article11 min de lectureJ'ai transformé Claude Cowork en community manager : le 
+/augmenter-mon-entreprise	D	/blog/agent-ia-dirigeant-pme	A	Article9 min de lectureAgent IA pour dirigeant de PME : c'est quoi, et comment e
+/augmenter-mon-entreprise	D	/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	Article10 min de lectureLe patron-goulot : quand l'IA rend le dirigeant encore p
+/augmenter-mon-entreprise	D	/blog/ia-contradicteur-prompts-dirigeant-pme	A	Article9 min de lectureL'IA comme contradicteur : 5 prompts pour challenger vos 
+/augmenter-mon-entreprise	D	/blog/rapport-adoption-ia-btp-francilien-2026	C	Article6 min de lectureRapport 2026 : Adoption de l'IA dans le BTP francilienTL;
+/augmenter-mon-entreprise	D	/blog/configurer-odoo-ia-claude-cowork	A	Article12 min de lectureConfigurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €TL
+/augmenter-mon-entreprise	D	/blog/veille-concurrentielle-ia-pme	C	Article8 min de lectureVeille Concurrentielle IA pour PME : Guide Pratique 2026T
+/augmenter-mon-entreprise	D	/blog/automatiser-emails-reseaux-sociaux-ia	C	Article7 min de lectureAutomatiser Emails et Réseaux Sociaux avec l'IA en PMETL;
+/augmenter-mon-entreprise	D	/blog/cout-audit-informatique-yvelines	B	Article8 min de lectureCombien coûte un audit informatique PME ?TL;DR — Les four
+/augmenter-mon-entreprise	D	/blog/nis2-pme-yvelines-val-doise	B	Article10 min de lectureNIS2 PME : Guide + Checklist de Conformité 2026TL;DR — N
+/augmenter-mon-entreprise	D	/blog/serveur-mcp-guide-pratique-pme	A	Article8 min de lectureServeur MCP : Connecter l'IA à Vos Outils MétierTL;DR — M
+/augmenter-mon-entreprise	D	/blog/serveur-mcp-integration-crm-erp	A	Article7 min de lectureIntégrer un Agent IA à Votre CRM/ERP : Pourquoi MCP Chang
+/augmenter-mon-entreprise	D	/blog/machine-de-guerre-commerciale	C	Article4 min de lectureRénovation Énergétique : construisez votre machine de gue
+/augmenter-mon-entreprise	D	/blog/ia-redefinit-vente-commerciale	C	Article3 min de lectureComment l'IA redéfinit la Vente CommercialeTL;DR — Où l'I
+/augmenter-mon-entreprise	D	/blog/claude-code-prompt-architecture	A	Article2 min de lectureUtiliser Claude Code sans ce prompt est une perte de temp
+/augmenter-mon-entreprise	D	/blog/comparatif-llm-vente-commerciale	C	Article8 min de lectureComparatif : Forces et Faiblesses des LLM dans la VenteTL
+/augmenter-mon-entreprise	D	/blog/5-signes-moderniser-informatique-pme	B	Article3 min de lecture5 signes qu'il est temps de moderniser l'informatique de 
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeImmobilierVoicebot qui décroche tous vos appelsTL;DR — Un agent voc
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeImmobilierAnnonces immo SEO en 30 secondesTL;DR — Pipeline qui pren
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeCourtagePré-scoring dossier emprunteur en 30 sTL;DR — L'IA lit bull
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeCourtagePipeline courtier + relances bancaires autoTL;DR — CRM cour
+/augmenter-mon-entreprise	D	/blog/machine-de-guerre-commerciale	C	Idée chiffréeBTPDevis chantier depuis 5 photosTL;DR — L'artisan envoie 3-5 photo
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeNotariatExtraction d'actes notariés + clausesTL;DR — IA souveraine 
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeCommerceAgent WhatsApp réservation + avis GoogleTL;DR — Bot WhatsAp
+/augmenter-mon-entreprise	D	/blog/configurer-odoo-ia-claude-cowork	A	Idée chiffréeOutils PMEReconfigurer Odoo en 4 jours avec ClaudeTL;DR — Plutôt qu
+/augmenter-mon-entreprise	D	/blog/veille-concurrentielle-ia-pme	C	Idée chiffréeOutils PMEVeille concurrentielle automatiséeTL;DR — Surveillance au
+/augmenter-mon-entreprise	D	/blog/agent-ia-dirigeant-pme	A	Idée chiffréeOutils PMEBot Telegram de gestion (IA + RAG + email)TL;DR — Un assi
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeCommerceStandard vocal IA avec votre voix de marqueTL;DR — Un stand
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeBTPVision intelligente de chantier (OmniVision)TL;DR — Des caméras 
+/augmenter-mon-entreprise	D	/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	Idée chiffréeOutils PMEBase de connaissance IA interne (anti patron-goulot)TL;DR
+/augmenter-mon-entreprise	D	/blog/cybersecurite-pme-guide-pratique	B	Idée chiffréeOutils PMECopilote cybersécurité PMETL;DR — Un copilote qui surveil
+/augmenter-mon-entreprise	D	/idees	D	Idée chiffréeOutils PMEPré-compta : lecture des factures fournisseurs (OCR + IA)
+/augmenter-mon-entreprise	D	/blog/nis2-pme-yvelines-val-doise	B	Idée chiffréeOutils PMEAssistant de conformité NIS2TL;DR — Un assistant qui lit 
+/augmenter-mon-entreprise	D	/prompts	A	PromptDébutant · 3 minEmail de prospection B2B personnaliséTL;DR — Génère un ema
+/augmenter-mon-entreprise	D	/prompts	A	PromptIntermédiaire · 5 minTraitement des objections clientsTL;DR — Prépare des 
+/augmenter-mon-entreprise	D	/prompts	A	PromptAvancé · 10 minRédaction de proposition commerciale structuréeTL;DR — Crée
+/augmenter-mon-entreprise	D	/prompts	A	PromptDébutant · 2 minRésumé de réunion avec plan d’actionsTL;DR — Transforme vo
+/augmenter-mon-entreprise	D	/prompts	A	PromptDébutant · 3 minPriorisation intelligente des tâchesTL;DR — Applique la ma
+/augmenter-mon-entreprise	D	/prompts	A	PromptDébutant · 3 minPost LinkedIn professionnel engageantTL;DR — Crée un post 
+/augmenter-mon-entreprise	D	/prompts	A	PromptIntermédiaire · 5 minBrief de contenu SEO pour article de blogTL;DR — Génè
+/augmenter-mon-entreprise	D	/prompts	A	PromptAvancé · 15 minSkill de paramétrage Odoo 19 completTL;DR — Prompt système 
+/augmenter-mon-entreprise	D	/prompts	A	PromptIntermédiaire · 5 minAutomatisation des workflows CRMTL;DR — Identifie et 
+/augmenter-mon-entreprise	D	/prompts	A	PromptDébutant · 15 minAuto-diagnostic IA pour dirigeant PMETL;DR — Évaluez en 1
+/augmenter-mon-entreprise	D	/prompts	A	PromptIntermédiaire · 10 minEstimation du ROI d’un projet IATL;DR — Calculez le 
+/augmenter-mon-entreprise	D	/prompts	A	PromptIntermédiaire · 5 minClaude Code : prompt d’architecte logicielTL;DR — Le 
+/augmenter-mon-entreprise	D	/prompts	A	PromptIntermédiaire · 45 minClaude Fable : audit complet de projet en 4 phasesTL
+/augmenter-mon-entreprise	D	/prompts	A	PromptDébutant · 10 minChecklist cybersécurité PME (NIS2)TL;DR — Évaluez votre n
+/augmenter-mon-entreprise	D	/prompts	A	PromptIntermédiaire · 10 minPlan de réponse aux incidents de sécuritéTL;DR — Gén
+/augmenter-mon-entreprise	D	/contact	D	Réserver l'audit 180°
+/augmenter-mon-entreprise	D	/contact	D	Réserver mon audit 180°
+/blog/claude-code-odoo-workflow	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	Odoo Online : ce que vous ne pourrez jamais y installer
+/blog/claude-code-odoo-workflow	A	/blog/claude-code-prompt-architecture	A	guide du CLAUDE.md et des Skills
+/blog/claude-code-odoo-workflow	A	/atelier-claude-code-dirigeant	A	Voir les ateliers
+/blog/claude-code-odoo-workflow	A	/blog/serveur-mcp-integration-crm-erp	A	serveur MCP
+/blog/claude-code-odoo-workflow	A	/blog/odoo-20-serveur-mcp-agents	A	Odoo 20 et son serveur MCP : ce qui change, ce qui manque
+/blog/claude-code-odoo-workflow	A	/blog/cout-agent-ia-odoo	A	crédits, abonnements ou une machine à vous
+/blog/claude-code-odoo-workflow	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	l'agent IA qui ne peut pas toucher aux prix
+/blog/claude-code-odoo-workflow	A	/blog/logiciel-construit-par-agents-dix-semaines	A	construire un logiciel avec des agents en dix semaines
+/blog/claude-code-odoo-workflow	A	/serveur-mcp-odoo	A	notre page serveur MCP pour Odoo
+/blog/claude-code-odoo-workflow	A	/integration-mcp	A	intégration MCP pour PME
+/blog/claude-code-odoo-workflow	A	/blog/configurer-odoo-ia-claude-cowork	A	retour sur la reconfiguration d'un Odoo en quatre jours
+/blog/claude-code-odoo-workflow	A	/contact	D	réservez un Audit 180°
+/blog/claude-code-odoo-workflow	A	/prompts	A	bibliothèque de prompts
+/blog/claude-code-odoo-workflow	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/claude-code-odoo-workflow	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre contour
+/blog/claude-code-odoo-workflow	A	/blog/configurer-odoo-ia-claude-cowork	A	IAConfigurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €Comment nous avons recon
+/blog/claude-code-odoo-workflow	A	/blog/claude-code-prompt-architecture	A	Claude CodeUtiliser Claude Code sans ce prompt est une perte de tempsLe prompt s
+/blog/claude-code-odoo-workflow	A	/contact	D	Réserver mon diagnostic
+/a-propos	D	/contact	D	Demander un devis ou un premier rendez-vous
+/a-propos	D	/auteur/pierre-legrand	D	Pierre Legrand
+/a-propos	D	/approche	D	la page approche
+/a-propos	D	/blog/bilan-ia-janvier-juillet-2026	C	Ce que ça donne sur sept mois
+/a-propos	D	/blog/configurer-odoo-ia-claude-cowork	A	Configurer Odoo avec l'IA
+/a-propos	D	/projets	D	Les projets
+/a-propos	D	/prompts	A	Les prompts
+/a-propos	D	/blog/bilan-ia-janvier-juillet-2026	C	Bilan IA janvier-juillet 2026
+/a-propos	D	/blog/ma-pme-en-2027	A	Ma PME en 2027
+/a-propos	D	/augmenter-mon-entreprise	D	le hub le fait à ta place
+/a-propos	D	/augmenter-mon-entreprise	D	OutilSélecteur 3 axesAugmenter mon entreprise : le hub par secteur, douleur et o
+/a-propos	D	/	D	OutilMétier × outil en placeCe que l'IA sait faire chez toi : la matrice de capa
+/a-propos	D	/blog/ma-pme-en-2027	A	Outil3 questions → une porteMa PME en 2027 : le guide d'achat en trois questions
+/a-propos	D	/audit-ia-pme	C	Page180° non facturé · 360° à 550 €Audit IA pour PME : diagnostic et feuille de 
+/a-propos	D	/approche	D	PageMéthode · prestations · FAQNotre approche : quatre piliers, deux audits, les
+/a-propos	D	/strategie-ia-pme	C	PageFeuille de route 6 moisStratégie IA pour PME : cadrer une trajectoire sur si
+/a-propos	D	/blog/petit-modele-bien-outille	A	Article5 min de lectureUn petit modèle bien outillé bat un gros modèle qui devin
+/a-propos	D	/blog/bilan-ia-janvier-juillet-2026	C	Article14 min de lectureIA janvier-juillet 2026 : sept mois de bascule, et ce qu
+/a-propos	D	/blog/agent-ia-dirigeant-pme	A	Article9 min de lectureAgent IA pour dirigeant de PME : c'est quoi, et comment e
+/a-propos	D	/blog/rapport-adoption-ia-btp-francilien-2026	C	Article6 min de lectureRapport 2026 : Adoption de l'IA dans le BTP francilienTab
+/a-propos	D	/blog/5-signes-moderniser-informatique-pme	B	Article3 min de lecture5 signes qu'il est temps de moderniser l'informatique de 
+/a-propos	D	/prompts	A	PromptDébutant · 15 minAuto-diagnostic IA pour dirigeant PMEÉvaluez en 15 minute
+/a-propos	D	/prompts	A	PromptIntermédiaire · 10 minEstimation du ROI d’un projet IACalculez le retour s
+/a-propos	D	/prompts	A	OutilCopier-collerLa bibliothèque de prompts pour dirigeant de PMEVerdict — Des 
+/a-propos	D	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	Article5 min de lectureLaisser une IA enrichir votre catalogue, sans perdre la m
+/a-propos	D	/blog/compte-rendu-reunion-ia	C	Article12 min de lectureCompte rendu de réunion par IA : les outils font le résu
+/a-propos	D	/blog/claude-cowork-community-manager	A	Article11 min de lectureJ'ai transformé Claude Cowork en community manager : le 
+/a-propos	D	/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	Article10 min de lectureLe patron-goulot : quand l'IA rend le dirigeant encore p
+/a-propos	D	/blog/ia-contradicteur-prompts-dirigeant-pme	A	Article9 min de lectureL'IA comme contradicteur : 5 prompts pour challenger vos 
+/a-propos	D	/blog/veille-concurrentielle-ia-pme	C	Article8 min de lectureVeille Concurrentielle IA pour PME : Guide Pratique 2026A
+/a-propos	D	/blog/automatiser-emails-reseaux-sociaux-ia	C	Article7 min de lectureAutomatiser Emails et Réseaux Sociaux avec l'IA en PMEGag
+/a-propos	D	/prompts	A	PromptDébutant · 2 minRésumé de réunion avec plan d’actionsTransforme vos notes 
+/a-propos	D	/prompts	A	PromptDébutant · 3 minPriorisation intelligente des tâchesApplique la matrice Ei
+/a-propos	D	/blog/serveur-mcp-integration-crm-erp	A	Article7 min de lectureIntégrer un Agent IA à Votre CRM/ERP : Pourquoi MCP Chang
+/a-propos	D	/blog/machine-de-guerre-commerciale	C	Article4 min de lectureRénovation Énergétique : construisez votre machine de gue
+/a-propos	D	/blog/ia-redefinit-vente-commerciale	C	Article3 min de lectureComment l'IA redéfinit la Vente CommercialeOù l'IA fait v
+/a-propos	D	/blog/comparatif-llm-vente-commerciale	C	Article8 min de lectureComparatif : Forces et Faiblesses des LLM dans la VenteCh
+/a-propos	D	/idees	D	Idée chiffréeImmobilierVoicebot qui décroche tous vos appelsUn agent vocal IA ré
+/a-propos	D	/prompts	A	PromptDébutant · 3 minEmail de prospection B2B personnaliséGénère un email de pr
+/a-propos	D	/prompts	A	PromptIntermédiaire · 5 minTraitement des objections clientsPrépare des réponses
+/a-propos	D	/prompts	A	PromptAvancé · 10 minRédaction de proposition commerciale structuréeCrée une pro
+/a-propos	D	/prompts	A	PromptDébutant · 3 minPost LinkedIn professionnel engageantCrée un post LinkedIn
+/a-propos	D	/prompts	A	PromptIntermédiaire · 5 minBrief de contenu SEO pour article de blogGénère un br
+/a-propos	D	/prompts	A	PromptIntermédiaire · 5 minAutomatisation des workflows CRMIdentifie et document
+/a-propos	D	/atelier-claude-code-dirigeant	A	Page½ journée · dès 450 € HTAtelier Claude Cowork & Claude Code pour dirigeantVe
+/a-propos	D	/serveur-mcp-odoo	A	PageOdoo 19 & 20 · Online (plan Custom)Serveur MCP pour Odoo : ce qu'Odoo 20 ne 
+/a-propos	D	/integration-mcp	A	PageAudit · conception · intégrationIntégration MCP : brancher l'IA sur ton ERP,
+/a-propos	D	/blog/cout-agent-ia-odoo	A	Article6 min de lectureAgent IA sur Odoo : crédits, abonnements ou une machine à
+/a-propos	D	/blog/odoo-20-serveur-mcp-agents	A	Article5 min de lectureOdoo 20 ouvre la porte aux agents : ce qui change, et ce 
+/a-propos	D	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	Article5 min de lectureOdoo Online : ce que vous ne pourrez jamais y installer (
+/a-propos	D	/blog/logiciel-construit-par-agents-dix-semaines	A	Article5 min de lectureConstruire un logiciel avec des agents : dix semaines, 43
+/a-propos	D	/blog/claude-code-odoo-workflow	A	Article11 min de lectureClaude Code et Odoo : le workflow technique pour piloter
+/a-propos	D	/blog/serveur-mcp-heberge-pme	A	Article10 min de lectureServeur MCP hébergé : faut-il le coder, le louer ou l'hé
+/a-propos	D	/blog/prompt-audit-projet-claude-fable	A	Article11 min de lectureVotre code vieillit en silence : le prompt Claude Fable 
+/a-propos	D	/blog/configurer-odoo-ia-claude-cowork	A	Article12 min de lectureConfigurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €Co
+/a-propos	D	/blog/cout-audit-informatique-yvelines	B	Article8 min de lectureCombien coûte un audit informatique PME ?Les fourchettes 
+/a-propos	D	/blog/serveur-mcp-guide-pratique-pme	A	Article8 min de lectureServeur MCP : Connecter l'IA à Vos Outils MétierMCP, c'es
+/a-propos	D	/blog/claude-code-prompt-architecture	A	Article2 min de lectureUtiliser Claude Code sans ce prompt est une perte de temp
+/a-propos	D	/prompts	A	PromptAvancé · 15 minSkill de paramétrage Odoo 19 completPrompt système complet 
+/a-propos	D	/prompts	A	PromptIntermédiaire · 5 minClaude Code : prompt d’architecte logicielLe prompt s
+/a-propos	D	/prompts	A	PromptIntermédiaire · 45 minClaude Fable : audit complet de projet en 4 phasesLe
+/a-propos	D	/ia-souveraine-pme	A	PageRGPD · AI Act · modèles ouvertsIA souveraine pour PME : tes données restent 
+/a-propos	D	/audit-informatique-yvelines	B	PagePrésentiel 78Audit informatique en Yvelines (78)Verdict — Diagnostic IT en p
+/a-propos	D	/audit-informatique-val-doise	B	PagePrésentiel 95Audit informatique en Val d'Oise (95)Verdict — Diagnostic IT en
+/a-propos	D	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	Article4 min de lectureL'agent qui ne peut pas toucher aux prixUn prompt qui dit
+/a-propos	D	/blog/cybersecurite-pme-guide-pratique	B	Article13 min de lectureCybersécurité PME : 93 % des attaques sont évitables ave
+/a-propos	D	/blog/nis2-pme-yvelines-val-doise	B	Article10 min de lectureNIS2 PME : Guide + Checklist de Conformité 2026NIS2 vous
+/a-propos	D	/prompts	A	PromptDébutant · 10 minChecklist cybersécurité PME (NIS2)Évaluez votre niveau de
+/a-propos	D	/prompts	A	PromptIntermédiaire · 10 minPlan de réponse aux incidents de sécuritéGénère un p
+/strategie-ia-pme	C	/contact	D	Diagnostic initial — 60 min
+/strategie-ia-pme	C	/approche	D	Découvrir nos prestations
+/strategie-ia-pme	C	/blog/5-signes-moderniser-informatique-pme	B	Découvrez les 5 signes qu'il est temps de moderniser
+/strategie-ia-pme	C	/approche	D	approche 360°
+/strategie-ia-pme	C	/blog/comparatif-llm-vente-commerciale	C	comparatif LLM pour la vente
+/strategie-ia-pme	C	/approche	D	Voir les tarifs détaillés
+/strategie-ia-pme	C	/audit-ia-pme	C	audit IA dédié
+/strategie-ia-pme	C	/blog/ia-redefinit-vente-commerciale	C	l'IA redéfinit la vente commerciale
+/strategie-ia-pme	C	/contact	D	Vérifier mon éligibilité
+/strategie-ia-pme	C	/projets	D	projets IA
+/strategie-ia-pme	C	/contact	D	Réserver mon diagnostic
+/audit-ia-pme	C	/contact	D	Diagnostic 180° — 60 min
+/audit-ia-pme	C	/approche	D	Voir nos prestations
+/audit-ia-pme	C	/blog/agent-ia-dirigeant-pme	A	Comprendre ce qu'un agent IA peut faire pour toi
+/audit-ia-pme	C	/blog/prompt-audit-projet-claude-fable	A	prompt d'audit complet Claude Fable
+/audit-ia-pme	C	/approche	D	approche 360°
+/audit-ia-pme	C	/contact	D	Lancer mon diagnostic 180°
+/audit-ia-pme	C	/idees	D	l'IA facture déjà dans 9 cas d'usage concrets
+/audit-ia-pme	C	/contact	D	Vérifier mon éligibilité
+/audit-ia-pme	C	/strategie-ia-pme	C	accompagnement stratégie IA
+/audit-ia-pme	C	/audit-informatique-yvelines	B	Découvre notre audit informatique (78)
+/audit-ia-pme	C	/contact	D	Réserver mon diagnostic
+/audit-informatique-yvelines	B	/audit-ia-pme	C	voir notre audit IA pour PME
+/audit-informatique-yvelines	B	/contact	D	Diagnostic initial — 60 min
+/audit-informatique-yvelines	B	/approche	D	Voir nos prestations
+/audit-informatique-yvelines	B	/blog/5-signes-moderniser-informatique-pme	B	Les 5 signes qu'il est temps de moderniser
+/audit-informatique-yvelines	B	/blog/cybersecurite-pme-guide-pratique	B	Le guide pratique de la cybersécurité PME
+/audit-informatique-yvelines	B	/blog/nis2-pme-yvelines-val-doise	B	Le guide et la checklist NIS2
+/audit-informatique-yvelines	B	/blog/cout-audit-informatique-yvelines	B	Combien coûte un audit informatique
+/audit-informatique-yvelines	B	/approche	D	approche 360°
+/audit-informatique-yvelines	B	/contact	D	Demander un diagnostic
+/audit-informatique-yvelines	B	/strategie-ia-pme	C	En savoir plus sur notre accompagnement IA
+/audit-informatique-yvelines	B	/audit-ia-pme	C	Découvrez notre audit IA pour PME
+/audit-informatique-yvelines	B	/contact	D	Réserver mon audit 78
+/audit-informatique-val-doise	B	/contact	D	Diagnostic initial — 60 min
+/audit-informatique-val-doise	B	/approche	D	Voir nos prestations
+/audit-informatique-val-doise	B	/blog/5-signes-moderniser-informatique-pme	B	Les 5 signes qu'il est temps de moderniser
+/audit-informatique-val-doise	B	/approche	D	approche 360°
+/audit-informatique-val-doise	B	/contact	D	Demander un diagnostic
+/audit-informatique-val-doise	B	/strategie-ia-pme	C	En savoir plus sur notre accompagnement IA
+/audit-informatique-val-doise	B	/audit-ia-pme	C	Découvrez notre audit IA pour PME
+/audit-informatique-val-doise	B	/contact	D	Réserver mon audit 95
+/approche	D	/auteur/pierre-legrand	D	Pierre Legrand
+/approche	D	/contact	D	Réserver mon diagnostic
+/approche	D	/contact	D	Démarrer l'Audit IA
+/approche	D	/contact	D	Réserver l'audit 180°
+/approche	D	/blog	D	Lire les articles
+/approche	D	/audit-informatique-yvelines	B	→Audit informatique Yvelines (78)
+/approche	D	/audit-informatique-val-doise	B	→Audit informatique Val d'Oise (95)
+/approche	D	/integration-mcp	A	→Intégration MCP
+/approche	D	/strategie-ia-pme	C	→Stratégie IA PME
+/approche	D	/blog	D	→Articles & tutos
+/approche	D	/prompts	A	→Prompts IA
+/approche	D	/idees	D	→Idées PRO
+/approche	D	/projets	D	→Nos projets
+/approche	D	/auteur/pierre-legrand	D	→Pierre Legrand
+/approche	D	/plan-du-site	D	→Plan du site
+/idees	D	/blog/machine-de-guerre-commerciale	C	05Idée 05Méthode complète →Devis chantier depuis 5 photosL'artisan envoie 3-5 ph
+/idees	D	/blog/configurer-odoo-ia-claude-cowork	A	08Idée 08Cas client →Reconfigurer Odoo en 4 jours avec ClaudePlutôt que payer 3 
+/idees	D	/blog/veille-concurrentielle-ia-pme	C	09Idée 09Méthode 5 étapes →Veille concurrentielle automatiséeSurveillance auto d
+/idees	D	/blog/agent-ia-dirigeant-pme	A	10Idée 10Créer son agent →Bot Telegram de gestion (IA + RAG + email)Un assistant
+/idees	D	/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	13Idée 13Le patron-goulot →Base de connaissance IA interne (anti patron-goulot)U
+/idees	D	/blog/cybersecurite-pme-guide-pratique	B	14Idée 14Le guide cyber →Copilote cybersécurité PMEUn copilote qui surveille les
+/idees	D	/blog/nis2-pme-yvelines-val-doise	B	16Idée 16Le guide NIS2 →Assistant de conformité NIS2Un assistant qui lit votre s
+/idees	D	/contact	D	Proposer une idée
+/idees	D	/contact	D	Réserver mon diagnostic
+/contact	D	/approche	D	Notre approche →
+/blog	D	/blog/cout-agent-ia-odoo	A	À la uneIAPMEAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le
+/blog	D	/contact	D	Je m'abonne
+/blog	D	/blog/odoo-20-serveur-mcp-agents	A	IAPMEOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encor
+/blog	D	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAPMEL'agent qui ne peut pas toucher aux prix4 min
+/blog	D	/blog/petit-modele-bien-outille	A	IAPMEUn petit modèle bien outillé bat un gros modèle qui devine5 min
+/blog	D	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	IAPMELaisser une IA enrichir votre catalogue, sans perdre la main5 min
+/blog	D	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAPMEOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre cont
+/blog	D	/blog/logiciel-construit-par-agents-dix-semaines	A	IAPMEConstruire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 te
+/blog	D	/blog/claude-code-odoo-workflow	A	IAClaude CodeClaude Code et Odoo : le workflow technique pour piloter votre ERP 
+/blog	D	/blog/ma-pme-en-2027	A	IAPMEMa PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la fois14 
+/blog	D	/blog/compte-rendu-reunion-ia	C	IAPMECompte rendu de réunion par IA : les outils font le résumé, l'agent fait le
+/blog	D	/blog/bilan-ia-janvier-juillet-2026	C	IAPMEIA janvier-juillet 2026 : sept mois de bascule, et ce que votre PME doit en
+/blog	D	/blog/serveur-mcp-heberge-pme	A	IAPMEServeur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?10
+/blog	D	/blog/cybersecurite-pme-guide-pratique	B	CybersécuritéPMECybersécurité PME : 93 % des attaques sont évitables avec du bon
+/blog	D	/blog/prompt-audit-projet-claude-fable	A	IAClaude CodeVotre code vieillit en silence : le prompt Claude Fable qui audite 
+/blog	D	/blog/claude-cowork-community-manager	A	IACommercialJ'ai transformé Claude Cowork en community manager : le setup, les p
+/blog	D	/blog/agent-ia-dirigeant-pme	A	IAPMEAgent IA pour dirigeant de PME : c'est quoi, et comment en créer un9 min
+/blog	D	/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	IAPMELe patron-goulot : quand l'IA rend le dirigeant encore plus indispensable10
+/blog	D	/blog/ia-contradicteur-prompts-dirigeant-pme	A	IAPMEL'IA comme contradicteur : 5 prompts pour challenger vos décisions9 min
+/blog	D	/blog/rapport-adoption-ia-btp-francilien-2026	C	IAPMERapport 2026 : Adoption de l'IA dans le BTP francilien6 min
+/blog	D	/blog/configurer-odoo-ia-claude-cowork	A	IAPMEConfigurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €12 min
+/blog	D	/blog/veille-concurrentielle-ia-pme	C	IAPMEVeille Concurrentielle IA pour PME : Guide Pratique 20268 min
+/blog	D	/blog/automatiser-emails-reseaux-sociaux-ia	C	IAProductivitéAutomatiser Emails et Réseaux Sociaux avec l'IA en PME7 min
+/blog	D	/blog/cout-audit-informatique-yvelines	B	Audit 360°PMECombien coûte un audit informatique PME ?8 min
+/blog	D	/blog/nis2-pme-yvelines-val-doise	B	CybersécuritéPMENIS2 PME : Guide + Checklist de Conformité 202610 min
+/blog	D	/blog/serveur-mcp-guide-pratique-pme	A	IAIntégrationServeur MCP : Connecter l'IA à Vos Outils Métier8 min
+/blog	D	/blog/serveur-mcp-integration-crm-erp	A	IACommercialIntégrer un Agent IA à Votre CRM/ERP : Pourquoi MCP Change la Donne7
+/blog	D	/blog/machine-de-guerre-commerciale	C	IACommercialRénovation Énergétique : construisez votre machine de guerre commerc
+/blog	D	/blog/ia-redefinit-vente-commerciale	C	IACommercialComment l'IA redéfinit la Vente Commerciale3 min
+/blog	D	/blog/claude-code-prompt-architecture	A	Claude CodeUtiliser Claude Code sans ce prompt est une perte de temps2 min
+/blog	D	/blog/comparatif-llm-vente-commerciale	C	IACommercialComparatif : Forces et Faiblesses des LLM dans la Vente8 min
+/blog	D	/blog/5-signes-moderniser-informatique-pme	B	Audit 360°PME5 signes qu'il est temps de moderniser l'informatique de votre PME3
+/blog	D	/contact	D	Réserver
+/prompts	A	/blog/ia-redefinit-vente-commerciale	C	Article associé
+/prompts	A	/blog/machine-de-guerre-commerciale	C	Article associé
+/prompts	A	/blog/automatiser-emails-reseaux-sociaux-ia	C	Article associé
+/prompts	A	/blog/configurer-odoo-ia-claude-cowork	A	Article associé
+/prompts	A	/blog/serveur-mcp-integration-crm-erp	A	Article associé
+/prompts	A	/blog/5-signes-moderniser-informatique-pme	B	Article associé
+/prompts	A	/blog/claude-code-prompt-architecture	A	Article associé
+/prompts	A	/blog/prompt-audit-projet-claude-fable	A	Article associé
+/prompts	A	/blog/nis2-pme-yvelines-val-doise	B	Article associé
+/prompts	A	/blog/claude-code-prompt-architecture	A	l'architecture d'un prompt Claude Code
+/prompts	A	/blog/ia-contradicteur-prompts-dirigeant-pme	A	les prompts contradicteur pour dirigeant
+/prompts	A	/blog/prompt-audit-projet-claude-fable	A	prompt d'audit de projet
+/prompts	A	/augmenter-mon-entreprise	D	hub Augmenter mon entreprise
+/prompts	A	/contact	D	Discutons de votre projet
+/prompts	A	/approche	D	Voir nos prestations
+/auteur/pierre-legrand	D	/a-propos	D	À propos d'augmenter.PRO
+/auteur/pierre-legrand	D	/contact	D	Réserver mon Audit 180°
+/auteur/pierre-legrand	D	/approche	D	Voir l'approche complète
+/auteur/pierre-legrand	D	/contact	D	Réserver mon audit
+/integration-mcp	A	/contact	D	Diagnostic initial (60 min)
+/integration-mcp	A	/blog/serveur-mcp-guide-pratique-pme	A	Comprendre MCP en 8 min
+/integration-mcp	A	/serveur-mcp-odoo	A	serveur MCP métier pour Odoo
+/integration-mcp	A	/blog/claude-code-odoo-workflow	A	le workflow technique Claude Code + Odoo
+/integration-mcp	A	/contact	D	Réserver
+/integration-mcp	A	/contact	D	Demander un devis
+/integration-mcp	A	/contact	D	Discutons
+/integration-mcp	A	/blog/serveur-mcp-heberge-pme	A	où vivent vos données — coder, louer ou héberger soi-même
+/integration-mcp	A	/blog/serveur-mcp-guide-pratique-pme	A	MCP et la sécurité
+/integration-mcp	A	/contact	D	Réserver mon diagnostic
+/serveur-mcp-odoo	A	/contact	D	Regarder mon Odoo — 60 min
+/serveur-mcp-odoo	A	/blog/odoo-20-serveur-mcp-agents	A	Ce qu'Odoo 20 change, en 5 min
+/serveur-mcp-odoo	A	/blog/odoo-20-serveur-mcp-agents	A	l'article dédié
+/serveur-mcp-odoo	A	/blog/cout-agent-ia-odoo	A	crédits, abonnements ou une machine à toi
+/serveur-mcp-odoo	A	/blog/logiciel-construit-par-agents-dix-semaines	A	dix semaines, 436 tâches
+/serveur-mcp-odoo	A	/blog/configurer-odoo-ia-claude-cowork	A	tout son Odoo reconfiguré en 4 jours avec Claude Cowork
+/serveur-mcp-odoo	A	/blog/cout-agent-ia-odoo	A	Agent IA sur Odoo : crédits, abonnements ou une machine à vous ? 6 min de lectur
+/serveur-mcp-odoo	A	/blog/odoo-20-serveur-mcp-agents	A	Odoo 20 ouvre la porte aux agents : ce qui change, ce qu'il manque 5 min de lect
+/serveur-mcp-odoo	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	L'agent qui ne peut pas toucher aux prix 4 min de lecture
+/serveur-mcp-odoo	A	/blog/petit-modele-bien-outille	A	Un petit modèle bien outillé bat un gros modèle qui devine 5 min de lecture
+/serveur-mcp-odoo	A	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	Laisser une IA enrichir votre catalogue sans perdre la main 5 min de lecture
+/serveur-mcp-odoo	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	Odoo Online : ce que vous ne pourrez jamais y installer 5 min de lecture
+/serveur-mcp-odoo	A	/blog/logiciel-construit-par-agents-dix-semaines	A	Construire un logiciel avec des agents : dix semaines, 436 tâches 5 min de lectu
+/serveur-mcp-odoo	A	/blog/claude-code-odoo-workflow	A	Claude Code et Odoo : le workflow technique pour piloter votre ERP sans module P
+/serveur-mcp-odoo	A	/integration-mcp	A	intégration MCP pour PME
+/serveur-mcp-odoo	A	/atelier-claude-code-dirigeant	A	l'atelier Claude Code pour dirigeants
+/serveur-mcp-odoo	A	/contact	D	Réserver mon diagnostic
+/atelier-claude-code-dirigeant	A	/contact	D	Réserver l'atelier Cowork — 450 € HT
+/atelier-claude-code-dirigeant	A	/contact	D	Réserver l'atelier Code — 650 € HT
+/atelier-claude-code-dirigeant	A	/blog/claude-code-prompt-architecture	A	L'architecture de prompt Claude Code
+/atelier-claude-code-dirigeant	A	/blog/prompt-audit-projet-claude-fable	A	Le prompt d'audit complet de projet (Claude Fable)
+/atelier-claude-code-dirigeant	A	/blog/configurer-odoo-ia-claude-cowork	A	Configurer Odoo avec Claude Cowork en 4 jours
+/atelier-claude-code-dirigeant	A	/blog/claude-code-odoo-workflow	A	Le workflow technique Claude Code + Odoo
+/atelier-claude-code-dirigeant	A	/serveur-mcp-odoo	A	Notre serveur MCP pour Odoo
+/atelier-claude-code-dirigeant	A	/contact	D	Réserver mon diagnostic
+/blog/cout-agent-ia-odoo	A	/blog/petit-modele-bien-outille	A	un petit modèle bien outillé
+/blog/cout-agent-ia-odoo	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	l'agent qui ne peut pas toucher aux prix
+/blog/cout-agent-ia-odoo	A	/blog/serveur-mcp-heberge-pme	A	coder, louer ou héberger soi-même
+/blog/cout-agent-ia-odoo	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/cout-agent-ia-odoo	A	/blog/odoo-20-serveur-mcp-agents	A	Odoo 20 ouvre la porte aux agents
+/blog/cout-agent-ia-odoo	A	/contact	D	prenez rendez-vous
+/blog/cout-agent-ia-odoo	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/cout-agent-ia-odoo	A	/blog/petit-modele-bien-outille	A	IAUn petit modèle bien outillé bat un gros modèle qui devineOn vous vend le plus
+/blog/cout-agent-ia-odoo	A	/blog/odoo-20-serveur-mcp-agents	A	IAOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encoreOd
+/blog/cout-agent-ia-odoo	A	/blog/serveur-mcp-heberge-pme	A	IAServeur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?Vous 
+/blog/cout-agent-ia-odoo	A	/contact	D	Réserver mon diagnostic
+/blog/odoo-20-serveur-mcp-agents	A	/blog/petit-modele-bien-outille	A	un petit modèle suffit
+/blog/odoo-20-serveur-mcp-agents	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	l'agent qui ne peut pas toucher aux prix
+/blog/odoo-20-serveur-mcp-agents	A	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	laisser une IA enrichir votre catalogue sans perdre la main
+/blog/odoo-20-serveur-mcp-agents	A	/blog/cout-agent-ia-odoo	A	crédits, abonnements ou une machine à vous
+/blog/odoo-20-serveur-mcp-agents	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	compatible Odoo Online
+/blog/odoo-20-serveur-mcp-agents	A	/serveur-mcp-odoo	A	ce que notre serveur MCP pour Odoo ajoute
+/blog/odoo-20-serveur-mcp-agents	A	/contact	D	prenez rendez-vous
+/blog/odoo-20-serveur-mcp-agents	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/odoo-20-serveur-mcp-agents	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAL'agent qui ne peut pas toucher aux prixPeur qu'un agent accorde une remise ou
+/blog/odoo-20-serveur-mcp-agents	A	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/odoo-20-serveur-mcp-agents	A	/blog/claude-code-odoo-workflow	A	IAClaude Code et Odoo : le workflow technique pour piloter votre ERP sans module
+/blog/odoo-20-serveur-mcp-agents	A	/contact	D	Réserver mon diagnostic
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	enrichir votre catalogue sans perdre la main
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/blog/cout-agent-ia-odoo	A	zéro euro à la question
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/blog/odoo-20-serveur-mcp-agents	A	l'article sur la version 20
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/contact	D	prenez rendez-vous
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	IALaisser une IA enrichir votre catalogue, sans perdre la mainOdoo 20 propose d'
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/blog/odoo-20-serveur-mcp-agents	A	IAOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encoreOd
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/blog/logiciel-construit-par-agents-dix-semaines	A	IAConstruire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests
+/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	/contact	D	Réserver mon diagnostic
+/blog/petit-modele-bien-outille	A	/ia-souveraine-pme	A	IA souveraine pour PME
+/blog/petit-modele-bien-outille	A	/blog/cout-agent-ia-odoo	A	crédits, abonnements ou une machine à vous
+/blog/petit-modele-bien-outille	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/petit-modele-bien-outille	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	l'agent qui ne peut pas toucher aux prix
+/blog/petit-modele-bien-outille	A	/contact	D	prenez rendez-vous
+/blog/petit-modele-bien-outille	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/petit-modele-bien-outille	A	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/petit-modele-bien-outille	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAL'agent qui ne peut pas toucher aux prixPeur qu'un agent accorde une remise ou
+/blog/petit-modele-bien-outille	A	/blog/serveur-mcp-guide-pratique-pme	A	IAServeur MCP : Connecter l'IA à Vos Outils MétierMCP, c'est le câble qui branch
+/blog/petit-modele-bien-outille	A	/contact	D	Réserver mon diagnostic
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/blog/cout-agent-ia-odoo	A	crédits, abonnements ou une machine à vous
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	l'agent qui ne peut pas toucher aux prix
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/contact	D	prenez rendez-vous
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAL'agent qui ne peut pas toucher aux prixPeur qu'un agent accorde une remise ou
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/blog/petit-modele-bien-outille	A	IAUn petit modèle bien outillé bat un gros modèle qui devineOn vous vend le plus
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/blog/configurer-odoo-ia-claude-cowork	A	IAConfigurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €Comment nous avons recon
+/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	/contact	D	Réserver mon diagnostic
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/blog/cout-agent-ia-odoo	A	ne décompte rien à la question
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/blog/odoo-20-serveur-mcp-agents	A	Odoo 20 ouvre la porte aux agents
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/blog/claude-code-odoo-workflow	A	le workflow technique Claude Code + Odoo
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/blog/configurer-odoo-ia-claude-cowork	A	configurer Odoo avec l'IA
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/contact	D	prenez rendez-vous
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/blog/claude-code-odoo-workflow	A	IAClaude Code et Odoo : le workflow technique pour piloter votre ERP sans module
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/blog/configurer-odoo-ia-claude-cowork	A	IAConfigurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €Comment nous avons recon
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/blog/odoo-20-serveur-mcp-agents	A	IAOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encoreOd
+/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	/contact	D	Réserver mon diagnostic
+/blog/logiciel-construit-par-agents-dix-semaines	A	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	premier lot d'enrichissement du catalogue
+/blog/logiciel-construit-par-agents-dix-semaines	A	/blog/cout-agent-ia-odoo	A	Le calcul détaillé
+/blog/logiciel-construit-par-agents-dix-semaines	A	/atelier-claude-code-dirigeant	A	Voir les ateliers
+/blog/logiciel-construit-par-agents-dix-semaines	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/logiciel-construit-par-agents-dix-semaines	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	l'agent qui ne peut pas toucher aux prix
+/blog/logiciel-construit-par-agents-dix-semaines	A	/atelier-claude-code-dirigeant	A	l'atelier Claude Code pour dirigeant
+/blog/logiciel-construit-par-agents-dix-semaines	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/logiciel-construit-par-agents-dix-semaines	A	/blog/claude-code-prompt-architecture	A	Claude CodeUtiliser Claude Code sans ce prompt est une perte de tempsLe prompt s
+/blog/logiciel-construit-par-agents-dix-semaines	A	/blog/prompt-audit-projet-claude-fable	A	IAVotre code vieillit en silence : le prompt Claude Fable qui audite tout votre 
+/blog/logiciel-construit-par-agents-dix-semaines	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAL'agent qui ne peut pas toucher aux prixPeur qu'un agent accorde une remise ou
+/blog/logiciel-construit-par-agents-dix-semaines	A	/contact	D	Réserver mon diagnostic
+/blog/ma-pme-en-2027	A	/auteur/pierre-legrand	D	Pierre Legrand
+/blog/ma-pme-en-2027	A	/contact	D	Audit 180°
+/blog/ma-pme-en-2027	A	/contact	D	Audit 180° — 60 min
+/blog/ma-pme-en-2027	A	/atelier-claude-code-dirigeant	A	L'équipe doit pêcher seule ? Atelier dès 450 €
+/blog/ma-pme-en-2027	A	/atelier-claude-code-dirigeant	A	Voir les ateliers
+/blog/ma-pme-en-2027	A	/	D	page d’accueil
+/blog/ma-pme-en-2027	A	/augmenter-mon-entreprise	D	Augmenter mon entreprise
+/blog/ma-pme-en-2027	A	/atelier-claude-code-dirigeant	A	atelier Claude Cowork
+/blog/ma-pme-en-2027	A	/approche	D	l’approche
+/blog/ma-pme-en-2027	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/ma-pme-en-2027	A	/blog/serveur-mcp-heberge-pme	A	IAServeur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?Vous 
+/blog/ma-pme-en-2027	A	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/ma-pme-en-2027	A	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/ma-pme-en-2027	A	/contact	D	Réserver mon diagnostic
+/blog/compte-rendu-reunion-ia	C	/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	le paradoxe du patron-goulot
+/blog/compte-rendu-reunion-ia	C	/prompts	A	Voir
+/blog/compte-rendu-reunion-ia	C	/blog/serveur-mcp-guide-pratique-pme	A	guide des serveurs MCP pour PME
+/blog/compte-rendu-reunion-ia	C	/blog/agent-ia-dirigeant-pme	A	notre article sur les agents IA pour dirigeants
+/blog/compte-rendu-reunion-ia	C	/contact	D	Audit 180°
+/blog/compte-rendu-reunion-ia	C	/approche	D	notre page approche
+/blog/compte-rendu-reunion-ia	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/compte-rendu-reunion-ia	C	/blog/ma-pme-en-2027	A	IAMa PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la foisGuide 
+/blog/compte-rendu-reunion-ia	C	/blog/agent-ia-dirigeant-pme	A	IAAgent IA pour dirigeant de PME : c'est quoi, et comment en créer unTout le mon
+/blog/compte-rendu-reunion-ia	C	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	IALaisser une IA enrichir votre catalogue, sans perdre la mainOdoo 20 propose d'
+/blog/compte-rendu-reunion-ia	C	/contact	D	Réserver mon diagnostic
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/comparatif-llm-vente-commerciale	C	comparatif des LLM appliqués à la vente
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/veille-concurrentielle-ia-pme	C	veille sur ce que l'IA dit de vous et de vos concurrents
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/serveur-mcp-heberge-pme	A	coder, louer ou héberger soi-même son serveur MCP
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/agent-ia-dirigeant-pme	A	comment créer le vôtre en quatre étapes
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/serveur-mcp-guide-pratique-pme	A	un serveur MCP relié à vos outils métier
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/cybersecurite-pme-guide-pratique	B	guide cybersécurité PME — 93 % des attaques sont évitables
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/nis2-pme-yvelines-val-doise	B	notre guide NIS2 avec checklist de conformité
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/configurer-odoo-ia-claude-cowork	A	Odoo configuré en 4 jours au lieu de 3 500 €
+/blog/bilan-ia-janvier-juillet-2026	C	/augmenter-mon-entreprise	D	les ressources filtrées par votre secteur et votre douleur du moment
+/blog/bilan-ia-janvier-juillet-2026	C	/contact	D	Réserver mon créneau
+/blog/bilan-ia-janvier-juillet-2026	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/serveur-mcp-heberge-pme	A	IAServeur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?Vous 
+/blog/bilan-ia-janvier-juillet-2026	C	/blog/logiciel-construit-par-agents-dix-semaines	A	IAConstruire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests
+/blog/bilan-ia-janvier-juillet-2026	C	/contact	D	Réserver mon diagnostic
+/blog/serveur-mcp-heberge-pme	A	/blog/serveur-mcp-guide-pratique-pme	A	guide pratique du serveur MCP
+/blog/serveur-mcp-heberge-pme	A	/blog/serveur-mcp-integration-crm-erp	A	CRM ou d'un ERP métier
+/blog/serveur-mcp-heberge-pme	A	/integration-mcp	A	accompagnement d'intégration MCP
+/blog/serveur-mcp-heberge-pme	A	/approche	D	audit 180°
+/blog/serveur-mcp-heberge-pme	A	/blog/configurer-odoo-ia-claude-cowork	A	configurer Odoo avec une IA
+/blog/serveur-mcp-heberge-pme	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/serveur-mcp-heberge-pme	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/serveur-mcp-heberge-pme	A	/blog/odoo-20-serveur-mcp-agents	A	IAOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encoreOd
+/blog/serveur-mcp-heberge-pme	A	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/serveur-mcp-heberge-pme	A	/blog/claude-code-odoo-workflow	A	IAClaude Code et Odoo : le workflow technique pour piloter votre ERP sans module
+/blog/serveur-mcp-heberge-pme	A	/contact	D	Réserver mon diagnostic
+/blog/cybersecurite-pme-guide-pratique	B	/blog/nis2-pme-yvelines-val-doise	B	le guide NIS2 pour les PME
+/blog/cybersecurite-pme-guide-pratique	B	/blog/cout-audit-informatique-yvelines	B	diagnostic informatique
+/blog/cybersecurite-pme-guide-pratique	B	/blog/5-signes-moderniser-informatique-pme	B	5 signes qu'il est temps de moderniser votre informatique
+/blog/cybersecurite-pme-guide-pratique	B	/blog/bilan-ia-janvier-juillet-2026	C	bilan IA janvier-juillet 2026
+/blog/cybersecurite-pme-guide-pratique	B	/contact	D	premier audit de 60 minutes, non facturé et sans engagement
+/blog/cybersecurite-pme-guide-pratique	B	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/cybersecurite-pme-guide-pratique	B	/blog/petit-modele-bien-outille	A	IAUn petit modèle bien outillé bat un gros modèle qui devineOn vous vend le plus
+/blog/cybersecurite-pme-guide-pratique	B	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAL'agent qui ne peut pas toucher aux prixPeur qu'un agent accorde une remise ou
+/blog/cybersecurite-pme-guide-pratique	B	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/cybersecurite-pme-guide-pratique	B	/contact	D	Réserver mon diagnostic
+/blog/prompt-audit-projet-claude-fable	A	/prompts	A	bibliothèque de prompts IA
+/blog/prompt-audit-projet-claude-fable	A	/prompts	A	Voir
+/blog/prompt-audit-projet-claude-fable	A	/atelier-claude-code-dirigeant	A	Voir les ateliers
+/blog/prompt-audit-projet-claude-fable	A	/audit-ia-pme	C	audit IA pour PME
+/blog/prompt-audit-projet-claude-fable	A	/blog/claude-code-prompt-architecture	A	prompt d'architecte Claude Code
+/blog/prompt-audit-projet-claude-fable	A	/blog/claude-code-odoo-workflow	A	le workflow technique Claude Code + Odoo
+/blog/prompt-audit-projet-claude-fable	A	/atelier-claude-code-dirigeant	A	atelier Claude Code pour dirigeant
+/blog/prompt-audit-projet-claude-fable	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/prompt-audit-projet-claude-fable	A	/blog/ma-pme-en-2027	A	IAMa PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la foisGuide 
+/blog/prompt-audit-projet-claude-fable	A	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/prompt-audit-projet-claude-fable	A	/blog/claude-code-prompt-architecture	A	Claude CodeUtiliser Claude Code sans ce prompt est une perte de tempsLe prompt s
+/blog/prompt-audit-projet-claude-fable	A	/contact	D	Réserver mon diagnostic
+/blog/claude-cowork-community-manager	A	/auteur/pierre-legrand	D	augmenter.PRO
+/blog/claude-cowork-community-manager	A	/blog/configurer-odoo-ia-claude-cowork	A	reconfigurer des Odoo
+/blog/claude-cowork-community-manager	A	/approche	D	Yvelines et Val d'Oise
+/blog/claude-cowork-community-manager	A	/blog/configurer-odoo-ia-claude-cowork	A	la configuration d'Odoo avec Claude Cowork
+/blog/claude-cowork-community-manager	A	/prompts	A	Voir
+/blog/claude-cowork-community-manager	A	/atelier-claude-code-dirigeant	A	Voir les ateliers
+/blog/claude-cowork-community-manager	A	/blog/automatiser-emails-reseaux-sociaux-ia	C	automatiser emails et réseaux sociaux avec l'IA
+/blog/claude-cowork-community-manager	A	/contact	D	Audit 180°
+/blog/claude-cowork-community-manager	A	/atelier-claude-code-dirigeant	A	ateliers Claude Cowork & Claude Code
+/blog/claude-cowork-community-manager	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/claude-cowork-community-manager	A	/blog/veille-concurrentielle-ia-pme	C	IAVeille Concurrentielle IA pour PME : Guide Pratique 2026Comment automatiser vo
+/blog/claude-cowork-community-manager	A	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/claude-cowork-community-manager	A	/blog/serveur-mcp-integration-crm-erp	A	IAIntégrer un Agent IA à Votre CRM/ERP : Pourquoi MCP Change la DonneBrancher un
+/blog/claude-cowork-community-manager	A	/contact	D	Réserver mon diagnostic
+/blog/agent-ia-dirigeant-pme	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	un agent IA qui ne peut pas toucher aux prix
+/blog/agent-ia-dirigeant-pme	A	/blog/serveur-mcp-guide-pratique-pme	A	MCP
+/blog/agent-ia-dirigeant-pme	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/agent-ia-dirigeant-pme	A	/blog/claude-code-prompt-architecture	A	Claude Code
+/blog/agent-ia-dirigeant-pme	A	/integration-mcp	A	intégration MCP pour PME
+/blog/agent-ia-dirigeant-pme	A	/blog/cout-agent-ia-odoo	A	ce que coûte vraiment un agent IA sur Odoo
+/blog/agent-ia-dirigeant-pme	A	/blog/bilan-ia-janvier-juillet-2026	C	bilan IA janvier-juillet 2026
+/blog/agent-ia-dirigeant-pme	A	/contact	D	Audit 180° (60 min, sur rendez-vous)
+/blog/agent-ia-dirigeant-pme	A	/audit-ia-pme	C	audit IA pour PME
+/blog/agent-ia-dirigeant-pme	A	/blog/claude-code-prompt-architecture	A	cadrer un projet Claude Code
+/blog/agent-ia-dirigeant-pme	A	/blog/prompt-audit-projet-claude-fable	A	prompt d'audit complet d'un projet existant
+/blog/agent-ia-dirigeant-pme	A	/blog/serveur-mcp-guide-pratique-pme	A	protocole MCP pour connecter l'IA à vos outils métier
+/blog/agent-ia-dirigeant-pme	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/agent-ia-dirigeant-pme	A	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/agent-ia-dirigeant-pme	A	/blog/logiciel-construit-par-agents-dix-semaines	A	IAConstruire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests
+/blog/agent-ia-dirigeant-pme	A	/blog/ma-pme-en-2027	A	IAMa PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la foisGuide 
+/blog/agent-ia-dirigeant-pme	A	/contact	D	Réserver mon diagnostic
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/blog/configurer-odoo-ia-claude-cowork	A	configuration d'outils métier comme Odoo
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/approche	D	Audit 360° IA Booster (550 €)
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/approche	D	Audit 180°
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/blog/ia-contradicteur-prompts-dirigeant-pme	A	5 prompts pour challenger vos décisions
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/blog/ma-pme-en-2027	A	IAMa PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la foisGuide 
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/blog/ia-contradicteur-prompts-dirigeant-pme	A	IAL'IA comme contradicteur : 5 prompts pour challenger vos décisionsChatGPT vous
+/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	/contact	D	Réserver mon diagnostic
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/blog/ia-redefinit-vente-commerciale	C	accompagnement de la fonction commerciale
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/blog/claude-code-prompt-architecture	A	architecture de prompts pour Claude Code
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/blog/prompt-audit-projet-claude-fable	A	audit complet de projet avec Claude Fable
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/blog/comparatif-llm-vente-commerciale	C	comparatif LLM
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/approche	D	audit 180°
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/prompts	A	bibliothèque de prompts dirigeant
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/blog/ma-pme-en-2027	A	IAMa PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la foisGuide 
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre contour
+/blog/ia-contradicteur-prompts-dirigeant-pme	A	/contact	D	Réserver mon diagnostic
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/blog/5-signes-moderniser-informatique-pme	B	modernisation informatique générale
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/blog/cout-audit-informatique-yvelines	B	audit IT préalable
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/idees	D	catalogue d'idées IA
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/approche	D	audit 180°
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/blog/agent-ia-dirigeant-pme	A	IAAgent IA pour dirigeant de PME : c'est quoi, et comment en créer unTout le mon
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/blog/ma-pme-en-2027	A	IAMa PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la foisGuide 
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/rapport-adoption-ia-btp-francilien-2026	C	/contact	D	Réserver mon diagnostic
+/blog/configurer-odoo-ia-claude-cowork	A	/approche	D	augmenter.PRO
+/blog/configurer-odoo-ia-claude-cowork	A	/approche	D	Yvelines (78) et Val d'Oise (95)
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/claude-code-prompt-architecture	A	les bonnes pratiques de prompt architecture avec Claude
+/blog/configurer-odoo-ia-claude-cowork	A	/atelier-claude-code-dirigeant	A	Voir les ateliers
+/blog/configurer-odoo-ia-claude-cowork	A	/contact	D	Audit 180°
+/blog/configurer-odoo-ia-claude-cowork	A	/audit-ia-pme	C	audit IA pour PME
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/serveur-mcp-guide-pratique-pme	A	protocole MCP pour connecter l'IA à vos outils
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/serveur-mcp-integration-crm-erp	A	intégration d'agents IA à votre CRM/ERP
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/bilan-ia-janvier-juillet-2026	C	bilan IA janvier-juillet 2026
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/claude-cowork-community-manager	A	community manager pour gérer des réseaux sociaux
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/claude-code-odoo-workflow	A	le workflow technique Claude Code + Odoo
+/blog/configurer-odoo-ia-claude-cowork	A	/serveur-mcp-odoo	A	ce que notre serveur MCP pour Odoo ajoute par-dessus
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	ce que vous ne pourrez jamais y installer
+/blog/configurer-odoo-ia-claude-cowork	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/claude-code-odoo-workflow	A	IAClaude Code et Odoo : le workflow technique pour piloter votre ERP sans module
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre contour
+/blog/configurer-odoo-ia-claude-cowork	A	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/configurer-odoo-ia-claude-cowork	A	/contact	D	Réserver mon diagnostic
+/blog/veille-concurrentielle-ia-pme	C	/blog/nis2-pme-yvelines-val-doise	B	NIS2 en 2025
+/blog/veille-concurrentielle-ia-pme	C	/contact	D	diagnostic initial
+/blog/veille-concurrentielle-ia-pme	C	/strategie-ia-pme	C	stratégie d'entreprise
+/blog/veille-concurrentielle-ia-pme	C	/approche	D	prestations d'audit et de conseil IA
+/blog/veille-concurrentielle-ia-pme	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/veille-concurrentielle-ia-pme	C	/blog/claude-cowork-community-manager	A	IAJ'ai transformé Claude Cowork en community manager : le setup, les prompts, ce
+/blog/veille-concurrentielle-ia-pme	C	/blog/ia-redefinit-vente-commerciale	C	IAComment l'IA redéfinit la Vente CommercialeOù l'IA fait vraiment la différence
+/blog/veille-concurrentielle-ia-pme	C	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/veille-concurrentielle-ia-pme	C	/contact	D	Réserver mon diagnostic
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/integration-mcp	A	intégration MCP pour PME
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/blog/claude-cowork-community-manager	A	j'ai transformé Claude Cowork en community manager
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/strategie-ia-pme	C	stratégie IA pour PME
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/contact	D	diagnostic initial de 60 minutes
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/approche	D	prestations d'accompagnement IA
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/blog/agent-ia-dirigeant-pme	A	IAAgent IA pour dirigeant de PME : c'est quoi, et comment en créer unTout le mon
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/blog/compte-rendu-reunion-ia	C	IACompte rendu de réunion par IA : les outils font le résumé, l'agent fait le tr
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/blog/claude-cowork-community-manager	A	IAJ'ai transformé Claude Cowork en community manager : le setup, les prompts, ce
+/blog/automatiser-emails-reseaux-sociaux-ia	C	/contact	D	Réserver mon diagnostic
+/blog/cout-audit-informatique-yvelines	B	/blog/5-signes-moderniser-informatique-pme	B	5 signes qu'il est temps de moderniser votre informatique
+/blog/cout-audit-informatique-yvelines	B	/approche	D	nos tarifs détaillés
+/blog/cout-audit-informatique-yvelines	B	/contact	D	demandez votre premier rendez-vous
+/blog/cout-audit-informatique-yvelines	B	/blog/nis2-pme-yvelines-val-doise	B	obligations NIS2 descendantes
+/blog/cout-audit-informatique-yvelines	B	/audit-informatique-yvelines	B	page audit informatique Yvelines
+/blog/cout-audit-informatique-yvelines	B	/approche	D	approche en 4 piliers
+/blog/cout-audit-informatique-yvelines	B	/strategie-ia-pme	C	stratégie IA adaptée à votre PME
+/blog/cout-audit-informatique-yvelines	B	/audit-informatique-yvelines	B	audit informatique & cybersécurité en Yvelines (78)
+/blog/cout-audit-informatique-yvelines	B	/audit-informatique-val-doise	B	Val d'Oise (95)
+/blog/cout-audit-informatique-yvelines	B	/blog/nis2-pme-yvelines-val-doise	B	guide et la checklist NIS2
+/blog/cout-audit-informatique-yvelines	B	/blog/nis2-pme-yvelines-val-doise	B	directive NIS2
+/blog/cout-audit-informatique-yvelines	B	/contact	D	Contactez-nous
+/blog/cout-audit-informatique-yvelines	B	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/cout-audit-informatique-yvelines	B	/blog/odoo-20-serveur-mcp-agents	A	IAOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encoreOd
+/blog/cout-audit-informatique-yvelines	B	/blog/serveur-mcp-guide-pratique-pme	A	IAServeur MCP : Connecter l'IA à Vos Outils MétierMCP, c'est le câble qui branch
+/blog/cout-audit-informatique-yvelines	B	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre contour
+/blog/cout-audit-informatique-yvelines	B	/contact	D	Réserver mon diagnostic
+/blog/nis2-pme-yvelines-val-doise	B	/blog/5-signes-moderniser-informatique-pme	B	5 signes qu'il est temps de moderniser votre informatique
+/blog/nis2-pme-yvelines-val-doise	B	/audit-informatique-yvelines	B	audits informatiques en Yvelines
+/blog/nis2-pme-yvelines-val-doise	B	/blog/cybersecurite-pme-guide-pratique	B	guide pratique de la cybersécurité PME
+/blog/nis2-pme-yvelines-val-doise	B	/audit-informatique-yvelines	B	audit informatique & cybersécurité
+/blog/nis2-pme-yvelines-val-doise	B	/approche	D	audit de cybersécurité complet
+/blog/nis2-pme-yvelines-val-doise	B	/audit-informatique-val-doise	B	diagnostic informatique en Val d'Oise
+/blog/nis2-pme-yvelines-val-doise	B	/contact	D	diagnostic initial de 60 minutes
+/blog/nis2-pme-yvelines-val-doise	B	/blog/cybersecurite-pme-guide-pratique	B	guide pratique de cybersécurité PME
+/blog/nis2-pme-yvelines-val-doise	B	/strategie-ia-pme	C	stratégie IA conforme et sécurisée
+/blog/nis2-pme-yvelines-val-doise	B	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/nis2-pme-yvelines-val-doise	B	/blog/cout-agent-ia-odoo	A	IAAgent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coûtO
+/blog/nis2-pme-yvelines-val-doise	B	/blog/petit-modele-bien-outille	A	IAUn petit modèle bien outillé bat un gros modèle qui devineOn vous vend le plus
+/blog/nis2-pme-yvelines-val-doise	B	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	IAL'agent qui ne peut pas toucher aux prixPeur qu'un agent accorde une remise ou
+/blog/nis2-pme-yvelines-val-doise	B	/contact	D	Réserver mon diagnostic
+/blog/serveur-mcp-guide-pratique-pme	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/serveur-mcp-guide-pratique-pme	A	/approche	D	audit 180°
+/blog/serveur-mcp-guide-pratique-pme	A	/blog/serveur-mcp-heberge-pme	A	coder, louer ou héberger soi-même son serveur MCP
+/blog/serveur-mcp-guide-pratique-pme	A	/approche	D	approche 360°
+/blog/serveur-mcp-guide-pratique-pme	A	/contact	D	Notre audit 180°
+/blog/serveur-mcp-guide-pratique-pme	A	/integration-mcp	A	Découvrez notre prestation d'intégration MCP
+/blog/serveur-mcp-guide-pratique-pme	A	/blog/serveur-mcp-integration-crm-erp	A	l'intégration MCP avec votre CRM/ERP
+/blog/serveur-mcp-guide-pratique-pme	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/serveur-mcp-guide-pratique-pme	A	/blog/claude-code-odoo-workflow	A	IAClaude Code et Odoo : le workflow technique pour piloter votre ERP sans module
+/blog/serveur-mcp-guide-pratique-pme	A	/blog/configurer-odoo-ia-claude-cowork	A	IAConfigurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €Comment nous avons recon
+/blog/serveur-mcp-guide-pratique-pme	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre contour
+/blog/serveur-mcp-guide-pratique-pme	A	/contact	D	Réserver mon diagnostic
+/blog/serveur-mcp-integration-crm-erp	A	/blog/odoo-20-serveur-mcp-agents	A	ce qu'Odoo 20 change, et ce qui lui manque encore
+/blog/serveur-mcp-integration-crm-erp	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/serveur-mcp-integration-crm-erp	A	/blog/serveur-mcp-guide-pratique-pme	A	guide pratique MCP pour PME
+/blog/serveur-mcp-integration-crm-erp	A	/blog/serveur-mcp-heberge-pme	A	où héberger votre serveur MCP — le coder, le louer ou l'auto-héberger
+/blog/serveur-mcp-integration-crm-erp	A	/approche	D	formation et d'accompagnement humain
+/blog/serveur-mcp-integration-crm-erp	A	/blog/serveur-mcp-guide-pratique-pme	A	guide complet sur les serveurs MCP
+/blog/serveur-mcp-integration-crm-erp	A	/contact	D	audit 180° (60 min)
+/blog/serveur-mcp-integration-crm-erp	A	/integration-mcp	A	prestation d'intégration MCP
+/blog/serveur-mcp-integration-crm-erp	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/serveur-mcp-integration-crm-erp	A	/blog/odoo-20-serveur-mcp-agents	A	IAOdoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encoreOd
+/blog/serveur-mcp-integration-crm-erp	A	/blog/claude-cowork-community-manager	A	IAJ'ai transformé Claude Cowork en community manager : le setup, les prompts, ce
+/blog/serveur-mcp-integration-crm-erp	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre contour
+/blog/serveur-mcp-integration-crm-erp	A	/contact	D	Réserver mon diagnostic
+/blog/machine-de-guerre-commerciale	C	/blog/comparatif-llm-vente-commerciale	C	comparatif LLM pour la vente
+/blog/machine-de-guerre-commerciale	C	/blog/ia-redefinit-vente-commerciale	C	comment l'IA redéfinit la vente
+/blog/machine-de-guerre-commerciale	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/machine-de-guerre-commerciale	C	/blog/comparatif-llm-vente-commerciale	C	IAComparatif : Forces et Faiblesses des LLM dans la VenteChatGPT, Claude, Gemini
+/blog/machine-de-guerre-commerciale	C	/blog/ia-redefinit-vente-commerciale	C	IAComment l'IA redéfinit la Vente CommercialeOù l'IA fait vraiment la différence
+/blog/machine-de-guerre-commerciale	C	/blog/veille-concurrentielle-ia-pme	C	IAVeille Concurrentielle IA pour PME : Guide Pratique 2026Comment automatiser vo
+/blog/machine-de-guerre-commerciale	C	/contact	D	Réserver mon diagnostic
+/blog/ia-redefinit-vente-commerciale	C	/blog/comparatif-llm-vente-commerciale	C	comparatif LLM pour la vente
+/blog/ia-redefinit-vente-commerciale	C	/blog/machine-de-guerre-commerciale	C	la machine de guerre en rénovation énergétique
+/blog/ia-redefinit-vente-commerciale	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/ia-redefinit-vente-commerciale	C	/blog/comparatif-llm-vente-commerciale	C	IAComparatif : Forces et Faiblesses des LLM dans la VenteChatGPT, Claude, Gemini
+/blog/ia-redefinit-vente-commerciale	C	/blog/veille-concurrentielle-ia-pme	C	IAVeille Concurrentielle IA pour PME : Guide Pratique 2026Comment automatiser vo
+/blog/ia-redefinit-vente-commerciale	C	/blog/claude-cowork-community-manager	A	IAJ'ai transformé Claude Cowork en community manager : le setup, les prompts, ce
+/blog/ia-redefinit-vente-commerciale	C	/contact	D	Réserver mon diagnostic
+/blog/claude-code-prompt-architecture	A	/prompts	A	bibliothèque de prompts IA
+/blog/claude-code-prompt-architecture	A	/approche	D	augmenter.PRO
+/blog/claude-code-prompt-architecture	A	/prompts	A	Copier depuis /prompts →
+/blog/claude-code-prompt-architecture	A	/atelier-claude-code-dirigeant	A	Voir les ateliers
+/blog/claude-code-prompt-architecture	A	/blog/claude-code-odoo-workflow	A	le workflow technique Claude Code + Odoo
+/blog/claude-code-prompt-architecture	A	/blog/logiciel-construit-par-agents-dix-semaines	A	construire un logiciel avec des agents en dix semaines
+/blog/claude-code-prompt-architecture	A	/prompts	A	bibliothèque de prompts IA pour PME
+/blog/claude-code-prompt-architecture	A	/prompts	A	Le prompt Claude Code architecte
+/blog/claude-code-prompt-architecture	A	/blog/configurer-odoo-ia-claude-cowork	A	Un Skill complet de paramétrage Odoo 19
+/blog/claude-code-prompt-architecture	A	/blog/configurer-odoo-ia-claude-cowork	A	notre retour d'expérience sur Odoo en 4 jours
+/blog/claude-code-prompt-architecture	A	/approche	D	prestations d'accompagnement
+/blog/claude-code-prompt-architecture	A	/blog/bilan-ia-janvier-juillet-2026	C	bilan IA janvier-juillet 2026
+/blog/claude-code-prompt-architecture	A	/serveur-mcp-odoo	A	notre serveur MCP pour Odoo
+/blog/claude-code-prompt-architecture	A	/blog/prompt-audit-projet-claude-fable	A	prompt d'audit complet de projet pour Claude Fable
+/blog/claude-code-prompt-architecture	A	/contact	D	Audit 180° (60 min, sur rendez-vous)
+/blog/claude-code-prompt-architecture	A	/audit-ia-pme	C	audit IA pour PME
+/blog/claude-code-prompt-architecture	A	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/claude-code-prompt-architecture	A	/blog/prompt-audit-projet-claude-fable	A	IAVotre code vieillit en silence : le prompt Claude Fable qui audite tout votre 
+/blog/claude-code-prompt-architecture	A	/blog/claude-code-odoo-workflow	A	IAClaude Code et Odoo : le workflow technique pour piloter votre ERP sans module
+/blog/claude-code-prompt-architecture	A	/blog/logiciel-construit-par-agents-dix-semaines	A	IAConstruire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests
+/blog/claude-code-prompt-architecture	A	/contact	D	Réserver mon diagnostic
+/blog/comparatif-llm-vente-commerciale	C	/blog/bilan-ia-janvier-juillet-2026	C	Claude, GPT-5.6, Gemini 3.x
+/blog/comparatif-llm-vente-commerciale	C	/blog/ia-redefinit-vente-commerciale	C	comment l'IA redéfinit la vente commerciale
+/blog/comparatif-llm-vente-commerciale	C	/blog/machine-de-guerre-commerciale	C	canal d'acquisition propriétaire
+/blog/comparatif-llm-vente-commerciale	C	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/comparatif-llm-vente-commerciale	C	/blog/ia-redefinit-vente-commerciale	C	IAComment l'IA redéfinit la Vente CommercialeOù l'IA fait vraiment la différence
+/blog/comparatif-llm-vente-commerciale	C	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	IAOdoo Online : ce que vous ne pourrez jamais y installer (et les quatre contour
+/blog/comparatif-llm-vente-commerciale	C	/blog/serveur-mcp-heberge-pme	A	IAServeur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?Vous 
+/blog/comparatif-llm-vente-commerciale	C	/contact	D	Réserver mon diagnostic
+/blog/5-signes-moderniser-informatique-pme	B	/auteur/pierre-legrand	D	Qui suis-je ↗
+/blog/5-signes-moderniser-informatique-pme	B	/blog/serveur-mcp-guide-pratique-pme	A	IAServeur MCP : Connecter l'IA à Vos Outils MétierMCP, c'est le câble qui branch
+/blog/5-signes-moderniser-informatique-pme	B	/blog/prompt-audit-projet-claude-fable	A	IAVotre code vieillit en silence : le prompt Claude Fable qui audite tout votre 
+/blog/5-signes-moderniser-informatique-pme	B	/blog/cout-audit-informatique-yvelines	B	Audit 360°Combien coûte un audit informatique PME ?Les fourchettes de prix réell
+/blog/5-signes-moderniser-informatique-pme	B	/contact	D	Réserver mon diagnostic
+/projets	D	/contact	D	Prendre rendez-vous
+/ia-souveraine-pme	A	/contact	D	Diagnostic 180° — 60 min
+/ia-souveraine-pme	A	/integration-mcp	A	Brancher l'IA sur mes outils
+/ia-souveraine-pme	A	/blog/petit-modele-bien-outille	A	un petit modèle bien outillé bat un gros modèle qui devine
+/ia-souveraine-pme	A	/blog/cout-agent-ia-odoo	A	crédits, abonnements ou une machine, le calcul
+/ia-souveraine-pme	A	/contact	D	Réserver mon diagnostic
+/plan-du-site	D	/	D	AccueilLe récit en six chapitres
+/plan-du-site	D	/augmenter-mon-entreprise	D	Par où commencerLe hub ressources, trié par douleur et par secteur
+/plan-du-site	D	/approche	D	Notre approcheLa méthode 360° racontée — technique, processus, humain
+/plan-du-site	D	/contact	D	ContactPremier diagnostic de 60 min, sans engagement
+/plan-du-site	D	/strategie-ia-pme	C	Stratégie IA PMEFeuille de route IA priorisée sur 6 mois
+/plan-du-site	D	/audit-ia-pme	C	Audit IA pour PMECas d'usage prioritaires et feuille de route chiffrée
+/plan-du-site	D	/audit-informatique-yvelines	B	Audit informatique Yvelines (78)Diagnostic IT en présentiel dans les Yvelines
+/plan-du-site	D	/audit-informatique-val-doise	B	Audit informatique Val d'Oise (95)Diagnostic IT en présentiel dans le Val d'Oise
+/plan-du-site	D	/serveur-mcp-odoo	A	Serveur MCP pour OdooCe qu'Odoo 20 fait tout seul, ce qu'on ajoute par-dessus
+/plan-du-site	D	/integration-mcp	A	Intégration MCPBrancher l'IA sur vos vrais outils métier (CRM, ERP)
+/plan-du-site	D	/ia-souveraine-pme	A	IA souveraine pour PMECe qui sort de votre entreprise, et comment le router
+/plan-du-site	D	/atelier-claude-code-dirigeant	A	Atelier Claude Cowork & CodePrendre la main sur Claude pour automatiser votre PM
+/plan-du-site	D	/blog	D	Articles & tutosGuides terrain : IA, commercial, audit, cybersécurité
+/plan-du-site	D	/prompts	A	Prompts IAPrompts prêts à copier pour dirigeants de PME
+/plan-du-site	D	/idees	D	Idées PROCas d'usage IA chiffrés, secteur par secteur
+/plan-du-site	D	/projets	D	Nos projetsModules développés pour automatiser le quotidien pro
+/plan-du-site	D	/a-propos	D	À proposQui, quoi, pour qui, combien — et la carte des ressources
+/plan-du-site	D	/auteur/pierre-legrand	D	Pierre LegrandConsultant IA & transformation digitale — l'auteur
+/plan-du-site	D	/blog/cout-agent-ia-odoo	A	Agent IA sur Odoo : crédits, abonnements ou une machine à vous ? Le vrai coût6 m
+/plan-du-site	D	/blog/odoo-20-serveur-mcp-agents	A	Odoo 20 ouvre la porte aux agents : ce qui change, et ce qu'il manque encore5 mi
+/plan-du-site	D	/blog/agent-ia-qui-ne-touche-pas-aux-prix	A	L'agent qui ne peut pas toucher aux prix4 min
+/plan-du-site	D	/blog/petit-modele-bien-outille	A	Un petit modèle bien outillé bat un gros modèle qui devine5 min
+/plan-du-site	D	/blog/ia-enrichir-catalogue-sans-perdre-la-main	A	Laisser une IA enrichir votre catalogue, sans perdre la main5 min
+/plan-du-site	D	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer	A	Odoo Online : ce que vous ne pourrez jamais y installer (et les quatre contourne
+/plan-du-site	D	/blog/logiciel-construit-par-agents-dix-semaines	A	Construire un logiciel avec des agents : dix semaines, 436 tâches, 5 794 tests5 
+/plan-du-site	D	/blog/claude-code-odoo-workflow	A	Claude Code et Odoo : le workflow technique pour piloter votre ERP sans module P
+/plan-du-site	D	/blog/ma-pme-en-2027	A	Ma PME en 2027 : vous n'êtes plus obligé d'être cinq personnes à la fois14 min
+/plan-du-site	D	/blog/compte-rendu-reunion-ia	C	Compte rendu de réunion par IA : les outils font le résumé, l'agent fait le trav
+/plan-du-site	D	/blog/bilan-ia-janvier-juillet-2026	C	IA janvier-juillet 2026 : sept mois de bascule, et ce que votre PME doit en rete
+/plan-du-site	D	/blog/serveur-mcp-heberge-pme	A	Serveur MCP hébergé : faut-il le coder, le louer ou l'héberger soi-même ?10 min
+/plan-du-site	D	/blog/cybersecurite-pme-guide-pratique	B	Cybersécurité PME : 93 % des attaques sont évitables avec du bon sens13 min
+/plan-du-site	D	/blog/prompt-audit-projet-claude-fable	A	Votre code vieillit en silence : le prompt Claude Fable qui audite tout votre pr
+/plan-du-site	D	/blog/claude-cowork-community-manager	A	J'ai transformé Claude Cowork en community manager : le setup, les prompts, ce q
+/plan-du-site	D	/blog/agent-ia-dirigeant-pme	A	Agent IA pour dirigeant de PME : c'est quoi, et comment en créer un9 min
+/plan-du-site	D	/blog/patron-goulot-paradoxe-ia-dirigeant-pme	C	Le patron-goulot : quand l'IA rend le dirigeant encore plus indispensable10 min
+/plan-du-site	D	/blog/ia-contradicteur-prompts-dirigeant-pme	A	L'IA comme contradicteur : 5 prompts pour challenger vos décisions9 min
+/plan-du-site	D	/blog/rapport-adoption-ia-btp-francilien-2026	C	Rapport 2026 : Adoption de l'IA dans le BTP francilien6 min
+/plan-du-site	D	/blog/configurer-odoo-ia-claude-cowork	A	Configurer Odoo avec l'IA : 4 Jours au Lieu de 3 500 €12 min
+/plan-du-site	D	/blog/veille-concurrentielle-ia-pme	C	Veille Concurrentielle IA pour PME : Guide Pratique 20268 min
+/plan-du-site	D	/blog/automatiser-emails-reseaux-sociaux-ia	C	Automatiser Emails et Réseaux Sociaux avec l'IA en PME7 min
+/plan-du-site	D	/blog/cout-audit-informatique-yvelines	B	Combien coûte un audit informatique PME ?8 min
+/plan-du-site	D	/blog/nis2-pme-yvelines-val-doise	B	NIS2 PME : Guide + Checklist de Conformité 202610 min
+/plan-du-site	D	/blog/serveur-mcp-guide-pratique-pme	A	Serveur MCP : Connecter l'IA à Vos Outils Métier8 min
+/plan-du-site	D	/blog/serveur-mcp-integration-crm-erp	A	Intégrer un Agent IA à Votre CRM/ERP : Pourquoi MCP Change la Donne7 min
+/plan-du-site	D	/blog/machine-de-guerre-commerciale	C	Rénovation Énergétique : construisez votre machine de guerre commerciale4 min
+/plan-du-site	D	/blog/ia-redefinit-vente-commerciale	C	Comment l'IA redéfinit la Vente Commerciale3 min
+/plan-du-site	D	/blog/claude-code-prompt-architecture	A	Utiliser Claude Code sans ce prompt est une perte de temps2 min
+/plan-du-site	D	/blog/comparatif-llm-vente-commerciale	C	Comparatif : Forces et Faiblesses des LLM dans la Vente8 min
+/plan-du-site	D	/blog/5-signes-moderniser-informatique-pme	B	5 signes qu'il est temps de moderniser l'informatique de votre PME3 min
+/plan-du-site	D	/augmenter-mon-entreprise	D	Filtrez les ressources par douleur et par secteur
+/plan-du-site	D	/contact	D	démarrez par un diagnostic de 60 min

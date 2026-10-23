@@ -1,0 +1,73 @@
+
+== Liens entrants éditoriaux (hors header/footer/nav), pages du sitemap
+entrants	pages_sources	depuis A/B/C/D	cluster	page
+100	49	46/14/20/20	D	/contact
+37	34	20/4/9/4	D	/auteur/pierre-legrand
+36	25	12/7/11/6	D	/approche
+25	22	17/2/1/5	A	/blog/cout-agent-ia-odoo
+18	18	16/0/0/2	A	/serveur-mcp-odoo
+25	18	14/0/2/9	A	/blog/configurer-odoo-ia-claude-cowork
+19	15	12/2/0/5	A	/blog/agent-ia-qui-ne-touche-pas-aux-prix
+17	14	13/0/0/4	A	/blog/claude-code-odoo-workflow
+16	14	9/1/1/5	A	/blog/odoo-online-ce-que-vous-ne-pouvez-pas-installer
+17	14	9/2/2/4	A	/blog/serveur-mcp-guide-pratique-pme
+19	13	13/1/0/5	A	/blog/odoo-20-serveur-mcp-agents
+13	13	4/0/4/5	C	/blog/compte-rendu-reunion-ia
+13	12	7/0/1/5	A	/integration-mcp
+13	12	6/2/0/5	A	/blog/petit-modele-bien-outille
+14	12	8/1/1/4	A	/blog/prompt-audit-projet-claude-fable
+16	12	12/0/0/4	A	/blog/claude-code-prompt-architecture
+12	12	1/5/2/4	B	/blog/5-signes-moderniser-informatique-pme
+16	11	13/0/0/3	A	/atelier-claude-code-dirigeant
+13	11	7/0/1/5	A	/blog/logiciel-construit-par-agents-dix-semaines
+13	11	6/0/3/4	A	/blog/serveur-mcp-heberge-pme
+14	11	1/5/2/6	B	/blog/nis2-pme-yvelines-val-doise
+10	10	0/4/3/3	C	/strategie-ia-pme
+11	10	4/3/1/3	C	/audit-ia-pme
+44	10	9/0/1/34	A	/prompts
+11	10	5/0/1/5	A	/blog/ia-enrichir-catalogue-sans-perdre-la-main
+11	10	3/0/3/5	A	/blog/ma-pme-en-2027
+12	10	0/0/6/6	A	/blog/agent-ia-dirigeant-pme
+10	10	6/0/0/4	A	/blog/serveur-mcp-integration-crm-erp
+12	10	2/0/6/4	C	/blog/ia-redefinit-vente-commerciale
+11	9	3/1/1/6	C	/blog/bilan-ia-janvier-juillet-2026
+10	9	2/0/4/4	A	/blog/claude-cowork-community-manager
+10	9	1/0/3/6	C	/blog/veille-concurrentielle-ia-pme
+11	9	1/0/6/4	C	/blog/comparatif-llm-vente-commerciale
+10	8	0/3/1/6	B	/blog/cybersecurite-pme-guide-pratique
+8	8	0/3/1/4	B	/blog/cout-audit-informatique-yvelines
+9	8	1/0/2/6	C	/blog/machine-de-guerre-commerciale
+8	6	2/0/1/5	D	/augmenter-mon-entreprise
+8	6	0/4/1/3	B	/audit-informatique-yvelines
+14	6	0/0/2/12	D	/idees
+7	6	0/0/1/6	C	/blog/patron-goulot-paradoxe-ia-dirigeant-pme
+7	6	1/0/2/4	A	/blog/ia-contradicteur-prompts-dirigeant-pme
+6	6	2/0/0/4	C	/blog/automatiser-emails-reseaux-sociaux-ia
+5	5	0/2/0/3	B	/audit-informatique-val-doise
+5	5	0/0/1/4	D	/projets
+4	4	0/0/0/4	C	/blog/rapport-adoption-ia-btp-francilien-2026
+5	4	1/0/0/4	A	/ia-souveraine-pme
+3	3	1/0/0/2	D	/
+4	3	0/0/0/4	D	/blog
+2	2	0/0/0/2	D	/a-propos
+1	1	0/0/0/1	D	/plan-du-site
+
+== Flux entre clusters (nombre de liens)
+A→A	189
+D→A	135
+A→D	81
+D→D	60
+D→C	51
+C→D	44
+C→A	29
+C→C	27
+D→B	26
+B→D	25
+B→B	22
+A→C	18
+B→A	11
+B→C	8
+C→B	7
+A→B	2
+
+735 liens éditoriaux · 0 pages sans entrant éditorial : 
