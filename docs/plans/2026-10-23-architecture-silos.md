@@ -13,6 +13,8 @@ Plan issu du brainstorm du 2026-10-23, révisé le même jour après la revue cr
 
 **Scénario hybride (S3)** : une page hub « intégration IA PME » qui porte aussi les usages IA du dirigeant (outil indifférent), deux silos d'outil (**Odoo & agents**, **Claude Code & Cowork**), un silo **local** fermé, deux pages hors maillage. Il demande de recâbler 38 liens entre silos ; le plus gros levier est le calcul des cartes « À lire ensuite », pas la réécriture des articles. Le point faible est assumé : le silo Claude ne compte que 3 articles pour la deuxième demande du site, et il faut le construire.
 
+**Cap : l'architecture cible du § 10, pas le recâblage minimal.** Les §§ 2-9 décrivent le point de départ (ranger et câbler l'existant). Le § 10 décrit le site visé : chaque silo couvre toute sa demande mesurée avec une preuve terrain par page, aucune page ne reste hors maillage, le journal IA est lancé. Rien n'y est en « file d'attente sans engagement ». Les seules limites gardées sont des règles de justesse, pas des freins : confidentialité 🟢, chiffres sourcés, pas de page sans preuve, déploiement exécuté par Pierre.
+
 ## 1. Ce que dit le graphe actuel (base de chiffrage)
 
 Source : [maillage-interne.tsv](../seo-audits/2026-10-23-data/maillage-interne.tsv) (735 liens rendus, hors header/footer/nav), reclassé page par page ; [suggestions Google FR](#annexe-a--demande-par-graine-2026-10-23) et GSC 16 mois (`scripts/seo/gsc-portfolio.mjs`) relevés le jour même.
@@ -62,7 +64,7 @@ Le hub **fait la transversale** : ses pages peuvent lier les satellites des deux
 
 | Rôle | Page | Statut |
 |---|---|---|
-| **Pilier** | `/atelier-claude-code-dirigeant`, **renommé** « formation Claude Code pour dirigeants » : title, h1, ancres. **L'URL ne change pas** (§ 9, point 3) | existant |
+| **Pilier** | `/atelier-claude-code-dirigeant`, **renommé** « formation Claude Code pour dirigeants » : title, h1, ancres. L'URL ne change pas au premier recâblage (§ 9, point 3) ; elle passe à `/formation-claude-code` (301) **avec la refonte complète de la page** prévue au § 10, ce qui est exactement la condition posée par la revue | existant |
 | **Tête de trafic** | `/blog/claude-code-prompt-architecture` (309 clics sur 16 mois) | existant ; doit lier le pilier avec l'ancre canonique |
 | Satellites | `prompt-audit-projet-claude-fable`, `claude-cowork-community-manager` | existants |
 | Ponts reçus | les 3 pages-ponts du § 2.8 (rattachées au silo Odoo) | existants |
@@ -77,7 +79,7 @@ Mesure du silo en l'état : cohésion **33 %**, et le filtre des cartes ne le re
 
 ### 2.5 Hors maillage — 2 pages, restent en ligne
 
-`machine-de-guerre-commerciale` (rénovation énergétique, 22 impr. / 0 clic) et `rapport-adoption-ia-btp-francilien-2026` (73 / 0). Liées seulement depuis les pages-listes ; aucune page de silo ni du hub ne les lie ; leurs cartes « À lire ensuite » viennent **du hub** (entre elles, elles n'en auraient qu'une). Candidates à une fusion ou une dépublication plus tard, hors de ce plan.
+`machine-de-guerre-commerciale` (rénovation énergétique, 22 impr. / 0 clic) et `rapport-adoption-ia-btp-francilien-2026` (73 / 0). Liées seulement depuis les pages-listes ; aucune page de silo ni du hub ne les lie ; leurs cartes « À lire ensuite » viennent **du hub** (entre elles, elles n'en auraient qu'une). État transitoire seulement : la cible (§ 10) les **refond** dans le hub, il ne reste alors aucune page hors maillage.
 
 ### 2.6 Recyclage du cluster C (11 pages)
 
@@ -111,7 +113,7 @@ Mesure du silo en l'état : cohésion **33 %**, et le filtre des cartes ne le re
 | **Fraîcheur** | `dateModified` du JSON-LD = date de la dernière entrée, calculée ; jamais posée à la main | Anti-pattern « fausses mises à jour » de CLAUDE.md |
 | **Grosse annonce** | en plus de l'entrée, un article `kind: "news"` (ADR 0007), satellite du silo concerné ; l'entrée le lie | Odoo 20 a été le premier cas |
 | **Tenue** | 2 entrées par mois minimum ; relevé automatisable (boucle news `PROMPT-news.md`, Firecrawl sur les notes de version), **verdict humain** ; une **alerte** (R12) signale un journal à l'abandon, la dépublication reste une décision humaine | Une page vivante abandonnée fait plus de mal que pas de page |
-| **Pilote** | 3 mois, calé sur la revue de l'ADR 0007 (2026-11-15, arrêt possible le 2026-12-15) | Mesuré en citations LLM et en clics vers les piliers, pas en trafic propre |
+| **Lancement** | **lancé**, pas conditionné : amorcé avec les annonces d'août à octobre 2026 ; la revue de l'ADR 0007 (2026-11-15) et le seuil du 2026-12-15 servent à **ajuster** (fréquence, périmètre), la dépublication reste le dernier recours | Mesuré en citations LLM et en clics vers les piliers, pas en trafic propre |
 
 ## 3. Règles de maillage testables
 
@@ -219,7 +221,9 @@ Point de départ : le crawl est gelé depuis la sanction de juillet ([recrawl](.
 
 Calendrier : **T0** = mise en ligne après l'ADR 0008 (baseline GSC + link-graph + capture limelit le jour même) ; **T+45** = indexation des 301 et du hub, juge, cohésion ; **T+90** = positions, clics, contacts, citations → seuils ci-dessus.
 
-## 7. Séquence d'implémentation (après l'ADR, pas avant)
+## 7. Séquence d'implémentation
+
+Ce qui ne touche pas le positionnement démarre **tout de suite**, en parallèle du `/dialectic` et de l'ADR : l'outillage (étapes 0 à 2) et le silo Odoo (incontesté, § 10 vague 3). Ce qui change l'identité (hub, renommage de la formation, JSON-LD) attend l'ADR 0008, conformément à la séquence décidée. La suite détaillée par vagues est au § 10.
 
 0. **Tags de CTA** (`?offer=`, `?source=`) sur les CTA du pilier formation, du hub et des piliers, lus par l'événement GA4 du formulaire : sans eux, le § 6 ne mesure pas les contacts.
 1. Registre `src/lib/silos.ts` + champ `silo` du catalog + filtre de `getRelatedArticles()` (R1, R2) : le plus gros gain, sans toucher une page.
@@ -228,7 +232,7 @@ Calendrier : **T0** = mise en ligne après l'ADR 0008 (baseline GSC + link-graph
 4. Pages : hub par fusion (301 ×2) **et réécriture de tous les liens internes vers les deux anciennes URL** (13 + 13 fichiers dans `src/` et `public/`, sitemap et llms.txt compris) ; renommage de la formation (title, h1, ancres, **même URL**) ; sous-pilier `/integration-mcp` repositionné. `pageOpenGraph()`, sitemap, llms.txt, `seo-hygiene.test.ts`.
 5. Page « Claude Cowork pour un dirigeant » (§ 2.3), condition du silo Claude.
 6. Mesure T0.
-7. Journal IA, **seulement si** le pilote est validé à la revue ADR 0007 du 2026-11-15 : données + page + 301 du bilan (**+ 7 fichiers** qui le lient à réécrire, **+ `NEWS_SLUGS`** de `discover-news.test.ts` à ré-encoder) + R11/R12, amorcé avec 6 entrées.
+7. Journal IA, **lancé** (§ 2.9) : données + page + 301 du bilan (**+ 7 fichiers** qui le lient à réécrire, **+ `NEWS_SLUGS`** de `discover-news.test.ts` à ré-encoder) + R11/R12, amorcé avec 6 entrées.
 
 ## 8. Revue croisée (session d'audit, 2026-10-23 au soir)
 
@@ -261,6 +265,78 @@ Chaque point vérifié dans le code ou dans GSC avant d'être tranché. Les corr
 | (b) le filtre des cartes fera remonter les entrants Claude | **Réfuté par la mesure.** Simulation du filtre : 1 carte entrante pour le prompt architecture, 1 pour l'audit, 0 pour Cowork ; les cartes partent vers les ponts. Et R6 compte les liens en dur (`sourceRoutes`), où les cartes n'entrent pas | R6 garde des liens écrits à la main ; recomptage à l'étape 2 du § 7 sur le juge, pas sur les cartes |
 
 Chiffres du découpage révisé (même TSV) : 38 liens transverses à recâbler (+ 61 via le hub), 7 violations en dur, cohésion Odoo 88 %, Local 54 %, hub 46 %, Claude 33 %.
+
+## 10. Architecture cible — chaque silo à la hauteur de sa demande
+
+Principe : **une facette de demande mesurée = une page, à condition d'avoir une preuve**. Pas de page sans preuve terrain ou source primaire : ce n'est pas un frein, c'est la seule chose que la concurrence n'a pas (note positionnement § 4). Quand la preuve manque, la ligne dit comment la produire. Chaque page suit la charte (douleur d'abord, solution complète), passe `/relecture-editoriale`, entre au catalog avec son `silo`, au sitemap, au llms.txt, et est pingée par IndexNow.
+
+### 10.1 Silo Claude Code & Cowork : de 4 à 12 pages
+
+| # | Page | Type | Demande (suggestions FR, 2026-10-23) | Preuve |
+|---|---|---|---|---|
+| C1 | **Pilier refondu** `/formation-claude-code` (301 depuis l'atelier) : programme, présentiel 78/95 ou visio, prix, FAQ (dont « pourquoi pas de CPF »), `Service` + `FAQPage` | pilier, tu | « formation claude code » : en français, en ligne, Paris, CPF, Anthropic | ateliers donnés, prompts publiés |
+| C2 | **Sous-pilier** `/claude-cowork` : c'est quoi, combien, pour qui, ce qu'on en fait dans une PME | landing, tu | « claude cowork » **265** : prix, tarif, c'est quoi, avis, pme, windows, mac | configuration Odoo, community manager 🟢 |
+| C3 | Claude Code : ce que ça coûte vraiment à une PME (abonnement, jetons, par mois) | article | « claude code prix », prix france, prix abonnement, prix token | coût à l'usage (terrain iaCommerce) 🟢 |
+| C4 | Claude Cowork ou Claude Code : lequel pour quoi | article | « claude cowork vs code » | les deux en usage réel |
+| C5 | Installer Claude Cowork sur Windows et Mac, et les erreurs qui bloquent | article | windows, mac, « missing hcs services » | **à produire** : installation réelle documentée |
+| C6 | Écrire un skill Claude pour son métier (exemple : paramétrage Odoo) | article | « odoo claude skill », « claude code skills for odoo » | `public/downloads/skill-odoo-configuration.md` 🟢 |
+| C7 | Claude Code en entreprise : où vont tes données, ce qu'il faut régler | article | « claude code entreprise » | réglages de nos projets 🟢 |
+| C8 | Se former à Claude Code en français : CPF, en ligne, Udemy, Anthropic, ce qui existe vraiment | article comparatif | formation claude code cpf, udemy, anthropic, en ligne | relevé public des offres (sources citées) |
+| — | existants : `claude-code-prompt-architecture` (tête de trafic), `prompt-audit-projet-claude-fable`, `claude-cowork-community-manager`, `/prompts` + miroir GitHub | | | |
+
+Cibles juge : pilier formation ≥ 10 routes sources ; sous-pilier Cowork ≥ 5 ; cohésion du silo ≥ 70 %.
+
+### 10.2 Silo Odoo & agents : de 14 à 27 pages
+
+| # | Page | Demande | Preuve |
+|---|---|---|---|
+| O1 | Connecter Claude à Odoo : connecteur, serveur MCP, skill, API, les 4 chemins comparés | « odoo claude » **63** : mcp, connector, skill, plugin, api | essaim + terrain iaCommerce 🟢 |
+| O2 | Combien coûte Odoo pour une PME en 2026 : licences, plan Custom, crédits IA, intégrateur | Odoo : **57** suggestions de prix | tarifs officiels lus le 2026-10-14 ; jamais le prix de nos prestations (🔴) |
+| O3 | Le piège de l'unité de mesure : vendre 1,83 € ce qui coûte 45,75 € | angle terrain n° 2 | Reva 9 🟢 |
+| O4 | Supprimer la double saisie comptable : le FEC mensuel, de l'ERP au cabinet | angle n° 3 | 242 puis 210 écritures/mois, 98,6 % de réconciliation 🟢 |
+| O5 | Facturation électronique 2026 : ce que ton ERP doit savoir faire | angle n° 11, fraîcheur ; candidat `kind: "news"` à chaque jalon officiel | constats de mission 🟢 + textes officiels |
+| O6 | Livrer en France avec Odoo : la liste des connecteurs est un piège | angle n° 8 | 🟢 |
+| O7 | Non, l'IA ne va pas classer tes 3 000 clients toute seule | angle n° 5 | scoring déterministe retenu contre le LLM 🟢 |
+| O8 | Le franco de port que ton ERP ignore | angle n° 7 | 14 fournisseurs sur 98 🟢 |
+| O9 | 7 346 emplacements de stock, 0 article rangé dedans | angle n° 9 | 🟢 |
+| O10 | Comment on décide dans un ERP : un ADR, 3 options, 1 arbitrage | angle n° 10 | ADR-001 anonymisé 🟢 |
+| O11 | Un assistant client sur ton site qui connaît tes commandes (Chatwoot + Odoo) | chatwoot 250 (en mots de produit) | ADR-011 iaCommerce 🟢 ; rattaché à `/integration-mcp` |
+| O12 | Migrer Odoo avec Claude Code (version à version, Enterprise → Community) | « migration odoo » (graine du cluster Odoo) | **à produire** : migration réelle documentée |
+| O13 | Fin de XML-RPC et JSON-RPC : passer à JSON-2 | « odoo claude api » | **à vérifier** dans la doc officielle avant d'écrire (le terrain le marque « à vérifier ») ; iaCommerce déjà sur JSON-2 🟢 |
+
+Confidentialité Reva 9 sur chaque page : « une PME de négoce technique en Île-de-France », un seul poste à la fois, jamais secteur + effectif + localisation ensemble. Cibles juge : pilier ≥ 20 routes sources, cohésion ≥ 90 %.
+
+### 10.3 Hub : de 12 pages (après fusion) à 16, et plus rien hors maillage
+
+| # | Page | Demande / raison | Preuve |
+|---|---|---|---|
+| H1 | **Pilier** `/integration-ia-pme` (fusion, title « automatisation IA » pour PME) | « automatisation ia pme » 49 impr. | terrain des deux silos |
+| H2 | **Journal des annonces IA** `/journal-ia`, lancé (§ 2.9) | citations LLM, fraîcheur | publications officielles des labos |
+| H3 | 40 % des PME utilisent l'IA, 19 % la paient : ce que dit France Num 2026 | donnée publique fraîche, citable | communiqué DGE n° 1062 du 2026-09-28 |
+| H4 | L'IA dans le BTP en 2026 (**refonte** du rapport BTP avec France Num et Bpifrance) → sort du hors maillage | secteur du persona | sources publiques citées |
+| H5 | Un devis de chantier depuis 5 photos (**refonte** de `machine-de-guerre-commerciale`, idée 05 du catalog) → sort du hors maillage | usage concret du dirigeant | **à produire** : démonstration réelle |
+| — | Mises à niveau de fond (contenu réel, pas de fausse date) des pages qui ont le plus d'impressions : `ia-redefinit-vente-commerciale` (752), `veille-concurrentielle-ia-pme` (532), `automatiser-emails-reseaux-sociaux-ia` (326) | | |
+
+### 10.4 Local, structure, entité
+
+- **Local** : page 95 différenciée, prix affichés, lien vers la fiche Google (décisions prises). Pas de nouvelle page : le levier local, c'est la fiche.
+- **Structure** : `/` et `/approche` deviennent les portes vers les 3 piliers (R10) ; `/a-propos` resserrée sur piliers et preuves ; plan du site et llms.txt réordonnés par silo.
+- **Entité et GEO** : chaque skill ou prompt publié part aussi dans le miroir GitHub ; capture limelit à T0 puis à chaque vague.
+
+### 10.5 Vagues
+
+Une vague se ferme quand le juge est vert et que `/relecture-editoriale` est passée, pas à une date. Production par la boucle d'agents déjà outillée (`PROMPT.md`, `docs/backlog.md`) : un backlog `docs/backlog-silos.md` reprend les lignes ci-dessus, une ligne = une page, verdict humain avant publication.
+
+| Vague | Contenu | Dépend de l'ADR ? |
+|---|---|---|
+| V0 | Tags de CTA, registre des silos, champ `silo`, filtre des cartes, juge R1-R10 en rouge | non : démarre maintenant |
+| V1 | Silo Odoo, pages O1-O11 (terrain 🟢 déjà disponible) | non : silo incontesté |
+| V2 | Hub (fusion, 301, réécriture des liens), formation refondue C1, sous-pilier Cowork C2, portes R10, les 7 corrections, journal H2 | **oui** |
+| V3 | Silo Claude, pages C3-C8 | oui (le pilier doit exister) |
+| V4 | Hub H3-H5, mises à niveau des pages à impressions, O12-O13 dès que leur preuve existe | non |
+| continu | Journal : 2 entrées par mois au minimum ; un article `kind: "news"` à chaque grosse annonce | — |
+
+Bilan cible : **55 pages en silo** (Odoo 27, hub 16, Claude 12) au lieu de 33 aujourd'hui (Odoo 14, hub 13, Claude 4, hors maillage 2 ; le local, 6 pages, ne bouge pas), 0 hors maillage, chaque page avec sa preuve et sa place dans le maillage testée par le juge.
 
 ## Annexe A — demande par graine (2026-10-23)
 
