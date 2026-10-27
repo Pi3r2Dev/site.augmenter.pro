@@ -103,6 +103,8 @@ Mesure du silo en l'état : cohésion **33 %**, et le filtre des cartes ne le re
 
 ### 2.9 Journal des annonces IA (question 10 du dossier, ajoutée après la séance)
 
+> **Remplacé le 2026-10-27** par la « Frise de l'IA » de l'[ADR 0008 révisé](../decisions/0008-positionnement-integration-ia.md) : actif éducatif multi-éditeurs, métaphore des consoles, pipeline nocturne app.augmenter.pro, verdict humain. L'ensemble de ce plan (silos, R1-R12, cible 55 pages) est **gelé** au profit de l'option D.
+
 | Choix | Décision proposée | Pourquoi |
 |---|---|---|
 | **Place** | **satellite du hub**, pas un silo ni une page-liste exemptée | Une entrée concerne Odoo, Claude ou un modèle ouvert : seul le hub a le droit de lier les deux silos (R5). Exempté, il échapperait aux règles alors qu'il porte du contenu éditorial (verdicts) |

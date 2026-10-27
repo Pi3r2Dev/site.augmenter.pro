@@ -1,126 +1,127 @@
 ---
 adr: 0008
-title: Positionnement « intégration IA / Odoo / Claude Code » et architecture de silos
+title: Positionnement « intégration IA / Odoo / Claude Code » — distribution d'abord, le site convertit
 status: proposed
 date: 2026-10-23
+revised: 2026-10-27
 deciders: Pierre Legrand
-consulted: Claude Code (brainstorm silos, revue croisée, /dialectic du 2026-10-23)
-informed: boucle de travail (docs/backlog.md, à compléter par docs/backlog-silos.md)
-follows: ADR 0003 (persona dirigeant tech-curieux, mesurer d'abord), pivot du 2026-05-28 (local = fiche Google)
+consulted: Claude Code (brainstorm silos, revue croisée, /dialectic du 2026-10-23, revue du 2026-10-27)
+informed: boucle de travail (docs/backlog.md)
+follows: ADR 0003 (persona dirigeant tech-curieux, mesurer d'abord), ADR 0007 (Discover, format news), pivot du 2026-05-28 (local = fiche Google)
 ---
 
-# ADR 0008 — Positionnement « intégration IA / Odoo / Claude Code » et architecture de silos
+# ADR 0008 — Positionnement « intégration IA / Odoo / Claude Code » : distribution d'abord, le site convertit
 
-> **Statut proposed** : la séquence décidée est brainstorm → `/dialectic` → **mesure GEO** → ADR. Les deux premières étapes sont faites, la troisième ne l'est pas. L'ADR passe en `accepted` le jour où la capture GEO de départ (limelit, prompts de [geo-prompts.md](../seo-audits/2026-05-21-data/geo-prompts.md)) est enregistrée. Rien de ce qui change l'identité du site ne part avant.
+> **Statut proposed.** Révisé le 2026-10-27 : l'option B (architecture de silos, 55 pages) cède la place à l'option D. Passe en `accepted` le jour où la capture GEO de départ (limelit, prompts de [geo-prompts.md](../seo-audits/2026-05-21-data/geo-prompts.md)) est enregistrée. V0 et la consolidation démarrent sans attendre.
 
 ## Contexte
 
-Le site se décrit encore comme un « consultant IA et transformation digitale pour PME en Yvelines et Val d'Oise ». C'est ce que portent le JSON-LD `Organization` / `LocalBusiness` (78/95, « Robotique », ni Odoo ni Claude ni MCP) et le `jobTitle` de l'auteur. Les faits mesurés disent autre chose ([note de recherche](../seo-audits/2026-10-23-positionnement-integration-ia.md)) :
-- sur 16 mois, le cluster intégration IA / Odoo / dev fait **503 clics sur 597 (84 %)**, le local et l'audit IT 15 clics pour 8 666 impressions ;
+Le site se décrit encore comme un « consultant IA et transformation digitale pour PME en Yvelines et Val d'Oise » (JSON-LD `Organization` / `LocalBusiness`, `jobTitle` de l'auteur). Les faits mesurés disent autre chose ([note de recherche](../seo-audits/2026-10-23-positionnement-integration-ia.md)) :
+- sur 16 mois, le cluster intégration IA / Odoo / dev fait **503 clics sur 597 (84 %)** ; le local et l'audit IT, 15 clics pour 8 666 impressions ;
 - la demande se formule **par outil** : « claude code » 301 suggestions, « claude cowork » 265, « odoo claude » 63, « intégration ia pme » 1 ;
-- la niche francophone « Claude × Odoo pour PME » est naissante mais pas vide (Nalios, partenaire Gold, dit déjà « Claude via MCP »). Personne ne combine terrain tracé, coût à l'usage et Claude Code.
+- la niche francophone « Claude × Odoo pour PME » est naissante. Personne ne combine terrain tracé, coût à l'usage et Claude Code.
 
-Deux fragilités cadrent la décision. 94 % des clics du cluster viennent de **deux articles** (309 et 164 clics). Et les 3-4 devis mensuels viennent presque tous de la **recommandation** ([playbook](../playbooks/acquisition-devis.md)) : aucun devis n'est aujourd'hui attribuable au SEO, et aucune instrumentation ne permettrait de le voir (pas de tag `?offer=` / `?source=`, étape jamais faite de l'ADR 0003). Le site sort aussi d'une sanction : crawl gelé depuis juillet, 21 URL encore gelées au 2026-10-14 ([recrawl](../seo-audits/2026-10-14-recrawl-urls-gelees.md)).
-
-Le maillage interne, enfin, ne suit aucune architecture. Sur les 93 cartes « À lire ensuite » calculées par `getRelatedArticles()`, **59 sortent de leur thème** (les articles cyber recommandent le coût d'un agent Odoo). Ces liens échappent au juge du maillage, qui ne lit que les liens écrits en dur. Plan détaillé, chiffres et règles : [plan d'architecture des silos](../plans/2026-10-23-architecture-silos.md).
+Le problème n'est pas l'ordre interne du site, c'est qu'**on ne le découvre pas** :
+- **Aucune autorité externe.** Aucune citation tierce trouvée (recherche du 2026-08-24), recherches de marque quasi nulles, un seul backlink connu de Google (reva9.fr). Le maillage interne répartit l'autorité, il n'en crée pas.
+- **Le clic organique s'effondre.** Position 3 et 0 clic sur les deux piliers en août. Quand une réponse IA s'affiche, le premier résultat perd environ 58 % de clics (Ahrefs, 300 000 mots-clés) ; Seer mesure −61 % de CTR organique.
+- **Les IA citent d'autres plateformes que les sites.** YouTube est la première source des AI Overviews (environ 20 à 30 % selon les études) ; Reddit et Wikipédia dominent chez ChatGPT et Perplexity. Les **mentions de marque** corrèlent environ trois fois plus que les backlinks avec la visibilité IA (Spearman 0,66 contre 0,22, Ahrefs, 75 000 marques). Corrélation, pas causalité, mais toutes les études vont dans ce sens.
+- **Le site sort d'une sanction** : crawl gelé depuis juillet, seules les demandes d'indexation manuelles fonctionnent ([recrawl](../seo-audits/2026-10-14-recrawl-urls-gelees.md)). Publier 55 pages produites par des agents expose au signal « contenu à l'échelle ».
+- Les 3-4 devis mensuels viennent presque tous de la **recommandation** ([playbook](../playbooks/acquisition-devis.md)) et **rien ne permet de mesurer** l'origine d'un devis.
 
 ## Options considérées
 
 ### Option A — Statu quo : consultant IA généraliste ancré 78/95
-**Pour** : aucun chantier ; cohérent avec la fiche Google et la formation en présentiel.
-**Contre** : décrit le site par son segment le plus faible (15 clics en 16 mois) ; le graphe d'entité que lisent Google et les LLM contredit le contenu qui marche ; le positionnement « conseil IA générique » ressemble à tout le monde (cluster C : 4 188 impressions, 11 clics).
-**Coût** : coût d'opportunité. La niche « odoo claude », où le site est déjà en page 1, reste sans propriétaire déclaré.
+**Contre** : décrit le site par son segment le plus faible ; le graphe d'entité contredit le contenu qui marche. Écartée.
 
-### Option B — Thèse « intégration IA / Odoo / Claude Code » + architecture de silos cible, vagues conditionnées (RETENUE)
-**Pour** : suit la demande mesurée et le seul actif qui clique ; pose une hiérarchie (un pilier par silo) qui met fin à l'hésitation de Google entre pages proches ; adosse chaque page à une preuve terrain, ce que la concurrence n'a pas ; rend le maillage vérifiable par un juge.
-**Contre** : dépend de deux marques tierces (Anthropic, Odoo) ; gros volume de production (33 → 55 pages hors local) ; la thèse n'est pas prouvée par des devis.
-**Coût** : outillage (registre, juge, suivi des devis) ; réécriture des liens vers les URL fusionnées (26 fichiers) ; production par lots, plafonnée par le gisement de preuves.
+### Option B — Architecture de silos cible (55 pages, règles R1-R12), vagues conditionnées
+**Pour** : hiérarchie claire, maillage vérifiable. **Contre** : optimise l'intérieur d'un site que personne ne cite ; volume risqué en sortie de sanction ; la cible de pages dépend du classement Google, dont le clic s'effondre. *(Retenue le 2026-10-23, remplacée le 2026-10-27.)* Détail : [plan d'architecture des silos](../plans/2026-10-23-architecture-silos.md).
 
-### Option C — Thèse seule, contenu gelé à l'existant jusqu'à preuve de devis
-**Pour** : aucun risque de volume pendant la sortie de sanction ; décision réversible.
-**Contre** : à 3-4 devis par mois, la preuve de devis n'arrivera pas avant des mois. C'est un gel sans échéance, qui laisse vide le silo Claude (3 articles pour la deuxième demande du site). Le maillage reste désordonné.
-**Coût** : faible à court terme ; à moyen terme, la niche est prise par d'autres. *(Alternative de la red team au `/dialectic`.)*
+### Option C — Thèse seule, contenu gelé jusqu'à preuve de devis
+**Contre** : à 3-4 devis par mois, gel sans échéance. Écartée.
 
-Découpages écartés en amont (plan § 5) : silo unique (aucune hiérarchie), par outil à 4 silos (130 liens à recâbler, coupe le flux MCP → Odoo), par geste (la demande ne se formule pas ainsi).
+### Option D — Distribution d'abord : un sujet = un package open source + une vidéo + une page (RETENUE)
+**Pour** : place la preuve là où les IA et les dirigeants la trouvent (GitHub, YouTube, LinkedIn) ; produit des mentions et des liens naturels, le seul signal qui manque ; chaque pièce est un livrable réutilisable en formation ; le volume reste faible (un sujet toutes les deux semaines), donc tenable et défendable.
+**Contre** : demande de produire des vidéos et du code maintenu, pas seulement du texte ; dépend de la diffusion faite par Pierre ; résultats plus lents à lire dans GSC.
+**Coût** : un gabarit Remotion, un gabarit de repo, une page par sujet ; temps de diffusion.
 
 ## Décision
 
-**On retient l'option B.**
-
-Critère décisif : **on investit là où la demande et la preuve existent toutes les deux, et on fait dépendre chaque vague de ce qui la limite réellement (le crawl et le gisement de preuves), pas d'un indicateur trop lent pour décider.** L'option C a raison sur deux points, intégrés ici : la thèse reste une **hypothèse** tant qu'aucun devis ne lui est attribué, et publier en masse pendant que le crawl est gelé ne rapporte rien. Mais conditionner tout contenu nouveau à un nombre de devis, à 3-4 par mois, revient à ne jamais décider.
+**On retient l'option D.** Critère décisif : **on investit là où se forme la découverte (plateformes citées par les IA, mentions de marque), et le site sert à convertir et à prouver.** De l'option B, on garde ce qui ne dépend pas du volume : l'instrumentation, l'identité, la consolidation.
 
 ### Ce qui est décidé
 
 | Sujet | Décision |
 |---|---|
-| **Thèse** | augmenter.pro est la référence francophone de l'intégration de l'IA aux outils métier des PME (Odoo d'abord), par un indépendant qui livre avec Claude Code et publie son terrain. Le 78/95 reste l'ancrage de la fiche Google et de la formation en présentiel ; il sort de l'identité du site |
-| **Identité structurée** (orientations du 2026-10-23) | `Organization` réécrit (intégration IA, Odoo, Claude Code ; zone France) ; `LocalBusiness` restreint au présentiel 78/95 ; « Robotique » et les secteurs BTP / immobilier retirés ; `jobTitle` « Consultant intégration IA · Odoo & Claude Code » |
-| **Architecture** | hub « intégration IA PME » (fusion de `/strategie-ia-pme` et `/audit-ia-pme`, 301 ; title porteur de « automatisation IA » pour PME) qui porte aussi les usages IA du dirigeant ; silo **Odoo & agents** (pilier `/serveur-mcp-odoo`, sous-pilier `/integration-mcp` pour les outils tiers) ; silo **Claude Code & Cowork** (pilier formation, renommée « formation Claude Code pour dirigeants ») ; silo **local** fermé. Appartenance d'une page : l'outil que sa promesse et sa méthode enseignent (plan § 2.0) |
-| **Ponts** | 3 pages Odoo ↔ Claude, liste fermée, justifiées par leur contenu (plan § 2.8) |
-| **Règles de maillage** | R1-R12 du plan § 3, encodées dans le juge avec garde-fous anti-vacuum et tests négatifs ; les cartes « À lire ensuite » restent dans leur silo (R2) |
-| **Cible** | 55 pages en silo (Odoo 27, hub 16, Claude 12), 0 page hors maillage (plan § 10). **Cible, pas quota** : le gisement de preuves fixe le plafond |
-| **Discipline de publication** | une page = une preuve 🟢 nommée (terrain Reva 9 ou iaCommerce, ou source primaire) + relecture humaine avant publication ; pages nouvelles **par lots de 3-4**, dès que l'essaim du 2026-10-14 montre des impressions après recrawl |
-| **Ce qui démarre sans attendre l'acceptation** | outillage (suivi de l'origine des devis, registre des silos, juge en rouge, filtre des cartes) et consolidation de l'existant : aucune page nouvelle, aucun changement d'identité |
-| **Mesure** | devis attribuables (page d'origine et UTM enregistrées côté serveur, champ déclaratif en complément) + impressions hors des 2 articles dominants ; revue 90 jours après la mise en place du suivi |
-| **Journal des annonces IA** | lancé comme satellite du hub (plan § 2.9), alerte (pas de `noindex` automatique) si plus de 45 jours sans entrée |
+| **Thèse** | augmenter.pro aide les dirigeants de PME françaises à intégrer l'IA à leurs outils (Odoo d'abord), avec du code ouvert, des vidéos de formation et un terrain publié. Le 78/95 reste l'ancrage de la fiche Google et de la formation en présentiel ; il sort de l'identité du site |
+| **Identité structurée** | `Organization` réécrit (intégration IA, Odoo, Claude Code ; zone France) ; `LocalBusiness` restreint au présentiel 78/95 ; « Robotique » et les secteurs BTP / immobilier retirés ; `jobTitle` « Consultant intégration IA · Odoo & Claude Code » ; `sameAs` complété par le compte GitHub et la chaîne YouTube dès leur ouverture |
+| **Unité de production : le sujet** | un problème réel de dirigeant (formulé outil + tâche) donne **trois pièces** : ① un **package open source** installable, README en français, licence explicite, sur GitHub, déclaré dans les annuaires pertinents (registres MCP, listes « awesome-claude-code », apps Odoo) ; ② une **vidéo Remotion** de 3 à 6 min sur YouTube, titrée avec les mots de la demande ; ③ une **page du site** qui intègre les deux, porte la preuve terrain et l'appel au devis |
+| **Rythme** | un sujet toutes les deux semaines. Pas de lot de pages sans package ni vidéo |
+| **Diffusion** | faite par Pierre à chaque sujet : post LinkedIn, communauté Odoo, X. Aucun envoi automatique |
+| **Preuve** | chaque sujet s'adosse à une preuve 🟢 nommée (terrain Reva 9, iaCommerce, ou source primaire) + relecture humaine avant publication. iaCommerce n'est jamais nommé : le package publié est un extrait générique |
+| **Frise de l'IA (actif phare)** | voir ci-dessous |
+| **Silos** | gelés. Le registre `silos.ts` et le filtre des cartes « À lire ensuite » se font en V0 (ils corrigent 59 cartes hors thème), les règles R1-R12 et la cible de 55 pages ne sont pas poursuivies. La fusion `/strategie-ia-pme` + `/audit-ia-pme` (26 fichiers) attend un signal de crawl |
+| **Mesure** | devis attribués (page d'origine + UTM côté serveur, champ déclaratif en complément) ; mentions de « augmenter.pro » ; étoiles, forks et clones GitHub ; vues et rétention YouTube ; citations LLM (limelit, avant/après). Le classement Google devient un indicateur secondaire |
 
-### Assertions du juge actuel à ré-encoder
+### Frise de l'IA — actif éducatif phare
 
-Ré-encoder une assertion parce que la règle change n'est pas un relâchement. Chaque ré-encodage est listé ici :
-- `NEWS_SLUGS` de [discover-news.test.ts](../../src/lib/discover-news.test.ts) si le journal absorbe le bilan de juillet ;
-- les routes des tests qui visent l'atelier, quand la formation refondue changera d'URL (plan § 10.1, C1).
+Remplace le « journal des annonces IA » du plan (§ 2.9). Ce n'est pas une course à l'annonce du jour, que la documentation des éditeurs gagne toujours : c'est un **contenu éducatif comparatif** qu'aucun éditeur ne produit sur ses concurrents.
 
-Toutes les autres assertions de [maillage-cluster.test.ts](../../src/lib/maillage-cluster.test.ts) restent conformes (plan § 3.5).
+| Choix | Décision |
+|---|---|
+| **Promesse** | faire **ressentir** la vitesse de l'IA à un dirigeant : effet « waouh » sur l'interface et sur le contenu |
+| **Métaphore visuelle** | l'évolution des consoles de jeu et de leurs graphismes (8 bits → 16 bits → 3D → photoréalisme) comme échelle de la vitesse d'avancée de l'IA. **Illustrations maison** évoquant chaque génération, jamais de logo, de capture ni de sprite d'un fabricant (droit des marques et droit d'auteur) |
+| **Périmètre** | multi-éditeurs : Anthropic, OpenAI, Google, Mistral, DeepSeek, Qwen, Meta et les modèles ouverts. On **recoupe** : la même capacité, qui l'a sortie, quand, à quel prix |
+| **Entrée** | date · éditeur · lien vers la publication officielle · ce que ça change pour une PME · verdict (`tester` / `attendre` / `ignorer`) · page du site concernée |
+| **Données** | `src/data/frise-ia.ts`, une entrée = un objet typé. `dateModified` calculé depuis la dernière entrée, jamais posé à la main |
+| **Alimentation** | à terme, **pipeline nocturne sur app.augmenter.pro** (Firecrawl sur les notes de version des éditeurs) qui produit des **brouillons d'entrée**. Le verdict et la publication restent humains : rien ne part en ligne sans validation |
+| **Prolongements** | chaque grande étape de la frise peut devenir une vidéo Remotion ; une grosse annonce donne aussi un article `kind: "news"` (ADR 0007) |
+| **URL** | à figer à la construction (`/journal-ia` du plan ou un nom propre à la frise) ; absorbe `bilan-ia-janvier-juillet-2026` en 301 |
+| **Tenue** | alerte si plus de 45 jours sans entrée ; dépublication = décision humaine |
 
 ## Conséquences
 
 ### Positives
-- Le graphe d'entité, le contenu et l'offre disent enfin la même chose, à Google comme aux LLM.
-- Chaque page a une place, un pilier et une ancre canonique. Le juge le vérifie à chaque build de test.
-- Le terrain publiable (journal de mission, pièges payés, coût à l'usage) devient l'ossature du site au lieu d'être dispersé.
+- La preuve vit là où les IA et les dirigeants la cherchent, et chaque pièce renvoie vers le site.
+- Les packages et les vidéos servent deux fois : acquisition et matière des formations.
+- Le volume reste bas, donc défendable pendant la sortie de sanction.
 - On saura enfin d'où viennent les devis.
 
 ### Négatives (assumées)
-- Le silo Claude part de 3 articles. Il ne tiendra que si la page Cowork et la formation refondue sont livrées.
-- 26 fichiers à réécrire pour la fusion du hub, avant toute page nouvelle.
-- Le local devient un silo sans investissement SEO. Son levier est la fiche Google.
+- Produire une vidéo et maintenir un package coûte plus qu'écrire une page.
+- La diffusion repose sur Pierre ; sans elle, les pièces restent invisibles.
+- Les résultats se lisent hors de GSC (GitHub, YouTube, limelit) : il faut un relevé régulier.
 
 ### Risques résiduels et mitigations
-- **Risque** : la thèse ne produit aucun devis. **Mitigation** : instrumentation en premier ; revue à 90 jours. Mesure muette → on prolonge la fenêtre ; signal négatif (trafic du cluster sans aucun contact attribué sur 2 fenêtres) → on rouvre la thèse.
-- **Risque** : dépendance à Anthropic et Odoo (exemple : Odoo 20 réserve l'API au plan Custom). **Mitigation** : le hub porte l'angle neutre (coût à l'usage, modèles locaux, souveraineté), qui ne dépend d'aucune des deux marques.
-- **Risque** : pages creuses produites par la boucle d'agents. **Mitigation** : preuve 🟢 nommée obligatoire, relecture humaine, plafond fixé par le gisement ; trois pages restent « preuve à produire » tant que la preuve n'existe pas.
-- **Risque** : casser la chaîne de réception des devis en l'instrumentant. **Mitigation** : garder le `console.log [QUOTE]`, `keepalive: true` et l'absence d'`await` avant `window.open` ; test local avant tout déploiement (exécuté par Pierre).
-- **Risque** : confidentialité Reva 9 / iaCommerce. **Mitigation** : 🟢 uniquement, un poste à la fois, jamais secteur + effectif + localisation ensemble ; iaCommerce jamais nommé.
+- **Aucun devis attribué.** Instrumentation en premier ; revue à 90 jours ; 2 fenêtres de 90 jours sans contact attribué → rouvrir la thèse.
+- **Package abandonné ou cassé** (mauvais signal public). README avec version testée et statut ; un package non maintenu est archivé sur GitHub, pas laissé en l'état.
+- **Frise qui hallucine ou se trompe de date.** Chaque entrée cite la publication officielle ; brouillons du pipeline jamais publiés sans validation.
+- **Dépendance à Anthropic et Odoo.** La frise multi-éditeurs et l'angle coût à l'usage / modèles locaux ne dépendent d'aucune marque.
+- **Casser la chaîne de réception des devis en l'instrumentant.** Garder le `console.log [QUOTE]`, `keepalive: true` et l'absence d'`await` avant `window.open` ; test local avant tout déploiement (exécuté par Pierre).
+- **Confidentialité Reva 9 / iaCommerce.** 🟢 uniquement ; jamais secteur + effectif + localisation ensemble ; iaCommerce jamais nommé, ni dans le code publié.
 
 ## Plan d'implémentation
 
-Détail par vagues : [plan § 7 et § 10](../plans/2026-10-23-architecture-silos.md).
-
-- [ ] **Préalable à l'acceptation** : capture GEO de départ (limelit sur le VPS), baseline GSC et `node scripts/seo/link-graph.mjs` le même jour.
-- [ ] **V0 — maintenant** : suivi de l'origine des devis ([route.ts](../../src/app/api/quote/route.ts), [quote-wizard.tsx](../../src/app/contact/quote-wizard.tsx)) et UTM sur les CTA ; registre `src/lib/silos.ts` ; champ `silo` dans [resources.ts](../../src/data/resources.ts) et filtre de `getRelatedArticles()` ; juge R1-R10 écrit en rouge, puis tests négatifs.
-- [ ] **Consolider — maintenant** : essaim du 2026-10-14 et les 2 articles forts (maillage, ancres canoniques, CTA vers `/serveur-mcp-odoo`) ; les 7 liens en dur de l'annexe B du plan.
-- [ ] **Après acceptation** : identité structurée ([layout.tsx](../../src/app/layout.tsx), `/auteur`, `/a-propos`) ; hub par fusion, 301 et réécriture des 26 fichiers ; formation refondue ; sous-pilier Cowork ; portes d'entrée `/` et `/approche` (R10).
-- [ ] **V1 Odoo, par lots de 3-4** dès que l'essaim montre des impressions après recrawl ; puis silo Claude et compléments du hub, même discipline.
-- [ ] Journal des annonces IA : données, page, R11-R12, amorcé avec 6 entrées.
-- [ ] Mettre à jour [project-context.md](../../.claude/templates/seo/project-context.md) (positionnement 3 tiers → silos) et le `CLAUDE.md` du projet.
+- [ ] **Préalable à l'acceptation** : capture GEO de départ (limelit sur le VPS), baseline GSC, relevé des mentions de « augmenter.pro ».
+- [ ] **V0 — maintenant** : suivi de l'origine des devis ([route.ts](../../src/app/api/quote/route.ts), [quote-wizard.tsx](../../src/app/contact/quote-wizard.tsx)) et UTM sur les CTA ; filtre des cartes « À lire ensuite » par thème.
+- [ ] **Consolider — maintenant** : les 2 articles forts et `/serveur-mcp-odoo` (maillage, CTA) ; les 7 liens en dur de l'annexe B du plan.
+- [ ] **Identité structurée** ([layout.tsx](../../src/app/layout.tsx), `/auteur`, `/a-propos`).
+- [ ] **Gabarits** : composition Remotion réutilisable ; gabarit de repo (README FR, licence, CI) ; gabarit de page « sujet ».
+- [ ] **Sujets 1 à 3** : choisis dans les terrains, un toutes les deux semaines.
+- [ ] **Frise de l'IA** : données, maquette UI, amorce avec les annonces 2023-2026 ; pipeline nocturne app.augmenter.pro quand prêt.
+- [ ] Mettre à jour [project-context.md](../../.claude/templates/seo/project-context.md) et le `CLAUDE.md` du projet.
 
 ## Validation post-implémentation
 
-- **Métrique cœur** : contacts et devis attribués à une page de silo (page d'origine ou UTM), par silo. Baseline : 0 mesuré à la mise en place du suivi.
-- **Maillage** : juge vert ; cohésion recalculée par `link-graph.mjs` : Odoo ≥ 85 %, local ≥ 80 %, Claude ≥ 50 % puis ≥ 70 % une fois construit ; 0 carte hors périmètre.
-- **Positions** (T+90 après mise en ligne) : au moins une des requêtes « serveur mcp odoo », « odoo claude », « claude code odoo », « claude cowork odoo », « coût agent ia odoo » en page 1 ; pilier formation dans le top 20 sur « formation claude code ».
-- **GEO** : au moins une citation LLM sur les prompts « intégration IA / Odoo » par rapport à la capture de départ.
-- **Conditions de réouverture** :
-  - 2 fenêtres de 90 jours avec trafic du cluster et **0 contact attribué** → rouvrir la thèse ;
-  - pilier formation hors du top 20 **et** 0 contact formation à T+90 → rouvrir le choix du pilier Claude (prompt architecture) ;
-  - journal sans citation et tenu à moins de 2 entrées par mois au 2026-12-15 → dépublication (301 vers le hub), décision humaine.
+- **Métrique cœur** : contacts et devis attribués (page d'origine ou UTM). Baseline : 0 à la mise en place du suivi.
+- **Découverte** (T+90) : mentions tierces de « augmenter.pro » > 0 ; au moins un package cité ou listé hors de nos comptes ; au moins une citation LLM sur les prompts « intégration IA / Odoo » par rapport à la capture de départ.
+- **Frise** : au moins un lien ou partage externe à T+90 ; tenue d'au moins 2 entrées par mois.
+- **Conditions de réouverture** : 2 fenêtres de 90 jours sans contact attribué → rouvrir la thèse ; frise sans aucun partage ni citation au 2026-12-15 + 90 jours → décider de la garder comme outil de formation seulement.
 
 ## Références
 
-- [Plan d'architecture des silos](../plans/2026-10-23-architecture-silos.md) — silos, règles R1-R12, outils tiers, scénarios écartés, revue croisée (§ 8-9), cible (§ 10), issue du `/dialectic` (§ 11)
-- [Note de recherche positionnement](../seo-audits/2026-10-23-positionnement-integration-ia.md) — portefeuille, demande, marché, concurrence, orientations du 2026-10-23 (§ 7 bis)
+- [Plan d'architecture des silos](../plans/2026-10-23-architecture-silos.md) — option B, gelée ; § 2.9 remplacé par la frise
+- [Note de recherche positionnement](../seo-audits/2026-10-23-positionnement-integration-ia.md)
 - [Dossier du brainstorm](../sessions/2026-10-23-brainstorm-silos-maillage.md)
-- [ADR 0003](0003-funnel-geo-conversion.md) — persona dirigeant, mesurer d'abord · [ADR 0007](0007-google-news-discover.md) — format news, revue 2026-11-15
-- [Playbook acquisition de devis](../playbooks/acquisition-devis.md)
-- Juges : [maillage-cluster.test.ts](../../src/lib/maillage-cluster.test.ts), [discover-news.test.ts](../../src/lib/discover-news.test.ts), [seo-hygiene.test.ts](../../src/lib/seo-hygiene.test.ts)
+- [ADR 0003](0003-funnel-geo-conversion.md) · [ADR 0007](0007-google-news-discover.md) · [Playbook acquisition de devis](../playbooks/acquisition-devis.md)
 - Terrains : [terrain-odoo-reva9.md](../../.claude/templates/seo/terrain-odoo-reva9.md), [terrain-iacommerce.md](../../.claude/templates/seo/terrain-iacommerce.md)
+- Données externes (relevées le 2026-10-27, synthèses secondaires à recouper avant publication) : [Ahrefs, mentions de marque et visibilité IA](https://ahrefs.com/blog/ai-overview-brand-correlation/) · [Ahrefs, CTR et AI Overviews](https://seoworth.it.com/news/ahrefs-ai-overviews-ctr-study/) · [Seer, CTR organique](https://ppc.land/google-ai-overviews-reduce-organic-ctr-61-paid-traffic-68/) · [Index des sources citées par les IA 2026](https://everything-pr.com/the-50-most-cited-websites-in-ai-reddit-wikipedia-youtube-lead-2026-index)
