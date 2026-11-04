@@ -88,6 +88,10 @@ Remplace le « journal des annonces IA » du plan (§ 2.9). Ce n'est pas une cou
 | **Incarnation** | **Pierre** en caution humaine et en voix + une **galerie d'agents nommés**, en illustrations maison, qui reviennent d'une vidéo et d'une page à l'autre |
 | **Repris d'ouvrali** | une phrase-refrain répétée sur toutes les pages ; un **livrable réel** montré dans la page (anonymisé, 🟢) ; un prix d'entrée près du titre ; une section « ce qu'il vous faut avant de démarrer » sur les landings Odoo / MCP ; primitives d'article « Copier la demande » et « Sources et repères » |
 | **Non repris** | ton doux sans douleur, exemples fictifs, articles sans date, auteur anonyme |
+| **Capacité** | deux jours ou plus par semaine : Frise et sujets peuvent avancer en parallèle, rythme d'un sujet par semaine envisageable |
+| **Ordre de démarrage** | la **Frise de l'IA d'abord** (maquette UI, métaphore consoles, amorce 2023-2026), puis le premier sujet. Le suivi de l'origine des devis (V0) reste à faire avant toute mise en ligne |
+| **Voix des vidéos** | la **voix enregistrée de Pierre** en voix off ; pas de voix de synthèse |
+| **Premier sujet** | **relances d'impayés** : un agent relit les factures échues dans Odoo et prépare des relances à valider (package ouvert + vidéo + page) |
 
 ## Conséquences
 
@@ -117,8 +121,8 @@ Remplace le « journal des annonces IA » du plan (§ 2.9). Ce n'est pas une cou
 - [ ] **Consolider — maintenant** : les 2 articles forts et `/serveur-mcp-odoo` (maillage, CTA) ; les 7 liens en dur de l'annexe B du plan.
 - [ ] **Identité structurée** ([layout.tsx](../../src/app/layout.tsx), `/auteur`, `/a-propos`).
 - [ ] **Gabarits** : composition Remotion réutilisable ; gabarit de repo (README FR, licence, CI) ; gabarit de page « sujet ».
-- [ ] **Sujets 1 à 3** : choisis dans les terrains, un toutes les deux semaines.
-- [ ] **Frise de l'IA** : données, maquette UI, amorce avec les annonces 2023-2026 ; pipeline nocturne app.augmenter.pro quand prêt.
+- [ ] **Frise de l'IA (en premier)** : données, maquette UI, amorce avec les annonces 2023-2026 ; pipeline nocturne app.augmenter.pro quand prêt.
+- [ ] **Sujet 1 : relances d'impayés dans Odoo**, puis sujets 2 et 3 choisis dans les terrains.
 - [ ] Mettre à jour [project-context.md](../../.claude/templates/seo/project-context.md) et le `CLAUDE.md` du projet.
 
 ## Validation post-implémentation
