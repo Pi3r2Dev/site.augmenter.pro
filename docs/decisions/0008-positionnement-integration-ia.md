@@ -78,6 +78,17 @@ Remplace le « journal des annonces IA » du plan (§ 2.9). Ce n'est pas une cou
 | **URL** | à figer à la construction (`/journal-ia` du plan ou un nom propre à la frise) ; absorbe `bilan-ia-janvier-juillet-2026` en 301 |
 | **Tenue** | alerte si plus de 45 jours sans entrée ; dépublication = décision humaine |
 
+### Précisions du 2026-11-04 (après le [benchmark ouvrali.fr](../seo-audits/2026-11-04-benchmark-ouvrali.md))
+
+| Sujet | Décision |
+|---|---|
+| **Modèle économique** | les packages restent **ouverts et sans paiement** : ils servent à la découverte. On vend l'installation, la personnalisation, la formation et la mission. Pas de kit payant à bas prix |
+| **Cible** | le **dirigeant de PME tech-curieux**, qui a Odoo ou un ERP et veut l'intégrer à l'IA. Le débutant (indépendant, association) n'est pas visé : c'est le terrain d'ouvrali |
+| **Guides pratiques** | format « **tâche + Odoo** » (ex. relance de facture impayée automatique dans Odoo), chacun livré avec un package ouvert et une vidéo. Pas de guide générique « faire un devis » : requêtes absorbées par les réponses IA et tenues par des sites à forte autorité |
+| **Incarnation** | **Pierre** en caution humaine et en voix + une **galerie d'agents nommés**, en illustrations maison, qui reviennent d'une vidéo et d'une page à l'autre |
+| **Repris d'ouvrali** | une phrase-refrain répétée sur toutes les pages ; un **livrable réel** montré dans la page (anonymisé, 🟢) ; un prix d'entrée près du titre ; une section « ce qu'il vous faut avant de démarrer » sur les landings Odoo / MCP ; primitives d'article « Copier la demande » et « Sources et repères » |
+| **Non repris** | ton doux sans douleur, exemples fictifs, articles sans date, auteur anonyme |
+
 ## Conséquences
 
 ### Positives
